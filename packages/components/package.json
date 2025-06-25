@@ -1,0 +1,36 @@
+{
+  "name": "@embed-tools/components",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.js",
+  "types": "./src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js"
+    },
+    "./globals.css": "./src/globals.css"
+  },
+  "devDependencies": {
+    "@embed-tools/tsconfig": "workspace:*",
+    "@tailwindcss/cli": "^4.1.10",
+    "@types/react": "^19.1.8",
+    "@vitejs/plugin-react": "^4.6.0",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-radio-group": "^1.3.7",
+    "@radix-ui/react-select": "^2.2.5",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-slider": "^1.3.5",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-switch": "^1.2.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.522.0",
+    "tailwind-merge": "^3.3.1"
+  }
+}

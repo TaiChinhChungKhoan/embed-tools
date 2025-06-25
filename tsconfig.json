@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./apps/website-cost-estimator/src/*", "./apps/ai-model-discovery/src/*", "./apps/website-launch-checklist/src/*", "./apps/analytics-tool-discovery/src/*", "./apps/website-platform-discovery/src/*", "./apps/color-palette-generator/src/*", "./apps/bazi-calculator/src/*"]
+    },
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "noEmit": true
+  },
+  "include": ["apps/website-cost-estimator/src", "apps/ai-model-discovery/src", "apps/website-launch-checklist/src", "apps/analytics-tool-discovery/src", "apps/website-platform-discovery/src", "apps/color-palette-generator/src", "apps/bazi-calculator/src"],
+  "exclude": ["node_modules"]
+} 

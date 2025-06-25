@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Tích Bát Tự & Gợi Ý Đầu Tư</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="module">
+        try {
+            // Load required libraries from skypack
+            const { BaziCalculator } = await import('https://cdn.skypack.dev/@aharris02/bazi-calculator-by-alvamind');
+            const { toDate } = await import('https://cdn.skypack.dev/date-fns-tz');
+            
+            // Attach to window object for React component to use
+            window.BaziCalculator = BaziCalculator;
+            window.dateFnsTz = { toDate };
+
+            // Dispatch event to notify React that libraries are ready
+            window.dispatchEvent(new CustomEvent('bazi-library-ready'));
+        } catch (e) {
+            console.error("Failed to load Bazi libraries:", e);
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        .pillar-card {
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .stem { font-size: 1.5rem; font-weight: 600; }
+        .branch { font-size: 1.25rem; }
+        .element-icon { width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; }
+        .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .luck-pillar-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+        .interaction-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 2px;
+        }
+        .bar-chart-bar {
+            height: 20px;
+            border-radius: 4px;
+            transition: width 0.5s ease-in-out;
+        }
+        .info-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 8px;
+            border: 1px solid #cbd5e0;
+        }
+        .modal-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .modal-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+         .modal-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // --- DATA & HELPERS ---
+        
+        const STYLE_CLASSES = {
+            'Mộc': { text: 'text-green-600', bg: 'bg-green-50', border: 'border-green-400', tag: 'bg-green-100 text-green-800', chart: 'bg-green-500' },
+            'Hỏa': { text: 'text-red-600', bg: 'bg-red-50', border: 'border-red-400', tag: 'bg-red-100 text-red-800', chart: 'bg-red-500' },
+            'Thổ': { text: 'text-yellow-600', bg: 'bg-yellow-50', border: 'border-yellow-400', tag: 'bg-yellow-100 text-yellow-800', chart: 'bg-yellow-500' },
+            'Kim': { text: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-400', tag: 'bg-blue-100 text-blue-800', chart: 'bg-blue-500' },
+            'Thủy': { text: 'text-gray-600', bg: 'bg-gray-50', border: 'border-gray-400', tag: 'bg-gray-100 text-gray-800', chart: 'bg-gray-500' },
+            'good': { tag: 'bg-green-100 text-green-800' },
+            'bad': { tag: 'bg-red-100 text-red-800' }
+        };
+
+        const TRANSLATIONS = {
+            stems: { 'Jia': 'Giáp', 'Yi': 'Ất', 'Bing': 'Bính', 'Ding': 'Đinh', 'Wu': 'Mậu', 'Ji': 'Kỷ', 'Geng': 'Canh', 'Xin': 'Tân', 'Ren': 'Nhâm', 'Gui': 'Quý' },
+            branches: { 'Zi': 'Tý', 'Chou': 'Sửu', 'Yin': 'Dần', 'Mao': 'Mão', 'Chen': 'Thìn', 'Si': 'Tỵ', 'Wu': 'Ngọ', 'Wei': 'Mùi', 'Shen': 'Thân', 'You': 'Dậu', 'Xu': 'Tuất', 'Hai': 'Hợi' },
+            animals: { 'Rat': 'Chuột', 'Ox': 'Trâu', 'Tiger': 'Hổ', 'Rabbit': 'Thỏ', 'Dragon': 'Rồng', 'Snake': 'Rắn', 'Horse': 'Ngựa', 'Goat': 'Dê', 'Monkey': 'Khỉ', 'Rooster': 'Gà', 'Dog': 'Chó', 'Pig': 'Lợn' },
+            elements: { 'WOOD': 'Mộc', 'FIRE': 'Hỏa', 'EARTH': 'Thổ', 'METAL': 'Kim', 'WATER': 'Thủy' },
+            interactions: { 'combination': 'Hợp', 'clash': 'Xung', 'harm': 'Hại', 'punishment': 'Hình', 'destruction': 'Phá' },
+            tenGods: {'Friend': 'Tỷ Kiên', 'Rob Wealth': 'Kiếp Tài', 'Eating God': 'Thực Thần', 'Hurting Officer': 'Thương Quan', 'Indirect Wealth': 'Thiên Tài', 'Direct Wealth': 'Chính Tài', 'Seven Killings': 'Thất Sát', 'Direct Officer': 'Chính Quan', 'Indirect Resource': 'Thiên Ấn', 'Direct Resource': 'Chính Ấn'},
+            eightMansions: { 'wealth': 'Tài Lộc', 'health': 'Thiên Y', 'romance': 'Diên Niên', 'career': 'Phục Vị', 'obstacles': 'Họa Hại', 'quarrels': 'Ngũ Quỷ', 'lawsuits': 'Lục Sát', 'totalLoss': 'Tuyệt Mệnh' },
+            directions: {'N': 'Bắc', 'S': 'Nam', 'E': 'Đông', 'W': 'Tây', 'NE': 'Đông Bắc', 'SE': 'Đông Nam', 'SW': 'Tây Nam', 'NW': 'Tây Bắc'}
+        };
+        const INDUSTRY_MAP = { 'Mộc': [{ name: 'Nông & Lâm nghiệp', desc: 'Trồng trọt, chế biến gỗ, giấy.' }, { name: 'Dệt may & Da giày', desc: 'Sản xuất quần áo, vải, giày dép.' }, { name: 'Giáo dục & Xuất bản', desc: 'Trường học, sách, báo chí, truyền thông.' }, { name: 'Y tế & Chăm sóc sức khỏe (Thảo dược)', desc: 'Đông y, dược liệu, sản phẩm tự nhiên.' }], 'Hỏa': [{ name: 'Năng lượng', desc: 'Dầu khí, điện, năng lượng tái tạo.' }, { name: 'Công nghệ cao & Điện tử', desc: 'Phần mềm, internet, bán dẫn, viễn thông.' }, { name: 'Giải trí & Mỹ phẩm', desc: 'Phim ảnh, nhà hàng, khách sạn, mỹ phẩm.' }, { name: 'Hóa chất & Nhựa', desc: 'Sản xuất hóa chất cơ bản, nhựa.' }], 'Thổ': [{ name: 'Bất động sản', desc: 'Phát triển, kinh doanh, cho thuê BĐS.' }, { name: 'Xây dựng & Vật liệu', desc: 'Xây dựng công trình, sản xuất xi măng, gạch.' }, { name: 'Bảo hiểm', desc: 'Bảo hiểm nhân thọ và phi nhân thọ.' }, { name: 'Khai khoáng', desc: 'Khai thác tài nguyên khoáng sản.' }], 'Kim': [{ name: 'Tài chính & Ngân hàng', desc: 'Ngân hàng, công ty chứng khoán, quản lý quỹ.' }, { name: 'Cơ khí & Sản xuất máy móc', desc: 'Sản xuất ô tô, thiết bị công nghiệp.' }, { name: 'Kim loại & Thép', desc: 'Sản xuất, kinh doanh thép, kim loại quý.' }, { name: 'Công nghệ (Phần cứng)', desc: 'Sản xuất máy tính, thiết bị điện tử.' }], 'Thủy': [{ name: 'Vận tải & Logistics', desc: 'Hàng không, cảng biển, vận chuyển hàng hóa.' }, { name: 'Thương mại & Bán lẻ', desc: 'Siêu thị, xuất nhập khẩu, bán lẻ.' }, { name: 'Du lịch & Dịch vụ', desc: 'Lữ hành, khách sạn, dịch vụ ăn uống.' }, { name: 'Thủy sản', desc: 'Nuôi trồng và chế biến thủy hải sản.' }] };
+        const WUXING_RELATIONS = { produces: { 'Mộc': 'Hỏa', 'Hỏa': 'Thổ', 'Thổ': 'Kim', 'Kim': 'Thủy', 'Thủy': 'Mộc' }, controls: { 'Mộc': 'Thổ', 'Hỏa': 'Kim', 'Thổ': 'Thủy', 'Kim': 'Mộc', 'Thủy': 'Hỏa' }, };
+        
+        const SVG_PATHS = { 'Mộc': 'M17.5 1a4.5 4.5 0 00-4.47 4.96l-2.6 1.73A4.5 4.5 0 106.5 13H10v2a3 3 0 003 3h1a3 3 0 003-3v-2h3.5a4.5 4.5 0 100-9H13.04A4.5 4.5 0 0017.5 1zM6.5 10a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm11 7a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0-11a1.5 1.5 0 110-3 1.5 1.5 0 010 3z', 'Hỏa': 'M11.33 2.03c.59-.59 1.71-.23 1.95.62.18.66.71 1.13 1.39 1.13.93 0 1.63-1.07 1.22-1.93a3.5 3.5 0 00-4.95-4.95C10.07-.5 9 1.1 9 2c0 .69.47 1.21 1.13 1.39.78.2 1.41-.34 1.2-1.36zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm4.27 7.27c-3.17 3.17-8.36 3.17-11.54 0-2.31-2.31-2.9-6.09-1.38-9.15.59-1.18 2.2-1.18 2.79 0C8.73 8.31 9.8 11.23 12 12c.98 0 1.88-.35 2.62-.94.7-.56.89-1.6.33-2.3a1.5 1.5 0 012.3-.33c.96.96 1.2 2.48.56 3.72l-1.54 2.82z', 'Thổ': 'M21 3H3v2h18V3zM3 21h18v-2H3v2zM12.41 6.59l-2-2-2 2L10 8l-2.09-.59-2 2L6.59 10 5 11.59l2 2 .59-1.41L8 10l1.41.59 2-2L10.82 8l1.59-1.41zm-.82 8.82l-2 2-2-2L10 16l-2.09.59-2-2L6.59 14 5 12.41l2-2 .59 1.41L8 14l1.41-.59 2 2L10.82 16l1.59 1.41zM20.5 11.5L19 10l-1.41 1.41L16 10l-1.41 1.41L16 14l1.59-1.41L19 14l1.5-1.5L19 11l1.5-1.5z', 'Kim': 'M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z', 'Thủy': 'M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-1 12H9v-2h2v2zm2-2h-2V7h2v7zm1 2h2v-2h-2v2z'};
+        const getElementIcon = (element) => `<svg class="element-icon" viewBox="0 0 24 24" fill="currentColor"><path d="${SVG_PATHS[element] || ''}"/></svg>`;
+        
+        const NOTE_TRANSLATIONS = {
+          'Season': 'Mùa', 'Hidden Year': 'Can ẩn năm', 'Hidden Month': 'Can ẩn tháng', 'Hidden Day': 'Can ẩn ngày', 'Hidden Hour': 'Can ẩn giờ',
+          'Stem Month': 'Can tháng', 'Stem Hour': 'Can giờ', 'Control Season': 'Khắc mùa', 'Weakening': 'Suy yếu', 'Zheng Guan': 'Chính Quan',
+          'Zheng Yin': 'Chính Ấn', 'Qi Sha': 'Thất Sát', 'Pian Yin': 'Thiên Ấn', 'Zheng Cai': 'Chính Tài', 'Shang Guan': 'Thương Quan',
+          'Jie Cai': 'Kiếp Tài', 'Shi Shen': 'Thực Thần'
+        };
+        function translateNote(note) {
+          return note.replace(
+            /\b(Season|Hidden Year|Hidden Month|Hidden Day|Hidden Hour|Stem Month|Stem Hour|Control Season|Weakening|Zheng Guan|Zheng Yin|Qi Sha|Pian Yin|Zheng Cai|Shang Guan|Jie Cai|Shi Shen)\b/g,
+            (_, key) => NOTE_TRANSLATIONS[key] || key
+          );
+        }
+
+        // --- EXPLANATION CONTENT ---
+        const MỆNH_CHỦ_CONTENT = `<h3>Mệnh Chủ (Nhật Chủ) & Sức Mạnh</h3><p>Trong Bát Tự, <strong>Mệnh Chủ (Day Master)</strong> là Thiên Can ở cột Ngày – tượng trưng cho bản thân bạn. Sức mạnh của nó (Vượng/Nhược) là yếu tố cốt lõi để xác định chiến lược cân bằng Ngũ Hành.</p><h3>Cách hiểu điểm sức mạnh</h3><p>Điểm số (ví dụ: -66) được tính bằng cách cộng/trừ các yếu tố ảnh hưởng đến Mệnh Chủ:</p><ul><li><strong>Điểm > 0 → Hướng Vượng:</strong> Bạn có nội lực tốt, tự tin.</li><li><strong>Điểm < 0 → Hướng Nhược:</strong> Bạn có thể cần sự hỗ trợ từ các yếu tố bên ngoài. Với điểm âm, Mệnh Chủ bị các yếu tố xung khắc (ví dụ Mùa sinh) làm suy yếu.</li></ul><h3>Ảnh hưởng của Vượng/Nhược</h3><ul><li><strong>Vượng:</strong> Dễ thu hút tài lộc, nhưng cần các hành khắc chế để đạt cân bằng.</li><li><strong>Nhược:</strong> Cần được hỗ trợ bởi các hành "tương sinh" (nuôi dưỡng) và "tương trợ" (cùng hành). Đây chính là các Hỷ Dụng Thần giúp bạn gia tăng may mắn.</li></ul><h3>Hướng xử lý cho Mệnh Nhược</h3><ul><li><strong>Tăng cường Ấn (Resource):</strong> Chọn các ngành/hoạt động thuộc hành tương sinh. Ví dụ: Mệnh Kim yếu nên ưu tiên ngành hành Thổ (Bất động sản).</li><li><strong>Tăng cường Bạn đồng hành (Companion):</strong> Chọn ngành/môi trường cùng hành với Mệnh Chủ. Ví dụ: Mệnh Kim yếu có thể làm trong ngành Tài chính (hành Kim).</li></ul>`;
+        const LÁ_SỐ_BÁT_TỰ_CONTENT = `<h3>Cách đọc Lá Số Bát Tự (Tứ Trụ)</h3><p>Mỗi trụ bao gồm một Thiên Can (năng lượng bề mặt) và một Địa Chi (năng lượng ẩn, con giáp), đại diện cho một khía cạnh và giai đoạn trong cuộc đời.</p><ul><li><strong>Trụ Năm:</strong> Đại diện cho tổ tiên, bối cảnh xã hội, và tuổi thiếu thời. Sự tương tác Can-Chi ở đây cho thấy môi trường ban đầu của bạn.</li><li><strong>Trụ Tháng:</strong> Đại diện cho cha mẹ, anh em và sự nghiệp giai đoạn đầu. Đây là trụ có ảnh hưởng lớn nhất đến sức mạnh của Mệnh Chủ.</li><li><strong>Trụ Ngày:</strong> Thiên Can của trụ này chính là <strong>Mệnh Chủ (bạn)</strong>. Địa chi của trụ này là cung Phu Thê, đại diện cho người bạn đời và gia đình.</li><li><strong>Trụ Giờ:</strong> Đại diện cho con cái, hoài bão, và cuộc sống về sau.</li></ul><p>Việc phân tích sự tương tác (sinh, khắc) giữa các Can, Chi trong Tứ Trụ giúp hiểu rõ hơn về các tiềm năng và thách thức trong cuộc sống của bạn.</p>`;
+        const ĐẠI_VẬN_CONTENT = `<h3>Đại Vận (大運) – Vận 10 Năm</h3><p>Đại Vận là chuỗi các giai đoạn 10 năm trong cuộc đời, mỗi giai đoạn chịu ảnh hưởng của một cặp Thiên Can - Địa Chi riêng. Việc phân tích Đại Vận giúp bạn có cái nhìn dài hạn về những thuận lợi và thách thức.</p><h3>Ý nghĩa của mỗi Đại Vận</h3><p>Thiên Can và Địa Chi của mỗi Đại Vận sẽ tương tác với lá số gốc của bạn, tạo ra các giai đoạn thịnh suy khác nhau.</p><ul><li>Khi Thiên Can của vận là hành bạn cần (Hỷ Dụng Thần), bạn thường gặp nhiều cơ hội, may mắn về tài chính, sự nghiệp.</li><li>Ngược lại, nếu Thiên Can của vận là hành kỵ, giai đoạn đó có thể gặp nhiều trắc trở hơn.</li></ul><h3>Cách sử dụng</h3><ul><li><strong>Lập kế hoạch dài hạn:</strong> Biết được vận 30-40 tuổi sẽ như thế nào giúp bạn dự đoán và chủ động chuẩn bị cho sự nghiệp, tài chính.</li><li><strong>Chọn thời điểm:</strong> Xem các Đại Vận sắp tới để quyết định khi nào nên thực hiện các dự án lớn, đầu tư hoặc thay đổi công việc.</li><li><strong>Kết hợp với Vận Hạn Năm:</strong> So sánh “Đại Vận” (xu hướng 10 năm) với “Vận Hạn Năm” (sự kiện hàng năm) để có quyết định tối ưu nhất.</li></ul>`;
+        const BÁT_TRẠCH_CONTENT = `<h3>Giải Thích Các Hướng Bát Trạch</h3><p>Bát trạch là một phương pháp Phong Thủy giúp xác định các hướng năng lượng tốt (cát) và xấu (hung) dựa trên Cung Mệnh (Life Gua) của mỗi người. Việc ứng dụng đúng các hướng này có thể giúp cải thiện vận may về tài lộc, sức khỏe, và các mối quan hệ.</p><h3>Hướng Thuận (Auspicious)</h3><ul><li><strong>Sinh Khí (Tài Lộc):</strong> Tốt nhất cho tài lộc, danh tiếng, thăng tiến. Nên đặt bàn làm việc, cửa chính, két sắt ở hướng này.</li><li><strong>Thiên Y (Sức Khỏe):</strong> Tốt nhất cho sức khỏe, trường thọ. Nên đặt phòng ngủ, giường ngủ ở hướng này.</li><li><strong>Diên Niên (Quan Hệ):</strong> Tốt cho tình cảm gia đình, các mối quan hệ xã hội. Nên đặt phòng khách, bàn ăn ở hướng này.</li><li><strong>Phục Vị (Ổn Định):</strong> Mang lại sự bình yên, ổn định tinh thần, may mắn trong học tập, thi cử. Nên đặt bàn học, bàn thờ ở hướng này.</li></ul><h3>Hướng Hung (Inauspicious)</h3><ul><li><strong>Họa Hại:</strong> Gây thị phi, tranh cãi. Tránh đặt cửa chính, phòng làm việc.</li><li><strong>Ngũ Quỷ:</strong> Gây bệnh tật, mất mát tài sản. Tránh đặt phòng ngủ, bếp.</li><li><strong>Lục Sát:</strong> Gây tai tiếng, kiện tụng. Tránh đặt các khu vực quan trọng liên quan đến công việc, hợp đồng.</li><li><strong>Tuyệt Mệnh:</strong> Hướng xấu nhất, gây phá sản, tai họa. Tuyệt đối tránh các khu vực quan trọng như cửa chính, phòng ngủ, bếp.</li></ul><p><strong>Lưu ý:</strong> Nếu không thể tránh các hướng xấu, có thể dùng các vật phẩm phong thủy như gương bát quái, cây xanh, tỳ hưu để hóa giải.</p>`;
+
+
+        // --- COMPONENTS ---
+
+        function ElementIcon({ element }) {
+            const style = STYLE_CLASSES[element] || {};
+            if (!style.text) return null;
+            return <span className={`inline-flex items-center ${style.text}`} dangerouslySetInnerHTML={{ __html: getElementIcon(element) }} />;
+        }
+        
+        function Pillar({ pillar, label, className = '' }) {
+            if (!pillar || !pillar.stem || !pillar.branch) return <div className={`pillar-card flex-1 p-4 rounded-lg bg-gray-100 flex items-center justify-center ${className}`}><span className="text-gray-400">Không rõ</span></div>;
+            const stemElementVi = TRANSLATIONS.elements[pillar.stem.element];
+            const branchElementVi = TRANSLATIONS.elements[pillar.branch.element];
+            const stemStyle = STYLE_CLASSES[stemElementVi] || {};
+            const branchStyle = STYLE_CLASSES[branchElementVi] || {};
+            const tenGod = pillar.stem.tenGod ? TRANSLATIONS.tenGods[pillar.stem.tenGod.name] : null;
+
+            return (
+                <div className={`pillar-card flex-1 p-4 rounded-lg bg-gray-50 ${className}`}>
+                    {label && <div className="text-sm font-semibold text-gray-500 mb-2">{label}</div>}
+                    <div className={`stem ${stemStyle.text || 'text-gray-700'}`}><ElementIcon element={stemElementVi} />{TRANSLATIONS.stems[pillar.stem.name] || pillar.stem.name}</div>
+                    <div className={`branch ${branchStyle.text || 'text-gray-700'} mt-1`}>{TRANSLATIONS.branches[pillar.branch.name] || pillar.branch.name} ({TRANSLATIONS.animals[pillar.branch.animal] || pillar.branch.animal})</div>
+                    {tenGod && <div className="mt-2 text-xs font-semibold text-white bg-gray-400 rounded-full px-2 py-0.5 inline-block">{tenGod}</div>}
+                </div>
+            );
+        }
+
+        function Results({ data, onOpenModal }) {
+            if (!data) return null;
+            const { pillars, dayMaster, strength, favorableElements, industries, luckPillars, annualAnalysis, fiveFactors, eightMansions, symbolicStars, dayMasterStrengthDetails, luckPeriodsData } = data;
+            
+            return (
+                <div id="results" className="mt-8 space-y-6 animate-fade-in">
+                    {/* Primary Analysis */}
+                    <PillarSection pillars={pillars} onOpenModal={onOpenModal}/>
+                    <DayMasterSection dayMaster={dayMaster} strength={strength} dayMasterStrengthDetails={dayMasterStrengthDetails} onOpenModal={onOpenModal} />
+                    {luckPillars && <LuckPillarsSection luckPillars={luckPillars} birthYear={data.birthYear} onOpenModal={onOpenModal} />}
+                    {annualAnalysis && <AnnualAnalysisSection annualAnalysis={annualAnalysis} />}
+                    <InvestmentSuggestionSection favorableElements={favorableElements} industries={industries} />
+                    
+                    {/* Favorable Periods Section */}
+                    {luckPeriodsData && <FavorablePeriodsSection periods={luckPeriodsData} />}
+
+                    {/* Supplementary Analysis */}
+                    <div className="card">
+                         <div className="flex items-center mb-4">
+                            <h2 className="text-xl font-bold text-gray-800">Phân Tích Bổ Sung</h2>
+                        </div>
+                        <div className="space-y-6">
+                            {fiveFactors && <FiveElementChart fiveFactors={fiveFactors} />}
+                            {symbolicStars && <SymbolicStarsSection stars={symbolicStars} />}
+                            {eightMansions && <EightMansionsSection mansions={eightMansions} onOpenModal={onOpenModal}/>}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // --- Sub-components for better organization ---
+        const PillarSection = ({ pillars, onOpenModal }) => (
+             <div className="card">
+                <div className="flex items-center mb-4">
+                    <h2 className="text-xl font-bold text-gray-800">Lá Số Bát Tự (Tứ Trụ)</h2>
+                    <button onClick={() => onOpenModal('Giải Thích: Lá Số Bát Tự', LÁ_SỐ_BÁT_TỰ_CONTENT)} className="info-button">?</button>
+                </div>
+                <div className="flex flex-col md:flex-row gap-4">
+                    <Pillar pillar={pillars.year} label="Trụ Năm" />
+                    <Pillar pillar={pillars.month} label="Trụ Tháng" />
+                    <Pillar pillar={pillars.day} label="Trụ Ngày" />
+                    <Pillar pillar={pillars.time} label="Trụ Giờ" />
+                </div>
+            </div>
+        );
+
+        const DayMasterSection = ({dayMaster, strength, dayMasterStrengthDetails, onOpenModal}) => {
+            const [detailsVisible, setDetailsVisible] = useState(false);
+            const dayMasterElementVi = TRANSLATIONS.elements[dayMaster.element];
+            const dayMasterStyle = STYLE_CLASSES[dayMasterElementVi] || {};
+            
+            return (
+                <div className="card">
+                    <div className="flex items-center mb-4">
+                        <h2 className="text-xl font-bold text-gray-800">Phân Tích Mệnh Chủ</h2>
+                        <button onClick={() => onOpenModal('Giải Thích: Mệnh Chủ & Sức Mạnh', MỆNH_CHỦ_CONTENT)} className="info-button">?</button>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+                        <div className={`p-4 rounded-lg ${dayMasterStyle.bg || STYLE_CLASSES['Thủy'].bg}`}><span className="font-semibold">Mệnh Chủ (Nhật Chủ):</span><span className={`font-bold ${dayMasterStyle.text || 'text-gray-700'} ml-2`}><ElementIcon element={dayMasterElementVi} />{TRANSLATIONS.stems[dayMaster.name] || dayMaster.name} ({dayMasterElementVi})</span></div>
+                        <div className={`p-4 rounded-lg ${strength === 'Vượng' ? STYLE_CLASSES['Mộc'].bg : STYLE_CLASSES['Hỏa'].bg}`}><span className="font-semibold">Sức mạnh:</span><span className={`font-bold ml-2 ${strength === 'Vượng' ? STYLE_CLASSES['Mộc'].text : STYLE_CLASSES['Hỏa'].text}`}>{strength}</span> <button onClick={() => setDetailsVisible(!detailsVisible)} className="ml-2 text-sm text-blue-600">(chi tiết)</button></div>
+                    </div>
+                    {detailsVisible && dayMasterStrengthDetails && (
+                        <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                            <h3 className="font-semibold mb-2">Yếu tố đóng góp vào sức mạnh:</h3>
+                            {dayMasterStrengthDetails.notes && Array.isArray(dayMasterStrengthDetails.notes) ? (
+                                <ul className="text-sm space-y-1">
+                                    {dayMasterStrengthDetails.notes.map((note, i) => (
+                                        <li key={i} className="p-1 rounded bg-gray-100"> • {translateNote(note)}</li>
+                                    ))}
+                                    <li className="flex justify-between p-1 border-t font-bold"><span>Tổng điểm:</span> <span>{dayMasterStrengthDetails.score}</span></li>
+                                </ul>
+                            ) : (
+                                <p className="text-sm text-gray-500">Không có dữ liệu chi tiết về các yếu tố đóng góp.</p>
+                            )}
+                        </div>
+                    )}
+                </div>
+            )
+        };
+        
+        const LuckPillarsSection = ({luckPillars, birthYear, onOpenModal}) => {
+            const currentYear = new Date().getFullYear();
+            const currentAge = currentYear - birthYear;
+            return (
+                 <div className="card">
+                     <div className="flex items-center mb-4">
+                        <h2 className="text-xl font-bold text-gray-800">Phân Tích Đại Vận (10 Năm)</h2>
+                        <button onClick={() => onOpenModal('Giải Thích: Đại Vận', ĐẠI_VẬN_CONTENT)} className="info-button">?</button>
+                    </div>
+                    <div className="luck-pillar-grid">
+                        {luckPillars.pillars.map(p => (
+                            <div key={p.number} className={`p-3 rounded-lg border ${currentAge >= p.ageStart && currentAge < (p.ageStart + 10) ? 'bg-indigo-50 border-indigo-400' : 'bg-white'}`}>
+                                <div className="font-bold text-gray-700">{p.ageStart} tuổi</div>
+                                <div className="text-xs text-gray-500">{p.yearStart} - {p.yearEnd}</div>
+                                <Pillar pillar={{ stem: p.heavenlyStem, branch: p.earthlyBranch }} className="mt-2 shadow-none border-0 p-2" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )
+        };
+
+        const AnnualAnalysisSection = ({ annualAnalysis }) => {
+            const currentYear = new Date().getFullYear();
+            if (!annualAnalysis || !annualAnalysis.annualPillarContext) return null;
+            return (
+                 <div className="card">
+                    <h2 className="text-xl font-bold text-gray-800 mb-2">Phân Tích Vận Hạn Năm {currentYear}</h2>
+                    <div className="flex items-center gap-4 p-2 rounded-lg bg-gray-50">
+                        <Pillar pillar={annualAnalysis.annualPillarContext.pillar} label={`Năm ${currentYear}`} className="shadow-none border-0 p-2" />
+                        <div className="flex-1">
+                            <h3 className="font-semibold text-gray-700">Tương tác với Lá số gốc:</h3>
+                            {annualAnalysis.interactions.length > 0 ? (
+                                <div className="mt-1 flex flex-wrap gap-2">
+                                    {annualAnalysis.interactions.map((int, i) => {
+                                        const [{ elementChar: branch1 }, { elementChar: branch2 }] = int.participants;
+                                        const tagColor = ['clash','harm','punishment','destruction'].includes(int.type) ? 'bad' : 'good';
+                                        const key = `${int.type}-${branch1}-${branch2}-${i}`;
+
+                                        return (
+                                            <span key={key} className={`interaction-tag ${STYLE_CLASSES[tagColor].tag}`}>
+                                                {TRANSLATIONS.interactions[int.type]}: {TRANSLATIONS.branches[branch1]}–{TRANSLATIONS.branches[branch2]}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
+                            ) : <p className="text-sm text-gray-500">Không có tương tác Xung/Hợp/Hại/Hình chính.</p>}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        const InvestmentSuggestionSection = ({ favorableElements, industries }) => (
+             <div className="card">
+                 <h2 className="text-xl font-bold text-gray-800 mb-2">Ngành Đầu Tư Gợi Ý (Dựa trên Hỷ Dụng Thần)</h2>
+                 <p className="text-gray-600 mb-4">Các ngành thuộc hành vượng sẽ mang lại nhiều thuận lợi hơn cho việc đầu tư và phát triển.</p>
+                 <div className="space-y-4">
+                    {favorableElements.map(element => (
+                        <div key={element} className="p-4 border rounded-lg">
+                            <h3 className={`text-lg font-bold ${STYLE_CLASSES[element]?.text || 'text-gray-700'} mb-2`}><ElementIcon element={element} />Hành {element}</h3>
+                            <ul className="space-y-2">{industries[element]?.map((industry, index) => (<li key={`${element}-${industry.name}-${index}`} className="p-3 bg-gray-50 rounded-md"><p className="font-semibold text-gray-800">{industry.name}</p><p className="text-sm text-gray-500">{industry.desc}</p></li>))}</ul>
+                        </div>
+                    ))}
+                 </div>
+            </div>
+        );
+
+        const FiveElementChart = ({ fiveFactors }) => {
+            const totalScore = Object.values(fiveFactors).reduce((sum, v) => sum + v, 0);
+            const elements = Object.entries(fiveFactors).map(([key, score]) => ({ name: TRANSLATIONS.elements[key], score, percentage: totalScore > 0 ? (score / totalScore) * 100 : 0 }));
+            const strongest = elements.reduce((max, el) => el.score > max.score ? el : max, {score: -Infinity});
+            const weakest = elements.reduce((min, el) => el.score < min.score ? el : min, {score: Infinity});
+
+            return (
+                <div>
+                    <h3 className="text-lg font-semibold text-gray-700 mb-2">Phân Bổ Ngũ Hành</h3>
+                    <div className="space-y-2">
+                    {elements.map(el => (
+                        <div key={el.name} className="flex items-center">
+                            <span className="w-12 font-medium text-sm">{el.name}</span>
+                            <div className="flex-1 bg-gray-200 rounded-full h-5 mx-2">
+                                <div className={`bar-chart-bar ${STYLE_CLASSES[el.name]?.chart || ''}`} style={{width: `${el.percentage}%`}}></div>
+                            </div>
+                            <span className="w-12 text-right font-semibold text-sm">{el.score}</span>
+                        </div>
+                    ))}
+                    </div>
+                     <div className="text-xs text-center mt-2"><strong>Vượng nhất:</strong> {strongest.name} | <strong>Suy nhất:</strong> {weakest.name}</div>
+                </div>
+            );
+        };
+
+        const SymbolicStarsSection = ({ stars }) => (
+            <div>
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">Thần Sát Đặc Biệt</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div><span role="img" aria-label="Nobleman">🤝</span><p className="font-semibold">Quý Nhân</p><p className="text-gray-600">{Array.isArray(stars.nobleman) && stars.nobleman.length ? stars.nobleman.map(b => TRANSLATIONS.branches[b]).join(', ') : 'Không có'}</p></div>
+                    <div><span role="img" aria-label="Intelligence">💡</span><p className="font-semibold">Văn Xương</p><p className="text-gray-600">{stars.intelligence ? TRANSLATIONS.branches[stars.intelligence] : 'Không có'}</p></div>
+                    <div><span role="img" aria-label="Sky Horse">🐎</span><p className="font-semibold">Thiên Mã</p><p className="text-gray-600">{stars.skyHorse ? TRANSLATIONS.branches[stars.skyHorse] : 'Không có'}</p></div>
+                    <div><span role="img" aria-label="Peach Blossom">🌸</span><p className="font-semibold">Đào Hoa</p><p className="text-gray-600">{stars.peachBlossom ? TRANSLATIONS.branches[stars.peachBlossom] : 'Không có'}</p></div>
+                </div>
+            </div>
+        );
+
+        const EightMansionsSection = ({ mansions, onOpenModal }) => {
+            if (!mansions || !mansions.directions) return null;
+            
+            return (
+                <div>
+                    <div className="flex items-center mb-2">
+                        <h3 className="text-lg font-semibold text-gray-700">Bát Trạch Phong Thủy</h3>
+                        <button onClick={() => onOpenModal('Giải Thích: Bát Trạch', BÁT_TRẠCH_CONTENT)} className="info-button">?</button>
+                    </div>
+                     <p className="text-sm text-gray-600 mb-2">Cung Mệnh của bạn là <strong>{mansions.lifeGuaTrigram || "—"}{mansions.lifeGuaElement ? ` (${TRANSLATIONS.elements[mansions.lifeGuaElement]})` : ""}</strong>. Các hướng tốt và xấu:</p>
+                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                        {Object.entries(mansions.directions).map(([key, value]) => {
+                            const isAuspicious = value.type === 'Auspicious';
+                            return (
+                                <div key={key} className={`p-2 rounded-md ${isAuspicious ? 'bg-green-50' : 'bg-red-50'}`}>
+                                    <p className={`font-bold ${isAuspicious ? 'text-green-800' : 'text-red-800'}`}>{TRANSLATIONS.directions[value.direction]}: {TRANSLATIONS.eightMansions[key] || key}</p>
+                                    <p className={`${isAuspicious ? 'text-green-700' : 'text-red-700'}`}>{value.description}</p>
+                                </div>
+                            )
+                        })}
+                     </div>
+                </div>
+            )
+        };
+        
+        const FavorablePeriodsSection = ({ periods }) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="card">
+                    <h2 className="text-xl font-bold mb-4 text-green-700">Giai Đoạn Thuận Tài</h2>
+                    <div className="space-y-1 text-sm">
+                    {periods.finance.length > 0 ? (
+                        periods.finance.map(p => (
+                            <p key={p.key} className="p-1">Từ <strong>{p.age}</strong> tuổi ({p.years}) — Thiên Can: <strong>{p.tenGodName}</strong></p>
+                        ))
+                    ) : (
+                        <p className="text-gray-500">Không có giai đoạn hỗ trợ tài chính rõ ràng trong các Đại Vận sắp tới.</p>
+                    )}
+                    </div>
+                </div>
+                <div className="card">
+                    <h2 className="text-xl font-bold mb-4 text-blue-700">Giai Đoạn Thuận Sức Khỏe & Học Vấn</h2>
+                     <div className="space-y-1 text-sm">
+                    {periods.health.length > 0 ? (
+                        periods.health.map(p => (
+                             <p key={p.key} className="p-1">Từ <strong>{p.age}</strong> tuổi ({p.years}) — Thiên Can: <strong>{p.tenGodName}</strong></p>
+                        ))
+                    ) : (
+                        <p className="text-gray-500">Không có giai đoạn hỗ trợ sức khỏe/học vấn rõ ràng trong các Đại Vận sắp tới.</p>
+                    )}
+                    </div>
+                </div>
+            </div>
+        );
+
+        function InfoModal({ isOpen, onClose, title, content }) {
+            if (!isOpen) return null;
+
+            return (
+                <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4" onClick={onClose}>
+                    <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative modal-content" onClick={e => e.stopPropagation()}>
+                        <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                        <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
+                        <div className="text-gray-700 space-y-2" dangerouslySetInnerHTML={{ __html: content }}></div>
+                    </div>
+                </div>
+            );
+        }
+
+        function App() {
+            const [birthDate, setBirthDate] = useState('1990-05-15');
+            const [birthTime, setBirthTime] = useState('12:30');
+            const [gender, setGender] = useState('male');
+            const [timeZone, setTimeZone] = useState('Asia/Ho_Chi_Minh');
+            const [isTimeKnown, setIsTimeKnown] = useState(true);
+            const [isLibraryReady, setIsLibraryReady] = useState(false);
+            const [results, setResults] = useState(null);
+            const [error, setError] = useState('');
+            const [isLoading, setIsLoading] = useState(false);
+            const [isModalOpen, setIsModalOpen] = useState(false);
+            const [modalContent, setModalContent] = useState(null);
+
+            const openModal = (title, content) => {
+                setModalContent({ title, content });
+                setIsModalOpen(true);
+            };
+
+            const closeModal = () => setIsModalOpen(false);
+            
+            const handleCalculate = () => {
+                if (!isLibraryReady) { setError('Thư viện tính toán chưa sẵn sàng.'); return; }
+                
+                setError('');
+                setIsLoading(true);
+
+                if (!birthDate) { setError('Vui lòng nhập ngày sinh.'); setIsLoading(false); return; }
+                if (isTimeKnown && !birthTime) { setError('Vui lòng nhập giờ sinh hoặc bỏ tick "Biết giờ sinh".'); setIsLoading(false); return; }
+                
+                try {
+                    const { BaziCalculator, dateFnsTz } = window;
+                    const birthDateTime = isTimeKnown ? dateFnsTz.toDate(`${birthDate}T${birthTime}`, { timeZone }) : dateFnsTz.toDate(birthDate, { timeZone });
+                    const calculator = new BaziCalculator(birthDateTime, gender, timeZone, isTimeKnown);
+                    
+                    const analysis = calculator.getCompleteAnalysis();
+                    if (!analysis || !analysis.basicAnalysis || !analysis.basicAnalysis.dayMaster || !analysis.detailedPillars) {
+                         throw new Error("Không thể phân tích lá số. Vui lòng kiểm tra lại thông tin đầu vào.");
+                    }
+
+                    const dayMaster = analysis.basicAnalysis.dayMaster;
+                    const strengthRaw = analysis.basicAnalysis.dayMasterStrength.strength;
+                    const dayMasterElementVi = TRANSLATIONS.elements[dayMaster.element];
+                    const strength = ['Strong', 'Extremely Strong', 'Vibrant'].includes(strengthRaw) ? 'Vượng' : 'Nhược';
+
+                    let favorableElements = [];
+                    if (strength === 'Vượng') {
+                        favorableElements.push(WUXING_RELATIONS.controls[dayMasterElementVi]);
+                        favorableElements.push(WUXING_RELATIONS.produces[dayMasterElementVi]);
+                    } else { 
+                        const producingElement = Object.keys(WUXING_RELATIONS.produces).find(key => WUXING_RELATIONS.produces[key] === dayMasterElementVi);
+                        favorableElements.push(producingElement);
+                        favorableElements.push(dayMasterElementVi);
+                    }
+                    favorableElements = [...new Set(favorableElements)].filter(Boolean);
+
+                    const recommendedIndustries = {};
+                    favorableElements.forEach(el => { recommendedIndustries[el] = INDUSTRY_MAP[el]; });
+                    
+                    const today = new Date();
+                    const annualAnalysis = calculator.getAnalysisForDate(today, timeZone, { type: 'personalized' });
+                    
+                    const detailedPillars = analysis.detailedPillars;
+                    const mappedPillars = {
+                        year: { stem: detailedPillars.year.heavenlyStem, branch: detailedPillars.year.earthlyBranch },
+                        month: { stem: detailedPillars.month.heavenlyStem, branch: detailedPillars.month.earthlyBranch },
+                        day: { stem: detailedPillars.day.heavenlyStem, branch: detailedPillars.day.earthlyBranch },
+                        time: detailedPillars.hour ? { stem: detailedPillars.hour.heavenlyStem, branch: detailedPillars.hour.earthlyBranch } : null
+                    };
+                    
+                    const luckPeriodsData = { finance: [], health: [] };
+                    if (analysis.luckPillars) {
+                        const financeGods = ['Direct Wealth', 'Indirect Wealth', 'Seven Killings', 'Direct Officer'];
+                        const healthGods = ['Direct Resource', 'Indirect Resource'];
+
+                        analysis.luckPillars.pillars.forEach(p => {
+                            const tenGodName = p.heavenlyStem.tenGod?.name;
+                            if (tenGodName) {
+                                const periodInfo = { age: p.ageStart, years: `${p.yearStart}-${p.yearEnd}`, tenGodName: TRANSLATIONS.tenGods[tenGodName] || tenGodName, key: p.number };
+                                if (financeGods.includes(tenGodName)) { luckPeriodsData.finance.push(periodInfo); }
+                                if (healthGods.includes(tenGodName)) { luckPeriodsData.health.push(periodInfo); }
+                            }
+                        });
+                    }
+
+                    const rawEightMansions = analysis.basicAnalysis.eightMansions;
+                    let transformedEightMansions = null;
+                    if (rawEightMansions) {
+                        const trigramMap = { 'East': 'Đông', 'West': 'Tây', 'South': 'Nam', 'North': 'Bắc', 'Northeast': 'Đông Bắc', 'Southeast': 'Đông Nam', 'Southwest': 'Tây Nam', 'Northwest': 'Tây Bắc'};
+                        const directions = {};
+                        if(rawEightMansions.lucky) {
+                            Object.entries(rawEightMansions.lucky).forEach(([kind, dir]) => {
+                                directions[kind] = { type: 'Auspicious', direction: dir, description: TRANSLATIONS.eightMansions[kind] || kind };
+                            });
+                        }
+                        if(rawEightMansions.unlucky) {
+                            Object.entries(rawEightMansions.unlucky).forEach(([kind, dir]) => {
+                                directions[kind] = { type: 'Inauspicious', direction: dir, description: TRANSLATIONS.eightMansions[kind] || kind };
+                            });
+                        }
+                        transformedEightMansions = {
+                             lifeGuaTrigram: trigramMap[rawEightMansions.group] || rawEightMansions.group,
+                             lifeGuaElement: rawEightMansions.elementName,
+                             directions
+                        }
+                    }
+
+                    setResults({
+                        birthYear: birthDateTime.getFullYear(),
+                        pillars: mappedPillars,
+                        dayMaster: dayMaster,
+                        strength,
+                        favorableElements,
+                        industries: recommendedIndustries,
+                        luckPillars: analysis.luckPillars,
+                        annualAnalysis,
+                        fiveFactors: analysis.basicAnalysis.fiveFactors,
+                        eightMansions: transformedEightMansions,
+                        symbolicStars: analysis.basicAnalysis.symbolicStars,
+                        dayMasterStrengthDetails: analysis.basicAnalysis.dayMasterStrength,
+                        luckPeriodsData
+                    });
+
+                } catch (e) {
+                    console.error('❌ calculation error', e);
+                    setError(e.message || 'Đã xảy ra lỗi. Vui lòng kiểm tra lại thông tin và múi giờ (VD: Asia/Ho_Chi_Minh).');
+                } finally {
+                    setIsLoading(false);
+                }
+            };
+            
+            useEffect(() => {
+                const setLibraryReady = () => setIsLibraryReady(true);
+                window.addEventListener('bazi-library-ready', setLibraryReady);
+                if (window.BaziCalculator && window.dateFnsTz) { setLibraryReady(); }
+                return () => window.removeEventListener('bazi-library-ready', setLibraryReady);
+            }, []);
+
+            const getButtonText = () => {
+                if (!isLibraryReady) return 'Đang tải thư viện...';
+                if (isLoading) return 'Đang phân tích...';
+                return 'Xem Phân Tích';
+            }
+
+            return (
+                <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8">
+                    <div className="max-w-4xl mx-auto">
+                        <header className="text-center mb-8">
+                             <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">Bát Tự & Gợi Ý Ngành Đầu Tư</h1>
+                             <p className="mt-2 text-lg text-gray-600">Khám phá các ngành nghề tiềm năng và phân tích vận hạn của bạn.</p>
+                        </header>
+                        
+                        <div className="card">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                                <div><label htmlFor="birthDate" className="block text-sm font-medium text-gray-700 mb-1">Ngày Sinh</label><input type="date" id="birthDate" value={birthDate} onChange={e => setBirthDate(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" /></div>
+                                <div><label htmlFor="birthTime" className="block text-sm font-medium text-gray-700 mb-1">Giờ Sinh</label><input type="time" id="birthTime" value={birthTime} onChange={e => setBirthTime(e.target.value)} disabled={!isTimeKnown} className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 disabled:bg-gray-100" /></div>
+                                <div><label htmlFor="timeZone" className="block text-sm font-medium text-gray-700 mb-1">Múi Giờ</label><input type="text" id="timeZone" value={timeZone} onChange={e => setTimeZone(e.target.value)} placeholder="VD: Asia/Ho_Chi_Minh" className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" /></div>
+                                <div><label htmlFor="gender" className="block text-sm font-medium text-gray-700 mb-1">Giới Tính</label><select id="gender" value={gender} onChange={e => setGender(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"><option value="male">Nam</option><option value="female">Nữ</option></select></div>
+                            </div>
+                            <div className="mt-4 flex justify-between items-center">
+                                <label className="flex items-center"><input type="checkbox" checked={isTimeKnown} onChange={e => setIsTimeKnown(e.target.checked)} className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" /><span className="ml-2 text-sm text-gray-600">Biết giờ sinh</span></label>
+                                <button onClick={handleCalculate} disabled={isLoading || !isLibraryReady} className="bg-indigo-600 text-white font-bold py-2 px-6 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200 disabled:bg-indigo-400 disabled:cursor-not-allowed">{getButtonText()}</button>
+                            </div>
+                            {error && <p className="mt-2 text-center text-red-600">{error}</p>}
+                        </div>
+
+                        {!results && !isLoading && !error && <div className="text-center p-8 text-gray-500">Nhập thông tin của bạn và nhấn "Xem Phân Tích" để bắt đầu.</div>}
+                        
+                        {isLoading && <div className="text-center p-8 text-gray-500">Đang phân tích...</div>}
+                        {results && <Results data={results} onOpenModal={openModal} />}
+
+                        <InfoModal isOpen={isModalOpen} onClose={closeModal} title={modalContent?.title} content={modalContent?.content} />
+
+
+                        <footer className="text-center mt-8 text-xs text-gray-500">
+                           <p>Sử dụng thư viện @aharris02/bazi-calculator-by-alvamind & date-fns-tz.</p>
+                           <p className="mt-2"><strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục. Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp. Luôn tham khảo ý kiến chuyên gia tài chính trước khi ra quyết định.</p>
+                        </footer>
+                    </div>
+                </div>
+            );
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+</body>
+</html>

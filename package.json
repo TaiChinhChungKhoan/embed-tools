@@ -1,0 +1,50 @@
+{
+    "name": "embed-tools",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "pnpm --filter \"./apps/*\" --parallel dev",
+        "build": "pnpm --filter \"./apps/*\" --parallel build",
+        "preview": "pnpm --filter \"./apps/*\" --parallel preview",
+        "deploy": "pnpm build && gh-pages -d dist",
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "lint:fix": "eslint . --ext js,jsx --fix",
+        "clean": "rm -rf dist node_modules/.vite",
+        "type-check": "tsc --noEmit",
+        "create-app": "node scripts/create-app.js",
+        "add-app-to-config": "node scripts/add-app-to-config.js"
+    },
+    "dependencies": {
+        "@radix-ui/react-label": "^2.1.7",
+        "@radix-ui/react-popover": "^1.1.14",
+        "@radix-ui/react-radio-group": "^1.3.7",
+        "@radix-ui/react-slider": "^1.3.5",
+        "@radix-ui/react-slot": "^1.2.3",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "lucide-react": "^0.522.0",
+        "react": "^19.1.0",
+        "react-day-picker": "^9.7.0",
+        "react-dom": "^19.1.0",
+        "tailwind-merge": "^3.3.1",
+        "tailwind-variants": "^1.0.0",
+        "tailwindcss-animate": "^1.0.7"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.1.10",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@vitejs/plugin-react": "^4.6.0",
+        "eslint": "^9.29.0",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-refresh": "^0.4.20",
+        "gh-pages": "^6.3.0",
+        "tailwindcss": "^4.1.10",
+        "terser": "^5.43.1",
+        "tw-animate-css": "^1.3.4",
+        "typescript": "^5.8.3",
+        "vite": "^6.3.5"
+    }
+}
