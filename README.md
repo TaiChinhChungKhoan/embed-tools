@@ -20,8 +20,7 @@ pnpm install
 pnpm dev
 
 # Start specific app
-pnpm --filter ai-model-discovery dev
-pnpm --filter website-cost-estimator dev
+pnpm --filter bazi-calculator dev
 ```
 
 ### Building
@@ -30,8 +29,7 @@ pnpm --filter website-cost-estimator dev
 pnpm build
 
 # Build specific app
-pnpm --filter ai-model-discovery build
-pnpm --filter website-cost-estimator build
+pnpm --filter bazi-calculator build
 ```
 
 ### Preview
@@ -40,7 +38,7 @@ pnpm --filter website-cost-estimator build
 pnpm preview
 
 # Preview specific app
-pnpm --filter ai-model-discovery preview
+pnpm --filter bazi-calculator preview
 ```
 
 ## 🚀 Deployment to GitHub Pages
@@ -53,8 +51,7 @@ pnpm --filter ai-model-discovery preview
 **To check deployment:**
 - Go to your repo on GitHub → Actions tab → See if the "Deploy to GitHub Pages" workflow ran and succeeded.
 - Your apps will be available at:
-  - `https://nilead.github.io/embed-tools/ai-model-discovery/`
-  - `https://nilead.github.io/embed-tools/website-cost-estimator/`
+  - `https://nilead.github.io/embed-tools/bazi-calculator/`
 
 ### 2. Manual Deployment (Optional)
 If you want to deploy manually, you can use the script:
@@ -74,52 +71,44 @@ This will:
 
 ## 📱 Available Apps
 
-### 1. AI Model Discovery
-A comprehensive tool to help users find the perfect AI model for their use case.
+### 1. Bazi Calculator
+A comprehensive Chinese astrology tool for calculating and analyzing Ba Zi (Four Pillars of Destiny) charts.
 
 **Features:**
-- Interactive questionnaire-based model selection
-- Detailed model comparisons with expandable cards
-- Pricing and performance metrics
-- Token usage information
+- Interactive birth date and time input with timezone support
+- Complete Ba Zi chart calculation with detailed analysis
+- Day Master strength analysis and favorable elements
+- Luck pillars and life period analysis
+- Eight Mansions (Feng Shui) direction recommendations
+- Five Elements analysis and industry recommendations
+- Symbolic stars interpretation
+- Annual analysis for current year
 - Responsive design with shared UI components
-- Breadcrumb navigation showing selected criteria
+- Vietnamese language support with comprehensive translations
 
-**URL:** `https://nilead.github.io/embed-tools/ai-model-discovery/`
-
-### 2. Website Cost Estimator
-A tool to estimate website development costs based on various factors.
-
-**Features:**
-- Interactive cost calculation
-- Multiple pricing tiers
-- Feature-based estimation
-- Responsive design with shared UI components
-
-**URL:** `https://nilead.github.io/embed-tools/website-cost-estimator/`
+**URL:** `https://nilead.github.io/embed-tools/bazi-calculator/`
 
 ## 🛠️ Project Structure
 
 ```
 embed-tools/
 ├── apps/                           # Individual applications
-│   ├── ai-model-discovery/         # AI Model Discovery app
+│   ├── bazi-calculator/            # Bazi Calculator app
 │   │   ├── src/
 │   │   │   ├── App.jsx            # Main app component
 │   │   │   ├── components/        # App-specific components
-│   │   │   │   ├── QuestionStep.jsx
-│   │   │   │   ├── ResultsStep.jsx
-│   │   │   │   ├── ModelCard.jsx
-│   │   │   │   └── TokensInfo.jsx
+│   │   │   │   ├── DatePicker.jsx
+│   │   │   │   ├── TimePicker.jsx
+│   │   │   │   ├── Results.jsx
+│   │   │   │   ├── Modal.jsx
+│   │   │   │   └── [other components]
 │   │   │   └── data/              # App data and configuration
-│   │   │       ├── aiModels.js
-│   │   │       └── quizConfig.js
+│   │   │       ├── constants.js
+│   │   │       └── explanations.js
 │   │   ├── index.html             # HTML template
 │   │   ├── package.json           # App-specific dependencies
-│   │   ├── tsconfig.json          # App-specific TypeScript config
+│   │   ├── README.md              # App-specific documentation
 │   │   └── vite.config.js         # App-specific Vite config
-│   ├── website-cost-estimator/     # Website Cost Estimator app
-│   │   └── [similar structure]
 │   ├── _template/                  # Template for new apps
 │   └── lib/                        # Shared utilities
 ├── packages/                       # Shared packages
@@ -136,8 +125,7 @@ embed-tools/
 │       ├── base.json              # Base TypeScript config
 │       └── react-app.json         # React app TypeScript config
 ├── dist/                          # Production builds
-│   ├── ai-model-discovery/        # Built AI Model Discovery app
-│   └── website-cost-estimator/    # Built Website Cost Estimator app
+│   └── bazi-calculator/           # Built Bazi Calculator app
 ├── scripts/
 │   └── create-app.js              # App generator script
 ├── pnpm-workspace.yaml            # pnpm workspace configuration
@@ -378,11 +366,13 @@ pnpm --filter app-name add package-name
 
 ## 📝 Recent Updates
 
+- **Added Bazi Calculator app** - Comprehensive Chinese astrology tool with Ba Zi chart analysis
 - **Fixed CSS source definition issue** - Critical fix for proper styling
-- **Enhanced AI Model Discovery app** - Added breadcrumb navigation and improved card interactions
 - **Updated to React 19** - Latest React version with improved performance
 - **Improved build process** - Better monorepo build configuration
-- **Added interactive model cards** - Clickable cards with expandable details
+- **Enhanced UI components** - Shared component library with shadcn/ui integration
+- **Added Vietnamese language support** - Complete translations for Bazi Calculator
+- **Implemented timezone support** - Accurate calculations across different time zones
 
 ## 🎨 Customization
 

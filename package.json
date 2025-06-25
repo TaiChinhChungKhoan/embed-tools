@@ -7,7 +7,7 @@
         "dev": "pnpm --filter \"./apps/*\" --parallel dev",
         "build": "pnpm --filter \"./apps/*\" --parallel build",
         "preview": "pnpm --filter \"./apps/*\" --parallel preview",
-        "deploy": "pnpm build && gh-pages -d dist",
+        "deploy": "pnpm build && npx gh-pages -d dist",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "lint:fix": "eslint . --ext js,jsx --fix",
         "clean": "rm -rf dist node_modules/.vite",
