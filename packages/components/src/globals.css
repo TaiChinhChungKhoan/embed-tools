@@ -75,12 +75,33 @@
     @apply font-sans;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 
+  h1 {
+    @apply text-3xl font-bold text-gray-900 my-2;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-gray-900 my-1;
+  }
+
   h3 {
-    color: hsl(var(--foreground));
+    @apply text-xl font-semibold text-gray-800 my-1;
+  }
+
+  h4 {
+    @apply text-lg font-medium text-gray-700 my-1;
+  }
+
+  h5 {
+    @apply text-base font-medium text-gray-600 my-1;
   }
 }
 

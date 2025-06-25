@@ -8,7 +8,7 @@ const LuckPillarsSection = ({ luckPillars, birthYear, onOpenModal }) => {
   if (!luckPillars) return null;
 
   // Debug: log the full luckPillars data
-  console.log('Luck Pillars:', luckPillars.pillars);
+  // console.log('Luck Pillars:', luckPillars.pillars);
 
   const currentYear = new Date().getFullYear();
   const currentAge = currentYear - birthYear;

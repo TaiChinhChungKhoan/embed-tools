@@ -60,7 +60,7 @@ const Results = ({ data, onOpenModal }) => {
           <h2 className="text-xl font-semibold text-gray-900">Phân Tích Bổ Sung</h2>
         </div>
         <div className="space-y-6">
-          {data.fiveFactors && <FiveElementChart fiveFactors={data.fiveFactors} />}
+          {data.fiveFactors && <FiveElementChart fiveFactors={data.fiveFactors} onOpenModal={onOpenModal} />}
           {data.symbolicStars && <SymbolicStarsSection stars={data.symbolicStars} />}
           {data.eightMansions && <EightMansionsSection mansions={data.eightMansions} onOpenModal={onOpenModal} />}
         </div>

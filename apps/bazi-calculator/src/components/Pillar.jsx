@@ -31,12 +31,12 @@ const Pillar = ({ stem, branch, label, className = '' }) => {
   }
 
   // Debug logging
-  console.log('Pillar stem:', stem);
-  if (stem.name && stem.polarity && stem.elementEn) {
-    console.log('translateYinYangElement input:', `${stem.polarity} ${stem.elementEn}`);
-  } else {
-    console.log('Missing for translateYinYangElement:', { name: stem.name, polarity: stem.polarity, elementEn: stem.elementEn });
-  }
+  // console.log('Pillar stem:', stem);
+  // if (stem.name && stem.polarity && stem.elementEn) {
+  //   console.log('translateYinYangElement input:', `${stem.polarity} ${stem.elementEn}`);
+  // } else {
+  //   console.log('Missing for translateYinYangElement:', { name: stem.name, polarity: stem.polarity, elementEn: stem.elementEn });
+  // }
 
   const stemElementVi = TRANSLATIONS.elements[stem.element];
   const branchElementVi = TRANSLATIONS.elements[branch.element];

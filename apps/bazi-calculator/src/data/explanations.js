@@ -29,6 +29,34 @@ export const EXPLANATIONS = {
     <li><strong>Học hành & Nghiên cứu:</strong> Tinh thần minh mẫn, thuận lợi thi cử, nghiên cứu chuyên sâu.</li>
     <li><strong>Lưu ý:</strong> Hãy tận dụng để nâng cao trình độ, chăm sóc sức khoẻ chủ động.</li>
   </ul>`,
+
+  PHAN_BO_NGU_HANH: `
+    <p><strong>Hướng dẫn cân bằng Ngũ Hành</strong></p>
+    <ul>
+      <li><strong>Đối với hành yếu:</strong>
+        <ul>
+          <li><strong>Tăng cường yếu tố tương sinh</strong>  
+            – Ưu tiên lựa chọn hoạt động, ngành nghề hoặc màu sắc mang năng lượng hỗ trợ (tương sinh).</li>
+          <li><strong>Bổ sung trực tiếp yếu tố</strong>  
+            – Thêm các hoạt động, vật phẩm, trang trí… mang đặc tính tương ứng với hành yếu.</li>
+        </ul>
+      </li>
+      <li><strong>Đối với hành vượng:</strong>
+        <ul>
+          <li><strong>Sử dụng yếu tố khắc chế</strong>  
+            – Áp dụng hoạt động, ngành nghề hoặc màu sắc mang năng lượng chế ngự (khắc) để điều tiết.</li>
+          <li><strong>Khai thác yếu tố “chứa”</strong>  
+            – Tận dụng lĩnh vực, vật dụng hoặc màu sắc có khả năng kiềm chế, cân bằng mức độ vượng.</li>
+        </ul>
+      </li>
+      <li><strong>Chiến lược cân bằng tổng thể:</strong>
+        <ul>
+          <li>Luân phiên xen kẽ các hoạt động/đầu tư liên quan đến cả yếu tố sinh và khắc, tránh tình trạng một hành “áp đảo.”</li>
+          <li>Trong trang trí và phối màu, chọn vật phẩm hoặc tông màu đại diện cho các hành cần cân bằng (ví dụ: tranh, cây cảnh, đồ kim loại…).</li>
+        </ul>
+      </li>
+    </ul>
+  `,
 };
 
 // Translation function for strength analysis notes

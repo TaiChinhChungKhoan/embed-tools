@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { BaziCalculator } from '@aharris02/bazi-calculator-by-alvamind';
 import { toDate } from 'date-fns-tz';
-import { Card, Button, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@embed-tools/components';
+import { Card, Button, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@embed-tools/components';
 import { TRANSLATIONS, WUXING_RELATIONS, INDUSTRY_MAP } from './data/constants';
 import Results from './components/Results';
 import Modal from './components/Modal';
 import DatePickerComponent from './components/DatePicker';
 import TimePickerComponent from './components/TimePicker';
+import TimeZonePicker from './components/TimeZonePicker';
 import ReferenceSection from './components/ReferenceSection';
+import AuspiciousDaysSection from './components/AuspiciousDaysSection';
 
 function App() {
   const [birthDate, setBirthDate] = useState(new Date('1990-05-15'));
@@ -225,51 +227,48 @@ function App() {
         ) : (
           <>
             <Card className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
-                <div className="space-y-2 min-w-0">
-                  <DatePickerComponent value={birthDate} onChange={setBirthDate} label="Ngày Sinh" id="birthDate" inputClassName="w-full h-10 px-3 py-2" />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
+                <div className="flex flex-col justify-start min-w-0">
+                  <DatePickerComponent
+                    value={birthDate}
+                    onChange={setBirthDate}
+                    label="Ngày Sinh"
+                    id="birthDate"
+                    inputClassName="cursor-pointer w-full h-10 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  />
                 </div>
-                <div className="space-y-2 min-w-0">
+                <div className="flex flex-col justify-start min-w-0">
                   <TimePickerComponent
                     value={birthTime}
                     onChange={setBirthTime}
                     label="Giờ Sinh"
                     id="birthTime"
                     disabled={!isTimeKnown}
-                    inputClassName="
-    w-full
-    h-10
-    px-3
-    py-2
-    border border-gray-300
-    rounded-md
-    focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
-  "
+                    inputClassName="cursor-pointer w-full h-10 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   />
-
                 </div>
-                <div className="space-y-2 min-w-0">
-                  <Label htmlFor="timeZone">Múi Giờ</Label>
-                  <Input
-                    type="text"
-                    id="timeZone"
+                <div className="flex flex-col justify-start min-w-0">
+                  <TimeZonePicker
                     value={timeZone}
-                    onChange={e => setTimeZone(e.target.value)}
-                    placeholder="VD: Asia/Ho_Chi_Minh"
-                    className="w-full h-10 px-3 py-2"
+                    onChange={setTimeZone}
+                    label="Múi Giờ"
+                    id="timeZone"
+                    className="w-full h-10"
                   />
                 </div>
-                <div className="space-y-2 min-w-0">
-                  <Label htmlFor="gender">Giới Tính</Label>
-                  <Select value={gender} onValueChange={setGender}>
-                    <SelectTrigger className="w-full h-10 px-3 py-2">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="male">Nam</SelectItem>
-                      <SelectItem value="female">Nữ</SelectItem>
-                    </SelectContent>
-                  </Select>
+                <div className="flex flex-col justify-start min-w-0">
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="gender" className="text-sm font-medium">Giới Tính</Label>
+                    <Select value={gender} onValueChange={setGender}>
+                      <SelectTrigger className="w-full h-10 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer">
+                        <SelectValue placeholder="Chọn giới tính" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="male">Nam</SelectItem>
+                        <SelectItem value="female">Nữ</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
               </div>
               <div className="mt-6 flex justify-between items-center">
@@ -313,7 +312,23 @@ function App() {
               </Card>
             )}
 
-            {results && <Results data={results} onOpenModal={openModal} />}
+            {results && <>
+              <Results data={results} onOpenModal={openModal} />
+              <AuspiciousDaysSection
+                calculator={new BaziCalculator(
+                  isTimeKnown
+                    ? toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}T${birthTime}`, { timeZone })
+                    : toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}`, { timeZone }),
+                  gender,
+                  timeZone,
+                  isTimeKnown
+                )}
+                timeZone={timeZone}
+                favorableElements={results.favorableElements}
+                unfavorableElements={['Mộc', 'Hỏa', 'Thổ', 'Kim', 'Thủy'].filter(e => !results.favorableElements.includes(e))}
+                daysAhead={14}
+              />
+            </>}
 
             <Modal
               isOpen={isModalOpen}
