@@ -41,7 +41,7 @@ const DayMasterSection = ({ dayMaster, strength, dayMasterStrengthDetails, onOpe
           <span className="ml-2 font-bold text-red-600">{strength}</span>
           <button
             onClick={() => setDetailsVisible(!detailsVisible)}
-            className="ml-2 text-sm text-blue-600 hover:text-blue-800"
+            className="cursor-pointer ml-2 text-sm text-blue-600 hover:text-blue-800"
           >
             (chi tiết)
           </button>

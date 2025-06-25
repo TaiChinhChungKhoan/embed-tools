@@ -215,7 +215,7 @@ function App() {
             Khám phá các ngành nghề tiềm năng và phân tích vận hạn của bạn.
           </p>
           <button
-            className="mt-4 px-4 py-2 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 font-semibold"
+            className="cursor-pointer mt-4 px-4 py-2 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 font-semibold"
             onClick={() => setShowReference((v) => !v)}
           >
             {showReference ? 'Ẩn Tra cứu' : 'Tra cứu Kiến Thức Bát Tự'}
