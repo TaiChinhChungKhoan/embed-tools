@@ -51,7 +51,7 @@ pnpm --filter bazi-calculator preview
 **To check deployment:**
 - Go to your repo on GitHub → Actions tab → See if the "Deploy to GitHub Pages" workflow ran and succeeded.
 - Your apps will be available at:
-  - `https://nilead.github.io/embed-tools/bazi-calculator/`
+  - `https://taichinhchungkhoan.github.io/embed-tools/bazi-calculator/`
 
 ### 2. Manual Deployment (Optional)
 If you want to deploy manually, you can use the script:
@@ -86,7 +86,7 @@ A comprehensive Chinese astrology tool for calculating and analyzing Ba Zi (Four
 - Responsive design with shared UI components
 - Vietnamese language support with comprehensive translations
 
-**URL:** `https://nilead.github.io/embed-tools/bazi-calculator/`
+**URL:** `https://taichinhchungkhoan.github.io/embed-tools/bazi-calculator/`
 
 ## 🛠️ Project Structure
 
@@ -441,4 +441,4 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ using React, Vite, TypeScript, and Tailwind CSS v4.0.0 in a pnpm monorepo** 
+**Built with ❤️ using React, Vite, TypeScript, and Tailwind CSS v4.0.0 in a pnpm monorepo**
