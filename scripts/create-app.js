@@ -143,6 +143,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
       '@embed-tools/components': resolve(__dirname, '../../packages/components/src'),
+      '@embed-tools/iframe-utils': resolve(__dirname, '../../packages/iframe-utils/src'),
     },
   },
   css: {

@@ -10,6 +10,7 @@ import TimePickerComponent from './components/TimePicker';
 import TimeZonePicker from './components/TimeZonePicker';
 import ReferenceSection from './components/ReferenceSection';
 import AuspiciousDaysSection from './components/AuspiciousDaysSection';
+import { iframeUtils } from '@embed-tools/iframe-utils';
 
 function App() {
   const [birthDate, setBirthDate] = useState(new Date('1990-05-15'));
@@ -23,6 +24,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [showReference, setShowReference] = useState(false);
+  const isEmbedded = iframeUtils.isEmbedded();
 
   const openModal = (title, content) => {
     setModalContent({ title, content });
@@ -208,12 +210,17 @@ function App() {
     <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            Bát Tự & Gợi Ý Ngành Đầu Tư
-          </h1>
-          <p className="mt-2 text-lg text-gray-600">
-            Khám phá các ngành nghề tiềm năng và phân tích vận hạn của bạn.
-          </p>
+          {!isEmbedded && (
+            <>
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Bát Tự & Gợi Ý Ngành Đầu Tư
+              </h1>
+              <p className="mt-2 text-lg text-gray-600">
+                Khám phá các ngành nghề tiềm năng và phân tích vận hạn của bạn.
+              </p>
+            </>
+          )}
+
           <button
             className="cursor-pointer mt-4 px-4 py-2 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 font-semibold"
             onClick={() => setShowReference((v) => !v)}
