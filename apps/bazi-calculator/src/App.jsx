@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { BaziCalculator } from '@aharris02/bazi-calculator-by-alvamind';
 import { toDate } from 'date-fns-tz';
 import { Card, Button, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@embed-tools/components';
@@ -24,6 +24,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [showReference, setShowReference] = useState(false);
+  const containerRef = useRef(null);
   const isEmbedded = iframeUtils.isEmbedded();
 
   const openModal = (title, content) => {
@@ -206,8 +207,40 @@ function App() {
     return 'Xem Phân Tích';
   };
 
+  // Resize observer for iframe communication
+  useEffect(() => {
+    if (!isEmbedded || !containerRef.current) return;
+
+    const resizeObserver = new window.ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { width, height } = entry.contentRect;
+        iframeUtils.sendResizeMessage(width, height);
+      }
+    });
+
+    resizeObserver.observe(containerRef.current);
+
+    // Initial size notification
+    const { width, height } = containerRef.current.getBoundingClientRect();
+    iframeUtils.sendResizeMessage(width, height);
+
+    return () => resizeObserver.disconnect();
+  }, [isEmbedded]);
+
+  // Notify parent when state changes (results, modal, etc.)
+  useEffect(() => {
+    if (!isEmbedded) return;
+    const timer = setTimeout(() => {
+      if (containerRef.current) {
+        const { width, height } = containerRef.current.getBoundingClientRect();
+        iframeUtils.sendResizeMessage(width, height);
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [results, isModalOpen, showReference, isEmbedded]);
+
   return (
-    <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8" ref={containerRef}>
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-8">
           {!isEmbedded && (
