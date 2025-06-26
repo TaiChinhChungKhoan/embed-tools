@@ -104,11 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Export for module usage
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = IframeResizer;
-} else if (typeof window !== 'undefined') {
-  window.IframeResizer = IframeResizer;
-}
-
+// Remove CommonJS and window assignments
+// Only export as ESM default
 export default IframeResizer; 
