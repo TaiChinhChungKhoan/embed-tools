@@ -3,7 +3,7 @@ import { Card, Button, Label } from '@embed-tools/components';
 import { getBrowserLocale } from '../utils/locale';
 import { toDate } from 'date-fns-tz';
 
-const MAX_DAYS = 60;
+const MAX_DAYS = 90;
 
 function findAuspiciousDays(startDate, endDate, calculator, timeZone, favorableElements, unfavorableElements) {
     const good = [];
