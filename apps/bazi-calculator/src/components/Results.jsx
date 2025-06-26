@@ -1,4 +1,5 @@
 import { Card, Button } from '@embed-tools/components';
+import { getBrowserLocale } from '../utils/locale';
 import PillarSection from './PillarSection';
 import DayMasterSection from './DayMasterSection';
 import InvestmentSuggestionSection from './InvestmentSuggestionSection';
@@ -14,11 +15,11 @@ import AuspiciousDaysSection from './AuspiciousDaysSection';
 const Results = ({ data, onOpenModal, calculator, timeZone }) => {
   if (!data) return null;
 
-  // Format birth date and time for display
+  // Format birth date and time for display using browser locale
   const formatDateTime = (birthDateTime) => {
     if (!birthDateTime) return 'N/A';
     const date = new Date(birthDateTime);
-    return date.toLocaleString('vi-VN', {
+    return date.toLocaleString(getBrowserLocale(), {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -30,6 +31,17 @@ const Results = ({ data, onOpenModal, calculator, timeZone }) => {
 
   // Export function to download results as JSON
   const exportResults = () => {
+    // Convert UTC time back to local timezone for display using browser locale
+    const localDateTime = data.birthDateTime ? 
+      new Date(data.birthDateTime).toLocaleString(getBrowserLocale(), {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: data.timeZone
+      }) : 'N/A';
+
     const exportData = {
       metadata: {
         exportDate: new Date().toISOString(),
@@ -37,13 +49,23 @@ const Results = ({ data, onOpenModal, calculator, timeZone }) => {
         source: 'Bazi Calculator App'
       },
       inputData: {
-        birthDateTime: data.birthDateTime,
+        birthDateTimeUTC: data.birthDateTime, // UTC time (for calculations)
+        birthDateTimeLocal: localDateTime, // Local time in user's timezone
         birthYear: data.birthYear,
         gender: data.gender,
         timeZone: data.timeZone,
-        isTimeKnown: data.isTimeKnown
+        isTimeKnown: data.isTimeKnown,
+        originalInputs: {
+          date: data.originalBirthDate || 'N/A',
+          time: data.originalBirthTime || 'N/A',
+          timeZone: data.timeZone
+        }
       },
-      results: data
+      results: {
+        ...data,
+        birthDateTimeUTC: data.birthDateTime, // UTC time (for calculations)
+        birthDateTimeLocal: localDateTime // Local time in user's timezone
+      }
     };
 
     const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });

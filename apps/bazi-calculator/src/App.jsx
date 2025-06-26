@@ -4,16 +4,19 @@ import { toDate } from 'date-fns-tz';
 import { Card, Button, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@embed-tools/components';
 import { TRANSLATIONS, WUXING_RELATIONS, INDUSTRY_MAP, getBaziSuggestions } from './data/constants';
 import { translateNote } from './data/explanations';
+import { getBrowserLocale, createBaziDate } from './utils/locale';
 import Results from './components/Results';
 import Modal from './components/Modal';
-import DatePickerComponent from './components/DatePicker';
 import TimePickerComponent from './components/TimePicker';
 import TimeZonePicker from './components/TimeZonePicker';
 import ReferenceSection from './components/ReferenceSection';
 import iframeUtils from '@embed-tools/iframe-utils';
 
 function App() {
-  const [birthDate, setBirthDate] = useState(new Date('1990-05-15'));
+  const [birthDate, setBirthDate] = useState(() => {
+    const defaultDate = new Date('1990-05-15');
+    return isNaN(defaultDate.getTime()) ? null : defaultDate;
+  });
   const [birthTime, setBirthTime] = useState('12:30');
   const [gender, setGender] = useState('male');
   const [timeZone, setTimeZone] = useState('Asia/Ho_Chi_Minh');
@@ -38,8 +41,8 @@ function App() {
     setError('');
     setIsLoading(true);
 
-    if (!birthDate) {
-      setError('Vui lòng nhập ngày sinh.');
+    if (!birthDate || isNaN(birthDate.getTime())) {
+      setError('Vui lòng nhập ngày sinh hợp lệ.');
       setIsLoading(false);
       return;
     }
@@ -50,19 +53,15 @@ function App() {
     }
 
     try {
-      const yyyy = birthDate.getFullYear();
-      const mm = String(birthDate.getMonth() + 1).padStart(2, '0');
-      const dd = String(birthDate.getDate()).padStart(2, '0');
-      const birthDateStr = `${yyyy}-${mm}-${dd}`;
-      const birthDateTime = isTimeKnown ?
-        toDate(`${birthDateStr}T${birthTime}`, { timeZone }) :
-        toDate(birthDateStr, { timeZone });
+      const birthDateTime = createBaziDate(birthDate, birthTime, timeZone, isTimeKnown, toDate);
       
       // Validate birthDateTime is a valid Date object
       if (!(birthDateTime instanceof Date) || isNaN(birthDateTime.getTime())) {
         throw new Error('Ngày giờ sinh không hợp lệ. Vui lòng kiểm tra lại thông tin và múi giờ.');
       }
       
+      // IMPORTANT: BaziCalculator requires timezone-aware Date objects created with toDate from date-fns-tz
+      // Regular Date objects will not work correctly for timezone-sensitive calculations
       const calculator = new BaziCalculator(birthDateTime, gender, timeZone, isTimeKnown);
 
       const analysis = calculator.getCompleteAnalysis();
@@ -254,6 +253,8 @@ function App() {
       setResults({
         birthYear: birthDateTime.getFullYear(),
         birthDateTime: birthDateTime.toISOString(),
+        originalBirthDate: birthDate.toISOString().split('T')[0],
+        originalBirthTime: birthTime,
         gender,
         timeZone,
         isTimeKnown,
@@ -281,6 +282,25 @@ function App() {
     }
   };
 
+  // Get expected date format based on locale
+  const getExpectedDateFormat = () => {
+    const locale = getBrowserLocale();
+    const testDate = new Date(2025, 0, 15); // January 15, 2025
+    
+    // Get the date format for the current locale
+    const formattedDate = testDate.toLocaleDateString(locale, {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    });
+    
+    // Replace the actual values with format placeholders
+    return formattedDate
+      .replace('2025', 'YYYY')
+      .replace('01', 'MM')
+      .replace('15', 'DD');
+  };
+
   const getButtonText = () => {
     if (isLoading) return 'Đang phân tích...';
     return 'Xem Phân Tích';
@@ -305,6 +325,13 @@ function App() {
 
     return () => resizeObserver.disconnect();
   }, [isEmbedded]);
+
+  // Set locale for the application based on browser settings
+  useEffect(() => {
+    const locale = getBrowserLocale();
+    document.documentElement.lang = locale;
+    document.documentElement.setAttribute('lang', locale);
+  }, []);
 
   // Notify parent when state changes (results, modal, etc.)
   useEffect(() => {
@@ -348,13 +375,23 @@ function App() {
             <Card className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
                 <div className="flex flex-col justify-start min-w-0">
-                  <DatePickerComponent
-                    value={birthDate}
-                    onChange={setBirthDate}
-                    label="Ngày Sinh"
-                    id="birthDate"
-                    inputClassName="cursor-pointer w-full h-10 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                  />
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <Label htmlFor="birthDate" className="text-sm font-medium">Ngày Sinh:</Label>
+                      <span className="text-xs text-gray-500">({getExpectedDateFormat()})</span>
+                    </div>
+                    <input
+                      type="date"
+                      id="birthDate"
+                      value={birthDate && !isNaN(birthDate.getTime()) ? birthDate.toISOString().split('T')[0] : ''}
+                      onChange={(e) => {
+                        const newDate = new Date(e.target.value);
+                        setBirthDate(isNaN(newDate.getTime()) ? null : newDate);
+                      }}
+                      lang={getBrowserLocale()}
+                      className="cursor-pointer w-full h-10 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col justify-start min-w-0">
                   <TimePickerComponent
@@ -434,14 +471,14 @@ function App() {
             {results && <>
               {(() => {
                 try {
-                  const calculator = new BaziCalculator(
-                    isTimeKnown
-                      ? toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}T${birthTime}`, { timeZone })
-                      : toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}`, { timeZone }),
-                    gender,
-                    timeZone,
-                    isTimeKnown
-                  );
+                  if (!birthDate || isNaN(birthDate.getTime())) {
+                    throw new Error('Invalid birth date');
+                  }
+                  
+                  const birthDateTimeForResults = createBaziDate(birthDate, birthTime, timeZone, isTimeKnown, toDate);
+                  
+                  // IMPORTANT: BaziCalculator requires timezone-aware Date objects created with toDate from date-fns-tz
+                  const calculator = new BaziCalculator(birthDateTimeForResults, gender, timeZone, isTimeKnown);
                   
                   return (
                     <Results 

@@ -1,39 +1,44 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Card, Button, Label } from '@embed-tools/components';
+import { getBrowserLocale } from '../utils/locale';
+import { toDate } from 'date-fns-tz';
 
-const MAX_DAYS = 60; // Maximum days allowed for performance reasons
+const MAX_DAYS = 60;
 
 function findAuspiciousDays(startDate, endDate, calculator, timeZone, favorableElements, unfavorableElements) {
-    const good = [], bad = [];
-    const currentDate = new Date(startDate);
-    const end = new Date(endDate);
+    const good = [];
+    const bad = [];
+    
+    // Create timezone-aware start and end dates
+    const startDateStr = startDate.toISOString().split('T')[0];
+    const endDateStr = endDate.toISOString().split('T')[0];
+    
+    const currentDate = toDate(`${startDateStr}T12:00:00`, { timeZone });
+    const end = toDate(`${endDateStr}T12:00:00`, { timeZone });
     
     while (currentDate <= end) {
-        const analysisDate = calculator.getAnalysisForDate(currentDate, timeZone, { type: 'personalized' });
-
-        // Try both possible locations for the day pillar
-        const dayPillar =
-            analysisDate?.detailedPillars?.day ||
-            analysisDate?.dayPillar;
-
-        // Try both possible property names for the element
-        const stemElement =
-            dayPillar?.heavenlyStem?.elementEn ||
-            dayPillar?.stemElement; // fallback for top-level dayPillar
-
-        if (!stemElement) {
-            console.warn(`No stemElement for date: ${currentDate.toISOString()}`, dayPillar, analysisDate);
-            currentDate.setDate(currentDate.getDate() + 1);
-            continue;
+        try {
+            const analysis = calculator.getAnalysisForDate(currentDate, timeZone, { type: 'personalized' });
+            
+            if (analysis && analysis.dayPillar && analysis.dayPillar.stemElement) {
+                const dayMasterElement = analysis.dayPillar.stemElement;
+                
+                // Check if the day master element is favorable or unfavorable
+                if (favorableElements.includes(dayMasterElement)) {
+                    good.push(new Date(currentDate));
+                } else if (unfavorableElements.includes(dayMasterElement)) {
+                    bad.push(new Date(currentDate));
+                }
+            }
+        } catch (error) {
+            console.warn('Error analyzing date:', currentDate, error);
         }
         
-        if (favorableElements.includes(stemElement)) {
-            good.push(new Date(currentDate));
-        } else if (unfavorableElements.includes(stemElement)) {
-            bad.push(new Date(currentDate));
-        }
-        
-        currentDate.setDate(currentDate.getDate() + 1);
+        // Move to next day using timezone-aware date
+        const nextDay = new Date(currentDate);
+        nextDay.setDate(nextDay.getDate() + 1);
+        const nextDayStr = nextDay.toISOString().split('T')[0];
+        currentDate.setTime(toDate(`${nextDayStr}T12:00:00`, { timeZone }).getTime());
     }
     
     return { good, bad };
@@ -80,14 +85,21 @@ const AuspiciousDaysSection = ({
         if (!calculator || !timeZone || !favorableElements || !unfavorableElements || isRangeTooLarge || !isDateRangeValid) {
             return { good: [], bad: [] };
         }
-        return findAuspiciousDays(
-            new Date(startDate),
-            new Date(endDate),
+        
+        // Create proper Date objects from the date strings
+        const startDateObj = new Date(startDate + 'T12:00:00');
+        const endDateObj = new Date(endDate + 'T12:00:00');
+        
+        const result = findAuspiciousDays(
+            startDateObj,
+            endDateObj,
             calculator,
             timeZone,
             favorableElements,
             unfavorableElements
         );
+        
+        return result;
     }, [calculator, timeZone, favorableElements, unfavorableElements, startDate, endDate, isRangeTooLarge, isDateRangeValid]);
 
     const handleQuickRange = (days) => {
@@ -102,7 +114,7 @@ const AuspiciousDaysSection = ({
     const formatDateRange = () => {
         const start = new Date(startDate);
         const end = new Date(endDate);
-        return `${start.toLocaleDateString('vi-VN')} - ${end.toLocaleDateString('vi-VN')}`;
+        return `${start.toLocaleDateString(getBrowserLocale())} - ${end.toLocaleDateString(getBrowserLocale())}`;
     };
 
     const handleDateChange = (type, value) => {
@@ -159,6 +171,7 @@ const AuspiciousDaysSection = ({
                                 id="startDate"
                                 value={startDate}
                                 onChange={(e) => handleDateChange('start', e.target.value)}
+                                lang={getBrowserLocale()}
                                 className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                             />
                         </div>
@@ -169,6 +182,7 @@ const AuspiciousDaysSection = ({
                                 id="endDate"
                                 value={endDate}
                                 onChange={(e) => handleDateChange('end', e.target.value)}
+                                lang={getBrowserLocale()}
                                 className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                             />
                         </div>
@@ -220,7 +234,7 @@ const AuspiciousDaysSection = ({
                                     <li key={d.toISOString()} className="flex items-center">
                                         <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
                                         <span className="text-sm">
-                                            {d.toLocaleDateString('vi-VN', { 
+                                            {d.toLocaleDateString(getBrowserLocale(), { 
                                                 weekday: 'long', 
                                                 year: 'numeric', 
                                                 month: 'long', 
@@ -252,7 +266,7 @@ const AuspiciousDaysSection = ({
                                     <li key={d.toISOString()} className="flex items-center">
                                         <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                                         <span className="text-sm">
-                                            {d.toLocaleDateString('vi-VN', { 
+                                            {d.toLocaleDateString(getBrowserLocale(), { 
                                                 weekday: 'long', 
                                                 year: 'numeric', 
                                                 month: 'long', 
