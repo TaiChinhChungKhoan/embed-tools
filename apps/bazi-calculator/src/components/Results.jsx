@@ -8,8 +8,10 @@ import FavorablePeriodsSection from './FavorablePeriodsSection';
 import FiveElementChart from './FiveElementChart';
 import SymbolicStarsSection from './SymbolicStarsSection';
 import EightMansionsSection from './EightMansionsSection';
+import LifestyleSuggestionsSection from './LifestyleSuggestionsSection';
+import AuspiciousDaysSection from './AuspiciousDaysSection';
 
-const Results = ({ data, onOpenModal }) => {
+const Results = ({ data, onOpenModal, calculator, timeZone }) => {
   if (!data) return null;
 
   // Format birth date and time for display
@@ -93,11 +95,18 @@ const Results = ({ data, onOpenModal }) => {
             </div>
           </div>
         </div>
-        
-        <p className="text-gray-600">
-          Sinh năm {data.birthYear} - {data.gender === 'male' ? 'Nam' : 'Nữ'}
-        </p>
       </Card>
+
+      {/* Auspicious Days Section - moved up right after main header */}
+      {calculator && (
+        <AuspiciousDaysSection
+          calculator={calculator}
+          timeZone={timeZone}
+          favorableElements={data.favorableElements}
+          unfavorableElements={['WOOD', 'FIRE', 'EARTH', 'METAL', 'WATER'].filter(e => !data.favorableElements.includes(e))}
+          daysAhead={14}
+        />
+      )}
 
       <PillarSection pillars={data.pillars} onOpenModal={onOpenModal} />
       
@@ -127,6 +136,8 @@ const Results = ({ data, onOpenModal }) => {
       <InvestmentSuggestionSection 
         favorableElements={data.favorableElements} 
         industries={data.industries} 
+        unfavorableElements={data.unfavorableElements}
+        unfavorableIndustries={data.unfavorableIndustries}
         onOpenModal={onOpenModal} 
       />
 
@@ -139,6 +150,11 @@ const Results = ({ data, onOpenModal }) => {
           {data.fiveFactors && <FiveElementChart fiveFactors={data.fiveFactors} onOpenModal={onOpenModal} />}
           {data.symbolicStars && <SymbolicStarsSection stars={data.symbolicStars} />}
           {data.eightMansions && <EightMansionsSection mansions={data.eightMansions} onOpenModal={onOpenModal} />}
+          <LifestyleSuggestionsSection 
+            favorableElements={data.favorableElements} 
+            unfavorableElements={data.unfavorableElements} 
+            onOpenModal={onOpenModal} 
+          />
         </div>
       </Card>
     </div>

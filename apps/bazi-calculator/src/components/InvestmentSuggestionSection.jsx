@@ -3,6 +3,7 @@ import { Card, Badge } from '@embed-tools/components';
 import ElementIcon from './ElementIcon';
 import InfoButton from './InfoButton';
 import { EXPLANATIONS } from '../data/explanations';
+import { TRANSLATIONS } from '../data/constants';
 
 const INVESTMENT_HELP = `
 <p>Bát Tự (Tứ Trụ), mỗi người có một "Nhật Chủ" (Day Master) – là Can của Trụ Ngày – mang một trong năm hành (Mộc, Hỏa, Thổ, Kim, Thủy). Tùy theo độ "Vượng" hay "Nhược" của Nhật Chủ, ta sẽ tìm ra các hành "hỷ thần" (favorable elements) để cân bằng và hỗ trợ:</p>
@@ -33,8 +34,13 @@ Nhật Chủ là Hỏa (nhược) → Hỷ Thần: Thổ (Hỏa sinh Thổ) và 
 Hãy tập trung đầu tư vào những lĩnh vực thuộc hành mà Bát Tự xác định là "hỗ trợ" hay "cân bằng" cho bạn, vì khi "thuận hành" bạn sẽ dễ thành công, ít trắc trở hơn.</p>
 `;
 
-const InvestmentSuggestionSection = ({ favorableElements, industries, onOpenModal }) => {
+const InvestmentSuggestionSection = ({ favorableElements, industries, unfavorableElements, unfavorableIndustries, onOpenModal }) => {
   if (!favorableElements || !industries) return null;
+
+  // Helper function to translate element names for display
+  const translateElement = (element) => {
+    return TRANSLATIONS.elements[element] || element;
+  };
 
   return (
     <Card className="p-6">
@@ -43,43 +49,93 @@ const InvestmentSuggestionSection = ({ favorableElements, industries, onOpenModa
         <InfoButton onClick={() => onOpenModal('Giải Thích: Ngành Đầu Tư Gợi Ý', INVESTMENT_HELP)} />
       </div>
       <p className="text-gray-600 mb-4">Các ngành thuộc hành vượng sẽ mang lại nhiều thuận lợi hơn cho việc đầu tư và phát triển.</p>
-      <div className="space-y-4">
-        <div>
-          <h3 className="text-lg font-medium text-gray-800 mb-2">Hành Tốt Cho Bạn:</h3>
-          <div className="flex flex-wrap gap-2">
-            {favorableElements.map((element, index) => (
-              <Badge key={index} variant="secondary" className="flex items-center space-x-1">
-                <ElementIcon element={element} size="sm" />
-                <span>{element}</span>
-              </Badge>
-            ))}
+      
+      <div className="space-y-6">
+        {/* Favorable Industries Section */}
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-lg font-medium text-gray-800 mb-2">Hành Tốt Cho Bạn:</h3>
+            <div className="flex flex-wrap gap-2">
+              {favorableElements.map((element, index) => (
+                <Badge key={index} variant="secondary" className="flex items-center space-x-1">
+                  <ElementIcon element={element} size="sm" />
+                  <span>{translateElement(element)}</span>
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-medium text-gray-800 mb-3">Ngành Nghề Phù Hợp:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {Object.entries(industries).map(([element, industryList]) => (
+                <div key={element} className="p-4 border border-green-200 rounded-lg bg-green-50">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <ElementIcon element={element} size="md" />
+                    <Badge variant="secondary" className="flex items-center space-x-1">
+                      <span>{translateElement(element)}</span>
+                    </Badge>
+                  </div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {industryList.map((industry, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                        <div>
+                          <div className="font-medium text-gray-800">{industry.name}</div>
+                          <div className="text-gray-500 text-xs">{industry.desc}</div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-lg font-medium text-gray-800 mb-3">Ngành Nghề Phù Hợp:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {Object.entries(industries).map(([element, industryList]) => (
-              <div key={element} className="p-4 border border-gray-200 rounded-lg">
-                <div className="flex items-center space-x-2 mb-2">
-                  <ElementIcon element={element} size="md" />
-                  <h4 className="font-medium text-gray-800">{element}</h4>
-                </div>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  {industryList.map((industry, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-gray-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                      <div>
-                        <div className="font-medium text-gray-800">{industry.name}</div>
-                        <div className="text-gray-500 text-xs">{industry.desc}</div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+        {/* Unfavorable Industries Section */}
+        {unfavorableElements && unfavorableIndustries && (
+          <div className="space-y-4 pt-6 border-t border-gray-200">
+            <div>
+              <h3 className="text-lg font-medium text-gray-800 mb-2">Hành Nên Tránh:</h3>
+              <div className="flex flex-wrap gap-2">
+                {unfavorableElements.map((element, index) => (
+                  <Badge key={index} variant="destructive" className="flex items-center space-x-1">
+                    <ElementIcon element={element} size="sm" />
+                    <span>{translateElement(element)}</span>
+                  </Badge>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div>
+              <h3 className="text-lg font-medium text-gray-800 mb-3">Ngành Nghề Nên Tránh:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {Object.entries(unfavorableIndustries).map(([element, industryList]) => (
+                  <div key={element} className="p-4 border border-red-200 rounded-lg bg-red-50">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <ElementIcon element={element} size="md" />
+                      <Badge variant="destructive" className="flex items-center space-x-1">
+                        <span>{translateElement(element)}</span>
+                      </Badge>
+                    </div>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {industryList.map((industry, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="w-2 h-2 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                          <div>
+                            <div className="font-medium text-gray-800">{industry.name}</div>
+                            <div className="text-gray-500 text-xs">{industry.desc}</div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </Card>
   );

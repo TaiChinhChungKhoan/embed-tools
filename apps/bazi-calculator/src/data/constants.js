@@ -61,4 +61,61 @@ export function translateNote(note) {
     /\b(Season|Hidden Year|Hidden Month|Hidden Day|Hidden Hour|Stem Month|Stem Hour|Control Season|Weakening|Zheng Guan|Zheng Yin|Qi Sha|Pian Yin|Zheng Cai|Shang Guan|Jie Cai|Shi Shen)\b/g,
     (_, key) => NOTE_TRANSLATIONS[key] || key
   );
+}
+
+// Lifestyle and environment suggestions based on Bazi elements
+export function getBaziSuggestions(dungThan = [], kyThan = []) {
+  const data = {
+    METAL: {
+      colors: ["trắng", "xám bạc", "vàng kim", "ánh kim"],
+      materials: ["kim loại", "inox", "vàng", "bạc", "thép không gỉ"],
+      environment: ["nơi thoáng sáng", "hướng Tây – Tây Bắc", "nội thất ánh kim"],
+    },
+    EARTH: {
+      colors: ["vàng đất", "nâu", "be", "xám nhạt"],
+      materials: ["đá tự nhiên", "gốm sứ", "gạch", "xi măng", "vật liệu bê tông"],
+      environment: ["nơi cao ráo", "vùng đồi núi", "nội thất ấm màu đất"],
+    },
+    WOOD: {
+      colors: ["xanh lá cây", "xanh cốm", "xanh lá mạ"],
+      materials: ["gỗ tự nhiên", "tre", "nứa", "vải sợi tự nhiên"],
+      environment: ["nơi có cây xanh", "hướng Đông – Đông Nam", "không gian thoáng đãng"],
+      avoidColors: ["xanh lá cây", "xanh cốm"],
+      avoidMaterials: ["gỗ tươi", "vải sợi tự nhiên quá mềm"],
+    },
+    FIRE: {
+      colors: ["đỏ", "hồng", "cam", "tím"],
+      materials: ["đèn LED", "thủy tinh màu", "vải sợi tổng hợp"],
+      environment: ["nơi ấm áp", "hướng Nam", "ánh sáng tự nhiên"],
+      avoidColors: ["đỏ", "hồng", "cam"],
+      avoidMaterials: ["đèn LED đỏ", "đèn tia hồng ngoại", "nội thất tone nóng gắt"],
+    },
+    WATER: {
+      colors: ["đen", "xanh dương", "xanh tím than", "xanh biển"],
+      materials: ["thủy tinh", "gương", "đá quý", "vật liệu phản quang"],
+      environment: ["gần nước", "hướng Bắc", "không gian mát mẻ"],
+      avoidColors: ["đen", "xanh dương", "xanh tím than"],
+      avoidMaterials: ["bể cá", "gương lớn", "thủy tinh màu lạnh"],
+    },
+  };
+
+  // Gợi ý nên dùng
+  const shouldUse = dungThan.flatMap((element) => ({
+    element,
+    colors: data[element]?.colors || [],
+    materials: data[element]?.materials || [],
+    environment: data[element]?.environment || [],
+  }));
+
+  // Gợi ý nên tránh
+  const shouldAvoid = kyThan.flatMap((element) => ({
+    element,
+    colors: data[element]?.avoidColors || [],
+    materials: data[element]?.avoidMaterials || [],
+  }));
+
+  return {
+    goiYNenDung: shouldUse,
+    goiYNenTranh: shouldAvoid,
+  };
 } 

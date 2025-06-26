@@ -9,8 +9,7 @@ import DatePickerComponent from './components/DatePicker';
 import TimePickerComponent from './components/TimePicker';
 import TimeZonePicker from './components/TimeZonePicker';
 import ReferenceSection from './components/ReferenceSection';
-import AuspiciousDaysSection from './components/AuspiciousDaysSection';
-import { iframeUtils } from '@embed-tools/iframe-utils';
+import iframeUtils from '@embed-tools/iframe-utils';
 
 function App() {
   const [birthDate, setBirthDate] = useState(new Date('1990-05-15'));
@@ -34,7 +33,7 @@ function App() {
 
   const closeModal = () => setIsModalOpen(false);
 
-  const handleCalculate = () => {
+  const handleCalculate = async () => {
     setError('');
     setIsLoading(true);
 
@@ -66,29 +65,61 @@ function App() {
       const calculator = new BaziCalculator(birthDateTime, gender, timeZone, isTimeKnown);
 
       const analysis = calculator.getCompleteAnalysis();
+      console.log('🔍 API Response Debug:');
+      console.log('Full analysis:', analysis);
+      console.log('analysis.luckPillars:', analysis.luckPillars);
+      console.log('analysis.basicAnalysis:', analysis.basicAnalysis);
+      console.log('🔍 Does luckPillars exist?', !!analysis.luckPillars);
+      console.log('🔍 luckPillars type:', typeof analysis.luckPillars);
+      console.log('🔍 luckPillars keys:', analysis.luckPillars ? Object.keys(analysis.luckPillars) : 'N/A');
+
       if (!analysis || !analysis.basicAnalysis || !analysis.basicAnalysis.dayMaster || !analysis.detailedPillars) {
         throw new Error("Không thể phân tích lá số. Vui lòng kiểm tra lại thông tin đầu vào.");
       }
 
       const dayMaster = analysis.basicAnalysis.dayMaster;
       const strengthRaw = analysis.basicAnalysis.dayMasterStrength.strength;
-      const dayMasterElementVi = TRANSLATIONS.elements[dayMaster.element];
+      const dayMasterElementEn = dayMaster.element;
       const strength = ['Strong', 'Extremely Strong', 'Vibrant'].includes(strengthRaw) ? 'Vượng' : 'Nhược';
+
+      // English Wu Xing relationships
+      const WUXING_EN = {
+        produces: { 'WOOD': 'FIRE', 'FIRE': 'EARTH', 'EARTH': 'METAL', 'METAL': 'WATER', 'WATER': 'WOOD' },
+        controls: { 'WOOD': 'EARTH', 'FIRE': 'METAL', 'EARTH': 'WATER', 'METAL': 'WOOD', 'WATER': 'FIRE' }
+      };
 
       let favorableElements = [];
       if (strength === 'Vượng') {
-        favorableElements.push(WUXING_RELATIONS.controls[dayMasterElementVi]);
-        favorableElements.push(WUXING_RELATIONS.produces[dayMasterElementVi]);
+        // For strong day master, use controlling and producing elements
+        const controllingElement = WUXING_EN.controls[dayMasterElementEn];
+        if (controllingElement) favorableElements.push(controllingElement);
+        
+        const producingElement = WUXING_EN.produces[dayMasterElementEn];
+        if (producingElement) favorableElements.push(producingElement);
       } else {
-        const producingElement = Object.keys(WUXING_RELATIONS.produces).find(key => WUXING_RELATIONS.produces[key] === dayMasterElementVi);
-        favorableElements.push(producingElement);
-        favorableElements.push(dayMasterElementVi);
+        // For weak day master, use producing and self elements
+        const producingElement = Object.keys(WUXING_EN.produces).find(key => WUXING_EN.produces[key] === dayMasterElementEn);
+        if (producingElement) favorableElements.push(producingElement);
+        
+        // Add self element
+        favorableElements.push(dayMasterElementEn);
       }
       favorableElements = [...new Set(favorableElements)].filter(Boolean);
 
       const recommendedIndustries = {};
       favorableElements.forEach(el => {
-        recommendedIndustries[el] = INDUSTRY_MAP[el];
+        // Map English element to Vietnamese for industry lookup
+        const elementVi = TRANSLATIONS.elements[el];
+        recommendedIndustries[el] = INDUSTRY_MAP[elementVi];
+      });
+
+      // Calculate unfavorable industries (industries to avoid)
+      const unfavorableElements = ['WOOD', 'FIRE', 'EARTH', 'METAL', 'WATER'].filter(e => !favorableElements.includes(e));
+      const unfavorableIndustries = {};
+      unfavorableElements.forEach(el => {
+        // Map English element to Vietnamese for industry lookup
+        const elementVi = TRANSLATIONS.elements[el];
+        unfavorableIndustries[el] = INDUSTRY_MAP[elementVi];
       });
 
       // Get annual analysis for current year
@@ -116,13 +147,68 @@ function App() {
 
       // Process luck periods data
       const luckPeriodsData = { finance: [], health: [] };
+      console.log('🔍 Luck Periods Debug:');
+      console.log('analysis.luckPillars:', analysis.luckPillars);
+      console.log('analysis.detailedPillars:', analysis.detailedPillars);
+      
       if (analysis.luckPillars) {
-        // Broadened Ten-God groups
-        const financeGods = ['Direct Wealth', 'Indirect Wealth', 'Rob Wealth', 'Seven Killings', 'Direct Officer'];
-        const healthGods = ['Direct Resource', 'Indirect Resource', 'Eating God', 'Hurting Officer'];
+        // Updated Ten-God groups to match API response format
+        const financeGods = ['Zheng Cai', 'Pian Cai', 'Jie Cai', 'Qi Sha', 'Zheng Guan'];
+        const healthGods = ['Zheng Yin', 'Pian Yin', 'Shi Shen', 'Shang Guan'];
+        
+        console.log('financeGods:', financeGods);
+        console.log('healthGods:', healthGods);
+        
+        // Collect all available Ten-God names for debugging
+        const allTenGods = new Set();
 
-        analysis.luckPillars.pillars.forEach(p => {
-          const tenGodName = p.heavenlyStem.tenGod?.name;
+        analysis.luckPillars.pillars.forEach((p, index) => {
+          console.log(`Pillar ${index}:`, p);
+          console.log('heavenlyStem:', p.heavenlyStem);
+          console.log('heavenlyStem.tenGod:', p.heavenlyStem.tenGod);
+          console.log('earthlyBranch.hiddenStems:', p.earthlyBranch.hiddenStems);
+          
+          // Check if tenGod exists on heavenlyStem
+          let tenGodName = p.heavenlyStem.tenGod?.name;
+          console.log('tenGodName from heavenlyStem:', tenGodName);
+          
+          // If not found on heavenlyStem, check hiddenStems
+          if (!tenGodName && p.earthlyBranch.hiddenStems) {
+            console.log('Checking hiddenStems for tenGod...');
+            p.earthlyBranch.hiddenStems.forEach((hiddenStem, hiddenIndex) => {
+              console.log(`Hidden stem ${hiddenIndex}:`, hiddenStem);
+              if (hiddenStem.tenGod) {
+                console.log(`Found tenGod in hidden stem ${hiddenIndex}:`, hiddenStem.tenGod.name);
+                tenGodName = hiddenStem.tenGod.name;
+                allTenGods.add(hiddenStem.tenGod.name);
+              }
+            });
+          }
+          
+          // If still not found, check if there's a heavenlyStemTenGod property
+          if (!tenGodName && p.heavenlyStemTenGod) {
+            console.log('Found heavenlyStemTenGod:', p.heavenlyStemTenGod);
+            tenGodName = p.heavenlyStemTenGod.name;
+            allTenGods.add(p.heavenlyStemTenGod.name);
+          }
+          
+          // If still not found, try to get from detailedPillars based on the pillar type
+          if (!tenGodName && analysis.detailedPillars) {
+            console.log('Checking detailedPillars for Ten-God...');
+            // Map pillar number to pillar type (year, month, day, hour)
+            const pillarTypes = ['year', 'month', 'day', 'hour'];
+            const pillarType = pillarTypes[index % 4];
+            const detailedPillar = analysis.detailedPillars[pillarType];
+            
+            if (detailedPillar && detailedPillar.heavenlyStemTenGod) {
+              console.log(`Found Ten-God in detailedPillar.${pillarType}:`, detailedPillar.heavenlyStemTenGod);
+              tenGodName = detailedPillar.heavenlyStemTenGod.name;
+              allTenGods.add(detailedPillar.heavenlyStemTenGod.name);
+            }
+          }
+          
+          console.log('Final tenGodName:', tenGodName);
+          
           if (tenGodName) {
             const periodInfo = {
               age: p.ageStart,
@@ -130,14 +216,23 @@ function App() {
               tenGodName: TRANSLATIONS.tenGods[tenGodName] || tenGodName,
               key: p.number
             };
+            console.log('periodInfo:', periodInfo);
+            
             if (financeGods.includes(tenGodName)) {
+              console.log('✅ Adding to finance:', tenGodName);
               luckPeriodsData.finance.push(periodInfo);
             }
             if (healthGods.includes(tenGodName)) {
+              console.log('✅ Adding to health:', tenGodName);
               luckPeriodsData.health.push(periodInfo);
             }
           }
         });
+        
+        console.log('All available Ten-God names:', Array.from(allTenGods));
+        console.log('Final luckPeriodsData:', luckPeriodsData);
+      } else {
+        console.log('❌ No luckPillars data available');
       }
 
       // Process Eight Mansions data
@@ -194,6 +289,8 @@ function App() {
         strength,
         favorableElements,
         industries: recommendedIndustries,
+        unfavorableElements,
+        unfavorableIndustries,
         luckPillars: analysis.luckPillars,
         annualAnalysis,
         fiveFactors: analysis.basicAnalysis.fiveFactors,
@@ -362,7 +459,6 @@ function App() {
             )}
 
             {results && <>
-              <Results data={results} onOpenModal={openModal} />
               {(() => {
                 try {
                   const calculator = new BaziCalculator(
@@ -375,17 +471,23 @@ function App() {
                   );
                   
                   return (
-                    <AuspiciousDaysSection
+                    <Results 
+                      data={results} 
+                      onOpenModal={openModal} 
                       calculator={calculator}
                       timeZone={timeZone}
-                      favorableElements={results.favorableElements}
-                      unfavorableElements={['Mộc', 'Hỏa', 'Thổ', 'Kim', 'Thủy'].filter(e => !results.favorableElements.includes(e))}
-                      daysAhead={14}
                     />
                   );
                 } catch (e) {
-                  console.warn('⚠️ Could not create calculator for auspicious days section:', e.message);
-                  return null; // Silently skip the auspicious days section
+                  console.warn('⚠️ Could not create calculator for results:', e.message);
+                  return (
+                    <Results 
+                      data={results} 
+                      onOpenModal={openModal} 
+                      calculator={null}
+                      timeZone={timeZone}
+                    />
+                  );
                 }
               })()}
             </>}
