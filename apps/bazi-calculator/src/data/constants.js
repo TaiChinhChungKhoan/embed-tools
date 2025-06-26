@@ -16,7 +16,18 @@ export const TRANSLATIONS = {
   animals: { 'Rat': 'Chuột', 'Ox': 'Trâu', 'Tiger': 'Hổ', 'Rabbit': 'Thỏ', 'Dragon': 'Rồng', 'Snake': 'Rắn', 'Horse': 'Ngựa', 'Goat': 'Dê', 'Monkey': 'Khỉ', 'Rooster': 'Gà', 'Dog': 'Chó', 'Pig': 'Lợn' },
   elements: { 'WOOD': 'Mộc', 'FIRE': 'Hỏa', 'EARTH': 'Thổ', 'METAL': 'Kim', 'WATER': 'Thủy' },
   interactions: { 'combination': 'Hợp', 'clash': 'Xung', 'harm': 'Hại', 'punishment': 'Hình', 'destruction': 'Phá' },
-  tenGods: {'Friend': 'Tỷ Kiên', 'Rob Wealth': 'Kiếp Tài', 'Eating God': 'Thực Thần', 'Hurting Officer': 'Thương Quan', 'Indirect Wealth': 'Thiên Tài', 'Direct Wealth': 'Chính Tài', 'Seven Killings': 'Thất Sát', 'Direct Officer': 'Chính Quan', 'Indirect Resource': 'Thiên Ấn', 'Direct Resource': 'Chính Ấn'},
+  tenGods: {
+    'Friend': 'Tỷ Kiên', 
+    'Rob Wealth': 'Kiếp Tài', 
+    'Eating God': 'Thực Thần', 
+    'Hurting Officer': 'Thương Quan', 
+    'Indirect Wealth': 'Thiên Tài', 
+    'Direct Wealth': 'Chính Tài', 
+    'Seven Killings': 'Thất Sát', 
+    'Direct Officer': 'Chính Quan', 
+    'Indirect Resource': 'Thiên Ấn', 
+    'Direct Resource': 'Chính Ấn'
+  },
   eightMansions: { 'wealth': 'Tài Lộc', 'health': 'Thiên Y', 'romance': 'Diên Niên', 'career': 'Phục Vị', 'obstacles': 'Họa Hại', 'quarrels': 'Ngũ Quỷ', 'lawsuits': 'Lục Sát', 'totalLoss': 'Tuyệt Mệnh', 'setbacks': 'Họa Hại' },
   directions: {'N': 'Bắc', 'S': 'Nam', 'E': 'Đông', 'W': 'Tây', 'NE': 'Đông Bắc', 'SE': 'Đông Nam', 'SW': 'Tây Nam', 'NW': 'Tây Bắc'}
 };
@@ -45,23 +56,8 @@ export const SVG_PATHS = {
   'Thủy': 'M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-1 12H9v-2h2v2zm2-2h-2V7h2v7zm1 2h2v-2h-2v2z'
 };
 
-// Note translations
-export const NOTE_TRANSLATIONS = {
-  'Season': 'Mùa', 'Hidden Year': 'Can ẩn năm', 'Hidden Month': 'Can ẩn tháng', 'Hidden Day': 'Can ẩn ngày', 'Hidden Hour': 'Can ẩn giờ',
-  'Stem Month': 'Can tháng', 'Stem Hour': 'Can giờ', 'Control Season': 'Khắc mùa', 'Weakening': 'Suy yếu', 'Zheng Guan': 'Chính Quan',
-  'Zheng Yin': 'Chính Ấn', 'Qi Sha': 'Thất Sát', 'Pian Yin': 'Thiên Ấn', 'Zheng Cai': 'Chính Tài', 'Shang Guan': 'Thương Quan',
-  'Jie Cai': 'Kiếp Tài', 'Shi Shen': 'Thực Thần'
-};
-
 // Helper functions
 export const getElementIcon = (element) => `<svg class="element-icon" viewBox="0 0 24 24" fill="currentColor"><path d="${SVG_PATHS[element] || ''}"/></svg>`;
-
-export function translateNote(note) {
-  return note.replace(
-    /\b(Season|Hidden Year|Hidden Month|Hidden Day|Hidden Hour|Stem Month|Stem Hour|Control Season|Weakening|Zheng Guan|Zheng Yin|Qi Sha|Pian Yin|Zheng Cai|Shang Guan|Jie Cai|Shi Shen)\b/g,
-    (_, key) => NOTE_TRANSLATIONS[key] || key
-  );
-}
 
 // Lifestyle and environment suggestions based on Bazi elements
 export function getBaziSuggestions(dungThan = [], kyThan = []) {

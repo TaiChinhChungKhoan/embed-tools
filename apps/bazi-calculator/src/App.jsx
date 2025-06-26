@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { BaziCalculator } from '@aharris02/bazi-calculator-by-alvamind';
 import { toDate } from 'date-fns-tz';
 import { Card, Button, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@embed-tools/components';
-import { TRANSLATIONS, WUXING_RELATIONS, INDUSTRY_MAP } from './data/constants';
+import { TRANSLATIONS, WUXING_RELATIONS, INDUSTRY_MAP, getBaziSuggestions } from './data/constants';
+import { translateNote } from './data/explanations';
 import Results from './components/Results';
 import Modal from './components/Modal';
 import DatePickerComponent from './components/DatePicker';
@@ -193,7 +194,7 @@ function App() {
             const periodInfo = {
               age: p.ageStart,
               years: `${p.yearStart}-${p.yearEnd}`,
-              tenGodName: TRANSLATIONS.tenGods[tenGodName] || tenGodName,
+              tenGodName: translateNote(tenGodName),
               key: p.number
             };
             
