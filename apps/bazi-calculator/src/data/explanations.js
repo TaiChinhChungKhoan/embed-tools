@@ -45,18 +45,175 @@ export const EXPLANATIONS = {
         <ul>
           <li><strong>Sử dụng yếu tố khắc chế</strong>  
             – Áp dụng hoạt động, ngành nghề hoặc màu sắc mang năng lượng chế ngự (khắc) để điều tiết.</li>
-          <li><strong>Khai thác yếu tố “chứa”</strong>  
+          <li><strong>Khai thác yếu tố "chứa"</strong>  
             – Tận dụng lĩnh vực, vật dụng hoặc màu sắc có khả năng kiềm chế, cân bằng mức độ vượng.</li>
         </ul>
       </li>
       <li><strong>Chiến lược cân bằng tổng thể:</strong>
         <ul>
-          <li>Luân phiên xen kẽ các hoạt động/đầu tư liên quan đến cả yếu tố sinh và khắc, tránh tình trạng một hành “áp đảo.”</li>
+          <li>Luân phiên xen kẽ các hoạt động/đầu tư liên quan đến cả yếu tố sinh và khắc, tránh tình trạng một hành "áp đảo."</li>
           <li>Trong trang trí và phối màu, chọn vật phẩm hoặc tông màu đại diện cho các hành cần cân bằng (ví dụ: tranh, cây cảnh, đồ kim loại…).</li>
         </ul>
       </li>
     </ul>
   `,
+
+  THAP_THAN: `<h3>Thập Thần (十神) - Mười Loại Quan Hệ</h3>
+  <p><strong>Thập Thần = 5 loại quan hệ × 2 tính chất Âm Dương → tổng cộng 10</strong></p>
+  
+  <h4>📋 Bảng Quan Hệ Thập Thần</h4>
+  <table class="border-collapse border border-gray-300 w-full">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="border border-gray-300 p-2">Mối quan hệ với Nhật Chủ</th>
+        <th class="border border-gray-300 p-2">Cùng Âm/Dương (Dương vs Dương hoặc Âm vs Âm)</th>
+        <th class="border border-gray-300 p-2">Khác Âm/Dương</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-300 p-2 font-semibold">Cùng hành</td>
+        <td class="border border-gray-300 p-2">Kiếp Tài (bạn bè cạnh tranh)</td>
+        <td class="border border-gray-300 p-2">Tỷ Kiên (bạn bè hỗ trợ)</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-300 p-2 font-semibold">Khắc Nhật Chủ</td>
+        <td class="border border-gray-300 p-2">Thất Sát (quyền lực nghiêm khắc)</td>
+        <td class="border border-gray-300 p-2">Chính Quan (quyền lực hợp pháp)</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-300 p-2 font-semibold">Bị Nhật Chủ khắc</td>
+        <td class="border border-gray-300 p-2">Thực Thần (con cái, sáng tạo)</td>
+        <td class="border border-gray-300 p-2">Thương Quan (trí tuệ, nghệ thuật)</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-300 p-2 font-semibold">Sinh Nhật Chủ</td>
+        <td class="border border-gray-300 p-2">Thiên Ấn (quý nhân, học vấn phi truyền thống)</td>
+        <td class="border border-gray-300 p-2">Chính Ấn (quý nhân hợp pháp, cha mẹ)</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-300 p-2 font-semibold">Được Nhật Chủ sinh</td>
+        <td class="border border-gray-300 p-2">Thiên Tài (tài lộc linh hoạt)</td>
+        <td class="border border-gray-300 p-2">Chính Tài (tài sản ổn định)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>🔍 Giải Nghĩa Chi Tiết Từng Thập Thần</h4>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    <div class="bg-blue-50 p-4 rounded-lg">
+      <h5 class="font-bold text-blue-800 mb-2">Tỷ Kiên (比肩)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Người giống mình, hỗ trợ mình (anh em, đồng minh)</p>
+      <p><strong>Tính chất:</strong> Dương</p>
+      <p><strong>Đặc điểm:</strong> Hỗ trợ, hợp tác, đồng đội, cạnh tranh lành mạnh</p>
+    </div>
+    
+    <div class="bg-red-50 p-4 rounded-lg">
+      <h5 class="font-bold text-red-800 mb-2">Kiếp Tài (劫財)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Người giống mình nhưng dễ tranh giành, cạnh tranh</p>
+      <p><strong>Tính chất:</strong> Âm</p>
+      <p><strong>Đặc điểm:</strong> Cạnh tranh gay gắt, tranh chấp, đối thủ</p>
+    </div>
+    
+    <div class="bg-green-50 p-4 rounded-lg">
+      <h5 class="font-bold text-green-800 mb-2">Thực Thần (食神)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Con cháu, sáng tạo, hưởng thụ, vô ưu</p>
+      <p><strong>Tính chất:</strong> Dương</p>
+      <p><strong>Đặc điểm:</strong> Sáng tạo, nghệ thuật, ẩm thực, con cái</p>
+    </div>
+    
+    <div class="bg-purple-50 p-4 rounded-lg">
+      <h5 class="font-bold text-purple-800 mb-2">Thương Quan (傷官)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Tài năng, phá cách, tự do, nổi loạn</p>
+      <p><strong>Tính chất:</strong> Âm</p>
+      <p><strong>Đặc điểm:</strong> Phá cách, sáng tạo, nghệ thuật, tự do</p>
+    </div>
+    
+    <div class="bg-yellow-50 p-4 rounded-lg">
+      <h5 class="font-bold text-yellow-800 mb-2">Chính Tài (正財)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Tài sản ổn định, vợ/chồng, tiền bạc thực tế</p>
+      <p><strong>Tính chất:</strong> Âm</p>
+      <p><strong>Đặc điểm:</strong> Tài lộc ổn định, hôn nhân, kinh doanh truyền thống</p>
+    </div>
+    
+    <div class="bg-orange-50 p-4 rounded-lg">
+      <h5 class="font-bold text-orange-800 mb-2">Thiên Tài (偏財)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Tiền bất ngờ, thu nhập ngoài, mẹ, quan hệ linh hoạt</p>
+      <p><strong>Tính chất:</strong> Dương</p>
+      <p><strong>Đặc điểm:</strong> Tài lộc bất ngờ, đầu tư, mẹ, quan hệ xã hội</p>
+    </div>
+    
+    <div class="bg-indigo-50 p-4 rounded-lg">
+      <h5 class="font-bold text-indigo-800 mb-2">Chính Quan (正官)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Quyền lực chính thống, chồng, sự nghiệp ổn định</p>
+      <p><strong>Tính chất:</strong> Âm</p>
+      <p><strong>Đặc điểm:</strong> Quyền lực hợp pháp, sự nghiệp, chồng, quản lý</p>
+    </div>
+    
+    <div class="bg-pink-50 p-4 rounded-lg">
+      <h5 class="font-bold text-pink-800 mb-2">Thất Sát (七殺)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Quyền lực mạnh tay, quản lý, áp lực xã hội</p>
+      <p><strong>Tính chất:</strong> Dương</p>
+      <p><strong>Đặc điểm:</strong> Quyền lực mạnh, áp lực, cạnh tranh, quản lý nghiêm khắc</p>
+    </div>
+    
+    <div class="bg-teal-50 p-4 rounded-lg">
+      <h5 class="font-bold text-teal-800 mb-2">Chính Ấn (正印)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Truyền thống, cha, bằng cấp, bảo hộ chính thức</p>
+      <p><strong>Tính chất:</strong> Âm</p>
+      <p><strong>Đặc điểm:</strong> Học vấn truyền thống, cha, bảo hộ, ổn định</p>
+    </div>
+    
+    <div class="bg-cyan-50 p-4 rounded-lg">
+      <h5 class="font-bold text-cyan-800 mb-2">Thiên Ấn (偏印)</h5>
+      <p><strong>Ý nghĩa chính:</strong> Trực giác, sáng tạo, học vấn, quý nhân âm thầm</p>
+      <p><strong>Tính chất:</strong> Dương</p>
+      <p><strong>Đặc điểm:</strong> Trực giác, học vấn phi truyền thống, quý nhân, sáng tạo</p>
+    </div>
+  </div>
+
+  <h4>💡 Ứng Dụng Thực Tế</h4>
+  <div class="mt-4 space-y-3">
+    <div class="bg-gray-50 p-4 rounded-lg">
+      <h5 class="font-semibold mb-2">📈 Trong Đầu Tư & Sự Nghiệp:</h5>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Tài Thần (Chính Tài, Thiên Tài):</strong> Thời điểm tốt cho đầu tư, kinh doanh, thu nhập</li>
+        <li><strong>Quan Thần (Chính Quan, Thất Sát):</strong> Thăng tiến, quản lý, sự nghiệp phát triển</li>
+        <li><strong>Ấn Thần (Chính Ấn, Thiên Ấn):</strong> Học tập, nghiên cứu, phát triển kiến thức</li>
+      </ul>
+    </div>
+    
+    <div class="bg-gray-50 p-4 rounded-lg">
+      <h5 class="font-semibold mb-2">🏥 Trong Sức Khỏe & Học Vấn:</h5>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Thực Thần:</strong> Sức khỏe tốt, tinh thần thoải mái, sáng tạo</li>
+        <li><strong>Thương Quan:</strong> Trí tuệ, nghệ thuật, phát triển tài năng</li>
+        <li><strong>Ấn Thần:</strong> Học vấn, nghiên cứu, phát triển trí tuệ</li>
+      </ul>
+    </div>
+    
+    <div class="bg-gray-50 p-4 rounded-lg">
+      <h5 class="font-semibold mb-2">👥 Trong Quan Hệ Xã Hội:</h5>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Tỷ Kiên:</strong> Bạn bè, đồng nghiệp, hợp tác</li>
+        <li><strong>Kiếp Tài:</strong> Cạnh tranh, đối thủ, tranh chấp</li>
+        <li><strong>Thiên Tài:</strong> Quan hệ xã hội rộng, mẹ, quý nhân</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+    <h4 class="font-semibold text-blue-800 mb-2">🎯 Lưu Ý Quan Trọng</h4>
+    <p class="text-sm">
+      <strong>Thập Thần không đơn giản là "tốt" hay "xấu"</strong> - mỗi thần đều có mặt tích cực và tiêu cực tùy thuộc vào:
+    </p>
+    <ul class="list-disc pl-5 mt-2 text-sm space-y-1">
+      <li>Sức mạnh của Nhật Chủ (Vượng/Nhược)</li>
+      <li>Sự tương tác với các thần khác trong lá số</li>
+      <li>Giai đoạn vận trình (Đại Vận, Tiểu Vận)</li>
+      <li>Mục tiêu và hoàn cảnh cụ thể của từng người</li>
+    </ul>
+  </div>`,
 };
 
 // Translation function for strength analysis notes

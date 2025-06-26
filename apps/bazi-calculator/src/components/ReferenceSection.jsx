@@ -8,6 +8,9 @@ const ReferenceSection = () => (
       <div className="prose max-w-none prose-table:td:px-4 prose-table:th:px-4" dangerouslySetInnerHTML={{ __html: EXPLANATIONS.NGU_HANH }} />
     </Card>
     <Card className="mb-6 p-6">
+      <div className="prose max-w-none prose-table:td:px-4 prose-table:th:px-4" dangerouslySetInnerHTML={{ __html: EXPLANATIONS.THAP_THAN }} />
+    </Card>
+    <Card className="mb-6 p-6">
       <div className="prose max-w-none prose-table:td:px-4 prose-table:th:px-4" dangerouslySetInnerHTML={{ __html: EXPLANATIONS.THIEN_CAN }} />
     </Card>
     <Card className="p-6">
