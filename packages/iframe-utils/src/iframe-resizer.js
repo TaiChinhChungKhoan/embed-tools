@@ -104,6 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Remove CommonJS and window assignments
-// Only export as ESM default
 export default IframeResizer; 

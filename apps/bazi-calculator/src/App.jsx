@@ -57,6 +57,12 @@ function App() {
       const birthDateTime = isTimeKnown ?
         toDate(`${birthDateStr}T${birthTime}`, { timeZone }) :
         toDate(birthDateStr, { timeZone });
+      
+      // Validate birthDateTime is a valid Date object
+      if (!(birthDateTime instanceof Date) || isNaN(birthDateTime.getTime())) {
+        throw new Error('Ngày giờ sinh không hợp lệ. Vui lòng kiểm tra lại thông tin và múi giờ.');
+      }
+      
       const calculator = new BaziCalculator(birthDateTime, gender, timeZone, isTimeKnown);
 
       const analysis = calculator.getCompleteAnalysis();
@@ -179,7 +185,10 @@ function App() {
 
       setResults({
         birthYear: birthDateTime.getFullYear(),
+        birthDateTime: birthDateTime.toISOString(),
         gender,
+        timeZone,
+        isTimeKnown,
         pillars: mappedPillars,
         dayMaster: dayMaster,
         strength,
@@ -354,20 +363,31 @@ function App() {
 
             {results && <>
               <Results data={results} onOpenModal={openModal} />
-              <AuspiciousDaysSection
-                calculator={new BaziCalculator(
-                  isTimeKnown
-                    ? toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}T${birthTime}`, { timeZone })
-                    : toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}`, { timeZone }),
-                  gender,
-                  timeZone,
-                  isTimeKnown
-                )}
-                timeZone={timeZone}
-                favorableElements={results.favorableElements}
-                unfavorableElements={['Mộc', 'Hỏa', 'Thổ', 'Kim', 'Thủy'].filter(e => !results.favorableElements.includes(e))}
-                daysAhead={14}
-              />
+              {(() => {
+                try {
+                  const calculator = new BaziCalculator(
+                    isTimeKnown
+                      ? toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}T${birthTime}`, { timeZone })
+                      : toDate(`${birthDate.getFullYear()}-${String(birthDate.getMonth() + 1).padStart(2, '0')}-${String(birthDate.getDate()).padStart(2, '0')}`, { timeZone }),
+                    gender,
+                    timeZone,
+                    isTimeKnown
+                  );
+                  
+                  return (
+                    <AuspiciousDaysSection
+                      calculator={calculator}
+                      timeZone={timeZone}
+                      favorableElements={results.favorableElements}
+                      unfavorableElements={['Mộc', 'Hỏa', 'Thổ', 'Kim', 'Thủy'].filter(e => !results.favorableElements.includes(e))}
+                      daysAhead={14}
+                    />
+                  );
+                } catch (e) {
+                  console.warn('⚠️ Could not create calculator for auspicious days section:', e.message);
+                  return null; // Silently skip the auspicious days section
+                }
+              })()}
             </>}
 
             <Modal

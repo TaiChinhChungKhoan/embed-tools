@@ -1,24 +1,21 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
 
 export default [
-  // UMD build
+  // ESM build (main)
   {
     input: 'src/index.js',
     output: {
-      name: 'IframeUtils',
       file: 'dist/index.js',
-      format: 'umd',
+      format: 'esm',
       sourcemap: true
     },
     plugins: [
       resolve(),
-      commonjs(),
-      terser()
+      commonjs()
     ]
   },
-  // ESM build
+  // ESM build (alternative)
   {
     input: 'src/index.js',
     output: {
@@ -29,21 +26,6 @@ export default [
     plugins: [
       resolve(),
       commonjs()
-    ]
-  },
-  // Standalone iframe-resizer build
-  {
-    input: 'src/iframe-resizer.js',
-    output: {
-      name: 'IframeResizer',
-      file: 'dist/iframe-resizer.js',
-      format: 'umd',
-      sourcemap: true
-    },
-    plugins: [
-      resolve(),
-      commonjs(),
-      terser()
     ]
   }
 ]; 

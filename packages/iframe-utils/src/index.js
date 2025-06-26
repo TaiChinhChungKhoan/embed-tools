@@ -3,7 +3,7 @@
  * Shared utilities for iframe embedding and responsive resizing
  */
 
-export { default as IframeResizer } from './iframe-resizer.js';
+import IframeResizer from './iframe-resizer.js';
 
 // Utility functions for iframe communication
 export const iframeUtils = {
@@ -53,8 +53,8 @@ export const iframeUtils = {
   }
 };
 
+// Named exports
+export { IframeResizer };
+
 // Default export
-export default {
-  IframeResizer,
-  utils: iframeUtils
-}; 
+export default iframeUtils; 
