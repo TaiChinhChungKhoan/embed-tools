@@ -4,13 +4,7 @@ import InfoButton from './InfoButton';
 import { EXPLANATIONS } from '../data/explanations';
 
 const FavorablePeriodsSection = ({ periods, onOpenModal }) => {
-  // Debug specifically for FavorablePeriodsSection
-  console.log('🔍 FavorablePeriodsSection - periods data:', periods);
-  console.log('🔍 FavorablePeriodsSection - finance array:', periods?.finance);
-  console.log('🔍 FavorablePeriodsSection - health array:', periods?.health);
-
   if (!periods) {
-    console.log('❌ FavorablePeriodsSection - No periods data provided');
     return null;
   }
 

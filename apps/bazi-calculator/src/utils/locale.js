@@ -44,6 +44,6 @@ export const createBaziDate = (birthDate, birthTime, timeZone, isTimeKnown, toDa
   const birthDateStr = `${yyyy}-${mm}-${dd}`;
   
   return isTimeKnown ?
-    toDate(`${birthDateStr}T${birthTime}`, { timeZone }) :
+    toDate(`${birthDateStr}T${birthTime}:00`, { timeZone }) :
     toDate(birthDateStr, { timeZone });
 }; 

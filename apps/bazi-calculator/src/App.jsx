@@ -65,13 +65,6 @@ function App() {
       const calculator = new BaziCalculator(birthDateTime, gender, timeZone, isTimeKnown);
 
       const analysis = calculator.getCompleteAnalysis();
-      console.log('🔍 API Response Debug:');
-      console.log('Full analysis:', analysis);
-      console.log('analysis.luckPillars:', analysis.luckPillars);
-      console.log('analysis.basicAnalysis:', analysis.basicAnalysis);
-      console.log('🔍 Does luckPillars exist?', !!analysis.luckPillars);
-      console.log('🔍 luckPillars type:', typeof analysis.luckPillars);
-      console.log('🔍 luckPillars keys:', analysis.luckPillars ? Object.keys(analysis.luckPillars) : 'N/A');
 
       if (!analysis || !analysis.basicAnalysis || !analysis.basicAnalysis.dayMaster || !analysis.detailedPillars) {
         throw new Error("Không thể phân tích lá số. Vui lòng kiểm tra lại thông tin đầu vào.");
