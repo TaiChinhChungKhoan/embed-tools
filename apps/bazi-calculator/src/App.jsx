@@ -147,38 +147,23 @@ function App() {
 
       // Process luck periods data
       const luckPeriodsData = { finance: [], health: [] };
-      console.log('🔍 Luck Periods Debug:');
-      console.log('analysis.luckPillars:', analysis.luckPillars);
-      console.log('analysis.detailedPillars:', analysis.detailedPillars);
       
       if (analysis.luckPillars) {
         // Updated Ten-God groups to match API response format
         const financeGods = ['Zheng Cai', 'Pian Cai', 'Jie Cai', 'Qi Sha', 'Zheng Guan'];
         const healthGods = ['Zheng Yin', 'Pian Yin', 'Shi Shen', 'Shang Guan'];
         
-        console.log('financeGods:', financeGods);
-        console.log('healthGods:', healthGods);
-        
         // Collect all available Ten-God names for debugging
         const allTenGods = new Set();
 
         analysis.luckPillars.pillars.forEach((p, index) => {
-          console.log(`Pillar ${index}:`, p);
-          console.log('heavenlyStem:', p.heavenlyStem);
-          console.log('heavenlyStem.tenGod:', p.heavenlyStem.tenGod);
-          console.log('earthlyBranch.hiddenStems:', p.earthlyBranch.hiddenStems);
-          
           // Check if tenGod exists on heavenlyStem
           let tenGodName = p.heavenlyStem.tenGod?.name;
-          console.log('tenGodName from heavenlyStem:', tenGodName);
           
           // If not found on heavenlyStem, check hiddenStems
           if (!tenGodName && p.earthlyBranch.hiddenStems) {
-            console.log('Checking hiddenStems for tenGod...');
             p.earthlyBranch.hiddenStems.forEach((hiddenStem, hiddenIndex) => {
-              console.log(`Hidden stem ${hiddenIndex}:`, hiddenStem);
               if (hiddenStem.tenGod) {
-                console.log(`Found tenGod in hidden stem ${hiddenIndex}:`, hiddenStem.tenGod.name);
                 tenGodName = hiddenStem.tenGod.name;
                 allTenGods.add(hiddenStem.tenGod.name);
               }
@@ -187,27 +172,22 @@ function App() {
           
           // If still not found, check if there's a heavenlyStemTenGod property
           if (!tenGodName && p.heavenlyStemTenGod) {
-            console.log('Found heavenlyStemTenGod:', p.heavenlyStemTenGod);
             tenGodName = p.heavenlyStemTenGod.name;
             allTenGods.add(p.heavenlyStemTenGod.name);
           }
           
           // If still not found, try to get from detailedPillars based on the pillar type
           if (!tenGodName && analysis.detailedPillars) {
-            console.log('Checking detailedPillars for Ten-God...');
             // Map pillar number to pillar type (year, month, day, hour)
             const pillarTypes = ['year', 'month', 'day', 'hour'];
             const pillarType = pillarTypes[index % 4];
             const detailedPillar = analysis.detailedPillars[pillarType];
             
             if (detailedPillar && detailedPillar.heavenlyStemTenGod) {
-              console.log(`Found Ten-God in detailedPillar.${pillarType}:`, detailedPillar.heavenlyStemTenGod);
               tenGodName = detailedPillar.heavenlyStemTenGod.name;
               allTenGods.add(detailedPillar.heavenlyStemTenGod.name);
             }
           }
-          
-          console.log('Final tenGodName:', tenGodName);
           
           if (tenGodName) {
             const periodInfo = {
@@ -216,23 +196,15 @@ function App() {
               tenGodName: TRANSLATIONS.tenGods[tenGodName] || tenGodName,
               key: p.number
             };
-            console.log('periodInfo:', periodInfo);
             
             if (financeGods.includes(tenGodName)) {
-              console.log('✅ Adding to finance:', tenGodName);
               luckPeriodsData.finance.push(periodInfo);
             }
             if (healthGods.includes(tenGodName)) {
-              console.log('✅ Adding to health:', tenGodName);
               luckPeriodsData.health.push(periodInfo);
             }
           }
         });
-        
-        console.log('All available Ten-God names:', Array.from(allTenGods));
-        console.log('Final luckPeriodsData:', luckPeriodsData);
-      } else {
-        console.log('❌ No luckPillars data available');
       }
 
       // Process Eight Mansions data
