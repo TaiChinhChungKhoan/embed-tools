@@ -64,8 +64,40 @@ const AstroCalculator = {
   },
 
   getPlanetLongitude(date, name) {
+    // Returns the **geocentric** ecliptic longitude of `planetName` on `date`.
+    if (name === 'earth') {
+      // Earth's position is always 0° from Earth's perspective
+      return 0;
+    }
+    
+    // 1. Get heliocentric sph coords for planet & Earth
     const jd = this._dateToJD(date);
-    return (this._getPlanet(name).position2000(jd).lon * 180/Math.PI + 360) % 360;
+    const p  = this._getPlanet(name).position2000(jd); // { lon, lat, range }
+    const e  = this._getPlanet('earth').position2000(jd);
+
+    // 2. Convert both to rectangular (in AU)
+    const toXYZ = ({ lon, lat, range }) => {
+      const r  = range;
+      const φ  = lat;
+      const λ  = lon;
+      const x  = r * Math.cos(φ) * Math.cos(λ);
+      const y  = r * Math.cos(φ) * Math.sin(λ);
+      const z  = r * Math.sin(φ);
+      return { x, y, z };
+    };
+
+    const pXYZ = toXYZ(p);
+    const eXYZ = toXYZ(e);
+
+    // 3. Compute vector from Earth to planet
+    const x = pXYZ.x - eXYZ.x;
+    const y = pXYZ.y - eXYZ.y;
+    // (we don't need z for longitude)
+
+    // 4. Return ecliptic longitude
+    let λ = Math.atan2(y, x) * 180/Math.PI;
+    if (λ < 0) λ += 360;
+    return λ;
   },
 
   getPlanetLatitude(date, name) {
@@ -158,9 +190,15 @@ const AstroCalculator = {
     let prev = this.getPlanetLongitude(dt,name);
     let inR = false;
     let startDate = null;
+    
     while (dt < end) {
+      // get current longitude
       const lon = this.getPlanetLongitude(dt,name);
-      const retro = (lon - prev) < 0 && (lon - prev) > -180;
+      // compute signed difference across 0–360 boundary
+      let diff = (lon - prev + 360) % 360;
+      if (diff > 180) diff -= 360;
+      const retro = diff < 0;
+
       if (retro && !inR) {
         inR = true;
         startDate = new Date(dt);
@@ -179,8 +217,10 @@ const AstroCalculator = {
         inR = false;
       }
       prev = lon;
+      // advance to next day
       dt.setUTCDate(dt.getUTCDate()+1);
     }
+    
     return res;
   },
 

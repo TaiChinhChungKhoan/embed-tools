@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 // These utility functions are imported in App.jsx, so we assume they are available here.
 // We add checks to prevent errors if they are not.
 import { getEventVisuals, formatEventDate } from '../utils/astroEventsReal';
 import * as Lucide from 'lucide-react';
 
 const UpcomingEvents = ({ events, onEventClick }) => {
+  // Pre-compute a map of lowercase icon names to Lucide components for performance.
+  // This avoids dynamic lookups inside the render loop.
+  const iconComponents = useMemo(() => {
+    const components = {};
+    Object.keys(Lucide).forEach(key => {
+      components[key.toLowerCase()] = Lucide[key];
+    });
+    return components;
+  }, []);
+
   if (!events || events.length === 0) {
     return (
       <div className="text-slate-500 text-center py-8">
@@ -38,8 +48,8 @@ const UpcomingEvents = ({ events, onEventClick }) => {
   return (
     <div className="space-y-2 mb-6">
       {events.map((event, index) => {
-        const { icon, color } = getEventVisuals(event.type);
-        const Icon = Lucide[icon.charAt(0).toUpperCase() + icon.slice(1)] || Lucide.Sparkles;
+        const { icon, color } = getEventVisuals(event.type) || { icon: 'Sparkles', color: '#6b7280' };
+        const IconComponent = iconComponents[icon.toLowerCase()] || Lucide.Sparkles;
         const dateRange = formatDateRange(event.startDate, event.endDate);
 
         return (
@@ -54,7 +64,7 @@ const UpcomingEvents = ({ events, onEventClick }) => {
             <div className="flex items-center font-sans">
               <div className="w-6 h-6 mr-3 flex-shrink-0 flex items-center justify-center">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${color}20` }}>
-                  <Icon className="w-4 h-4" style={{ color, strokeWidth: 2.5 }} />
+                  <IconComponent className="w-4 h-4" style={{ color, strokeWidth: 2.5 }} />
                 </div>
               </div>
               <div className="flex-grow">
