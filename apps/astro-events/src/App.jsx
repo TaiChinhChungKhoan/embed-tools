@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import AstroCalculator from './utils/astroEventsReal';
 import TimelineChart from './components/TimelineChart';
 import TimelineList from './components/TimelineList';
@@ -6,7 +6,7 @@ import UpcomingEvents from './components/UpcomingEvents';
 import EventFinder from './components/EventFinder';
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [focusDate, setFocusDate] = useState(() => new Date());
   const [events, setEvents] = useState([]);
 
@@ -38,6 +38,39 @@ const App = () => {
     setLoading(false);
   }, [focusDate]);
 
+  // Pre-compute all events for the next 2 years once
+  const allFutureEvents = useMemo(() => {
+    const now = new Date();
+    const searchLimit = new Date();
+    searchLimit.setFullYear(now.getFullYear() + 2);
+    
+    let allEvents = [];
+    for (let year = now.getFullYear(); year <= searchLimit.getFullYear(); year++) {
+      const yearEvents = AstroCalculator.getAllEventsForYear(year);
+      allEvents = allEvents.concat(yearEvents);
+    }
+    return allEvents;
+  }, []); // Empty dependency array - compute once on mount
+
+  // Build fast lookup map: title -> array of events with that title
+  const eventLookupMap = useMemo(() => {
+    const map = {};
+    allFutureEvents.forEach(event => {
+      if (!map[event.title]) {
+        map[event.title] = [];
+      }
+      map[event.title].push(event);
+    });
+    return map;
+  }, [allFutureEvents]);
+
+  // Set loading to false once initial computation is complete
+  useEffect(() => {
+    if (allFutureEvents.length > 0) {
+      setLoading(false);
+    }
+  }, [allFutureEvents]);
+
   // Date picker handler
   const handleDateChange = (e) => {
     setFocusDate(new Date(e.target.value));
@@ -48,20 +81,23 @@ const App = () => {
     setFocusDate(new Date(dateString));
   };
 
-  // Find next event by title
+  // Optimized find next event by title - uses pre-computed lookup map
   const handleFindNextEvent = (title) => {
     const now = new Date();
-    const searchLimit = new Date();
-    searchLimit.setFullYear(now.getFullYear() + 40);
-    let allFutureEvents = [];
-    for (let year = now.getFullYear(); year <= searchLimit.getFullYear(); year++) {
-      allFutureEvents = allFutureEvents.concat(AstroCalculator.getAllEventsForYear(year));
+    const eventsWithTitle = eventLookupMap[title];
+    
+    if (!eventsWithTitle || eventsWithTitle.length === 0) {
+      alert(`Không tìm thấy sự kiện "${title}" trong 2 năm tới.`);
+      return;
     }
-    const nextEvent = allFutureEvents.find(e => e.title === title && new Date(e.startDate) > now);
+
+    // Find the next occurrence after now
+    const nextEvent = eventsWithTitle.find(e => new Date(e.startDate) > now);
+    
     if (nextEvent) {
       setFocusDate(new Date(nextEvent.startDate));
     } else {
-      alert(`Không tìm thấy sự kiện "${title}" trong 40 năm tới.`);
+      alert(`Không tìm thấy sự kiện "${title}" trong 2 năm tới.`);
     }
   };
 
@@ -76,10 +112,8 @@ const App = () => {
     })
     .slice(0, 5);
 
-  // Event definitions for EventFinder (unique titles)
-  const allEventDefs = Array.from(
-    new Map(events.map(e => [e.title, { title: e.title, type: e.type }])).values()
-  );
+  // Event definitions for EventFinder (comprehensive list)
+  const allEventDefs = useMemo(() => AstroCalculator.getAllKnownEventDefinitions(), []);
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800 font-sans">

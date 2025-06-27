@@ -290,7 +290,7 @@ const AstroCalculator = {
         const desc = FIXED_DESCRIPTIONS[key] || 'ĐẢO CHIỀU';
         const vn = PLANET_NAMES[name] || name;
         res.push({
-          type: 'ingress',
+          type: 'fixed-degree',
           title: `${vn} tại ${target}°`,
           description: desc,
           date: new Date(dt),
@@ -384,9 +384,35 @@ const AstroCalculator = {
     }).filter(x=>x);
   },
 
+  getMinorSeasons(year) {
+    const res = [];
+    try {
+      // Cross-quarter days (midpoints between solstices and equinoxes)
+      const events = [
+        { jd: solstice.march(year) - 45, title: 'Ngày Giao Mùa Phụ', description: 'Điểm giữa Đông Chí và Xuân Phân.' },
+        { jd: solstice.march(year) + 45, title: 'Ngày Giao Mùa Phụ', description: 'Điểm giữa Xuân Phân và Hạ Chí.' },
+        { jd: solstice.june(year) + 45, title: 'Ngày Giao Mùa Phụ', description: 'Điểm giữa Hạ Chí và Thu Phân.' },
+        { jd: solstice.september(year) + 45, title: 'Ngày Giao Mùa Phụ', description: 'Điểm giữa Thu Phân và Đông Chí.' }
+      ];
+      events.forEach(e => {
+        const d = this._jdToDate(e.jd);
+        res.push({
+          type: 'minor-season',
+          title: e.title,
+          description: e.description,
+          date: d,
+          startDate: d,
+          endDate: new Date(d.getTime() + 2*24*3600e3)
+        });
+      });
+    } catch {};
+    return res;
+  },
+
   getAllEventsForYear(year) {
     const moon = this.getMoonPhases(year);
     const seq = this.getEquinoxesSolstices(year);
+    const minorSeq = this.getMinorSeasons(year);
     const mR = this.getPlanetRetrogrades(year,'mercury','Sao Thủy Nghịch Hành');
     const hR = this.getPlanetRetrogrades(year,'mars','Hỏa Tinh Nghịch Hành');
     const jR = this.getPlanetRetrogrades(year,'jupiter','Mộc Tinh Nghịch Hành');
@@ -410,7 +436,7 @@ const AstroCalculator = {
     const vMid = this.getRetrogradeMidpoints(vR,'venus');
 
     const events = [
-      ...moon, ...seq,
+      ...moon, ...seq, ...minorSeq,
       ...mR, ...hR, ...jR, ...nR,
       ...vLa, ...mSp, ...vPar,
       ...mCon, ...mMid,
@@ -433,19 +459,53 @@ const AstroCalculator = {
       } else out.push({...e});
     });
     return out;
+  },
+
+  getAllKnownEventDefinitions() {
+    return [
+      { title: "Sao Thủy Nghịch Hành", type: "retrograde" },
+      { title: "Hỏa Tinh Nghịch Hành", type: "retrograde" },
+      { title: "Mộc Tinh Nghịch Hành", type: "retrograde" },
+      { title: "Hải Vương Tinh Nghịch Hành", type: "retrograde" },
+      { title: "Kim Tinh Nghịch Hành", type: "retrograde" },
+      { title: "Xuân Phân", type: "season" },
+      { title: "Hạ Chí", type: "season" },
+      { title: "Thu Phân", type: "season" },
+      { title: "Đông Chí", type: "season" },
+      { title: "Ngày Giao Mùa Phụ", type: "minor-season" },
+      { title: "Trăng Non", type: "new-moon" },
+      { title: "Trăng Tròn", type: "full-moon" },
+      { title: "Kim Tinh hội với Mặt Trời", type: "cazimi" },
+      { title: "Sao Thủy hội với Mặt Trời", type: "cazimi" },
+      { title: "Kim Tinh song song Mặt Trời", type: "conjunction" },
+      { title: "Góc 161° giữa Hỏa Tinh và Sao Thủy", type: "aspect" },
+      { title: "Sao Thủy tại 105°", type: "fixed-degree" },
+      { title: "Sao Thủy tại 229°", type: "fixed-degree" },
+      { title: "Sao Thủy tại 294°", type: "fixed-degree" },
+      { title: "Sao Thủy tại 299°", type: "fixed-degree" },
+      { title: "Hỏa Tinh tại 195°", type: "fixed-degree" },
+      { title: "Hỏa Tinh tại 106°", type: "fixed-degree" },
+      { title: "Kim Tinh vĩ độ cực hạn", type: "latitude" },
+      { title: "Tốc độ Sao Thủy 0.59", type: "speed-threshold" },
+      { title: "Sao Thủy điểm giữa", type: "pivot" },
+      { title: "Kim Tinh điểm giữa", type: "pivot" }
+    ];
   }
 };
 
 export const getEventVisuals = type => ({
   'season': { icon: 'Sun', color: '#d97706' },
+  'minor-season': { icon: 'Leaf', color: '#10b981' },
   'new-moon': { icon: 'Moon', color: '#1d4ed8' },
   'full-moon': { icon: 'Circle', color: '#ca8a04' },
   'retrograde': { icon: 'ArrowLeftRight', color: '#dc2626' },
   'cazimi': { icon: 'Sun', color: '#d97706' },
-  'ingress': { icon: 'LogIn', color: '#d97706' },
   'aspect': { icon: 'Star', color: '#0d9488' },
   'latitude': { icon: 'Globe2', color: '#1e40af' },
-  'speed-threshold': { icon: 'GaugeCircle', color: '#ea580c' }
+  'speed-threshold': { icon: 'GaugeCircle', color: '#ea580c' },
+  'conjunction': { icon: 'Link2', color: '#8b5cf6' },
+  'fixed-degree': { icon: 'MapPin', color: '#8b5cf6' },
+  'pivot': { icon: 'Target', color: '#059669' }
 })[type] || { icon: 'Sparkles', color: '#6b7280' };
 
 export const formatEventDate = d => d.toLocaleString('vi-VN', { weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit', timeZone:'Asia/Ho_Chi_Minh' });
