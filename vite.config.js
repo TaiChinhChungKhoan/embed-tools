@@ -17,7 +17,8 @@ export default defineConfig({
         'analytics-tool-discovery': resolve(__dirname, 'apps/analytics-tool-discovery/index.html'),
         'website-platform-discovery': resolve(__dirname, 'apps/website-platform-discovery/index.html'),
         'color-palette-generator': resolve(__dirname, 'apps/color-palette-generator/index.html'),
-        'bazi-calculator': resolve(__dirname, 'apps/bazi-calculator/index.html'),},
+        'bazi-calculator': resolve(__dirname, 'apps/bazi-calculator/index.html'),
+        'astro-events': resolve(__dirname, 'apps/astro-events/index.html'),},
       output: {
         // Ensure unique chunk names for multiple apps
         chunkFileNames: (chunkInfo) => {

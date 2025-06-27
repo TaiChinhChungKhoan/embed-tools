@@ -1,0 +1,117 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { AstroCalculator, getEventVisuals, formatEventDate } from './utils/astroCalculator';
+import TimelineChart from './components/TimelineChart';
+import TimelineList from './components/TimelineList';
+import UpcomingEvents from './components/UpcomingEvents';
+import EventFinder from './components/EventFinder';
+
+const astroCalc = new AstroCalculator();
+
+const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [focusDate, setFocusDate] = useState(() => new Date());
+  const [events, setEvents] = useState([]);
+  const [allEventDefs, setAllEventDefs] = useState([]);
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [timelineRange, setTimelineRange] = useState({ start: null, end: null });
+
+  // Initialization
+  useEffect(() => {
+    (async () => {
+      await astroCalc.init();
+      setAllEventDefs(astroCalc.getAllKnownEventDefinitions());
+      setLoading(false);
+    })();
+  }, []);
+
+  // Update events when focusDate changes
+  useEffect(() => {
+    if (loading) return;
+    const start = new Date(focusDate);
+    start.setDate(start.getDate() - 60);
+    const end = new Date(focusDate);
+    end.setDate(end.getDate() + 60);
+    setTimelineRange({ start, end });
+    setEvents(astroCalc.getEventsForDateRange(start, end));
+    // Upcoming events (next 6 months)
+    const now = new Date();
+    const sixMonths = new Date();
+    sixMonths.setMonth(now.getMonth() + 6);
+    setUpcomingEvents(
+      astroCalc.getEventsForDateRange(now, sixMonths).filter(e => new Date(e.startDate) > now).slice(0, 5)
+    );
+  }, [focusDate, loading]);
+
+  // Date picker handler
+  const handleDateChange = (e) => {
+    setFocusDate(new Date(e.target.value));
+  };
+
+  // Event click handler (from timeline or upcoming)
+  const handleEventClick = (dateString) => {
+    setFocusDate(new Date(dateString));
+  };
+
+  // Find next event by title
+  const handleFindNextEvent = (title) => {
+    const now = new Date();
+    const searchLimit = new Date();
+    searchLimit.setFullYear(now.getFullYear() + 40);
+    const allFutureEvents = astroCalc.getEventsForDateRange(now, searchLimit);
+    const nextEvent = allFutureEvents.find(e => e.title === title && new Date(e.startDate) > now);
+    if (nextEvent) {
+      setFocusDate(new Date(nextEvent.startDate));
+    } else {
+      alert(`Không tìm thấy sự kiện "${title}" trong 40 năm tới.`);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] text-slate-200 font-sans">
+      {loading && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center z-50 transition-opacity duration-500">
+          <div className="w-16 h-16 border-4 border-t-purple-500 border-gray-600 rounded-full animate-spin"></div>
+          <p className="mt-4 text-lg text-gray-300">Đang khởi tạo Công cụ Thiên thể...</p>
+        </div>
+      )}
+      <div className={`max-w-7xl mx-auto p-4 lg:p-8 transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Trình Trực Quan Astro-Gann</h1>
+          <p className="text-slate-400 mt-2">Theo dõi các chu kỳ hành tinh và các sự kiện thiên thể quan trọng.</p>
+        </header>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <main className="w-full lg:w-2/3">
+            <div className="glass-panel rounded-lg p-6 bg-white/5 border border-white/10 backdrop-blur">
+              <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+                <h2 className="text-2xl font-semibold text-white mb-4 sm:mb-0">Tổng Quan Sự Kiện</h2>
+                <div className="relative">
+                  <label htmlFor="date-picker" className="text-slate-400 mr-2">Chọn Ngày:</label>
+                  <input
+                    type="date"
+                    id="date-picker"
+                    className="bg-slate-800 border border-slate-600 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    value={focusDate.toISOString().split('T')[0]}
+                    onChange={handleDateChange}
+                  />
+                </div>
+              </div>
+              <TimelineChart events={events} focusDate={focusDate} onZoom={setFocusDate} />
+              <h3 className="text-xl font-semibold text-white mb-4 border-t border-slate-700 pt-6">Chi Tiết Dòng Thời Gian</h3>
+              <TimelineList events={events} centerDate={focusDate} onEventClick={handleEventClick} />
+            </div>
+          </main>
+          <aside className="w-full lg:w-1/3">
+            <div className="glass-panel rounded-lg p-6 sticky top-8 bg-white/5 border border-white/10 backdrop-blur">
+              <h2 className="text-2xl font-semibold text-white mb-6">Sự Kiện Sắp Tới</h2>
+              <UpcomingEvents events={upcomingEvents} onEventClick={handleEventClick} />
+              <h2 className="text-2xl font-semibold text-white mb-4 border-t border-slate-700 pt-6">Tìm Sự Kiện</h2>
+              <EventFinder eventDefs={allEventDefs} onFind={handleFindNextEvent} />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

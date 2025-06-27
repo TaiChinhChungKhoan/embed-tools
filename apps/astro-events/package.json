@@ -1,0 +1,33 @@
+{
+  "name": "astro-events",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@embed-tools/components": "workspace:*",
+    "@embed-tools/iframe-utils": "workspace:*",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "apexcharts": "^3.50.0",
+    "react-apexcharts": "^1.4.1",
+    "lucide-react": "^0.460.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.10",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "tailwindcss": "^4.1.10",
+    "vite": "^6.3.5"
+  }
+}
