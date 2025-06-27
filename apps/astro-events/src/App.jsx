@@ -1,46 +1,42 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { AstroCalculator, getEventVisuals, formatEventDate } from './utils/astroCalculator';
+import React, { useEffect, useState } from 'react';
+import AstroCalculator from './utils/astroEventsReal';
 import TimelineChart from './components/TimelineChart';
 import TimelineList from './components/TimelineList';
 import UpcomingEvents from './components/UpcomingEvents';
 import EventFinder from './components/EventFinder';
 
-const astroCalc = new AstroCalculator();
-
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [focusDate, setFocusDate] = useState(() => new Date());
   const [events, setEvents] = useState([]);
-  const [allEventDefs, setAllEventDefs] = useState([]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
-  const [timelineRange, setTimelineRange] = useState({ start: null, end: null });
 
-  // Initialization
+  // Centralized event fetching and filtering
   useEffect(() => {
-    (async () => {
-      await astroCalc.init();
-      setAllEventDefs(astroCalc.getAllKnownEventDefinitions());
-      setLoading(false);
-    })();
-  }, []);
+    setLoading(true);
+    const startDate = new Date(focusDate);
+    startDate.setDate(startDate.getDate() - 60);
+    const endDate = new Date(focusDate);
+    endDate.setDate(endDate.getDate() + 60);
+    const startYear = startDate.getFullYear();
+    const endYear = endDate.getFullYear();
+    
+    let allRelevantEvents = [];
+    for (let year = startYear; year <= endYear; year++) {
+      const yearEvents = AstroCalculator.getAllEventsForYear(year);
+      allRelevantEvents = allRelevantEvents.concat(yearEvents);
+    }
+    
+    const eventsForDisplay = allRelevantEvents.filter(event => {
+      const eventDate = new Date(event.startDate);
+      const isInRange = eventDate >= startDate && eventDate <= endDate;
+      return isInRange;
+    });
+    
+    eventsForDisplay.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
 
-  // Update events when focusDate changes
-  useEffect(() => {
-    if (loading) return;
-    const start = new Date(focusDate);
-    start.setDate(start.getDate() - 60);
-    const end = new Date(focusDate);
-    end.setDate(end.getDate() + 60);
-    setTimelineRange({ start, end });
-    setEvents(astroCalc.getEventsForDateRange(start, end));
-    // Upcoming events (next 6 months)
-    const now = new Date();
-    const sixMonths = new Date();
-    sixMonths.setMonth(now.getMonth() + 6);
-    setUpcomingEvents(
-      astroCalc.getEventsForDateRange(now, sixMonths).filter(e => new Date(e.startDate) > now).slice(0, 5)
-    );
-  }, [focusDate, loading]);
+    setEvents(eventsForDisplay);
+    setLoading(false);
+  }, [focusDate]);
 
   // Date picker handler
   const handleDateChange = (e) => {
@@ -57,7 +53,10 @@ const App = () => {
     const now = new Date();
     const searchLimit = new Date();
     searchLimit.setFullYear(now.getFullYear() + 40);
-    const allFutureEvents = astroCalc.getEventsForDateRange(now, searchLimit);
+    let allFutureEvents = [];
+    for (let year = now.getFullYear(); year <= searchLimit.getFullYear(); year++) {
+      allFutureEvents = allFutureEvents.concat(AstroCalculator.getAllEventsForYear(year));
+    }
     const nextEvent = allFutureEvents.find(e => e.title === title && new Date(e.startDate) > now);
     if (nextEvent) {
       setFocusDate(new Date(nextEvent.startDate));
@@ -65,6 +64,22 @@ const App = () => {
       alert(`Không tìm thấy sự kiện "${title}" trong 40 năm tới.`);
     }
   };
+
+  // Upcoming events: next 6 months from now
+  const now = new Date();
+  const sixMonths = new Date();
+  sixMonths.setMonth(now.getMonth() + 6);
+  const upcomingEvents = events
+    .filter(e => {
+      const eventDate = new Date(e.startDate);
+      return eventDate > now && eventDate <= sixMonths;
+    })
+    .slice(0, 5);
+
+  // Event definitions for EventFinder (unique titles)
+  const allEventDefs = Array.from(
+    new Map(events.map(e => [e.title, { title: e.title, type: e.type }])).values()
+  );
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800 font-sans">

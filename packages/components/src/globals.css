@@ -2,7 +2,7 @@
 @source "./components/ui/*.{js,ts,jsx,tsx}";
 
 :root {
-  --background: hsl(50 29% 94%);
+  --background: hsl(50 29% 90%);
   --foreground: hsl(0 0% 11%);
   --card: hsl(0 0% 100%);
   --card-foreground: hsl(0 0% 11%);
@@ -18,16 +18,16 @@
   --accent-foreground: hsl(214 100% 41%);
   --destructive: hsl(21 100% 50%);
   --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(0 0% 82%);
-  --input: hsl(0 0% 82%);
+  --border: hsl(0 0% 70%);
+  --input: hsl(0 0% 70%);
   --ring: hsl(214 100% 41%);
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: hsl(240 10% 3.9%);
+  --background: hsl(240 10% 5%);
   --foreground: hsl(0 0% 98%);
-  --card: hsl(240 10% 3.9%);
+  --card: hsl(240 10% 5%);
   --card-foreground: hsl(0 0% 98%);
   --popover: hsl(240 10% 3.9%);
   --popover-foreground: hsl(0 0% 98%);
@@ -41,7 +41,7 @@
   --accent-foreground: hsl(0 0% 98%);
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 3.7% 15.9%);
+  --border: hsl(240 3.7% 20%);
   --input: hsl(240 3.7% 15.9%);
   --ring: hsl(240 4.9% 83.9%);
 }

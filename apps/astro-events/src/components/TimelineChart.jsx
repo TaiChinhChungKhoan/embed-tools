@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import { getEventVisuals } from '../utils/astroCalculator'; // Import the utility function
+import { getEventVisuals } from '../utils/astroEventsReal'; // Import the utility function
 
 const TimelineChart = ({ events, onZoom }) => {
     const chartRef = useRef(null);
@@ -49,23 +49,32 @@ const TimelineChart = ({ events, onZoom }) => {
                 }
             }
         },
-        plotOptions: { bar: { horizontal: true, barHeight: '50%', rangeBarGroupRows: true } },
+        plotOptions: {
+            bar: {
+                horizontal: true, barHeight: '50%', rangeBarGroupRows: true, colors: {
+                    backgroundBarColors: ['#e2e8f0'],
+                    backgroundBarOpacity: 1,
+                    backgroundBarRadius: 4
+                }
+            }
+        },
         colors: colors,
-        fill: { type: 'solid', opacity: 0.7 },
+        fill: { type: 'solid', opacity: 0.9 },
         xaxis: {
             type: 'datetime',
             labels: {
                 style: {
-                    colors: '#475569' // Màu văn bản tối cho trục X
+                    colors: '#475569'
                 }
             },
             axisBorder: { show: false },
-            axisTicks: { color: '#cbd5e1' } // Màu vạch chia nhạt
+            axisTicks: { color: '#475569' }
         },
         yaxis: {
             labels: {
                 style: {
-                    colors: '#475569' // Màu văn bản tối cho trục Y
+                    colors: '#1e293b',
+                    fontWeight: 600
                 }
             }
         },
@@ -75,7 +84,7 @@ const TimelineChart = ({ events, onZoom }) => {
         },
         tooltip: {
             theme: 'light', // Chuyển tooltip sang theme sáng
-            custom: function({ series, seriesIndex, dataPointIndex, w }) {
+            custom: function ( { series, seriesIndex, dataPointIndex, w }) {
                 const data = w.globals.initialSeries[seriesIndex].data[dataPointIndex];
                 const start = new Date(data.y[0]).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
                 const end = new Date(data.y[1]).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });

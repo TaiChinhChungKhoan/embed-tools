@@ -125,10 +125,8 @@
         const AstroCalculator = {
             isInitialized: false,
             async init() {
-                console.log("Mock Wasm: Initializing...");
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 this.isInitialized = true;
-                console.log("Mock Wasm: Ready.");
                 return true;
             },
             

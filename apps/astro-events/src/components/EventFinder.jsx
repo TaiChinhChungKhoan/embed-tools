@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Lucide from 'lucide-react';
-import { getEventVisuals } from '../utils/astroCalculator';
+import { getEventVisuals } from '../utils/astroEventsReal';
 
 const EventFinder = ({ eventDefs, onFind }) => {
   return (
@@ -16,7 +16,7 @@ const EventFinder = ({ eventDefs, onFind }) => {
             type="button"
           >
             <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: color + '20' }}>
-              <Icon className="w-4 h-4" style={{ color }} />
+              <Icon className="w-4 h-4" style={{ color, strokeWidth: 2.5 }} />
             </div>
             <span className="text-sm text-gray-900">{def.title}</span>
           </button>
