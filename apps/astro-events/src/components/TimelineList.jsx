@@ -4,7 +4,7 @@ import { getEventVisuals, formatEventDate } from '../utils/astroCalculator';
 
 const TimelineList = ({ events, centerDate, onEventClick }) => {
   if (!events.length) {
-    return <p className="text-slate-400 text-center py-8">Không có sự kiện quan trọng nào trong giai đoạn này.</p>;
+    return <p className="text-gray-700 text-center py-8">Không có sự kiện quan trọng nào trong giai đoạn này.</p>;
   }
   return (
     <div className="space-y-6 max-h-[45vh] overflow-y-auto pr-4">
@@ -16,7 +16,7 @@ const TimelineList = ({ events, centerDate, onEventClick }) => {
         return (
           <div
             key={idx}
-            className={`flex items-start gap-4 p-4 rounded-lg border-l-4 transition-colors duration-200 cursor-pointer hover:bg-slate-800/50 ${isPast ? 'opacity-60' : ''}`}
+            className={`flex items-start gap-4 p-4 rounded-lg border-l-4 transition-colors duration-200 cursor-pointer bg-white shadow-sm hover:bg-gray-50 border-gray-200 ${isPast ? 'opacity-60' : ''}`}
             style={{ borderColor: color }}
             onClick={() => onEventClick(event.startDate)}
           >
@@ -24,9 +24,9 @@ const TimelineList = ({ events, centerDate, onEventClick }) => {
               <Icon className="w-6 h-6" style={{ color }} />
             </div>
             <div className="flex-grow">
-              <p className="font-semibold text-white">{event.title}</p>
-              <p className="text-sm text-slate-300">{event.description}</p>
-              <p className="text-xs text-slate-400 mt-2">{formatEventDate(eventDate)}</p>
+              <p className="font-semibold text-gray-900">{event.title}</p>
+              <p className="text-sm text-gray-800">{event.description}</p>
+              <p className="text-xs text-gray-700 mt-2">{formatEventDate(eventDate)}</p>
             </div>
           </div>
         );

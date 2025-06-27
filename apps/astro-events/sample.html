@@ -20,25 +20,29 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <style>
+        /* FIX: Switched to a light theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e2e8f0;
+            background-color: #f1f5f9; /* slate-100 */
+            color: #1e293b; /* slate-800 */
         }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1e293b; }
-        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; } /* slate-200 */
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; } /* slate-300 */
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; } /* slate-400 */
+        
+        /* Updated panel style for light theme */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: white;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
         }
+        
         input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.8);
             cursor: pointer;
         }
+        
         @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -46,49 +50,51 @@
         .loader-spin {
             animation: spin 1.5s linear infinite;
         }
-        /* Style for ApexCharts Tooltip */
+        
+        /* FIX: Updated tooltip for light theme */
         .apexcharts-tooltip {
-            background: #1e293b !important;
-            color: #e2e8f0 !important;
-            border: 1px solid #334155 !important;
+            background: #ffffff !important;
+            color: #1e293b !important;
+            border: 1px solid #e2e8f0 !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
         .apexcharts-tooltip .apexcharts-tooltip-title {
-            background: #334155 !important;
-            border-bottom: 1px solid #475569 !important;
+            background: #f1f5f9 !important;
+            border-bottom: 1px solid #e2e8f0 !important;
         }
     </style>
 </head>
 <body class="min-h-screen">
 
     <!-- Loading Overlay -->
-    <div id="loading-overlay" class="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center z-50 transition-opacity duration-500">
-        <div class="w-16 h-16 border-4 border-t-purple-500 border-gray-600 rounded-full loader-spin"></div>
-        <p class="mt-4 text-lg text-gray-300">Đang khởi tạo Công cụ Thiên thể...</p>
+    <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-80 flex flex-col items-center justify-center z-50 transition-opacity duration-500">
+        <div class="w-16 h-16 border-4 border-t-purple-500 border-gray-300 rounded-full loader-spin"></div>
+        <p class="mt-4 text-lg text-gray-600">Đang khởi tạo Công cụ Thiên thể...</p>
     </div>
 
     <!-- Main Application Container -->
     <div id="app" class="max-w-7xl mx-auto p-4 lg:p-8 opacity-0 transition-opacity duration-500">
         
         <header class="mb-8">
-            <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Trình Trực Quan Astro-Gann</h1>
-            <p class="text-slate-400 mt-2">Theo dõi các chu kỳ hành tinh và các sự kiện thiên thể quan trọng.</p>
+            <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-500">Trình Trực Quan Astro-Gann</h1>
+            <p class="text-slate-500 mt-2">Theo dõi các chu kỳ hành tinh và các sự kiện thiên thể quan trọng.</p>
         </header>
 
         <div class="flex flex-col lg:flex-row gap-8">
             
             <main class="w-full lg:w-2/3">
-                <div class="glass-panel rounded-lg p-6">
+                <div class="glass-panel p-6">
                     <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
-                        <h2 class="text-2xl font-semibold text-white mb-4 sm:mb-0">Tổng Quan Sự Kiện</h2>
+                        <h2 class="text-2xl font-semibold text-slate-900 mb-4 sm:mb-0">Tổng Quan Sự Kiện</h2>
                         <div class="relative">
-                            <label for="date-picker" class="text-slate-400 mr-2">Chọn Ngày:</label>
-                            <input type="date" id="date-picker" class="bg-slate-800 border border-slate-600 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label for="date-picker" class="text-slate-600 mr-2">Chọn Ngày:</label>
+                            <input type="date" id="date-picker" class="bg-slate-50 border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                     </div>
                     
                     <div id="timeline-chart" class="mb-8"></div>
 
-                    <h3 class="text-xl font-semibold text-white mb-4 border-t border-slate-700 pt-6">Chi Tiết Dòng Thời Gian</h3>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-4 border-t border-slate-200 pt-6">Chi Tiết Dòng Thời Gian</h3>
                     <div id="timeline" class="space-y-6 max-h-[45vh] overflow-y-auto pr-4">
                         <!-- Event items will be dynamically inserted here -->
                     </div>
@@ -96,13 +102,13 @@
             </main>
 
             <aside class="w-full lg:w-1/3">
-                <div class="glass-panel rounded-lg p-6 sticky top-8">
-                    <h2 class="text-2xl font-semibold text-white mb-6">Sự Kiện Sắp Tới</h2>
+                <div class="glass-panel p-6 sticky top-8">
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-6">Sự Kiện Sắp Tới</h2>
                     <div id="upcoming-events" class="space-y-4 mb-8">
                         <!-- Upcoming event snippets will be dynamically inserted here -->
                     </div>
 
-                    <h2 class="text-2xl font-semibold text-white mb-4 border-t border-slate-700 pt-6">Tìm Sự Kiện</h2>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-4 border-t border-slate-200 pt-6">Tìm Sự Kiện</h2>
                     <div id="event-finder" class="space-y-2 max-h-48 overflow-y-auto">
                         <!-- Event finder buttons will be dynamically inserted here -->
                     </div>
@@ -141,7 +147,6 @@
                 };
 
                 for (let year = startYear; year <= endYear; year++) {
-                    // --- Yearly Events ---
                     events.push({ startDate: `${year}-03-20T09:02:00Z`, endDate: `${year}-03-22T09:02:00Z`, type: 'season', title: "Xuân Phân", description: "Mặt Trời đi vào Bạch Dương." });
                     events.push({ startDate: `${year}-06-21T02:42:00Z`, endDate: `${year}-06-23T02:42:00Z`, type: 'season', title: "Hạ Chí", description: "Ngày dài nhất trong năm." });
                     events.push({ startDate: `${year}-09-22T18:19:00Z`, endDate: `${year}-09-24T18:19:00Z`, type: 'season', title: "Thu Phân", description: "Điểm cân bằng, thường liên quan đến biến động." });
@@ -191,7 +196,6 @@
             },
 
             getAllKnownEventDefinitions() {
-                // FIX: This list now contains all supported event types.
                 return [
                     { title: "Sao Thủy Nghịch Hành", type: "retrograde" },
                     { title: "Hỏa Tinh Nghịch Hành", type: "retrograde" },
@@ -309,16 +313,11 @@
                     plotOptions: { bar: { horizontal: true, barHeight: '50%', rangeBarGroupRows: true } },
                     colors: colors,
                     fill: { type: 'solid', opacity: 0.6 },
-                    xaxis: { type: 'datetime', labels: { style: { colors: '#94a3b8' } }, axisBorder: { show: false }, axisTicks: { color: '#475569' } },
-                    yaxis: { labels: { style: { colors: '#e2e8f0' } } },
+                    xaxis: { type: 'datetime', labels: { style: { colors: '#475569' } }, axisBorder: { show: false }, axisTicks: { color: '#cbd5e1' } },
+                    yaxis: { labels: { style: { colors: '#475569' } } },
                     legend: { show: false },
-                    grid: { borderColor: '#1e293b', },
-                    tooltip: { theme: 'dark', custom: function({series, seriesIndex, dataPointIndex, w}) {
-                        const data = w.globals.initialSeries[seriesIndex].data[dataPointIndex];
-                        const start = new Date(data.y[0]).toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'});
-                        const end = new Date(data.y[1]).toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'});
-                        return `<div class="p-2"><strong>${data.x}</strong><p class="text-xs my-1">${data.description}</p><p class="text-xs text-slate-400">Bắt đầu: ${start}</p><p class="text-xs text-slate-400">Kết thúc: ${end}</p></div>`
-                    }}
+                    grid: { borderColor: '#e2e8f0', },
+                    tooltip: { theme: 'light' }
                 };
 
                 if (timelineChart) {
@@ -332,7 +331,7 @@
             function renderTimelineList(events, centerDate) {
                 timelineContainer.innerHTML = '';
                 if (events.length === 0) {
-                    timelineContainer.innerHTML = `<p class="text-slate-400 text-center py-8">Không có sự kiện quan trọng nào trong giai đoạn này.</p>`;
+                    timelineContainer.innerHTML = `<p class="text-slate-500 text-center py-8">Không có sự kiện quan trọng nào trong giai đoạn này.</p>`;
                     return;
                 }
                 events.forEach(event => {
@@ -341,11 +340,11 @@
                     const { icon, color } = getEventVisuals(event.type);
                     
                     const eventElement = document.createElement('div');
-                    eventElement.className = `flex items-start gap-4 p-4 rounded-lg border-l-4 transition-colors duration-200 cursor-pointer hover:bg-slate-800/50 ${isPast ? 'opacity-60' : ''}`;
+                    eventElement.className = `flex items-start gap-4 p-4 rounded-lg border-l-4 transition-colors duration-200 cursor-pointer hover:bg-slate-100 ${isPast ? 'opacity-60' : ''}`;
                     eventElement.style.borderColor = color;
                     eventElement.dataset.startDate = event.startDate;
                     
-                    eventElement.innerHTML = `<div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style="background-color: ${color}20;"><i data-lucide="${icon}" class="w-6 h-6" style="color: ${color};"></i></div><div class="flex-grow"><p class="font-semibold text-white">${event.title}</p><p class="text-sm text-slate-300">${event.description}</p><p class="text-xs text-slate-400 mt-2">${formatEventDate(eventDate)}</p></div>`;
+                    eventElement.innerHTML = `<div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style="background-color: ${color}20;"><i data-lucide="${icon}" class="w-6 h-6" style="color: ${color};"></i></div><div class="flex-grow"><p class="font-semibold text-slate-800">${event.title}</p><p class="text-sm text-slate-600">${event.description}</p><p class="text-xs text-slate-500 mt-2">${formatEventDate(eventDate)}</p></div>`;
                     timelineContainer.appendChild(eventElement);
                     eventElement.addEventListener('click', handleEventClick);
                 });
@@ -363,7 +362,7 @@
                 const futureEvents = allFutureEvents.filter(e => new Date(e.startDate) > now);
 
                 if (futureEvents.length === 0) {
-                    upcomingContainer.innerHTML = `<p class="text-slate-400 text-sm">Không có sự kiện lớn nào trong 6 tháng tới.</p>`;
+                    upcomingContainer.innerHTML = `<p class="text-slate-500 text-sm">Không có sự kiện lớn nào trong 6 tháng tới.</p>`;
                     return;
                 }
                 futureEvents.slice(0, 5).forEach(event => {
@@ -371,10 +370,10 @@
                     const { icon, color } = getEventVisuals(event.type);
                     
                     const eventElement = document.createElement('div');
-                    eventElement.className = 'flex items-center gap-3 p-2 rounded-md transition-colors duration-200 cursor-pointer hover:bg-slate-800/50';
+                    eventElement.className = 'flex items-center gap-3 p-2 rounded-md transition-colors duration-200 cursor-pointer hover:bg-slate-100';
                     eventElement.dataset.startDate = event.startDate;
 
-                    eventElement.innerHTML = `<div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background-color: ${color}20;"><i data-lucide="${icon}" class="w-4 h-4" style="color: ${color};"></i></div><div><p class="font-medium text-sm text-white">${event.title}</p><p class="text-xs text-slate-400">${formatEventDate(eventDate)}</p></div>`;
+                    eventElement.innerHTML = `<div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background-color: ${color}20;"><i data-lucide="${icon}" class="w-4 h-4" style="color: ${color};"></i></div><div><p class="font-medium text-sm text-slate-800">${event.title}</p><p class="text-xs text-slate-500">${formatEventDate(eventDate)}</p></div>`;
                     upcomingContainer.appendChild(eventElement);
                     eventElement.addEventListener('click', handleEventClick);
                 });
@@ -387,8 +386,8 @@
                 eventDefs.forEach(def => {
                     const { icon, color } = getEventVisuals(def.type);
                     const button = document.createElement('button');
-                    button.className = 'w-full flex items-center gap-3 p-2 rounded-md text-left transition-colors duration-200 hover:bg-slate-800/50';
-                    button.innerHTML = `<div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background-color: ${color}20;"><i data-lucide="${icon}" class="w-4 h-4" style="color: ${color};"></i></div><span class="text-sm">${def.title}</span>`;
+                    button.className = 'w-full flex items-center gap-3 p-2 rounded-md text-left transition-colors duration-200 hover:bg-slate-100';
+                    button.innerHTML = `<div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background-color: ${color}20;"><i data-lucide="${icon}" class="w-4 h-4" style="color: ${color};"></i></div><span class="text-sm text-slate-700">${def.title}</span>`;
                     button.onclick = () => findNextEvent(def.title);
                     eventFinderContainer.appendChild(button);
                 });
@@ -397,19 +396,19 @@
             
             function getEventVisuals(type) {
                 const visuals = {
-                    'season': { icon: 'sun', color: '#facc15' }, 
-                    'minor-season': { icon: 'leaf', color: '#86efac' }, 
-                    'new-moon': { icon: 'moon', color: '#93c5fd' }, 
-                    'full-moon': { icon: 'circle', color: '#fef08a' },
-                    'retrograde': { icon: 'arrow-left-right', color: '#fca5a5' },
-                    'conjunction': { icon: 'link-2', color: '#c4b5fd' },
-                    'ingress': { icon: 'log-in', color: '#f59e0b' },
-                    'aspect': { icon: 'star', color: '#2dd4bf' }, 
+                    'season': { icon: 'sun', color: '#f59e0b' }, 
+                    'minor-season': { icon: 'leaf', color: '#10b981' }, 
+                    'new-moon': { icon: 'moon', color: '#3b82f6' }, 
+                    'full-moon': { icon: 'circle', color: '#a855f7' },
+                    'retrograde': { icon: 'arrow-left-right', color: '#ef4444' },
+                    'conjunction': { icon: 'link-2', color: '#8b5cf6' },
+                    'ingress': { icon: 'log-in', color: '#d97706' },
+                    'aspect': { icon: 'star', color: '#14b8a6' }, 
                     'cazimi': { icon: 'sun', color: '#f59e0b' },
-                    'fixed-degree': { icon: 'map-pin', color: '#a78bfa' },
-                    'latitude': { icon: 'globe-2', color: '#67e8f9' },
-                    'speed-threshold': { icon: 'gauge-circle', color: '#fdba74' },
-                    'default': { icon: 'sparkles', color: '#e5e7eb' }
+                    'fixed-degree': { icon: 'map-pin', color: '#8b5cf6' },
+                    'latitude': { icon: 'globe-2', color: '#0ea5e9' },
+                    'speed-threshold': { icon: 'gauge-circle', color: '#f97316' },
+                    'default': { icon: 'sparkles', color: '#64748b' }
                 };
                 return visuals[type] || visuals['default'];
             }

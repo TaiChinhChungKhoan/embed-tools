@@ -1,27 +1,69 @@
 @import '@embed-tools/components/globals.css';
 
-/* Custom Scrollbar Styles */
+body {
+  /* Styles matching sample.html for a consistent light theme */
+  background-color: #f1f5f9; /* slate-100 */
+  color: #1e293b; /* slate-800 */
+}
+
+/* Custom Scrollbar Styles for Light Theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #e2e8f0; /* slate-200 */
 }
 ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #cbd5e1; /* slate-300 */
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
-}
-
-/* Date picker icon */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
+  background: #94a3b8; /* slate-400 */
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #475569 #1e293b;
+  scrollbar-color: #cbd5e1 #e2e8f0; /* thumb and track */
+}
+
+/* Date picker icon for light background */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.3);
+  cursor: pointer;
+}
+
+/* Styles for ApexCharts text elements to ensure they are dark on a light background */
+/* This targets various text components within ApexCharts, including data labels and axis labels */
+.apexcharts-text,
+.apexcharts-xaxis-label,
+.apexcharts-yaxis-label,
+.apexcharts-datalabel,
+.apexcharts-legend-text,
+.apexcharts-tooltip-text,
+.apexcharts-title-text,
+.apexcharts-subtitle-text,
+.apexcharts-toolbar-text,
+.apexcharts-menu-item {
+  fill: #1e293b !important; /* Use 'fill' for SVG text elements */
+  color: #1e293b !important; /* Use 'color' for HTML-based text elements */
+}
+
+/* Ensure axis lines and grid lines are visible on a light background */
+.apexcharts-xaxis-line,
+.apexcharts-yaxis-line,
+.apexcharts-gridline {
+  stroke: #e2e8f0 !important; /* Use slate-200 for lines to provide subtle visibility */
+}
+
+/* ApexCharts Tooltip styles for light theme (from sample.html) */
+.apexcharts-tooltip {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.apexcharts-tooltip .apexcharts-tooltip-title {
+  background: #f1f5f9 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
 }
