@@ -4,11 +4,13 @@ import TimelineChart from './components/TimelineChart';
 import TimelineList from './components/TimelineList';
 import UpcomingEvents from './components/UpcomingEvents';
 import EventFinder from './components/EventFinder';
+import iframeUtils from '@embed-tools/iframe-utils';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [finding, setFinding] = useState(false);
   const [focusDate, setFocusDate] = useState(() => new Date());
+  const isEmbedded = iframeUtils.isEmbedded();
 
   // Pre-compute all events for the next 2 years once
   const allFutureEvents = useMemo(() => {
@@ -272,6 +274,19 @@ const App = () => {
   // Event definitions for EventFinder (comprehensive list)
   const allEventDefs = useMemo(() => AstroCalculator.getAllKnownEventDefinitions(), []);
 
+  // Notify parent when state changes (for iframe embedding)
+  useEffect(() => {
+    if (!isEmbedded) return;
+    const timer = setTimeout(() => {
+      const container = document.querySelector('.min-h-screen');
+      if (container) {
+        const { width, height } = container.getBoundingClientRect();
+        iframeUtils.sendResizeMessage(width, height);
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [events, finding, focusDate, isEmbedded]);
+
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800 font-sans">
       {loading && (
@@ -316,6 +331,19 @@ const App = () => {
           </aside>
         </div>
       </div>
+      
+      {!isEmbedded && (
+        <footer className="text-center mt-12 mb-8 text-xs text-gray-500 max-w-4xl mx-auto px-4">
+          <p>© 2025 Taichinhchungkhoan.com</p>
+          <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
+          <p className="mt-2">Sử dụng thư viện astronomia cho tính toán thiên văn chính xác.</p>
+          <p className="mt-2">
+            <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục về thiên văn học tài chính.
+            Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
+            Luôn tham khảo ý kiến chuyên gia tài chính và nghiên cứu kỹ lưỡng trước khi ra quyết định đầu tư.
+          </p>
+        </footer>
+      )}
     </div>
   );
 };

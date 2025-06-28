@@ -502,14 +502,18 @@ function App() {
               content={modalContent?.content}
             />
 
-            <footer className="text-center mt-8 text-xs text-gray-500">
-              <p>Sử dụng thư viện @aharris02/bazi-calculator-by-alvamind & date-fns-tz.</p>
-              <p className="mt-2">
-                <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục.
-                Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
-                Luôn tham khảo ý kiến chuyên gia tài chính trước khi ra quyết định.
-              </p>
-            </footer>
+            {!isEmbedded && (
+              <footer className="text-center mt-8 text-xs text-gray-500">
+                <p>© 2025 Taichinhchungkhoan.com</p>
+                <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
+                <p className="mt-2">Sử dụng thư viện @aharris02/bazi-calculator-by-alvamind & date-fns-tz.</p>
+                <p className="mt-2">
+                  <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục.
+                  Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
+                  Luôn tham khảo ý kiến chuyên gia tài chính trước khi ra quyết định.
+                </p>
+              </footer>
+            )}
           </>
         )}
       </div>
