@@ -338,6 +338,15 @@ function App() {
     return () => clearTimeout(timer);
   }, [results, isModalOpen, showReference, isEmbedded]);
 
+  useEffect(() => {
+    console.log('Events in chart range:', events.map(e => ({
+      title: e.title,
+      type: e.type,
+      start: e.startDate,
+      end: e.endDate
+    })));
+  }, [events]);
+
   return (
     <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8" ref={containerRef}>
       <div className="max-w-4xl mx-auto">

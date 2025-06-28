@@ -311,7 +311,7 @@ const App = () => {
                     type="date"
                     id="date-picker"
                     className="bg-slate-50 border border-slate-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full text-slate-900"
-                    value={focusDate.toISOString().split('T')[0]}
+                    value={isNaN(focusDate) ? '' : focusDate.toISOString().split('T')[0]}
                     onChange={handleDateChange}
                   />
                 </div>

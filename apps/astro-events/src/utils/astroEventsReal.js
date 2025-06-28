@@ -494,7 +494,7 @@ const AstroCalculator = {
     arr.forEach(e => {
       if (!out.length) { out.push({...e}); return; }
       const last = out[out.length-1];
-      if (e.type === last.type && e.startDate.getTime() <= last.endDate.getTime()+ms) {
+      if (e.type === last.type && e.title === last.title && e.startDate.getTime() <= last.endDate.getTime()+ms) {
         last.endDate = new Date(Math.max(last.endDate.getTime(), e.endDate.getTime()));
       } else out.push({...e});
     });
