@@ -23,8 +23,15 @@ export default function App() {
             <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
                 {renderSection()}
             </main>
-            <footer className="text-center py-6 text-gray-500 text-sm">
-                <p>Xây dựng với React & Tailwind CSS. Chúc bạn học tốt!</p>
+            <footer className="text-center mt-12 mb-8 text-xs text-gray-500 max-w-4xl mx-auto px-4">
+                <p>© 2025 Taichinhchungkhoan.com</p>
+                <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
+                <p className="mt-2">Sử dụng phương pháp VSA (Volume Spread Analysis) để phân tích thị trường chứng khoán.</p>
+                <p className="mt-2">
+                    <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục về phân tích kỹ thuật.
+                    Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
+                    Luôn tham khảo ý kiến chuyên gia tài chính và nghiên cứu kỹ lưỡng trước khi ra quyết định đầu tư.
+                </p>
             </footer>
         </div>
     );
