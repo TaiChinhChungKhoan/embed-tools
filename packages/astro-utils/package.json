@@ -1,0 +1,20 @@
+{
+  "name": "@embed-tools/astro-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./natal": "./src/natal.js",
+    "./transits": "./src/transits.js",
+    "./aspects": "./src/aspects.js",
+    "./events": "./src/events.js",
+    "./constants": "./src/constants.js"
+  },
+  "dependencies": {
+    "astronomia": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.29.0"
+  }
+} 

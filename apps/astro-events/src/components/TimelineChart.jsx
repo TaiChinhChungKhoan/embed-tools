@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import { getEventVisuals } from '../utils/astroEventsReal'; // Import the utility function
+import { getEventVisuals } from '../utils/astroCalculator'; // Import the utility function
 
 const TimelineChart = ({ events, onZoom }) => {
     const chartRef = useRef(null);

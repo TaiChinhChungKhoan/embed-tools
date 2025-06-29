@@ -1,8 +1,26 @@
 import React from 'react';
-import * as Lucide from 'lucide-react';
-import { getEventVisuals, formatEventDate } from '../utils/astroEventsReal';
+import { 
+  Sun, 
+  Leaf, 
+  Moon, 
+  Circle, 
+  ArrowLeftRight, 
+  Star, 
+  Globe2, 
+  GaugeCircle, 
+  Link2, 
+  MapPin, 
+  Target, 
+  Sparkles 
+} from 'lucide-react';
+import { getEventVisuals, formatEventDate } from '../utils/astroCalculator';
 
 const TimelineList = ({ events, centerDate, onEventClick }) => {
+  // Create icon mapping
+  const iconMap = {
+    Sun, Leaf, Moon, Circle, ArrowLeftRight, Star, Globe2, GaugeCircle, Link2, MapPin, Target, Sparkles
+  };
+
   if (!events.length) {
     return <p className="text-gray-700 text-center py-8">Không có sự kiện quan trọng nào trong giai đoạn này.</p>;
   }
@@ -36,7 +54,7 @@ const TimelineList = ({ events, centerDate, onEventClick }) => {
         const eventDate = new Date(event.startDate);
         const isPast = eventDate < centerDate;
         const { icon, color } = getEventVisuals(event.type);
-        const Icon = Lucide[icon] || Lucide.Sparkles;
+        const Icon = iconMap[icon] || Sparkles;
         const dateRange = formatDateRange(event.startDate, event.endDate);
         
         return (

@@ -1,39 +1,17 @@
 import React, { useMemo } from 'react';
-// These utility functions are imported in App.jsx, so we assume they are available here.
-// We add checks to prevent errors if they are not.
-import { getEventVisuals, formatEventDate } from '../utils/astroCalculator';
-import { 
-  Sun, 
-  Leaf, 
-  Moon, 
-  Circle, 
-  ArrowLeftRight, 
-  Star, 
-  Globe2, 
-  GaugeCircle, 
-  Link2, 
-  MapPin, 
-  Target, 
-  Sparkles 
-} from 'lucide-react';
+import { getEventVisuals, formatEventDate, getEventMeaning } from '../utils/eventVisuals';
+import * as Lucide from 'lucide-react';
 
 const UpcomingEvents = ({ events, onEventClick }) => {
   // Pre-compute a map of lowercase icon names to Lucide components for performance.
   // This avoids dynamic lookups inside the render loop.
-  const iconComponents = useMemo(() => ({
-    sun: Sun,
-    leaf: Leaf,
-    moon: Moon,
-    circle: Circle,
-    arrowleftright: ArrowLeftRight,
-    star: Star,
-    globe2: Globe2,
-    gaugecircle: GaugeCircle,
-    link2: Link2,
-    mappin: MapPin,
-    target: Target,
-    sparkles: Sparkles
-  }), []);
+  const iconComponents = useMemo(() => {
+    const components = {};
+    Object.keys(Lucide).forEach(key => {
+      components[key.toLowerCase()] = Lucide[key];
+    });
+    return components;
+  }, []);
 
   if (!events || events.length === 0) {
     return (
@@ -65,21 +43,27 @@ const UpcomingEvents = ({ events, onEventClick }) => {
     return `${startFormatted} - ${endFormatted}`;
   };
 
+  const sortedEvents = [...events].sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
   return (
     <div className="space-y-2 mb-6">
-      {events.map((event, index) => {
+      {sortedEvents.slice(0, 5).map((event, index) => {
+        const eventDate = event.startDate ? new Date(event.startDate) : null;
+        if (!eventDate || isNaN(eventDate)) return null;
+        
+        const daysUntil = Math.ceil((eventDate - new Date()) / (1000 * 60 * 60 * 24));
         const { icon, color } = getEventVisuals(event.type) || { icon: 'Sparkles', color: '#6b7280' };
-        const IconComponent = iconComponents[icon.toLowerCase()] || Sparkles;
+        const IconComponent = iconComponents[icon.toLowerCase()] || Lucide.Sparkles;
         const dateRange = formatDateRange(event.startDate, event.endDate);
 
         return (
           <div
-            key={index}
+            key={`${event.title}-${event.startDate}-${index}`}
             onClick={() => onEventClick(event.startDate)}
-            // This is the key change to match sample.html:
+            // This is the key change to match astro-events:
             // - Default state is clean with a transparent border to prevent layout shift.
             // - On hover, we apply a background, a shadow, and a visible border to create the "box".
-            className="p-3 rounded-lg cursor-pointer transition-all duration-200 border border-transparent hover:bg-slate-50 hover:shadow-sm hover:border-slate-200"
+            className="p-3 rounded-lg cursor-pointer transition-all duration-200 border border-transparent hover:bg-slate-50 hover:shadow-md hover:border-slate-200"
           >
             <div className="flex items-center font-sans">
               <div className="w-6 h-6 mr-3 flex-shrink-0 flex items-center justify-center">
@@ -88,15 +72,37 @@ const UpcomingEvents = ({ events, onEventClick }) => {
                 </div>
               </div>
               <div className="flex-grow">
-                <p className="font-semibold text-slate-800">{event.title}</p>
+                <div className="flex items-center justify-between mb-1">
+                  <p className="font-semibold text-slate-800">{event.title}</p>
+                  <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${
+                    daysUntil <= 7 ? 'bg-red-100 text-red-800' :
+                    daysUntil <= 30 ? 'bg-orange-100 text-orange-800' :
+                    'bg-green-100 text-green-800'
+                  }`}>
+                    {daysUntil === 0 ? 'Hôm nay' :
+                     daysUntil === 1 ? 'Ngày mai' :
+                     `${daysUntil} ngày`}
+                  </span>
+                </div>
                 <p className="text-sm text-slate-500">{dateRange}</p>
+                {event.score && (
+                  <p className="text-xs text-slate-400 mt-1">Điểm: {event.score.toFixed(1)}</p>
+                )}
               </div>
             </div>
           </div>
         );
       })}
+      
+      {events.length > 5 && (
+        <div className="text-center pt-2">
+          <span className="text-xs text-slate-500">
+            +{events.length - 5} sự kiện khác
+          </span>
+        </div>
+      )}
     </div>
   );
 };
 
-export default UpcomingEvents;
+export default UpcomingEvents; 

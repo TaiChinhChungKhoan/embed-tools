@@ -1,5 +1,5 @@
 {
-  "name": "astro-events",
+  "name": "natal-events",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,6 @@
     "@embed-tools/components": "workspace:*",
     "@embed-tools/iframe-utils": "workspace:*",
     "apexcharts": "^3.50.0",
-    "astronomia": "^4.1.1",
     "lucide-react": "^0.460.0",
     "react": "^19.1.0",
     "react-apexcharts": "^1.4.1",

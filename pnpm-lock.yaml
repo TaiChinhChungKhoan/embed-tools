@@ -96,6 +96,9 @@ importers:
 
   apps/astro-events:
     dependencies:
+      '@embed-tools/astro-utils':
+        specifier: workspace:*
+        version: link:../../packages/astro-utils
       '@embed-tools/components':
         specifier: workspace:*
         version: link:../../packages/components
@@ -231,6 +234,64 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5(terser@5.43.1)
 
+  apps/natal-events:
+    dependencies:
+      '@embed-tools/astro-utils':
+        specifier: workspace:*
+        version: link:../../packages/astro-utils
+      '@embed-tools/components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@embed-tools/iframe-utils':
+        specifier: workspace:*
+        version: link:../../packages/iframe-utils
+      apexcharts:
+        specifier: ^3.50.0
+        version: 3.50.0
+      lucide-react:
+        specifier: ^0.460.0
+        version: 0.460.0(react@19.1.0)
+      react:
+        specifier: ^19.1.0
+        version: 19.1.0
+      react-apexcharts:
+        specifier: ^1.4.1
+        version: 1.4.1(apexcharts@3.50.0)(react@19.1.0)
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      '@tailwindcss/vite':
+        specifier: ^4.1.10
+        version: 4.1.10(vite@6.3.5)
+      '@types/react':
+        specifier: ^19.1.8
+        version: 19.1.8
+      '@types/react-dom':
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
+      '@vitejs/plugin-react':
+        specifier: ^4.6.0
+        version: 4.6.0(vite@6.3.5)
+      eslint:
+        specifier: ^9.29.0
+        version: 9.29.0
+      eslint-plugin-react:
+        specifier: ^7.37.5
+        version: 7.37.5(eslint@9.29.0)
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.29.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.20
+        version: 0.4.20(eslint@9.29.0)
+      tailwindcss:
+        specifier: ^4.1.10
+        version: 4.1.10
+      vite:
+        specifier: ^6.3.5
+        version: 6.3.5(terser@5.43.1)
+
   apps/vsa-master:
     dependencies:
       '@embed-tools/components':
@@ -273,6 +334,16 @@ importers:
       vite:
         specifier: ^6.3.5
         version: 6.3.5(terser@5.43.1)
+
+  packages/astro-utils:
+    dependencies:
+      astronomia:
+        specifier: ^4.1.1
+        version: 4.1.1
+    devDependencies:
+      eslint:
+        specifier: ^9.29.0
+        version: 9.29.0
 
   packages/components:
     dependencies:

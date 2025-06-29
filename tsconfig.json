@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./apps/website-cost-estimator/src/*", "./apps/ai-model-discovery/src/*", "./apps/website-launch-checklist/src/*", "./apps/analytics-tool-discovery/src/*", "./apps/website-platform-discovery/src/*", "./apps/color-palette-generator/src/*", "./apps/bazi-calculator/src/*", "./apps/astro-events/src/*", "./apps/vsa-master/src/*"]
+      "@/*": ["./apps/website-cost-estimator/src/*", "./apps/ai-model-discovery/src/*", "./apps/website-launch-checklist/src/*", "./apps/analytics-tool-discovery/src/*", "./apps/website-platform-discovery/src/*", "./apps/color-palette-generator/src/*", "./apps/bazi-calculator/src/*", "./apps/astro-events/src/*", "./apps/vsa-master/src/*", "./apps/natal-events/src/*"]
     },
     "lib": ["es2015", "dom"],
     "allowJs": true,
@@ -10,6 +10,6 @@
     "jsx": "react-jsx",
     "noEmit": true
   },
-  "include": ["apps/website-cost-estimator/src", "apps/ai-model-discovery/src", "apps/website-launch-checklist/src", "apps/analytics-tool-discovery/src", "apps/website-platform-discovery/src", "apps/color-palette-generator/src", "apps/bazi-calculator/src", "apps/astro-events/src", "apps/vsa-master/src"],
+  "include": ["apps/website-cost-estimator/src", "apps/ai-model-discovery/src", "apps/website-launch-checklist/src", "apps/analytics-tool-discovery/src", "apps/website-platform-discovery/src", "apps/color-palette-generator/src", "apps/bazi-calculator/src", "apps/astro-events/src", "apps/vsa-master/src", "apps/natal-events/src"],
   "exclude": ["node_modules"]
 }

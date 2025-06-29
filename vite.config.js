@@ -19,7 +19,8 @@ export default defineConfig({
         'color-palette-generator': resolve(__dirname, 'apps/color-palette-generator/index.html'),
         'bazi-calculator': resolve(__dirname, 'apps/bazi-calculator/index.html'),
         'astro-events': resolve(__dirname, 'apps/astro-events/index.html'),
-        'vsa-master': resolve(__dirname, 'apps/vsa-master/index.html'),},
+        'vsa-master': resolve(__dirname, 'apps/vsa-master/index.html'),
+        'natal-events': resolve(__dirname, 'apps/natal-events/index.html'),},
       output: {
         // Ensure unique chunk names for multiple apps
         chunkFileNames: (chunkInfo) => {

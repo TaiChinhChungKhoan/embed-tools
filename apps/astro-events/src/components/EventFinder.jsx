@@ -1,23 +1,43 @@
 import React, { useMemo, useCallback } from 'react';
-import * as Lucide from 'lucide-react';
-import { getEventVisuals } from '../utils/astroEventsReal';
+import { 
+  Sun, 
+  Leaf, 
+  Moon, 
+  Circle, 
+  ArrowLeftRight, 
+  Star, 
+  Globe2, 
+  GaugeCircle, 
+  Link2, 
+  MapPin, 
+  Target, 
+  Sparkles 
+} from 'lucide-react';
+import { getEventVisuals } from '../utils/astroCalculator';
 
 const EventFinder = React.memo(({ eventDefs, onFind, finding = false }) => {
   // Pre-compute all possible icon components to avoid dynamic imports
-  const iconComponents = useMemo(() => {
-    const components = {};
-    Object.keys(Lucide).forEach(key => {
-      components[key.toLowerCase()] = Lucide[key];
-    });
-    return components;
-  }, []);
+  const iconComponents = useMemo(() => ({
+    sun: Sun,
+    leaf: Leaf,
+    moon: Moon,
+    circle: Circle,
+    arrowleftright: ArrowLeftRight,
+    star: Star,
+    globe2: Globe2,
+    gaugecircle: GaugeCircle,
+    link2: Link2,
+    mappin: MapPin,
+    target: Target,
+    sparkles: Sparkles
+  }), []);
 
   // Memoize the icon/color lookup so it doesn't run on every render
   const items = useMemo(() => {
     return eventDefs.map(def => {
       const { icon, color } = getEventVisuals(def.type);
       // Use pre-computed icon components for faster lookup
-      const IconComponent = iconComponents[icon.toLowerCase()] || Lucide.Sparkles;
+      const IconComponent = iconComponents[icon.toLowerCase()] || Sparkles;
       return { 
         title: def.title, 
         IconComponent, 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import AstroCalculator from './utils/astroEventsReal';
+import { AstroCalculator, getEventVisuals, formatEventDate } from '@embed-tools/astro-utils';
 import TimelineChart from './components/TimelineChart';
 import TimelineList from './components/TimelineList';
 import UpcomingEvents from './components/UpcomingEvents';
@@ -7,236 +7,129 @@ import EventFinder from './components/EventFinder';
 import iframeUtils from '@embed-tools/iframe-utils';
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [finding, setFinding] = useState(false);
   const [focusDate, setFocusDate] = useState(() => new Date());
+  const [events, setEvents] = useState([]);
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const isEmbedded = iframeUtils.isEmbedded();
 
-  // Pre-compute all events for the next 2 years once
-  const allFutureEvents = useMemo(() => {
-    const now = new Date();
-    const searchLimit = new Date();
-    searchLimit.setFullYear(now.getFullYear() + 2);
+  // Calculate events for a specific date range when needed
+  const calculateEventsForRange = useCallback((startDate, endDate) => {
+    setLoading(true);
     
-    let allEvents = [];
-    for (let year = now.getFullYear(); year <= searchLimit.getFullYear(); year++) {
-      const yearEvents = AstroCalculator.getAllEventsForYear(year);
-      allEvents = allEvents.concat(yearEvents);
-    }
-    return allEvents;
-  }, []); // Empty dependency array - compute once on mount
-
-  // Comprehensive event indexing system with multiple hash tables
-  const eventIndex = useMemo(() => {
-    const index = {
-      // Title-based lookup (existing functionality)
-      byTitle: {},
-      
-      // Type-based lookup for filtering events by category
-      byType: {},
-      
-      // Date-based lookup for quick range queries
-      byDate: {},
-      
-      // Planet-based lookup for astronomical events
-      byPlanet: {},
-      
-      // Month-based lookup for seasonal patterns
-      byMonth: {},
-      
-      // Quick access to all events
-      allEvents: allFutureEvents,
-      
-      // Statistics
-      stats: {
-        totalEvents: allFutureEvents.length,
-        uniqueTitles: 0,
-        uniqueTypes: 0,
-        dateRange: { start: null, end: null }
-      }
-    };
-
-    // Build all indexes
-    allFutureEvents.forEach(event => {
-      const eventDate = new Date(event.startDate);
-      const month = eventDate.getMonth();
-      const year = eventDate.getFullYear();
-      const dateKey = `${year}-${month.toString().padStart(2, '0')}`;
-      
-      // Title index
-      if (!index.byTitle[event.title]) {
-        index.byTitle[event.title] = [];
-      }
-      index.byTitle[event.title].push(event);
-      
-      // Type index
-      if (!index.byType[event.type]) {
-        index.byType[event.type] = [];
-      }
-      index.byType[event.type].push(event);
-      
-      // Date index (by month for quick range queries)
-      if (!index.byDate[dateKey]) {
-        index.byDate[dateKey] = [];
-      }
-      index.byDate[dateKey].push(event);
-      
-      // Month index (for seasonal patterns)
-      if (!index.byMonth[month]) {
-        index.byMonth[month] = [];
-      }
-      index.byMonth[month].push(event);
-      
-      // Planet index (extract planet names from titles)
-      const planetMatch = event.title.match(/(Sao Thủy|Kim Tinh|Hỏa Tinh|Mộc Tinh|Thổ Tinh|Hải Vương Tinh)/);
-      if (planetMatch) {
-        const planet = planetMatch[1];
-        if (!index.byPlanet[planet]) {
-          index.byPlanet[planet] = [];
+    // Use setTimeout to allow UI to update
+    setTimeout(() => {
+      try {
+        const startYear = startDate.getFullYear();
+        const endYear = endDate.getFullYear();
+        
+        let allEvents = [];
+        for (let year = startYear; year <= endYear; year++) {
+          const yearEvents = AstroCalculator.getAllEventsForYear(year);
+          allEvents = allEvents.concat(yearEvents);
         }
-        index.byPlanet[planet].push(event);
+        
+        // Filter events within the specified range
+        const filteredEvents = allEvents.filter(event => {
+          const eventDate = new Date(event.startDate);
+          return eventDate >= startDate && eventDate <= endDate;
+        });
+        
+        setEvents(filteredEvents);
+      } catch (error) {
+        console.error('Error calculating events:', error);
+        setEvents([]);
+      } finally {
+        setLoading(false);
       }
-    });
-
-    // Pre-sort all arrays by date for binary search
-    Object.keys(index.byTitle).forEach(title => {
-      index.byTitle[title].sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
-    });
-    
-    Object.keys(index.byType).forEach(type => {
-      index.byType[type].sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
-    });
-    
-    Object.keys(index.byPlanet).forEach(planet => {
-      index.byPlanet[planet].sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
-    });
-
-    // Calculate statistics
-    index.stats.uniqueTitles = Object.keys(index.byTitle).length;
-    index.stats.uniqueTypes = Object.keys(index.byType).length;
-    
-    if (allFutureEvents.length > 0) {
-      const dates = allFutureEvents.map(e => new Date(e.startDate)).sort((a, b) => a - b);
-      index.stats.dateRange = {
-        start: dates[0],
-        end: dates[dates.length - 1]
-      };
-    }
-
-    return index;
-  }, [allFutureEvents]);
-
-  // Binary search function to find next event after a given date
-  const findNextEventAfter = useCallback((events, targetDate) => {
-    let left = 0;
-    let right = events.length - 1;
-    let result = -1;
-    
-    while (left <= right) {
-      const mid = Math.floor((left + right) / 2);
-      const eventDate = new Date(events[mid].startDate);
-      
-      if (eventDate > targetDate) {
-        result = mid;
-        right = mid - 1; // Look for earlier event that's still after target
-      } else {
-        left = mid + 1;
-      }
-    }
-    
-    return result >= 0 ? events[result] : null;
+    }, 10);
   }, []);
 
-  // Advanced lookup functions using the comprehensive index
-  const eventLookup = useMemo(() => ({
-    // Find next event by title (existing functionality)
-    findNextByTitle: (title) => {
-      const events = eventIndex.byTitle[title];
-      if (!events || events.length === 0) return null;
-      return findNextEventAfter(events, new Date());
-    },
-
-    // Find next event by type (e.g., all retrogrades)
-    findNextByType: (type) => {
-      const events = eventIndex.byType[type];
-      if (!events || events.length === 0) return null;
-      return findNextEventAfter(events, new Date());
-    },
-
-    // Find next event by planet
-    findNextByPlanet: (planet) => {
-      const events = eventIndex.byPlanet[planet];
-      if (!events || events.length === 0) return null;
-      return findNextEventAfter(events, new Date());
-    },
-
-    // Find events in a date range
-    findInDateRange: (startDate, endDate) => {
-      const start = new Date(startDate);
-      const end = new Date(endDate);
-      const results = [];
-      
-      // Use date index for efficient range queries
-      const startYear = start.getFullYear();
-      const endYear = end.getFullYear();
-      
-      for (let year = startYear; year <= endYear; year++) {
-        for (let month = 0; month < 12; month++) {
-          const dateKey = `${year}-${month.toString().padStart(2, '0')}`;
-          const monthEvents = eventIndex.byDate[dateKey];
-          if (monthEvents) {
-            monthEvents.forEach(event => {
-              const eventDate = new Date(event.startDate);
-              if (eventDate >= start && eventDate <= end) {
-                results.push(event);
-              }
-            });
-          }
+  // Calculate upcoming events when needed
+  const calculateUpcomingEvents = useCallback(() => {
+    const now = new Date();
+    const sixMonthsLater = new Date();
+    sixMonthsLater.setMonth(now.getMonth() + 6);
+    
+    setLoading(true);
+    
+    setTimeout(() => {
+      try {
+        const currentYear = now.getFullYear();
+        const nextYear = sixMonthsLater.getFullYear();
+        
+        let allEvents = [];
+        for (let year = currentYear; year <= nextYear; year++) {
+          const yearEvents = AstroCalculator.getAllEventsForYear(year);
+          allEvents = allEvents.concat(yearEvents);
         }
+        
+        const upcoming = allEvents
+          .filter(e => {
+            const eventDate = new Date(e.startDate);
+            return eventDate > now && eventDate <= sixMonthsLater;
+          })
+          .slice(0, 5);
+        
+        setUpcomingEvents(upcoming);
+      } catch (error) {
+        console.error('Error calculating upcoming events:', error);
+        setUpcomingEvents([]);
+      } finally {
+        setLoading(false);
       }
-      
-      return results.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
-    },
+    }, 10);
+  }, []);
 
-    // Find events by month (seasonal patterns)
-    findByMonth: (month) => {
-      return eventIndex.byMonth[month] || [];
-    },
+  // Calculate events for timeline view when focusDate changes
+  useEffect(() => {
+    const startDate = new Date(focusDate);
+    startDate.setDate(startDate.getDate() - 60);
+    const endDate = new Date(focusDate);
+    endDate.setDate(endDate.getDate() + 60);
+    
+    calculateEventsForRange(startDate, endDate);
+  }, [focusDate, calculateEventsForRange]);
 
-    // Get statistics
-    getStats: () => eventIndex.stats,
+  // Calculate upcoming events on mount
+  useEffect(() => {
+    calculateUpcomingEvents();
+  }, [calculateUpcomingEvents]);
 
-    // Get all events of a specific type
-    getAllByType: (type) => eventIndex.byType[type] || [],
-
-    // Get all events for a specific planet
-    getAllByPlanet: (planet) => eventIndex.byPlanet[planet] || []
-  }), [eventIndex, findNextEventAfter]);
-
-  // Optimized find next event by title - uses binary search
+  // Find next event by title
   const handleFindNextEvent = useCallback((title) => {
     setFinding(true);
     
-    // Use setTimeout to allow the UI to update before the search
     setTimeout(() => {
-      const nextEvent = eventLookup.findNextByTitle(title);
-      
-      if (nextEvent) {
-        setFocusDate(new Date(nextEvent.startDate));
-      } else {
-        alert(`Không tìm thấy sự kiện "${title}" trong 2 năm tới.`);
+      try {
+        const now = new Date();
+        const searchLimit = new Date();
+        searchLimit.setFullYear(now.getFullYear() + 2);
+        
+        let allEvents = [];
+        for (let year = now.getFullYear(); year <= searchLimit.getFullYear(); year++) {
+          const yearEvents = AstroCalculator.getAllEventsForYear(year);
+          allEvents = allEvents.concat(yearEvents);
+        }
+        
+        const nextEvent = allEvents.find(event => 
+          event.title === title && new Date(event.startDate) > now
+        );
+        
+        if (nextEvent) {
+          setFocusDate(new Date(nextEvent.startDate));
+        } else {
+          alert(`Không tìm thấy sự kiện "${title}" trong 2 năm tới.`);
+        }
+      } catch (error) {
+        console.error('Error finding next event:', error);
+        alert('Có lỗi xảy ra khi tìm kiếm sự kiện.');
+      } finally {
+        setFinding(false);
       }
-      
-      setFinding(false);
-    }, 10); // Small delay to ensure UI updates
-  }, [eventLookup]);
-
-  // Set loading to false once initial computation is complete
-  useEffect(() => {
-    if (allFutureEvents.length > 0) {
-      setLoading(false);
-    }
-  }, [allFutureEvents]);
+    }, 10);
+  }, []);
 
   // Date picker handler
   const handleDateChange = (e) => {
@@ -247,29 +140,6 @@ const App = () => {
   const handleEventClick = useCallback((dateString) => {
     setFocusDate(new Date(dateString));
   }, []);
-
-  // Memoize events for the timeline view. This is much faster than re-calculating.
-  const events = useMemo(() => {
-    const startDate = new Date(focusDate);
-    startDate.setDate(startDate.getDate() - 60);
-    const endDate = new Date(focusDate);
-    endDate.setDate(endDate.getDate() + 60);
-    // Use the pre-indexed lookup function for high performance
-    return eventLookup.findInDateRange(startDate, endDate);
-  }, [focusDate, eventLookup]);
-
-  // Memoize upcoming events based on the full future list, not the focused view
-  const upcomingEvents = useMemo(() => {
-    const now = new Date();
-    const sixMonthsLater = new Date();
-    sixMonthsLater.setMonth(now.getMonth() + 6);
-    return allFutureEvents
-      .filter(e => {
-        const eventDate = new Date(e.startDate);
-        return eventDate > now && eventDate <= sixMonthsLater;
-      })
-      .slice(0, 5);
-  }, [allFutureEvents]);
 
   // Event definitions for EventFinder (comprehensive list)
   const allEventDefs = useMemo(() => AstroCalculator.getAllKnownEventDefinitions(), []);
@@ -292,7 +162,7 @@ const App = () => {
       {loading && (
         <div className="fixed inset-0 bg-white bg-opacity-80 flex flex-col items-center justify-center z-50 transition-opacity duration-500">
           <div className="w-16 h-16 border-4 border-t-purple-500 border-gray-300 rounded-full animate-spin"></div>
-          <p className="mt-4 text-lg text-gray-600">Đang khởi tạo Công cụ Thiên thể...</p>
+          <p className="mt-4 text-lg text-gray-600">Đang tính toán sự kiện...</p>
         </div>
       )}
       <div className={`max-w-7xl mx-auto p-4 lg:p-8 transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
