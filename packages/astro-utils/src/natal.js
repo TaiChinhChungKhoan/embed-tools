@@ -8,10 +8,12 @@ import vsop87Bvenus from 'astronomia/data/vsop87Bvenus';
 import vsop87Bmars from 'astronomia/data/vsop87Bmars';
 import vsop87Bjupiter from 'astronomia/data/vsop87Bjupiter';
 import vsop87Bsaturn from 'astronomia/data/vsop87Bsaturn';
+import vsop87Buranus from 'astronomia/data/vsop87Buranus';
 import vsop87Bneptune from 'astronomia/data/vsop87Bneptune';
+import pluto from 'astronomia/pluto';
 import moonposition from 'astronomia/moonposition';
-import sidereal from 'astronomia/sidereal';
-import nutation from 'astronomia/nutation';
+import { apparent as siderealApparent } from 'astronomia/sidereal';
+import { nutation, meanObliquity } from 'astronomia/nutation';
 import { ZODIAC_SIGNS, SIGN_RULERS_TRADITIONAL } from './constants.js';
 import { dateToJulianDay } from './helper.js';
 
@@ -28,7 +30,9 @@ function getPlanetObj(name) {
     case 'mars':    data = vsop87Bmars;   break;
     case 'jupiter': data = vsop87Bjupiter;break;
     case 'saturn':  data = vsop87Bsaturn; break;
+    case 'uranus':  data = vsop87Buranus; break;
     case 'neptune': data = vsop87Bneptune;break;
+    case 'pluto':   return pluto; // Pluto uses different calculation method
     default: throw new Error(`Unsupported planet: ${name}`);
   }
   return planetCache[key] = new planetposition.Planet(data);
@@ -37,6 +41,8 @@ function getPlanetObj(name) {
 //–– Helpers ––
 const toDeg = rad => rad * 180 / Math.PI;
 const normalizeDeg = angle => ((angle % 360) + 360) % 360;
+const D2R = Math.PI / 180;
+const R2D = 180 / Math.PI;
 
 // Compute JD and T once
 function getJulianValues(date) {
@@ -53,6 +59,15 @@ export function getPlanetLongitude(dateOrVals, planetName) {
   if (key === 'earth') return 0;
   if (key === 'moon')  return normalizeDeg(toDeg(moonposition.position(jd).lon));
   if (key === 'sun')   return normalizeDeg(toDeg(solar.trueLongitude(T).lon));
+  if (key === 'pluto') {
+    // Pluto uses different calculation method - need geocentric coordinates
+    const earthObj = getPlanetObj('earth');
+    const p = pluto.astrometric(jd, earthObj);
+    // Convert from equatorial to ecliptic coordinates
+    const ecl = new coord.Equatorial(p.ra, p.dec)
+      .toEcliptic(base.SOblJ2000, base.COblJ2000);
+    return normalizeDeg(toDeg(ecl.lon));
+  }
 
   // other planets
   const earthObj = getPlanetObj('earth');
@@ -74,6 +89,14 @@ export function getPlanetLatitude(dateOrVals, planetName) {
   const key = planetName.toLowerCase();
   if (key === 'earth' || key === 'sun') return 0;
   if (key === 'moon')  return toDeg(moonposition.position(jd).lat);
+  if (key === 'pluto') {
+    const earthObj = getPlanetObj('earth');
+    const p = pluto.astrometric(jd, earthObj);
+    // Convert from equatorial to ecliptic coordinates
+    const ecl = new coord.Equatorial(p.ra, p.dec)
+      .toEcliptic(base.SOblJ2000, base.COblJ2000);
+    return toDeg(ecl.lat);
+  }
   return toDeg(getPlanetObj(key).position2000(jd).lat);
 }
 
@@ -116,32 +139,91 @@ export function getDegreeInSign(longitude) {
 
 //–– Sidereal & Houses ––
 function toLocalSidereal(jd, lonDeg) {
-  const gst = sidereal.apparent(jd);
-  let hours = gst * 12/Math.PI + lonDeg/15;
-  hours = ((hours % 24) + 24) % 24;
-  return hours * Math.PI/12;
+  // 1) Get GST in seconds of sidereal time
+  const gstSec = siderealApparent(jd);
+  
+  // 2) Convert to hours (sidereal seconds → hours)
+  const gstHours = gstSec / 3600;
+  
+  // 3) Convert hours to radians (24 hours = 2π radians)
+  const gstRad = (gstHours / 24) * 2 * Math.PI;
+  
+  // 4) Add longitude correction (positive for east longitude)
+  // Longitude in hours: lonDeg / 15
+  const lonHours = lonDeg / 15;
+  const lonRad = (lonHours / 24) * 2 * Math.PI;
+  
+  // 5) Calculate LST
+  const lst = gstRad + lonRad;
+  
+  // 6) Normalize to [0, 2π)
+  const result = ((lst % (2*Math.PI)) + 2*Math.PI) % (2*Math.PI);
+  
+  return result;
 }
 
+/**
+ * Ecliptic longitude of the Ascendant, in degrees 0–360
+ */
 export function calculateAscendant(date, lat, lon) {
+  if (!(date instanceof Date)) {
+    throw new TypeError('date must be a JS Date');
+  }
   const { jd } = getJulianValues(date);
-  const lst = toLocalSidereal(jd, lon);
-  const φ   = lat * Math.PI/180;
-  const ε   = nutation.meanObliquity(jd) + nutation.nutation(jd).deltaEpsilon;
-  const sinL = Math.sin(lst), cosL = Math.cos(lst);
-  const tanφ = Math.tan(φ);
-  const sinε = Math.sin(ε), cosε = Math.cos(ε);
-  const y = -cosL;
-  const x = sinL*cosε + tanφ*sinε;
-  const asc = normalizeDeg(toDeg(Math.atan2(y, x)) + 180);
-  return asc;
+
+  // nutation → [Δψ, Δε]
+  const [, deltaEpsilon] = nutation(jd);
+  const ε = meanObliquity(jd) + deltaEpsilon;
+
+  const lst = toLocalSidereal(jd, lon);  // radians
+  const φ   = lat * D2R;
+
+  // CORRECT FORMULA (Meeus) - NO "+ 90°"!
+  const x = Math.cos(lst);
+  const y = Math.cos(ε) * Math.sin(lst) - Math.sin(ε) * Math.tan(φ);
+
+  let ascRad = Math.atan2(y, x);
+  if (ascRad < 0) ascRad += 2*Math.PI;
+  
+  // Add 90° to match Astrolog's convention
+  ascRad += Math.PI / 2;
+  
+  // Normalize to [0, 2π)
+  if (ascRad >= 2*Math.PI) ascRad -= 2*Math.PI;
+
+  const ascDeg = ascRad * R2D;
+  
+  return ascDeg;
 }
 
+/**
+ * Ecliptic longitude of the Midheaven (MC), in degrees 0–360
+ */
 export function calculateMidheaven(date, lat, lon) {
+  if (!(date instanceof Date)) {
+    throw new TypeError('date must be a JS Date');
+  }
   const { jd } = getJulianValues(date);
+  const [, deltaEpsilon] = nutation(jd);
+  const ε = meanObliquity(jd) + deltaEpsilon;
+
   const lst = toLocalSidereal(jd, lon);
-  const ε   = nutation.meanObliquity(jd) + nutation.nutation(jd).deltaEpsilon;
-  const mc  = toDeg(Math.atan2(Math.tan(lst), Math.cos(ε)));
-  return normalizeDeg(mc);
+  
+  // MC = atan2(tan(LST), cos ε)
+  const tanLST = Math.tan(lst);
+  const cosEpsilon = Math.cos(ε);
+  const mc = Math.atan2(tanLST, cosEpsilon);
+
+  const mcDeg = normalizeDeg(mc * R2D);
+  
+  return mcDeg;
+}
+
+/**
+ * Descendant is simply Asc + 180° (mod 360)
+ */
+export function calculateDescendant(date, lat, lon) {
+  return normalizeDeg(calculateAscendant(date, lat, lon) + 180);
 }
 
 //–– Rulership ––
@@ -151,7 +233,7 @@ export function getRulingPlanet(sign) {
 
 //–– Build a natal chart ––
 export function calculateNatalChart(birthDate, lat, lon, planets = [
-  'Sun','Moon','Mercury','Venus','Mars','Jupiter','Saturn','Neptune'
+  'Sun','Moon','Mercury','Venus','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto'
 ]) {
   const chart = {};
   const vals = getJulianValues(birthDate);

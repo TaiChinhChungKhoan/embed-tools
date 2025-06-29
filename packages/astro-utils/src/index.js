@@ -128,21 +128,37 @@ export class NatalCalculator {
   _parseLatLon(coord, coordType) {
     if (!coord) return 0;
     
-    const match = coord.match(/(\d+\.?\d*)([NSWE])/);
-    if (!match) {
-      throw new Error(`Invalid ${coordType} format: ${coord}. Use format like "10.7769N" or "106.7009E"`);
+    // Try degrees:minutes format first (e.g., "10:49N", "106:37E")
+    let match = coord.match(/(\d+):(\d+)([NSWE])/);
+    if (match) {
+      const [, degrees, minutes, direction] = match;
+      let result = parseFloat(degrees) + parseFloat(minutes) / 60;
+      
+      if (coordType === "lat" && (direction === "S" || direction === "s")) {
+        result = -result;
+      } else if (coordType === "lon" && (direction === "W" || direction === "w")) {
+        result = -result;
+      }
+      
+      return result;
     }
     
-    const [, value, direction] = match;
-    let result = parseFloat(value);
-    
-    if (coordType === "lat" && (direction === "S" || direction === "s")) {
-      result = -result;
-    } else if (coordType === "lon" && (direction === "W" || direction === "w")) {
-      result = -result;
+    // Try decimal format (e.g., "10.7769N", "106.7009E")
+    match = coord.match(/(\d+\.?\d*)([NSWE])/);
+    if (match) {
+      const [, value, direction] = match;
+      let result = parseFloat(value);
+      
+      if (coordType === "lat" && (direction === "S" || direction === "s")) {
+        result = -result;
+      } else if (coordType === "lon" && (direction === "W" || direction === "w")) {
+        result = -result;
+      }
+      
+      return result;
     }
     
-    return result;
+    throw new Error(`Invalid ${coordType} format: ${coord}. Use format like "10.7769N" or "10:49N" or "106.7009E" or "106:37E"`);
   }
 
   getNatalChart() {
