@@ -6,6 +6,9 @@ import NetworkView from './components/NetworkView';
 import MatrixView from './components/MatrixView';
 import PCAView from './components/PCAView';
 import PairsView from './components/PairsView';
+import iframeUtils from '@embed-tools/iframe-utils';
+
+const isEmbedded = iframeUtils.isEmbedded();
 
 const App = () => {
   const [currentView, setCurrentView] = useState('regime');
@@ -221,6 +224,16 @@ const App = () => {
       <div className="container mx-auto px-4 py-6">
         {renderCurrentView()}
       </div>
+
+      {/* Copyright Footer */}
+      {!isEmbedded && (
+        <footer className="text-center mt-12 mb-8 text-xs text-gray-500 max-w-4xl mx-auto px-4">
+          <p>
+            © {new Date().getFullYear()} <a href="https://taichinhchungkhoan.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-700">Taichinhchungkhoan.com</a>
+          </p>
+          <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
+        </footer>
+      )}
     </div>
   );
 };

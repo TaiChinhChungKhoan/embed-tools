@@ -204,7 +204,9 @@ const App = () => {
       
       {!isEmbedded && (
         <footer className="text-center mt-12 mb-8 text-xs text-gray-500 max-w-4xl mx-auto px-4">
-          <p>© 2025 Taichinhchungkhoan.com</p>
+          <p>
+            © {new Date().getFullYear()} <a href="https://taichinhchungkhoan.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-700">Taichinhchungkhoan.com</a>
+          </p>
           <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
           <p className="mt-2">Sử dụng thư viện astronomia cho tính toán thiên văn chính xác.</p>
           <p className="mt-2">
