@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "fetched_at": "2025-07-07T20:56:02.722027",
+    "source": "vnstock_data",
+    "data_type": "retail_sales_structured",
+    "period": "year",
+    "description": "Retail sales data grouped by time period, unit, and sector"
+  },
+  "data": [
+    {
+      "report_time": "2015",
+      "last_updated": "2015-12-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "percentage": {
+          "Tổng số": 9.3,
+          "Thương nghiệp": 10.2,
+          "Dịch vụ & du lịch": 7.0,
+          "Khách sạn nhà hàng": 5.7
+        },
+        "cash": {
+          "Dịch vụ & du lịch": 400741.9,
+          "Khách sạn nhà hàng": 372244.7,
+          "Thương nghiệp": 2469879.6,
+          "Tổng số": 3242866.2
+        }
+      }
+    },
+    {
+      "report_time": "2016",
+      "last_updated": "2017-12-14",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "percentage": {
+          "Tổng số": 10.7,
+          "Thương nghiệp": 11.0,
+          "Khách sạn nhà hàng": 10.6,
+          "Dịch vụ & du lịch": 9.0
+        },
+        "cash": {
+          "Tổng số": 3527366.1,
+          "Thương nghiệp": 2676450.2,
+          "Khách sạn nhà hàng": 413436.7,
+          "Dịch vụ & du lịch": 437479.2
+        }
+      }
+    },
+    {
+      "report_time": "2017",
+      "last_updated": "2018-01-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Khách sạn nhà hàng": 494654.6,
+          "Thương nghiệp": 2937317.2,
+          "Dịch vụ & du lịch": 502212.9,
+          "Tổng số": 3934184.7
+        },
+        "percentage": {
+          "Khách sạn nhà hàng": 11.85,
+          "Thương nghiệp": 10.89,
+          "Tổng số": 10.86,
+          "Dịch vụ & du lịch": 10.41
+        }
+      }
+    },
+    {
+      "report_time": "2018",
+      "last_updated": "2018-12-26",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ & du lịch": 550106.0,
+          "Thương nghiệp": 3306147.0,
+          "Tổng số": 4395704.0,
+          "Khách sạn nhà hàng": 539451.0
+        },
+        "percentage": {
+          "Khách sạn nhà hàng": 9.1,
+          "Thương nghiệp": 12.4,
+          "Tổng số": 11.7,
+          "Dịch vụ & du lịch": 14.1
+        }
+      }
+    },
+    {
+      "report_time": "2019",
+      "last_updated": "2019-12-26",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "percentage": {
+          "Tổng số": 11.8,
+          "Thương nghiệp": 12.7,
+          "Khách sạn nhà hàng": 9.8,
+          "Dịch vụ & du lịch": 12.1
+        },
+        "cash": {
+          "Tổng số": 4940403.0,
+          "Thương nghiệp": 3751335.0,
+          "Khách sạn nhà hàng": 586686.0,
+          "Dịch vụ & du lịch": 602382.0
+        }
+      }
+    },
+    {
+      "report_time": "2020",
+      "last_updated": "2020-12-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "percentage": {
+          "Tổng số": 2.6,
+          "Khách sạn nhà hàng": -13.0,
+          "Dịch vụ & du lịch": -59.5,
+          "Thương nghiệp": 6.8
+        },
+        "cash": {
+          "Tổng số": 5059846.0,
+          "Thương nghiệp": 3996885.0,
+          "Khách sạn nhà hàng": 510402.0,
+          "Dịch vụ & du lịch": 552559.0
+        }
+      }
+    },
+    {
+      "report_time": "2021",
+      "last_updated": "2021-12-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ & du lịch": 440651.0,
+          "Khách sạn nhà hàng": 397950.0,
+          "Thương nghiệp": 3950894.0,
+          "Tổng số": 4789495.0
+        },
+        "percentage": {
+          "Khách sạn nhà hàng": -19.3,
+          "Thương nghiệp": 0.2,
+          "Tổng số": -3.8
+        }
+      }
+    },
+    {
+      "report_time": "2022",
+      "last_updated": "2022-12-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ & du lịch": 625337.0,
+          "Khách sạn nhà hàng": 578684.0,
+          "Tổng số": 5679876.0,
+          "Thương nghiệp": 4475855.0
+        },
+        "percentage": {
+          "Khách sạn nhà hàng": 52.5,
+          "Thương nghiệp": 14.4,
+          "Tổng số": 19.8
+        }
+      }
+    },
+    {
+      "report_time": "2023",
+      "last_updated": "2024-12-06",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ & du lịch": 699686.0,
+          "Thương nghiệp": 4858616.0,
+          "Tổng số": 6231828.0,
+          "Khách sạn nhà hàng": 673526.0
+        },
+        "percentage": {
+          "Khách sạn nhà hàng": 14.71,
+          "Thương nghiệp": 8.58,
+          "Tổng số": 9.6
+        }
+      }
+    },
+    {
+      "report_time": "2024",
+      "last_updated": "2025-01-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "percentage": {
+          "Tổng số": 8.96,
+          "Thương nghiệp": 8.31,
+          "Khách sạn nhà hàng": 12.95
+        },
+        "cash": {
+          "Tổng số": 6391003.0,
+          "Thương nghiệp": 4921698.0,
+          "Khách sạn nhà hàng": 733920.0,
+          "Dịch vụ & du lịch": 735385.0
+        }
+      }
+    }
+  ]
+}
