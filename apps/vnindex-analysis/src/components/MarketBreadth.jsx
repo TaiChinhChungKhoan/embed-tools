@@ -203,7 +203,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                     </p>
                     <button
                         onClick={refresh}
-                        className="inline-flex items-center px-3 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600 transition-colors"
+                        className="inline-flex items-center px-3 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600 transition-colors cursor-pointer"
                     >
                         <RefreshCw className="w-3 h-3 mr-1" />
                         Thử lại
@@ -256,7 +256,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                     )}
                     <button
                         onClick={refresh}
-                        className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                        className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
                         title="Làm mới dữ liệu"
                     >
                         <RefreshCw className="w-3 h-3" />

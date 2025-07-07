@@ -23,14 +23,14 @@ const CacheStatus = () => {
                 <div className="flex items-center space-x-2">
                     <button
                         onClick={updateStats}
-                        className="p-1 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+                        className="p-1 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors cursor-pointer"
                         title="Cập nhật thống kê"
                     >
                         <RefreshCw className="w-4 h-4" />
                     </button>
                     <button
                         onClick={handleClearCache}
-                        className="p-1 text-red-500 hover:text-red-700 transition-colors"
+                        className="p-1 text-red-500 hover:text-red-700 transition-colors cursor-pointer"
                         title="Xóa tất cả cache"
                     >
                         <Trash2 className="w-4 h-4" />

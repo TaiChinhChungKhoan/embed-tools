@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import './App.css';
 import MarketOverview from './components/MarketOverview';
@@ -10,6 +10,7 @@ import TickerRSAnalysis from './components/TickerRSAnalysis';
 import RRGAnalysis from './components/RRGAnalysis';
 import ValuationReport from './components/ValuationReport';
 import MarketOverviewReport from './components/MarketOverviewReport';
+import iframeUtils from '@embed-tools/iframe-utils';
 
 export default function App() {
     const [activeTab, setActiveTab] = useState('Market');
@@ -17,6 +18,8 @@ export default function App() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeReport, setActiveReport] = useState('rs_analysis');
     const [isReportDropdownOpen, setIsReportDropdownOpen] = useState(false);
+    const containerRef = useRef(null);
+    const isEmbedded = iframeUtils.isEmbedded();
 
     const tabs = ['Market', 'Industries', 'Tickers'];
     const subTabs = ['Overview', 'Reports'];
@@ -74,8 +77,20 @@ export default function App() {
         'Reports': 'Báo cáo'
     };
 
+    // Notify parent when state changes (activeTab, activeSubTab, etc.)
+    useEffect(() => {
+        if (!isEmbedded) return;
+        const timer = setTimeout(() => {
+            if (containerRef.current) {
+                const { width, height } = containerRef.current.getBoundingClientRect();
+                iframeUtils.sendResizeMessage(width, height);
+            }
+        }, 100);
+        return () => clearTimeout(timer);
+    }, [activeTab, activeSubTab, activeReport, isMobileMenuOpen, isEmbedded]);
+
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans" ref={containerRef}>
             {/* Header */}
             <header className="bg-white dark:bg-gray-800/90 backdrop-blur-sm sticky top-0 z-30 border-b border-gray-200 dark:border-gray-700">
                 <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +100,7 @@ export default function App() {
                                 <line x1="12" y1="1" x2="12" y2="23"></line>
                                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                             </svg>
-                            <span className="ml-2 text-xl font-bold">Phân tích VN-Index</span>
+                            {!isEmbedded && <span className="ml-2 text-xl font-bold">Phân tích VN-Index</span>}
                         </div>
                         <nav className="hidden md:flex items-center space-x-2">
                             {tabs.map(tab => (
@@ -143,12 +158,7 @@ export default function App() {
                                                 <div key={subTab} className="relative">
                                                     <button
                                                         onClick={() => {
-                                                            if (activeSubTab === 'Reports') {
-                                                                setIsReportDropdownOpen((open) => !open);
-                                                            } else {
-                                                                setActiveSubTab('Reports');
-                                                                setIsReportDropdownOpen(true);
-                                                            }
+                                                            setIsReportDropdownOpen((open) => !open);
                                                         }}
                                                         className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer flex items-center space-x-2 ${
                                                             activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
@@ -159,17 +169,18 @@ export default function App() {
                                                         <span>{subTabTranslations[subTab]}</span>
                                                         <ChevronDown size={16} className={`transition-transform ${isReportDropdownOpen ? 'rotate-180' : ''}`} />
                                                     </button>
-                                                    {isReportDropdownOpen && activeSubTab === 'Reports' && (
+                                                    {isReportDropdownOpen && (
                                                         <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50">
                                                             <div className="py-2">
                                                                 {currentReportOptions.map((report) => (
                                                                     <button
                                                                         key={report.id}
-                                                                        onClick={() => {
-                                                                            handleReportSelect(report.id);
-                                                                            setIsReportDropdownOpen(false);
-                                                                        }}
-                                                                        className={`w-full text-left px-4 py-3 transition-colors ${
+                                                                                                                                onClick={() => {
+                                                            handleReportSelect(report.id);
+                                                            setActiveSubTab('Reports');
+                                                            setIsReportDropdownOpen(false);
+                                                        }}
+                                                                        className={`w-full text-left px-4 py-3 transition-colors cursor-pointer ${
                                                                             activeReport === report.id
                                                                                 ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 font-semibold'
                                                                                 : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'
@@ -261,6 +272,19 @@ export default function App() {
                     className="fixed inset-0 z-40" 
                     onClick={() => setIsReportDropdownOpen(false)}
                 />
+            )}
+
+            {!isEmbedded && (
+                <footer className="text-center mt-8 text-xs text-gray-500">
+                    <p>© 2025 Taichinhchungkhoan.com</p>
+                    <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
+                    <p className="mt-2">Sử dụng dữ liệu từ Wichart.vn và Investing.com</p>
+                    <p className="mt-2">
+                        <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục.
+                        Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
+                        Luôn tham khảo ý kiến chuyên gia tài chính trước khi ra quyết định.
+                    </p>
+                </footer>
             )}
         </div>
     );

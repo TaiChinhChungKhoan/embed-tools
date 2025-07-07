@@ -220,7 +220,7 @@ const SignalInterpretationGuide = ({ variant = 'stock' }) => {
                             <Card key={signal.key} className="p-4">
                                 <button
                                     onClick={() => toggleSection(signal.key)}
-                                    className="w-full flex items-center justify-between text-left"
+                                    className="w-full flex items-center justify-between text-left cursor-pointer"
                                 >
                                     <h4 className="font-semibold text-gray-900 dark:text-gray-100">
                                         {signal.name}
