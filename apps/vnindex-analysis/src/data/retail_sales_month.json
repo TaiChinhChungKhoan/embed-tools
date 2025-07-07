@@ -1,0 +1,1677 @@
+{
+  "metadata": {
+    "fetched_at": "2025-07-07T20:56:02.513204",
+    "source": "vnstock_data",
+    "data_type": "retail_sales_structured",
+    "period": "month",
+    "description": "Retail sales data grouped by time period, unit, and sector"
+  },
+  "data": [
+    {
+      "report_time": "2015-01-31",
+      "last_updated": "2015-01-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 275454.2,
+          "Dịch vụ": 30761.3,
+          "Thương nghiệp": 211431.4,
+          "Khách sạn nhà hàng": 31023.5,
+          "Du lịch": 2238.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-02-28",
+      "last_updated": "2015-03-01",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Thương nghiệp": 210875.2,
+          "Khách sạn nhà hàng": 32465.4,
+          "Du lịch": 2260.7,
+          "Dịch vụ": 30623.7,
+          "Tổng": 276225.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-03-31",
+      "last_updated": "2015-06-09",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 253500.0,
+          "Thương nghiệp": 195900.0,
+          "Khách sạn nhà hàng": 26300.0,
+          "Du lịch": 2000.0,
+          "Dịch vụ": 29300.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-04-30",
+      "last_updated": "2015-06-09",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 255600.0,
+          "Thương nghiệp": 196800.0,
+          "Khách sạn nhà hàng": 26800.0,
+          "Du lịch": 2000.0,
+          "Dịch vụ": 30000.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-05-31",
+      "last_updated": "2015-06-09",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 2100.0,
+          "Dịch vụ": 30000.0,
+          "Thương nghiệp": 199100.0,
+          "Tổng": 260500.0,
+          "Khách sạn nhà hàng": 29200.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-06-30",
+      "last_updated": "2015-08-03",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 266700.0,
+          "Thương nghiệp": 200300.0,
+          "Khách sạn nhà hàng": 32900.0,
+          "Du lịch": 2700.0,
+          "Dịch vụ": 30700.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-07-31",
+      "last_updated": "2015-08-03",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 30200.0,
+          "Du lịch": 2800.0,
+          "Khách sạn nhà hàng": 34000.0,
+          "Tổng": 271800.0,
+          "Thương nghiệp": 204800.0
+        }
+      }
+    },
+    {
+      "report_time": "2015-08-31",
+      "last_updated": "2015-08-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 271680.4,
+          "Thương nghiệp": 207102.3,
+          "Khách sạn nhà hàng": 32404.1,
+          "Du lịch": 2789.7,
+          "Dịch vụ": 29384.3
+        }
+      }
+    },
+    {
+      "report_time": "2015-09-30",
+      "last_updated": "2015-10-01",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 29876.6,
+          "Du lịch": 2656.2,
+          "Thương nghiệp": 207886.8,
+          "Tổng": 270588.3,
+          "Khách sạn nhà hàng": 30168.7
+        }
+      }
+    },
+    {
+      "report_time": "2015-10-31",
+      "last_updated": "2015-11-06",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 274752.7,
+          "Thương nghiệp": 211015.7,
+          "Khách sạn nhà hàng": 30593.6,
+          "Du lịch": 2763.0,
+          "Dịch vụ": 30380.4
+        }
+      }
+    },
+    {
+      "report_time": "2015-11-30",
+      "last_updated": "2015-11-26",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 31985.9,
+          "Du lịch": 2516.4,
+          "Thương nghiệp": 217836.3,
+          "Tổng": 282055.8,
+          "Khách sạn nhà hàng": 29717.2
+        }
+      }
+    },
+    {
+      "report_time": "2015-12-31",
+      "last_updated": "2015-12-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 294748.4,
+          "Thương nghiệp": 224819.1,
+          "Khách sạn nhà hàng": 32953.2,
+          "Du lịch": 2594.3,
+          "Dịch vụ": 34381.8
+        }
+      }
+    },
+    {
+      "report_time": "2016-01-31",
+      "last_updated": "2016-03-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 33847.0,
+          "Du lịch": 2248.8,
+          "Tổng": 297729.5,
+          "Thương nghiệp": 226577.7,
+          "Khách sạn nhà hàng": 35056.5
+        }
+      }
+    },
+    {
+      "report_time": "2016-02-29",
+      "last_updated": "2016-02-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 287961.8,
+          "Thương nghiệp": 218759.9,
+          "Khách sạn nhà hàng": 33747.2,
+          "Du lịch": 2361.5,
+          "Dịch vụ": 33093.2
+        }
+      }
+    },
+    {
+      "report_time": "2016-03-31",
+      "last_updated": "2016-03-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 275435.4,
+          "Thương nghiệp": 212562.0,
+          "Khách sạn nhà hàng": 29011.1,
+          "Du lịch": 2102.6,
+          "Dịch vụ": 31759.7
+        }
+      }
+    },
+    {
+      "report_time": "2016-04-30",
+      "last_updated": "2016-04-26",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Khách sạn nhà hàng": 29956.9,
+          "Dịch vụ": 32984.5,
+          "Du lịch": 2213.0,
+          "Tổng": 279806.5,
+          "Thương nghiệp": 214652.1
+        }
+      }
+    },
+    {
+      "report_time": "2016-05-31",
+      "last_updated": "2016-05-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 286156.7,
+          "Thương nghiệp": 218867.4,
+          "Khách sạn nhà hàng": 31352.7,
+          "Du lịch": 2551.4,
+          "Dịch vụ": 33385.2
+        }
+      }
+    },
+    {
+      "report_time": "2016-06-30",
+      "last_updated": "2016-07-06",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 34021.8,
+          "Du lịch": 3266.5,
+          "Khách sạn nhà hàng": 35938.4,
+          "Thương nghiệp": 222596.7,
+          "Tổng": 295823.4
+        }
+      }
+    },
+    {
+      "report_time": "2016-07-31",
+      "last_updated": "2016-07-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 295690.8,
+          "Thương nghiệp": 222500.1,
+          "Khách sạn nhà hàng": 35856.3,
+          "Du lịch": 3353.2,
+          "Dịch vụ": 33981.2
+        }
+      }
+    },
+    {
+      "report_time": "2016-08-31",
+      "last_updated": "2016-09-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 32360.3,
+          "Du lịch": 2963.1,
+          "Khách sạn nhà hàng": 33858.8,
+          "Thương nghiệp": 223638.8,
+          "Tổng": 292821.0
+        }
+      }
+    },
+    {
+      "report_time": "2016-09-30",
+      "last_updated": "2016-09-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 296150.3,
+          "Thương nghiệp": 225367.2,
+          "Khách sạn nhà hàng": 35033.2,
+          "Du lịch": 2827.4,
+          "Dịch vụ": 32922.5
+        }
+      }
+    },
+    {
+      "report_time": "2016-10-31",
+      "last_updated": "2016-10-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 33682.8,
+          "Du lịch": 2696.9,
+          "Thương nghiệp": 223143.8,
+          "Tổng": 295349.9,
+          "Khách sạn nhà hàng": 35826.4
+        }
+      }
+    },
+    {
+      "report_time": "2016-11-30",
+      "last_updated": "2016-11-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 302924.0,
+          "Thương nghiệp": 227427.4,
+          "Khách sạn nhà hàng": 37304.3,
+          "Du lịch": 3398.4,
+          "Dịch vụ": 34793.9
+        }
+      }
+    },
+    {
+      "report_time": "2016-12-31",
+      "last_updated": "2017-01-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 36164.1,
+          "Du lịch": 3292.2,
+          "Tổng": 320312.1,
+          "Thương nghiệp": 241941.8,
+          "Khách sạn nhà hàng": 38914.0
+        }
+      }
+    },
+    {
+      "report_time": "2017-01-31",
+      "last_updated": "2017-02-20",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 330296.9,
+          "Thương nghiệp": 252712.9,
+          "Khách sạn nhà hàng": 37321.5,
+          "Du lịch": 3338.4,
+          "Dịch vụ": 36924.1
+        }
+      }
+    },
+    {
+      "report_time": "2017-02-28",
+      "last_updated": "2017-02-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 34940.1,
+          "Du lịch": 2535.5,
+          "Thương nghiệp": 234085.6,
+          "Tổng": 309284.3,
+          "Khách sạn nhà hàng": 37723.1
+        }
+      }
+    },
+    {
+      "report_time": "2017-03-31",
+      "last_updated": "2017-05-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 312459.6,
+          "Thương nghiệp": 235073.5,
+          "Khách sạn nhà hàng": 38185.7,
+          "Du lịch": 2164.2,
+          "Dịch vụ": 37036.2
+        }
+      }
+    },
+    {
+      "report_time": "2017-04-30",
+      "last_updated": "2017-05-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 38410.2,
+          "Du lịch": 2459.4,
+          "Tổng": 317503.1,
+          "Thương nghiệp": 237470.0,
+          "Khách sạn nhà hàng": 39163.5
+        }
+      }
+    },
+    {
+      "report_time": "2017-05-31",
+      "last_updated": "2017-05-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 323539.9,
+          "Thương nghiệp": 242909.4,
+          "Khách sạn nhà hàng": 38909.7,
+          "Du lịch": 2767.2,
+          "Dịch vụ": 38953.6
+        }
+      }
+    },
+    {
+      "report_time": "2017-06-30",
+      "last_updated": "2017-06-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 326624.8,
+          "Thương nghiệp": 243484.6,
+          "Khách sạn nhà hàng": 41373.2,
+          "Du lịch": 3013.4,
+          "Dịch vụ": 38753.6
+        }
+      }
+    },
+    {
+      "report_time": "2017-07-31",
+      "last_updated": "2017-07-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 38401.9,
+          "Du lịch": 3358.4,
+          "Khách sạn nhà hàng": 41510.1,
+          "Tổng": 327602.1,
+          "Thương nghiệp": 244331.6
+        }
+      }
+    },
+    {
+      "report_time": "2017-08-31",
+      "last_updated": "2017-08-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Thương nghiệp": 249014.9,
+          "Khách sạn nhà hàng": 39045.7,
+          "Du lịch": 3270.0,
+          "Dịch vụ": 38682.6,
+          "Tổng": 330013.3
+        }
+      }
+    },
+    {
+      "report_time": "2017-09-30",
+      "last_updated": "2017-10-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 336584.6,
+          "Thương nghiệp": 251107.0,
+          "Khách sạn nhà hàng": 42675.9,
+          "Du lịch": 3692.7,
+          "Dịch vụ": 39109.0
+        }
+      }
+    },
+    {
+      "report_time": "2017-10-31",
+      "last_updated": "2017-10-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 340889.5,
+          "Thương nghiệp": 253775.0,
+          "Khách sạn nhà hàng": 44085.9,
+          "Du lịch": 3331.6,
+          "Dịch vụ": 39697.0
+        }
+      }
+    },
+    {
+      "report_time": "2017-11-30",
+      "last_updated": "2017-11-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 3476.0,
+          "Dịch vụ": 41220.0,
+          "Thương nghiệp": 258321.0,
+          "Tổng": 344809.0,
+          "Khách sạn nhà hàng": 41792.0
+        }
+      }
+    },
+    {
+      "report_time": "2017-12-31",
+      "last_updated": "2018-01-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 352368.1,
+          "Thương nghiệp": 258943.4,
+          "Khách sạn nhà hàng": 47908.5,
+          "Du lịch": 3618.5,
+          "Dịch vụ": 41897.7
+        }
+      }
+    },
+    {
+      "report_time": "2018-02-28",
+      "last_updated": "2018-02-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 350441.0,
+          "Thương nghiệp": 266872.0,
+          "Khách sạn nhà hàng": 40962.0,
+          "Du lịch": 3503.0,
+          "Dịch vụ": 39104.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-03-31",
+      "last_updated": "2018-04-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 37975.0,
+          "Du lịch": 2769.0,
+          "Thương nghiệp": 259540.0,
+          "Tổng": 343786.0,
+          "Khách sạn nhà hàng": 43502.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-04-30",
+      "last_updated": "2018-05-01",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 350541.0,
+          "Thương nghiệp": 265845.0,
+          "Khách sạn nhà hàng": 43830.0,
+          "Du lịch": 2762.0,
+          "Dịch vụ": 38104.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-05-31",
+      "last_updated": "2018-05-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 40920.0,
+          "Du lịch": 3217.0,
+          "Thương nghiệp": 266993.0,
+          "Tổng": 354049.0,
+          "Khách sạn nhà hàng": 42919.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-06-30",
+      "last_updated": "2018-07-01",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 364534.0,
+          "Thương nghiệp": 272262.0,
+          "Khách sạn nhà hàng": 44900.0,
+          "Du lịch": 3446.0,
+          "Dịch vụ": 43926.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-07-31",
+      "last_updated": "2018-11-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 45010.0,
+          "Du lịch": 3501.0,
+          "Tổng": 371451.0,
+          "Thương nghiệp": 277107.0,
+          "Khách sạn nhà hàng": 45833.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-08-31",
+      "last_updated": "2018-11-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 370026.0,
+          "Thương nghiệp": 277160.0,
+          "Khách sạn nhà hàng": 45142.0,
+          "Du lịch": 3585.0,
+          "Dịch vụ": 44139.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-09-30",
+      "last_updated": "2018-11-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 374758.0,
+          "Thương nghiệp": 282983.0,
+          "Khách sạn nhà hàng": 44528.0,
+          "Du lịch": 3415.0,
+          "Dịch vụ": 43832.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-10-31",
+      "last_updated": "2018-11-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 44076.0,
+          "Du lịch": 3272.0,
+          "Khách sạn nhà hàng": 44324.0,
+          "Tổng": 378627.0,
+          "Thương nghiệp": 286955.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-11-30",
+      "last_updated": "2018-11-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 385017.0,
+          "Thương nghiệp": 288634.0,
+          "Khách sạn nhà hàng": 46952.0,
+          "Du lịch": 3409.0,
+          "Dịch vụ": 46022.0
+        }
+      }
+    },
+    {
+      "report_time": "2018-12-31",
+      "last_updated": "2018-12-26",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 44372.0,
+          "Du lịch": 3734.0,
+          "Thương nghiệp": 296553.0,
+          "Tổng": 394526.0,
+          "Khách sạn nhà hàng": 49867.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-01-31",
+      "last_updated": "2019-10-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 402230.0,
+          "Thương nghiệp": 305373.0,
+          "Khách sạn nhà hàng": 49499.0,
+          "Du lịch": 4327.0,
+          "Dịch vụ": 43031.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-02-28",
+      "last_updated": "2019-02-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 40675.0,
+          "Du lịch": 3948.0,
+          "Tổng": 390821.0,
+          "Thương nghiệp": 301383.0,
+          "Khách sạn nhà hàng": 44815.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-03-31",
+      "last_updated": "2019-03-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 392190.0,
+          "Thương nghiệp": 301021.0,
+          "Khách sạn nhà hàng": 46675.0,
+          "Du lịch": 3509.0,
+          "Dịch vụ": 40985.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-04-30",
+      "last_updated": "2019-05-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 399961.0,
+          "Thương nghiệp": 306560.0,
+          "Khách sạn nhà hàng": 47726.0,
+          "Du lịch": 3601.0,
+          "Dịch vụ": 42074.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-05-31",
+      "last_updated": "2019-05-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 3556.0,
+          "Dịch vụ": 44679.0,
+          "Thương nghiệp": 306864.0,
+          "Tổng": 403827.0,
+          "Khách sạn nhà hàng": 48728.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-06-30",
+      "last_updated": "2019-06-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 409775.0,
+          "Thương nghiệp": 308479.0,
+          "Khách sạn nhà hàng": 50391.0,
+          "Du lịch": 3865.0,
+          "Dịch vụ": 47040.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-07-31",
+      "last_updated": "2019-07-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 48007.0,
+          "Du lịch": 3928.0,
+          "Khách sạn nhà hàng": 50939.0,
+          "Tổng": 415113.0,
+          "Thương nghiệp": 312239.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-08-31",
+      "last_updated": "2019-08-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 414402.0,
+          "Thương nghiệp": 313565.0,
+          "Khách sạn nhà hàng": 49027.0,
+          "Du lịch": 3854.0,
+          "Dịch vụ": 47956.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-09-30",
+      "last_updated": "2019-09-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 48833.0,
+          "Du lịch": 3821.0,
+          "Thương nghiệp": 318831.0,
+          "Tổng": 420343.0,
+          "Khách sạn nhà hàng": 48858.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-10-31",
+      "last_updated": "2019-10-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 425670.0,
+          "Thương nghiệp": 322731.0,
+          "Khách sạn nhà hàng": 49050.0,
+          "Du lịch": 3903.0,
+          "Dịch vụ": 49986.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-11-30",
+      "last_updated": "2019-11-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 50462.0,
+          "Du lịch": 4077.0,
+          "Khách sạn nhà hàng": 49942.0,
+          "Tổng": 425516.0,
+          "Thương nghiệp": 321035.0
+        }
+      }
+    },
+    {
+      "report_time": "2019-12-31",
+      "last_updated": "2019-12-26",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 433230.0,
+          "Thương nghiệp": 325782.0,
+          "Khách sạn nhà hàng": 52129.0,
+          "Du lịch": 4338.0,
+          "Dịch vụ": 50981.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-01-31",
+      "last_updated": "2020-01-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 448052.0,
+          "Khách sạn nhà hàng": 50614.0,
+          "Dịch vụ": 47085.0,
+          "Thương nghiệp": 346209.0,
+          "Du lịch": 4144.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-02-29",
+      "last_updated": "2020-02-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 414073.0,
+          "Thương nghiệp": 325221.0,
+          "Khách sạn nhà hàng": 44172.0,
+          "Du lịch": 3279.0,
+          "Dịch vụ": 41401.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-03-31",
+      "last_updated": "2020-03-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 38660.0,
+          "Du lịch": 1293.0,
+          "Thương nghiệp": 316114.0,
+          "Tổng": 389953.0,
+          "Khách sạn nhà hàng": 33886.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-04-30",
+      "last_updated": "2020-04-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 293943.0,
+          "Thương nghiệp": 257393.0,
+          "Khách sạn nhà hàng": 16807.0,
+          "Du lịch": 88.0,
+          "Dịch vụ": 19655.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-05-31",
+      "last_updated": "2020-05-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 40834.0,
+          "Du lịch": 450.0,
+          "Tổng": 384817.0,
+          "Thương nghiệp": 311082.0,
+          "Khách sạn nhà hàng": 32451.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-06-30",
+      "last_updated": "2020-06-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 431026.0,
+          "Thương nghiệp": 336585.0,
+          "Khách sạn nhà hàng": 46083.0,
+          "Du lịch": 1906.0,
+          "Dịch vụ": 46452.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-07-31",
+      "last_updated": "2020-07-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 431877.0,
+          "Thương nghiệp": 333761.0,
+          "Khách sạn nhà hàng": 48163.0,
+          "Du lịch": 1551.0,
+          "Dịch vụ": 48402.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-08-31",
+      "last_updated": "2020-08-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 974.0,
+          "Dịch vụ": 46258.0,
+          "Thương nghiệp": 334331.0,
+          "Khách sạn nhà hàng": 41311.0,
+          "Tổng": 422874.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-09-30",
+      "last_updated": "2020-09-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 46983.0,
+          "Du lịch": 1123.0,
+          "Thương nghiệp": 348102.0,
+          "Tổng": 441450.0,
+          "Khách sạn nhà hàng": 45242.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-10-31",
+      "last_updated": "2020-10-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 450755.0,
+          "Thương nghiệp": 356543.0,
+          "Khách sạn nhà hàng": 44804.0,
+          "Du lịch": 1158.0,
+          "Dịch vụ": 48250.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-11-30",
+      "last_updated": "2020-11-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 464386.0,
+          "Thương nghiệp": 365719.0,
+          "Khách sạn nhà hàng": 47401.0,
+          "Du lịch": 1238.0,
+          "Dịch vụ": 50028.0
+        }
+      }
+    },
+    {
+      "report_time": "2020-12-31",
+      "last_updated": "2020-12-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 51734.0,
+          "Du lịch": 1297.0,
+          "Khách sạn nhà hàng": 49137.0,
+          "Thương nghiệp": 369879.0,
+          "Tổng": 472047.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-01-31",
+      "last_updated": "2021-01-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 50756.0,
+          "Du lịch": 1569.0,
+          "Tổng": 479944.0,
+          "Thương nghiệp": 378918.0,
+          "Khách sạn nhà hàng": 48701.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-02-28",
+      "last_updated": "2021-02-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 439656.0,
+          "Thương nghiệp": 354542.0,
+          "Khách sạn nhà hàng": 41492.0,
+          "Dịch vụ": 42707.0,
+          "Du lịch": 915.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-03-31",
+      "last_updated": "2021-03-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 405124.0,
+          "Thương nghiệp": 322790.0,
+          "Khách sạn nhà hàng": 40210.0,
+          "Du lịch": 845.0,
+          "Dịch vụ": 41279.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-04-30",
+      "last_updated": "2021-05-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 900.0,
+          "Dịch vụ": 42820.0,
+          "Khách sạn nhà hàng": 41492.0,
+          "Tổng": 409419.0,
+          "Thương nghiệp": 324207.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-05-31",
+      "last_updated": "2021-05-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 393554.0,
+          "Thương nghiệp": 318178.0,
+          "Khách sạn nhà hàng": 34322.0,
+          "Du lịch": 387.0,
+          "Dịch vụ": 40667.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-06-30",
+      "last_updated": "2021-06-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 36615.0,
+          "Du lịch": 183.0,
+          "Khách sạn nhà hàng": 28929.0,
+          "Tổng": 381858.0,
+          "Thương nghiệp": 316131.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-07-31",
+      "last_updated": "2021-08-01",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 339362.0,
+          "Thương nghiệp": 291774.0,
+          "Khách sạn nhà hàng": 21186.0,
+          "Du lịch": 133.0,
+          "Dịch vụ": 26269.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-08-31",
+      "last_updated": "2021-08-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 16356.0,
+          "Du lịch": 20.0,
+          "Tổng": 279843.0,
+          "Thương nghiệp": 249939.0,
+          "Khách sạn nhà hàng": 13528.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-09-30",
+      "last_updated": "2021-09-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 308802.0,
+          "Thương nghiệp": 270797.0,
+          "Khách sạn nhà hàng": 19425.0,
+          "Du lịch": 76.0,
+          "Dịch vụ": 18504.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-10-31",
+      "last_updated": "2021-10-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 25227.0,
+          "Du lịch": 379.0,
+          "Khách sạn nhà hàng": 27612.0,
+          "Tổng": 357923.0,
+          "Thương nghiệp": 304705.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-11-30",
+      "last_updated": "2021-11-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 397070.0,
+          "Thương nghiệp": 336117.0,
+          "Khách sạn nhà hàng": 30189.0,
+          "Du lịch": 472.0,
+          "Dịch vụ": 30292.0
+        }
+      }
+    },
+    {
+      "report_time": "2021-12-31",
+      "last_updated": "2021-12-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 45107.0,
+          "Du lịch": 856.0,
+          "Tổng": 458455.0,
+          "Thương nghiệp": 371724.0,
+          "Khách sạn nhà hàng": 40768.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-01-31",
+      "last_updated": "2022-02-07",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 470683.0,
+          "Thương nghiệp": 383532.0,
+          "Khách sạn nhà hàng": 41274.0,
+          "Du lịch": 993.0,
+          "Dịch vụ": 44884.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-02-28",
+      "last_updated": "2022-02-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 40448.0,
+          "Du lịch": 999.0,
+          "Thương nghiệp": 338878.0,
+          "Tổng": 421833.0,
+          "Khách sạn nhà hàng": 41508.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-03-31",
+      "last_updated": "2022-03-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 437992.0,
+          "Thương nghiệp": 352012.0,
+          "Khách sạn nhà hàng": 41517.0,
+          "Du lịch": 1066.0,
+          "Dịch vụ": 43397.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-04-30",
+      "last_updated": "2022-05-03",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 45179.0,
+          "Du lịch": 1241.0,
+          "Tổng": 455494.0,
+          "Thương nghiệp": 363586.0,
+          "Khách sạn nhà hàng": 45488.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-05-31",
+      "last_updated": "2022-05-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 477305.0,
+          "Thương nghiệp": 375367.0,
+          "Khách sạn nhà hàng": 55069.0,
+          "Du lịch": 1532.0,
+          "Dịch vụ": 45337.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-06-30",
+      "last_updated": "2022-06-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 471765.7,
+          "Thương nghiệp": 373555.7,
+          "Khách sạn nhà hàng": 49123.7,
+          "Du lịch": 2462.9,
+          "Dịch vụ": 46623.4
+        }
+      }
+    },
+    {
+      "report_time": "2022-07-31",
+      "last_updated": "2022-07-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 47422.4,
+          "Du lịch": 3217.3,
+          "Thương nghiệp": 381453.2,
+          "Tổng": 485984.4,
+          "Khách sạn nhà hàng": 53891.5
+        }
+      }
+    },
+    {
+      "report_time": "2022-08-31",
+      "last_updated": "2022-08-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Thương nghiệp": 376593.0,
+          "Khách sạn nhà hàng": 53473.5,
+          "Du lịch": 3302.8,
+          "Dịch vụ": 47855.6,
+          "Tổng": 481224.9
+        }
+      }
+    },
+    {
+      "report_time": "2022-09-30",
+      "last_updated": "2022-09-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 493092.0,
+          "Thương nghiệp": 379272.0,
+          "Khách sạn nhà hàng": 53642.0,
+          "Du lịch": 3033.0,
+          "Dịch vụ": 57145.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-10-31",
+      "last_updated": "2022-10-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 486365.0,
+          "Thương nghiệp": 379272.0,
+          "Khách sạn nhà hàng": 44438.0,
+          "Du lịch": 2140.0,
+          "Dịch vụ": 60515.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-11-30",
+      "last_updated": "2022-11-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 2465.0,
+          "Dịch vụ": 61206.0,
+          "Thương nghiệp": 397068.0,
+          "Tổng": 514106.0,
+          "Khách sạn nhà hàng": 53367.0
+        }
+      }
+    },
+    {
+      "report_time": "2022-12-31",
+      "last_updated": "2022-12-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 515822.0,
+          "Thương nghiệp": 404031.0,
+          "Khách sạn nhà hàng": 48851.0,
+          "Du lịch": 2050.0,
+          "Dịch vụ": 60890.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-01-31",
+      "last_updated": "2023-01-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 51243.0,
+          "Du lịch": 2161.0,
+          "Khách sạn nhà hàng": 55983.0,
+          "Tổng": 544829.0,
+          "Thương nghiệp": 435442.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-02-28",
+      "last_updated": "2023-02-27",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 481832.0,
+          "Thương nghiệp": 377448.0,
+          "Khách sạn nhà hàng": 53651.0,
+          "Du lịch": 2060.0,
+          "Dịch vụ": 48673.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-03-31",
+      "last_updated": "2023-03-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 50078.0,
+          "Du lịch": 2163.0,
+          "Thương nghiệp": 395651.0,
+          "Tổng": 501310.0,
+          "Khách sạn nhà hàng": 53418.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-04-30",
+      "last_updated": "2023-05-03",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 510704.6,
+          "Thương nghiệp": 401108.1,
+          "Khách sạn nhà hàng": 54855.7,
+          "Du lịch": 2308.5,
+          "Dịch vụ": 52432.2
+        }
+      }
+    },
+    {
+      "report_time": "2023-05-31",
+      "last_updated": "2023-05-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 52270.0,
+          "Du lịch": 2513.0,
+          "Thương nghiệp": 409339.0,
+          "Tổng": 519020.0,
+          "Khách sạn nhà hàng": 54898.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-06-30",
+      "last_updated": "2023-06-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 505651.0,
+          "Thương nghiệp": 396958.0,
+          "Khách sạn nhà hàng": 54571.0,
+          "Du lịch": 2793.0,
+          "Dịch vụ": 51328.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-07-31",
+      "last_updated": "2023-08-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 52543.0,
+          "Du lịch": 3620.0,
+          "Tổng": 512167.0,
+          "Thương nghiệp": 399669.0,
+          "Khách sạn nhà hàng": 56336.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-08-31",
+      "last_updated": "2023-09-03",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 515412.6,
+          "Thương nghiệp": 400030.0,
+          "Khách sạn nhà hàng": 58679.6,
+          "Du lịch": 3792.3,
+          "Dịch vụ": 52910.7
+        }
+      }
+    },
+    {
+      "report_time": "2023-09-30",
+      "last_updated": "2023-10-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 524595.0,
+          "Thương nghiệp": 402432.0,
+          "Khách sạn nhà hàng": 61123.0,
+          "Du lịch": 3973.0,
+          "Dịch vụ": 57067.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-10-31",
+      "last_updated": "2023-11-02",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 59967.0,
+          "Du lịch": 3752.0,
+          "Khách sạn nhà hàng": 59681.0,
+          "Tổng": 536326.0,
+          "Thương nghiệp": 412926.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-11-30",
+      "last_updated": "2023-11-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 552703.0,
+          "Thương nghiệp": 424981.0,
+          "Khách sạn nhà hàng": 60496.0,
+          "Du lịch": 3699.0,
+          "Dịch vụ": 63527.0
+        }
+      }
+    },
+    {
+      "report_time": "2023-12-31",
+      "last_updated": "2023-12-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 65375.0,
+          "Du lịch": 3614.0,
+          "Thương nghiệp": 437339.0,
+          "Tổng": 565786.0,
+          "Khách sạn nhà hàng": 59458.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-01-31",
+      "last_updated": "2024-01-31",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 524116.0,
+          "Thương nghiệp": 407542.0,
+          "Khách sạn nhà hàng": 58886.0,
+          "Du lịch": 4395.0,
+          "Dịch vụ": 53293.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-02-29",
+      "last_updated": "2024-02-29",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 51662.0,
+          "Du lịch": 4650.0,
+          "Tổng": 509701.0,
+          "Thương nghiệp": 393687.0,
+          "Khách sạn nhà hàng": 59702.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-03-31",
+      "last_updated": "2024-03-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 509325.3,
+          "Thương nghiệp": 392726.8,
+          "Khách sạn nhà hàng": 58309.2,
+          "Du lịch": 5078.7,
+          "Dịch vụ": 53210.6
+        }
+      }
+    },
+    {
+      "report_time": "2024-04-30",
+      "last_updated": "2024-05-15",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 522079.0,
+          "Thương nghiệp": 402559.0,
+          "Khách sạn nhà hàng": 61356.0,
+          "Du lịch": 5248.0,
+          "Dịch vụ": 52916.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-05-31",
+      "last_updated": "2024-05-30",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Du lịch": 4976.8,
+          "Dịch vụ": 51890.5,
+          "Thương nghiệp": 402373.8,
+          "Tổng": 519760.4,
+          "Khách sạn nhà hàng": 60519.3
+        }
+      }
+    },
+    {
+      "report_time": "2024-06-30",
+      "last_updated": "2024-06-28",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 522502.0,
+          "Thương nghiệp": 403764.0,
+          "Khách sạn nhà hàng": 60629.0,
+          "Du lịch": 5143.0,
+          "Dịch vụ": 52966.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-07-31",
+      "last_updated": "2024-08-12",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 54952.8,
+          "Du lịch": 5560.5,
+          "Khách sạn nhà hàng": 62233.9,
+          "Tổng": 528284.8,
+          "Thương nghiệp": 405537.6
+        }
+      }
+    },
+    {
+      "report_time": "2024-08-31",
+      "last_updated": "2024-09-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 526582.0,
+          "Thương nghiệp": 402265.0,
+          "Khách sạn nhà hàng": 62430.0,
+          "Du lịch": 5626.0,
+          "Dịch vụ": 56261.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-09-30",
+      "last_updated": "2024-10-06",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 57715.1,
+          "Du lịch": 5058.4,
+          "Thương nghiệp": 411272.2,
+          "Tổng": 535773.1,
+          "Khách sạn nhà hàng": 61727.4
+        }
+      }
+    },
+    {
+      "report_time": "2024-10-31",
+      "last_updated": "2024-11-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 545729.6,
+          "Thương nghiệp": 419530.4,
+          "Khách sạn nhà hàng": 61177.8,
+          "Du lịch": 4820.8,
+          "Dịch vụ": 60200.6
+        }
+      }
+    },
+    {
+      "report_time": "2024-11-30",
+      "last_updated": "2024-12-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Dịch vụ": 62319.0,
+          "Du lịch": 5607.0,
+          "Khách sạn nhà hàng": 63726.0,
+          "Tổng": 562003.0,
+          "Thương nghiệp": 430351.0
+        }
+      }
+    },
+    {
+      "report_time": "2024-12-31",
+      "last_updated": "2025-01-05",
+      "source": "Tổng cục thống kê",
+      "data": {
+        "cash": {
+          "Tổng": 570734.0,
+          "Thương nghiệp": 435747.0,
+          "Khách sạn nhà hàng": 65358.0,
+          "Du lịch": 5309.0,
+          "Dịch vụ": 64320.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+import { useState, useEffect, useCallback } from 'react';
+import dataLoader from '../utils/dataLoader';
+
+// Custom hook for data loading with caching
+export const useDataLoader = (dataType, options = {}) => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [lastUpdated, setLastUpdated] = useState(null);
+
+    const loadData = useCallback(async () => {
+        setLoading(true);
+        setError(null);
+
+        try {
+            let result;
+            
+            switch (dataType) {
+                case 'market_breadth':
+                    result = await dataLoader.loadMarketBreadth();
+                    break;
+                case 'market_breadth_4':
+                    result = await dataLoader.loadMarketBreadth4();
+                    break;
+                case 'industries':
+                    result = await dataLoader.loadIndustriesData();
+                    break;
+                case 'tickers':
+                    result = await dataLoader.loadTickersData();
+                    break;
+                case 'market_overview':
+                    result = await dataLoader.loadMarketOverviewData();
+                    break;
+                case 'abnormal_signals':
+                    result = await dataLoader.loadAbnormalSignalsData();
+                    break;
+                case 'rs_analysis':
+                    result = await dataLoader.loadRSAnalysisData();
+                    break;
+                default:
+                    throw new Error(`Unknown data type: ${dataType}`);
+            }
+
+            setData(result);
+            setLastUpdated(new Date());
+        } catch (err) {
+            setError(err.message);
+            console.error(`Error loading ${dataType} data:`, err);
+        } finally {
+            setLoading(false);
+        }
+    }, [dataType]);
+
+    const refreshData = useCallback(() => {
+        // Clear cache for this data type and reload
+        dataLoader.clearCache(dataType);
+        loadData();
+    }, [dataType, loadData]);
+
+    // Load data on mount and when dataType changes
+    useEffect(() => {
+        loadData();
+    }, [loadData]);
+
+    // Auto-refresh if refreshInterval is provided
+    useEffect(() => {
+        if (options.refreshInterval) {
+            const interval = setInterval(() => {
+                refreshData();
+            }, options.refreshInterval);
+
+            return () => clearInterval(interval);
+        }
+    }, [options.refreshInterval, refreshData]);
+
+    return {
+        data,
+        loading,
+        error,
+        lastUpdated,
+        refresh: refreshData,
+        reload: loadData
+    };
+};
+
+// Hook for loading multiple data types
+export const useMultiDataLoader = (dataTypes, options = {}) => {
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [lastUpdated, setLastUpdated] = useState(null);
+
+    const loadAllData = useCallback(async () => {
+        setLoading(true);
+        setError(null);
+
+        try {
+            const promises = dataTypes.map(async (dataType) => {
+                let result;
+                
+                switch (dataType) {
+                    case 'market_breadth':
+                        result = await dataLoader.loadMarketBreadth();
+                        break;
+                    case 'market_breadth_4':
+                        result = await dataLoader.loadMarketBreadth4();
+                        break;
+                    case 'industries':
+                        result = await dataLoader.loadIndustriesData();
+                        break;
+                    case 'tickers':
+                        result = await dataLoader.loadTickersData();
+                        break;
+                    case 'market_overview':
+                        result = await dataLoader.loadMarketOverviewData();
+                        break;
+                    case 'abnormal_signals':
+                        result = await dataLoader.loadAbnormalSignalsData();
+                        break;
+                    case 'rs_analysis':
+                        result = await dataLoader.loadRSAnalysisData();
+                        break;
+                    default:
+                        throw new Error(`Unknown data type: ${dataType}`);
+                }
+
+                return { [dataType]: result };
+            });
+
+            const results = await Promise.all(promises);
+            const combinedData = results.reduce((acc, result) => ({ ...acc, ...result }), {});
+            
+            setData(combinedData);
+            setLastUpdated(new Date());
+        } catch (err) {
+            setError(err.message);
+            console.error('Error loading multiple data types:', err);
+        } finally {
+            setLoading(false);
+        }
+    }, [dataTypes]);
+
+    const refreshData = useCallback(() => {
+        // Clear cache for all data types and reload
+        dataTypes.forEach(dataType => dataLoader.clearCache(dataType));
+        loadAllData();
+    }, [dataTypes, loadAllData]);
+
+    // Load data on mount and when dataTypes change
+    useEffect(() => {
+        loadAllData();
+    }, [loadAllData]);
+
+    // Auto-refresh if refreshInterval is provided
+    useEffect(() => {
+        if (options.refreshInterval) {
+            const interval = setInterval(() => {
+                refreshData();
+            }, options.refreshInterval);
+
+            return () => clearInterval(interval);
+        }
+    }, [options.refreshInterval, refreshData]);
+
+    return {
+        data,
+        loading,
+        error,
+        lastUpdated,
+        refresh: refreshData,
+        reload: loadAllData
+    };
+};
+
+// Hook for getting cache statistics
+export const useCacheStats = () => {
+    const [stats, setStats] = useState(dataLoader.getCacheStats());
+
+    const updateStats = useCallback(() => {
+        setStats(dataLoader.getCacheStats());
+    }, []);
+
+    const clearCache = useCallback((url = null) => {
+        dataLoader.clearCache(url);
+        updateStats();
+    }, [updateStats]);
+
+    return {
+        stats,
+        updateStats,
+        clearCache
+    };
+}; 

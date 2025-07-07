@@ -2,7 +2,6 @@ import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import TimelineChart from './components/TimelineChart';
 import TimelineList from './components/TimelineList';
 import UpcomingEvents from './components/UpcomingEvents';
-import EventFinder from './components/EventFinder';
 import InstrumentSelector from './components/InstrumentSelector';
 import DatePicker from './components/DatePicker';
 import TimePicker from './components/TimePicker';
@@ -233,23 +232,6 @@ const App = () => {
     if (!dateObj || isNaN(dateObj)) return;
     setFocusDate(dateObj);
   }, []);
-
-  // Event finder handler
-  const handleFindEvent = useCallback((eventType) => {
-    if (!events.length) return;
-    const now = new Date();
-    const nextEvent = events.find(e => {
-      if (!e.date) return false;
-      const eventDate = new Date(e.date);
-      return e.type === eventType && eventDate > now;
-    });
-    if (nextEvent && nextEvent.date) {
-      const dateObj = new Date(nextEvent.date);
-      if (!isNaN(dateObj)) setFocusDate(dateObj);
-    } else {
-      alert(`No upcoming ${eventType} events found in the analysis period.`);
-    }
-  }, [events]);
 
   // Notify parent when state changes (for iframe embedding)
   React.useEffect(() => {
