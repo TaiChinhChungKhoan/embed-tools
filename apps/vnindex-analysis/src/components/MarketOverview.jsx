@@ -62,6 +62,19 @@ const MarketOverview = () => {
                         valueClass={v => v < 0 ? 'text-red-500' : 'text-green-500'}
                     />
                     <TopListCard
+                        title="Giao dịch sôi động nhất"
+                        icon={<BarChart2 className="text-purple-500" />}
+                        data={byVolume.map(item => ({
+                            id: item.symbol,
+                            name: item.symbol,
+                            value: item.avg_volume_20d,
+                        }))}
+                        unit=""
+                        valueKey="value"
+                        nameKey="name"
+                        valueClass={() => 'text-green-500'}
+                    />
+                    <TopListCard
                         title="Ngành tăng tốt nhất"
                         icon={<TrendingUp className="text-green-500" />}
                         data={topIndustries.map(item => ({
@@ -86,20 +99,7 @@ const MarketOverview = () => {
                         valueKey="value"
                         nameKey="name"
                         valueClass={v => v < 0 ? 'text-red-500' : 'text-green-500'}
-                    />
-                    <TopListCard
-                        title="Giao dịch sôi động nhất"
-                        icon={<BarChart2 className="text-purple-500" />}
-                        data={byVolume.map(item => ({
-                            id: item.symbol,
-                            name: item.symbol,
-                            value: item.avg_volume_20d,
-                        }))}
-                        unit=""
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={() => 'text-green-500'}
-                    />
+                    />                    
                     <TopListCard
                         title="Nước ngoài mua ròng"
                         icon={<Globe className="text-blue-500" />}
