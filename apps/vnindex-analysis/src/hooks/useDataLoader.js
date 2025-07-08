@@ -79,8 +79,14 @@ export const useDataLoader = (dataType, options = {}) => {
                 case 'industry_strength_time_series':
                     result = await dataLoader.loadIndustryStrengthTimeSeriesData();
                     break;
-                case 'rs_analysis':
-                    result = await dataLoader.loadRSAnalysisData();
+                                    case 'rs_analysis':
+                        result = await dataLoader.loadRSAnalysisData();
+                        break;
+                    case 'vsa_market_analysis':
+                        result = await dataLoader.loadVSAMarketAnalysisData();
+                        break;
+                case 'vsa_market_analysis':
+                    result = await dataLoader.loadVSAMarketAnalysisData();
                     break;
                 default:
                     throw new Error(`Unknown data type: ${dataType}`);

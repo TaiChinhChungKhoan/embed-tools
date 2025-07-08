@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useDataLoader } from '../hooks/useDataLoader';
-import { TrendingUp, TrendingDown, Activity, BarChart3, Target, AlertTriangle, Search } from 'lucide-react';
+import { TrendingUp, TrendingDown, Activity, BarChart3, Target, AlertTriangle, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import Card from './Card';
 
 const TickerRSAnalysis = () => {
@@ -10,6 +10,68 @@ const TickerRSAnalysis = () => {
     const [industryFilter, setIndustryFilter] = useState('');
     const [trendFilter, setTrendFilter] = useState('');
     const [statusFilter, setStatusFilter] = useState('');
+    const [sortField, setSortField] = useState('current_crs');
+    const [sortDirection, setSortDirection] = useState('desc');
+
+    // Helper function to get sort value
+    const getSortValue = (symbol, field) => {
+        switch (field) {
+            case 'symbol':
+                return symbol.symbol;
+            case 'name':
+                return symbol.name;
+            case 'current_crs':
+                return symbol.metrics.current_crs;
+            case 'current_rs':
+                return symbol.metrics.current_rs;
+            case 'current_ma13':
+                return symbol.metrics.current_ma13;
+            case 'current_ma49':
+                return symbol.metrics.current_ma49;
+            case 'rs_trend':
+                return symbol.performance_summary.rs_trend;
+            case 'crs_status':
+                return symbol.performance_summary.crs_status;
+            default:
+                return 0;
+        }
+    };
+
+    // Filter and sort symbols - must be called before any conditional returns
+    const filteredAndSortedSymbols = useMemo(() => {
+        if (!data || !data.symbols) return [];
+        
+        let filtered = data.symbols.filter(symbol => {
+            const matchesSearch = searchTerm === '' || 
+                symbol.symbol.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                symbol.name.toLowerCase().includes(searchTerm.toLowerCase());
+            
+            const matchesIndustry = industryFilter === '' || 
+                symbol.industries?.some(industry => industry.name === industryFilter);
+            
+            const matchesTrend = trendFilter === '' || 
+                symbol.performance_summary.rs_trend === trendFilter;
+            
+            const matchesStatus = statusFilter === '' || 
+                symbol.performance_summary.crs_status === statusFilter;
+            
+            return matchesSearch && matchesIndustry && matchesTrend && matchesStatus;
+        });
+
+        // Sort data
+        filtered.sort((a, b) => {
+            const aValue = getSortValue(a, sortField);
+            const bValue = getSortValue(b, sortField);
+            
+            if (sortDirection === 'asc') {
+                return aValue > bValue ? 1 : -1;
+            } else {
+                return aValue < bValue ? 1 : -1;
+            }
+        });
+
+        return filtered;
+    }, [data, searchTerm, industryFilter, trendFilter, statusFilter, sortField, sortDirection]);
 
     if (loading) {
         return (
@@ -88,32 +150,29 @@ const TickerRSAnalysis = () => {
             .filter(Boolean)
     )].sort();
 
-    // Filter symbols based on all filters
-    const filteredSymbols = symbols.filter(symbol => {
-        const matchesSearch = searchTerm === '' || 
-            symbol.symbol.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            symbol.name.toLowerCase().includes(searchTerm.toLowerCase());
-        
-        const matchesIndustry = industryFilter === '' || 
-            symbol.industries?.some(industry => industry.name === industryFilter);
-        
-        const matchesTrend = trendFilter === '' || 
-            symbol.performance_summary.rs_trend === trendFilter;
-        
-        const matchesStatus = statusFilter === '' || 
-            symbol.performance_summary.crs_status === statusFilter;
-        
-        return matchesSearch && matchesIndustry && matchesTrend && matchesStatus;
-    });
+    // Handle sort
+    const handleSort = (field) => {
+        if (sortField === field) {
+            setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+        } else {
+            setSortField(field);
+            setSortDirection('desc');
+        }
+    };
 
-    // Sort symbols by strength score
-    const sortedSymbols = [...filteredSymbols].sort((a, b) => 
-        b.metrics.current_crs - a.metrics.current_crs
-    );
+    // Sort icon component
+    const SortIcon = ({ field }) => {
+        if (sortField !== field) {
+            return <ChevronDown className="h-4 w-4 text-gray-400" />;
+        }
+        return sortDirection === 'asc' 
+            ? <ChevronUp className="h-4 w-4 text-blue-500" />
+            : <ChevronDown className="h-4 w-4 text-blue-500" />;
+    };
 
     // Get top performers
-    const topPerformers = sortedSymbols.slice(0, 10);
-    const bottomPerformers = sortedSymbols.slice(-10).reverse();
+    const topPerformers = filteredAndSortedSymbols.slice(0, 10);
+    const bottomPerformers = filteredAndSortedSymbols.slice(-10).reverse();
 
     const sections = [
         { id: 'overview', name: 'Tổng quan', icon: BarChart3 },
@@ -391,7 +450,7 @@ const TickerRSAnalysis = () => {
                             Chi tiết tất cả mã chứng khoán
                         </h3>
                         <span className="text-sm text-gray-500 dark:text-gray-400">
-                            {filteredSymbols.length} / {symbols.length} mã
+                            {filteredAndSortedSymbols.length} / {symbols.length} mã
                         </span>
                     </div>
 
@@ -484,34 +543,82 @@ const TickerRSAnalysis = () => {
                         <table className="min-w-full bg-white dark:bg-gray-800 rounded-lg shadow-sm">
                             <thead className="bg-gray-50 dark:bg-gray-700">
                                 <tr>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        Mã
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('symbol')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Mã
+                                            <SortIcon field="symbol" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        Tên công ty
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('name')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Tên công ty
+                                            <SortIcon field="name" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        CRS
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('current_crs')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            CRS
+                                            <SortIcon field="current_crs" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        RS
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('current_rs')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            RS
+                                            <SortIcon field="current_rs" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        MA13
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('current_ma13')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            MA13
+                                            <SortIcon field="current_ma13" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        MA49
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('current_ma49')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            MA49
+                                            <SortIcon field="current_ma49" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        Xu hướng
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('rs_trend')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Xu hướng
+                                            <SortIcon field="rs_trend" />
+                                        </div>
                                     </th>
-                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                        Trạng thái
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('crs_status')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Trạng thái
+                                            <SortIcon field="crs_status" />
+                                        </div>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                                {sortedSymbols.map((symbol, index) => (
+                                {filteredAndSortedSymbols.map((symbol, index) => (
                                     <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                                         <td className="px-4 py-3 whitespace-nowrap">
                                             <div>

@@ -89,6 +89,10 @@ class DataLoader {
         return this.fetchData(`${this.basePath}/data/analyze_rs.json`);
     }
 
+    async loadVSAMarketAnalysisData() {
+        return this.fetchData(`${this.basePath}/data/vsa_market_analysis.json`);
+    }
+
     // Market overview data
     async loadTopDealsData() {
         return this.fetchData(`${this.basePath}/data/top_deals_vnindex_20.json`);

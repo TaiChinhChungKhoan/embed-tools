@@ -606,3 +606,189 @@ abnormal_signals_intra.json Output JSON Structure:
         "trading_recommendations": ["Consider increasing equity exposure"]
     }
 }
+
+
+7. Enhanced VSA Market Analysis Script
+
+This script analyzes Vietnamese stock market data using VSA (Volume Spread Analysis)
+to detect market patterns and generate comprehensive market overview reports.
+Loops through all tradable companies to provide market-wide insights.
+
+VSA SIGNAL INTERPRETATION GUIDE:
+
+1. BULLISH SIGNALS:
+   - High volume with price up: Strong buying interest
+   - Low volume with price up: Lack of selling pressure
+   - Effort > Result patterns: Accumulation phase
+   - Spring patterns: Reversal from support
+
+2. BEARISH SIGNALS:
+   - High volume with price down: Strong selling pressure
+   - Low volume with price down: Lack of buying support
+   - Result > Effort patterns: Distribution phase
+   - Upthrust patterns: Reversal from resistance
+
+3. NEUTRAL SIGNALS:
+   - Mixed volume/price patterns: Market indecision
+   - Testing patterns: Consolidation phase
+   - No clear directional bias: Wait for confirmation
+
+TIME DECAY FEATURES:
+- Analyzes last 10 days of data for comprehensive signal detection
+- Applies time decay weighting: recent signals (0-2 days ago) get full weight
+- Older signals (3-9 days ago) get progressively reduced weight (15% decay per day)
+- Minimum weight of 10% ensures even old signals contribute to analysis
+- Multiple signals over time receive bonus points for consistency
+
+vsa_market_analysis.json Output JSON Structure:
+{
+    "market_overview": {
+        "timestamp": "YYYY-MM-DDTHH:MM:SS",
+        "total_stocks_analyzed": 500,
+        "bullish_stocks": ["VNM", "FPT", ...],
+        "bearish_stocks": ["HPG", "VIC", ...],
+        "neutral_stocks": ["TCB", "MBB", ...],
+        "strong_signals": [["VNM", "High Volume No Progress Up", "bullish"], ...],
+        "market_sentiment": "bullish",
+        "volume_analysis": {"increasing": 150, "decreasing": 100, "stable": 250},
+        "sector_analysis": {...},
+        "top_opportunities": [...],
+        "market_breadth": {
+            "bullish_percentage": 45.2,
+            "bearish_percentage": 25.8,
+            "neutral_percentage": 29.0,
+            "strong_signals_count": 25,
+            "average_score": 12.5
+        }
+    },
+    "individual_results": [
+        {
+            "symbol": "VNM",
+            "latest_analysis": {
+                "timestamp": "YYYY-MM-DDTHH:MM:SS",
+                "summary": "Primary signal: High Volume No Progress Up (bullish) in accumulation",
+                "bullish_score": 25.5,
+                "volume_significance": 85.0,
+                "pattern_reliability": 75.0,
+                "bar_type": "normal",
+                "volume_level": "high",
+                "spread_size": "normal",
+                "close_position": "middle",
+                "market_state": "accumulation",
+                "at_supply_zone": false,
+                "at_demand_zone": true,
+                "signals": [
+                    {
+                        "signal_name": "High Volume No Progress Up",
+                        "signal_type": "volume_pattern",
+                        "bias": "bullish",
+                        "strength": "strong",
+                        "zone": "demand",
+                        "pattern_bars": 3,
+                        "description": "High volume with controlled price movement suggests accumulation",
+                        "action_suggestion": "Monitor for breakout direction",
+                        "confidence": 0.85
+                    }
+                ]
+            },
+            "recent_analyses": [
+                {
+                    "timestamp": "YYYY-MM-DDTHH:MM:SS",
+                    "days_ago": 0,
+                    "time_decay_weight": 1.0,
+                    "bullish_score": 25.5,
+                    "volume_significance": 85.0,
+                    "pattern_reliability": 75.0,
+                    "summary": "Primary signal: High Volume No Progress Up (bullish) in accumulation",
+                    "signals": [
+                        {
+                            "signal_name": "High Volume No Progress Up",
+                            "signal_type": "volume_pattern",
+                            "bias": "bullish",
+                            "strength": "strong",
+                            "zone": "demand",
+                            "pattern_bars": 3,
+                            "description": "High volume with controlled price movement suggests accumulation",
+                            "action_suggestion": "Monitor for breakout direction",
+                            "confidence": 0.85
+                        }
+                    ]
+                },
+                {
+                    "timestamp": "YYYY-MM-DDTHH:MM:SS",
+                    "days_ago": 2,
+                    "time_decay_weight": 0.7,
+                    "bullish_score": 15.2,
+                    "volume_significance": 65.0,
+                    "pattern_reliability": 60.0,
+                    "summary": "Secondary signal: Low Volume No Progress Down (neutral) in testing",
+                    "signals": [
+                        {
+                            "signal_name": "Low Volume No Progress Down",
+                            "signal_type": "volume_pattern",
+                            "bias": "neutral",
+                            "strength": "medium",
+                            "zone": "demand",
+                            "pattern_bars": 2,
+                            "description": "Low volume with controlled price movement suggests testing",
+                            "action_suggestion": "Wait for confirmation",
+                            "confidence": 0.65
+                        }
+                    ]
+                }
+            ],
+            "recent_analyses_count": 3,
+            "total_signals_count": 5,
+            "volume_trend": "increasing",
+            "score": 0.85
+        }
+    ]
+}
+
+JSON FIELD DESCRIPTIONS:
+
+Market Overview:
+- timestamp: ISO format timestamp of analysis execution
+- total_stocks_analyzed: Total number of stocks processed
+- bullish_stocks: Array of stock symbols with bullish bias (>20 bullish score)
+- bearish_stocks: Array of stock symbols with bearish bias (<-20 bullish score)
+- neutral_stocks: Array of stock symbols with neutral bias (-20 to +20 bullish score)
+- strong_signals: Array of [symbol, signal_name, bias] tuples for strong signals
+- market_sentiment: Overall market sentiment ("bullish", "bearish", "neutral", "moderately_bullish", "moderately_bearish")
+- volume_analysis: Count of stocks by volume trend ("increasing", "decreasing", "stable")
+- sector_analysis: Sector-wise breakdown (currently empty, for future use)
+- market_breadth: Market breadth statistics including percentages and averages
+
+Individual Results:
+- symbol: Stock ticker symbol
+- latest_analysis: Most recent VSA analysis with full details
+- recent_analyses: Array of all significant analyses from last 10 days with time decay info
+- recent_analyses_count: Number of periods with significant signals
+- total_signals_count: Total number of signals across all analyses
+- volume_trend: Volume trend classification ("increasing", "decreasing", "stable")
+- score: Composite score with time decay weighting and signal bonuses
+
+Analysis Details:
+- timestamp: ISO format timestamp of the analysis
+- summary: Human-readable summary of the analysis
+- bullish_score: VSA bullish score (-100 to +100)
+- volume_significance: Volume significance percentage (0-100)
+- pattern_reliability: Pattern reliability percentage (0-100)
+- bar_type: Type of price bar ("normal", "wide", "narrow", etc.)
+- volume_level: Volume level classification ("low", "normal", "high")
+- spread_size: Price spread size ("narrow", "normal", "wide")
+- close_position: Close position within bar ("low", "middle", "high")
+- market_state: Market state ("accumulation", "distribution", "markup", "markdown")
+- at_supply_zone: Whether price is at supply zone (boolean)
+- at_demand_zone: Whether price is at demand zone (boolean)
+
+Signal Details:
+- signal_name: Name of the VSA signal pattern
+- signal_type: Type of signal ("volume_pattern", "price_pattern", "effort_result")
+- bias: Signal bias ("bullish", "bearish", "neutral")
+- strength: Signal strength ("weak", "medium", "strong")
+- zone: Associated zone ("supply", "demand", "none")
+- pattern_bars: Number of bars in the pattern
+- description: Human-readable description of the signal
+- action_suggestion: Trading action suggestion
+- confidence: Signal confidence (0.0-1.0)

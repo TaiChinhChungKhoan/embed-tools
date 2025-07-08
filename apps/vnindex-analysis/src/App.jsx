@@ -12,6 +12,7 @@ import ValuationReport from './components/ValuationReport';
 import MarketOverviewReport from './components/MarketOverviewReport';
 import MacroeconomicsReport from './components/MacroeconomicsReport';
 import IndustryStrengthChart from './components/IndustryStrengthChart';
+import VSAReport from './components/VSAReport';
 import iframeUtils from '@embed-tools/iframe-utils';
 
 export default function App() {
@@ -37,7 +38,8 @@ export default function App() {
         'Tickers': [
             { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS của các mã chứng khoán' },
             { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong mã chứng khoán' },
-            { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các mã chứng khoán' }
+            { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các mã chứng khoán' },
+            { id: 'vsa_report', name: 'Báo cáo VSA', description: 'Phân tích Volume Spread Analysis cho từng mã chứng khoán' }
         ],
         'Market': [
             { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
@@ -262,6 +264,7 @@ export default function App() {
                                         {activeReport === 'rs_analysis' && <TickerRSAnalysis />}
                                         {activeReport === 'abnormal_signals' && <StockAbnormalSignals />}
                                         {activeReport === 'rrg_analysis' && <RRGAnalysis />}
+                                        {activeReport === 'vsa_report' && <VSAReport />}
                                     </div>
                                 )}
                                 {activeTab === 'Market' && (
