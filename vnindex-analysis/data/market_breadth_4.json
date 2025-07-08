@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "analysis_date": "2025-07-07T18:37:51.912277",
+    "analysis_date": "2025-07-09T03:05:23.932341",
     "analysis_type": "daily_market_breadth",
-    "total_trading_days": 1373,
+    "total_trading_days": 1374,
     "date_range": {
       "start": "2020-01-03T00:00:00",
-      "end": "2025-07-07T00:00:00"
+      "end": "2025-07-08T00:00:00"
     }
   },
   "daily_data": [
@@ -16468,9 +16468,9 @@
       "unchanged_count": 66,
       "total_count": 370,
       "ratio": 0.6710526315789473,
-      "smoothed_ratio": 0.6271011415170167,
-      "up_smoothed": 194.25,
-      "down_smoothed": 115.75,
+      "smoothed_ratio": 0.6419406534733536,
+      "up_smoothed": 198.6,
+      "down_smoothed": 111.0,
       "signal": "Neutral"
     },
     {
@@ -16480,20 +16480,32 @@
       "unchanged_count": 58,
       "total_count": 369,
       "ratio": 0.7202572347266881,
-      "smoothed_ratio": 0.6192545134756804,
-      "up_smoothed": 191.33333333333334,
-      "down_smoothed": 118.0,
+      "smoothed_ratio": 0.6397655604314356,
+      "up_smoothed": 197.5,
+      "down_smoothed": 111.5,
+      "signal": "Neutral"
+    },
+    {
+      "date": "2025-07-08T00:00:00",
+      "up_count": 216,
+      "down_count": 92,
+      "unchanged_count": 57,
+      "total_count": 365,
+      "ratio": 0.7012987012987013,
+      "smoothed_ratio": 0.6975361892014456,
+      "up_smoothed": 214.66666666666666,
+      "down_smoothed": 93.0,
       "signal": "Neutral"
     }
   ],
   "summary": {
-    "total_trading_days": 1373,
+    "total_trading_days": 1374,
     "averages": {
-      "up_count": 156.29424617625637,
-      "down_count": 157.44573925710125,
-      "unchanged_count": 47.261471230881284,
-      "total_count": 361.0014566642389,
-      "ratio": 0.49963115151077375
+      "up_count": 156.3377001455604,
+      "down_count": 157.3981077147016,
+      "unchanged_count": 47.26855895196506,
+      "total_count": 361.0043668122271,
+      "ratio": 0.49977792556447664
     },
     "extremes": {
       "max_up_count": 367,
