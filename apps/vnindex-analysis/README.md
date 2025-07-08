@@ -490,7 +490,7 @@ analyze_rs Output JSON structure:
   ]
 }
 
-RRG Data Structure (rrg_data.json):
+7. RRG Data Structure (rrg_data.json):
 {
   "rrg_date": "ISO timestamp",
   "tail_length": 21,
@@ -521,4 +521,88 @@ RRG Data Structure (rrg_data.json):
       ]
     }
   ]
+}
+
+8. INTRADAY SIGNAL INTERPRETATION GUIDE:
+
+1. ABNORMAL PRICE SIGNAL:
+   - Definition: Price movements significantly deviate from normal intraday patterns
+   - Interpretation: 
+     * BULLISH: Abnormal price spikes with volume confirmation suggest strong buying
+     * BEARISH: Abnormal price drops with volume confirmation suggest strong selling
+     * NEUTRAL: Abnormal price movements without clear direction suggest volatility
+   - Trading Action: Monitor for continuation or reversal patterns
+
+2. ABNORMAL VOLUME SIGNAL:
+   - Definition: Trading volume significantly differs from normal intraday levels
+   - Interpretation:
+     * BULLISH: High volume with price up suggests strong buying interest
+     * BEARISH: High volume with price down suggests strong selling pressure
+     * NEUTRAL: High volume with sideways price suggests distribution/accumulation
+   - Trading Action: Volume confirms price direction; follow the trend
+
+3. PRICE VELOCITY ABNORMAL SIGNAL:
+   - Definition: Rate of price change is significantly faster than normal
+   - Interpretation:
+     * BULLISH: Rapid price increases suggest momentum buying
+     * BEARISH: Rapid price decreases suggest panic selling
+   - Trading Action: Monitor for exhaustion or continuation
+
+4. EFFORTGTResult SIGNAL:
+   - Definition: High volume with controlled price movement (high effort, low result)
+   - Interpretation:
+     * BULLISH: Strong buying effort with controlled price suggests accumulation
+     * BEARISH: Strong selling effort with controlled price suggests distribution
+   - Trading Action: Often precedes significant moves; monitor for breakout
+
+5. RESULTGTEffort SIGNAL:
+   - Definition: Low volume with large price movement (low effort, high result)
+   - Interpretation:
+     * BULLISH: Large price move with low volume suggests weak hands selling to strong hands
+     * BEARISH: Large price move with low volume suggests short covering or weak buying
+   - Trading Action: May indicate exhaustion; be cautious of continuation
+
+6. ABNORMALERRatio SIGNAL:
+   - Definition: Volume-to-excess-return ratio is significantly different from normal
+   - Interpretation:
+     * HIGH RATIO: High volume relative to price movement suggests strong conviction
+     * LOW RATIO: Low volume relative to price movement suggests weak conviction
+   - Trading Action: Use as confirmation of trend strength or weakness
+
+COMBINED SIGNAL INTERPRETATION:
+- MULTIPLE BULLISH SIGNALS: Strong buy signal, high probability of upward movement
+- MULTIPLE BEARISH SIGNALS: Strong sell signal, high probability of downward movement
+- MIXED SIGNALS: Market indecision, wait for clearer direction
+- NO SIGNALS: Normal market conditions, continue with existing strategy
+
+abnormal_signals_intra.json Output JSON Structure:
+{
+    "abnormalities": [
+        {
+            "Symbol": "<ticker>",
+            "Date": "YYYY-MM-DDTHH:MM:SS",
+            "CompositeScore": 0.85,
+            "AbnormalPrice": true,
+            "AbnormalVolume": false,
+            "PriceVelocityAbnormal": false,
+            "EffortGTResult": true,
+            "ResultGTEffort": false,
+            "AbnormalERRatio": false,
+            "Interpretation": {
+                "signal_count": 2,
+                "signal_types": ["AbnormalPrice", "EffortGTResult"],
+                "overall_sentiment": "BULLISH",
+                "confidence": "MEDIUM",
+                "trading_implications": ["Monitor for breakout direction"],
+                "risk_level": "MEDIUM"
+            }
+        }
+    ],
+    "summary": {
+        "analysis_date": "YYYY-MM-DDTHH:MM:SS",
+        "total_abnormalities": 45,
+        "market_sentiment": "BULLISH",
+        "key_insights": ["Detected 45 abnormal intraday signals"],
+        "trading_recommendations": ["Consider increasing equity exposure"]
+    }
 }

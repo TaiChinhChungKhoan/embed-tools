@@ -1,13 +1,16 @@
 import React, { useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import Card from './Card';
-import peRatio from '../data/pe_ratio_5y.json';
-import pbRatio from '../data/pb_ratio_5y.json';
+import { useDataLoader } from '../hooks/useDataLoader';
 
 const ValuationReport = () => {
+    // Load valuation data using the data loader
+    const { data: peRatio, loading: peLoading, error: peError } = useDataLoader('pe_ratio');
+    const { data: pbRatio, loading: pbLoading, error: pbError } = useDataLoader('pb_ratio');
+
     // Merge PE and PB by date, show last 1 year
-    const peData = peRatio.data;
-    const pbData = pbRatio.data;
+    const peData = peRatio?.data || [];
+    const pbData = pbRatio?.data || [];
     const merged = useMemo(() => {
         const pbMap = new Map(pbData.map(d => [d.reportDate, d.pb]));
         return peData.map(d => ({

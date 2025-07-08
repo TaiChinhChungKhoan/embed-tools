@@ -34,6 +34,51 @@ export const useDataLoader = (dataType, options = {}) => {
                 case 'abnormal_signals':
                     result = await dataLoader.loadAbnormalSignalsData();
                     break;
+                case 'abnormal_signals_intra':
+                    result = await dataLoader.loadAbnormalSignalsIntraData();
+                    break;
+                case 'top_deals':
+                    result = await dataLoader.loadTopDealsData();
+                    break;
+                case 'top_by_value':
+                    result = await dataLoader.loadTopByValueData();
+                    break;
+                case 'top_gainers':
+                    result = await dataLoader.loadTopGainersData();
+                    break;
+                case 'top_losers':
+                    result = await dataLoader.loadTopLosersData();
+                    break;
+                case 'top_by_volume':
+                    result = await dataLoader.loadTopByVolumeData();
+                    break;
+                case 'foreign_buy':
+                    result = await dataLoader.loadForeignBuyData();
+                    break;
+                case 'gdp_quarter':
+                    result = await dataLoader.loadGDPQuarterData();
+                    break;
+                case 'money_supply_month':
+                    result = await dataLoader.loadMoneySupplyMonthData();
+                    break;
+                case 'retail_sales_year':
+                    result = await dataLoader.loadRetailSalesYearData();
+                    break;
+                case 'retail_sales_month':
+                    result = await dataLoader.loadRetailSalesMonthData();
+                    break;
+                case 'cpi_month':
+                    result = await dataLoader.loadCPIMonthData();
+                    break;
+                case 'pe_ratio':
+                    result = await dataLoader.loadPERatioData();
+                    break;
+                case 'pb_ratio':
+                    result = await dataLoader.loadPBRatioData();
+                    break;
+                case 'industry_strength_time_series':
+                    result = await dataLoader.loadIndustryStrengthTimeSeriesData();
+                    break;
                 case 'rs_analysis':
                     result = await dataLoader.loadRSAnalysisData();
                     break;
@@ -116,6 +161,51 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
                         break;
                     case 'abnormal_signals':
                         result = await dataLoader.loadAbnormalSignalsData();
+                        break;
+                    case 'abnormal_signals_intra':
+                        result = await dataLoader.loadAbnormalSignalsIntraData();
+                        break;
+                    case 'top_deals':
+                        result = await dataLoader.loadTopDealsData();
+                        break;
+                    case 'top_by_value':
+                        result = await dataLoader.loadTopByValueData();
+                        break;
+                    case 'top_gainers':
+                        result = await dataLoader.loadTopGainersData();
+                        break;
+                    case 'top_losers':
+                        result = await dataLoader.loadTopLosersData();
+                        break;
+                    case 'top_by_volume':
+                        result = await dataLoader.loadTopByVolumeData();
+                        break;
+                    case 'foreign_buy':
+                        result = await dataLoader.loadForeignBuyData();
+                        break;
+                    case 'gdp_quarter':
+                        result = await dataLoader.loadGDPQuarterData();
+                        break;
+                    case 'money_supply_month':
+                        result = await dataLoader.loadMoneySupplyMonthData();
+                        break;
+                    case 'retail_sales_year':
+                        result = await dataLoader.loadRetailSalesYearData();
+                        break;
+                    case 'retail_sales_month':
+                        result = await dataLoader.loadRetailSalesMonthData();
+                        break;
+                    case 'cpi_month':
+                        result = await dataLoader.loadCPIMonthData();
+                        break;
+                    case 'pe_ratio':
+                        result = await dataLoader.loadPERatioData();
+                        break;
+                    case 'pb_ratio':
+                        result = await dataLoader.loadPBRatioData();
+                        break;
+                    case 'industry_strength_time_series':
+                        result = await dataLoader.loadIndustryStrengthTimeSeriesData();
                         break;
                     case 'rs_analysis':
                         result = await dataLoader.loadRSAnalysisData();

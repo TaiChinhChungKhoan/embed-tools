@@ -3,21 +3,24 @@ import { TrendingUp, TrendingDown, BarChart2, Globe } from 'lucide-react';
 import MarketBreadth from './MarketBreadth';
 import TopListCard from './TopListCard';
 import MarketBreadthAnalysis from './MarketBreadthAnalysis';
-import industryStrength from '../data/industry_strength_analysis.json';
-import topGainers from '../data/top_gainers_vnindex_20.json';
-import topLosers from '../data/top_losers_vnindex_20.json';
-import topByVolume from '../data/top_by_volume_vnindex_20.json';
-import foreignBuy from '../data/foreign_buy_20.json';
+import { useDataLoader } from '../hooks/useDataLoader';
 
 const MarketOverview = () => {
+    // Load data using the data loader
+    const { data: industryStrength, loading: industryLoading, error: industryError } = useDataLoader('industries');
+    const { data: topGainers, loading: gainersLoading, error: gainersError } = useDataLoader('top_gainers');
+    const { data: topLosers, loading: losersLoading, error: losersError } = useDataLoader('top_losers');
+    const { data: topByVolume, loading: volumeLoading, error: volumeError } = useDataLoader('top_by_volume');
+    const { data: foreignBuy, loading: foreignLoading, error: foreignError } = useDataLoader('foreign_buy');
+
     // Top gainers/losers/volume/foreign buy: use latest data array
-    const gainers = useMemo(() => topGainers.data.slice(0, 5), []);
-    const losers = useMemo(() => topLosers.data.slice(0, 5), []);
-    const byVolume = useMemo(() => topByVolume.data.slice(0, 5), []);
-    const foreignNetBuy = useMemo(() => foreignBuy.data.slice(0, 5), []);
+    const gainers = useMemo(() => topGainers?.data?.slice(0, 5) || [], [topGainers]);
+    const losers = useMemo(() => topLosers?.data?.slice(0, 5) || [], [topLosers]);
+    const byVolume = useMemo(() => topByVolume?.data?.slice(0, 5) || [], [topByVolume]);
+    const foreignNetBuy = useMemo(() => foreignBuy?.data?.slice(0, 5) || [], [foreignBuy]);
 
     // Top/bottom industries by total_score
-    const industries = industryStrength.industry_summary;
+    const industries = industryStrength?.industry_summary || [];
     const topIndustries = useMemo(() =>
         [...industries].sort((a, b) => b.total_score - a.total_score).slice(0, 5),
         [industries]

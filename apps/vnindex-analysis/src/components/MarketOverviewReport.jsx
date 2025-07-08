@@ -1,130 +1,67 @@
 import React, { useMemo } from 'react';
-import { TrendingUp, TrendingDown, BarChart2, Globe, DollarSign, Activity, ShoppingCart, Factory } from 'lucide-react';
+import { BarChart2, DollarSign, AlertTriangle, Zap } from 'lucide-react';
 import Card from './Card';
 import TopListCard from './TopListCard';
-import InteractiveChart from './InteractiveChart';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, BarChart, Bar, Cell } from 'recharts';
-import topDeals from '../data/top_deals_vnindex_20.json';
-import topByValue from '../data/top_by_value_vnindex_20.json';
-import gdpQuarter from '../data/gdp_quarter.json';
-import moneySupplyMonth from '../data/money_supply_month.json';
-import retailSalesYear from '../data/retail_sales_year.json';
-import retailSalesMonth from '../data/retail_sales_month.json';
-import cpiMonth from '../data/cpi_month.json';
+import { useDataLoader } from '../hooks/useDataLoader';
 
 const MarketOverviewReport = () => {
+    // Load data using the data loader
+    const { data: abnormalSignalsIntra, loading: abnormalSignalsLoading, error: abnormalSignalsError } = useDataLoader('abnormal_signals_intra');
+    const { data: topDeals, loading: topDealsLoading, error: topDealsError } = useDataLoader('top_deals');
+    const { data: topByValue, loading: topByValueLoading, error: topByValueError } = useDataLoader('top_by_value');
+
     // Top deals and value data
-    const deals = useMemo(() => topDeals.data.slice(0, 10), []);
-    const byValue = useMemo(() => topByValue.data.slice(0, 10), []);
+    const deals = useMemo(() => topDeals?.data?.slice(0, 10) || [], [topDeals]);
+    const byValue = useMemo(() => topByValue?.data?.slice(0, 10) || [], [topByValue]);
 
-    // Process GDP data - get latest quarterly growth rates
-    const gdpData = useMemo(() => {
-        const gdpGrowth = gdpQuarter.data
-            .filter(item => item.group_name === 'Tăng trưởng thực của GDP' && item.name === 'Tổng GDP')
-            .sort((a, b) => new Date(a.report_time) - new Date(b.report_time)) // Chronological order
-            .slice(-8); // Last 8 quarters
-
-        return gdpGrowth.map(item => ({
-            date: item.report_time.slice(0, 7), // YYYY-MM format
-            gdp: item.value,
-            quarter: item.report_type
-        }));
-    }, []);
-
-    // Process Money Supply data - get M2 growth rates
-    const moneySupplyData = useMemo(() => {
-        const m2Growth = moneySupplyMonth.data
-            .filter(item => item.name === 'Tăng trưởng Cung tiền M2 (YTD)*')
-            .sort((a, b) => new Date(a.report_time) - new Date(b.report_time)) // Chronological order
-            .slice(-12); // Last 12 months
-
-        return m2Growth.map(item => ({
-            date: item.report_time.slice(0, 7),
-            m2Growth: item.value
-        }));
-    }, []);
-
-    // Process Retail Sales data - use yearly data with new structured format
-    const retailData = useMemo(() => {
-        try {
-            // Use yearly data with the new structured format
-            const retailGrowth = retailSalesYear.data
-                .sort((a, b) => new Date(a.report_time) - new Date(b.report_time))
-                .slice(-8); // Last 8 years
-
-            return retailGrowth.map(item => ({
-                date: item.report_time,
-                total: item.data.percentage['Tổng số'],
-                service: item.data.percentage['Dịch vụ & du lịch'],
-                commerce: item.data.percentage['Thương nghiệp'],
-                hospitality: item.data.percentage['Khách sạn nhà hàng'],
-                totalValue: item.data.cash['Tổng số'],
-                serviceValue: item.data.cash['Dịch vụ & du lịch'],
-                commerceValue: item.data.cash['Thương nghiệp'],
-                hospitalityValue: item.data.cash['Khách sạn nhà hàng']
-            }));
-        } catch (error) {
-            console.error('Error processing retail sales data:', error);
-            return [];
+    // Process abnormal intraday signals data
+    const abnormalSignalsData = useMemo(() => {
+        if (!abnormalSignalsIntra || abnormalSignalsLoading) {
+            return {
+                topSignals: [],
+                summary: {},
+                totalSignals: 0
+            };
         }
-    }, []);
 
-    // Process CPI data
-    const cpiData = useMemo(() => {
-        const cpiGrowth = cpiMonth.data
-            .filter(item => item.name === 'Chỉ số giá tiêu dùng')
-            .sort((a, b) => new Date(a.report_time) - new Date(b.report_time)) // Chronological order
-            .slice(-12); // Last 12 months
-
-        return cpiGrowth.map(item => ({
-            date: item.report_time.slice(0, 7),
-            cpi: item.value
-        }));
-    }, []);
-
-    // Merge economic data for chart
-    const economicChartData = useMemo(() => {
-        const allDates = new Set([
-            ...gdpData.map(d => d.date),
-            ...moneySupplyData.map(d => d.date),
-            ...retailData.map(d => d.date),
-            ...cpiData.map(d => d.date)
-        ]);
-
-        return Array.from(allDates)
-            .sort()
-            .map(date => {
-                const gdp = gdpData.find(d => d.date === date);
-                const m2 = moneySupplyData.find(d => d.date === date);
-                const retail = retailData.find(d => d.date === date);
-                const cpi = cpiData.find(d => d.date === date);
+        const signals = abnormalSignalsIntra.abnormalities || [];
+        const summary = abnormalSignalsIntra.summary || {};
+        
+        // Get top signals by composite score
+        const topSignals = signals
+            .sort((a, b) => b.CompositeScore - a.CompositeScore)
+            .slice(0, 10)
+            .map(signal => {
+                // Get active signal types
+                const activeSignals = Object.entries(signal)
+                    .filter(([key, value]) => 
+                        ['AbnormalPrice', 'AbnormalVolume', 'PriceVelocityAbnormal', 'EffortGTResult', 'ResultGTEffort', 'AbnormalERRatio'].includes(key) && value === true
+                    )
+                    .map(([key]) => key);
 
                 return {
-                    date,
-                    gdp: gdp?.gdp || null,
-                    m2Growth: m2?.m2Growth || null,
-                    retailGrowth: retail?.retailGrowth || null,
-                    cpi: cpi?.cpi || null
+                    id: signal.Symbol,
+                    name: signal.Symbol,
+                    date: signal.Date,
+                    value: signal.CompositeScore,
+                    sentiment: signal.Interpretation?.overall_sentiment || 'NEUTRAL',
+                    confidence: signal.Interpretation?.confidence || 'MEDIUM',
+                    signalCount: signal.Interpretation?.signal_count || 0,
+                    riskLevel: signal.Interpretation?.risk_level || 'MEDIUM',
+                    activeSignals: activeSignals,
+                    tradingImplications: signal.Interpretation?.trading_implications || [],
+                    signalTypes: signal.Interpretation?.signal_types || []
                 };
-            })
-            .filter(d => d.gdp !== null || d.m2Growth !== null || d.retailGrowth !== null || d.cpi !== null)
-            .slice(-24); // Last 24 data points
-    }, [gdpData, moneySupplyData, retailData, cpiData]);
-
-    // Calculate current economic indicators
-    const currentIndicators = useMemo(() => {
-        const latestGDP = gdpData[0];
-        const latestM2 = moneySupplyData[0];
-        const latestRetail = retailData[0];
-        const latestCPI = cpiData[0];
+            });
 
         return {
-            gdp: latestGDP,
-            m2Growth: latestM2,
-            retailGrowth: latestRetail,
-            cpi: latestCPI
+            topSignals,
+            summary,
+            totalSignals: signals.length
         };
-    }, [gdpData, moneySupplyData, retailData, cpiData]);
+    }, [abnormalSignalsIntra, abnormalSignalsLoading]);
+
+
 
     return (
         <div className="space-y-6">
@@ -133,12 +70,9 @@ const MarketOverviewReport = () => {
                     Báo cáo Tổng quan Thị trường
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400">
-                    Phân tích toàn diện về giao dịch, chỉ số kinh tế vĩ mô và xu hướng thị trường
+                    Phân tích toàn diện về giao dịch và tín hiệu bất thường
                 </p>
             </div>
-
-            {/* Interactive Chart */}
-            <InteractiveChart />
 
             {/* Top Deals and Value */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -180,42 +114,187 @@ const MarketOverviewReport = () => {
                 />
             </div>
 
-            {/* Market Analysis */}
-            <Card>
-                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">
-                    Phân tích Thị trường
-                </h3>
-                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
-                    <div>
-                        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Tăng trưởng GDP</h4>
-                        <p>
-                            Tăng trưởng GDP là chỉ số quan trọng nhất phản ánh sức khỏe của nền kinh tế. 
-                            Tăng trưởng cao thường tương quan với hiệu suất tốt của thị trường chứng khoán.
-                        </p>
+            {/* Abnormal Intraday Signals */}
+            {abnormalSignalsLoading ? (
+                <Card>
+                    <div className="flex items-center justify-center h-32">
+                        <div className="text-gray-500 dark:text-gray-400">Đang tải dữ liệu tín hiệu bất thường...</div>
                     </div>
-                    <div>
-                        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Cung tiền M2</h4>
-                        <p>
-                            Tăng trưởng cung tiền M2 phản ánh tính thanh khoản trong nền kinh tế. 
-                            Tăng trưởng cao có thể thúc đẩy thị trường nhưng cũng có thể gây lạm phát.
-                        </p>
+                </Card>
+            ) : abnormalSignalsError ? (
+                <Card>
+                    <div className="flex items-center justify-center h-32">
+                        <div className="text-red-500">Lỗi tải dữ liệu: {abnormalSignalsError}</div>
                     </div>
-                    <div>
-                        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Bán lẻ</h4>
-                        <p>
-                            Tăng trưởng bán lẻ cho thấy sức tiêu thụ của người dân. 
-                            Đây là chỉ số quan trọng phản ánh sức khỏe của nền kinh tế tiêu dùng.
-                        </p>
+                </Card>
+            ) : (
+                <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                            <AlertTriangle className="text-orange-500" />
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                                Tín hiệu Bất thường Nội ngày
+                            </h3>
+                        </div>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                            {abnormalSignalsData.totalSignals} tín hiệu
+                        </span>
                     </div>
-                    <div>
-                        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Chỉ số Giá Tiêu dùng (CPI)</h4>
-                        <p>
-                            CPI đo lường lạm phát. Lạm phát vừa phải có thể tốt cho thị trường, 
-                            nhưng lạm phát cao có thể ảnh hưởng tiêu cực đến hiệu suất cổ phiếu.
-                        </p>
+                    
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        {abnormalSignalsData.topSignals.slice(0, 12).map((item, index) => {
+                            const sentimentColor = item.sentiment === 'BULLISH' ? 'text-green-600 dark:text-green-400' :
+                                                  item.sentiment === 'BEARISH' ? 'text-red-600 dark:text-red-400' :
+                                                  'text-yellow-600 dark:text-yellow-400';
+                            
+                            return (
+                                <Card key={index} className="p-4">
+                                    <div className="flex items-start justify-between mb-3">
+                                        <div>
+                                            <h4 className="font-semibold text-gray-900 dark:text-gray-100">
+                                                {item.name}
+                                            </h4>
+                                            <p className="text-sm text-gray-500 dark:text-gray-400">
+                                                {new Date(item.date).toLocaleDateString('vi-VN')}
+                                            </p>
+                                            <p className="text-sm text-gray-500 dark:text-gray-400">
+                                                Điểm: {(item.value * 100).toFixed(1)}%
+                                            </p>
+                                        </div>
+                                        <div className="text-right">
+                                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200">
+                                                {item.signalCount} tín hiệu
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Signal Types */}
+                                    {item.activeSignals.length > 0 && (
+                                        <div className="mb-3">
+                                            <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                                Loại tín hiệu:
+                                            </h5>
+                                            <div className="space-y-1">
+                                                {item.activeSignals.map((signalType, idx) => (
+                                                    <div key={idx} className="flex items-center gap-2 text-xs">
+                                                        <span className="text-blue-500">•</span>
+                                                        <span className="text-gray-600 dark:text-gray-400">
+                                                            {signalType === 'AbnormalPrice' ? 'Giá bất thường' :
+                                                             signalType === 'AbnormalVolume' ? 'Khối lượng bất thường' :
+                                                             signalType === 'PriceVelocityAbnormal' ? 'Tốc độ giá bất thường' :
+                                                             signalType === 'EffortGTResult' ? 'Nỗ lực > Kết quả' :
+                                                             signalType === 'ResultGTEffort' ? 'Kết quả > Nỗ lực' :
+                                                             signalType === 'AbnormalERRatio' ? 'Tỷ lệ ER bất thường' :
+                                                             signalType}
+                                                        </span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                    
+                                    {/* Trading Implications */}
+                                    {item.tradingImplications.length > 0 && (
+                                        <div className="mb-3">
+                                            <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                                Ý nghĩa giao dịch:
+                                            </h5>
+                                            <div className="space-y-1">
+                                                {item.tradingImplications.slice(0, 2).map((implication, idx) => (
+                                                    <div key={idx} className="flex items-start gap-2 text-xs">
+                                                        <span className="text-green-500 flex-shrink-0">•</span>
+                                                        <span className="text-gray-600 dark:text-gray-400">
+                                                            {implication}
+                                                        </span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                    
+                                    {/* Sentiment and Risk */}
+                                    <div className="space-y-2 pt-2 border-t border-gray-200 dark:border-gray-700">
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <span className={sentimentColor}>
+                                                {item.sentiment === 'BULLISH' ? '📈' : 
+                                                 item.sentiment === 'BEARISH' ? '📉' : '➡️'}
+                                            </span>
+                                            <span className={sentimentColor}>
+                                                {item.sentiment === 'BULLISH' ? 'Tích cực' :
+                                                 item.sentiment === 'BEARISH' ? 'Tiêu cực' : 'Trung tính'}
+                                            </span>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <span className="text-purple-600 dark:text-purple-400">
+                                                {item.confidence === 'HIGH' ? '🔴' : 
+                                                 item.confidence === 'MEDIUM' ? '🟡' : '🟢'}
+                                            </span>
+                                            <span className="text-purple-600 dark:text-purple-400">
+                                                {item.confidence === 'HIGH' ? 'Cao' :
+                                                 item.confidence === 'MEDIUM' ? 'Trung bình' : 'Thấp'}
+                                            </span>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <span className="text-orange-600 dark:text-orange-400">
+                                                {item.riskLevel === 'HIGH' ? '⚠️' : 
+                                                 item.riskLevel === 'MEDIUM' ? '⚡' : 'ℹ️'}
+                                            </span>
+                                            <span className="text-orange-600 dark:text-orange-400">
+                                                {item.riskLevel === 'HIGH' ? 'Rủi ro cao' :
+                                                 item.riskLevel === 'MEDIUM' ? 'Rủi ro trung bình' : 'Rủi ro thấp'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </Card>
+                            );
+                        })}
                     </div>
+
+                    {/* Market Sentiment Summary */}
+                    {abnormalSignalsData.summary.market_sentiment && (
+                        <Card className="p-4">
+                            <div className="flex items-center gap-2 mb-3">
+                                <Zap className="text-yellow-500" />
+                                <h4 className="font-semibold text-gray-900 dark:text-gray-100">
+                                    Tổng quan Tâm lý Thị trường
+                                </h4>
+                            </div>
+                            <div className="space-y-3 text-sm">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-gray-600 dark:text-gray-400">Tâm lý thị trường:</span>
+                                    <span className={`font-semibold ${
+                                        abnormalSignalsData.summary.market_sentiment === 'BULLISH' 
+                                            ? 'text-green-600 dark:text-green-400' 
+                                            : abnormalSignalsData.summary.market_sentiment === 'BEARISH'
+                                            ? 'text-red-600 dark:text-red-400'
+                                            : 'text-yellow-600 dark:text-yellow-400'
+                                    }`}>
+                                        {abnormalSignalsData.summary.market_sentiment === 'BULLISH' ? 'Tích cực' :
+                                         abnormalSignalsData.summary.market_sentiment === 'BEARISH' ? 'Tiêu cực' : 'Trung tính'}
+                                    </span>
+                                </div>
+                                {abnormalSignalsData.summary.trading_recommendations && (
+                                    <div className="mt-3">
+                                        <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
+                                            Khuyến nghị Giao dịch:
+                                        </h5>
+                                        <ul className="space-y-1 text-gray-600 dark:text-gray-400">
+                                            {abnormalSignalsData.summary.trading_recommendations.slice(0, 2).map((rec, index) => (
+                                                <li key={index} className="flex items-start gap-2">
+                                                    <span className="text-blue-500 mt-1">•</span>
+                                                    <span>{rec}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </Card>
+                    )}
                 </div>
-            </Card>
+            )}
+
+
         </div>
     );
 };

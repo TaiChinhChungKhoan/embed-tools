@@ -10,6 +10,8 @@ import TickerRSAnalysis from './components/TickerRSAnalysis';
 import RRGAnalysis from './components/RRGAnalysis';
 import ValuationReport from './components/ValuationReport';
 import MarketOverviewReport from './components/MarketOverviewReport';
+import MacroeconomicsReport from './components/MacroeconomicsReport';
+import IndustryStrengthChart from './components/IndustryStrengthChart';
 import iframeUtils from '@embed-tools/iframe-utils';
 
 export default function App() {
@@ -29,7 +31,8 @@ export default function App() {
         'Industries': [
             { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS của các ngành nghề' },
             { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong ngành' },
-            { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các ngành' }
+            { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các ngành' },
+            { id: 'industry_strength', name: 'Biểu đồ Sức mạnh Ngành', description: 'Phân tích xu hướng sức mạnh và điểm yếu của từng ngành theo thời gian' }
         ],
         'Tickers': [
             { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS của các mã chứng khoán' },
@@ -38,6 +41,7 @@ export default function App() {
         ],
         'Market': [
             { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
+            { id: 'macroeconomics', name: 'Báo cáo Vĩ mô', description: 'Phân tích các chỉ số kinh tế vĩ mô và xu hướng thị trường' },
             { id: 'valuation_report', name: 'Báo cáo Định giá', description: 'Phân tích tỷ lệ P/E và P/B của VN-Index' }
         ]
     };
@@ -245,6 +249,7 @@ export default function App() {
                                         {activeReport === 'rs_analysis' && <IndustryRSAnalysis />}
                                         {activeReport === 'abnormal_signals' && <IndustryAbnormalSignals />}
                                         {activeReport === 'rrg_analysis' && <RRGAnalysis />}
+                                        {activeReport === 'industry_strength' && <IndustryStrengthChart />}
                                     </div>
                                 )}
                                 {activeTab === 'Tickers' && (
@@ -257,6 +262,7 @@ export default function App() {
                                 {activeTab === 'Market' && (
                                     <div className="space-y-8">
                                         {activeReport === 'market_overview' && <MarketOverviewReport />}
+                                        {activeReport === 'macroeconomics' && <MacroeconomicsReport />}
                                         {activeReport === 'valuation_report' && <ValuationReport />}
                                     </div>
                                 )}

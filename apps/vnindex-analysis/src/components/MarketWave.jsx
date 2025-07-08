@@ -68,8 +68,10 @@ const MarketWave = () => {
     const chart = chartRef.current;
 
     // clear previous
-    seriesRef.current.forEach(s => chart.removeSeries(s));
-    seriesRef.current = [];
+    if (chart) {
+      seriesRef.current.forEach(s => chart.removeSeries(s));
+      seriesRef.current = [];
+    }
 
     // --- VNINDEX price (pane 0) ---
     if (data.vnindex) {

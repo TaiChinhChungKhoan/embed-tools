@@ -68,8 +68,10 @@ const MarketBreadth = ({ turnover, volume }) => {
         const chart = chartRef.current;
 
         // clear previous
-        seriesRef.current.forEach(s => chart.removeSeries(s));
-        seriesRef.current = [];
+        if (chart) {
+            seriesRef.current.forEach(s => chart.removeSeries(s));
+            seriesRef.current = [];
+        }
 
         // --- Up/Down Smoothed Counts (pane 0) ---
         if (data.daily_data && data.daily_data.length > 0) {

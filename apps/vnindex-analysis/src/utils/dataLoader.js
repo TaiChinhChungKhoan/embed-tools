@@ -81,8 +81,72 @@ class DataLoader {
         return this.fetchData(`${this.basePath}/data/abnormal_signals.json`);
     }
 
+    async loadAbnormalSignalsIntraData() {
+        return this.fetchData(`${this.basePath}/data/abnormal_signals_intra.json`);
+    }
+
     async loadRSAnalysisData() {
         return this.fetchData(`${this.basePath}/data/analyze_rs.json`);
+    }
+
+    // Market overview data
+    async loadTopDealsData() {
+        return this.fetchData(`${this.basePath}/data/top_deals_vnindex_20.json`);
+    }
+
+    async loadTopByValueData() {
+        return this.fetchData(`${this.basePath}/data/top_by_value_vnindex_20.json`);
+    }
+
+    async loadTopGainersData() {
+        return this.fetchData(`${this.basePath}/data/top_gainers_vnindex_20.json`);
+    }
+
+    async loadTopLosersData() {
+        return this.fetchData(`${this.basePath}/data/top_losers_vnindex_20.json`);
+    }
+
+    async loadTopByVolumeData() {
+        return this.fetchData(`${this.basePath}/data/top_by_volume_vnindex_20.json`);
+    }
+
+    async loadForeignBuyData() {
+        return this.fetchData(`${this.basePath}/data/foreign_buy_20.json`);
+    }
+
+    // Economic data
+    async loadGDPQuarterData() {
+        return this.fetchData(`${this.basePath}/data/gdp_quarter.json`);
+    }
+
+    async loadMoneySupplyMonthData() {
+        return this.fetchData(`${this.basePath}/data/money_supply_month.json`);
+    }
+
+    async loadRetailSalesYearData() {
+        return this.fetchData(`${this.basePath}/data/retail_sales_year.json`);
+    }
+
+    async loadRetailSalesMonthData() {
+        return this.fetchData(`${this.basePath}/data/retail_sales_month.json`);
+    }
+
+    async loadCPIMonthData() {
+        return this.fetchData(`${this.basePath}/data/cpi_month.json`);
+    }
+
+    // Valuation data
+    async loadPERatioData() {
+        return this.fetchData(`${this.basePath}/data/pe_ratio_5y.json`);
+    }
+
+    async loadPBRatioData() {
+        return this.fetchData(`${this.basePath}/data/pb_ratio_5y.json`);
+    }
+
+    // Industry data
+    async loadIndustryStrengthTimeSeriesData() {
+        return this.fetchData(`${this.basePath}/data/industry_strength_time_series.json`);
     }
 
     // Clear cache for specific URL or all cache
