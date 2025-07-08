@@ -104,7 +104,12 @@ export default function App() {
                                 <line x1="12" y1="1" x2="12" y2="23"></line>
                                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                             </svg>
-                            {!isEmbedded && <span className="ml-2 text-xl font-bold">Phân tích VN-Index</span>}
+                            <div className="ml-2">
+                                {!isEmbedded && <span className="text-xl font-bold">Phân tích VN-Index</span>}
+                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                                    Dữ liệu hàng ngày được cập nhật vào cuối ngày
+                                </div>
+                            </div>
                         </div>
                         <nav className="hidden md:flex items-center space-x-2">
                             {tabs.map(tab => (
