@@ -1,0 +1,986 @@
+{
+  "metadata": {
+    "dashboard_date": "2025-07-07T18:38:16.864855",
+    "dashboard_type": "market_overview",
+    "data_sources": [
+      "market_breadth_data.json",
+      "individual_stock_signals.json",
+      "industry_strength_analysis.json",
+      "market_breadth4.json",
+      "abnormal_signals.json"
+    ]
+  },
+  "market_sentiment": null,
+  "top_stocks": {
+    "top_stocks": [
+      {
+        "symbol": "NVB",
+        "date": "2025-07-07T00:00:00",
+        "close": 15.4,
+        "rs_rank": 1.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 2550500.0,
+        "volume_prev": 1766000.0
+      },
+      {
+        "symbol": "VRG",
+        "date": "2025-07-07T00:00:00",
+        "close": 28.0,
+        "rs_rank": 2.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 413100.0,
+        "volume_prev": 112000.0
+      },
+      {
+        "symbol": "DLG",
+        "date": "2025-07-07T00:00:00",
+        "close": 2.81,
+        "rs_rank": 3.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 15724400.0,
+        "volume_prev": 4771400.0
+      },
+      {
+        "symbol": "ANV",
+        "date": "2025-07-07T00:00:00",
+        "close": 23.6,
+        "rs_rank": 4.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": "ChoBan",
+        "volume": 2706500.0,
+        "volume_prev": 3668300.0
+      },
+      {
+        "symbol": "CTG",
+        "date": "2025-07-07T00:00:00",
+        "close": 44.4,
+        "rs_rank": 5.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 11497400.0,
+        "volume_prev": 4477100.0
+      },
+      {
+        "symbol": "TCB",
+        "date": "2025-07-07T00:00:00",
+        "close": 35.3,
+        "rs_rank": 6.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 12244900.0,
+        "volume_prev": 12159000.0
+      },
+      {
+        "symbol": "VIX",
+        "date": "2025-07-07T00:00:00",
+        "close": 14.85,
+        "rs_rank": 7.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 69939100.0,
+        "volume_prev": 74330400.0
+      },
+      {
+        "symbol": "HID",
+        "date": "2025-07-07T00:00:00",
+        "close": 2.87,
+        "rs_rank": 8.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 749400.0,
+        "volume_prev": 237300.0
+      },
+      {
+        "symbol": "OCB",
+        "date": "2025-07-07T00:00:00",
+        "close": 12.4,
+        "rs_rank": 9.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 7767300.0,
+        "volume_prev": 3875500.0
+      },
+      {
+        "symbol": "SSI",
+        "date": "2025-07-07T00:00:00",
+        "close": 26.3,
+        "rs_rank": 10.0,
+        "buy_signal": true,
+        "sell_signal": false,
+        "storm_bird_signal": "Mua",
+        "volume": 33309100.0,
+        "volume_prev": 21022600.0
+      }
+    ],
+    "bottom_stocks": [
+      {
+        "symbol": "DHT",
+        "date": "2025-07-07T00:00:00",
+        "close": 82.0,
+        "rs_rank": 253.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 3400.0,
+        "volume_prev": 21800.0
+      },
+      {
+        "symbol": "KOS",
+        "date": "2025-07-07T00:00:00",
+        "close": 38.45,
+        "rs_rank": 254.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 319200.0,
+        "volume_prev": 306000.0
+      },
+      {
+        "symbol": "PXI",
+        "date": "2025-07-04T00:00:00",
+        "close": 1.3,
+        "rs_rank": 255.0,
+        "buy_signal": false,
+        "sell_signal": true,
+        "storm_bird_signal": "Ban",
+        "volume": 300700.0,
+        "volume_prev": 86200.0
+      },
+      {
+        "symbol": "FOX",
+        "date": "2025-07-07T00:00:00",
+        "close": 63.3,
+        "rs_rank": 256.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 61000.0,
+        "volume_prev": 81200.0
+      },
+      {
+        "symbol": "DVP",
+        "date": "2025-07-07T00:00:00",
+        "close": 77.6,
+        "rs_rank": 257.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 14100.0,
+        "volume_prev": 17400.0
+      },
+      {
+        "symbol": "DVP",
+        "date": "2025-07-07T00:00:00",
+        "close": 77.6,
+        "rs_rank": 257.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 14100.0,
+        "volume_prev": 17400.0
+      },
+      {
+        "symbol": "QTP",
+        "date": "2025-07-07T00:00:00",
+        "close": 13.1,
+        "rs_rank": 258.0,
+        "buy_signal": false,
+        "sell_signal": true,
+        "storm_bird_signal": "Ban",
+        "volume": 265700.0,
+        "volume_prev": 77201.0
+      },
+      {
+        "symbol": "SAB",
+        "date": "2025-07-07T00:00:00",
+        "close": 46.4,
+        "rs_rank": 259.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 1320400.0,
+        "volume_prev": 849176.0
+      },
+      {
+        "symbol": "PGC",
+        "date": "2025-07-07T00:00:00",
+        "close": 13.85,
+        "rs_rank": 260.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 34500.0,
+        "volume_prev": 43785.0
+      },
+      {
+        "symbol": "PPC",
+        "date": "2025-07-07T00:00:00",
+        "close": 11.35,
+        "rs_rank": 261.0,
+        "buy_signal": false,
+        "sell_signal": false,
+        "storm_bird_signal": null,
+        "volume": 612400.0,
+        "volume_prev": 432000.0
+      }
+    ]
+  },
+  "industry_rankings": [
+    {
+      "industry": "ngan-hang",
+      "num_symbols": 24,
+      "rank": 1,
+      "total_score": 68.75,
+      "strength_counts": {
+        "early": 19,
+        "medium": 18,
+        "strong": 6
+      },
+      "weakness_counts": {
+        "early": 5,
+        "medium": 3,
+        "strong": 0
+      },
+      "strength_percentages": {
+        "early": 0.7916666666666666,
+        "medium": 0.75,
+        "strong": 0.25
+      },
+      "weakness_percentages": {
+        "early": 0.20833333333333334,
+        "medium": 0.125,
+        "strong": 0.0
+      },
+      "average_scores": {
+        "strength": 2.6458333333333335,
+        "weakness": 1.3541666666666667,
+        "strength_minus_weakness": 1.2916666666666667
+      }
+    },
+    {
+      "industry": "chung-khoan",
+      "num_symbols": 29,
+      "rank": 2,
+      "total_score": 20.344827586206886,
+      "strength_counts": {
+        "early": 21,
+        "medium": 18,
+        "strong": 3
+      },
+      "weakness_counts": {
+        "early": 8,
+        "medium": 6,
+        "strong": 4
+      },
+      "strength_percentages": {
+        "early": 0.7241379310344828,
+        "medium": 0.6206896551724138,
+        "strong": 0.10344827586206896
+      },
+      "weakness_percentages": {
+        "early": 0.27586206896551724,
+        "medium": 0.20689655172413793,
+        "strong": 0.13793103448275862
+      },
+      "average_scores": {
+        "strength": 2.1379310344827585,
+        "weakness": 1.8620689655172413,
+        "strength_minus_weakness": 0.27586206896551724
+      }
+    },
+    {
+      "industry": "bds",
+      "num_symbols": 15,
+      "rank": 3,
+      "total_score": 13.999999999999996,
+      "strength_counts": {
+        "early": 10,
+        "medium": 8,
+        "strong": 3
+      },
+      "weakness_counts": {
+        "early": 5,
+        "medium": 4,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.6666666666666666,
+        "medium": 0.5333333333333333,
+        "strong": 0.2
+      },
+      "weakness_percentages": {
+        "early": 0.3333333333333333,
+        "medium": 0.26666666666666666,
+        "strong": 0.2
+      },
+      "average_scores": {
+        "strength": 2.0,
+        "weakness": 2.0,
+        "strength_minus_weakness": 0.0
+      }
+    },
+    {
+      "industry": "thuy-san",
+      "num_symbols": 8,
+      "rank": 4,
+      "total_score": 12.5,
+      "strength_counts": {
+        "early": 3,
+        "medium": 3,
+        "strong": 3
+      },
+      "weakness_counts": {
+        "early": 5,
+        "medium": 3,
+        "strong": 2
+      },
+      "strength_percentages": {
+        "early": 0.375,
+        "medium": 0.375,
+        "strong": 0.375
+      },
+      "weakness_percentages": {
+        "early": 0.625,
+        "medium": 0.375,
+        "strong": 0.25
+      },
+      "average_scores": {
+        "strength": 2.125,
+        "weakness": 1.875,
+        "strength_minus_weakness": 0.25
+      }
+    },
+    {
+      "industry": "vlxd",
+      "num_symbols": 10,
+      "rank": 5,
+      "total_score": -1.7763568394002505e-15,
+      "strength_counts": {
+        "early": 6,
+        "medium": 4,
+        "strong": 3
+      },
+      "weakness_counts": {
+        "early": 4,
+        "medium": 4,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.6,
+        "medium": 0.4,
+        "strong": 0.3
+      },
+      "weakness_percentages": {
+        "early": 0.4,
+        "medium": 0.4,
+        "strong": 0.3
+      },
+      "average_scores": {
+        "strength": 1.9,
+        "weakness": 2.1,
+        "strength_minus_weakness": -0.2
+      }
+    },
+    {
+      "industry": "thep",
+      "num_symbols": 10,
+      "rank": 6,
+      "total_score": -5.999999999999998,
+      "strength_counts": {
+        "early": 6,
+        "medium": 2,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 4,
+        "medium": 2,
+        "strong": 1
+      },
+      "strength_percentages": {
+        "early": 0.6,
+        "medium": 0.2,
+        "strong": 0.1
+      },
+      "weakness_percentages": {
+        "early": 0.4,
+        "medium": 0.2,
+        "strong": 0.1
+      },
+      "average_scores": {
+        "strength": 1.6,
+        "weakness": 2.4,
+        "strength_minus_weakness": -0.8
+      }
+    },
+    {
+      "industry": "dau-tu-cong",
+      "num_symbols": 9,
+      "rank": 7,
+      "total_score": -42.22222222222222,
+      "strength_counts": {
+        "early": 3,
+        "medium": 3,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 6,
+        "medium": 4,
+        "strong": 2
+      },
+      "strength_percentages": {
+        "early": 0.3333333333333333,
+        "medium": 0.3333333333333333,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.6666666666666666,
+        "medium": 0.4444444444444444,
+        "strong": 0.2222222222222222
+      },
+      "average_scores": {
+        "strength": 1.3888888888888888,
+        "weakness": 2.611111111111111,
+        "strength_minus_weakness": -1.2222222222222223
+      }
+    },
+    {
+      "industry": "cao-su",
+      "num_symbols": 8,
+      "rank": 8,
+      "total_score": -46.25,
+      "strength_counts": {
+        "early": 2,
+        "medium": 2,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 6,
+        "medium": 6,
+        "strong": 2
+      },
+      "strength_percentages": {
+        "early": 0.25,
+        "medium": 0.25,
+        "strong": 0.125
+      },
+      "weakness_percentages": {
+        "early": 0.75,
+        "medium": 0.75,
+        "strong": 0.25
+      },
+      "average_scores": {
+        "strength": 1.5625,
+        "weakness": 2.4375,
+        "strength_minus_weakness": -0.875
+      }
+    },
+    {
+      "industry": "cong-nghe",
+      "num_symbols": 9,
+      "rank": 9,
+      "total_score": -46.66666666666666,
+      "strength_counts": {
+        "early": 4,
+        "medium": 3,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 5,
+        "medium": 3,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.4444444444444444,
+        "medium": 0.3333333333333333,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.5555555555555556,
+        "medium": 0.3333333333333333,
+        "strong": 0.3333333333333333
+      },
+      "average_scores": {
+        "strength": 1.3888888888888888,
+        "weakness": 2.611111111111111,
+        "strength_minus_weakness": -1.2222222222222223
+      }
+    },
+    {
+      "industry": "duong",
+      "num_symbols": 4,
+      "rank": 10,
+      "total_score": -62.5,
+      "strength_counts": {
+        "early": 2,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 2,
+        "medium": 2,
+        "strong": 1
+      },
+      "strength_percentages": {
+        "early": 0.5,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.5,
+        "medium": 0.5,
+        "strong": 0.25
+      },
+      "average_scores": {
+        "strength": 1.125,
+        "weakness": 2.875,
+        "strength_minus_weakness": -1.75
+      }
+    },
+    {
+      "industry": "bds-kcn",
+      "num_symbols": 13,
+      "rank": 11,
+      "total_score": -65.38461538461539,
+      "strength_counts": {
+        "early": 3,
+        "medium": 2,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 10,
+        "medium": 7,
+        "strong": 4
+      },
+      "strength_percentages": {
+        "early": 0.23076923076923078,
+        "medium": 0.15384615384615385,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.7692307692307693,
+        "medium": 0.5384615384615384,
+        "strong": 0.3076923076923077
+      },
+      "average_scores": {
+        "strength": 1.3076923076923077,
+        "weakness": 2.6923076923076925,
+        "strength_minus_weakness": -1.3846153846153846
+      }
+    },
+    {
+      "industry": "xay-dung",
+      "num_symbols": 24,
+      "rank": 12,
+      "total_score": -66.66666666666666,
+      "strength_counts": {
+        "early": 13,
+        "medium": 6,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 11,
+        "medium": 11,
+        "strong": 11
+      },
+      "strength_percentages": {
+        "early": 0.5416666666666666,
+        "medium": 0.25,
+        "strong": 0.041666666666666664
+      },
+      "weakness_percentages": {
+        "early": 0.4583333333333333,
+        "medium": 0.4583333333333333,
+        "strong": 0.4583333333333333
+      },
+      "average_scores": {
+        "strength": 1.125,
+        "weakness": 2.875,
+        "strength_minus_weakness": -1.75
+      }
+    },
+    {
+      "industry": "ban-le",
+      "num_symbols": 13,
+      "rank": 13,
+      "total_score": -73.07692307692307,
+      "strength_counts": {
+        "early": 4,
+        "medium": 3,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 9,
+        "medium": 7,
+        "strong": 6
+      },
+      "strength_percentages": {
+        "early": 0.3076923076923077,
+        "medium": 0.23076923076923078,
+        "strong": 0.07692307692307693
+      },
+      "weakness_percentages": {
+        "early": 0.6923076923076923,
+        "medium": 0.5384615384615384,
+        "strong": 0.46153846153846156
+      },
+      "average_scores": {
+        "strength": 1.0769230769230769,
+        "weakness": 2.923076923076923,
+        "strength_minus_weakness": -1.8461538461538463
+      }
+    },
+    {
+      "industry": "bao-hiem",
+      "num_symbols": 5,
+      "rank": 14,
+      "total_score": -76.0,
+      "strength_counts": {
+        "early": 1,
+        "medium": 1,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 4,
+        "medium": 3,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.2,
+        "medium": 0.2,
+        "strong": 0.2
+      },
+      "weakness_percentages": {
+        "early": 0.8,
+        "medium": 0.6,
+        "strong": 0.6
+      },
+      "average_scores": {
+        "strength": 1.3,
+        "weakness": 2.7,
+        "strength_minus_weakness": -1.4
+      }
+    },
+    {
+      "industry": "det-may",
+      "num_symbols": 9,
+      "rank": 15,
+      "total_score": -76.66666666666666,
+      "strength_counts": {
+        "early": 2,
+        "medium": 1,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 7,
+        "medium": 6,
+        "strong": 4
+      },
+      "strength_percentages": {
+        "early": 0.2222222222222222,
+        "medium": 0.1111111111111111,
+        "strong": 0.1111111111111111
+      },
+      "weakness_percentages": {
+        "early": 0.7777777777777778,
+        "medium": 0.6666666666666666,
+        "strong": 0.4444444444444444
+      },
+      "average_scores": {
+        "strength": 1.2222222222222223,
+        "weakness": 2.7777777777777777,
+        "strength_minus_weakness": -1.5555555555555556
+      }
+    },
+    {
+      "industry": "van-tai",
+      "num_symbols": 18,
+      "rank": 16,
+      "total_score": -80.0,
+      "strength_counts": {
+        "early": 9,
+        "medium": 4,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 9,
+        "medium": 9,
+        "strong": 9
+      },
+      "strength_percentages": {
+        "early": 0.5,
+        "medium": 0.2222222222222222,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.5,
+        "medium": 0.5,
+        "strong": 0.5
+      },
+      "average_scores": {
+        "strength": 1.0555555555555556,
+        "weakness": 2.9444444444444446,
+        "strength_minus_weakness": -1.8888888888888888
+      }
+    },
+    {
+      "industry": "dien",
+      "num_symbols": 6,
+      "rank": 17,
+      "total_score": -85.0,
+      "strength_counts": {
+        "early": 3,
+        "medium": 1,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 3,
+        "medium": 3,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.5,
+        "medium": 0.16666666666666666,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.5,
+        "medium": 0.5,
+        "strong": 0.5
+      },
+      "average_scores": {
+        "strength": 0.9166666666666666,
+        "weakness": 3.0833333333333335,
+        "strength_minus_weakness": -2.1666666666666665
+      }
+    },
+    {
+      "industry": "hoa-chat",
+      "num_symbols": 7,
+      "rank": 18,
+      "total_score": -90.0,
+      "strength_counts": {
+        "early": 1,
+        "medium": 1,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 6,
+        "medium": 5,
+        "strong": 4
+      },
+      "strength_percentages": {
+        "early": 0.14285714285714285,
+        "medium": 0.14285714285714285,
+        "strong": 0.14285714285714285
+      },
+      "weakness_percentages": {
+        "early": 0.8571428571428571,
+        "medium": 0.7142857142857143,
+        "strong": 0.5714285714285714
+      },
+      "average_scores": {
+        "strength": 1.1428571428571428,
+        "weakness": 2.857142857142857,
+        "strength_minus_weakness": -1.7142857142857142
+      }
+    },
+    {
+      "industry": "dau-khi",
+      "num_symbols": 12,
+      "rank": 19,
+      "total_score": -90.83333333333333,
+      "strength_counts": {
+        "early": 2,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 10,
+        "medium": 10,
+        "strong": 4
+      },
+      "strength_percentages": {
+        "early": 0.16666666666666666,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.8333333333333334,
+        "medium": 0.8333333333333334,
+        "strong": 0.3333333333333333
+      },
+      "average_scores": {
+        "strength": 1.125,
+        "weakness": 2.875,
+        "strength_minus_weakness": -1.75
+      }
+    },
+    {
+      "industry": "cang-bien",
+      "num_symbols": 6,
+      "rank": 20,
+      "total_score": -106.66666666666666,
+      "strength_counts": {
+        "early": 2,
+        "medium": 2,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 4,
+        "medium": 4,
+        "strong": 4
+      },
+      "strength_percentages": {
+        "early": 0.3333333333333333,
+        "medium": 0.3333333333333333,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.6666666666666666,
+        "medium": 0.6666666666666666,
+        "strong": 0.6666666666666666
+      },
+      "average_scores": {
+        "strength": 0.8333333333333334,
+        "weakness": 3.1666666666666665,
+        "strength_minus_weakness": -2.3333333333333335
+      }
+    },
+    {
+      "industry": "hang-khong",
+      "num_symbols": 8,
+      "rank": 21,
+      "total_score": -133.75,
+      "strength_counts": {
+        "early": 1,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 7,
+        "medium": 7,
+        "strong": 5
+      },
+      "strength_percentages": {
+        "early": 0.125,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.875,
+        "medium": 0.875,
+        "strong": 0.625
+      },
+      "average_scores": {
+        "strength": 0.5625,
+        "weakness": 3.4375,
+        "strength_minus_weakness": -2.875
+      }
+    },
+    {
+      "industry": "hang-tieu-dung",
+      "num_symbols": 4,
+      "rank": 22,
+      "total_score": -142.5,
+      "strength_counts": {
+        "early": 0,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 4,
+        "medium": 3,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.0,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 1.0,
+        "medium": 0.75,
+        "strong": 0.75
+      },
+      "average_scores": {
+        "strength": 0.625,
+        "weakness": 3.375,
+        "strength_minus_weakness": -2.75
+      }
+    },
+    {
+      "industry": "y-te",
+      "num_symbols": 9,
+      "rank": 23,
+      "total_score": -147.77777777777777,
+      "strength_counts": {
+        "early": 1,
+        "medium": 1,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 8,
+        "medium": 8,
+        "strong": 7
+      },
+      "strength_percentages": {
+        "early": 0.1111111111111111,
+        "medium": 0.1111111111111111,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.8888888888888888,
+        "medium": 0.8888888888888888,
+        "strong": 0.7777777777777778
+      },
+      "average_scores": {
+        "strength": 0.4444444444444444,
+        "weakness": 3.5555555555555554,
+        "strength_minus_weakness": -3.111111111111111
+      }
+    }
+  ],
+  "market_participation": null,
+  "abnormal_signals": {
+    "stock_abnormalities_count": 39,
+    "industry_abnormalities_count": 4,
+    "stock_signal_counts": {
+      "WideSpread": 12,
+      "NarrowSpread": 1,
+      "HighVolume": 10,
+      "LowVolume": 0,
+      "EffortGTResult": 0,
+      "ResultGTEffort": 0,
+      "AbnormalERRatio": 27
+    },
+    "industry_signal_counts": {
+      "WideSpread": 3,
+      "NarrowSpread": 1,
+      "HighVolume": 1,
+      "LowVolume": 0,
+      "EffortGTResult": 1,
+      "ResultGTEffort": 0,
+      "AbnormalERRatio": 0
+    },
+    "top_performers": [],
+    "top_industry_performers": []
+  },
+  "summary_insights": [
+    "Consider overweighting ngan-hang (rank 1)",
+    "Consider underweighting y-te (rank 23)",
+    "Abnormal market signals detected in stocks - monitor for potential market impact",
+    "Abnormal market signals detected in industries - consider sector rotation"
+  ]
+}
