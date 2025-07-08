@@ -8,7 +8,8 @@
     "build": "vite build --emptyOutDir",
     "copy-data": "node -e \"const fs=require('fs');const path=require('path');const srcDir='src/data';const publicDir='public/data';if(!fs.existsSync(publicDir))fs.mkdirSync(publicDir,{recursive:true});if(fs.existsSync(srcDir)){fs.readdirSync(srcDir).forEach(f=>{if(f.endsWith('.json')){fs.copyFileSync(path.join(srcDir,f),path.join(publicDir,f));console.log('📁 Copied:',f);}});}\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm run build && npx gh-pages -d dist"
   },
   "dependencies": {
     "@embed-tools/components": "workspace:*",

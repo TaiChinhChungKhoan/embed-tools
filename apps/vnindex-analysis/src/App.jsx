@@ -289,7 +289,7 @@ export default function App() {
                 <footer className="text-center mt-8 text-xs text-gray-500">
                     <p>© 2025 Taichinhchungkhoan.com</p>
                     <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
-                    <p className="mt-2">Sử dụng dữ liệu từ Wichart.vn và Investing.com</p>
+                    <p className="mt-2">Sử dụng dữ liệu từ <a href="https://vnstocks.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">https://vnstocks.com/</a> Wichart.vn và Investing.com</p>
                     <p className="mt-2">
                         <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục.
                         Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
