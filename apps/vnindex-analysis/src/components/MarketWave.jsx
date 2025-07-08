@@ -23,24 +23,28 @@ const MarketWave = () => {
 
     function tryInitChart() {
       if (containerEl.clientWidth > 0 && !chartRef.current) {
-        // Clean up existing chart if it exists
-        if (chartRef.current) {
-          chartRef.current.remove();
-          chartRef.current = null;
-          setChartInitialized(false);
-        }
-        // Light theme options
-        const chart = createChart(containerEl, {
-          width: containerEl.clientWidth,
-          height: containerEl.clientHeight,
-          layout: { background: { color: '#fff' }, textColor: '#222' },
-          grid: { vertLines: { color: '#e5e7eb' }, horzLines: { color: '#e5e7eb' } },
-          crosshair: { mode: 1 },
-          rightPriceScale: { borderColor: '#d1d5db' },
-          timeScale: { borderColor: '#d1d5db', timeVisible: true, secondsVisible: false },
-        });
-        chartRef.current = chart;
-        setChartInitialized(true);
+        // Add a small delay to ensure container is fully ready
+        setTimeout(() => {
+          if (containerEl.clientWidth > 0 && !chartRef.current) {
+            try {
+              // Light theme options
+              const chart = createChart(containerEl, {
+                width: containerEl.clientWidth,
+                height: containerEl.clientHeight,
+                layout: { background: { color: '#fff' }, textColor: '#222' },
+                grid: { vertLines: { color: '#e5e7eb' }, horzLines: { color: '#e5e7eb' } },
+                crosshair: { mode: 1 },
+                rightPriceScale: { borderColor: '#d1d5db' },
+                timeScale: { borderColor: '#d1d5db', timeVisible: true, secondsVisible: false },
+              });
+              chartRef.current = chart;
+              setChartInitialized(true);
+            } catch (error) {
+              console.error('Error creating chart:', error);
+              setChartInitialized(false);
+            }
+          }
+        }, 50); // Small delay to ensure DOM is ready
       }
     }
 
@@ -54,8 +58,13 @@ const MarketWave = () => {
     return () => {
       if (ro) ro.disconnect();
       if (chartRef.current) {
-        chartRef.current.remove();
+        try {
+          chartRef.current.remove();
+        } catch (error) {
+          console.error('Error removing chart:', error);
+        }
         chartRef.current = null;
+        setChartInitialized(false);
       }
     };
   }, [containerEl]);
@@ -67,10 +76,25 @@ const MarketWave = () => {
     }
     const chart = chartRef.current;
 
+    // Add null check for chart
+    if (!chart) {
+      console.warn('Chart is not initialized yet, skipping series drawing');
+      return;
+    }
+
     // clear previous
     if (chart) {
-      seriesRef.current.forEach(s => chart.removeSeries(s));
-      seriesRef.current = [];
+      try {
+        seriesRef.current.forEach(s => {
+          if (s && typeof s.remove === 'function') {
+            chart.removeSeries(s);
+          }
+        });
+        seriesRef.current = [];
+      } catch (error) {
+        console.error('Error clearing previous series:', error);
+        seriesRef.current = [];
+      }
     }
 
     // --- VNINDEX price (pane 0) ---
@@ -90,9 +114,13 @@ const MarketWave = () => {
         };
       }).filter(Boolean);
       if (priceData.length) {
-        const priceSeries = chart.addSeries(BarSeries, { upColor: '#26a69a', downColor: '#ef5350' }, 0);
-        priceSeries.setData(priceData);
-        seriesRef.current.push(priceSeries);
+        try {
+          const priceSeries = chart.addSeries(BarSeries, { upColor: '#26a69a', downColor: '#ef5350' }, 0);
+          priceSeries.setData(priceData);
+          seriesRef.current.push(priceSeries);
+        } catch (error) {
+          console.error('Error adding price series:', error);
+        }
       }
 
       // --- VNINDEX volume (pane 1) ---
@@ -102,13 +130,17 @@ const MarketWave = () => {
         return { time: d.slice(0, 10), value: Number(v) };
       }).filter(Boolean);
       if (volData.length) {
-        const volSeries = chart.addSeries(HistogramSeries, {
-          color: '#c792ea',
-          priceFormat: { type: 'volume' },
-          scaleMargins: { top: 0.8, bottom: 0 },
-        }, 1);
-        volSeries.setData(volData);
-        seriesRef.current.push(volSeries);
+        try {
+          const volSeries = chart.addSeries(HistogramSeries, {
+            color: '#c792ea',
+            priceFormat: { type: 'volume' },
+            scaleMargins: { top: 0.8, bottom: 0 },
+          }, 1);
+          volSeries.setData(volData);
+          seriesRef.current.push(volSeries);
+        } catch (error) {
+          console.error('Error adding volume series:', error);
+        }
       }
     }
 
@@ -134,18 +166,27 @@ const MarketWave = () => {
           return { time: d.slice(0, 10), value: Number(v) };
         }).filter(Boolean);
         if (lineData.length) {
-          const series = chart.addSeries(LineSeries, { color: indicatorConfigs[key].color, lineWidth: 2 }, 2);
-          series.setData(lineData);
-          seriesRef.current.push(series);
+          try {
+            const series = chart.addSeries(LineSeries, { color: indicatorConfigs[key].color, lineWidth: 2 }, 2);
+            series.setData(lineData);
+            seriesRef.current.push(series);
+          } catch (error) {
+            console.error(`Error adding ${key} series:`, error);
+          }
         }
       });
     }
-    chart.timeScale().fitContent();
+    
+    try {
+      chart.timeScale().fitContent();
 
-    const panes = chart.panes();
-    if (panes[0]) panes[0].setHeight(400); // Price
-    if (panes[1]) panes[1].setHeight(150); // Volume
-    if (panes[2]) panes[2].setHeight(200); // Breadth
+      const panes = chart.panes();
+      if (panes[0]) panes[0].setHeight(400); // Price
+      if (panes[1]) panes[1].setHeight(150); // Volume
+      if (panes[2]) panes[2].setHeight(200); // Breadth
+    } catch (error) {
+      console.error('Error configuring chart:', error);
+    }
   }, [data, chartInitialized]);
 
   // Donut chart colors and labels

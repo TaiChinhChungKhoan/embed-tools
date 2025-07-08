@@ -23,24 +23,28 @@ const MarketBreadth = ({ turnover, volume }) => {
 
         function tryInitChart() {
             if (containerEl.clientWidth > 0 && !chartRef.current) {
-                // Clean up existing chart if it exists
-                if (chartRef.current) {
-                    chartRef.current.remove();
-                    chartRef.current = null;
-                    setChartInitialized(false);
-                }
-                // Light theme options
-                const chart = createChart(containerEl, {
-                    width: containerEl.clientWidth,
-                    height: containerEl.clientHeight,
-                    layout: { background: { color: '#fff' }, textColor: '#222' },
-                    grid: { vertLines: { color: '#e5e7eb' }, horzLines: { color: '#e5e7eb' } },
-                    crosshair: { mode: 1 },
-                    rightPriceScale: { borderColor: '#d1d5db' },
-                    timeScale: { borderColor: '#d1d5db', timeVisible: true, secondsVisible: false },
-                });
-                chartRef.current = chart;
-                setChartInitialized(true);
+                // Add a small delay to ensure container is fully ready
+                setTimeout(() => {
+                    if (containerEl.clientWidth > 0 && !chartRef.current) {
+                        try {
+                            // Light theme options
+                            const chart = createChart(containerEl, {
+                                width: containerEl.clientWidth,
+                                height: containerEl.clientHeight,
+                                layout: { background: { color: '#fff' }, textColor: '#222' },
+                                grid: { vertLines: { color: '#e5e7eb' }, horzLines: { color: '#e5e7eb' } },
+                                crosshair: { mode: 1 },
+                                rightPriceScale: { borderColor: '#d1d5db' },
+                                timeScale: { borderColor: '#d1d5db', timeVisible: true, secondsVisible: false },
+                            });
+                            chartRef.current = chart;
+                            setChartInitialized(true);
+                        } catch (error) {
+                            console.error('Error creating chart:', error);
+                            setChartInitialized(false);
+                        }
+                    }
+                }, 50); // Small delay to ensure DOM is ready
             }
         }
 
@@ -54,8 +58,13 @@ const MarketBreadth = ({ turnover, volume }) => {
         return () => {
             if (ro) ro.disconnect();
             if (chartRef.current) {
-                chartRef.current.remove();
+                try {
+                    chartRef.current.remove();
+                } catch (error) {
+                    console.error('Error removing chart:', error);
+                }
                 chartRef.current = null;
+                setChartInitialized(false);
             }
         };
     }, [containerEl, showChart]);
@@ -67,10 +76,25 @@ const MarketBreadth = ({ turnover, volume }) => {
         }
         const chart = chartRef.current;
 
+        // Add null check for chart
+        if (!chart) {
+            console.warn('Chart is not initialized yet, skipping series drawing');
+            return;
+        }
+
         // clear previous
         if (chart) {
-            seriesRef.current.forEach(s => chart.removeSeries(s));
-            seriesRef.current = [];
+            try {
+                seriesRef.current.forEach(s => {
+                    if (s && typeof s.remove === 'function') {
+                        chart.removeSeries(s);
+                    }
+                });
+                seriesRef.current = [];
+            } catch (error) {
+                console.error('Error clearing previous series:', error);
+                seriesRef.current = [];
+            }
         }
 
         // --- Up/Down Smoothed Counts (pane 0) ---
@@ -91,34 +115,46 @@ const MarketBreadth = ({ turnover, volume }) => {
             })).filter(d => d.value != null && !isNaN(d.value));
 
             if (upSmoothedData.length) {
-                const upSeries = chart.addSeries(LineSeries, { 
-                    color: '#10b981', 
-                    lineWidth: 2,
-                    title: 'Tăng (mượt hóa)'
-                }, 0);
-                upSeries.setData(upSmoothedData);
-                seriesRef.current.push(upSeries);
+                try {
+                    const upSeries = chart.addSeries(LineSeries, { 
+                        color: '#10b981', 
+                        lineWidth: 2,
+                        title: 'Tăng (mượt hóa)'
+                    }, 0);
+                    upSeries.setData(upSmoothedData);
+                    seriesRef.current.push(upSeries);
+                } catch (error) {
+                    console.error('Error adding up series:', error);
+                }
             }
 
             if (downSmoothedData.length) {
-                const downSeries = chart.addSeries(LineSeries, { 
-                    color: '#ef4444', 
-                    lineWidth: 2,
-                    title: 'Giảm (mượt hóa)'
-                }, 0);
-                downSeries.setData(downSmoothedData);
-                seriesRef.current.push(downSeries);
+                try {
+                    const downSeries = chart.addSeries(LineSeries, { 
+                        color: '#ef4444', 
+                        lineWidth: 2,
+                        title: 'Giảm (mượt hóa)'
+                    }, 0);
+                    downSeries.setData(downSmoothedData);
+                    seriesRef.current.push(downSeries);
+                } catch (error) {
+                    console.error('Error adding down series:', error);
+                }
             }
 
             if (unchangedData.length) {
-                const unchangedSeries = chart.addSeries(LineSeries, { 
-                    color: '#6b7280', 
-                    lineWidth: 1,
-                    lineStyle: 1, // Dashed line
-                    title: 'Đứng'
-                }, 0);
-                unchangedSeries.setData(unchangedData);
-                seriesRef.current.push(unchangedSeries);
+                try {
+                    const unchangedSeries = chart.addSeries(LineSeries, { 
+                        color: '#6b7280', 
+                        lineWidth: 1,
+                        lineStyle: 1, // Dashed line
+                        title: 'Đứng'
+                    }, 0);
+                    unchangedSeries.setData(unchangedData);
+                    seriesRef.current.push(unchangedSeries);
+                } catch (error) {
+                    console.error('Error adding unchanged series:', error);
+                }
             }
         }
 
@@ -130,21 +166,29 @@ const MarketBreadth = ({ turnover, volume }) => {
             })).filter(d => d.value != null && !isNaN(d.value));
 
             if (smoothedRatioData.length) {
-                const ratioSeries = chart.addSeries(LineSeries, { 
-                    color: '#3b82f6', 
-                    lineWidth: 3,
-                    title: 'Tỷ lệ Tăng/Giảm (mượt hóa) (%)'
-                }, 1);
-                ratioSeries.setData(smoothedRatioData);
-                seriesRef.current.push(ratioSeries);
+                try {
+                    const ratioSeries = chart.addSeries(LineSeries, { 
+                        color: '#3b82f6', 
+                        lineWidth: 3,
+                        title: 'Tỷ lệ Tăng/Giảm (mượt hóa) (%)'
+                    }, 1);
+                    ratioSeries.setData(smoothedRatioData);
+                    seriesRef.current.push(ratioSeries);
+                } catch (error) {
+                    console.error('Error adding ratio series:', error);
+                }
             }
         }
 
-        chart.timeScale().fitContent();
+        try {
+            chart.timeScale().fitContent();
 
-        const panes = chart.panes();
-        if (panes[0]) panes[0].setHeight(300); // Counts
-        if (panes[1]) panes[1].setHeight(150); // Ratio
+            const panes = chart.panes();
+            if (panes[0]) panes[0].setHeight(300); // Counts
+            if (panes[1]) panes[1].setHeight(150); // Ratio
+        } catch (error) {
+            console.error('Error configuring chart:', error);
+        }
     }, [data, chartInitialized, showChart]);
 
     // Calculate current statistics
