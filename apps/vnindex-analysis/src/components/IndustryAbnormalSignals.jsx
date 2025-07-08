@@ -187,18 +187,18 @@ const IndustryAbnormalSignals = () => {
                                 </h4>
                             </div>
                             <div className="space-y-3">
-                                {industry_performance?.top_gainers?.slice(0, 5).map((item, index) => (
+                                {industry_immediate?.top_immediate_gainers?.slice(0, 5).map((item, index) => (
                                     <div key={index} className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
                                         <div>
                                             <span className="font-medium text-gray-900 dark:text-gray-100">
                                                 {item.Name || item.Symbol}
                                             </span>
                                             <div className="text-sm text-gray-500 dark:text-gray-400">
-                                                Cải thiện: {formatPercentage(item.Improvement)}
+                                                Lợi nhuận tức thì
                                             </div>
                                         </div>
                                         <span className="text-green-600 dark:text-green-400 font-semibold">
-                                            +{formatPercentage(item.Return)}
+                                            +{formatPercentage(item.ImmediateReturn)}
                                         </span>
                                     </div>
                                 ))}
@@ -214,77 +214,25 @@ const IndustryAbnormalSignals = () => {
                                 </h4>
                             </div>
                             <div className="space-y-3">
-                                {industry_performance?.top_losers?.slice(0, 5).map((item, index) => (
+                                {industry_immediate?.top_immediate_losers?.slice(0, 5).map((item, index) => (
                                     <div key={index} className="flex items-center justify-between p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
                                         <div>
                                             <span className="font-medium text-gray-900 dark:text-gray-100">
                                                 {item.Name || item.Symbol}
                                             </span>
                                             <div className="text-sm text-gray-500 dark:text-gray-400">
-                                                Suy giảm: {formatPercentage(item.Improvement)}
+                                                Lỗ tức thì
                                             </div>
                                         </div>
                                         <span className="text-red-600 dark:text-red-400 font-semibold">
-                                            {formatPercentage(item.Return)}
+                                            {formatPercentage(item.ImmediateReturn)}
                                         </span>
                                     </div>
                                 ))}
                             </div>
                         </Card>
 
-                        {/* Top Improving Industries */}
-                        <Card className="p-6">
-                            <div className="flex items-center gap-2 mb-4">
-                                <TrendingUp className="h-5 w-5 text-blue-500" />
-                                <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-                                    Ngành cải thiện mạnh nhất
-                                </h4>
-                            </div>
-                            <div className="space-y-3">
-                                {industry_performance?.top_improving?.slice(0, 5).map((item, index) => (
-                                    <div key={index} className="flex items-center justify-between p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                                        <div>
-                                            <span className="font-medium text-gray-900 dark:text-gray-100">
-                                                {item.Name || item.Symbol}
-                                            </span>
-                                            <div className="text-sm text-gray-500 dark:text-gray-400">
-                                                Lợi nhuận: {formatPercentage(item.Return)}
-                                            </div>
-                                        </div>
-                                        <span className="text-blue-600 dark:text-blue-400 font-semibold">
-                                            +{formatPercentage(item.Improvement)}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
-                        </Card>
 
-                        {/* Top Degrading Industries */}
-                        <Card className="p-6">
-                            <div className="flex items-center gap-2 mb-4">
-                                <TrendingDown className="h-5 w-5 text-orange-500" />
-                                <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-                                    Ngành suy giảm mạnh nhất
-                                </h4>
-                            </div>
-                            <div className="space-y-3">
-                                {industry_performance?.top_degrading?.slice(0, 5).map((item, index) => (
-                                    <div key={index} className="flex items-center justify-between p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
-                                        <div>
-                                            <span className="font-medium text-gray-900 dark:text-gray-100">
-                                                {item.Name || item.Symbol}
-                                            </span>
-                                            <div className="text-sm text-gray-500 dark:text-gray-400">
-                                                Lợi nhuận: {formatPercentage(item.Return)}
-                                            </div>
-                                        </div>
-                                        <span className="text-orange-600 dark:text-orange-400 font-semibold">
-                                            {formatPercentage(item.Improvement)}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
-                        </Card>
                     </div>
                 </div>
             )}
