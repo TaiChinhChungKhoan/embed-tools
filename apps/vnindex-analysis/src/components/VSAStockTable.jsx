@@ -345,25 +345,17 @@ const VSAStockTable = ({ individual_results }) => {
                             const bullishScore = analysis?.bullish_score || 0;
                             const isExpanded = expandedRows.has(stock.symbol);
                             
-                            // Only calculate signals if row is expanded or we need counts
-                            const allSignals = useMemo(() => {
-                                if (!isExpanded && !sentimentFilter && !strengthFilter) {
-                                    // Just return count for non-expanded rows without filters
-                                    return stock.recent_analyses?.reduce((total, analysis) => 
-                                        total + (analysis.signals?.length || 0), 0
-                                    ) || 0;
-                                }
-                                return stock.recent_analyses?.flatMap(analysis => 
-                                    analysis.signals?.map(signal => ({
-                                        ...signal,
-                                        date: analysis.timestamp,
-                                        days_ago: analysis.days_ago
-                                    })) || []
-                                ) || [];
-                            }, [stock.recent_analyses, isExpanded, sentimentFilter, strengthFilter]);
+                            // Calculate all signals for this stock
+                            const allSignals = stock.recent_analyses?.flatMap(analysis => 
+                                analysis.signals?.map(signal => ({
+                                    ...signal,
+                                    date: analysis.timestamp,
+                                    days_ago: analysis.days_ago
+                                })) || []
+                            ) || [];
                             
-                            const signalCount = typeof allSignals === 'number' ? allSignals : allSignals.length;
-                            const strongSignals = typeof allSignals === 'number' ? 0 : allSignals.filter(signal => signal.strength === 'strong').length;
+                            const signalCount = allSignals.length;
+                            const strongSignals = allSignals.filter(signal => signal.strength === 'strong').length;
 
                             return (
                                 <React.Fragment key={index}>
@@ -424,7 +416,7 @@ const VSAStockTable = ({ individual_results }) => {
                                                     <h4 className="font-medium text-gray-900 dark:text-gray-100">
                                                         Tín hiệu VSA cho {stock.symbol}
                                                     </h4>
-                                                    {typeof allSignals === 'object' && allSignals.length > 0 ? (
+                                                    {allSignals.length > 0 ? (
                                                         <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
                                                             {allSignals.map((signal, signalIndex) => (
                                                                 <div key={signalIndex} className="bg-white dark:bg-gray-700 rounded p-3 border border-gray-200 dark:border-gray-600">
