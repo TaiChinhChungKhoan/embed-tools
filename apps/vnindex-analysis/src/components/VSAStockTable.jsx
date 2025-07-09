@@ -1,15 +1,20 @@
 import React, { useState, useMemo } from 'react';
 import { Search, ChevronDown, ChevronUp, TrendingUp, TrendingDown, Activity } from 'lucide-react';
 import Card from './Card';
+import { getTickerIndustry, getAvailableIndustries } from '../utils/rrgDataLoader';
 
 const VSAStockTable = ({ individual_results }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [marketStateFilter, setMarketStateFilter] = useState('');
     const [sentimentFilter, setSentimentFilter] = useState('');
     const [strengthFilter, setStrengthFilter] = useState('');
+    const [industryFilter, setIndustryFilter] = useState('');
     const [sortField, setSortField] = useState('bullish_score');
     const [sortDirection, setSortDirection] = useState('desc');
     const [expandedRows, setExpandedRows] = useState(new Set());
+
+    // Get available industries for filtering
+    const availableIndustries = useMemo(() => getAvailableIndustries(), []);
 
     // Helper function to get sentiment color
     const getSentimentColor = (sentiment) => {
@@ -132,7 +137,12 @@ const VSAStockTable = ({ individual_results }) => {
             const matchesStrength = strengthFilter === '' || 
                 allSignals.some(signal => signal.strength === strengthFilter);
             
-            return matchesSearch && matchesMarketState && matchesSentiment && matchesStrength;
+            // Check industry filter
+            const stockIndustry = getTickerIndustry(stock.symbol);
+            const matchesIndustry = industryFilter === '' || 
+                (stockIndustry && stockIndustry.id === industryFilter);
+            
+            return matchesSearch && matchesMarketState && matchesSentiment && matchesStrength && matchesIndustry;
         });
 
         // Sort data
@@ -148,7 +158,7 @@ const VSAStockTable = ({ individual_results }) => {
         });
 
         return filtered;
-    }, [individual_results, searchTerm, marketStateFilter, sentimentFilter, strengthFilter, sortField, sortDirection]);
+    }, [individual_results, searchTerm, marketStateFilter, sentimentFilter, strengthFilter, industryFilter, sortField, sortDirection]);
 
     // Handle sort
     const handleSort = (field) => {
@@ -194,7 +204,7 @@ const VSAStockTable = ({ individual_results }) => {
 
             {/* Search and Filters */}
             <Card className="p-4">
-                <div className="grid gap-4 md:grid-cols-6">
+                <div className="grid gap-4 md:grid-cols-7">
                     {/* Search Bar */}
                     <div className="md:col-span-2">
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -225,6 +235,24 @@ const VSAStockTable = ({ individual_results }) => {
                             {uniqueMarketStates.map((state) => (
                                 <option key={state} value={state}>
                                     {state}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    {/* Industry Filter */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Ngành
+                        </label>
+                        <select
+                            value={industryFilter}
+                            onChange={(e) => setIndustryFilter(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-sm"
+                        >
+                            <option value="">Tất cả ngành</option>
+                            {availableIndustries.map((industry) => (
+                                <option key={industry.id} value={industry.id}>
+                                    {industry.name}
                                 </option>
                             ))}
                         </select>
@@ -272,6 +300,7 @@ const VSAStockTable = ({ individual_results }) => {
                                 setMarketStateFilter('');
                                 setSentimentFilter('');
                                 setStrengthFilter('');
+                                setIndustryFilter('');
                                 setSearchTerm('');
                             }}
                             className="w-full px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg text-sm font-medium transition-colors"
@@ -288,6 +317,9 @@ const VSAStockTable = ({ individual_results }) => {
                         <tr>
                             <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                                 Mã
+                            </th>
+                            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                Ngành
                             </th>
                             <th 
                                 className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
@@ -373,6 +405,9 @@ const VSAStockTable = ({ individual_results }) => {
                                                 </div>
                                             </div>
                                         </td>
+                                        <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                                            {getTickerIndustry(stock.symbol)?.name || 'Unknown'}
+                                        </td>
                                         <td className="px-4 py-3 whitespace-nowrap">
                                             <span className={`text-sm font-medium ${
                                                 bullishScore > 20 
@@ -411,7 +446,7 @@ const VSAStockTable = ({ individual_results }) => {
                                     {/* Expanded row with signals */}
                                     {isExpanded && (
                                         <tr>
-                                            <td colSpan="7" className="px-4 py-3 bg-gray-50 dark:bg-gray-800">
+                                            <td colSpan="8" className="px-4 py-3 bg-gray-50 dark:bg-gray-800">
                                                 <div className="space-y-3">
                                                     <h4 className="font-medium text-gray-900 dark:text-gray-100">
                                                         Tín hiệu VSA cho {stock.symbol}
