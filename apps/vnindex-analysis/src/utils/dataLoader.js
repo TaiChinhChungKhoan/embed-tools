@@ -64,6 +64,11 @@ class DataLoader {
         return this.fetchData(`${this.basePath}/data/market_breadth_4.json`);
     }
 
+    // Load market breadth 5 data (EMA breadth analysis)
+    async loadMarketBreadth5() {
+        return this.fetchData(`${this.basePath}/data/market_breadth_5.json`);
+    }
+
     // Load other data files (to be added as needed)
     async loadIndustriesData() {
         return this.fetchData(`${this.basePath}/data/industry_strength_analysis.json`);

@@ -14,6 +14,7 @@ import MarketOverviewReport from './components/MarketOverviewReport';
 import MacroeconomicsReport from './components/MacroeconomicsReport';
 import IndustryStrengthChart from './components/IndustryStrengthChart';
 import VSAReport from './components/VSAReport';
+import EMABreadthChart from './components/EMABreadthChart';
 import GlobalReloadButton from './components/GlobalReloadButton';
 import { DataReloadProvider } from './contexts/DataReloadContext';
 import iframeUtils from '@embed-tools/iframe-utils';
@@ -238,12 +239,13 @@ export default function App() {
                                 <>
                                     {activeTab === 'Market' && (
                                         <div className="space-y-8">
-                                            <MarketOverview />
                                             <TickerChart 
                                                 ticker="VNINDEX_EW" 
                                                 title="VNINDEX Equal Weight"
-                                                description="Biểu đồ giá và khối lượng giao dịch VNINDEX Equal Weight"
+                                                description="Biểu đồ VNINDEX cân bằng (loại bỏ vốn hóa thị trường)"
                                             />
+                                            <EMABreadthChart />
+                                            <MarketOverview />
                                             <MarketWave />
                                         </div>
                                     )}

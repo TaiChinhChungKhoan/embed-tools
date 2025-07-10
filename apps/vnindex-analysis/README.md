@@ -792,3 +792,38 @@ Signal Details:
 - description: Human-readable description of the signal
 - action_suggestion: Trading action suggestion
 - confidence: Signal confidence (0.0-1.0)
+
+8. EMA Breadth Analysis for VN-Index
+
+This script analyzes the breadth of stocks above/below various Exponential Moving Averages (EMAs)
+for the VN-Index market. The analysis helps identify market trends and momentum.
+
+market_breadth5.json Output JSON Structure:
+{
+  "2024-01-01": {
+    "total_stocks": 500,
+    "stocks_with_data": 450,
+    "above_ema_5": 280,
+    "below_ema_5": 170,
+    "pct_above_ema_5": 62.2,
+    "pct_below_ema_5": 37.8,
+    "above_ema_10": 265,
+    "below_ema_10": 185,
+    "pct_above_ema_10": 58.9,
+    "pct_below_ema_10": 41.1,
+    "above_ema_20": 250,
+    "below_ema_20": 200,
+    "pct_above_ema_20": 55.6,
+    "pct_below_ema_20": 44.4,
+    "above_ema_50": 240,
+    "below_ema_50": 210,
+    "pct_above_ema_50": 53.3,
+    "pct_below_ema_50": 46.7,
+    "above_ema_200": 220,
+    "below_ema_200": 230,
+    "pct_above_ema_200": 48.9,
+    "pct_below_ema_200": 51.1
+  }
+}
+
+EMA Periods: 5, 10, 20, 50, 200 days

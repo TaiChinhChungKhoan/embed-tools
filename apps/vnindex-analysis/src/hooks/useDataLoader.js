@@ -22,6 +22,9 @@ export const useDataLoader = (dataType, options = {}) => {
                 case 'market_breadth_4':
                     result = await dataLoader.loadMarketBreadth4();
                     break;
+                case 'market_breadth_5':
+                    result = await dataLoader.loadMarketBreadth5();
+                    break;
                 case 'industries':
                     result = await dataLoader.loadIndustriesData();
                     break;
