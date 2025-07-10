@@ -113,6 +113,23 @@ export const useDataLoader = (dataType, options = {}) => {
         loadData();
     }, [loadData]);
 
+    // Listen for global reload events
+    useEffect(() => {
+        const handleGlobalReload = (event) => {
+            const reloadedDataType = event.detail?.dataType;
+            // If no specific data type is specified, or if it matches this hook's data type, reload
+            if (!reloadedDataType || reloadedDataType === dataType) {
+                refreshData();
+            }
+        };
+
+        window.addEventListener('dataReloaded', handleGlobalReload);
+        
+        return () => {
+            window.removeEventListener('dataReloaded', handleGlobalReload);
+        };
+    }, [dataType, refreshData]);
+
     // Auto-refresh if refreshInterval is provided
     useEffect(() => {
         if (options.refreshInterval) {
@@ -246,6 +263,23 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
     useEffect(() => {
         loadAllData();
     }, [loadAllData]);
+
+    // Listen for global reload events
+    useEffect(() => {
+        const handleGlobalReload = (event) => {
+            const reloadedDataType = event.detail?.dataType;
+            // If no specific data type is specified, or if it matches any of this hook's data types, reload
+            if (!reloadedDataType || dataTypes.includes(reloadedDataType)) {
+                refreshData();
+            }
+        };
+
+        window.addEventListener('dataReloaded', handleGlobalReload);
+        
+        return () => {
+            window.removeEventListener('dataReloaded', handleGlobalReload);
+        };
+    }, [dataTypes, refreshData]);
 
     // Auto-refresh if refreshInterval is provided
     useEffect(() => {

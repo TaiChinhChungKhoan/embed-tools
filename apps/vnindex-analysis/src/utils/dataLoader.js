@@ -118,6 +118,16 @@ class DataLoader {
         return this.fetchData(`${this.basePath}/data/foreign_buy_20.json`);
     }
 
+    // Ticker data
+    async loadTicker(ticker) {
+        return this.fetchData(`${this.basePath}/data/tickers/${ticker}.json`);
+    }
+
+    // Legacy method for backward compatibility
+    async loadVNINDEXEWData() {
+        return this.loadTicker('VNINDEX_EW');
+    }
+
     // Economic data
     async loadGDPQuarterData() {
         return this.fetchData(`${this.basePath}/data/gdp_quarter.json`);

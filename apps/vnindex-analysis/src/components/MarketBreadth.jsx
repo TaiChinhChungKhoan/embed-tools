@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUp, ArrowDown, Minus, RefreshCw, AlertCircle, Info, HelpCircle, TrendingUp, TrendingDown } from 'lucide-react';
+import { ArrowUp, ArrowDown, Minus, AlertCircle, Info, HelpCircle, TrendingUp, TrendingDown, ChevronDown, ChevronUp } from 'lucide-react';
 import Card from './Card';
 import { useDataLoader } from '../hooks/useDataLoader';
 import { createChart, LineSeries } from 'lightweight-charts';
@@ -8,6 +8,7 @@ const MarketBreadth = ({ turnover, volume }) => {
     const [chartInitialized, setChartInitialized] = useState(false);
     const [containerEl, setContainerEl] = useState(null);
     const [showChart, setShowChart] = useState(true);
+    const [showHelp, setShowHelp] = useState(false);
 
     const chartRef = useRef(null);
     const seriesRef = useRef([]);
@@ -119,7 +120,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                     const upSeries = chart.addSeries(LineSeries, { 
                         color: '#10b981', 
                         lineWidth: 2,
-                        title: 'Tăng (mượt hóa)'
+                        title: 'Tăng'
                     }, 0);
                     upSeries.setData(upSmoothedData);
                     seriesRef.current.push(upSeries);
@@ -133,7 +134,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                     const downSeries = chart.addSeries(LineSeries, { 
                         color: '#ef4444', 
                         lineWidth: 2,
-                        title: 'Giảm (mượt hóa)'
+                        title: 'Giảm'
                     }, 0);
                     downSeries.setData(downSmoothedData);
                     seriesRef.current.push(downSeries);
@@ -170,7 +171,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                     const ratioSeries = chart.addSeries(LineSeries, { 
                         color: '#3b82f6', 
                         lineWidth: 3,
-                        title: 'Tỷ lệ Tăng/Giảm (mượt hóa) (%)'
+                        title: 'Tỷ lệ Tăng/Giảm (%)'
                     }, 1);
                     ratioSeries.setData(smoothedRatioData);
                     seriesRef.current.push(ratioSeries);
@@ -247,13 +248,9 @@ const MarketBreadth = ({ turnover, volume }) => {
                     <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
                         {error}
                     </p>
-                    <button
-                        onClick={refresh}
-                        className="inline-flex items-center px-3 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600 transition-colors cursor-pointer"
-                    >
-                        <RefreshCw className="w-3 h-3 mr-1" />
-                        Thử lại
-                    </button>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                        Sử dụng nút tải lại toàn cục ở header để thử lại
+                    </p>
                 </div>
             </Card>
         );
@@ -294,21 +291,67 @@ const MarketBreadth = ({ turnover, volume }) => {
         <Card>
             <div className="flex items-center justify-between mb-3">
                 <h3 className="text-base font-semibold text-gray-700 dark:text-gray-200">Độ rộng thị trường</h3>
-                <div className="flex items-center space-x-2">
-                    {lastUpdated && (
-                        <p className="text-xs text-gray-500 dark:text-gray-400">
-                            {lastUpdated.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}
-                        </p>
-                    )}
-                    <button
-                        onClick={refresh}
-                        className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
-                        title="Làm mới dữ liệu"
-                    >
-                        <RefreshCw className="w-3 h-3" />
-                    </button>
-                </div>
+                <button
+                    onClick={() => setShowHelp(!showHelp)}
+                    className="p-1 text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
+                    title="Hướng dẫn đọc biểu đồ"
+                >
+                    {showHelp ? <ChevronUp className="w-4 h-4" /> : <HelpCircle className="w-4 h-4" />}
+                </button>
             </div>
+
+            {/* Help Section */}
+            {showHelp && (
+                <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <div className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                        <p className="font-medium">
+                            Biểu đồ này giống như nhiệt kế đo sức khỏe toàn thị trường chứng khoán mỗi ngày. 
+                            Nó không chỉ nhìn vào chỉ số VN-Index, mà nhìn rộng hơn — có bao nhiêu mã tăng, 
+                            bao nhiêu mã giảm, và bao nhiêu mã đứng yên.
+                        </p>
+                        
+                        <div>
+                            <h4 className="font-semibold mb-2">👁‍🗨 Cách đọc biểu đồ</h4>
+                            <div className="space-y-2">
+                                <div><span className="text-green-600 font-medium">🔼 Mã Tăng (màu xanh lá):</span> Là số lượng cổ phiếu tăng giá trong ngày.</div>
+                                <div><span className="text-red-600 font-medium">🔽 Mã Giảm (màu đỏ):</span> Là số cổ phiếu giảm giá.</div>
+                                <div><span className="text-gray-600 font-medium">⏸️ Mã Đứng yên (màu xám):</span> Không tăng không giảm.</div>
+                                <div><span className="text-blue-600 font-medium">🔵 Tỷ lệ Tăng/(Tăng + Giảm) – Dòng màu xanh dương:</span> Đây là chỉ báo chính cho thấy tâm lý thị trường:</div>
+                                <div className="ml-4 space-y-1">
+                                    <div>• Nếu &gt; 60%: Thị trường nghiêng về tích cực</div>
+                                    <div>• Nếu &lt; 40%: Thị trường nghiêng về tiêu cực</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 className="font-semibold mb-2">📆 Thống kê bổ sung</h4>
+                            <div className="space-y-2">
+                                <div><span className="font-medium">🧠 Trung bình lịch sử:</span> Thường dao động quanh 50% - nghĩa là thị trường thường "cân bằng" giữa tăng và giảm.</div>
+                                <div><span className="font-medium">🟢 Ngày tích cực nhất:</span> Có thể dùng để so sánh với đỉnh cao nhất trong lịch sử - khi tỷ lệ tăng đạt gần 100%, nghĩa là gần như toàn thị trường bật mạnh.</div>
+                                <div><span className="font-medium">🔴 Ngày tiêu cực nhất:</span> Có thể dùng để so sánh với đáy thấp nhất - khi tỷ lệ tăng chỉ còn dưới 5%, nghĩa là toàn thị trường "rơi tự do".</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 className="font-semibold mb-2">🎯 Ứng dụng thực tế</h4>
+                            <div className="space-y-2">
+                                <div><span className="font-medium">Nhà đầu tư ngắn hạn:</span> Có thể dùng để đo "tâm lý thị trường" hôm nay mạnh hay yếu → quyết định mua bán linh hoạt.</div>
+                                <div><span className="font-medium">Nhà đầu tư dài hạn:</span> Dùng để xác nhận xu hướng lớn – ví dụ nếu tỷ lệ tăng trên 60% liên tục nhiều ngày, thị trường có thể đang bước vào sóng tăng.</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 className="font-semibold mb-2">📌 Gợi ý đơn giản để sử dụng</h4>
+                            <div className="space-y-1">
+                                <div>• Khi tỷ lệ &gt; 70% nhiều ngày liên tục → thị trường đang khỏe (có thể nắm giữ hoặc canh mua)</div>
+                                <div>• Khi tỷ lệ &lt; 30% → thị trường yếu → nên cẩn trọng hoặc hạ tỷ trọng</div>
+                                <div>• Nếu tỷ lệ dao động quanh 50% → thị trường chưa rõ xu hướng, cần theo dõi thêm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Market Sentiment Indicator */}
             <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mb-3 ${sentiment.bg} ${sentiment.color}`}>

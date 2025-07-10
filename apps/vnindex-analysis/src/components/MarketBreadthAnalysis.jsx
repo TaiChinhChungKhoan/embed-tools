@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, AreaChart, Area } from 'recharts';
-import { TrendingUp, TrendingDown, Activity, BarChart3, RefreshCw, AlertCircle } from 'lucide-react';
+import { TrendingUp, TrendingDown, Activity, BarChart3, AlertCircle } from 'lucide-react';
 import Card from './Card';
 import { useDataLoader } from '../hooks/useDataLoader';
 
@@ -82,13 +82,9 @@ const MarketBreadthAnalysis = () => {
                     <p className="text-gray-500 dark:text-gray-400 mb-4">
                         {error}
                     </p>
-                    <button
-                        onClick={refresh}
-                        className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors cursor-pointer"
-                    >
-                        <RefreshCw className="w-4 h-4 mr-2" />
-                        Thử lại
-                    </button>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                        Sử dụng nút tải lại toàn cục ở header để thử lại
+                    </p>
                 </div>
             </Card>
         );
@@ -119,13 +115,6 @@ const MarketBreadthAnalysis = () => {
                             Cập nhật: {lastUpdated.toLocaleTimeString('vi-VN')}
                         </p>
                     )}
-                    <button
-                        onClick={refresh}
-                        className="inline-flex items-center px-3 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
-                        title="Làm mới dữ liệu"
-                    >
-                        <RefreshCw className="w-4 h-4" />
-                    </button>
                 </div>
             </div>
 

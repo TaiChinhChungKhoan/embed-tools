@@ -1,13 +1,15 @@
 import React from 'react';
 import { Database, RefreshCw, Trash2 } from 'lucide-react';
 import { useCacheStats } from '../hooks/useDataLoader';
+import { useDataReload } from '../contexts/DataReloadContext';
 import Card from './Card';
 
 const CacheStatus = () => {
-    const { stats, updateStats, clearCache } = useCacheStats();
+    const { stats, updateStats } = useCacheStats();
+    const { reloadAllData } = useDataReload();
 
     const handleClearCache = () => {
-        clearCache();
+        reloadAllData();
         updateStats();
     };
 

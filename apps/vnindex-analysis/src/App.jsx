@@ -3,6 +3,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import './App.css';
 import MarketOverview from './components/MarketOverview';
 import MarketWave from './components/MarketWave';
+import TickerChart from './components/TickerChart';
 import StockAbnormalSignals from './components/StockAbnormalSignals';
 import IndustryAbnormalSignals from './components/IndustryAbnormalSignals';
 import IndustryRSAnalysis from './components/IndustryRSAnalysis';
@@ -13,6 +14,8 @@ import MarketOverviewReport from './components/MarketOverviewReport';
 import MacroeconomicsReport from './components/MacroeconomicsReport';
 import IndustryStrengthChart from './components/IndustryStrengthChart';
 import VSAReport from './components/VSAReport';
+import GlobalReloadButton from './components/GlobalReloadButton';
+import { DataReloadProvider } from './contexts/DataReloadContext';
 import iframeUtils from '@embed-tools/iframe-utils';
 
 export default function App() {
@@ -96,214 +99,222 @@ export default function App() {
     }, [activeTab, activeSubTab, activeReport, isMobileMenuOpen, isEmbedded]);
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans" ref={containerRef}>
-            {/* Header */}
-            <header className="bg-white dark:bg-gray-800/90 backdrop-blur-sm sticky top-0 z-30 border-b border-gray-200 dark:border-gray-700">
-                <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
-                        <div className="flex-shrink-0 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
-                                <line x1="12" y1="1" x2="12" y2="23"></line>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                            </svg>
-                            <div className="ml-2">
-                                {!isEmbedded && <span className="text-xl font-bold">Phân tích VN-Index</span>}
-                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                                    Dữ liệu hàng ngày được cập nhật vào cuối ngày
+        <DataReloadProvider>
+            <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans" ref={containerRef}>
+                {/* Header */}
+                <header className="bg-white dark:bg-gray-800/90 backdrop-blur-sm sticky top-0 z-30 border-b border-gray-200 dark:border-gray-700">
+                    <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex items-center justify-between h-16">
+                            <div className="flex-shrink-0 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                                <div className="ml-2">
+                                    {!isEmbedded && <span className="text-xl font-bold">Phân tích VN-Index</span>}
+                                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                                        Dữ liệu hàng ngày được cập nhật vào cuối ngày
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <nav className="hidden md:flex items-center space-x-2">
-                            {tabs.map(tab => (
+                            <nav className="hidden md:flex items-center space-x-2">
+                                {tabs.map(tab => (
+                                    <button 
+                                        key={tab} 
+                                        onClick={() => handleTabClick(tab)} 
+                                        className={`px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
+                                            activeTab === tab ? 'bg-blue-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                        }`}
+                                    >
+                                        {tabTranslations[tab]}
+                                    </button>
+                                ))}
+                                <GlobalReloadButton />
+                            </nav>
+                            <div className="md:hidden">
                                 <button 
-                                    key={tab} 
-                                    onClick={() => handleTabClick(tab)} 
-                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
-                                        activeTab === tab ? 'bg-blue-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                                    }`}
+                                    onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} 
+                                    className="p-2 rounded-md text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
                                 >
-                                    {tabTranslations[tab]}
+                                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                                 </button>
-                            ))}
-                        </nav>
-                        <div className="md:hidden">
-                            <button 
-                                onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} 
-                                className="p-2 rounded-md text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
-                            >
-                                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                            </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {isMobileMenuOpen && (
-                    <div className="md:hidden pb-3 border-t border-gray-200 dark:border-gray-700">
-                        <nav className="px-2 space-y-1 mt-2">
-                            {tabs.map(tab => (
-                                <button 
-                                    key={tab} 
-                                    onClick={() => handleTabClick(tab)} 
-                                    className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium cursor-pointer ${
-                                        activeTab === tab ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                                    }`}
-                                >
-                                    {tabTranslations[tab]}
-                                </button>
-                            ))}
-                        </nav>
-                    </div>
-                )}
-            </header>
+                    {isMobileMenuOpen && (
+                        <div className="md:hidden pb-3 border-t border-gray-200 dark:border-gray-700">
+                            <nav className="px-2 space-y-1 mt-2">
+                                {tabs.map(tab => (
+                                    <button 
+                                        key={tab} 
+                                        onClick={() => handleTabClick(tab)} 
+                                        className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium cursor-pointer ${
+                                            activeTab === tab ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                        }`}
+                                    >
+                                        {tabTranslations[tab]}
+                                    </button>
+                                ))}
+                            </nav>
+                        </div>
+                    )}
+                </header>
 
-            {/* Main Content */}
-            <div className="relative">
-                <main>
-                    {/* Sub-tabs */}
-                    <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="flex items-center justify-between">
-                                <div className="flex -mb-px space-x-2 sm:space-x-4 items-center relative">
-                                    {subTabs.map(subTab => {
-                                        if (subTab === 'Reports' && currentReportOptions.length > 1) {
-                                            return (
-                                                <div key={subTab} className="relative">
-                                                    <button
-                                                        onClick={() => {
-                                                            setIsReportDropdownOpen((open) => !open);
-                                                        }}
-                                                        className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer flex items-center space-x-2 ${
-                                                            activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-                                                        }`}
-                                                        aria-haspopup="listbox"
-                                                        aria-expanded={isReportDropdownOpen}
-                                                    >
-                                                        <span>{subTabTranslations[subTab]}</span>
-                                                        <ChevronDown size={16} className={`transition-transform ${isReportDropdownOpen ? 'rotate-180' : ''}`} />
-                                                    </button>
-                                                    {isReportDropdownOpen && (
-                                                        <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50">
-                                                            <div className="py-2">
-                                                                {currentReportOptions.map((report) => (
-                                                                    <button
-                                                                        key={report.id}
-                                                                                                                                onClick={() => {
-                                                            handleReportSelect(report.id);
-                                                            setActiveSubTab('Reports');
-                                                            setIsReportDropdownOpen(false);
-                                                        }}
-                                                                        className={`w-full text-left px-4 py-3 transition-colors cursor-pointer ${
-                                                                            activeReport === report.id
-                                                                                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 font-semibold'
-                                                                                : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'
-                                                                        }`}
-                                                                    >
-                                                                        <div className="font-medium">{report.name}</div>
-                                                                        <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{report.description}</div>
-                                                                    </button>
-                                                                ))}
+                {/* Main Content */}
+                <div className="relative">
+                    <main>
+                        {/* Sub-tabs */}
+                        <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+                            <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex -mb-px space-x-2 sm:space-x-4 items-center relative">
+                                        {subTabs.map(subTab => {
+                                            if (subTab === 'Reports' && currentReportOptions.length > 1) {
+                                                return (
+                                                    <div key={subTab} className="relative">
+                                                        <button
+                                                            onClick={() => {
+                                                                setIsReportDropdownOpen((open) => !open);
+                                                            }}
+                                                            className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer flex items-center space-x-2 ${
+                                                                activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+                                                            }`}
+                                                            aria-haspopup="listbox"
+                                                            aria-expanded={isReportDropdownOpen}
+                                                        >
+                                                            <span>{subTabTranslations[subTab]}</span>
+                                                            <ChevronDown size={16} className={`transition-transform ${isReportDropdownOpen ? 'rotate-180' : ''}`} />
+                                                        </button>
+                                                        {isReportDropdownOpen && (
+                                                            <div className="absolute left-0 mt-2 w-80 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50">
+                                                                <div className="py-2">
+                                                                    {currentReportOptions.map((report) => (
+                                                                        <button
+                                                                            key={report.id}
+                                                                            onClick={() => {
+                                                                                handleReportSelect(report.id);
+                                                                                setActiveSubTab('Reports');
+                                                                                setIsReportDropdownOpen(false);
+                                                                            }}
+                                                                            className={`w-full text-left px-4 py-3 transition-colors cursor-pointer ${
+                                                                                activeReport === report.id
+                                                                                    ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 font-semibold'
+                                                                                    : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'
+                                                                            }`}
+                                                                        >
+                                                                            <div className="font-medium">{report.name}</div>
+                                                                            <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{report.description}</div>
+                                                                        </button>
+                                                                    ))}
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    )}
-                                                </div>
+                                                        )}
+                                                    </div>
+                                                );
+                                            }
+                                            return (
+                                                <button
+                                                    key={subTab}
+                                                    onClick={() => {
+                                                        setActiveSubTab(subTab);
+                                                        setIsReportDropdownOpen(false);
+                                                    }}
+                                                    className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer ${
+                                                        activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+                                                    }`}
+                                                >
+                                                    {subTabTranslations[subTab]}
+                                                </button>
                                             );
-                                        }
-                                        return (
-                                            <button
-                                                key={subTab}
-                                                onClick={() => {
-                                                    setActiveSubTab(subTab);
-                                                    setIsReportDropdownOpen(false);
-                                                }}
-                                                className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer ${
-                                                    activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-                                                }`}
-                                            >
-                                                {subTabTranslations[subTab]}
-                                            </button>
-                                        );
-                                    })}
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Content Area */}
-                    <div className="p-4 sm:p-6 lg:p-8">
-                        {activeSubTab === 'Overview' && (
-                            <>
-                                {activeTab === 'Market' && (
-                                    <div className="space-y-8">
-                                        <MarketOverview />
-                                        <MarketWave />
-                                    </div>
-                                )}
-                                {activeTab === 'Industries' && (
-                                    <div className="space-y-8">
-                                        <IndustryAbnormalSignals />
-                                    </div>
-                                )}
-                                {activeTab === 'Tickers' && (
-                                    <div className="space-y-8">
-                                        <StockAbnormalSignals />
-                                    </div>
-                                )}
-                            </>
-                        )}
-                        {activeSubTab === 'Reports' && (
-                            <>
-                                {activeTab === 'Industries' && (
-                                    <div className="space-y-8">
-                                        {activeReport === 'rs_analysis' && <IndustryRSAnalysis />}
-                                        {activeReport === 'abnormal_signals' && <IndustryAbnormalSignals />}
-                                        {activeReport === 'rrg_analysis' && <RRGAnalysis />}
-                                        {activeReport === 'industry_strength' && <IndustryStrengthChart />}
-                                    </div>
-                                )}
-                                {activeTab === 'Tickers' && (
-                                    <div className="space-y-8">
-                                        {activeReport === 'rs_analysis' && <TickerRSAnalysis />}
-                                        {activeReport === 'abnormal_signals' && <StockAbnormalSignals />}
-                                        {activeReport === 'rrg_analysis' && <RRGAnalysis />}
-                                        {activeReport === 'vsa_report' && <VSAReport />}
-                                    </div>
-                                )}
-                                {activeTab === 'Market' && (
-                                    <div className="space-y-8">
-                                        {activeReport === 'market_overview' && <MarketOverviewReport />}
-                                        {activeReport === 'macroeconomics' && <MacroeconomicsReport />}
-                                        {activeReport === 'valuation_report' && <ValuationReport />}
-                                    </div>
-                                )}
-                            </>
-                        )}
-                    </div>
-                </main>
+                        {/* Content Area */}
+                        <div className="p-4 sm:p-6 lg:p-8">
+                            {activeSubTab === 'Overview' && (
+                                <>
+                                    {activeTab === 'Market' && (
+                                        <div className="space-y-8">
+                                            <MarketOverview />
+                                            <TickerChart 
+                                                ticker="VNINDEX_EW" 
+                                                title="VNINDEX Equal Weight"
+                                                description="Biểu đồ giá và khối lượng giao dịch VNINDEX Equal Weight"
+                                            />
+                                            <MarketWave />
+                                        </div>
+                                    )}
+                                    {activeTab === 'Industries' && (
+                                        <div className="space-y-8">
+                                            <IndustryAbnormalSignals />
+                                        </div>
+                                    )}
+                                    {activeTab === 'Tickers' && (
+                                        <div className="space-y-8">
+                                            <StockAbnormalSignals />
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                            {activeSubTab === 'Reports' && (
+                                <>
+                                    {activeTab === 'Industries' && (
+                                        <div className="space-y-8">
+                                            {activeReport === 'rs_analysis' && <IndustryRSAnalysis />}
+                                            {activeReport === 'abnormal_signals' && <IndustryAbnormalSignals />}
+                                            {activeReport === 'rrg_analysis' && <RRGAnalysis />}
+                                            {activeReport === 'industry_strength' && <IndustryStrengthChart />}
+                                        </div>
+                                    )}
+                                    {activeTab === 'Tickers' && (
+                                        <div className="space-y-8">
+                                            {activeReport === 'rs_analysis' && <TickerRSAnalysis />}
+                                            {activeReport === 'abnormal_signals' && <StockAbnormalSignals />}
+                                            {activeReport === 'rrg_analysis' && <RRGAnalysis />}
+                                            {activeReport === 'vsa_report' && <VSAReport />}
+                                        </div>
+                                    )}
+                                    {activeTab === 'Market' && (
+                                        <div className="space-y-8">
+                                            {activeReport === 'market_overview' && <MarketOverviewReport />}
+                                            {activeReport === 'macroeconomics' && <MacroeconomicsReport />}
+                                            {activeReport === 'valuation_report' && <ValuationReport />}
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                        </div>
+                    </main>
+                </div>
+
+                {/* Click outside to close dropdown */}
+                {isReportDropdownOpen && (
+                    <div 
+                        className="fixed inset-0 z-40" 
+                        onClick={() => setIsReportDropdownOpen(false)}
+                    />
+                )}
+
+                {/* Data Source Attribution - Always Show */}
+                <div className="text-center py-4 text-xs text-gray-500 border-t border-gray-200 dark:border-gray-700">
+                    <p>Sử dụng dữ liệu từ <a href="https://vnstocks.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">https://vnstocks.com/</a> Wichart.vn và Investing.com</p>
+                </div>
+
+                {!isEmbedded && (
+                    <footer className="text-center mt-8 text-xs text-gray-500">
+                        <p>© 2025 Taichinhchungkhoan.com</p>
+                        <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
+                        <p className="mt-2">
+                            <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục.
+                            Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
+                            Luôn tham khảo ý kiến chuyên gia tài chính trước khi ra quyết định.
+                        </p>
+                    </footer>
+                )}
             </div>
-
-            {/* Click outside to close dropdown */}
-            {isReportDropdownOpen && (
-                <div 
-                    className="fixed inset-0 z-40" 
-                    onClick={() => setIsReportDropdownOpen(false)}
-                />
-            )}
-
-            {/* Data Source Attribution - Always Show */}
-            <div className="text-center py-4 text-xs text-gray-500 border-t border-gray-200 dark:border-gray-700">
-                <p>Sử dụng dữ liệu từ <a href="https://vnstocks.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">https://vnstocks.com/</a> Wichart.vn và Investing.com</p>
-            </div>
-
-            {!isEmbedded && (
-                <footer className="text-center mt-8 text-xs text-gray-500">
-                    <p>© 2025 Taichinhchungkhoan.com</p>
-                    <p className="mt-1">Taichinhchungkhoan.com - Nền tảng kiến thức và công cụ tài chính cho người Việt</p>
-                    <p className="mt-2">
-                        <strong>Tuyên bố miễn trừ trách nhiệm:</strong> Ứng dụng này được tạo ra cho mục đích tham khảo và giáo dục.
-                        Thông tin cung cấp không được coi là lời khuyên đầu tư chuyên nghiệp.
-                        Luôn tham khảo ý kiến chuyên gia tài chính trước khi ra quyết định.
-                    </p>
-                </footer>
-            )}
-        </div>
+        </DataReloadProvider>
     );
 }
