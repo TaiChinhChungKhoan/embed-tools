@@ -2,7 +2,186 @@
   "abnormalities": [
     {
       "Symbol": "AAA",
-      "Date": "2025-07-07 10:30:00",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "ABW",
+      "Date": "2025-07-09 13:15:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "BSI",
+      "Date": "2025-07-09 09:30:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "ACG",
+      "Date": "2025-07-09 13:30:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "ANV",
+      "Date": "2025-07-09 11:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "BID",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "BMC",
+      "Date": "2025-07-09 09:15:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "BFC",
+      "Date": "2025-07-09 09:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -29,32 +208,7 @@
     },
     {
       "Symbol": "AAS",
-      "Date": "2025-07-07 14:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "ACV",
-      "Date": "2025-07-07 14:45:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -78,83 +232,8 @@
       }
     },
     {
-      "Symbol": "ACG",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "ACB",
-      "Date": "2025-07-07 10:30:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "BMC",
-      "Date": "2025-07-07 13:15:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "AGG",
-      "Date": "2025-07-07 13:30:00",
+      "Symbol": "BMS",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -180,24 +259,26 @@
       }
     },
     {
-      "Symbol": "BSI",
-      "Date": "2025-07-07 10:00:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
+      "Symbol": "API",
+      "Date": "2025-07-09 10:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
       "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 3,
         "signal_types": [
+          "AbnormalPrice",
           "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
         "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
@@ -205,24 +286,26 @@
       }
     },
     {
-      "Symbol": "BCE",
-      "Date": "2025-07-07 09:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
+      "Symbol": "APS",
+      "Date": "2025-07-09 10:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
       "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 3,
         "signal_types": [
+          "AbnormalPrice",
           "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
         "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
@@ -231,32 +314,7 @@
     },
     {
       "Symbol": "AGR",
-      "Date": "2025-07-07 10:15:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "ABW",
-      "Date": "2025-07-07 09:15:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -280,8 +338,83 @@
       }
     },
     {
-      "Symbol": "BID",
-      "Date": "2025-07-07 09:15:00",
+      "Symbol": "BCG",
+      "Date": "2025-07-09 11:30:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "ACB",
+      "Date": "2025-07-09 10:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "APG",
+      "Date": "2025-07-09 11:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "BVH",
+      "Date": "2025-07-09 10:30:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -301,6 +434,81 @@
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "CII",
+      "Date": "2025-07-09 13:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "CCL",
+      "Date": "2025-07-09 13:15:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "CIG",
+      "Date": "2025-07-09 13:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -308,84 +516,7 @@
     },
     {
       "Symbol": "BVS",
-      "Date": "2025-07-07 10:00:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CCL",
-      "Date": "2025-07-07 13:45:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CKG",
-      "Date": "2025-07-07 09:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CDC",
-      "Date": "2025-07-07 09:30:00",
+      "Date": "2025-07-09 11:00:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -409,85 +540,8 @@
       }
     },
     {
-      "Symbol": "CEO",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
       "Symbol": "CRC",
-      "Date": "2025-07-07 13:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CSV",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CRE",
-      "Date": "2025-07-07 13:15:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -511,8 +565,8 @@
       }
     },
     {
-      "Symbol": "CTG",
-      "Date": "2025-07-07 10:15:00",
+      "Symbol": "CTD",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -536,33 +590,8 @@
       }
     },
     {
-      "Symbol": "CSC",
-      "Date": "2025-07-07 10:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CNG",
-      "Date": "2025-07-07 13:15:00",
+      "Symbol": "DC4",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -580,33 +609,6 @@
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "CTP",
-      "Date": "2025-07-07 10:15:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -614,7 +616,7 @@
     },
     {
       "Symbol": "CTS",
-      "Date": "2025-07-07 10:00:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -639,7 +641,32 @@
     },
     {
       "Symbol": "DIG",
-      "Date": "2025-07-07 13:45:00",
+      "Date": "2025-07-09 13:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "DHC",
+      "Date": "2025-07-09 11:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -657,6 +684,81 @@
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "DBC",
+      "Date": "2025-07-09 11:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "CTG",
+      "Date": "2025-07-09 14:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "DDG",
+      "Date": "2025-07-09 09:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -664,7 +766,7 @@
     },
     {
       "Symbol": "DCM",
-      "Date": "2025-07-07 10:45:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -688,8 +790,33 @@
       }
     },
     {
-      "Symbol": "DAH",
-      "Date": "2025-07-07 14:15:00",
+      "Symbol": "D2D",
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "CSC",
+      "Date": "2025-07-09 14:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -713,8 +840,8 @@
       }
     },
     {
-      "Symbol": "DGW",
-      "Date": "2025-07-07 13:45:00",
+      "Symbol": "DL1",
+      "Date": "2025-07-09 09:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -732,6 +859,31 @@
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "DAH",
+      "Date": "2025-07-09 14:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -739,240 +891,7 @@
     },
     {
       "Symbol": "DLG",
-      "Date": "2025-07-07 09:15:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "DPM",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "DPG",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "DVP",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "DXG",
-      "Date": "2025-07-07 13:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "EVE",
-      "Date": "2025-07-07 10:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "FTS",
-      "Date": "2025-07-07 10:00:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "ELC",
-      "Date": "2025-07-07 14:00:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "EVF",
-      "Date": "2025-07-07 10:00:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "EIB",
-      "Date": "2025-07-07 13:00:00",
+      "Date": "2025-07-09 14:45:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -996,8 +915,58 @@
       }
     },
     {
-      "Symbol": "GIL",
-      "Date": "2025-07-07 13:30:00",
+      "Symbol": "DSN",
+      "Date": "2025-07-09 14:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "DXG",
+      "Date": "2025-07-09 13:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "DSC",
+      "Date": "2025-07-09 11:15:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1023,8 +992,397 @@
       }
     },
     {
+      "Symbol": "DTD",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "DST",
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
       "Symbol": "DXS",
-      "Date": "2025-07-07 13:30:00",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HCM",
+      "Date": "2025-07-09 11:00:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HDB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "FRT",
+      "Date": "2025-07-09 14:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "FPT",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "GDT",
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HCD",
+      "Date": "2025-07-09 09:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "ELC",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "EVE",
+      "Date": "2025-07-09 09:30:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "FIT",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "EVF",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "EVG",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "FTS",
+      "Date": "2025-07-09 09:30:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HID",
+      "Date": "2025-07-09 11:00:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1051,7 +1409,32 @@
     },
     {
       "Symbol": "HDG",
-      "Date": "2025-07-07 09:30:00",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HT1",
+      "Date": "2025-07-09 10:00:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -1076,7 +1459,7 @@
     },
     {
       "Symbol": "HDC",
-      "Date": "2025-07-07 14:15:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1102,60 +1485,8 @@
       }
     },
     {
-      "Symbol": "GDT",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "FMC",
-      "Date": "2025-07-07 13:15:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HAP",
-      "Date": "2025-07-07 11:00:00",
+      "Symbol": "HUT",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -1173,162 +1504,6 @@
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HDB",
-      "Date": "2025-07-07 10:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HHP",
-      "Date": "2025-07-07 14:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HID",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HHS",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HTN",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "HPX",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -1336,7 +1511,61 @@
     },
     {
       "Symbol": "HQC",
-      "Date": "2025-07-07 09:15:00",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HHV",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "HNG",
+      "Date": "2025-07-09 09:00:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1357,344 +1586,38 @@
           "Khối lượng xác nhận hướng giá"
         ],
         "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "HPX",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
       }
     },
     {
       "Symbol": "HSG",
-      "Date": "2025-07-07 10:45:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "MBG",
-      "Date": "2025-07-07 09:45:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "IMP",
-      "Date": "2025-07-07 10:15:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "LPB",
-      "Date": "2025-07-07 11:00:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "LCG",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "MBB",
-      "Date": "2025-07-07 10:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "LAS",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "KSB",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "L18",
-      "Date": "2025-07-07 10:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "KHG",
-      "Date": "2025-07-07 14:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "LIG",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "KDC",
-      "Date": "2025-07-07 10:00:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "MCM",
-      "Date": "2025-07-07 10:00:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "MBS",
-      "Date": "2025-07-07 10:00:00",
+      "Date": "2025-07-09 10:15:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1721,7 +1644,400 @@
     },
     {
       "Symbol": "KDH",
-      "Date": "2025-07-07 13:45:00",
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "KSB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "KHG",
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "MBB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "JVC",
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "KBC",
+      "Date": "2025-07-09 10:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "IDJ",
+      "Date": "2025-07-09 11:00:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "LCG",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "IPA",
+      "Date": "2025-07-09 11:00:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "MBS",
+      "Date": "2025-07-09 11:00:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "KSV",
+      "Date": "2025-07-09 09:15:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "LPB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "KLB",
+      "Date": "2025-07-09 11:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "IMP",
+      "Date": "2025-07-09 10:15:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "MHC",
+      "Date": "2025-07-09 10:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "MIG",
+      "Date": "2025-07-09 11:00:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -1746,7 +2062,136 @@
     },
     {
       "Symbol": "MSB",
-      "Date": "2025-07-07 10:30:00",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "NBC",
+      "Date": "2025-07-09 13:30:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "MSN",
+      "Date": "2025-07-09 13:30:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "NAB",
+      "Date": "2025-07-09 13:30:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "NHH",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "MST",
+      "Date": "2025-07-09 09:15:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1773,107 +2218,7 @@
     },
     {
       "Symbol": "NAF",
-      "Date": "2025-07-07 10:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "NHA",
-      "Date": "2025-07-07 13:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "NDN",
-      "Date": "2025-07-07 09:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "NLG",
-      "Date": "2025-07-07 13:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "NO1",
-      "Date": "2025-07-07 10:45:00",
+      "Date": "2025-07-09 13:00:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -1897,35 +2242,8 @@
       }
     },
     {
-      "Symbol": "NVL",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "PSI",
-      "Date": "2025-07-07 09:30:00",
+      "Symbol": "MSR",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -1949,33 +2267,8 @@
       }
     },
     {
-      "Symbol": "PET",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "QCG",
-      "Date": "2025-07-07 13:45:00",
+      "Symbol": "NKG",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": false,
       "AbnormalVolume": true,
@@ -1999,8 +2292,8 @@
       }
     },
     {
-      "Symbol": "NTP",
-      "Date": "2025-07-07 14:45:00",
+      "Symbol": "NRC",
+      "Date": "2025-07-09 13:30:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2026,8 +2319,33 @@
       }
     },
     {
-      "Symbol": "PVC",
-      "Date": "2025-07-07 14:15:00",
+      "Symbol": "NVL",
+      "Date": "2025-07-09 10:15:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "OCB",
+      "Date": "2025-07-09 14:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2045,33 +2363,6 @@
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "PGC",
-      "Date": "2025-07-07 09:45:00",
-      "CompositeScore": 0.5285714285714286,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -2079,25 +2370,48 @@
     },
     {
       "Symbol": "NTL",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.5285714285714286,
+      "Date": "2025-07-09 10:45:00",
+      "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "POW",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
       "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 3,
+        "signal_count": 2,
         "signal_types": [
-          "AbnormalPrice",
           "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
         "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
+        "confidence": "MEDIUM",
         "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
@@ -2105,58 +2419,8 @@
       }
     },
     {
-      "Symbol": "NVB",
-      "Date": "2025-07-07 14:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "NRC",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "PTB",
-      "Date": "2025-07-07 14:00:00",
+      "Symbol": "PHP",
+      "Date": "2025-07-09 09:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2181,57 +2445,7 @@
     },
     {
       "Symbol": "PDR",
-      "Date": "2025-07-07 13:45:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "PHP",
-      "Date": "2025-07-07 09:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "PHC",
-      "Date": "2025-07-07 09:30:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": false,
       "AbnormalVolume": true,
@@ -2255,8 +2469,108 @@
       }
     },
     {
-      "Symbol": "SLS",
-      "Date": "2025-07-07 11:00:00",
+      "Symbol": "PC1",
+      "Date": "2025-07-09 10:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "PLX",
+      "Date": "2025-07-09 09:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "NO1",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "ORS",
+      "Date": "2025-07-09 10:30:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "PNJ",
+      "Date": "2025-07-09 11:00:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2280,8 +2594,295 @@
       }
     },
     {
-      "Symbol": "TDC",
-      "Date": "2025-07-07 13:30:00",
+      "Symbol": "PSI",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "PAN",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "PVD",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "PVT",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "QCG",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "SAB",
+      "Date": "2025-07-09 14:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "REE",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "SAS",
+      "Date": "2025-07-09 10:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "SCS",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "SBS",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "SGR",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "TDG",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2308,7 +2909,7 @@
     },
     {
       "Symbol": "SIP",
-      "Date": "2025-07-07 09:15:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2332,8 +2933,33 @@
       }
     },
     {
-      "Symbol": "TLD",
-      "Date": "2025-07-07 13:30:00",
+      "Symbol": "SKG",
+      "Date": "2025-07-09 09:30:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "SGP",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2357,33 +2983,8 @@
       }
     },
     {
-      "Symbol": "TCL",
-      "Date": "2025-07-07 09:45:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "TTF",
-      "Date": "2025-07-07 13:45:00",
+      "Symbol": "TDC",
+      "Date": "2025-07-09 11:00:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2407,24 +3008,26 @@
       }
     },
     {
-      "Symbol": "SBG",
-      "Date": "2025-07-07 14:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
+      "Symbol": "TCD",
+      "Date": "2025-07-09 10:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
       "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 3,
         "signal_types": [
+          "AbnormalPrice",
           "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
         "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
@@ -2432,24 +3035,26 @@
       }
     },
     {
-      "Symbol": "TCH",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
+      "Symbol": "STB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
       "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 3,
         "signal_types": [
+          "AbnormalPrice",
           "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
         "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
           "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
@@ -2457,8 +3062,33 @@
       }
     },
     {
-      "Symbol": "SSB",
-      "Date": "2025-07-07 13:15:00",
+      "Symbol": "TCI",
+      "Date": "2025-07-09 13:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "TCL",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2482,8 +3112,8 @@
       }
     },
     {
-      "Symbol": "SGP",
-      "Date": "2025-07-07 09:15:00",
+      "Symbol": "SSI",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2507,33 +3137,35 @@
       }
     },
     {
-      "Symbol": "SGR",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
+      "Symbol": "SHB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
-      "AbnormalVolume": false,
+      "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 3,
         "signal_types": [
           "AbnormalPrice",
+          "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
       }
     },
     {
-      "Symbol": "TV2",
-      "Date": "2025-07-07 10:15:00",
+      "Symbol": "TCB",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2560,32 +3192,7 @@
     },
     {
       "Symbol": "SHS",
-      "Date": "2025-07-07 13:00:00",
-      "CompositeScore": 0.4428571428571429,
-      "AbnormalPrice": true,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "Symbol": "STB",
-      "Date": "2025-07-07 10:45:00",
+      "Date": "2025-07-09 13:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2609,8 +3216,33 @@
       }
     },
     {
-      "Symbol": "TCI",
-      "Date": "2025-07-07 11:00:00",
+      "Symbol": "TCO",
+      "Date": "2025-07-09 09:30:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "TCM",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2636,8 +3268,8 @@
       }
     },
     {
-      "Symbol": "SCR",
-      "Date": "2025-07-07 13:45:00",
+      "Symbol": "TIG",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2661,8 +3293,8 @@
       }
     },
     {
-      "Symbol": "TDG",
-      "Date": "2025-07-07 13:45:00",
+      "Symbol": "TLD",
+      "Date": "2025-07-09 09:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2686,8 +3318,33 @@
       }
     },
     {
-      "Symbol": "SHB",
-      "Date": "2025-07-07 13:00:00",
+      "Symbol": "TNH",
+      "Date": "2025-07-09 13:30:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "TIS",
+      "Date": "2025-07-09 09:00:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2711,12 +3368,39 @@
       }
     },
     {
-      "Symbol": "TCO",
-      "Date": "2025-07-07 14:15:00",
-      "CompositeScore": 0.35714285714285715,
+      "Symbol": "TTF",
+      "Date": "2025-07-09 10:15:00",
+      "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
-      "AbnormalVolume": false,
+      "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "TPB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
@@ -2724,12 +3408,91 @@
         "signal_count": 2,
         "signal_types": [
           "AbnormalPrice",
-          "PriceVelocityAbnormal"
+          "AbnormalVolume"
         ],
-        "overall_sentiment": "NEUTRAL",
+        "overall_sentiment": "BULLISH",
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "TSC",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "TVN",
+      "Date": "2025-07-09 09:00:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "TVS",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
@@ -2737,7 +3500,7 @@
     },
     {
       "Symbol": "VCI",
-      "Date": "2025-07-07 10:00:00",
+      "Date": "2025-07-09 11:00:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2763,12 +3526,12 @@
       }
     },
     {
-      "Symbol": "VIC",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
+      "Symbol": "VCB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
@@ -2776,20 +3539,20 @@
         "signal_count": 2,
         "signal_types": [
           "AbnormalPrice",
-          "PriceVelocityAbnormal"
+          "AbnormalVolume"
         ],
-        "overall_sentiment": "NEUTRAL",
+        "overall_sentiment": "BULLISH",
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
+          "Khối lượng xác nhận hướng giá"
         ],
-        "risk_level": "HIGH"
+        "risk_level": "MEDIUM"
       }
     },
     {
-      "Symbol": "VDS",
-      "Date": "2025-07-07 10:00:00",
+      "Symbol": "VIG",
+      "Date": "2025-07-09 10:30:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2815,8 +3578,8 @@
       }
     },
     {
-      "Symbol": "VIX",
-      "Date": "2025-07-07 13:45:00",
+      "Symbol": "VEA",
+      "Date": "2025-07-09 10:00:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2840,58 +3603,35 @@
       }
     },
     {
-      "Symbol": "TVS",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
+      "Symbol": "VIP",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
-      "AbnormalVolume": false,
+      "AbnormalVolume": true,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 3,
         "signal_types": [
           "AbnormalPrice",
+          "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
       }
     },
     {
-      "Symbol": "VLB",
-      "Date": "2025-07-07 13:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalPrice",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "VGS",
-      "Date": "2025-07-07 09:00:00",
+      "Symbol": "VGC",
+      "Date": "2025-07-09 10:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2916,7 +3656,84 @@
     },
     {
       "Symbol": "VIB",
-      "Date": "2025-07-07 10:30:00",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "VC7",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VEF",
+      "Date": "2025-07-09 13:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VNM",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -2943,7 +3760,7 @@
     },
     {
       "Symbol": "VND",
-      "Date": "2025-07-07 09:45:00",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2967,8 +3784,8 @@
       }
     },
     {
-      "Symbol": "VAB",
-      "Date": "2025-07-07 09:45:00",
+      "Symbol": "VIX",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -2992,8 +3809,8 @@
       }
     },
     {
-      "Symbol": "VPB",
-      "Date": "2025-07-07 13:15:00",
+      "Symbol": "VGS",
+      "Date": "2025-07-09 10:15:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -3017,8 +3834,212 @@
       }
     },
     {
+      "Symbol": "VC3",
+      "Date": "2025-07-09 09:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VLB",
+      "Date": "2025-07-09 10:00:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VDS",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
       "Symbol": "VOS",
-      "Date": "2025-07-07 14:15:00",
+      "Date": "2025-07-09 10:00:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VPB",
+      "Date": "2025-07-09 13:45:00",
+      "CompositeScore": 0.4428571428571429,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "Symbol": "VRG",
+      "Date": "2025-07-09 11:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": false,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VRE",
+      "Date": "2025-07-09 13:00:00",
+      "CompositeScore": 0.5285714285714286,
+      "AbnormalPrice": true,
+      "AbnormalVolume": true,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 3,
+        "signal_types": [
+          "AbnormalPrice",
+          "AbnormalVolume",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "HIGH",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Khối lượng xác nhận hướng giá",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "TAL",
+      "Date": "2025-07-09 09:15:00",
+      "CompositeScore": 0.35714285714285715,
+      "AbnormalPrice": true,
+      "AbnormalVolume": false,
+      "PriceVelocityAbnormal": true,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "AbnormalPrice",
+          "PriceVelocityAbnormal"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
+          "Theo dõi kiệt sức hoặc tiếp tục"
+        ],
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "Symbol": "VTO",
+      "Date": "2025-07-09 14:15:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": false,
       "AbnormalVolume": true,
@@ -3043,7 +4064,7 @@
     },
     {
       "Symbol": "VPH",
-      "Date": "2025-07-07 10:15:00",
+      "Date": "2025-07-09 10:45:00",
       "CompositeScore": 0.5285714285714286,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -3069,64 +4090,12 @@
       }
     },
     {
-      "Symbol": "VRE",
-      "Date": "2025-07-07 11:15:00",
-      "CompositeScore": 0.5285714285714286,
+      "Symbol": "VPI",
+      "Date": "2025-07-09 14:45:00",
+      "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 3,
-        "signal_types": [
-          "AbnormalPrice",
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
-        "trading_implications": [
-          "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "VRG",
-      "Date": "2025-07-07 09:30:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": false,
-      "AbnormalVolume": true,
-      "PriceVelocityAbnormal": true,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "AbnormalVolume",
-          "PriceVelocityAbnormal"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Khối lượng xác nhận hướng giá",
-          "Theo dõi kiệt sức hoặc tiếp tục"
-        ],
-        "risk_level": "HIGH"
-      }
-    },
-    {
-      "Symbol": "VTP",
-      "Date": "2025-07-07 14:15:00",
-      "CompositeScore": 0.35714285714285715,
-      "AbnormalPrice": true,
-      "AbnormalVolume": false,
-      "PriceVelocityAbnormal": true,
+      "PriceVelocityAbnormal": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
@@ -3134,20 +4103,20 @@
         "signal_count": 2,
         "signal_types": [
           "AbnormalPrice",
-          "PriceVelocityAbnormal"
+          "AbnormalVolume"
         ],
-        "overall_sentiment": "NEUTRAL",
+        "overall_sentiment": "BULLISH",
         "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Theo dõi kiệt sức hoặc tiếp tục"
+          "Khối lượng xác nhận hướng giá"
         ],
-        "risk_level": "HIGH"
+        "risk_level": "MEDIUM"
       }
     },
     {
-      "Symbol": "TAL",
-      "Date": "2025-07-07 14:30:00",
+      "Symbol": "VTK",
+      "Date": "2025-07-09 14:45:00",
       "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
       "AbnormalVolume": false,
@@ -3172,34 +4141,32 @@
     },
     {
       "Symbol": "YEG",
-      "Date": "2025-07-07 10:30:00",
-      "CompositeScore": 0.5285714285714286,
+      "Date": "2025-07-09 14:15:00",
+      "CompositeScore": 0.35714285714285715,
       "AbnormalPrice": true,
-      "AbnormalVolume": true,
+      "AbnormalVolume": false,
       "PriceVelocityAbnormal": true,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Interpretation": {
-        "signal_count": 3,
+        "signal_count": 2,
         "signal_types": [
           "AbnormalPrice",
-          "AbnormalVolume",
           "PriceVelocityAbnormal"
         ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
         "trading_implications": [
           "Theo dõi xu hướng tiếp tục hoặc đảo chiều",
-          "Khối lượng xác nhận hướng giá",
           "Theo dõi kiệt sức hoặc tiếp tục"
         ],
         "risk_level": "HIGH"
       }
     },
     {
-      "Symbol": "VSC",
-      "Date": "2025-07-07 14:45:00",
+      "Symbol": "DSE",
+      "Date": "2025-07-09 13:45:00",
       "CompositeScore": 0.4428571428571429,
       "AbnormalPrice": true,
       "AbnormalVolume": true,
@@ -3224,11 +4191,11 @@
     }
   ],
   "summary": {
-    "analysis_date": "2025-07-08T12:57:49.210118",
-    "total_abnormalities": 126,
+    "analysis_date": "2025-07-10T20:32:57.823676",
+    "total_abnormalities": 163,
     "market_sentiment": "BULLISH",
     "key_insights": [
-      "Phát hiện 126 tín hiệu bất thường trong ngày",
+      "Phát hiện 163 tín hiệu bất thường trong ngày",
       "Tâm lý thị trường tổng thể tăng dựa trên tín hiệu bất thường"
     ],
     "trading_recommendations": [
