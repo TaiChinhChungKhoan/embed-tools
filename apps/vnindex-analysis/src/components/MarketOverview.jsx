@@ -1,128 +1,40 @@
-import React, { useMemo } from 'react';
-import { TrendingUp, TrendingDown, BarChart2, Globe } from 'lucide-react';
-import MarketBreadth from './MarketBreadth';
-import TopListCard from './TopListCard';
-import MarketBreadthAnalysis from './MarketBreadthAnalysis';
-import { useDataLoader } from '../hooks/useDataLoader';
+import React from 'react';
 
-const MarketOverview = () => {
-    // Load data using the data loader
-    const { data: industryStrength, loading: industryLoading, error: industryError } = useDataLoader('industries');
-    const { data: topGainers, loading: gainersLoading, error: gainersError } = useDataLoader('top_gainers');
-    const { data: topLosers, loading: losersLoading, error: losersError } = useDataLoader('top_losers');
-    const { data: topByVolume, loading: volumeLoading, error: volumeError } = useDataLoader('top_by_volume');
-    const { data: foreignBuy, loading: foreignLoading, error: foreignError } = useDataLoader('foreign_buy');
-
-    // Top gainers/losers/volume/foreign buy: use latest data array
-    const gainers = useMemo(() => topGainers?.data?.slice(0, 5) || [], [topGainers]);
-    const losers = useMemo(() => topLosers?.data?.slice(0, 5) || [], [topLosers]);
-    const byVolume = useMemo(() => topByVolume?.data?.slice(0, 5) || [], [topByVolume]);
-    const foreignNetBuy = useMemo(() => foreignBuy?.data?.slice(0, 5) || [], [foreignBuy]);
-
-    // Top/bottom industries by total_score
-    const industries = industryStrength?.industry_summary || [];
-    const topIndustries = useMemo(() =>
-        [...industries].sort((a, b) => b.total_score - a.total_score).slice(0, 5),
-        [industries]
-    );
-    const bottomIndustries = useMemo(() =>
-        [...industries].sort((a, b) => a.total_score - b.total_score).slice(0, 5),
-        [industries]
-    );
-
-    return (
-        <div className="space-y-6">
-            {/* Market Breadth Chart */}
-            <MarketBreadth />
-
-            {/* Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:col-span-3">
-                    <TopListCard
-                        title="Tăng mạnh nhất"
-                        icon={<TrendingUp className="text-green-500" />}
-                        data={gainers.map(item => ({
-                            id: item.symbol,
-                            name: item.symbol,
-                            value: item.price_change_pct_1d,
-                        }))}
-                        unit="%"
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={v => v > 0 ? 'text-green-500' : 'text-red-500'}
-                    />
-                    <TopListCard
-                        title="Giảm mạnh nhất"
-                        icon={<TrendingDown className="text-red-500" />}
-                        data={losers.map(item => ({
-                            id: item.symbol,
-                            name: item.symbol,
-                            value: item.price_change_pct_1d,
-                        }))}
-                        unit="%"
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={v => v < 0 ? 'text-red-500' : 'text-green-500'}
-                    />
-                    <TopListCard
-                        title="Giao dịch sôi động nhất"
-                        icon={<BarChart2 className="text-purple-500" />}
-                        data={byVolume.map(item => ({
-                            id: item.symbol,
-                            name: item.symbol,
-                            value: item.avg_volume_20d,
-                        }))}
-                        unit=""
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={() => 'text-green-500'}
-                    />
-                    <TopListCard
-                        title="Ngành tăng tốt nhất"
-                        icon={<TrendingUp className="text-green-500" />}
-                        data={topIndustries.map(item => ({
-                            id: item.industry,
-                            name: item.industry,
-                            value: item.total_score,
-                        }))}
-                        unit=""
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={v => v > 0 ? 'text-green-500' : 'text-red-500'}
-                    />
-                    <TopListCard
-                        title="Ngành giảm nhiều nhất"
-                        icon={<TrendingDown className="text-red-500" />}
-                        data={bottomIndustries.map(item => ({
-                            id: item.industry,
-                            name: item.industry,
-                            value: item.total_score,
-                        }))}
-                        unit=""
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={v => v < 0 ? 'text-red-500' : 'text-green-500'}
-                    />                    
-                    <TopListCard
-                        title="Nước ngoài mua ròng"
-                        icon={<Globe className="text-blue-500" />}
-                        data={foreignNetBuy.map(item => ({
-                            id: item.symbol,
-                            name: item.symbol,
-                            value: item.net_value / 1000000000,
-                        }))}
-                        unit="Tỷ VNĐ"
-                        valueKey="value"
-                        nameKey="name"
-                        valueClass={v => v > 0 ? 'text-blue-500' : 'text-red-500'}
-                    />
-                </div>
-            </div>
-
-            {/* Market Breadth Analysis */}
-            {/* <MarketBreadthAnalysis /> */}
+const MarketOverview = ({ marketOverview, getSentimentColor }) => {
+  if (!marketOverview || !marketOverview.title) return null;
+  
+  return (
+    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <h3 className="text-lg font-semibold text-blue-900 mb-3">{marketOverview.title || 'Tổng quan thị trường (Macro)'}</h3>
+      <p className="text-blue-800 mb-4">{marketOverview.summary || 'Phân tích tổng quan thị trường'}</p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white p-3 rounded border">
+          <div className="font-medium text-gray-700 mb-2">Ngành vượt trội</div>
+          <div className="text-lg font-semibold text-green-600">{marketOverview.key_metrics?.outperforming_industries || 'N/A'}</div>
+          <div className={`text-sm ${getSentimentColor(marketOverview.key_metrics?.industry_sentiment)}`}>
+            {marketOverview.key_metrics?.industry_sentiment || 'N/A'}
+          </div>
         </div>
-    );
+        <div className="bg-white p-3 rounded border">
+          <div className="font-medium text-gray-700 mb-2">Cổ phiếu vượt trội</div>
+          <div className="text-lg font-semibold text-green-600">{marketOverview.key_metrics?.outperforming_symbols || 'N/A'}</div>
+          <div className={`text-sm ${getSentimentColor(marketOverview.key_metrics?.symbol_sentiment)}`}>
+            {marketOverview.key_metrics?.symbol_sentiment || 'N/A'}
+          </div>
+        </div>
+        {marketOverview.market_phase && (
+          <div className="bg-white p-3 rounded border">
+            <div className="font-medium text-gray-700 mb-2">Giai đoạn thị trường</div>
+            <div className="text-lg font-semibold text-blue-600">{marketOverview.market_phase?.current_phase || 'N/A'}</div>
+            <div className="text-sm text-gray-600">
+              {marketOverview.market_phase?.trend_strength || 'N/A'} - {marketOverview.market_phase?.volatility_level || 'N/A'}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default MarketOverview; 

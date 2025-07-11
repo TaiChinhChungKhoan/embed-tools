@@ -88,6 +88,9 @@ export const useDataLoader = (dataType, options = {}) => {
                 case 'vsa_market_analysis':
                     result = await dataLoader.loadVSAMarketAnalysisData();
                     break;
+                case 'analyze_groups_mfi':
+                    result = await dataLoader.loadMFIAnalysisData();
+                    break;
                 default:
                     throw new Error(`Unknown data type: ${dataType}`);
             }
@@ -238,6 +241,9 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
                         break;
                     case 'vsa_market_analysis':
                         result = await dataLoader.loadVSAMarketAnalysisData();
+                        break;
+                    case 'analyze_groups_mfi':
+                        result = await dataLoader.loadMFIAnalysisData();
                         break;
                     default:
                         throw new Error(`Unknown data type: ${dataType}`);

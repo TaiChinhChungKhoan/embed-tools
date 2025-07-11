@@ -7,12 +7,19 @@ import { useDataLoader } from '../hooks/useDataLoader';
 const EMABreadthChart = () => {
     const [showHelp, setShowHelp] = useState(false);
     const [selectedPeriods, setSelectedPeriods] = useState(['5', '10', '20', '50', '200']);
+    const [visibleLines, setVisibleLines] = useState({
+        'Dòng tiền siêu ngắn hạn': true,
+        'Dòng tiền ngắn hạn': true,
+        'Dòng tiền trung hạn': true,
+        'Dòng tiền dài hạn': true,
+        'Dòng tiền rất dài hạn': true
+    });
 
     const { data, loading, error, lastUpdated, refresh } = useDataLoader('market_breadth_5', {
         refreshInterval: 5 * 60 * 1000 // Refresh every 5 minutes
     });
 
-    // Prepare data for the chart
+    // Prepare data for the chart - arranged from short to long term
     const prepareChartData = () => {
         if (!data) return [];
 
@@ -32,6 +39,14 @@ const EMABreadthChart = () => {
     };
 
     const chartData = prepareChartData();
+
+    // Handle legend click
+    const handleLegendClick = (entry) => {
+        setVisibleLines(prev => ({
+            ...prev,
+            [entry.value]: !prev[entry.value]
+        }));
+    };
 
     // Custom tooltip
     const CustomTooltip = ({ active, payload, label }) => {
@@ -65,18 +80,33 @@ const EMABreadthChart = () => {
         return null;
     };
 
-    // Custom legend
+    // Custom legend with click functionality
     const CustomLegend = ({ payload }) => {
+        // Define legend items in the correct order (short to long term)
+        const legendItems = [
+            { key: 'Dòng tiền siêu ngắn hạn', color: '#ef4444' },
+            { key: 'Dòng tiền ngắn hạn', color: '#f97316' },
+            { key: 'Dòng tiền trung hạn', color: '#eab308' },
+            { key: 'Dòng tiền dài hạn', color: '#10b981' },
+            { key: 'Dòng tiền rất dài hạn', color: '#3b82f6' }
+        ];
+
         return (
             <div className="flex flex-wrap justify-center gap-4 mt-4">
-                {payload.map((entry, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                {legendItems.map((item, index) => (
+                    <div 
+                        key={index} 
+                        className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => handleLegendClick({ value: item.key })}
+                    >
                         <div 
                             className="w-4 h-4 rounded"
-                            style={{ backgroundColor: entry.color }}
+                            style={{ backgroundColor: item.color }}
                         ></div>
-                        <span className="text-sm text-gray-700 dark:text-gray-300">
-                            {entry.value}
+                        <span className={`text-sm text-gray-700 dark:text-gray-300 ${
+                            !visibleLines[item.key] ? 'line-through opacity-50' : ''
+                        }`}>
+                            {item.key}
                         </span>
                     </div>
                 ))}
@@ -261,46 +291,56 @@ const EMABreadthChart = () => {
                         <Tooltip content={<CustomTooltip />} />
                         <Legend content={<CustomLegend />} />
                         
-                        <Line 
-                            type="monotone" 
-                            dataKey="Dòng tiền siêu ngắn hạn" 
-                            stroke="#ef4444" 
-                            strokeWidth={2}
-                            dot={false}
-                            activeDot={{ r: 4 }}
-                        />
-                        <Line 
-                            type="monotone" 
-                            dataKey="Dòng tiền ngắn hạn" 
-                            stroke="#f97316" 
-                            strokeWidth={2}
-                            dot={false}
-                            activeDot={{ r: 4 }}
-                        />
-                        <Line 
-                            type="monotone" 
-                            dataKey="Dòng tiền trung hạn" 
-                            stroke="#eab308" 
-                            strokeWidth={2}
-                            dot={false}
-                            activeDot={{ r: 4 }}
-                        />
-                        <Line 
-                            type="monotone" 
-                            dataKey="Dòng tiền dài hạn" 
-                            stroke="#10b981" 
-                            strokeWidth={2}
-                            dot={false}
-                            activeDot={{ r: 4 }}
-                        />
-                        <Line 
-                            type="monotone" 
-                            dataKey="Dòng tiền rất dài hạn" 
-                            stroke="#3b82f6" 
-                            strokeWidth={2}
-                            dot={false}
-                            activeDot={{ r: 4 }}
-                        />
+                        {visibleLines['Dòng tiền siêu ngắn hạn'] && (
+                            <Line 
+                                type="monotone" 
+                                dataKey="Dòng tiền siêu ngắn hạn" 
+                                stroke="#ef4444" 
+                                strokeWidth={2}
+                                dot={false}
+                                activeDot={{ r: 4 }}
+                            />
+                        )}
+                        {visibleLines['Dòng tiền ngắn hạn'] && (
+                            <Line 
+                                type="monotone" 
+                                dataKey="Dòng tiền ngắn hạn" 
+                                stroke="#f97316" 
+                                strokeWidth={2}
+                                dot={false}
+                                activeDot={{ r: 4 }}
+                            />
+                        )}
+                        {visibleLines['Dòng tiền trung hạn'] && (
+                            <Line 
+                                type="monotone" 
+                                dataKey="Dòng tiền trung hạn" 
+                                stroke="#eab308" 
+                                strokeWidth={2}
+                                dot={false}
+                                activeDot={{ r: 4 }}
+                            />
+                        )}
+                        {visibleLines['Dòng tiền dài hạn'] && (
+                            <Line 
+                                type="monotone" 
+                                dataKey="Dòng tiền dài hạn" 
+                                stroke="#10b981" 
+                                strokeWidth={2}
+                                dot={false}
+                                activeDot={{ r: 4 }}
+                            />
+                        )}
+                        {visibleLines['Dòng tiền rất dài hạn'] && (
+                            <Line 
+                                type="monotone" 
+                                dataKey="Dòng tiền rất dài hạn" 
+                                stroke="#3b82f6" 
+                                strokeWidth={2}
+                                dot={false}
+                                activeDot={{ r: 4 }}
+                            />
+                        )}
                     </LineChart>
                 </ResponsiveContainer>
             </div>

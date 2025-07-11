@@ -4,6 +4,7 @@ import './App.css';
 import MarketOverview from './components/MarketOverview';
 import MarketWave from './components/MarketWave';
 import TickerChart from './components/TickerChart';
+import IndexChart from './components/IndexChart';
 import StockAbnormalSignals from './components/StockAbnormalSignals';
 import IndustryAbnormalSignals from './components/IndustryAbnormalSignals';
 import IndustryRSAnalysis from './components/IndustryRSAnalysis';
@@ -15,6 +16,7 @@ import MacroeconomicsReport from './components/MacroeconomicsReport';
 import IndustryStrengthChart from './components/IndustryStrengthChart';
 import VSAReport from './components/VSAReport';
 import EMABreadthChart from './components/EMABreadthChart';
+import MFIAnalysis from './components/MFIAnalysis';
 import GlobalReloadButton from './components/GlobalReloadButton';
 import { DataReloadProvider } from './contexts/DataReloadContext';
 import iframeUtils from '@embed-tools/iframe-utils';
@@ -48,7 +50,8 @@ export default function App() {
         'Market': [
             { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
             { id: 'macroeconomics', name: 'Báo cáo Vĩ mô', description: 'Phân tích các chỉ số kinh tế vĩ mô và xu hướng thị trường' },
-            { id: 'valuation_report', name: 'Báo cáo Định giá', description: 'Phân tích tỷ lệ P/E và P/B của VN-Index' }
+            { id: 'valuation_report', name: 'Báo cáo Định giá', description: 'Phân tích tỷ lệ P/E và P/B của VN-Index' },
+            { id: 'mfi_analysis', name: 'Phân tích MFI', description: 'Phân tích Money Flow Index cho các chỉ số thị trường' }
         ]
     };
 
@@ -239,12 +242,9 @@ export default function App() {
                                 <>
                                     {activeTab === 'Market' && (
                                         <div className="space-y-8">
-                                            <TickerChart 
-                                                ticker="VNINDEX_EW" 
-                                                title="VNINDEX Equal Weight"
-                                                description="Biểu đồ VNINDEX cân bằng (loại bỏ vốn hóa thị trường)"
-                                            />
+                                            <IndexChart />
                                             <EMABreadthChart />
+                                            <MFIAnalysis />
                                             <MarketOverview />
                                             <MarketWave />
                                         </div>
@@ -284,6 +284,7 @@ export default function App() {
                                             {activeReport === 'market_overview' && <MarketOverviewReport />}
                                             {activeReport === 'macroeconomics' && <MacroeconomicsReport />}
                                             {activeReport === 'valuation_report' && <ValuationReport />}
+                                            {activeReport === 'mfi_analysis' && <MFIAnalysis />}
                                         </div>
                                     )}
                                 </>

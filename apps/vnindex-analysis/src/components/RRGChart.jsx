@@ -14,8 +14,10 @@ import {
 import { 
   loadRRGData, 
   getAvailableIndustries, 
+  getAvailableGroups,
   getTickersByIndustry, 
   getIndustryData,
+  getGroupData,
   getTickerIndustry 
 } from '../utils/rrgDataLoader';
 import { MultiSelect } from "@embed-tools/components/components/ui/multi-select";
@@ -160,6 +162,7 @@ const ZoomControls = ({ onZoomIn, onZoomOut, onReset, zoomLevel }) => {
 // RRG Chart Component
 export default function RRGChart({ type = 'industries' }) {
   const [selectedIndustries, setSelectedIndustries] = useState([]);
+  const [selectedGroups, setSelectedGroups] = useState([]);
   const [selectedTickerIndustries, setSelectedTickerIndustries] = useState([]);
   const [specialTickerFilter, setSpecialTickerFilter] = useState("all");
   const [trailLength, setTrailLength] = useState(10);
@@ -196,6 +199,7 @@ export default function RRGChart({ type = 'industries' }) {
   }, []);
   
   const availableIndustries = useMemo(() => getAvailableIndustries(), []);
+  const availableGroups = useMemo(() => getAvailableGroups(), []);
 
   // Ensure a default industry is always selected for stock RRG when special filter is 'all'
   useEffect(() => {
@@ -213,6 +217,9 @@ export default function RRGChart({ type = 'industries' }) {
     if (type === 'industries') {
       const selected = selectedIndustries.length > 0 ? selectedIndustries : rrgData.industries.map(i => i.id);
       return getIndustryData(selected);
+    } else if (type === 'groups') {
+      const selected = selectedGroups.length > 0 ? selectedGroups : rrgData.groups.map(g => g.id);
+      return getGroupData(selected);
     } else {
       // Ticker filtering logic with special filter
       if (specialTickerFilter && specialTickerFilter !== 'all') {
@@ -252,7 +259,7 @@ export default function RRGChart({ type = 'industries' }) {
         return filtered;
       }
     }
-  }, [type, selectedIndustries, selectedTickerIndustries, specialTickerFilter, rrgData, availableIndustries]);
+  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, rrgData, availableIndustries]);
 
   // Limit the number of series to prevent chart freeze
   const MAX_SERIES = 50;
@@ -338,7 +345,7 @@ export default function RRGChart({ type = 'industries' }) {
         
         {type === 'industries' && (
           <div className="flex items-center gap-2">
-            <label className="text-sm font-medium">Filter by Industry:</label>
+            <label className="text-sm font-medium">Filter by:</label>
             <MultiSelect
               options={availableIndustries.map(ind => ({ value: ind.id, label: ind.name }))}
               onValueChange={setSelectedIndustries}
@@ -350,6 +357,25 @@ export default function RRGChart({ type = 'industries' }) {
             {selectedIndustries.length > 0 && (
               <span className="text-xs text-gray-500">
                 Showing {filteredData.length} industries
+              </span>
+            )}
+          </div>
+        )}
+        
+        {type === 'groups' && (
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium">Filter by:</label>
+            <MultiSelect
+              options={availableGroups.map(group => ({ value: group.id, label: group.name }))}
+              onValueChange={setSelectedGroups}
+              defaultValue={selectedGroups}
+              placeholder="Chọn nhóm"
+              maxCount={3}
+              variant="default"
+            />
+            {selectedGroups.length > 0 && (
+              <span className="text-xs text-gray-500">
+                Showing {filteredData.length} groups
               </span>
             )}
           </div>

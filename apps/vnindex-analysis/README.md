@@ -422,66 +422,253 @@ analyze_rs Output JSON structure:
   "analysis_date": "ISO timestamp",
   "benchmark": "VNINDEX",
   "lookback_period": 21,
-  "industries": [...],
-  "symbols": [...],
+  "industries": [
+    {
+      "custom_id": "industry_id",
+      "name": "Industry name",
+      "latest_date": "ISO timestamp",
+      "data_points": 0,
+      "metrics": {
+        "current_rs": 0.0,
+        "current_crs": 0.0,
+        "current_ma13": 0.0,
+        "current_ma49": 0.0,
+        "rs_5d_change": 0.0,
+        "rs_21d_change": 0.0,
+        "rs_49d_change": 0.0,
+        "crs_21d_avg": 0.0,
+        "rs_volatility": 0.0,
+        "crs_volatility": 0.0,
+        "outperforming_days": 0,
+        "underperforming_days": 0,
+        "total_days": 0
+      },
+      "performance_summary": {
+        "rs_trend": "bullish/bearish/neutral",
+        "crs_status": "outperforming/underperforming",
+        "strength_score": 0.0
+      },
+      "speed_analysis": {
+        "raw_speed_5d": 0.0,
+        "raw_speed_21d": 0.0,
+        "raw_speed_49d": 0.0,
+        "weighted_speed": 0.0,
+        "consistency_score": 0.0,
+        "short_term_momentum": 0.0,
+        "long_term_momentum": 0.0,
+        "momentum_ratio": 0.0,
+        "speed_category": "Speed category with acceleration"
+      },
+      "direction_analysis": {
+        "direction": "Strongly Improving/Improving/Sideways/Degrading/Strongly Degrading",
+        "direction_quality": {
+          "confirmed": true/false,
+          "strength": 0.0,
+          "sustainability": 0.0
+        },
+        "trend_strength": "Very Strong/Strong/Moderate/Weak",
+        "momentum_confirmed": true/false,
+        "signal_to_noise_ratio": 0.0
+      },
+      "risk_assessment": {
+        "risk_signals": {
+          "high_risk": true/false,
+          "medium_risk": true/false,
+          "low_risk": true/false,
+          "falling_knife": true/false,
+          "momentum_exhaustion": true/false,
+          "stealth_accumulation": true/false,
+          "distribution_signals": true/false,
+          "dead_cat_bounce": true/false
+        },
+        "suggested_position_size": "Avoid/Reduced/Normal/Full",
+        "time_horizon": "Short/Medium/Long",
+        "stop_loss_distance": 0.0,
+        "risk_level": "High/Medium/Low",
+        "volume_analysis": {
+          "volume_trend": "spiking/declining/weak/stable",
+          "institutional_activity": true/false,
+          "volume_quality": "high_volatility/low_volatility/normal",
+          "recent_volume_ratio": 0.0
+        }
+      },
+      "rrg_tail": [...]
+    }
+  ],
+  "groups": [
+    {
+      "custom_id": "VN30/VN100/VNMidCap/VNSmallCap/VNAllShare",
+      "name": "Group name",
+      "latest_date": "ISO timestamp",
+      "data_points": 0,
+      "metrics": {...},
+      "performance_summary": {...},
+      "speed_analysis": {...},
+      "direction_analysis": {...},
+      "risk_assessment": {...},
+      "rrg_tail": [...]
+    }
+  ],
+  "symbols": [
+    {
+      "symbol": "SYMBOL",
+      "name": "Symbol name",
+      "industries": [...],
+      "latest_date": "ISO timestamp",
+      "data_points": 0,
+      "metrics": {...},
+      "performance_summary": {...},
+      "speed_analysis": {...},
+      "direction_analysis": {...},
+      "risk_assessment": {...},
+      "rrg_tail": [...]
+    }
+  ],
   "insights": {
-      "market_overview": {
-          "title": "Tổng quan thị trường",
-          "analysis_date": "ISO timestamp",
-          "benchmark": "VNINDEX",
-          "summary": "Market analysis summary",
-          "key_metrics": {
-              "outperforming_industries": "X/Y (Z%)",
-              "outperforming_symbols": "X/Y (Z%)",
-              "industry_sentiment": "Sentiment description",
-              "symbol_sentiment": "Sentiment description"
-          }
+    "market_overview": {
+      "title": "Tổng quan thị trường (Macro)",
+      "analysis_date": "ISO timestamp",
+      "benchmark": "VNINDEX",
+      "summary": "Market analysis summary",
+      "key_metrics": {
+        "outperforming_industries": "X/Y (Z%)",
+        "outperforming_groups": "X/Y (Z%)",
+        "outperforming_symbols": "X/Y (Z%)",
+        "industry_sentiment": "Sentiment description",
+        "group_sentiment": "Sentiment description",
+        "symbol_sentiment": "Sentiment description"
       },
-      "money_flow_analysis": {
-          "title": "Phân tích dòng tiền theo ngành (RRG)",
-          "quadrant_distribution": {
-              "Leading (Dẫn dắt)": 0,
-              "Improving (Cải thiện)": 0,
-              "Lagging (Tụt hậu)": 0,
-              "Weakening (Suy yếu)": 0,
-              "Không xác định": 0
-          },
-          "summary": "Money flow distribution summary"
-      },
-      "top_performers": {
-          "title": "Top các ngành và cổ phiếu mạnh nhất",
-          "industries": [
-              {
-                  "name": "Industry name",
-                  "strength_score": 0.0,
-                  "description": "Trend description",
-                  "rrg_position": "RRG quadrant",
-                  "money_flow": "Money flow direction"
-              }
-          ],
-          "symbols": [
-              {
-                  "name": "Symbol name",
-                  "symbol": "SYMBOL",
-                  "primary_industry": "Industry name",
-                  "strength_score": 0.0,
-                  "description": "Trend description",
-                  "rrg_position": "RRG quadrant",
-                  "money_flow": "Money flow direction"
-              }
-          ]
-      },
-      "bottom_performers": {
-          "title": "Top các ngành và cổ phiếu yếu nhất",
-          "industries": [...],
-          "symbols": [...]
-      },
-      "investment_strategy": {
-          "title": "Chiến lược đầu tư đề xuất",
-          "market_phase_analysis": ["Market phase analysis points"],
-          "sector_rotation_signals": ["Sector rotation signals"],
-          "risk_warnings": ["Risk warnings"]
+      "market_phase": {
+        "current_phase": "Tăng trưởng/Suy thoái/Đi ngang",
+        "trend_strength": "Mạnh/Yếu",
+        "volatility_level": "Cao/Thấp"
       }
+    },
+    "industry_analysis": {
+      "title": "Phân tích ngành (Sector Level)",
+      "money_flow_analysis": {
+        "title": "Phân tích dòng tiền theo ngành (RRG)",
+        "quadrant_distribution": {
+          "Leading (Dẫn dắt)": 0,
+          "Improving (Cải thiện)": 0,
+          "Lagging (Tụt hậu)": 0,
+          "Weakening (Suy yếu)": 0,
+          "Không xác định": 0
+        },
+        "summary": "Money flow distribution summary"
+      },
+      "sector_momentum": {
+        "title": "Động lượng ngành",
+        "momentum_leaders": {
+          "title": "Các ngành có động lượng mạnh nhất",
+          "industries": [...]
+        },
+        "accumulation_candidates": {...},
+        "stealth_accumulation": {...},
+        "breakout_candidates": {...}
+      },
+      "sector_risk": {
+        "title": "Rủi ro ngành",
+        "momentum_exhaustion": {...},
+        "falling_knife": {...},
+        "dead_cat_bounce": {...},
+        "distribution_signals": {...}
+      },
+      "sector_performers": {
+        "title": "Top ngành mạnh và yếu",
+        "top_industries": [...],
+        "bottom_industries": [...]
+      }
+    },
+    "group_analysis": {
+      "title": "Phân tích nhóm vốn hóa (Market Cap Level)",
+      "money_flow_analysis": {
+        "title": "Phân tích dòng tiền theo nhóm vốn hóa (RRG)",
+        "quadrant_distribution": {
+          "Leading (Dẫn dắt)": 0,
+          "Improving (Cải thiện)": 0,
+          "Lagging (Tụt hậu)": 0,
+          "Weakening (Suy yếu)": 0,
+          "Không xác định": 0
+        },
+        "summary": "Money flow distribution summary"
+      },
+      "group_momentum": {
+        "title": "Động lượng nhóm vốn hóa",
+        "momentum_leaders": {
+          "title": "Các nhóm có động lượng mạnh nhất",
+          "groups": [...]
+        },
+        "accumulation_candidates": {...},
+        "stealth_accumulation": {...},
+        "breakout_candidates": {...}
+      },
+      "group_risk": {
+        "title": "Rủi ro nhóm vốn hóa",
+        "momentum_exhaustion": {...},
+        "falling_knife": {...},
+        "dead_cat_bounce": {...},
+        "distribution_signals": {...}
+      },
+      "group_performers": {
+        "title": "Top nhóm vốn hóa mạnh và yếu",
+        "top_groups": [...],
+        "bottom_groups": [...]
+      }
+    },
+    "individual_stock_analysis": {
+      "title": "Phân tích cổ phiếu cá nhân (Stock Level)",
+      "stock_momentum": {
+        "title": "Động lượng cổ phiếu",
+        "momentum_leaders": {
+          "title": "Các cổ phiếu có động lượng mạnh nhất",
+          "symbols": [...]
+        },
+        "accumulation_candidates": {...},
+        "stealth_accumulation": {...},
+        "breakout_candidates": {...}
+      },
+      "stock_risk": {
+        "title": "Rủi ro cổ phiếu",
+        "momentum_exhaustion": {...},
+        "falling_knife": {...},
+        "dead_cat_bounce": {...},
+        "distribution_signals": {...}
+      },
+      "stock_performers": {
+        "title": "Top cổ phiếu mạnh và yếu",
+        "top_symbols": [...],
+        "bottom_symbols": [...]
+      }
+    },
+    "investment_strategies": {
+      "title": "Chiến lược đầu tư đề xuất",
+      "macro_strategy": {
+        "title": "Chiến lược tổng thể thị trường (Macro)",
+        "market_phase_analysis": ["Market phase analysis points"],
+        "overall_positioning": ["Overall market positioning"],
+        "risk_management": ["Risk management recommendations"]
+      },
+      "sector_strategy": {
+        "title": "Chiến lược ngành (Sector)",
+        "sector_rotation_signals": ["Sector rotation signals"],
+        "sector_allocation": ["Sector allocation recommendations"],
+        "sector_risk_warnings": ["Sector risk warnings"]
+      },
+      "group_strategy": {
+        "title": "Chiến lược nhóm vốn hóa (Market Cap)",
+        "group_rotation_signals": ["Market cap group rotation signals"],
+        "group_allocation": ["Market cap group allocation recommendations"],
+        "group_risk_warnings": ["Market cap group risk warnings"]
+      },
+      "stock_strategy": {
+        "title": "Chiến lược cổ phiếu cá nhân (Stock)",
+        "momentum_strategy": ["Momentum-based strategy recommendations"],
+        "accumulation_strategy": ["Accumulation strategy recommendations"],
+        "risk_avoidance": ["Risk avoidance recommendations"],
+        "position_sizing": ["Position sizing recommendations"]
+      }
+    }
   }
 }
 
@@ -822,3 +1009,97 @@ market_breadth_5.json Output JSON Structure:
 }
 
 EMA Periods: 5, 10, 20, 50, 200 days
+
+9. Money Flow Index (MFI) Analysis for Market Indices
+
+This script calculates the Money Flow Index (MFI) for Vietnamese market indices:
+- VN30 (Large Cap)
+- VN100 (Large-Mid Cap) 
+- VNAllShare (All Shares)
+- VNMidCap (Mid Cap)
+- VNSmall (Small Cap)
+
+The MFI is a volume-weighted RSI that combines price and volume data to identify
+overbought and oversold conditions. It ranges from 0 to 100, where:
+- Above 80: Overbought (potential sell signal)
+- Below 20: Oversold (potential buy signal)
+- 20-80: Neutral zone
+
+Output:
+- JSON file with comprehensive MFI analysis for each index
+- Historical MFI values and signals
+- Statistical analysis and insights
+
+JSON Structure:
+{
+  "analysis_date": "ISO timestamp",
+  "period": 3,
+  "period_unit": "years",
+  "mfi_period": 14,
+  "indices": [
+    {
+      "symbol": "VN30",
+      "name": "VN30 - Large Cap",
+      "data_points": 0,
+      "latest_date": "ISO timestamp",
+      "mfi_data": [
+        {
+          "date": "ISO timestamp",
+          "mfi": 0.0,
+          "signal": "buy/sell/neutral",
+          "price": 0.0,
+          "volume": 0.0,
+          "typical_price": 0.0,
+          "raw_money_flow": 0.0,
+          "positive_money_flow": 0.0,
+          "negative_money_flow": 0.0
+        }
+      ],
+      "statistics": {
+        "current_mfi": 0.0,
+        "mfi_5d_avg": 0.0,
+        "mfi_21d_avg": 0.0,
+        "mfi_50d_avg": 0.0,
+        "mfi_min": 0.0,
+        "mfi_max": 0.0,
+        "mfi_std": 0.0,
+        "overbought_days": 0,
+        "oversold_days": 0,
+        "neutral_days": 0,
+        "total_days": 0
+      },
+      "signals": {
+        "current_signal": "buy/sell/neutral",
+        "signal_strength": "strong/moderate/weak",
+        "signal_confidence": 0.0,
+        "trend_direction": "bullish/bearish/neutral",
+        "momentum": "increasing/decreasing/stable"
+      },
+      "analysis": {
+        "market_condition": "overbought/oversold/neutral",
+        "volume_analysis": "high/low/normal",
+        "price_momentum": "strong/weak/neutral",
+        "risk_level": "high/medium/low",
+        "recommendation": "buy/hold/sell"
+      }
+    }
+  ],
+  "market_overview": {
+    "overall_sentiment": "bullish/bearish/neutral",
+    "index_performance": {
+      "best_performer": "symbol",
+      "worst_performer": "symbol",
+      "most_volatile": "symbol",
+      "least_volatile": "symbol"
+    },
+    "money_flow_distribution": {
+      "overbought_indices": 0,
+      "oversold_indices": 0,
+      "neutral_indices": 0
+    },
+    "correlation_analysis": {
+      "high_correlation_pairs": [],
+      "low_correlation_pairs": []
+    }
+  }
+}

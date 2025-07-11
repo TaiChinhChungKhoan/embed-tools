@@ -35,8 +35,9 @@ export const loadRRGData = () => {
       }
     });
 
-    // Separate industries and tickers from RRG data using the new structure
+    // Separate industries, groups, and tickers from RRG data using the new structure
     const industries = rrgData.series.filter(series => series.type === 'industry');
+    const groups = rrgData.series.filter(series => series.type === 'group');
     const tickers = rrgData.series.filter(series => series.type === 'symbol');
 
     // Create a map of ticker to industry using the new industry field in RRG data
@@ -54,6 +55,7 @@ export const loadRRGData = () => {
       rrgDate: rrgData.rrg_date,
       tailLength: rrgData.tail_length,
       industries,
+      groups,
       tickers,
       tickerToIndustry: rrgTickerToIndustry, // Use the new RRG-based mapping
       industryList: Array.from(industryList.values())
@@ -61,6 +63,7 @@ export const loadRRGData = () => {
 
     console.log('RRG Data loaded successfully:', {
       industries: industries.length,
+      groups: groups.length,
       tickers: tickers.length,
       totalIndustries: industryList.size,
       tickersWithIndustry: rrgTickerToIndustry.size
@@ -79,6 +82,15 @@ export const getAvailableIndustries = () => {
   return data.industryList;
 };
 
+// Get available groups
+export const getAvailableGroups = () => {
+  const data = loadRRGData();
+  return data.groups.map(group => ({
+    id: group.id,
+    name: group.name
+  }));
+};
+
 // Get tickers filtered by industry using the new industry field
 export const getTickersByIndustry = (industryIds = []) => {
   const data = loadRRGData();
@@ -91,6 +103,19 @@ export const getTickersByIndustry = (industryIds = []) => {
     // Use the industry field directly from the RRG data
     return ticker.industry && industryIds.includes(ticker.industry);
   });
+};
+
+// Get group data
+export const getGroupData = (groupIds = []) => {
+  const data = loadRRGData();
+  
+  if (groupIds.length === 0) {
+    return data.groups;
+  }
+
+  return data.groups.filter(group => 
+    groupIds.includes(group.id)
+  );
 };
 
 // Get industry data

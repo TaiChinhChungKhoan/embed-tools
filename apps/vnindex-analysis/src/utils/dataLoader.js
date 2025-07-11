@@ -168,6 +168,10 @@ class DataLoader {
         return this.fetchData(`${this.basePath}/data/industry_strength_time_series.json`);
     }
 
+    async loadMFIAnalysisData() {
+        return this.fetchData(`${this.basePath}/data/analyze_groups_mfi.json`);
+    }
+
     // Clear cache for specific URL or all cache
     clearCache(url = null) {
         if (url) {
