@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2025-07-11T23:49:38.013957",
+  "analysis_date": "2025-07-12T03:04:18.598586",
   "timeframe": "1W",
   "benchmark": "VNINDEX",
   "lookback_period": 21,
@@ -31911,7 +31911,7 @@
   "insights": {
     "market_overview": {
       "title": "Tổng quan thị trường (Macro)",
-      "analysis_date": "2025-07-11T23:49:38.013957",
+      "analysis_date": "2025-07-12T03:04:18.598586",
       "benchmark": "VNINDEX",
       "summary": "Phân tích tổng thể thị trường với 23 ngành, 5 nhóm vốn hóa và 344 cổ phiếu so với VNINDEX trong 21 ngày.",
       "key_metrics": {
@@ -32175,6 +32175,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Xu hướng tăng rất mạnh, vượt trội hoàn toàn so với thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "LDG",
               "primary_industry": "Bất động sản nhà ở"
             },
@@ -32188,6 +32192,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Xu hướng tăng rất mạnh, vượt trội hoàn toàn so với thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "NVB",
               "primary_industry": "Ngân hàng"
             },
@@ -32201,6 +32209,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "ANV",
               "primary_industry": "Thủy sản"
             },
@@ -32214,6 +32226,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "G36",
               "primary_industry": "Đầu tư công"
             },
@@ -32227,6 +32243,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Weakening (Suy yếu)",
+              "money_flow": "Dòng tiền đang rút ra, rủi ro suy yếu tiếp.",
+              "quadrant_description": "Đang mất đà, dòng tiền có thể bắt đầu chuyển hướng.",
               "symbol": "VFS",
               "primary_industry": "Chứng khoán"
             },
@@ -32240,6 +32260,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "DGW",
               "primary_industry": "Bán lẻ"
             },
@@ -32253,6 +32277,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Weakening (Suy yếu)",
+              "money_flow": "Dòng tiền đang rút ra, rủi ro suy yếu tiếp.",
+              "quadrant_description": "Đang mất đà, dòng tiền có thể bắt đầu chuyển hướng.",
               "symbol": "DL1",
               "primary_industry": "Bất động sản"
             },
@@ -32266,6 +32294,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Weakening (Suy yếu)",
+              "money_flow": "Dòng tiền đang rút ra, rủi ro suy yếu tiếp.",
+              "quadrant_description": "Đang mất đà, dòng tiền có thể bắt đầu chuyển hướng.",
               "symbol": "HAH",
               "primary_industry": "Vận tải"
             }
@@ -32292,6 +32324,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang với sức mạnh tương đương hoặc yếu hơn thị trường.",
+              "rrg_position": "Improving (Cải thiện)",
+              "money_flow": "Dòng tiền đang quay trở lại, tín hiệu tích cực.",
+              "quadrant_description": "Đang phục hồi, có khả năng bắt đầu thu hút dòng tiền.",
               "symbol": "VGS",
               "primary_industry": "Thép"
             },
@@ -32305,6 +32341,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Weakening (Suy yếu)",
+              "money_flow": "Dòng tiền đang rút ra, rủi ro suy yếu tiếp.",
+              "quadrant_description": "Đang mất đà, dòng tiền có thể bắt đầu chuyển hướng.",
               "symbol": "REE",
               "primary_industry": "Điện"
             },
@@ -32318,6 +32358,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "APS",
               "primary_industry": "Chứng khoán"
             },
@@ -32331,6 +32375,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang với sức mạnh tương đương hoặc yếu hơn thị trường.",
+              "rrg_position": "Lagging (Tụt hậu)",
+              "money_flow": "Dòng tiền có dấu hiệu bắt đáy, tín hiệu phục hồi sớm.",
+              "quadrant_description": "Vị thế yếu, dòng tiền có xu hướng rút ra.",
               "symbol": "HGM",
               "primary_industry": "Tradable"
             },
@@ -32344,6 +32392,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang với sức mạnh tương đương hoặc yếu hơn thị trường.",
+              "rrg_position": "Leading (Dẫn dắt)",
+              "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào.",
+              "quadrant_description": "Vị thế mạnh, xu hướng tích cực, thu hút dòng tiền.",
               "symbol": "MSN",
               "primary_industry": "Hàng tiêu dùng"
             },
@@ -32357,6 +32409,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Xu hướng giảm và đang yếu hơn thị trường chung.",
+              "rrg_position": "Lagging (Tụt hậu)",
+              "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu.",
+              "quadrant_description": "Vị thế yếu, dòng tiền có xu hướng rút ra.",
               "symbol": "FIT",
               "primary_industry": "Khác"
             },
@@ -32370,6 +32426,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Đi ngang nhưng vẫn giữ được sức mạnh tốt hơn thị trường.",
+              "rrg_position": "Lagging (Tụt hậu)",
+              "money_flow": "Dòng tiền có dấu hiệu bắt đáy, tín hiệu phục hồi sớm.",
+              "quadrant_description": "Vị thế yếu, dòng tiền có xu hướng rút ra.",
               "symbol": "TSC",
               "primary_industry": "Nông nghiệp"
             },
@@ -32383,6 +32443,10 @@
               "risk_level": "Low",
               "position_size": "Normal",
               "time_horizon": "Short",
+              "description": "Xu hướng tăng tích cực và mạnh hơn thị trường chung.",
+              "rrg_position": "Lagging (Tụt hậu)",
+              "money_flow": "Dòng tiền có dấu hiệu bắt đáy, tín hiệu phục hồi sớm.",
+              "quadrant_description": "Vị thế yếu, dòng tiền có xu hướng rút ra.",
               "symbol": "VCI",
               "primary_industry": "Chứng khoán"
             }
