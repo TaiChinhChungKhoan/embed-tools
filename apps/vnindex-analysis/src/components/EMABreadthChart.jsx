@@ -210,7 +210,9 @@ const EMABreadthChart = () => {
                         <li><strong>Dòng tiền trung hạn (EMA 20):</strong> Xu hướng trung hạn, cân bằng giữa nhạy cảm và ổn định</li>
                         <li><strong>Dòng tiền dài hạn (EMA 50):</strong> Xu hướng dài hạn, ít bị ảnh hưởng bởi biến động ngắn hạn</li>
                         <li><strong>Dòng tiền rất dài hạn (EMA 200):</strong> Xu hướng rất dài hạn, phản ánh cấu trúc thị trường</li>
-                    </ul>
+                        <li><strong>Đồng thuận:</strong> Sự đồng thuận của dòng tiền ngắn và dài hạn thể hiện thị trường đang trong một xu hướng mạnh</li>
+                        <li><strong>Trái chiều:</strong> Các đường ngắn hạn và dài hạn đi ngược chiều nhau thể hiện sự thiếu đồng thuận của xu hướng</li>
+                    </ul>                                    
                 </div>
             )}
 

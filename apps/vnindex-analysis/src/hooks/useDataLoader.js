@@ -82,12 +82,9 @@ export const useDataLoader = (dataType, options = {}) => {
                 case 'industry_strength_time_series':
                     result = await dataLoader.loadIndustryStrengthTimeSeriesData();
                     break;
-                                    case 'rs_analysis':
-                        result = await dataLoader.loadRSAnalysisData();
-                        break;
-                    case 'vsa_market_analysis':
-                        result = await dataLoader.loadVSAMarketAnalysisData();
-                        break;
+                case 'rs_analysis':
+                    result = await dataLoader.loadRSAnalysisData();
+                    break;
                 case 'vsa_market_analysis':
                     result = await dataLoader.loadVSAMarketAnalysisData();
                     break;
@@ -176,6 +173,9 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
                     case 'market_breadth_4':
                         result = await dataLoader.loadMarketBreadth4();
                         break;
+                    case 'market_breadth_5':
+                        result = await dataLoader.loadMarketBreadth5();
+                        break;
                     case 'industries':
                         result = await dataLoader.loadIndustriesData();
                         break;
@@ -235,6 +235,9 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
                         break;
                     case 'rs_analysis':
                         result = await dataLoader.loadRSAnalysisData();
+                        break;
+                    case 'vsa_market_analysis':
+                        result = await dataLoader.loadVSAMarketAnalysisData();
                         break;
                     default:
                         throw new Error(`Unknown data type: ${dataType}`);

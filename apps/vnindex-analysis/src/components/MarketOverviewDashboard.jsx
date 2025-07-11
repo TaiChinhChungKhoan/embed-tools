@@ -26,7 +26,7 @@ function getSignalFrequencyFromIndividualResults(individual_results) {
             bearish_signals: counts.bearish
         }))
         .sort((a, b) => new Date(a.date) - new Date(b.date))
-        .slice(-10);
+        .slice(-20);
 }
 
 const MarketOverviewDashboard = (props) => {

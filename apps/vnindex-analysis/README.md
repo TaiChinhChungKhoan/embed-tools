@@ -422,72 +422,67 @@ analyze_rs Output JSON structure:
   "analysis_date": "ISO timestamp",
   "benchmark": "VNINDEX",
   "lookback_period": 21,
-  "industries": [
-    {
-      "custom_id": "industry_code",
-      "name": "industry_name",
-      "latest_date": "YYYY-MM-DD",
-      "data_points": 450,
-      "metrics": {
-        "current_rs": 1.0234,           # Current RS value
-        "current_crs": 0.0456,          # Current CRS value
-        "current_ma13": 1.0189,         # 13-day moving average
-        "current_ma49": 1.0123,         # 49-day moving average
-        "rs_21d_change": 0.0234,        # 21-day change in RS
-        "crs_21d_avg": 0.0345,          # Average CRS over 21 days
-        "rs_volatility": 0.0234,        # Standard deviation of RS
-        "crs_volatility": 0.0456,       # Standard deviation of CRS
-        "outperforming_days": 280,      # Days with positive CRS
-        "underperforming_days": 170,    # Days with negative CRS
-        "total_days": 450               # Total analyzed days
+  "industries": [...],
+  "symbols": [...],
+  "insights": {
+      "market_overview": {
+          "title": "Tổng quan thị trường",
+          "analysis_date": "ISO timestamp",
+          "benchmark": "VNINDEX",
+          "summary": "Market analysis summary",
+          "key_metrics": {
+              "outperforming_industries": "X/Y (Z%)",
+              "outperforming_symbols": "X/Y (Z%)",
+              "industry_sentiment": "Sentiment description",
+              "symbol_sentiment": "Sentiment description"
+          }
       },
-      "performance_summary": {
-        "rs_trend": "bullish|bearish|neutral",
-        "crs_status": "outperforming|underperforming",
-        "strength_score": 4.56          # CRS as percentage
-      }
-    }
-  ],
-  "symbols": [
-    {
-      "symbol": "VNM",
-      "name": "Vietnam Dairy Products JSC",
-      "industries": [
-        {
-          "custom_id": "thuc-pham",
-          "name": "Thực phẩm",
-          "is_primary": true,
-          "priority": 1
-        },
-        {
-          "custom_id": "tradable",
-          "name": "Tradable",
-          "is_primary": false,
-          "priority": 99
-        }
-      ],
-      "latest_date": "YYYY-MM-DD",
-      "data_points": 450,
-      "metrics": {
-        "current_rs": 1.0234,
-        "current_crs": 0.0456,
-        "current_ma13": 1.0189,
-        "current_ma49": 1.0123,
-        "rs_21d_change": 0.0234,
-        "crs_21d_avg": 0.0345,
-        "rs_volatility": 0.0234,
-        "crs_volatility": 0.0456,
-        "outperforming_days": 280,
-        "underperforming_days": 170,
-        "total_days": 450
+      "money_flow_analysis": {
+          "title": "Phân tích dòng tiền theo ngành (RRG)",
+          "quadrant_distribution": {
+              "Leading (Dẫn dắt)": 0,
+              "Improving (Cải thiện)": 0,
+              "Lagging (Tụt hậu)": 0,
+              "Weakening (Suy yếu)": 0,
+              "Không xác định": 0
+          },
+          "summary": "Money flow distribution summary"
       },
-      "performance_summary": {
-        "rs_trend": "bullish|bearish|neutral",
-        "crs_status": "outperforming|underperforming",
-        "strength_score": 4.56
+      "top_performers": {
+          "title": "Top các ngành và cổ phiếu mạnh nhất",
+          "industries": [
+              {
+                  "name": "Industry name",
+                  "strength_score": 0.0,
+                  "description": "Trend description",
+                  "rrg_position": "RRG quadrant",
+                  "money_flow": "Money flow direction"
+              }
+          ],
+          "symbols": [
+              {
+                  "name": "Symbol name",
+                  "symbol": "SYMBOL",
+                  "primary_industry": "Industry name",
+                  "strength_score": 0.0,
+                  "description": "Trend description",
+                  "rrg_position": "RRG quadrant",
+                  "money_flow": "Money flow direction"
+              }
+          ]
+      },
+      "bottom_performers": {
+          "title": "Top các ngành và cổ phiếu yếu nhất",
+          "industries": [...],
+          "symbols": [...]
+      },
+      "investment_strategy": {
+          "title": "Chiến lược đầu tư đề xuất",
+          "market_phase_analysis": ["Market phase analysis points"],
+          "sector_rotation_signals": ["Sector rotation signals"],
+          "risk_warnings": ["Risk warnings"]
       }
-    }
-  ]
+  }
 }
 
 7. RRG Data Structure (rrg_data.json):
@@ -798,7 +793,7 @@ Signal Details:
 This script analyzes the breadth of stocks above/below various Exponential Moving Averages (EMAs)
 for the VN-Index market. The analysis helps identify market trends and momentum.
 
-market_breadth5.json Output JSON Structure:
+market_breadth_5.json Output JSON Structure:
 {
   "2024-01-01": {
     "total_stocks": 500,
