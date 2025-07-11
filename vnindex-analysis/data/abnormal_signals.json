@@ -351,6 +351,30 @@
     {
       "WideSpread": true,
       "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "CSC",
+      "Date": "2025-07-11 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "WideSpread"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": true,
+      "NarrowSpread": false,
       "HighVolume": true,
       "LowVolume": false,
       "EffortGTResult": false,
@@ -1874,109 +1898,109 @@
     "top_gainers": [
       {
         "Symbol": "thep",
-        "Return": 0.014198401504466496,
-        "Improvement": 0.014856172600125284
+        "Return": 0.014177343223196193,
+        "Improvement": 0.014851197670635474
       },
       {
         "Symbol": "chung-khoan",
-        "Return": 0.011259724307356445,
-        "Improvement": 0.015472825693602754
+        "Return": 0.011242590842711175,
+        "Improvement": 0.015455503312504448
       },
       {
         "Symbol": "det-may",
-        "Return": 0.007751937984496138,
-        "Improvement": 0.012483961438873203
+        "Return": 0.007761344962710082,
+        "Improvement": 0.01259189821201201
       },
       {
         "Symbol": "xay-dung",
-        "Return": 0.005905089113162898,
-        "Improvement": 0.0017002373611412214
+        "Return": 0.005946798533549291,
+        "Improvement": 0.0017300986898025617
       },
       {
         "Symbol": "hang-khong",
-        "Return": 0.0046974689756713595,
-        "Improvement": 0.0020965973322015774
+        "Return": 0.004712180042975023,
+        "Improvement": 0.0021421660590754676
       }
     ],
     "top_losers": [
       {
         "Symbol": "dau-tu-cong",
-        "Return": -0.009996227838551475,
-        "Improvement": -0.011412792197792232
+        "Return": -0.010053759687216335,
+        "Improvement": -0.011452067734479154
       },
       {
         "Symbol": "hoa-chat",
-        "Return": -0.009300048947626038,
-        "Improvement": -0.005669399765876881
+        "Return": -0.009337026447462482,
+        "Improvement": -0.005709241621840944
       },
       {
         "Symbol": "dien",
-        "Return": -0.005377340997589464,
-        "Improvement": -0.0017745696350028872
+        "Return": -0.005442612453978035,
+        "Improvement": -0.0019014907797613168
       },
       {
         "Symbol": "dau-khi",
-        "Return": -0.005199502656267563,
-        "Improvement": -0.01593867779621949
+        "Return": -0.005289628858827555,
+        "Improvement": -0.01607059125693433
       },
       {
         "Symbol": "bds-kcn",
-        "Return": -0.004654465130956131,
-        "Improvement": -0.00441785341078893
+        "Return": -0.004643903633261615,
+        "Improvement": -0.004399144911819808
       }
     ],
     "top_improving": [
       {
         "Symbol": "chung-khoan",
-        "Return": 0.011259724307356445,
-        "Improvement": 0.015472825693602754
+        "Return": 0.011242590842711175,
+        "Improvement": 0.015455503312504448
       },
       {
         "Symbol": "thep",
-        "Return": 0.014198401504466496,
-        "Improvement": 0.014856172600125284
+        "Return": 0.014177343223196193,
+        "Improvement": 0.014851197670635474
       },
       {
         "Symbol": "det-may",
-        "Return": 0.007751937984496138,
-        "Improvement": 0.012483961438873203
+        "Return": 0.007761344962710082,
+        "Improvement": 0.01259189821201201
       },
       {
         "Symbol": "thuy-san",
-        "Return": 0.0011812573828586803,
-        "Improvement": 0.009253123025353194
+        "Return": 0.0011019675452783595,
+        "Improvement": 0.009089131661224381
       },
       {
         "Symbol": "bao-hiem",
-        "Return": 0.0009347978499649745,
-        "Improvement": 0.003188800648037393
+        "Return": 0.0009358366964964393,
+        "Improvement": 0.0031826342804595065
       }
     ],
     "top_degrading": [
       {
         "Symbol": "cang-bien",
-        "Return": -0.0017587939698492372,
-        "Improvement": -0.019011190135983402
+        "Return": -0.001747197204484463,
+        "Improvement": -0.018991494948972676
       },
       {
         "Symbol": "cong-nghe",
-        "Return": -0.0014424990051730147,
-        "Improvement": -0.016181041302770427
+        "Return": -0.0014508221325417736,
+        "Improvement": -0.016164045419876816
       },
       {
         "Symbol": "dau-khi",
-        "Return": -0.005199502656267563,
-        "Improvement": -0.01593867779621949
+        "Return": -0.005289628858827555,
+        "Improvement": -0.01607059125693433
       },
       {
         "Symbol": "van-tai",
-        "Return": -0.0008979539477903531,
-        "Improvement": -0.015342615279041572
+        "Return": -0.0008907892392658878,
+        "Improvement": -0.015332823939581242
       },
       {
         "Symbol": "dau-tu-cong",
-        "Return": -0.009996227838551475,
-        "Improvement": -0.011412792197792232
+        "Return": -0.010053759687216335,
+        "Improvement": -0.011452067734479154
       }
     ]
   },
@@ -2030,56 +2054,56 @@
     "top_immediate_gainers": [
       {
         "Symbol": "thep",
-        "ImmediateReturn": 0.014198401504466496
+        "ImmediateReturn": 0.014177343223196193
       },
       {
         "Symbol": "chung-khoan",
-        "ImmediateReturn": 0.011259724307356445
+        "ImmediateReturn": 0.011242590842711175
       },
       {
         "Symbol": "det-may",
-        "ImmediateReturn": 0.007751937984496138
+        "ImmediateReturn": 0.007761344962710082
       },
       {
         "Symbol": "xay-dung",
-        "ImmediateReturn": 0.005905089113162898
+        "ImmediateReturn": 0.005946798533549291
       },
       {
         "Symbol": "hang-khong",
-        "ImmediateReturn": 0.0046974689756713595
+        "ImmediateReturn": 0.004712180042975023
       }
     ],
     "top_immediate_losers": [
       {
         "Symbol": "dau-tu-cong",
-        "ImmediateReturn": -0.009996227838551475
+        "ImmediateReturn": -0.010053759687216335
       },
       {
         "Symbol": "hoa-chat",
-        "ImmediateReturn": -0.009300048947626038
+        "ImmediateReturn": -0.009337026447462482
       },
       {
         "Symbol": "dien",
-        "ImmediateReturn": -0.005377340997589464
+        "ImmediateReturn": -0.005442612453978035
       },
       {
         "Symbol": "dau-khi",
-        "ImmediateReturn": -0.005199502656267563
+        "ImmediateReturn": -0.005289628858827555
       },
       {
         "Symbol": "bds-kcn",
-        "ImmediateReturn": -0.004654465130956131
+        "ImmediateReturn": -0.004643903633261615
       }
     ]
   },
   "summary": {
     "analysis_date": "2025-07-11 00:00:00",
-    "total_stock_abnormalities": 68,
+    "total_stock_abnormalities": 69,
     "total_industry_abnormalities": 3,
     "market_sentiment": "NEUTRAL",
     "key_insights": [
-      "Detected 71 abnormal signals across stocks and industries",
-      "68 individual stocks showing abnormal behavior",
+      "Detected 72 abnormal signals across stocks and industries",
+      "69 individual stocks showing abnormal behavior",
       "3 industries showing abnormal behavior - consider sector rotation",
       "Mixed market sentiment - signals are inconclusive"
     ],
