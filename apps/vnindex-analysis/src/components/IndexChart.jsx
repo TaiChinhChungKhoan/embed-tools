@@ -9,9 +9,9 @@ const INDEX_SOURCES = [
     { value: 'VNINDEX_EW', label: 'VNINDEX Equal Weight' },
     { value: 'VN30', label: 'VN30' },
     { value: 'VN100', label: 'VN100' },
-    { value: 'VNAllShare', label: 'VN All Share' },
-    { value: 'VNMidCap', label: 'VN Mid Cap' },
-    { value: 'VNSmallCap', label: 'VN Small Cap' },
+    { value: 'VNALL', label: 'VN All Share' },
+    { value: 'VNMID', label: 'VN Mid Cap' },
+    { value: 'VNSML', label: 'VN Small Cap' },
 ];
 
 const IndexChart = () => {

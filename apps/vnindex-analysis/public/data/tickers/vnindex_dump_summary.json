@@ -1,0 +1,102 @@
+{
+  "dump_info": {
+    "timestamp": "2025-07-11T19:07:00.826791",
+    "years_back": 3,
+    "start_date": "2022-07-12",
+    "end_date": "2025-07-11",
+    "total_symbols_processed": 6,
+    "successful_dumps": 6
+  },
+  "results": {
+    "VNINDEX": {
+      "file": "reports/tickers/VNINDEX.json",
+      "data_points": 749,
+      "start_date": "2022-07-12",
+      "end_date": "2025-07-11",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VN30": {
+      "file": "reports/tickers/VN30.json",
+      "data_points": 749,
+      "start_date": "2022-07-12",
+      "end_date": "2025-07-11",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VN100": {
+      "file": "reports/tickers/VN100.json",
+      "data_points": 749,
+      "start_date": "2022-07-12",
+      "end_date": "2025-07-11",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VNMidCap": {
+      "file": "reports/tickers/VNMidCap.json",
+      "data_points": 748,
+      "start_date": "2022-07-12",
+      "end_date": "2025-07-10",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VNSmallCap": {
+      "file": "reports/tickers/VNSmallCap.json",
+      "data_points": 748,
+      "start_date": "2022-07-12",
+      "end_date": "2025-07-10",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VNAllShare": {
+      "file": "reports/tickers/VNAllShare.json",
+      "data_points": 748,
+      "start_date": "2022-07-12",
+      "end_date": "2025-07-10",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    }
+  }
+}
