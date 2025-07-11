@@ -1,47 +1,44 @@
 [
   {
     "vcp_detected": true,
-    "days_since_vcp": 0,
-    "last_close": 49.0,
-    "resistance_level": 54.3,
-    "price_above_resistance_pct": -9.760589318600363,
-    "last_vcp_confidence": 0.6666666666666666,
-    "symbol": "BWE"
-  },
-  {
-    "vcp_detected": true,
-    "days_since_vcp": 0,
+    "days_since_vcp": 1,
     "last_close": 9.0,
     "resistance_level": 9.88,
+    "current_resistance": 9.88,
     "price_above_resistance_pct": -8.906882591093126,
     "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-13",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 4,
+    "signal_selection_method": "best_in_range",
     "symbol": "CIG"
   },
   {
     "vcp_detected": true,
-    "days_since_vcp": 0,
+    "days_since_vcp": 1,
     "last_close": 54.6,
     "resistance_level": 62.2,
+    "current_resistance": 62.2,
     "price_above_resistance_pct": -12.21864951768489,
     "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-13",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 2,
+    "signal_selection_method": "best_in_range",
     "symbol": "DBD"
   },
   {
     "vcp_detected": true,
-    "days_since_vcp": 0,
-    "last_close": 197.9,
-    "resistance_level": 214.0,
-    "price_above_resistance_pct": -7.523364485981306,
-    "last_vcp_confidence": 0.6666666666666666,
-    "symbol": "SLS"
-  },
-  {
-    "vcp_detected": true,
-    "days_since_vcp": 0,
+    "days_since_vcp": 1,
     "last_close": 46.6,
     "resistance_level": 49.5,
+    "current_resistance": 49.5,
     "price_above_resistance_pct": -5.8585858585858555,
     "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-13",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 1,
+    "signal_selection_method": "best_in_range",
     "symbol": "VLB"
   }
 ]
