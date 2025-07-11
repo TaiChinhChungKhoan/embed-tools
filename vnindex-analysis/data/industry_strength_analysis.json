@@ -1,264 +1,171 @@
 {
   "metadata": {
-    "analysis_date": "2025-07-10T17:12:14.300402",
+    "analysis_date": "2025-07-11T15:54:48.581390",
     "analysis_type": "industry_strength_analysis",
-    "latest_date": "2025-07-10T00:00:00",
+    "latest_date": "2025-07-11T00:00:00",
     "total_industries": 23,
     "total_symbols": 259
   },
   "industry_summary": [
     {
-      "industry": "ngan-hang",
-      "num_symbols": 23,
-      "rank": 1,
-      "total_score": 2.6086956521739153,
-      "strength_counts": {
-        "early": 12,
-        "medium": 10,
-        "strong": 3
-      },
-      "weakness_counts": {
-        "early": 11,
-        "medium": 8,
-        "strong": 3
-      },
-      "strength_percentages": {
-        "early": 0.5217391304347826,
-        "medium": 0.43478260869565216,
-        "strong": 0.13043478260869565
-      },
-      "weakness_percentages": {
-        "early": 0.4782608695652174,
-        "medium": 0.34782608695652173,
-        "strong": 0.13043478260869565
-      },
-      "average_scores": {
-        "strength": 1.934782608695652,
-        "weakness": 2.0652173913043477,
-        "strength_minus_weakness": -0.13043478260869565
-      }
-    },
-    {
       "industry": "chung-khoan",
       "num_symbols": 29,
-      "rank": 2,
-      "total_score": 1.0344827586206824,
+      "rank": 1,
+      "total_score": -1.7241379310344924,
       "strength_counts": {
-        "early": 18,
-        "medium": 17,
-        "strong": 3
+        "early": 15,
+        "medium": 14,
+        "strong": 4
       },
       "weakness_counts": {
-        "early": 11,
-        "medium": 9,
+        "early": 14,
+        "medium": 8,
         "strong": 6
       },
       "strength_percentages": {
-        "early": 0.6206896551724138,
-        "medium": 0.5862068965517241,
-        "strong": 0.10344827586206896
+        "early": 0.5172413793103449,
+        "medium": 0.4827586206896552,
+        "strong": 0.13793103448275862
       },
       "weakness_percentages": {
-        "early": 0.3793103448275862,
-        "medium": 0.3103448275862069,
+        "early": 0.4827586206896552,
+        "medium": 0.27586206896551724,
         "strong": 0.20689655172413793
       },
       "average_scores": {
-        "strength": 1.896551724137931,
-        "weakness": 2.103448275862069,
-        "strength_minus_weakness": -0.20689655172413793
+        "strength": 1.8275862068965518,
+        "weakness": 2.1724137931034484,
+        "strength_minus_weakness": -0.3448275862068966
       }
     },
     {
       "industry": "bds",
       "num_symbols": 15,
-      "rank": 3,
-      "total_score": -19.333333333333336,
+      "rank": 2,
+      "total_score": -56.666666666666664,
       "strength_counts": {
-        "early": 6,
-        "medium": 6,
-        "strong": 2
-      },
-      "weakness_counts": {
-        "early": 9,
-        "medium": 6,
-        "strong": 4
-      },
-      "strength_percentages": {
-        "early": 0.4,
-        "medium": 0.4,
-        "strong": 0.13333333333333333
-      },
-      "weakness_percentages": {
-        "early": 0.6,
-        "medium": 0.4,
-        "strong": 0.26666666666666666
-      },
-      "average_scores": {
-        "strength": 1.8,
-        "weakness": 2.2,
-        "strength_minus_weakness": -0.4
-      }
-    },
-    {
-      "industry": "dau-tu-cong",
-      "num_symbols": 9,
-      "rank": 4,
-      "total_score": -84.44444444444444,
-      "strength_counts": {
-        "early": 3,
+        "early": 4,
         "medium": 2,
-        "strong": 0
+        "strong": 1
       },
       "weakness_counts": {
-        "early": 6,
-        "medium": 6,
-        "strong": 4
+        "early": 11,
+        "medium": 7,
+        "strong": 5
       },
       "strength_percentages": {
-        "early": 0.3333333333333333,
-        "medium": 0.2222222222222222,
-        "strong": 0.0
+        "early": 0.26666666666666666,
+        "medium": 0.13333333333333333,
+        "strong": 0.06666666666666667
       },
       "weakness_percentages": {
-        "early": 0.6666666666666666,
-        "medium": 0.6666666666666666,
-        "strong": 0.4444444444444444
+        "early": 0.7333333333333333,
+        "medium": 0.4666666666666667,
+        "strong": 0.3333333333333333
       },
       "average_scores": {
-        "strength": 1.0555555555555556,
-        "weakness": 2.9444444444444446,
-        "strength_minus_weakness": -1.8888888888888888
+        "strength": 1.4,
+        "weakness": 2.6,
+        "strength_minus_weakness": -1.2
       }
     },
     {
-      "industry": "cang-bien",
-      "num_symbols": 6,
-      "rank": 5,
-      "total_score": -95.0,
+      "industry": "ngan-hang",
+      "num_symbols": 23,
+      "rank": 3,
+      "total_score": -63.04347826086956,
+      "strength_counts": {
+        "early": 5,
+        "medium": 5,
+        "strong": 1
+      },
+      "weakness_counts": {
+        "early": 18,
+        "medium": 13,
+        "strong": 8
+      },
+      "strength_percentages": {
+        "early": 0.21739130434782608,
+        "medium": 0.21739130434782608,
+        "strong": 0.043478260869565216
+      },
+      "weakness_percentages": {
+        "early": 0.782608695652174,
+        "medium": 0.5652173913043478,
+        "strong": 0.34782608695652173
+      },
+      "average_scores": {
+        "strength": 1.3478260869565217,
+        "weakness": 2.652173913043478,
+        "strength_minus_weakness": -1.3043478260869565
+      }
+    },
+    {
+      "industry": "thuy-san",
+      "num_symbols": 8,
+      "rank": 4,
+      "total_score": -70.0,
       "strength_counts": {
         "early": 1,
         "medium": 1,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 5,
-        "medium": 3,
-        "strong": 3
+        "early": 7,
+        "medium": 6,
+        "strong": 2
       },
       "strength_percentages": {
-        "early": 0.16666666666666666,
-        "medium": 0.16666666666666666,
+        "early": 0.125,
+        "medium": 0.125,
         "strong": 0.0
       },
       "weakness_percentages": {
-        "early": 0.8333333333333334,
-        "medium": 0.5,
-        "strong": 0.5
+        "early": 0.875,
+        "medium": 0.75,
+        "strong": 0.25
       },
       "average_scores": {
-        "strength": 0.75,
-        "weakness": 3.25,
-        "strength_minus_weakness": -2.5
-      }
-    },
-    {
-      "industry": "thuy-san",
-      "num_symbols": 8,
-      "rank": 6,
-      "total_score": -101.25,
-      "strength_counts": {
-        "early": 0,
-        "medium": 0,
-        "strong": 0
-      },
-      "weakness_counts": {
-        "early": 8,
-        "medium": 7,
-        "strong": 3
-      },
-      "strength_percentages": {
-        "early": 0.0,
-        "medium": 0.0,
-        "strong": 0.0
-      },
-      "weakness_percentages": {
-        "early": 1.0,
-        "medium": 0.875,
-        "strong": 0.375
-      },
-      "average_scores": {
-        "strength": 1.0625,
-        "weakness": 2.9375,
-        "strength_minus_weakness": -1.875
+        "strength": 1.375,
+        "weakness": 2.625,
+        "strength_minus_weakness": -1.25
       }
     },
     {
       "industry": "thep",
       "num_symbols": 10,
-      "rank": 7,
-      "total_score": -102.0,
+      "rank": 5,
+      "total_score": -73.0,
       "strength_counts": {
         "early": 3,
         "medium": 3,
-        "strong": 0
+        "strong": 1
       },
       "weakness_counts": {
         "early": 7,
-        "medium": 7,
-        "strong": 6
+        "medium": 6,
+        "strong": 5
       },
       "strength_percentages": {
         "early": 0.3,
         "medium": 0.3,
-        "strong": 0.0
+        "strong": 0.1
       },
       "weakness_percentages": {
         "early": 0.7,
-        "medium": 0.7,
-        "strong": 0.6
-      },
-      "average_scores": {
-        "strength": 0.9,
-        "weakness": 3.1,
-        "strength_minus_weakness": -2.2
-      }
-    },
-    {
-      "industry": "dau-khi",
-      "num_symbols": 12,
-      "rank": 8,
-      "total_score": -107.5,
-      "strength_counts": {
-        "early": 2,
-        "medium": 1,
-        "strong": 0
-      },
-      "weakness_counts": {
-        "early": 10,
-        "medium": 10,
-        "strong": 6
-      },
-      "strength_percentages": {
-        "early": 0.16666666666666666,
-        "medium": 0.08333333333333333,
-        "strong": 0.0
-      },
-      "weakness_percentages": {
-        "early": 0.8333333333333334,
-        "medium": 0.8333333333333334,
+        "medium": 0.6,
         "strong": 0.5
       },
       "average_scores": {
-        "strength": 0.9583333333333334,
-        "weakness": 3.0416666666666665,
-        "strength_minus_weakness": -2.0833333333333335
+        "strength": 1.15,
+        "weakness": 2.85,
+        "strength_minus_weakness": -1.7
       }
     },
     {
       "industry": "cao-su",
       "num_symbols": 8,
-      "rank": 9,
+      "rank": 6,
       "total_score": -108.75,
       "strength_counts": {
         "early": 0,
@@ -287,134 +194,103 @@
       }
     },
     {
-      "industry": "hang-tieu-dung",
-      "num_symbols": 4,
-      "rank": 10,
-      "total_score": -110.0,
+      "industry": "hang-khong",
+      "num_symbols": 8,
+      "rank": 7,
+      "total_score": -118.75,
       "strength_counts": {
-        "early": 1,
-        "medium": 0,
+        "early": 2,
+        "medium": 1,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 3,
-        "medium": 3,
-        "strong": 2
+        "early": 6,
+        "medium": 6,
+        "strong": 5
       },
       "strength_percentages": {
         "early": 0.25,
-        "medium": 0.0,
+        "medium": 0.125,
         "strong": 0.0
       },
       "weakness_percentages": {
         "early": 0.75,
         "medium": 0.75,
-        "strong": 0.5
+        "strong": 0.625
       },
       "average_scores": {
-        "strength": 0.75,
-        "weakness": 3.25,
-        "strength_minus_weakness": -2.5
+        "strength": 0.6875,
+        "weakness": 3.3125,
+        "strength_minus_weakness": -2.625
       }
     },
     {
-      "industry": "bds-kcn",
-      "num_symbols": 13,
-      "rank": 11,
-      "total_score": -120.76923076923077,
+      "industry": "xay-dung",
+      "num_symbols": 24,
+      "rank": 8,
+      "total_score": -119.16666666666666,
       "strength_counts": {
-        "early": 1,
-        "medium": 1,
-        "strong": 1
-      },
-      "weakness_counts": {
-        "early": 12,
-        "medium": 12,
-        "strong": 8
-      },
-      "strength_percentages": {
-        "early": 0.07692307692307693,
-        "medium": 0.07692307692307693,
-        "strong": 0.07692307692307693
-      },
-      "weakness_percentages": {
-        "early": 0.9230769230769231,
-        "medium": 0.9230769230769231,
-        "strong": 0.6153846153846154
-      },
-      "average_scores": {
-        "strength": 0.7692307692307693,
-        "weakness": 3.230769230769231,
-        "strength_minus_weakness": -2.4615384615384617
-      }
-    },
-    {
-      "industry": "van-tai",
-      "num_symbols": 18,
-      "rank": 12,
-      "total_score": -126.66666666666666,
-      "strength_counts": {
-        "early": 3,
-        "medium": 2,
+        "early": 5,
+        "medium": 5,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 15,
-        "medium": 13,
-        "strong": 12
+        "early": 19,
+        "medium": 17,
+        "strong": 16
       },
       "strength_percentages": {
-        "early": 0.16666666666666666,
-        "medium": 0.1111111111111111,
+        "early": 0.20833333333333334,
+        "medium": 0.20833333333333334,
         "strong": 0.0
       },
       "weakness_percentages": {
-        "early": 0.8333333333333334,
-        "medium": 0.7222222222222222,
+        "early": 0.7916666666666666,
+        "medium": 0.7083333333333334,
         "strong": 0.6666666666666666
       },
       "average_scores": {
-        "strength": 0.5555555555555556,
-        "weakness": 3.4444444444444446,
-        "strength_minus_weakness": -2.888888888888889
+        "strength": 0.6666666666666666,
+        "weakness": 3.3333333333333335,
+        "strength_minus_weakness": -2.6666666666666665
       }
     },
     {
-      "industry": "vlxd",
-      "num_symbols": 10,
-      "rank": 13,
-      "total_score": -129.0,
+      "industry": "dau-tu-cong",
+      "num_symbols": 9,
+      "rank": 9,
+      "total_score": -122.22222222222223,
       "strength_counts": {
-        "early": 0,
+        "early": 1,
         "medium": 0,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 10,
-        "medium": 8,
-        "strong": 6
+        "early": 8,
+        "medium": 7,
+        "strong": 5
       },
       "strength_percentages": {
-        "early": 0.0,
+        "early": 0.1111111111111111,
         "medium": 0.0,
         "strong": 0.0
       },
       "weakness_percentages": {
-        "early": 1.0,
-        "medium": 0.8,
-        "strong": 0.6
+        "early": 0.8888888888888888,
+        "medium": 0.7777777777777778,
+        "strong": 0.5555555555555556
       },
       "average_scores": {
-        "strength": 0.65,
-        "weakness": 3.35,
-        "strength_minus_weakness": -2.7
+        "strength": 0.6111111111111112,
+        "weakness": 3.388888888888889,
+        "strength_minus_weakness": -2.7777777777777777
       }
     },
     {
       "industry": "det-may",
       "num_symbols": 9,
-      "rank": 14,
-      "total_score": -132.22222222222223,
+      "rank": 10,
+      "total_score": -125.55555555555556,
       "strength_counts": {
         "early": 0,
         "medium": 0,
@@ -422,7 +298,7 @@
       },
       "weakness_counts": {
         "early": 9,
-        "medium": 9,
+        "medium": 8,
         "strong": 5
       },
       "strength_percentages": {
@@ -432,19 +308,81 @@
       },
       "weakness_percentages": {
         "early": 1.0,
-        "medium": 1.0,
+        "medium": 0.8888888888888888,
         "strong": 0.5555555555555556
       },
       "average_scores": {
-        "strength": 0.6666666666666666,
-        "weakness": 3.3333333333333335,
-        "strength_minus_weakness": -2.6666666666666665
+        "strength": 0.7777777777777778,
+        "weakness": 3.2222222222222223,
+        "strength_minus_weakness": -2.4444444444444446
+      }
+    },
+    {
+      "industry": "dau-khi",
+      "num_symbols": 12,
+      "rank": 11,
+      "total_score": -130.83333333333331,
+      "strength_counts": {
+        "early": 1,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 11,
+        "medium": 11,
+        "strong": 7
+      },
+      "strength_percentages": {
+        "early": 0.08333333333333333,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.9166666666666666,
+        "medium": 0.9166666666666666,
+        "strong": 0.5833333333333334
+      },
+      "average_scores": {
+        "strength": 0.625,
+        "weakness": 3.375,
+        "strength_minus_weakness": -2.75
+      }
+    },
+    {
+      "industry": "vlxd",
+      "num_symbols": 10,
+      "rank": 12,
+      "total_score": -133.0,
+      "strength_counts": {
+        "early": 1,
+        "medium": 1,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 9,
+        "medium": 8,
+        "strong": 7
+      },
+      "strength_percentages": {
+        "early": 0.1,
+        "medium": 0.1,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.9,
+        "medium": 0.8,
+        "strong": 0.7
+      },
+      "average_scores": {
+        "strength": 0.65,
+        "weakness": 3.35,
+        "strength_minus_weakness": -2.7
       }
     },
     {
       "industry": "hoa-chat",
       "num_symbols": 7,
-      "rank": 15,
+      "rank": 13,
       "total_score": -134.28571428571428,
       "strength_counts": {
         "early": 0,
@@ -475,7 +413,7 @@
     {
       "industry": "bao-hiem",
       "num_symbols": 5,
-      "rank": 16,
+      "rank": 14,
       "total_score": -138.0,
       "strength_counts": {
         "early": 0,
@@ -504,65 +442,158 @@
       }
     },
     {
-      "industry": "xay-dung",
-      "num_symbols": 24,
-      "rank": 17,
-      "total_score": -138.75,
+      "industry": "bds-kcn",
+      "num_symbols": 13,
+      "rank": 15,
+      "total_score": -140.0,
       "strength_counts": {
-        "early": 4,
-        "medium": 3,
+        "early": 0,
+        "medium": 0,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 20,
-        "medium": 19,
-        "strong": 18
+        "early": 13,
+        "medium": 13,
+        "strong": 8
       },
       "strength_percentages": {
-        "early": 0.16666666666666666,
-        "medium": 0.125,
+        "early": 0.0,
+        "medium": 0.0,
         "strong": 0.0
       },
       "weakness_percentages": {
-        "early": 0.8333333333333334,
-        "medium": 0.7916666666666666,
-        "strong": 0.75
+        "early": 1.0,
+        "medium": 1.0,
+        "strong": 0.6153846153846154
       },
       "average_scores": {
-        "strength": 0.4791666666666667,
-        "weakness": 3.5208333333333335,
-        "strength_minus_weakness": -3.0416666666666665
+        "strength": 0.5769230769230769,
+        "weakness": 3.423076923076923,
+        "strength_minus_weakness": -2.8461538461538463
       }
     },
     {
-      "industry": "hang-khong",
-      "num_symbols": 8,
-      "rank": 18,
-      "total_score": -142.5,
+      "industry": "ban-le",
+      "num_symbols": 13,
+      "rank": 16,
+      "total_score": -145.3846153846154,
+      "strength_counts": {
+        "early": 1,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 12,
+        "medium": 12,
+        "strong": 9
+      },
+      "strength_percentages": {
+        "early": 0.07692307692307693,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.9230769230769231,
+        "medium": 0.9230769230769231,
+        "strong": 0.6923076923076923
+      },
+      "average_scores": {
+        "strength": 0.46153846153846156,
+        "weakness": 3.5384615384615383,
+        "strength_minus_weakness": -3.076923076923077
+      }
+    },
+    {
+      "industry": "cang-bien",
+      "num_symbols": 6,
+      "rank": 17,
+      "total_score": -148.33333333333334,
       "strength_counts": {
         "early": 1,
         "medium": 1,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 7,
-        "medium": 7,
-        "strong": 6
+        "early": 5,
+        "medium": 5,
+        "strong": 5
       },
       "strength_percentages": {
-        "early": 0.125,
-        "medium": 0.125,
+        "early": 0.16666666666666666,
+        "medium": 0.16666666666666666,
         "strong": 0.0
       },
       "weakness_percentages": {
-        "early": 0.875,
-        "medium": 0.875,
+        "early": 0.8333333333333334,
+        "medium": 0.8333333333333334,
+        "strong": 0.8333333333333334
+      },
+      "average_scores": {
+        "strength": 0.4166666666666667,
+        "weakness": 3.5833333333333335,
+        "strength_minus_weakness": -3.1666666666666665
+      }
+    },
+    {
+      "industry": "van-tai",
+      "num_symbols": 18,
+      "rank": 18,
+      "total_score": -155.0,
+      "strength_counts": {
+        "early": 2,
+        "medium": 2,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 16,
+        "medium": 16,
+        "strong": 15
+      },
+      "strength_percentages": {
+        "early": 0.1111111111111111,
+        "medium": 0.1111111111111111,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 0.8888888888888888,
+        "medium": 0.8888888888888888,
+        "strong": 0.8333333333333334
+      },
+      "average_scores": {
+        "strength": 0.3611111111111111,
+        "weakness": 3.638888888888889,
+        "strength_minus_weakness": -3.2777777777777777
+      }
+    },
+    {
+      "industry": "hang-tieu-dung",
+      "num_symbols": 4,
+      "rank": 19,
+      "total_score": -157.5,
+      "strength_counts": {
+        "early": 0,
+        "medium": 0,
+        "strong": 0
+      },
+      "weakness_counts": {
+        "early": 4,
+        "medium": 4,
+        "strong": 3
+      },
+      "strength_percentages": {
+        "early": 0.0,
+        "medium": 0.0,
+        "strong": 0.0
+      },
+      "weakness_percentages": {
+        "early": 1.0,
+        "medium": 1.0,
         "strong": 0.75
       },
       "average_scores": {
-        "strength": 0.5,
-        "weakness": 3.5,
-        "strength_minus_weakness": -3.0
+        "strength": 0.375,
+        "weakness": 3.625,
+        "strength_minus_weakness": -3.25
       }
     },
     {
@@ -597,19 +628,19 @@
       }
     },
     {
-      "industry": "ban-le",
-      "num_symbols": 13,
-      "rank": 20,
-      "total_score": -160.0,
+      "industry": "cong-nghe",
+      "num_symbols": 9,
+      "rank": 21,
+      "total_score": -157.77777777777777,
       "strength_counts": {
         "early": 0,
         "medium": 0,
         "strong": 0
       },
       "weakness_counts": {
-        "early": 13,
-        "medium": 13,
-        "strong": 10
+        "early": 9,
+        "medium": 8,
+        "strong": 7
       },
       "strength_percentages": {
         "early": 0.0,
@@ -618,19 +649,19 @@
       },
       "weakness_percentages": {
         "early": 1.0,
-        "medium": 1.0,
-        "strong": 0.7692307692307693
+        "medium": 0.8888888888888888,
+        "strong": 0.7777777777777778
       },
       "average_scores": {
-        "strength": 0.34615384615384615,
-        "weakness": 3.6538461538461537,
-        "strength_minus_weakness": -3.3076923076923075
+        "strength": 0.2777777777777778,
+        "weakness": 3.7222222222222223,
+        "strength_minus_weakness": -3.4444444444444446
       }
     },
     {
       "industry": "y-te",
       "num_symbols": 9,
-      "rank": 21,
+      "rank": 22,
       "total_score": -162.22222222222223,
       "strength_counts": {
         "early": 1,
@@ -649,37 +680,6 @@
       },
       "weakness_percentages": {
         "early": 0.8888888888888888,
-        "medium": 0.8888888888888888,
-        "strong": 0.8888888888888888
-      },
-      "average_scores": {
-        "strength": 0.2777777777777778,
-        "weakness": 3.7222222222222223,
-        "strength_minus_weakness": -3.4444444444444446
-      }
-    },
-    {
-      "industry": "cong-nghe",
-      "num_symbols": 9,
-      "rank": 22,
-      "total_score": -168.8888888888889,
-      "strength_counts": {
-        "early": 0,
-        "medium": 0,
-        "strong": 0
-      },
-      "weakness_counts": {
-        "early": 9,
-        "medium": 8,
-        "strong": 8
-      },
-      "strength_percentages": {
-        "early": 0.0,
-        "medium": 0.0,
-        "strong": 0.0
-      },
-      "weakness_percentages": {
-        "early": 1.0,
         "medium": 0.8888888888888888,
         "strong": 0.8888888888888888
       },
@@ -725,11 +725,11 @@
     {
       "symbol": "BIC",
       "industry": "bao-hiem",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.026804737002296557,
-      "rs_13": 0.027997564237850738,
-      "rs_49": 0.027665847452363095,
-      "rs_slope": -0.0004455794950755234,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.026684776643617604,
+      "rs_13": 0.027934076665139848,
+      "rs_49": 0.027636066844058428,
+      "rs_slope": -0.00042561415780851473,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -748,11 +748,11 @@
     {
       "symbol": "BMI",
       "industry": "bao-hiem",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.014664785147062891,
-      "rs_13": 0.015122889199449662,
-      "rs_49": 0.015914275922210282,
-      "rs_slope": -9.426034320340859e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.014439962682471738,
+      "rs_13": 0.015040499995229375,
+      "rs_49": 0.015851017704748657,
+      "rs_slope": -0.00013520000143867305,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -771,11 +771,11 @@
     {
       "symbol": "BVH",
       "industry": "bao-hiem",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03735369801610359,
-      "rs_13": 0.03851316899756116,
-      "rs_49": 0.038087495696638635,
-      "rs_slope": -0.0005671806946746273,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03683733947974976,
+      "rs_13": 0.0383020125698429,
+      "rs_49": 0.03808058588345407,
+      "rs_slope": -0.00047938665702256596,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -794,11 +794,11 @@
     {
       "symbol": "MIG",
       "industry": "bao-hiem",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012036191582966711,
-      "rs_13": 0.012380409946298899,
-      "rs_49": 0.01246696599863257,
-      "rs_slope": -0.00011270537109603907,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011867522774667984,
+      "rs_13": 0.012325264440568823,
+      "rs_49": 0.01244337118994278,
+      "rs_slope": -0.00012355596588428837,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -817,11 +817,11 @@
     {
       "symbol": "PVI",
       "industry": "bao-hiem",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.039636424005976584,
-      "rs_13": 0.04108023145574559,
-      "rs_49": 0.041864182905115566,
-      "rs_slope": -0.0002749879875550546,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.040061464164197126,
+      "rs_13": 0.040970754219729844,
+      "rs_49": 0.04177989102150674,
+      "rs_slope": -0.0001676525899004744,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -840,103 +840,11 @@
     {
       "symbol": "ABB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0060872693063279935,
-      "rs_13": 0.006097532305106097,
-      "rs_49": 0.006040601256380003,
-      "rs_slope": 2.1733213191328825e-05,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 3.0,
-        "weakness": 1.0,
-        "strength_minus_weakness": 2.0
-      }
-    },
-    {
-      "symbol": "ACB",
-      "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.015598627597465482,
-      "rs_13": 0.015580495753242617,
-      "rs_49": 0.016643108967076842,
-      "rs_slope": -4.949595058054666e-05,
-      "rs_slope_up": false,
-      "signals": {
-        "early_strength": false,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
-      }
-    },
-    {
-      "symbol": "BID",
-      "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02645886942807338,
-      "rs_13": 0.026389074129231544,
-      "rs_49": 0.026987165913545726,
-      "rs_slope": 3.6918485884936474e-05,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
-      }
-    },
-    {
-      "symbol": "BVB",
-      "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009200077474336626,
-      "rs_13": 0.009362241591171506,
-      "rs_49": 0.009596767850800127,
-      "rs_slope": 2.9654415677640366e-06,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
-      }
-    },
-    {
-      "symbol": "CTG",
-      "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.031128081680086326,
-      "rs_13": 0.03080334010529607,
-      "rs_49": 0.029921762182949597,
-      "rs_slope": 4.54915417638771e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006105257381187576,
+      "rs_13": 0.006094407736338168,
+      "rs_49": 0.006041766851505637,
+      "rs_slope": 9.700466480566575e-06,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -953,13 +861,82 @@
       }
     },
     {
-      "symbol": "EIB",
+      "symbol": "ACB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0163941230181788,
-      "rs_13": 0.01673466359196569,
-      "rs_49": 0.016523364494551853,
-      "rs_slope": -0.00012293348731583985,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.015571836241905388,
+      "rs_13": 0.015579545653616887,
+      "rs_49": 0.016565097885097343,
+      "rs_slope": -7.159839880602672e-05,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
+      },
+      "scores": {
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
+      }
+    },
+    {
+      "symbol": "BID",
+      "industry": "ngan-hang",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.026273186258369004,
+      "rs_13": 0.02638397523421466,
+      "rs_49": 0.026949808378089052,
+      "rs_slope": -5.5268833929622216e-05,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
+      },
+      "scores": {
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
+      }
+    },
+    {
+      "symbol": "BVB",
+      "industry": "ngan-hang",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009260783668093513,
+      "rs_13": 0.009342957568596112,
+      "rs_49": 0.009586627291747939,
+      "rs_slope": -7.159757874393106e-05,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
+      },
+      "scores": {
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
+      }
+    },
+    {
+      "symbol": "CTG",
+      "industry": "ngan-hang",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.030594885303479313,
+      "rs_13": 0.030818320476549595,
+      "rs_49": 0.029931458755760268,
+      "rs_slope": -0.0002385420192889499,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -976,13 +953,13 @@
       }
     },
     {
-      "symbol": "EVF",
+      "symbol": "EIB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007712846905176945,
-      "rs_13": 0.007667473290550144,
-      "rs_49": 0.007753556789226954,
-      "rs_slope": -1.6701832766100393e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01680660739765119,
+      "rs_13": 0.016713319997094214,
+      "rs_49": 0.016549548980257376,
+      "rs_slope": -5.077338893128523e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -993,19 +970,42 @@
         "strong_weakness": false
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
+      }
+    },
+    {
+      "symbol": "EVF",
+      "industry": "ngan-hang",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007614422127099111,
+      "rs_13": 0.007681946702634854,
+      "rs_49": 0.007746023586709762,
+      "rs_slope": -5.1948087648296794e-05,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
+      },
+      "scores": {
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "HDB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.016843750864668935,
-      "rs_13": 0.016256221608503797,
-      "rs_49": 0.01649652813828317,
-      "rs_slope": 0.00014596420250058417,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.016772308198880474,
+      "rs_13": 0.01631103290571625,
+      "rs_49": 0.016489920451825856,
+      "rs_slope": 5.491819541036843e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -1024,11 +1024,11 @@
     {
       "symbol": "KLB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012382059157189894,
-      "rs_13": 0.01275698311347715,
-      "rs_49": 0.011951600994754081,
-      "rs_slope": -5.9200510507265336e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012141916364833718,
+      "rs_13": 0.01270043243785077,
+      "rs_49": 0.011996967555651675,
+      "rs_slope": -0.00015846794384677122,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1047,11 +1047,11 @@
     {
       "symbol": "LPB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.023034780443263878,
-      "rs_13": 0.023405900427680894,
-      "rs_49": 0.024368546393340403,
-      "rs_slope": -0.00018886601757179893,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02263747118867303,
+      "rs_13": 0.0233575110186555,
+      "rs_49": 0.024301425929098328,
+      "rs_slope": -0.0003285619679052551,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1070,11 +1070,11 @@
     {
       "symbol": "MBB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.018296394676406296,
-      "rs_13": 0.018746389077669755,
-      "rs_49": 0.01866724505856271,
-      "rs_slope": -0.00011442020875395941,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.018315772143562725,
+      "rs_13": 0.018697618725371283,
+      "rs_49": 0.018653461434739525,
+      "rs_slope": -0.00013821149434563066,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1093,34 +1093,34 @@
     {
       "symbol": "MSB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008888796657535761,
-      "rs_13": 0.008838186086532354,
-      "rs_49": 0.00887183220083711,
-      "rs_slope": 3.545940650896331e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008849193282844912,
+      "rs_13": 0.008843522187941232,
+      "rs_49": 0.008867280740690124,
+      "rs_slope": -2.1607094133277438e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "NAB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01023768019700617,
-      "rs_13": 0.011926328484329812,
-      "rs_49": 0.01260467561863166,
-      "rs_slope": -0.0006775067504871922,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010186862034902865,
+      "rs_13": 0.011778483983085395,
+      "rs_49": 0.012531146955228214,
+      "rs_slope": -0.0006928631671180139,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1139,63 +1139,17 @@
     {
       "symbol": "NVB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010860241830607896,
-      "rs_13": 0.009506560986766725,
-      "rs_49": 0.008659511325540466,
-      "rs_slope": 0.00013779186904910764,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010701350016463615,
+      "rs_13": 0.00969376732906403,
+      "rs_49": 0.008710039391606196,
+      "rs_slope": -5.8458958220790856e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": true,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 4.0,
-        "weakness": 0.0,
-        "strength_minus_weakness": 4.0
-      }
-    },
-    {
-      "symbol": "OCB",
-      "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008854209900113444,
-      "rs_13": 0.008677164229158176,
-      "rs_49": 0.00841340619373884,
-      "rs_slope": 2.8911262962731493e-05,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": true,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 4.0,
-        "weakness": 0.0,
-        "strength_minus_weakness": 4.0
-      }
-    },
-    {
-      "symbol": "SHB",
-      "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009926399380205305,
-      "rs_13": 0.00958050172612217,
-      "rs_49": 0.009953310068095291,
-      "rs_slope": 9.7409672394682e-05,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
@@ -1206,13 +1160,36 @@
       }
     },
     {
-      "symbol": "SSB",
+      "symbol": "OCB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013281314850170166,
-      "rs_13": 0.013262424756646067,
-      "rs_49": 0.013817727802116622,
-      "rs_slope": -2.50066427453257e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008746295686532762,
+      "rs_13": 0.008683027269278165,
+      "rs_49": 0.008420743685332494,
+      "rs_slope": -6.653620484771591e-06,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": false,
+        "strong_weakness": false
+      },
+      "scores": {
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
+      }
+    },
+    {
+      "symbol": "SHB",
+      "industry": "ngan-hang",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009740972450883546,
+      "rs_13": 0.009598155302222931,
+      "rs_49": 0.009943094760577543,
+      "rs_slope": -4.1637331048485426e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1229,13 +1206,36 @@
       }
     },
     {
+      "symbol": "SSB",
+      "industry": "ngan-hang",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013239490725496654,
+      "rs_13": 0.013262162416568987,
+      "rs_49": 0.013784280014447627,
+      "rs_slope": -5.525832004302459e-05,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
+      },
+      "scores": {
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
+      }
+    },
+    {
       "symbol": "STB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03296117982346919,
-      "rs_13": 0.033869097380609066,
-      "rs_49": 0.03238933929908448,
-      "rs_slope": -0.00024420125598655296,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03268713642849303,
+      "rs_13": 0.03376642957798915,
+      "rs_49": 0.032406351179417696,
+      "rs_slope": -0.0003157281460862062,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1254,11 +1254,11 @@
     {
       "symbol": "TCB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.024072383165933423,
-      "rs_13": 0.02487543448712453,
-      "rs_49": 0.023554731563458973,
-      "rs_slope": -0.00030470152973069604,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.023975139940730986,
+      "rs_13": 0.024806124644142277,
+      "rs_49": 0.02360789552053285,
+      "rs_slope": -0.0003270704487327265,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1277,11 +1277,11 @@
     {
       "symbol": "TPB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010272266954428488,
-      "rs_13": 0.009923410180974371,
-      "rs_49": 0.010117447333900437,
-      "rs_slope": 0.00010348188281308034,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010186862034902865,
+      "rs_13": 0.009961292725133465,
+      "rs_49": 0.01010152003449729,
+      "rs_slope": 5.706279293994244e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -1300,11 +1300,11 @@
     {
       "symbol": "VCB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.042472538114606675,
-      "rs_13": 0.04184143759472879,
-      "rs_49": 0.04280793798424307,
-      "rs_slope": 0.0001904415751897433,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04301119525847876,
+      "rs_13": 0.04196449084286581,
+      "rs_49": 0.042745992369480616,
+      "rs_slope": 0.00032210789662808566,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -1323,11 +1323,11 @@
     {
       "symbol": "VIB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013212141335325531,
-      "rs_13": 0.013276909124294066,
-      "rs_49": 0.01359456601912557,
-      "rs_slope": -6.6634194557650685e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01327378992426737,
+      "rs_13": 0.013276471137979947,
+      "rs_49": 0.01357662999441932,
+      "rs_slope": -1.9721541137350183e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1346,11 +1346,11 @@
     {
       "symbol": "VPB",
       "industry": "ngan-hang",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01393846324119421,
-      "rs_13": 0.013600160571398335,
-      "rs_49": 0.013633707156204787,
-      "rs_slope": 0.00010821607921805838,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013822577104598836,
+      "rs_13": 0.013619424614431433,
+      "rs_49": 0.013642605525815586,
+      "rs_slope": 2.0561008049209233e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -1369,11 +1369,11 @@
     {
       "symbol": "C4G",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005810575246949448,
-      "rs_13": 0.005966202961077814,
-      "rs_49": 0.005895553965804317,
-      "rs_slope": -1.1314897861833609e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005693666995938975,
+      "rs_13": 0.005942673778014518,
+      "rs_49": 0.005891611263663672,
+      "rs_slope": -4.336315999715398e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1392,34 +1392,34 @@
     {
       "symbol": "FCN",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009960986137627624,
-      "rs_13": 0.010037839606705977,
-      "rs_49": 0.010550182062638464,
-      "rs_slope": 6.13773233666664e-06,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009843870047195698,
+      "rs_13": 0.010004313413531033,
+      "rs_49": 0.010514088900694288,
+      "rs_slope": -3.886118064833754e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
+        "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "G36",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005741401732104812,
-      "rs_13": 0.006147238116963235,
-      "rs_49": 0.005994750146044659,
-      "rs_slope": -1.7570431610021682e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005693666995938975,
+      "rs_13": 0.006067428011050391,
+      "rs_49": 0.006010556482989832,
+      "rs_slope": -2.895094560775857e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1438,11 +1438,11 @@
     {
       "symbol": "HHV",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008854209900113444,
-      "rs_13": 0.00900082936213299,
-      "rs_49": 0.009226645636019467,
-      "rs_slope": -4.667223550919933e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008677697288991329,
+      "rs_13": 0.00897046109487485,
+      "rs_49": 0.009204605354944785,
+      "rs_slope": -8.789441817049718e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1461,34 +1461,34 @@
     {
       "symbol": "HID",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.002006031930494452,
-      "rs_13": 0.0019149466036290806,
-      "rs_49": 0.001977230223172502,
-      "rs_slope": 1.2619158353345973e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.001982493688947426,
+      "rs_13": 0.0019233669556686548,
+      "rs_49": 0.001974405967385898,
+      "rs_slope": -1.5763093851998413e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "KSB",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012001604825544396,
-      "rs_13": 0.012254305372862873,
-      "rs_49": 0.012494942900714246,
-      "rs_slope": -7.30201771147564e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011764625178355833,
+      "rs_13": 0.01221094299041382,
+      "rs_49": 0.012471716770965037,
+      "rs_slope": -0.00014399421906374394,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1507,34 +1507,34 @@
     {
       "symbol": "LCG",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006986524999308264,
-      "rs_13": 0.006899428901184144,
-      "rs_49": 0.007105413742370303,
-      "rs_slope": 2.0551466065559227e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006846120074635057,
+      "rs_13": 0.006899264084438147,
+      "rs_49": 0.007092733726975124,
+      "rs_slope": 3.621060774551717e-07,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
-        "medium_strength": true,
+        "medium_strength": false,
         "strong_strength": false,
         "early_weakness": false,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "PLC",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.017708419800226888,
-      "rs_13": 0.017963231801871735,
-      "rs_49": 0.01929388031527332,
-      "rs_slope": -5.738165679178391e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.017149599385358358,
+      "rs_13": 0.017864152498782995,
+      "rs_49": 0.019224205058890696,
+      "rs_slope": -0.00015988897581731173,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1553,11 +1553,11 @@
     {
       "symbol": "VCG",
       "industry": "dau-tu-cong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.015979081929110982,
-      "rs_13": 0.016168385716168063,
-      "rs_49": 0.016331960838355808,
-      "rs_slope": -0.00013951171285919335,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.015640434639446824,
+      "rs_13": 0.01615582813949835,
+      "rs_49": 0.01629073341870183,
+      "rs_slope": -0.00015494304375741238,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1576,11 +1576,11 @@
     {
       "symbol": "ACL",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008300821781356355,
-      "rs_13": 0.008258886076018003,
-      "rs_49": 0.008006660966452118,
-      "rs_slope": -6.617060879202108e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008300406102513445,
+      "rs_13": 0.008295172978644256,
+      "rs_49": 0.008012139984948275,
+      "rs_slope": -5.1587360906771644e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1599,11 +1599,11 @@
     {
       "symbol": "ANV",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.015356520295509254,
-      "rs_13": 0.015556707217676035,
-      "rs_49": 0.012951830079260589,
-      "rs_slope": -0.00043741353172899075,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01546893864559324,
+      "rs_13": 0.015730754917595013,
+      "rs_49": 0.013015722456336693,
+      "rs_slope": -0.00040080536700531563,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1622,34 +1622,34 @@
     {
       "symbol": "ASM",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005340195346005921,
-      "rs_13": 0.005352314747589051,
-      "rs_49": 0.0054036143358739555,
-      "rs_slope": -2.9694011751481114e-06,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005378114367248381,
+      "rs_13": 0.005360793208245256,
+      "rs_49": 0.005402777153059674,
+      "rs_slope": 4.993082986497373e-06,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
-        "medium_strength": false,
+        "early_strength": true,
+        "medium_strength": true,
         "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "CMX",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004959741014360421,
-      "rs_13": 0.00501655681732036,
-      "rs_49": 0.005142797964558788,
-      "rs_slope": -1.6635524685126336e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004891065744704204,
+      "rs_13": 0.005016836079201087,
+      "rs_49": 0.005128894082748896,
+      "rs_slope": -3.8065465825859374e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1668,11 +1668,11 @@
     {
       "symbol": "FMC",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02659721645776265,
-      "rs_13": 0.027118245613813322,
-      "rs_49": 0.027471255732720766,
-      "rs_slope": -0.00019874620903113753,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.026376083854681157,
+      "rs_13": 0.027053524811093296,
+      "rs_49": 0.02741707198575199,
+      "rs_slope": -0.0001275024410675594,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1691,11 +1691,11 @@
     {
       "symbol": "IDI",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004938988959907031,
-      "rs_13": 0.005056289015494793,
-      "rs_49": 0.004878704110065531,
-      "rs_slope": -5.010009374381928e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004856766545933487,
+      "rs_13": 0.005059557969755034,
+      "rs_49": 0.004878912023921618,
+      "rs_slope": -5.622531723218881e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1714,11 +1714,11 @@
     {
       "symbol": "MPC",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009545945048559807,
-      "rs_13": 0.009967570866712173,
-      "rs_49": 0.008859497487485195,
-      "rs_slope": -0.0001444327045306594,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009466578860717815,
+      "rs_13": 0.009930348689859687,
+      "rs_49": 0.008883180388952024,
+      "rs_slope": -0.00013822894534073221,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1737,11 +1737,11 @@
     {
       "symbol": "VHC",
       "industry": "thuy-san",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.040881547273180045,
-      "rs_13": 0.042150379103959454,
-      "rs_49": 0.04152640833041528,
-      "rs_slope": -0.0001311874828098518,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.039855668971572826,
+      "rs_13": 0.042025071468511054,
+      "rs_49": 0.04151938133114515,
+      "rs_slope": -0.00034718389076433196,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1760,11 +1760,11 @@
     {
       "symbol": "CSM",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009407598018870533,
-      "rs_13": 0.009478719899716753,
-      "rs_49": 0.009824769607012718,
-      "rs_slope": -4.5164662624169743e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009363681264405664,
+      "rs_13": 0.009472979169142632,
+      "rs_49": 0.009818374752162826,
+      "rs_slope": -5.1730613440658345e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1783,11 +1783,11 @@
     {
       "symbol": "DPR",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.028119033784344646,
-      "rs_13": 0.029321270301380712,
-      "rs_49": 0.029129390316718937,
-      "rs_slope": -0.00010236063331844868,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02754225661288552,
+      "rs_13": 0.029211180880606723,
+      "rs_49": 0.029094891630652275,
+      "rs_slope": -0.0002822551021879987,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1806,11 +1806,11 @@
     {
       "symbol": "DRC",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.015114412993553029,
-      "rs_13": 0.01555722700405556,
-      "rs_49": 0.015651214121525408,
-      "rs_slope": -0.00011283461451226246,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.014920151465261771,
+      "rs_13": 0.015511775398511427,
+      "rs_49": 0.01563725375331277,
+      "rs_slope": -0.00012584431856935819,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1829,11 +1829,11 @@
     {
       "symbol": "DRI",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009061730444647352,
-      "rs_13": 0.009342644741495076,
-      "rs_49": 0.009237618004771622,
-      "rs_slope": -5.964614696793609e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.00898639007792778,
+      "rs_13": 0.009319137796531029,
+      "rs_49": 0.009233397849332439,
+      "rs_slope": -5.5127778789257864e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1852,11 +1852,11 @@
     {
       "symbol": "GVR",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02082122796823552,
-      "rs_13": 0.021732496883881496,
-      "rs_49": 0.021403260154308795,
-      "rs_slope": -9.718200426256305e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02057951926243003,
+      "rs_13": 0.02164680746465624,
+      "rs_49": 0.02141428065893585,
+      "rs_slope": -0.00016518130094283595,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1875,11 +1875,11 @@
     {
       "symbol": "PHR",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04254171162945131,
-      "rs_13": 0.0439663469507275,
-      "rs_49": 0.039273285891391375,
-      "rs_slope": -9.71453154807414e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04170782570519153,
+      "rs_13": 0.04377527349562953,
+      "rs_49": 0.039385522795362865,
+      "rs_slope": -0.0004356831471736579,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1898,11 +1898,11 @@
     {
       "symbol": "TRC",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04669212252012949,
-      "rs_13": 0.048359846690345286,
-      "rs_49": 0.05008582120975727,
-      "rs_slope": -0.0002773164231734515,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04609812314784327,
+      "rs_13": 0.04811252196319676,
+      "rs_49": 0.049948630849748474,
+      "rs_slope": -0.0003945022851762119,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1921,11 +1921,11 @@
     {
       "symbol": "VRG",
       "industry": "cao-su",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.016670817077557343,
-      "rs_13": 0.017972640318190243,
-      "rs_49": 0.015629870463307324,
-      "rs_slope": -0.0005937856464381844,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.015914828229612557,
+      "rs_13": 0.017953049479339272,
+      "rs_49": 0.015691342355012336,
+      "rs_slope": -0.0011575552965609232,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1944,11 +1944,11 @@
     {
       "symbol": "LSS",
       "industry": "duong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006647574776569546,
-      "rs_13": 0.006728659094231303,
-      "rs_49": 0.0071049669674886585,
-      "rs_slope": -6.637435008052555e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.00656486664471518,
+      "rs_13": 0.0067136131090026465,
+      "rs_49": 0.007082268127708154,
+      "rs_slope": -4.50455308607634e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1967,11 +1967,11 @@
     {
       "symbol": "QNS",
       "industry": "duong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.033549154699648594,
-      "rs_13": 0.03448923971063079,
-      "rs_49": 0.03526874478867008,
-      "rs_slope": -0.00032570685039480935,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03333882120513665,
+      "rs_13": 0.03438604867564964,
+      "rs_49": 0.03519866540963631,
+      "rs_slope": -0.00032215973782947984,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -1990,11 +1990,11 @@
     {
       "symbol": "SBT",
       "industry": "duong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013869289726349574,
-      "rs_13": 0.01411936591383754,
-      "rs_49": 0.013844684699591844,
-      "rs_slope": -8.897294023770264e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01378827790582812,
+      "rs_13": 0.014105037049397948,
+      "rs_49": 0.013847945825782809,
+      "rs_slope": -7.866948922352276e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2013,11 +2013,11 @@
     {
       "symbol": "SLS",
       "industry": "duong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.13696355939237984,
-      "rs_13": 0.14168709257778483,
-      "rs_49": 0.15059908896610824,
-      "rs_slope": -0.0016917009964581122,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.13575622873449678,
+      "rs_13": 0.14115509944785345,
+      "rs_49": 0.15007811773210125,
+      "rs_slope": -0.0011929726512389716,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2036,34 +2036,34 @@
     {
       "symbol": "BCM",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04745303118342049,
-      "rs_13": 0.04690470414961333,
-      "rs_49": 0.04596964403938883,
-      "rs_slope": 0.00013097647888708763,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04664691032817474,
+      "rs_13": 0.04703165126576417,
+      "rs_49": 0.045975313678326246,
+      "rs_slope": -0.00010880090944586848,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": true,
-        "early_weakness": false,
-        "medium_weakness": false,
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 4.0,
-        "weakness": 0.0,
-        "strength_minus_weakness": 4.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "D2D",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.024522011012423562,
-      "rs_13": 0.02476004872814393,
-      "rs_49": 0.027423646861785212,
-      "rs_slope": -7.56573208639061e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.024283832729667436,
+      "rs_13": 0.024734182807307974,
+      "rs_49": 0.02725270521569333,
+      "rs_slope": -7.805946502178786e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2082,11 +2082,11 @@
     {
       "symbol": "DTD",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012174538612655987,
-      "rs_13": 0.012328556236834794,
-      "rs_49": 0.013063900300178314,
-      "rs_slope": -6.323699050905622e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011936121172209416,
+      "rs_13": 0.012312456084625327,
+      "rs_49": 0.013029362309356652,
+      "rs_slope": -0.00011359616491703837,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2105,11 +2105,11 @@
     {
       "symbol": "IDC",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03223485791760051,
-      "rs_13": 0.033058667217555626,
-      "rs_49": 0.03168458393894611,
-      "rs_slope": -0.00027033545859876245,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03169245966414225,
+      "rs_13": 0.0330370724016567,
+      "rs_49": 0.03171421135861927,
+      "rs_slope": -0.0005122370813686571,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2128,11 +2128,11 @@
     {
       "symbol": "IDV",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.018330981433828615,
-      "rs_13": 0.019123213298836404,
-      "rs_49": 0.019848187329288655,
-      "rs_slope": -0.00020099955723777813,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01817857534847986,
+      "rs_13": 0.01900198033178167,
+      "rs_49": 0.019806094595386098,
+      "rs_slope": -0.00022618087524154987,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2151,11 +2151,11 @@
     {
       "symbol": "KBC",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01895354306743034,
-      "rs_13": 0.01923328292559116,
-      "rs_49": 0.019428583576550754,
-      "rs_slope": -5.7232488744420745e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.018864559323894196,
+      "rs_13": 0.019232355064064677,
+      "rs_49": 0.01942435393784453,
+      "rs_slope": -0.00011890845759763603,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2174,11 +2174,11 @@
     {
       "symbol": "LHG",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02289643341357461,
-      "rs_13": 0.02346711880653653,
-      "rs_49": 0.02313276086807409,
-      "rs_slope": -2.613573682767531e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.022431675996048735,
+      "rs_13": 0.023419783274933357,
+      "rs_49": 0.02313632227514211,
+      "rs_slope": -0.00022324635899837638,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2197,11 +2197,11 @@
     {
       "symbol": "NTC",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.11551976979054258,
-      "rs_13": 0.11969874844663873,
-      "rs_49": 0.11535633733252143,
-      "rs_slope": -0.0006544285766496433,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.11421633190648667,
+      "rs_13": 0.11919826786157764,
+      "rs_49": 0.11539968585419295,
+      "rs_slope": -0.0013592285875771812,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2220,11 +2220,11 @@
     {
       "symbol": "PXL",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008785036385268808,
-      "rs_13": 0.009049771731771464,
-      "rs_49": 0.009427139677353015,
-      "rs_slope": -9.968081588377087e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008780594885303479,
+      "rs_13": 0.00901043438737478,
+      "rs_49": 0.009408845100480632,
+      "rs_slope": -4.583784340694824e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2243,11 +2243,11 @@
     {
       "symbol": "SIP",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04911319553969176,
-      "rs_13": 0.05015603292158199,
-      "rs_49": 0.050703589364318416,
-      "rs_slope": -0.00020908577832186998,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04849906706179344,
+      "rs_13": 0.05010465237238415,
+      "rs_49": 0.050607169093410606,
+      "rs_slope": -0.0005323186339573488,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2266,11 +2266,11 @@
     {
       "symbol": "SZC",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.025421266705403834,
-      "rs_13": 0.02688393683523614,
-      "rs_49": 0.02584090950993141,
-      "rs_slope": -0.0003521103354446498,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.025107013500164636,
+      "rs_13": 0.026825714943286512,
+      "rs_49": 0.02583982252431577,
+      "rs_slope": -0.0003993284989491735,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2289,11 +2289,11 @@
     {
       "symbol": "TIP",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013385075122437121,
-      "rs_13": 0.013780537823620705,
-      "rs_49": 0.014097516314246656,
-      "rs_slope": -9.455431500791506e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013102293930413787,
+      "rs_13": 0.013721883099499753,
+      "rs_49": 0.014066205851755584,
+      "rs_slope": -0.00015757239405899475,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2312,11 +2312,11 @@
     {
       "symbol": "VGC",
       "industry": "bds-kcn",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03168146979884341,
-      "rs_13": 0.032412539150382946,
-      "rs_49": 0.03334638513277095,
-      "rs_slope": -0.00010962818935671484,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.031246570080122927,
+      "rs_13": 0.032289108028293836,
+      "rs_49": 0.03331671729067203,
+      "rs_slope": -0.00010598760296113355,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2335,11 +2335,11 @@
     {
       "symbol": "DVP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.05374782103428239,
-      "rs_13": 0.055718942000795635,
-      "rs_49": 0.05949391463302213,
-      "rs_slope": -0.0005320335294431294,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.05309515969706948,
+      "rs_13": 0.05541890116443657,
+      "rs_49": 0.05931025931271084,
+      "rs_slope": -0.0005579290752725355,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2358,11 +2358,11 @@
     {
       "symbol": "DXP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006640657425085083,
-      "rs_13": 0.006997743771730538,
-      "rs_49": 0.007158222615404394,
-      "rs_slope": -4.119266534205677e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006585446163977609,
+      "rs_13": 0.006958391601934353,
+      "rs_49": 0.007144501682750107,
+      "rs_slope": -4.515378271258558e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2381,34 +2381,34 @@
     {
       "symbol": "GMD",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04212667054038349,
-      "rs_13": 0.04209486436148279,
-      "rs_49": 0.042372625180995,
-      "rs_slope": -0.00037281185714349785,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04129623531994293,
+      "rs_13": 0.04211976616805754,
+      "rs_49": 0.04231846996849938,
+      "rs_slope": -0.0003899491464487988,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "HAH",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04855980742093467,
-      "rs_13": 0.04895564107632363,
-      "rs_49": 0.052978923118733395,
-      "rs_slope": -0.0002672123840746922,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.047538689496213364,
+      "rs_13": 0.048779732499208896,
+      "rs_49": 0.05286290330567087,
+      "rs_slope": -0.0002818180176612124,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2427,11 +2427,11 @@
     {
       "symbol": "MHC",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0055200464846019755,
-      "rs_13": 0.0057284524991391686,
-      "rs_49": 0.0061899591553341415,
-      "rs_slope": -6.264618132505642e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005508451322577104,
+      "rs_13": 0.005703620568841892,
+      "rs_49": 0.006163639529686423,
+      "rs_slope": -5.267035693311056e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2450,11 +2450,11 @@
     {
       "symbol": "PHP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.027531058908165238,
-      "rs_13": 0.027189808202303132,
-      "rs_49": 0.027991785755314552,
-      "rs_slope": 2.0433004012188408e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.027713752606739105,
+      "rs_13": 0.02724486927275012,
+      "rs_49": 0.027958318357604067,
+      "rs_slope": 0.00020502114739870682,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -2473,11 +2473,11 @@
     {
       "symbol": "PVP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010860241830607896,
-      "rs_13": 0.011215345514351684,
-      "rs_49": 0.011135715220586978,
-      "rs_slope": -0.00015445967583629165,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010667050817692899,
+      "rs_13": 0.01116071953463297,
+      "rs_49": 0.011127941939004028,
+      "rs_slope": -0.00014357222035864693,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2496,11 +2496,11 @@
     {
       "symbol": "PVT",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012624166459146121,
-      "rs_13": 0.012901448765837488,
-      "rs_49": 0.015716629272890165,
-      "rs_slope": -7.187911704822168e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012484908352540885,
+      "rs_13": 0.01283751353555578,
+      "rs_49": 0.015615117740727921,
+      "rs_slope": -5.146161261692442e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2519,11 +2519,11 @@
     {
       "symbol": "SGP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01929941064165352,
-      "rs_13": 0.0195514866918445,
-      "rs_49": 0.02005066530333246,
-      "rs_slope": -0.00012399473014296884,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.019276149709142796,
+      "rs_13": 0.019520310614048797,
+      "rs_49": 0.02001616026686376,
+      "rs_slope": -3.7800477569626196e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2542,11 +2542,11 @@
     {
       "symbol": "SKG",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007228632301264491,
-      "rs_13": 0.007405029149823012,
-      "rs_49": 0.007864921245586812,
-      "rs_slope": -5.461633159768061e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007237130940621227,
+      "rs_13": 0.007382038024520453,
+      "rs_49": 0.007843928086537387,
+      "rs_slope": -4.08530702495853e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2565,11 +2565,11 @@
     {
       "symbol": "TCD",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0015909908414266343,
-      "rs_13": 0.0014562687944700242,
-      "rs_49": 0.0014811902135983574,
-      "rs_slope": 3.089777792728084e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0016875205795192625,
+      "rs_13": 0.0014763302702610406,
+      "rs_49": 0.001484853823190019,
+      "rs_slope": 6.502598102952069e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -2588,34 +2588,34 @@
     {
       "symbol": "TCL",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.024349077225311974,
-      "rs_13": 0.024530083465356425,
-      "rs_49": 0.02520342249810252,
-      "rs_slope": 4.654405467503787e-06,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.023666447151794535,
+      "rs_13": 0.024476424669219895,
+      "rs_49": 0.025151541406911875,
+      "rs_slope": -0.0001263793334310228,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
+        "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "TCO",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0069519382418859466,
-      "rs_13": 0.00718831155104186,
-      "rs_49": 0.008112712541076102,
-      "rs_slope": -7.043343783202181e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006928438151684776,
+      "rs_13": 0.007161273149587684,
+      "rs_49": 0.008046744327648183,
+      "rs_slope": -7.693711929008216e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2634,11 +2634,11 @@
     {
       "symbol": "VIP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008854209900113444,
-      "rs_13": 0.009059641038178638,
-      "rs_49": 0.009664796979533536,
-      "rs_slope": -5.380929453250964e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008746295686532762,
+      "rs_13": 0.00902892147844642,
+      "rs_49": 0.009625230503298375,
+      "rs_slope": -6.704237628114268e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2657,11 +2657,11 @@
     {
       "symbol": "VOS",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01041061398411776,
-      "rs_13": 0.010569343820109286,
-      "rs_49": 0.010763072920506165,
-      "rs_slope": -7.017973820696404e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010118263637361432,
+      "rs_13": 0.010534412457038041,
+      "rs_49": 0.010738339764149072,
+      "rs_slope": -0.00012765591408308107,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2680,34 +2680,34 @@
     {
       "symbol": "VSC",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.011967018068122077,
-      "rs_13": 0.01174266395726443,
-      "rs_49": 0.014298085781480086,
-      "rs_slope": -4.2794188298713424e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011661727582043684,
+      "rs_13": 0.011736411113378697,
+      "rs_49": 0.014141922316842193,
+      "rs_slope": -2.5722772793770195e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "VTO",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008957970172380397,
-      "rs_13": 0.00905650382159995,
-      "rs_49": 0.00970604287267137,
-      "rs_slope": -3.6773922430290674e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008814894084074196,
+      "rs_13": 0.009028247015536136,
+      "rs_49": 0.009676928006647309,
+      "rs_slope": -3.9414248990298986e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2726,11 +2726,11 @@
     {
       "symbol": "VTP",
       "industry": "van-tai",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.08446086162530089,
-      "rs_13": 0.08477930580676035,
-      "rs_49": 0.08592712500002826,
-      "rs_slope": -0.0007387607856567835,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.08417023378333882,
+      "rs_13": 0.08482102969300612,
+      "rs_49": 0.08581809875771958,
+      "rs_slope": -0.00038680479578244724,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2749,34 +2749,34 @@
     {
       "symbol": "CMG",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0297446113831936,
-      "rs_13": 0.02886312417324728,
-      "rs_49": 0.027039149410624352,
-      "rs_slope": -7.00022776062001e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02901712216002634,
+      "rs_13": 0.02904658490152575,
+      "rs_49": 0.027099757275095594,
+      "rs_slope": -1.3157905183810646e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": false,
+        "medium_weakness": true,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "ELC",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.015979081929110982,
-      "rs_13": 0.01616412137332949,
-      "rs_49": 0.01680325706667204,
-      "rs_slope": -0.00014642536846266838,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.015811930633300407,
+      "rs_13": 0.016150685565474585,
+      "rs_49": 0.01677211257828858,
+      "rs_slope": -0.00010291422093804265,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2795,11 +2795,11 @@
     {
       "symbol": "FOX",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0438560084114994,
-      "rs_13": 0.04522280056208007,
-      "rs_49": 0.058059678428895006,
-      "rs_slope": -0.0005126761959429703,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04355998243881023,
+      "rs_13": 0.04509540740988646,
+      "rs_49": 0.05746418822438954,
+      "rs_slope": -0.00041108271035255467,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2818,34 +2818,34 @@
     {
       "symbol": "FPT",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.08570598489250436,
-      "rs_13": 0.08625835353677179,
-      "rs_49": 0.08817321280522296,
-      "rs_slope": -0.0007735797360440375,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.08684557128745472,
+      "rs_13": 0.08638205458537286,
+      "rs_49": 0.08815828336565967,
+      "rs_slope": -0.0005157436928782636,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "SGT",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012382059157189894,
-      "rs_13": 0.01270357830662002,
-      "rs_49": 0.01336576196974717,
-      "rs_slope": -0.0001200771740196319,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012176215563604435,
+      "rs_13": 0.01265248007704156,
+      "rs_49": 0.013331186604692725,
+      "rs_slope": -0.00014094332115569889,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2864,11 +2864,11 @@
     {
       "symbol": "TTN",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01265875321656844,
-      "rs_13": 0.012732288439290983,
-      "rs_49": 0.013177758332356675,
-      "rs_slope": -9.692098504465175e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012690703545165185,
+      "rs_13": 0.012768604992716235,
+      "rs_49": 0.013171786007856628,
+      "rs_slope": -2.1041101842623165e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2887,11 +2887,11 @@
     {
       "symbol": "VGI",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.05250269776707894,
-      "rs_13": 0.05316164288913457,
-      "rs_49": 0.05356563249595552,
-      "rs_slope": -0.0004809792492787173,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.05179179014378224,
+      "rs_13": 0.05309340030118112,
+      "rs_49": 0.05349691257712073,
+      "rs_slope": -0.0004172110919929521,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2910,11 +2910,11 @@
     {
       "symbol": "VTK",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04074320024349077,
-      "rs_13": 0.0422574280396942,
-      "rs_49": 0.04236433747496395,
-      "rs_slope": -0.0005307648522253621,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03978707057403139,
+      "rs_13": 0.04214372788128979,
+      "rs_49": 0.04226786270913946,
+      "rs_slope": -0.000538580044198074,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2933,11 +2933,11 @@
     {
       "symbol": "HIO",
       "industry": "cong-nghe",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00484214603912454,
-      "rs_13": 0.0050428543731342885,
-      "rs_49": 0.005434553348622727,
-      "rs_slope": -4.403932563282667e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004801887827900341,
+      "rs_13": 0.005001379623094151,
+      "rs_49": 0.005412411071624149,
+      "rs_slope": -2.7147875803756797e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2956,11 +2956,11 @@
     {
       "symbol": "CLX",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.011828671038432804,
-      "rs_13": 0.012079375127695708,
-      "rs_49": 0.012215396835933572,
-      "rs_slope": -0.00011771756339285147,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011661727582043684,
+      "rs_13": 0.01206468014538254,
+      "rs_49": 0.012193362261753521,
+      "rs_slope": -0.00015347271005174986,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -2979,11 +2979,11 @@
     {
       "symbol": "DGW",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03092056113555242,
-      "rs_13": 0.03181742273221302,
-      "rs_49": 0.02830098034875849,
-      "rs_slope": -0.000185560909925718,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03018329491823071,
+      "rs_13": 0.03171913496646943,
+      "rs_49": 0.02837469026110324,
+      "rs_slope": -0.00027402351134527827,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3002,11 +3002,11 @@
     {
       "symbol": "FRT",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.1270025732547522,
-      "rs_13": 0.13012331358844403,
-      "rs_49": 0.12990359100258891,
-      "rs_slope": -0.0020104528523781557,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.1256036658983646,
+      "rs_13": 0.1301048153120421,
+      "rs_49": 0.12962800675437752,
+      "rs_slope": -0.0019302554426135184,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3025,11 +3025,11 @@
     {
       "symbol": "HAX",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010618134528651669,
-      "rs_13": 0.01083219760597753,
-      "rs_49": 0.011073020528299993,
-      "rs_slope": -8.701613653526817e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010324058829985732,
+      "rs_13": 0.010804654503911491,
+      "rs_49": 0.011038498371147407,
+      "rs_slope": -0.00013326593928226945,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3048,11 +3048,11 @@
     {
       "symbol": "KDC",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03866799479815168,
-      "rs_13": 0.04072935029886486,
-      "rs_49": 0.04151764236620996,
-      "rs_slope": -0.00039453295303741657,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03875809461090989,
+      "rs_13": 0.04044644866673798,
+      "rs_49": 0.04137877329859104,
+      "rs_slope": -0.0001982961346594911,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3071,11 +3071,11 @@
     {
       "symbol": "MCH",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.08300821781356353,
-      "rs_13": 0.08949345126428275,
-      "rs_49": 0.09432246730362338,
-      "rs_slope": -0.001920413561918452,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.08197508506201295,
+      "rs_13": 0.08885416115864951,
+      "rs_49": 0.09402875308096034,
+      "rs_slope": -0.001447954381712739,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3094,11 +3094,11 @@
     {
       "symbol": "MCM",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.019645278215876704,
-      "rs_13": 0.020276151281276595,
-      "rs_49": 0.021231214173767925,
-      "rs_slope": -0.0001572234150796416,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.019481944901767093,
+      "rs_13": 0.02019889658777902,
+      "rs_49": 0.021172931233817943,
+      "rs_slope": -0.0001504208326619745,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3117,11 +3117,11 @@
     {
       "symbol": "MWG",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04703799009435267,
-      "rs_13": 0.047371712888792834,
-      "rs_49": 0.047647204397598425,
-      "rs_slope": -0.00016593195211598994,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.046578311930633304,
+      "rs_13": 0.04730202806744433,
+      "rs_49": 0.04759387270523877,
+      "rs_slope": -0.00021415379833644583,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3140,11 +3140,11 @@
     {
       "symbol": "PET",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.017016684651780526,
-      "rs_13": 0.017414901727496726,
-      "rs_49": 0.017539078965294785,
-      "rs_slope": -0.00021922451634635265,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01680660739765119,
+      "rs_13": 0.01738511599419782,
+      "rs_49": 0.017569377834143182,
+      "rs_slope": -0.0001947480431979797,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3163,11 +3163,11 @@
     {
       "symbol": "PNJ",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.05692980271713566,
-      "rs_13": 0.059058151115133586,
-      "rs_49": 0.05975256427181834,
-      "rs_slope": -0.0006386444719293415,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.05707386675447262,
+      "rs_13": 0.05893471854525157,
+      "rs_49": 0.05975214375666275,
+      "rs_slope": -0.0004750085411022308,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3186,34 +3186,34 @@
     {
       "symbol": "SAB",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03327246064027005,
-      "rs_13": 0.034303434365417024,
-      "rs_49": 0.03662106712418194,
-      "rs_slope": -1.667326536550634e-05,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0330301284162002,
+      "rs_13": 0.03404986565487544,
+      "rs_49": 0.036506835567398255,
+      "rs_slope": 4.561396793661271e-06,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
+        "early_strength": true,
         "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "TLG",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.038045433164549954,
-      "rs_13": 0.038807306934395394,
-      "rs_49": 0.03846979546602969,
-      "rs_slope": -0.0004752022939891333,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.037797717045329825,
+      "rs_13": 0.038850124657147996,
+      "rs_49": 0.038432289720656695,
+      "rs_slope": -0.00038143922986368724,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3232,11 +3232,11 @@
     {
       "symbol": "SBB",
       "industry": "ban-le",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010514374256384714,
-      "rs_13": 0.01071972693103825,
-      "rs_49": 0.010982826263644664,
-      "rs_slope": -6.786529099103677e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010426956426297882,
+      "rs_13": 0.010694470936403577,
+      "rs_49": 0.010970153096523041,
+      "rs_slope": -4.834144541868337e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3255,11 +3255,11 @@
     {
       "symbol": "LIX",
       "industry": "hang-tieu-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.020959574997924793,
-      "rs_13": 0.021940537027967763,
-      "rs_49": 0.022454964460668497,
-      "rs_slope": -0.00024371810525206374,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.020853912852595764,
+      "rs_13": 0.021816859838994,
+      "rs_49": 0.022396703061282223,
+      "rs_slope": -0.00026003956581991186,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3278,11 +3278,11 @@
     {
       "symbol": "MCH",
       "industry": "hang-tieu-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.08300821781356353,
-      "rs_13": 0.08949345126428275,
-      "rs_49": 0.09432246730362338,
-      "rs_slope": -0.001920413561918452,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.08197508506201295,
+      "rs_13": 0.08885416115864951,
+      "rs_49": 0.09402875308096034,
+      "rs_slope": -0.001447954381712739,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3301,11 +3301,11 @@
     {
       "symbol": "MSN",
       "industry": "hang-tieu-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0531944329155253,
-      "rs_13": 0.053545890684589086,
-      "rs_49": 0.04995376964953646,
-      "rs_slope": -0.00015757185152995984,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.052477774119196574,
+      "rs_13": 0.053688002678723167,
+      "rs_49": 0.04999614884584125,
+      "rs_slope": -0.00019603588714855736,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3324,34 +3324,11 @@
     {
       "symbol": "VNM",
       "industry": "hang-tieu-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04129658836224786,
-      "rs_13": 0.04164901947934828,
-      "rs_49": 0.04227954735507421,
-      "rs_slope": 8.724445608114529e-07,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
-      }
-    },
-    {
-      "symbol": "AAV",
-      "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004565451979745994,
-      "rs_13": 0.004693630392327253,
-      "rs_49": 0.005615532713794047,
-      "rs_slope": -2.654950209147848e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04102184172977719,
+      "rs_13": 0.04163030171753969,
+      "rs_49": 0.04218029419521988,
+      "rs_slope": -9.350471101315927e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3368,43 +3345,20 @@
       }
     },
     {
-      "symbol": "CCL",
+      "symbol": "AAV",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005021997177720594,
-      "rs_13": 0.004987136534474699,
-      "rs_49": 0.005157850699119937,
-      "rs_slope": 2.5776991497668614e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004664691032817473,
+      "rs_13": 0.0046753705963750855,
+      "rs_49": 0.005575778722887578,
+      "rs_slope": 1.0261506387664044e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
-        "medium_strength": true,
+        "medium_strength": false,
         "strong_strength": false,
         "early_weakness": false,
         "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
-      }
-    },
-    {
-      "symbol": "CIG",
-      "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006038847845936748,
-      "rs_13": 0.006084801903995241,
-      "rs_49": 0.0060438669274625375,
-      "rs_slope": -4.489754043787596e-05,
-      "rs_slope_up": false,
-      "signals": {
-        "early_strength": false,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
         "strong_weakness": false
       },
       "scores": {
@@ -3414,13 +3368,36 @@
       }
     },
     {
-      "symbol": "CRE",
+      "symbol": "CCL",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0061841122271104835,
-      "rs_13": 0.006180032647074827,
-      "rs_49": 0.006031988447075779,
-      "rs_slope": -2.577048644928758e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004980243661508067,
+      "rs_13": 0.004985270688453641,
+      "rs_49": 0.005157616198247327,
+      "rs_slope": 1.6464183476731093e-06,
+      "rs_slope_up": true,
+      "signals": {
+        "early_strength": true,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
+      },
+      "scores": {
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
+      }
+    },
+    {
+      "symbol": "CIG",
+      "industry": "bds",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006173855778729009,
+      "rs_13": 0.006104964030350046,
+      "rs_49": 0.006035570518387738,
+      "rs_slope": -6.456178444823325e-07,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3437,13 +3414,36 @@
       }
     },
     {
+      "symbol": "CRE",
+      "industry": "bds",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006372791131599166,
+      "rs_13": 0.0061952363606553465,
+      "rs_49": 0.0060438803250816775,
+      "rs_slope": 1.3155219940459273e-05,
+      "rs_slope_up": true,
+      "signals": {
+        "early_strength": true,
+        "medium_strength": true,
+        "strong_strength": true,
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
+      },
+      "scores": {
+        "strength": 4.0,
+        "weakness": 0.0,
+        "strength_minus_weakness": 4.0
+      }
+    },
+    {
       "symbol": "DL1",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005879748761794084,
-      "rs_13": 0.006166683152904971,
-      "rs_49": 0.0064107738668389,
-      "rs_slope": -4.7717127166141926e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005693666995938975,
+      "rs_13": 0.006103757323846989,
+      "rs_49": 0.006421642944012617,
+      "rs_slope": -9.336966502254442e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3462,57 +3462,57 @@
     {
       "symbol": "DLG",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0019576104701032066,
-      "rs_13": 0.0017783990301951384,
-      "rs_49": 0.001763156370536174,
-      "rs_slope": 7.482367807540433e-06,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0019001756118977062,
+      "rs_13": 0.0017979343085450172,
+      "rs_49": 0.0017685266735363617,
+      "rs_slope": -2.073869522088985e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": true,
-        "early_weakness": false,
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 4.0,
-        "weakness": 0.0,
-        "strength_minus_weakness": 4.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "DXS",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00665449212805401,
-      "rs_13": 0.006617668923802807,
-      "rs_49": 0.005941550049721477,
-      "rs_slope": 5.3045986709655655e-06,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006413950170124026,
+      "rs_13": 0.0066045214004741065,
+      "rs_49": 0.0059671187835112155,
+      "rs_slope": -6.868265393313571e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": true,
-        "early_weakness": false,
-        "medium_weakness": false,
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": true,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 4.0,
-        "weakness": 0.0,
-        "strength_minus_weakness": 4.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "EVG",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004309509974820841,
-      "rs_13": 0.004408970280199048,
-      "rs_49": 0.004639580027585276,
-      "rs_slope": -1.9009626186029024e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004280540006585446,
+      "rs_13": 0.004398868623615152,
+      "rs_49": 0.004628521942125692,
+      "rs_slope": -3.178764780875443e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3531,11 +3531,11 @@
     {
       "symbol": "HHS",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.011309869677098032,
-      "rs_13": 0.011154751710971827,
-      "rs_49": 0.010810180160677946,
-      "rs_slope": -5.054220424395122e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01118153879925365,
+      "rs_13": 0.011176284329686917,
+      "rs_49": 0.010857341971763817,
+      "rs_slope": -0.00013428649630822242,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3554,34 +3554,34 @@
     {
       "symbol": "HPX",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0032995766580891503,
-      "rs_13": 0.0031710579616991536,
-      "rs_49": 0.0032109554325148526,
-      "rs_slope": 3.200431219311465e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.003279003402480518,
+      "rs_13": 0.0031852206890056046,
+      "rs_49": 0.003209904259779816,
+      "rs_slope": -4.504951814527638e-06,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "KOS",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.026666389972607285,
-      "rs_13": 0.027775859977439716,
-      "rs_49": 0.028978176140921807,
-      "rs_slope": -0.0002565408288364067,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.026444682252222587,
+      "rs_13": 0.027629180544113768,
+      "rs_49": 0.02888177989993529,
+      "rs_slope": -0.00024564263079358345,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3600,11 +3600,11 @@
     {
       "symbol": "NRC",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0038737168312996313,
-      "rs_13": 0.003488406794674155,
-      "rs_49": 0.003577536334475044,
-      "rs_slope": 8.169080372398985e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.003978707057403139,
+      "rs_13": 0.0035411970308821994,
+      "rs_49": 0.0035846755411155394,
+      "rs_slope": 8.82403939320529e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -3623,57 +3623,57 @@
     {
       "symbol": "TIG",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005257187128192357,
-      "rs_13": 0.0052279783440692725,
-      "rs_49": 0.005328418873072693,
-      "rs_slope": -2.687318537364838e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005076281418066074,
+      "rs_13": 0.005218866977842564,
+      "rs_49": 0.005326688244575535,
+      "rs_slope": -5.154256045657065e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "VPH",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.003901386237237486,
-      "rs_13": 0.0038176920609654316,
-      "rs_49": 0.00393897330371416,
-      "rs_slope": 2.1458103650189282e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0038140709033036985,
+      "rs_13": 0.0038201097593181677,
+      "rs_49": 0.003927611658876628,
+      "rs_slope": -4.431531674244254e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "TAL",
       "industry": "bds",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01805428737445007,
-      "rs_13": 0.018984183784701313,
-      "rs_49": 0.018531387835637354,
-      "rs_slope": -0.00025545414871862884,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01797278015585556,
+      "rs_13": 0.018965310356197994,
+      "rs_49": 0.01850319848567317,
+      "rs_slope": -0.00022395578097096324,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3692,11 +3692,11 @@
     {
       "symbol": "DBD",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03783791262001605,
-      "rs_13": 0.03935743705273783,
-      "rs_49": 0.03978657019961615,
-      "rs_slope": -0.00036346056955657434,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03745472505762266,
+      "rs_13": 0.0390924661621883,
+      "rs_49": 0.03972149270204495,
+      "rs_slope": -0.0003001531548676377,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3715,11 +3715,11 @@
     {
       "symbol": "DCL",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.015840734899421706,
-      "rs_13": 0.016775146964999047,
-      "rs_49": 0.01911143300518054,
-      "rs_slope": -0.00017840406810976165,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01567473383821754,
+      "rs_13": 0.016585128835116217,
+      "rs_49": 0.01901988721820325,
+      "rs_slope": -0.00017964753102084897,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3738,11 +3738,11 @@
     {
       "symbol": "DHG",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.07014194405246119,
-      "rs_13": 0.07221746697982324,
-      "rs_49": 0.07569770397944178,
-      "rs_slope": -0.0006046571822265382,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0689413895291406,
+      "rs_13": 0.07192069896622709,
+      "rs_49": 0.07547537538810964,
+      "rs_slope": -0.0007685135434316718,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3761,11 +3761,11 @@
     {
       "symbol": "DHT",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.05637641459837857,
-      "rs_13": 0.05882697205174652,
-      "rs_49": 0.06180069769157628,
-      "rs_slope": -0.0007756456908601279,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.05638788277905828,
+      "rs_13": 0.058577606284051294,
+      "rs_49": 0.06158549560608057,
+      "rs_slope": -0.000539701795356342,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3784,11 +3784,11 @@
     {
       "symbol": "DMC",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0430950997482084,
-      "rs_13": 0.04482123770715807,
-      "rs_49": 0.04661498141059089,
-      "rs_slope": -0.0004710425618892976,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.042668203270771594,
+      "rs_13": 0.04454645286543367,
+      "rs_49": 0.04646045678997273,
+      "rs_slope": -0.0004238393445652092,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3807,11 +3807,11 @@
     {
       "symbol": "DVN",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.016255775988489526,
-      "rs_13": 0.016976430296724267,
-      "rs_49": 0.017630211347345152,
-      "rs_slope": -0.00020077631655221614,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.015914828229612557,
+      "rs_13": 0.016866789981314023,
+      "rs_49": 0.01758635503059247,
+      "rs_slope": -0.00021816946034756355,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3830,11 +3830,11 @@
     {
       "symbol": "IMP",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03645444232312332,
-      "rs_13": 0.03726123731847963,
-      "rs_49": 0.03787987306316704,
-      "rs_slope": -0.00024137027157326366,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03560256832400395,
+      "rs_13": 0.03711268507814426,
+      "rs_49": 0.037890553423326666,
+      "rs_slope": -0.00033954603951706283,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3853,11 +3853,11 @@
     {
       "symbol": "JVC",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.003929055643175341,
-      "rs_13": 0.0038062979642591722,
-      "rs_49": 0.003862598034528606,
-      "rs_slope": 1.5224904786795106e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.003855229941828559,
+      "rs_13": 0.0038096305055844533,
+      "rs_49": 0.0038675464506863575,
+      "rs_slope": 3.4897529591057695e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -3876,11 +3876,11 @@
     {
       "symbol": "TNH",
       "industry": "y-te",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.011828671038432804,
-      "rs_13": 0.011916009959461078,
-      "rs_49": 0.012812446695640103,
-      "rs_slope": -5.670448864657438e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011661727582043684,
+      "rs_13": 0.01189287283872048,
+      "rs_49": 0.012757497056317022,
+      "rs_slope": -7.175438838151992e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3899,11 +3899,11 @@
     {
       "symbol": "BCE",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007194045543842173,
-      "rs_13": 0.0072275364544666515,
-      "rs_49": 0.007440760289212934,
-      "rs_slope": -3.277143685355248e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007168532543079793,
+      "rs_13": 0.007222343707721527,
+      "rs_49": 0.007425279326546783,
+      "rs_slope": -3.3169439070383174e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3922,11 +3922,11 @@
     {
       "symbol": "BCG",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0022273871779972883,
-      "rs_13": 0.00215198974056658,
-      "rs_49": 0.002249791840724698,
-      "rs_slope": 1.8538429099921154e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.00235978487542531,
+      "rs_13": 0.0021657945039691806,
+      "rs_49": 0.0022497301452988417,
+      "rs_slope": 6.547349960594699e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -3945,11 +3945,11 @@
     {
       "symbol": "C47",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004855980742093467,
-      "rs_13": 0.0050701565758027875,
-      "rs_49": 0.0052231305848903856,
-      "rs_slope": -3.768410876908018e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0048361870266710565,
+      "rs_13": 0.005039199554867027,
+      "rs_49": 0.005209752482500232,
+      "rs_slope": -5.7297784325667256e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -3968,34 +3968,34 @@
     {
       "symbol": "C69",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004427104950056722,
-      "rs_13": 0.004427651187189655,
-      "rs_49": 0.004655388018071616,
-      "rs_slope": -3.088362076754912e-06,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004458895840193173,
+      "rs_13": 0.004421701453229623,
+      "rs_49": 0.0046443491904178845,
+      "rs_slope": 3.3386144738900995e-05,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
-        "medium_strength": false,
+        "early_strength": true,
+        "medium_strength": true,
         "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "CDC",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010445200741540078,
-      "rs_13": 0.01066141513977997,
-      "rs_49": 0.012055172200495191,
-      "rs_slope": -9.581891420370401e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010358358028756448,
+      "rs_13": 0.010616812114622027,
+      "rs_49": 0.011962102909733536,
+      "rs_slope": -7.617836006184598e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4014,11 +4014,11 @@
     {
       "symbol": "CII",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010514374256384714,
-      "rs_13": 0.01072402908206401,
-      "rs_49": 0.01088323701349294,
-      "rs_slope": -8.249922369140388e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010255460432444298,
+      "rs_13": 0.010702465364756998,
+      "rs_49": 0.010876938447672315,
+      "rs_slope": -0.00013956450069925396,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4037,11 +4037,11 @@
     {
       "symbol": "CKG",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00968429207824908,
-      "rs_13": 0.00970922197455121,
-      "rs_49": 0.010231601303841563,
-      "rs_slope": -8.331663602879208e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009466578860717815,
+      "rs_13": 0.009671999797698725,
+      "rs_49": 0.01019439133479379,
+      "rs_slope": -2.1278833558371035e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4060,11 +4060,11 @@
     {
       "symbol": "CSC",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0148723056915968,
-      "rs_13": 0.01506941951671273,
-      "rs_49": 0.016178597214360428,
-      "rs_slope": -3.468783499739527e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.015023049061573921,
+      "rs_13": 0.015031883110884919,
+      "rs_49": 0.01616591392046436,
+      "rs_slope": -8.698017909808745e-06,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4083,11 +4083,11 @@
     {
       "symbol": "CTD",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.05831327301402838,
-      "rs_13": 0.060591960329327094,
-      "rs_49": 0.06124350756060896,
-      "rs_slope": -0.0005245438559005909,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.057211063549555484,
+      "rs_13": 0.060332750959658,
+      "rs_49": 0.06107802014781744,
+      "rs_slope": -0.000763397621627017,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4106,11 +4106,11 @@
     {
       "symbol": "DPG",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03085138762070778,
-      "rs_13": 0.031595840473715546,
-      "rs_49": 0.03872627258745959,
-      "rs_slope": -0.00025103647466160895,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.029600208539128526,
+      "rs_13": 0.031387976848302496,
+      "rs_49": 0.03847785828880881,
+      "rs_slope": -0.000536200316830263,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4129,34 +4129,34 @@
     {
       "symbol": "HBC",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004911319553969176,
-      "rs_13": 0.004773088712414144,
-      "rs_49": 0.004818547967059404,
-      "rs_slope": 8.439755541079552e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004733289430358907,
+      "rs_13": 0.004776989993127722,
+      "rs_49": 0.004809817502078425,
+      "rs_slope": -5.150669225930348e-06,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "HUT",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009338424504025897,
-      "rs_13": 0.009232739338730585,
-      "rs_49": 0.009766658904744801,
-      "rs_slope": -1.9164671212429897e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009329382065634946,
+      "rs_13": 0.009249123814304826,
+      "rs_49": 0.00975133529996077,
+      "rs_slope": -2.9913514043270613e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4175,11 +4175,11 @@
     {
       "symbol": "IDJ",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00352784925707645,
-      "rs_13": 0.003513161448033834,
-      "rs_49": 0.0035801411434657673,
-      "rs_slope": 5.822340053472566e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.003635715069695972,
+      "rs_13": 0.0035283115006175705,
+      "rs_49": 0.0035852177733938975,
+      "rs_slope": 2.7714370716019422e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -4198,11 +4198,11 @@
     {
       "symbol": "IJC",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008854209900113444,
-      "rs_13": 0.009067007441124509,
-      "rs_49": 0.00929643580349352,
-      "rs_slope": -3.6342899875829206e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008711996487762046,
+      "rs_13": 0.00903646352762933,
+      "rs_49": 0.009280032765838674,
+      "rs_slope": -9.15643188145944e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4221,11 +4221,11 @@
     {
       "symbol": "L18",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02068288093854625,
-      "rs_13": 0.020851292405816665,
-      "rs_49": 0.023150298640138376,
-      "rs_slope": -8.837828015941727e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02037372406980573,
+      "rs_13": 0.02078635518701098,
+      "rs_49": 0.0230229903524173,
+      "rs_slope": -9.199508338543529e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4244,11 +4244,11 @@
     {
       "symbol": "LIG",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0023518995047176333,
-      "rs_13": 0.0023562201809553063,
-      "rs_49": 0.0022736984648906427,
-      "rs_slope": -2.5000624410858804e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0023323455164087365,
+      "rs_13": 0.002366788605976565,
+      "rs_49": 0.0022768620150375287,
+      "rs_slope": -3.781091071983493e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4267,34 +4267,34 @@
     {
       "symbol": "MST",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004150410890678177,
-      "rs_13": 0.004211863264425992,
-      "rs_49": 0.004340804191683932,
-      "rs_slope": -7.568769768849688e-07,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004253100647568873,
+      "rs_13": 0.004201339315603232,
+      "rs_49": 0.004333794228425667,
+      "rs_slope": 3.561123900948718e-05,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
-        "medium_strength": false,
+        "early_strength": true,
+        "medium_strength": true,
         "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "PHC",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0036177748263744778,
-      "rs_13": 0.0036611221271938485,
-      "rs_49": 0.003824622849840377,
-      "rs_slope": -2.3069130172884753e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.003532817473383822,
+      "rs_13": 0.0036464074201499426,
+      "rs_49": 0.0038114711469032776,
+      "rs_slope": -2.225230593568533e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4313,11 +4313,11 @@
     {
       "symbol": "S99",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005326360643036994,
-      "rs_13": 0.00532822092193115,
-      "rs_49": 0.005411080166314555,
-      "rs_slope": -5.750922220773038e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005282076610690374,
+      "rs_13": 0.0053293118628521255,
+      "rs_49": 0.0054086121799362345,
+      "rs_slope": -2.4795736321106025e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4336,11 +4336,11 @@
     {
       "symbol": "SCG",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.045516172767770674,
-      "rs_13": 0.04720950166046038,
-      "rs_49": 0.048337192919499186,
-      "rs_slope": -0.0002506148951805995,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04465755679947316,
+      "rs_13": 0.046935785521557714,
+      "rs_49": 0.04815085420717252,
+      "rs_slope": -0.00043067811165747524,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4359,11 +4359,11 @@
     {
       "symbol": "TLD",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0048698154450623945,
-      "rs_13": 0.004961854632414499,
-      "rs_49": 0.005063376625003738,
-      "rs_slope": -1.4019797659959537e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004829327186916914,
+      "rs_13": 0.00494669139912402,
+      "rs_49": 0.005059897620752532,
+      "rs_slope": -3.3090266899447886e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4382,34 +4382,34 @@
     {
       "symbol": "VC2",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005533881187570902,
-      "rs_13": 0.0055948202516072475,
-      "rs_49": 0.005944957258314103,
-      "rs_slope": -4.3916202075325234e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005625068598397541,
+      "rs_13": 0.005582898545587935,
+      "rs_49": 0.00593632308236239,
+      "rs_slope": -6.633865598271432e-06,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "VC7",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006363963365706537,
-      "rs_13": 0.0064404538487330566,
-      "rs_49": 0.006662634100729225,
-      "rs_slope": -1.7007892974827375e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006242454176270442,
+      "rs_13": 0.006425370510447068,
+      "rs_49": 0.0066600166174197815,
+      "rs_slope": -8.449772968201945e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4428,34 +4428,34 @@
     {
       "symbol": "VIG",
       "industry": "xay-dung",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004634625494590631,
-      "rs_13": 0.004642731113790958,
-      "rs_49": 0.005049482847738087,
-      "rs_slope": 1.5678239167809128e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004664691032817473,
+      "rs_13": 0.004635727502408701,
+      "rs_49": 0.005014666116603074,
+      "rs_slope": 2.4243698983851104e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
-        "medium_strength": false,
+        "medium_strength": true,
         "strong_strength": false,
         "early_weakness": false,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "GEG",
       "industry": "dien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01134445643452035,
-      "rs_13": 0.01167788080379626,
-      "rs_49": 0.01199918291725644,
-      "rs_slope": -8.771002851692256e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011147239600482932,
+      "rs_13": 0.01161235363833159,
+      "rs_49": 0.011986397627436475,
+      "rs_slope": -0.00010915821079586307,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4474,11 +4474,11 @@
     {
       "symbol": "NT2",
       "industry": "dien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013627182424393347,
-      "rs_13": 0.013934954990681378,
-      "rs_49": 0.014001216035637433,
-      "rs_slope": -9.384772053935183e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013308089123038085,
+      "rs_13": 0.013863990204568289,
+      "rs_49": 0.013971636845150931,
+      "rs_slope": -0.00014192659819795404,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4497,11 +4497,11 @@
     {
       "symbol": "POW",
       "industry": "dien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009338424504025897,
-      "rs_13": 0.00949278299117786,
-      "rs_49": 0.00982107920297538,
-      "rs_slope": -8.441883405099007e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009226484469322796,
+      "rs_13": 0.00946523247641207,
+      "rs_49": 0.009806947153760506,
+      "rs_slope": -8.968726576690165e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4520,11 +4520,11 @@
     {
       "symbol": "PPC",
       "industry": "dien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007885780692288536,
-      "rs_13": 0.008250568315571229,
-      "rs_49": 0.008908499634284124,
-      "rs_slope": -6.18573663643143e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007854516518494127,
+      "rs_13": 0.008196275096577216,
+      "rs_49": 0.008863076732619669,
+      "rs_slope": -7.202161542291548e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4543,11 +4543,11 @@
     {
       "symbol": "QTP",
       "industry": "dien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009061730444647352,
-      "rs_13": 0.009498814287631167,
-      "rs_49": 0.010000076395757486,
-      "rs_slope": -0.00010319752369977488,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.00898639007792778,
+      "rs_13": 0.009435910696672435,
+      "rs_49": 0.009959649668660971,
+      "rs_slope": -9.072206942525255e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4566,11 +4566,11 @@
     {
       "symbol": "REE",
       "industry": "dien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04669212252012949,
-      "rs_13": 0.048291426448948,
-      "rs_49": 0.05214134187827621,
-      "rs_slope": -0.00029233835038101896,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04589232795521897,
+      "rs_13": 0.04809018033750134,
+      "rs_49": 0.05191766395351953,
+      "rs_slope": -0.0004071318741768006,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4589,11 +4589,11 @@
     {
       "symbol": "GDA",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013627182424393347,
-      "rs_13": 0.014017225748181279,
-      "rs_49": 0.01458566326751394,
-      "rs_slope": -8.707986945427314e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013513884315662385,
+      "rs_13": 0.013964905407643306,
+      "rs_49": 0.01454876370611767,
+      "rs_slope": -0.00015042401126319146,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4612,11 +4612,11 @@
     {
       "symbol": "HPG",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.017397138983426024,
-      "rs_13": 0.01679458129153827,
-      "rs_49": 0.018903879843307988,
-      "rs_slope": 0.00017273134939838481,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01783558336077269,
+      "rs_13": 0.016900228478252104,
+      "rs_49": 0.018844912753378698,
+      "rs_slope": 0.00019533977203743254,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -4635,11 +4635,11 @@
     {
       "symbol": "HSG",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012243712127500622,
-      "rs_13": 0.012252591985568436,
-      "rs_49": 0.01218397010674746,
-      "rs_slope": -3.2651385550207943e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012107617166063,
+      "rs_13": 0.012241241694458734,
+      "rs_49": 0.012189961482453614,
+      "rs_slope": -7.597955648706422e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4658,11 +4658,11 @@
     {
       "symbol": "NKG",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00968429207824908,
-      "rs_13": 0.009743839669118839,
-      "rs_49": 0.009787693228628961,
-      "rs_slope": -3.3969838838366145e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009569476457029963,
+      "rs_13": 0.009737045061122494,
+      "rs_49": 0.009779738139269332,
+      "rs_slope": -5.7488128267106296e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4681,11 +4681,11 @@
     {
       "symbol": "SHI",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00968429207824908,
-      "rs_13": 0.010141399024913103,
-      "rs_49": 0.010788163447245694,
-      "rs_slope": -0.000102343376027789,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009603775655800681,
+      "rs_13": 0.010089404032400079,
+      "rs_49": 0.01074552464650569,
+      "rs_slope": -9.695488335523163e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4704,34 +4704,34 @@
     {
       "symbol": "SMC",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007505326360643036,
-      "rs_13": 0.007707990257251199,
-      "rs_49": 0.00791314460621257,
-      "rs_slope": -7.596864200859607e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007957414114806279,
+      "rs_13": 0.0077291493453929645,
+      "rs_49": 0.007938120415665044,
+      "rs_slope": -6.36845273736808e-07,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "TIS",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0037353698016103594,
-      "rs_13": 0.003857767228237594,
-      "rs_49": 0.00419944713660321,
-      "rs_slope": -2.5055379617131393e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0037043134672374058,
+      "rs_13": 0.003833169342352572,
+      "rs_49": 0.004179591681713682,
+      "rs_slope": -3.739688357987507e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4750,11 +4750,11 @@
     {
       "symbol": "TLH",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.003915220940206413,
-      "rs_13": 0.003929976380277807,
-      "rs_49": 0.004077890927278568,
-      "rs_slope": -2.416329782661828e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0039306881791241356,
+      "rs_13": 0.003942490256766029,
+      "rs_49": 0.0040674280489141,
+      "rs_slope": -2.3860800202365164e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4773,11 +4773,11 @@
     {
       "symbol": "TVN",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005326360643036994,
-      "rs_13": 0.005272605766831814,
-      "rs_49": 0.005418742773083426,
-      "rs_slope": 2.2787920587982998e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005419273405773241,
+      "rs_13": 0.005278622215089592,
+      "rs_49": 0.0054157832147843305,
+      "rs_slope": 3.103802968104988e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -4796,34 +4796,34 @@
     {
       "symbol": "VGS",
       "industry": "thep",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01971445173072134,
-      "rs_13": 0.019284541335907644,
-      "rs_49": 0.01929538191865938,
-      "rs_slope": 0.0006037453896464329,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.019687740094391396,
+      "rs_13": 0.01931879461068694,
+      "rs_49": 0.01929396298482854,
+      "rs_slope": 0.00037865112981869055,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
         "medium_strength": true,
-        "strong_strength": false,
+        "strong_strength": true,
         "early_weakness": false,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 4.0,
+        "weakness": 0.0,
+        "strength_minus_weakness": 4.0
       }
     },
     {
       "symbol": "BFC",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.032304031432445146,
-      "rs_13": 0.03342684705689705,
-      "rs_49": 0.034383379806476815,
-      "rs_slope": -0.00023725183025671143,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.030869278893645043,
+      "rs_13": 0.03320404238228618,
+      "rs_49": 0.034294170916645425,
+      "rs_slope": -0.0006132345912818146,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4842,11 +4842,11 @@
     {
       "symbol": "CSV",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02507539913118065,
-      "rs_13": 0.025825873099304526,
-      "rs_49": 0.02644320717360962,
-      "rs_slope": -0.00017135373701384732,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.024523927121062453,
+      "rs_13": 0.02572561245510489,
+      "rs_49": 0.026376733485114066,
+      "rs_slope": -0.0002767130751182768,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4865,11 +4865,11 @@
     {
       "symbol": "DCM",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02365734207686561,
-      "rs_13": 0.02433841822281991,
-      "rs_49": 0.02556309376264862,
-      "rs_slope": -9.90619569873303e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0231862583690045,
+      "rs_13": 0.02418985247747219,
+      "rs_49": 0.025478372354780503,
+      "rs_slope": -0.00019927502149585108,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4888,11 +4888,11 @@
     {
       "symbol": "DDV",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01957610470103207,
-      "rs_13": 0.02013210210517894,
-      "rs_49": 0.0192556885579549,
-      "rs_slope": -0.00022159135600083695,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.019138952914059926,
+      "rs_13": 0.0200622319663367,
+      "rs_49": 0.019267756184607215,
+      "rs_slope": -0.0003076549033581018,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4911,11 +4911,11 @@
     {
       "symbol": "DGC",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.07021111756730583,
-      "rs_13": 0.07233071725423933,
-      "rs_49": 0.07059867747347845,
-      "rs_slope": -0.000822096278517992,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.07113653825046647,
+      "rs_13": 0.07237164960313996,
+      "rs_49": 0.07050672700501463,
+      "rs_slope": -0.0005786562807070308,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4934,11 +4934,11 @@
     {
       "symbol": "DPM",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.026770150244874242,
-      "rs_13": 0.027624355149353467,
-      "rs_49": 0.026672775641271376,
-      "rs_slope": -0.00025398888827391674,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02651328064976402,
+      "rs_13": 0.027519535115690608,
+      "rs_49": 0.02665266114078201,
+      "rs_slope": -0.0003032652457288305,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4957,11 +4957,11 @@
     {
       "symbol": "LAS",
       "industry": "hoa-chat",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01431891757283971,
-      "rs_13": 0.015015551788661216,
-      "rs_49": 0.015581431289882968,
-      "rs_slope": -0.0002020057308111379,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.014062671495993854,
+      "rs_13": 0.014943536831475776,
+      "rs_49": 0.015554085713603658,
+      "rs_slope": -0.0002489124592511183,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -4980,34 +4980,34 @@
     {
       "symbol": "BSR",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012970034033369302,
-      "rs_13": 0.012929316292451417,
-      "rs_49": 0.01340283630509702,
-      "rs_slope": 4.1846878951930236e-07,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012656404346394468,
+      "rs_13": 0.01289545733855177,
+      "rs_49": 0.01339616399694859,
+      "rs_slope": -2.1567325077056882e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "CNG",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02030242660690075,
-      "rs_13": 0.020973848059330242,
-      "rs_49": 0.021433330662558432,
-      "rs_slope": -0.0001569581828847342,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.020133629678410713,
+      "rs_13": 0.02088199990275904,
+      "rs_49": 0.021398221931470618,
+      "rs_slope": -0.00016053233458836956,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5026,11 +5026,34 @@
     {
       "symbol": "DDG",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0019368584156498156,
-      "rs_13": 0.0019589838082886644,
-      "rs_49": 0.002012998393463508,
-      "rs_slope": -1.333631282448998e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.001920755131160136,
+      "rs_13": 0.0019547757112995104,
+      "rs_49": 0.0020094078930869615,
+      "rs_slope": 1.9385892028126946e-06,
+      "rs_slope_up": true,
+      "signals": {
+        "early_strength": true,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
+      },
+      "scores": {
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
+      }
+    },
+    {
+      "symbol": "GAS",
+      "industry": "dau-khi",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.046578311930633304,
+      "rs_13": 0.04822962568815392,
+      "rs_49": 0.048477566309967975,
+      "rs_slope": -0.00022180859795720848,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5047,36 +5070,13 @@
       }
     },
     {
-      "symbol": "GAS",
-      "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04731468415373122,
-      "rs_13": 0.04853569038547052,
-      "rs_49": 0.04848975417089883,
-      "rs_slope": -0.0001040533892172825,
-      "rs_slope_up": false,
-      "signals": {
-        "early_strength": false,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
-      }
-    },
-    {
       "symbol": "OIL",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008024127721977808,
-      "rs_13": 0.00829839234033579,
-      "rs_49": 0.008126055482761232,
-      "rs_slope": -1.999613792352164e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007888815717264845,
+      "rs_13": 0.0082242251521074,
+      "rs_49": 0.008132350915716853,
+      "rs_slope": -1.5800303333193996e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5095,11 +5095,11 @@
     {
       "symbol": "PGC",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009615118563404444,
-      "rs_13": 0.010021832975064772,
-      "rs_49": 0.011099537188558878,
-      "rs_slope": -0.00010153944965410698,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009569476457029963,
+      "rs_13": 0.009944687213506491,
+      "rs_49": 0.011056198404170492,
+      "rs_slope": -7.873772578304989e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5118,11 +5118,11 @@
     {
       "symbol": "PLX",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02621676212611715,
-      "rs_13": 0.026832316754462588,
-      "rs_49": 0.027204123329690175,
-      "rs_slope": -0.00015770925405039424,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.025861595873120407,
+      "rs_13": 0.02668018116873885,
+      "rs_49": 0.027178115029538735,
+      "rs_slope": -0.0001334032341893811,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5141,11 +5141,11 @@
     {
       "symbol": "PVB",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.021167095542458703,
-      "rs_13": 0.021856959941803533,
-      "rs_49": 0.021528332752440944,
-      "rs_slope": -0.00019456192486534408,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02078531445505433,
+      "rs_13": 0.021739262137588804,
+      "rs_49": 0.021532855762786813,
+      "rs_slope": -0.00021748042150815698,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5164,11 +5164,11 @@
     {
       "symbol": "PVC",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008231648266511718,
-      "rs_13": 0.008352266868174387,
-      "rs_49": 0.007792607750849419,
-      "rs_slope": -2.8728961289974793e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008026012512347712,
+      "rs_13": 0.008288653279567754,
+      "rs_49": 0.007809931884684325,
+      "rs_slope": -3.1597587484807034e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5187,11 +5187,11 @@
     {
       "symbol": "PVD",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01431891757283971,
-      "rs_13": 0.014469018073772445,
-      "rs_49": 0.014559905613643204,
-      "rs_slope": -4.304555451118547e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013994073098452419,
+      "rs_13": 0.014394540362918602,
+      "rs_49": 0.014555023492295824,
+      "rs_slope": -5.9933741688399625e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5210,34 +5210,34 @@
     {
       "symbol": "PVS",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.023242300987797792,
-      "rs_13": 0.023399314661083855,
-      "rs_49": 0.022930418512170276,
-      "rs_slope": 7.34778625816751e-06,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.022706069586214468,
+      "rs_13": 0.023288664944449873,
+      "rs_49": 0.022965911840539772,
+      "rs_slope": -1.667083504471971e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
+        "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
+        "early_weakness": true,
+        "medium_weakness": true,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 3.0,
-        "weakness": 1.0,
-        "strength_minus_weakness": 2.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "TDG",
       "industry": "dau-khi",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.002282725989872997,
-      "rs_13": 0.002353422535757992,
-      "rs_49": 0.0024286588920244723,
-      "rs_slope": -1.3347653304937071e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.002311765997146307,
+      "rs_13": 0.002342709597838645,
+      "rs_49": 0.0024226799597194264,
+      "rs_slope": -3.998060706204712e-06,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5256,11 +5256,11 @@
     {
       "symbol": "BCC",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005464707672726266,
-      "rs_13": 0.005522305852521305,
-      "rs_49": 0.005535715154707624,
-      "rs_slope": -3.589761777689302e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005487871803314674,
+      "rs_13": 0.005511086731450144,
+      "rs_49": 0.0055325098104481414,
+      "rs_slope": -4.09905760993084e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5279,34 +5279,34 @@
     {
       "symbol": "CRC",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007159458786419855,
-      "rs_13": 0.007114145014762153,
-      "rs_49": 0.0072803616082303835,
-      "rs_slope": -3.7941797283566963e-06,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007374327735704094,
+      "rs_13": 0.007132661996648605,
+      "rs_49": 0.007280271669603155,
+      "rs_slope": 1.539827045720808e-05,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
-        "medium_strength": false,
+        "early_strength": true,
+        "medium_strength": true,
         "strong_strength": false,
-        "early_weakness": true,
+        "early_weakness": false,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "CTI",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.017224205196314433,
-      "rs_13": 0.017743148373788282,
-      "rs_49": 0.016666835053576485,
-      "rs_slope": -0.0002712806163825677,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01660081220502689,
+      "rs_13": 0.017629995133637277,
+      "rs_49": 0.016669070598305896,
+      "rs_slope": -0.0003326026821143639,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5325,11 +5325,11 @@
     {
       "symbol": "DHA",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.029710024625771284,
-      "rs_13": 0.031154205655568236,
-      "rs_49": 0.031065161601702,
-      "rs_slope": -0.0002863249313993118,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02915431895510921,
+      "rs_13": 0.03096550970809154,
+      "rs_49": 0.031036407218366292,
+      "rs_slope": -0.00043343064216595854,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5337,22 +5337,22 @@
         "strong_strength": false,
         "early_weakness": true,
         "medium_weakness": true,
-        "strong_weakness": false
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "HT1",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009061730444647352,
-      "rs_13": 0.008959598766657252,
-      "rs_49": 0.008689892855965721,
-      "rs_slope": -4.470181866180877e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009020689276698496,
+      "rs_13": 0.008975312821450851,
+      "rs_49": 0.008695424327089253,
+      "rs_slope": -5.5467822685526666e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5371,11 +5371,11 @@
     {
       "symbol": "NAG",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009407598018870533,
-      "rs_13": 0.00967748676926435,
-      "rs_49": 0.010866735794145278,
-      "rs_slope": -2.777586686892944e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.009123586873010648,
+      "rs_13": 0.009639207008639765,
+      "rs_49": 0.010824171741870838,
+      "rs_slope": -7.135508473407933e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5394,11 +5394,11 @@
     {
       "symbol": "NO1",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004911319553969176,
-      "rs_13": 0.005197072164670996,
-      "rs_49": 0.005529681677103218,
-      "rs_slope": -0.00011400574567858158,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004870486225441773,
+      "rs_13": 0.0051743816359256295,
+      "rs_49": 0.005515522380430011,
+      "rs_slope": -8.90301803694915e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5417,11 +5417,11 @@
     {
       "symbol": "PTB",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03728452450125896,
-      "rs_13": 0.03870757318341567,
-      "rs_49": 0.03960833151251801,
-      "rs_slope": -0.0005665954750785372,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03738612666008122,
+      "rs_13": 0.03861742444617381,
+      "rs_49": 0.03955666582696441,
+      "rs_slope": -0.0004118707779993541,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5440,11 +5440,11 @@
     {
       "symbol": "VCS",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03472510445200742,
-      "rs_13": 0.034977509773976484,
-      "rs_49": 0.03634541107807902,
-      "rs_slope": -0.0001572619844412572,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03416200197563385,
+      "rs_13": 0.03494326842901085,
+      "rs_49": 0.036269090761006297,
+      "rs_slope": -0.0001320416280239406,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5463,11 +5463,11 @@
     {
       "symbol": "VLB",
       "industry": "vlxd",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03237320494728978,
-      "rs_13": 0.03331166932325409,
-      "rs_49": 0.034001269859932834,
-      "rs_slope": -0.0003204211961141311,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03196685325430798,
+      "rs_13": 0.03317610749175977,
+      "rs_49": 0.03396079249896408,
+      "rs_slope": -0.0003230162338512185,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5486,11 +5486,11 @@
     {
       "symbol": "ADS",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005526963836086439,
-      "rs_13": 0.005705715595174723,
-      "rs_49": 0.005951076689137799,
-      "rs_slope": -5.183919944368913e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005487871803314674,
+      "rs_13": 0.00568098905261967,
+      "rs_49": 0.00593421159284396,
+      "rs_slope": -4.472325858904825e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5509,11 +5509,11 @@
     {
       "symbol": "EVE",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007505326360643036,
-      "rs_13": 0.007653810729039741,
-      "rs_49": 0.007198471416219461,
-      "rs_slope": -3.591524085033576e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.007545823729557677,
+      "rs_13": 0.007663007341313572,
+      "rs_49": 0.007205995778977019,
+      "rs_slope": -1.5366282876673554e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5532,34 +5532,34 @@
     {
       "symbol": "GIL",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.013108381063058575,
-      "rs_13": 0.013437751797325167,
-      "rs_49": 0.01298249414918368,
-      "rs_slope": -0.00011704029372338697,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.013548183514433102,
+      "rs_13": 0.013435908641114751,
+      "rs_49": 0.013006364565321818,
+      "rs_slope": -7.480183858847162e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": true,
+        "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "MSH",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.025801721037049332,
-      "rs_13": 0.026901792963846816,
-      "rs_49": 0.03161760611702055,
-      "rs_slope": -0.00011065125638426536,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.025758698276808253,
+      "rs_13": 0.026761440501404096,
+      "rs_49": 0.03141833952718021,
+      "rs_slope": -0.00015969000791456536,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5578,11 +5578,11 @@
     {
       "symbol": "PPH",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01950693118618743,
-      "rs_13": 0.019967099130159736,
-      "rs_49": 0.020226537525954,
-      "rs_slope": -8.411325750750792e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.019413346504225663,
+      "rs_13": 0.019890195729136237,
+      "rs_49": 0.020193186670821674,
+      "rs_slope": -0.00013158109902757474,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5601,11 +5601,11 @@
     {
       "symbol": "STK",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.018469328463517887,
-      "rs_13": 0.019182697387024723,
-      "rs_49": 0.019306765329915074,
-      "rs_slope": -0.00021688152803176313,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.018350071342333442,
+      "rs_13": 0.019128123296204263,
+      "rs_49": 0.019306024839168906,
+      "rs_slope": -0.00022777094636134768,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5624,11 +5624,11 @@
     {
       "symbol": "TCM",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02189341744832738,
-      "rs_13": 0.022711054362673067,
-      "rs_49": 0.02323405819116249,
-      "rs_slope": -8.793180567176831e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.021642794424322247,
+      "rs_13": 0.022642432279239462,
+      "rs_49": 0.023201770935231913,
+      "rs_slope": -0.00016504824485506049,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5647,11 +5647,11 @@
     {
       "symbol": "TNG",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.014249744057995076,
-      "rs_13": 0.015070670778752869,
-      "rs_49": 0.014152948098747712,
-      "rs_slope": -0.0002085528735961165,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.014062671495993854,
+      "rs_13": 0.015015540098422294,
+      "rs_49": 0.01416016334086858,
+      "rs_slope": -0.0002771593766094413,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5670,11 +5670,11 @@
     {
       "symbol": "VGT",
       "industry": "det-may",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008300821781356355,
-      "rs_13": 0.008934844562229939,
-      "rs_49": 0.008524880438551125,
-      "rs_slope": -7.404138704955165e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008300406102513445,
+      "rs_13": 0.008869825803727005,
+      "rs_49": 0.008534638415515874,
+      "rs_slope": -0.00013323816130765727,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5693,11 +5693,11 @@
     {
       "symbol": "ACV",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.0650231039539581,
-      "rs_13": 0.06884938551677437,
-      "rs_49": 0.07161976495152501,
-      "rs_slope": -0.0011637021684302322,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.06434529689386456,
+      "rs_13": 0.06852550126837667,
+      "rs_49": 0.07139415498045303,
+      "rs_slope": -0.001020235371395345,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5716,11 +5716,11 @@
     {
       "symbol": "AST",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04565451979745994,
-      "rs_13": 0.0470919843581778,
-      "rs_49": 0.047142242705785924,
-      "rs_slope": -0.0005608236703708678,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.045206343979804636,
+      "rs_13": 0.04701244110945594,
+      "rs_49": 0.04704939139469095,
+      "rs_slope": -0.00043519841040409805,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5739,11 +5739,11 @@
     {
       "symbol": "HVN",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02614758861127251,
-      "rs_13": 0.027392604484560865,
-      "rs_49": 0.027943815084749565,
-      "rs_slope": -0.0003561517018392451,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02551860388541324,
+      "rs_13": 0.02722252703821016,
+      "rs_49": 0.027929733110571543,
+      "rs_slope": -0.0003867553938565638,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5762,11 +5762,11 @@
     {
       "symbol": "NCT",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.07602169281425528,
-      "rs_13": 0.07887316316135787,
-      "rs_49": 0.07920058071588515,
-      "rs_slope": -0.0008597347715591952,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.07470365492262102,
+      "rs_13": 0.0785693989490792,
+      "rs_49": 0.07903331075370944,
+      "rs_slope": -0.0008770981060862645,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5785,34 +5785,34 @@
     {
       "symbol": "SAS",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03092056113555242,
-      "rs_13": 0.03150649292328232,
-      "rs_49": 0.0323265838796098,
-      "rs_slope": -9.682500714858871e-05,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.03141806607397651,
+      "rs_13": 0.0314863032772797,
+      "rs_49": 0.03231275910518143,
+      "rs_slope": 4.051935925066426e-05,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
+        "early_strength": true,
         "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 1.5,
+        "weakness": 2.5,
+        "strength_minus_weakness": -1.0
       }
     },
     {
       "symbol": "SCS",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.046484601975595584,
-      "rs_13": 0.0479409059736117,
-      "rs_49": 0.047660571582835945,
-      "rs_slope": -0.00039701308908864156,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04589232795521897,
+      "rs_13": 0.04786910598471899,
+      "rs_49": 0.04760146898379443,
+      "rs_slope": -0.0004210891725958462,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5831,11 +5831,11 @@
     {
       "symbol": "SGN",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.045446999252926036,
-      "rs_13": 0.04634498850672118,
-      "rs_49": 0.04885991476264851,
-      "rs_slope": -0.00027917052303582036,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04527494237734606,
+      "rs_13": 0.04627635015009515,
+      "rs_49": 0.0487174450678786,
+      "rs_slope": -0.0002857239405817773,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5854,11 +5854,11 @@
     {
       "symbol": "VJC",
       "industry": "hang-khong",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.06640657425085084,
-      "rs_13": 0.0648409734150607,
-      "rs_49": 0.06687925377988033,
-      "rs_slope": 0.0004804626347367697,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.06859839754143343,
+      "rs_13": 0.065159423922895,
+      "rs_49": 0.06680462615823661,
+      "rs_slope": 0.0008104855913123988,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -5877,11 +5877,11 @@
     {
       "symbol": "DVP",
       "industry": "cang-bien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.05374782103428239,
-      "rs_13": 0.055718942000795635,
-      "rs_49": 0.05949391463302213,
-      "rs_slope": -0.0005320335294431294,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.05309515969706948,
+      "rs_13": 0.05541890116443657,
+      "rs_49": 0.05931025931271084,
+      "rs_slope": -0.0005579290752725355,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5900,11 +5900,11 @@
     {
       "symbol": "DXP",
       "industry": "cang-bien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006640657425085083,
-      "rs_13": 0.006997743771730538,
-      "rs_49": 0.007158222615404394,
-      "rs_slope": -4.119266534205677e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006585446163977609,
+      "rs_13": 0.006958391601934353,
+      "rs_49": 0.007144501682750107,
+      "rs_slope": -4.515378271258558e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5923,34 +5923,34 @@
     {
       "symbol": "GMD",
       "industry": "cang-bien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.04212667054038349,
-      "rs_13": 0.04209486436148279,
-      "rs_49": 0.042372625180995,
-      "rs_slope": -0.00037281185714349785,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.04129623531994293,
+      "rs_13": 0.04211976616805754,
+      "rs_49": 0.04231846996849938,
+      "rs_slope": -0.0003899491464487988,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "PHP",
       "industry": "cang-bien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.027531058908165238,
-      "rs_13": 0.027189808202303132,
-      "rs_49": 0.027991785755314552,
-      "rs_slope": 2.0433004012188408e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.027713752606739105,
+      "rs_13": 0.02724486927275012,
+      "rs_49": 0.027958318357604067,
+      "rs_slope": 0.00020502114739870682,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -5969,11 +5969,11 @@
     {
       "symbol": "SGP",
       "industry": "cang-bien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01929941064165352,
-      "rs_13": 0.0195514866918445,
-      "rs_49": 0.02005066530333246,
-      "rs_slope": -0.00012399473014296884,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.019276149709142796,
+      "rs_13": 0.019520310614048797,
+      "rs_49": 0.02001616026686376,
+      "rs_slope": -3.7800477569626196e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -5992,34 +5992,34 @@
     {
       "symbol": "VSC",
       "industry": "cang-bien",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.011967018068122077,
-      "rs_13": 0.01174266395726443,
-      "rs_49": 0.014298085781480086,
-      "rs_slope": -4.2794188298713424e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.011661727582043684,
+      "rs_13": 0.011736411113378697,
+      "rs_49": 0.014141922316842193,
+      "rs_slope": -2.5722772793770195e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 1.0,
-        "weakness": 3.0,
-        "strength_minus_weakness": -2.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "AAS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006363963365706537,
-      "rs_13": 0.006430413104081024,
-      "rs_49": 0.006548591658223979,
-      "rs_slope": 1.8954921251787375e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006311052573811875,
+      "rs_13": 0.006409350381036004,
+      "rs_49": 0.006553957155239906,
+      "rs_slope": 7.475372209979955e-06,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6038,34 +6038,34 @@
     {
       "symbol": "ABW",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005810575246949448,
-      "rs_13": 0.005781408762162162,
-      "rs_49": 0.005848244563485493,
-      "rs_slope": 3.8776229893005765e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005693666995938975,
+      "rs_13": 0.005780391948238686,
+      "rs_49": 0.005841010354830544,
+      "rs_slope": -7.040282494357592e-07,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "AGR",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010860241830607896,
-      "rs_13": 0.010796651921067109,
-      "rs_49": 0.011201928952614633,
-      "rs_slope": 4.657974208481571e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010941444407858632,
+      "rs_13": 0.01081097192501403,
+      "rs_49": 0.011180829377761497,
+      "rs_slope": 3.228657307527555e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6084,11 +6084,11 @@
     {
       "symbol": "APG",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008335408538778672,
-      "rs_13": 0.0086701005453813,
-      "rs_49": 0.009073459075937415,
-      "rs_slope": -5.612918631445266e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008197508506201295,
+      "rs_13": 0.008619678956301866,
+      "rs_49": 0.009041619023785384,
+      "rs_slope": -9.003777030082914e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6107,34 +6107,34 @@
     {
       "symbol": "API",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005188013613347721,
-      "rs_13": 0.005211510938642374,
-      "rs_49": 0.005255810248184222,
-      "rs_slope": -1.2169045533819667e-05,
-      "rs_slope_up": false,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005282076610690374,
+      "rs_13": 0.005218229971848302,
+      "rs_49": 0.005273091300891718,
+      "rs_slope": 4.0286924576850465e-06,
+      "rs_slope_up": true,
       "signals": {
-        "early_strength": false,
-        "medium_strength": false,
+        "early_strength": true,
+        "medium_strength": true,
         "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
       }
     },
     {
       "symbol": "APS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00484214603912454,
-      "rs_13": 0.004655995025612905,
-      "rs_49": 0.004500802222745642,
-      "rs_slope": 4.901056749578468e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.004870486225441773,
+      "rs_13": 0.004698590367373015,
+      "rs_49": 0.004512974978186857,
+      "rs_slope": 4.349566021438385e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6153,11 +6153,11 @@
     {
       "symbol": "BMS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.008162474751667082,
-      "rs_13": 0.008243301555462752,
-      "rs_49": 0.008628829676731857,
-      "rs_slope": -2.174040190479655e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.008163209307430579,
+      "rs_13": 0.008240894397042474,
+      "rs_49": 0.008602872653960052,
+      "rs_slope": -0.00010345868455985727,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6176,11 +6176,11 @@
     {
       "symbol": "BSI",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.03033258625937301,
-      "rs_13": 0.030247424521455565,
-      "rs_49": 0.03291064644193491,
-      "rs_slope": -3.382052895250925e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.030354790912084293,
+      "rs_13": 0.030280518693223218,
+      "rs_49": 0.03279859464794915,
+      "rs_slope": -9.575588185215187e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6199,34 +6199,34 @@
     {
       "symbol": "BVS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.023726515591710243,
-      "rs_13": 0.02367927849835069,
-      "rs_49": 0.02388485768456857,
-      "rs_slope": 7.448734529733742e-06,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.023872242344418832,
+      "rs_13": 0.023680846747641482,
+      "rs_49": 0.023875028820182692,
+      "rs_slope": -5.234338261045704e-06,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "CTS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.020406186879167704,
-      "rs_13": 0.01988595460078888,
-      "rs_49": 0.022511958513644452,
-      "rs_slope": 0.00013594759980733418,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.020305125672264297,
+      "rs_13": 0.0199423726585838,
+      "rs_49": 0.02239147902491237,
+      "rs_slope": 0.00011890315856018241,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6245,11 +6245,11 @@
     {
       "symbol": "DSC",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010998588860297169,
-      "rs_13": 0.010825221644053364,
-      "rs_49": 0.011466296704381727,
-      "rs_slope": 2.4673032724457576e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01138733399187795,
+      "rs_13": 0.010871026800628526,
+      "rs_49": 0.011446068150671802,
+      "rs_slope": 0.00014589645451565156,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6268,57 +6268,11 @@
     {
       "symbol": "EVS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.004427104950056722,
-      "rs_13": 0.004342301536595228,
-      "rs_49": 0.004383191949549269,
-      "rs_slope": 1.0738949130193864e-05,
-      "rs_slope_up": true,
-      "signals": {
-        "early_strength": true,
-        "medium_strength": true,
-        "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
-      }
-    },
-    {
-      "symbol": "FTS",
-      "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02770399269527683,
-      "rs_13": 0.027872210244570133,
-      "rs_49": 0.027661348744208156,
-      "rs_slope": -0.0001569076072246961,
-      "rs_slope_up": false,
-      "signals": {
-        "early_strength": false,
-        "medium_strength": false,
-        "strong_strength": false,
-        "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": false
-      },
-      "scores": {
-        "strength": 1.5,
-        "weakness": 2.5,
-        "strength_minus_weakness": -1.0
-      }
-    },
-    {
-      "symbol": "HCM",
-      "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.016843750864668935,
-      "rs_13": 0.016165994267484055,
-      "rs_49": 0.01858764401456134,
-      "rs_slope": -5.654297925190496e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0043902974426517395,
+      "rs_13": 0.004353587371964137,
+      "rs_49": 0.004378981920884531,
+      "rs_slope": -8.72794175496832e-06,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6335,36 +6289,82 @@
       }
     },
     {
-      "symbol": "MBS",
+      "symbol": "FTS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.019645278215876704,
-      "rs_13": 0.01979158572213446,
-      "rs_49": 0.020362030643133678,
-      "rs_slope": -6.935941888396372e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02805674459444627,
+      "rs_13": 0.027917072714219313,
+      "rs_49": 0.027607726254238497,
+      "rs_slope": -0.00013581343636457217,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
         "medium_strength": false,
         "strong_strength": false,
         "early_weakness": true,
-        "medium_weakness": true,
-        "strong_weakness": true
+        "medium_weakness": false,
+        "strong_weakness": false
       },
       "scores": {
-        "strength": 0.0,
-        "weakness": 4.0,
-        "strength_minus_weakness": -4.0
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
+      }
+    },
+    {
+      "symbol": "HCM",
+      "industry": "chung-khoan",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.01711530018658764,
+      "rs_13": 0.01630909857888541,
+      "rs_49": 0.018519737404416058,
+      "rs_slope": 2.753354651943603e-05,
+      "rs_slope_up": true,
+      "signals": {
+        "early_strength": true,
+        "medium_strength": true,
+        "strong_strength": false,
+        "early_weakness": false,
+        "medium_weakness": false,
+        "strong_weakness": false
+      },
+      "scores": {
+        "strength": 2.5,
+        "weakness": 1.5,
+        "strength_minus_weakness": 1.0
+      }
+    },
+    {
+      "symbol": "MBS",
+      "industry": "chung-khoan",
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.020099330479639996,
+      "rs_13": 0.019801218872929485,
+      "rs_49": 0.02032951343491178,
+      "rs_slope": -2.0142093883287334e-06,
+      "rs_slope_up": false,
+      "signals": {
+        "early_strength": false,
+        "medium_strength": false,
+        "strong_strength": false,
+        "early_weakness": true,
+        "medium_weakness": false,
+        "strong_weakness": false
+      },
+      "scores": {
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "ORS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.007124872028997538,
-      "rs_13": 0.006809286199748489,
-      "rs_49": 0.006730049074513578,
-      "rs_slope": 0.00010668034941317216,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.00709993414553836,
+      "rs_13": 0.006830896779216728,
+      "rs_49": 0.006734233786242201,
+      "rs_slope": 0.00010835224759367162,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6383,11 +6383,11 @@
     {
       "symbol": "PSI",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.005118840098503085,
-      "rs_13": 0.004990549114607473,
-      "rs_49": 0.0050893882798800985,
-      "rs_slope": 4.698008471719058e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.005076281418066074,
+      "rs_13": 0.004992693932950674,
+      "rs_49": 0.005081074638354334,
+      "rs_slope": 3.407068229338544e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6406,11 +6406,11 @@
     {
       "symbol": "SBS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.00352784925707645,
-      "rs_13": 0.003385231135514599,
-      "rs_49": 0.0034954106072190793,
-      "rs_slope": 4.892690994563998e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.003429919877071672,
+      "rs_13": 0.0033901788809506516,
+      "rs_49": 0.0034897043222283115,
+      "rs_slope": 2.9214463938877656e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6429,34 +6429,34 @@
     {
       "symbol": "SHS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.009960986137627624,
-      "rs_13": 0.009668042044855104,
-      "rs_49": 0.009815022238068214,
-      "rs_slope": 4.5908917742619985e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010015366041049282,
+      "rs_13": 0.009706802820199385,
+      "rs_49": 0.009816989812766125,
+      "rs_slope": -1.5361807353239493e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
+        "early_weakness": true,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 1.0,
+        "weakness": 3.0,
+        "strength_minus_weakness": -2.0
       }
     },
     {
       "symbol": "SSI",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.020025732547522202,
-      "rs_13": 0.01852908144907664,
-      "rs_49": 0.01806483670830671,
-      "rs_slope": 0.00038923752873741384,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.020339424871035013,
+      "rs_13": 0.01872602616775839,
+      "rs_49": 0.018099758009395246,
+      "rs_slope": 0.0004077960957963506,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6475,11 +6475,11 @@
     {
       "symbol": "TCI",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006059599900390138,
-      "rs_13": 0.005942823799955219,
-      "rs_49": 0.006191324627222982,
-      "rs_slope": 4.6017679490353764e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.0059886401053671386,
+      "rs_13": 0.005944798902221183,
+      "rs_49": 0.006180235758401209,
+      "rs_slope": 1.0591509485931296e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6498,11 +6498,11 @@
     {
       "symbol": "TVB",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.006246368390470655,
-      "rs_13": 0.006302284111030519,
-      "rs_49": 0.005939306488385612,
-      "rs_slope": -3.16327027724125e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.006173855778729009,
+      "rs_13": 0.006303310723616478,
+      "rs_49": 0.005947632187208041,
+      "rs_slope": -2.613913271014715e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6521,34 +6521,34 @@
     {
       "symbol": "TVS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012900860518524666,
-      "rs_13": 0.012838959745899537,
-      "rs_49": 0.013249532556680196,
-      "rs_slope": 1.8401877425333093e-05,
-      "rs_slope_up": true,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012827900340248052,
+      "rs_13": 0.012837991114524435,
+      "rs_49": 0.013234839893973617,
+      "rs_slope": -1.9182506759213467e-05,
+      "rs_slope_up": false,
       "signals": {
-        "early_strength": true,
-        "medium_strength": true,
+        "early_strength": false,
+        "medium_strength": false,
         "strong_strength": false,
-        "early_weakness": false,
-        "medium_weakness": false,
-        "strong_weakness": false
+        "early_weakness": true,
+        "medium_weakness": true,
+        "strong_weakness": true
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 0.0,
+        "weakness": 4.0,
+        "strength_minus_weakness": -4.0
       }
     },
     {
       "symbol": "VCI",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.02656262970034033,
-      "rs_13": 0.02628196037199509,
-      "rs_49": 0.027308505717843694,
-      "rs_slope": 4.666629780320682e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.02815964219075842,
+      "rs_13": 0.0264332296563473,
+      "rs_49": 0.02727426358801927,
+      "rs_slope": 0.0003431306839812319,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6567,11 +6567,11 @@
     {
       "symbol": "VDS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.010618134528651669,
-      "rs_13": 0.010478095931562912,
-      "rs_49": 0.01098294656935306,
-      "rs_slope": 6.393215363099982e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010804247612775765,
+      "rs_13": 0.010504374705027892,
+      "rs_49": 0.010968921579449304,
+      "rs_slope": 4.815760204051837e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
@@ -6590,11 +6590,11 @@
     {
       "symbol": "VFS",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.014457264602528982,
-      "rs_13": 0.016992245900120988,
-      "rs_49": 0.01804854660259479,
-      "rs_slope": -0.00016690296017093914,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.014131269893535288,
+      "rs_13": 0.0164302356216704,
+      "rs_49": 0.01799956044801212,
+      "rs_slope": -0.00020722839455045768,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6613,34 +6613,34 @@
     {
       "symbol": "VIX",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.01079106831576326,
-      "rs_13": 0.009961034420008867,
-      "rs_49": 0.009967407654090992,
-      "rs_slope": 8.73688639998026e-05,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.010872846010317199,
+      "rs_13": 0.010071383285274096,
+      "rs_49": 0.009984406190112727,
+      "rs_slope": 6.50409780365173e-05,
       "rs_slope_up": true,
       "signals": {
         "early_strength": true,
         "medium_strength": true,
-        "strong_strength": false,
+        "strong_strength": true,
         "early_weakness": false,
         "medium_weakness": false,
         "strong_weakness": false
       },
       "scores": {
-        "strength": 2.5,
-        "weakness": 1.5,
-        "strength_minus_weakness": 1.0
+        "strength": 4.0,
+        "weakness": 0.0,
+        "strength_minus_weakness": 4.0
       }
     },
     {
       "symbol": "VND",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.012312885642345258,
-      "rs_13": 0.012466290790019829,
-      "rs_49": 0.012156026890869661,
-      "rs_slope": -1.173093997675935e-06,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.012279113159916583,
+      "rs_13": 0.012462504406152373,
+      "rs_49": 0.012162226678303424,
+      "rs_slope": -5.962499266160444e-05,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
@@ -6659,11 +6659,11 @@
     {
       "symbol": "DSE",
       "industry": "chung-khoan",
-      "date": "2025-07-10T00:00:00",
-      "rs": 0.016428709775601118,
-      "rs_13": 0.017126772490954786,
-      "rs_49": 0.01746442590390221,
-      "rs_slope": -0.00019234274682201175,
+      "date": "2025-07-11T00:00:00",
+      "rs": 0.016463615409944024,
+      "rs_13": 0.01704246229717671,
+      "rs_49": 0.017444935351580853,
+      "rs_slope": -0.00018350175017727046,
       "rs_slope_up": false,
       "signals": {
         "early_strength": false,
