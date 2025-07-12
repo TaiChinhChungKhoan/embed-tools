@@ -672,14 +672,14 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
 
       <div className="space-y-4">
         <div className="text-sm text-gray-600 space-y-1">
-          <p><strong>RS-Ratio (X-axis):</strong> Relative performance trend vs VNINDEX (values &gt;100 = outperforming, &lt;100 = underperforming)</p>
-          <p><strong>RS-Momentum (Y-axis):</strong> Rate of change in relative performance (values &gt;100 = improving momentum, &lt;100 = weakening)</p>
-          <p><strong>Quadrants:</strong> Leading (top-right), Weakening (bottom-right), Lagging (bottom-left), Improving (top-left)</p>
+          <p><strong>RS-Ratio (X-axis):</strong> Sức mạnh tương đối so với VNINDEX (values &gt;100 = vượt trội, &lt;100 = kém)</p>
+          <p><strong>RS-Momentum (Y-axis):</strong> Tốc độ thay đổi sức mạnh tương đối (values &gt;100 = cải thiện, &lt;100 = suy yếu)</p>
+          <p><strong>Quadrants:</strong> Leading (Dẫn dắt) (góc phải-trên), Weakening (Suy yếu) (góc phải-dưới), Lagging (Tụt hậu) (góc trái-dưới), Improving (Cải thiện) (góc trái-trên)</p>
         </div>
         
         {limitedData.length > 0 && (
           <div className="border-t pt-3">
-            <p className="text-sm font-medium text-gray-700 mb-2">Series:</p>
+            <p className="text-sm font-medium text-gray-700 mb-2">Cấu phần:</p>
             <div className="flex flex-wrap gap-2">
               {limitedData.map((series, index) => (
                 <div key={series.symbol || series.custom_id} className="flex items-center gap-1 text-xs">

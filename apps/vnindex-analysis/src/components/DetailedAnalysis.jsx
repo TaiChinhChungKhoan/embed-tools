@@ -39,8 +39,8 @@ const DetailedAnalysis = ({ detailedAnalysis }) => {
                   <div className="text-xs text-gray-600 mt-1">
                     <span className="font-medium">Sức mạnh:</span> {detailedAnalysis.sector_rotation.money_flow_summary.rotation_strength} | 
                     <span className="font-medium"> Tốc độ:</span> {detailedAnalysis.sector_rotation.money_flow_summary.flow_velocity} | 
-                    <span className="font-medium"> Inflow:</span> {detailedAnalysis.sector_rotation.money_flow_summary.inflow_count} | 
-                    <span className="font-medium"> Outflow:</span> {detailedAnalysis.sector_rotation.money_flow_summary.outflow_count}
+                    <span className="font-medium"> Tiền vào:</span> {detailedAnalysis.sector_rotation.money_flow_summary.inflow_count} | 
+                    <span className="font-medium"> Tiền ra:</span> {detailedAnalysis.sector_rotation.money_flow_summary.outflow_count}
                   </div>
                 </div>
               )}
