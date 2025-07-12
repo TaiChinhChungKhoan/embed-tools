@@ -1,17 +1,46 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createChart, BarSeries, HistogramSeries } from 'lightweight-charts';
+import { HelpCircle } from 'lucide-react';
 import Card from './Card';
 import dataLoader from '../utils/dataLoader';
 
 // Available index sources
 const INDEX_SOURCES = [
-    { value: 'VNINDEX', label: 'VNINDEX' },
-    { value: 'VNINDEX_EW', label: 'VNINDEX Equal Weight' },
-    { value: 'VN30', label: 'VN30' },
-    { value: 'VN100', label: 'VN100' },
-    { value: 'VNALL', label: 'VN All Share' },
-    { value: 'VNMID', label: 'VN Mid Cap' },
-    { value: 'VNSML', label: 'VN Small Cap' },
+    { 
+        value: 'VNINDEX', 
+        label: 'VNINDEX',
+        description: 'Chỉ số tổng hợp của thị trường chứng khoán Việt Nam, phản ánh xu hướng chung của toàn bộ thị trường.'
+    },
+    { 
+        value: 'VNINDEX_EW', 
+        label: 'VNINDEX Equal Weight',
+        description: 'VNINDEX_EW là một chỉ số riêng của TCCK, được tính bằng cách tính trung bình giá và khối lượng của các cổ phiếu có lượng giao dịch trung bình trên 50000 đơn vị 1 ngày trong 20 ngày. Chỉ số này giúp loại bỏ sự ảnh hưởng của các cổ phiếu trụ có vốn hóa lớn làm méo mó thị trường.'
+    },
+    { 
+        value: 'VN30', 
+        label: 'VN30',
+        description: 'Chỉ số của 30 cổ phiếu có vốn hóa thị trường lớn nhất và thanh khoản tốt nhất trên HOSE.'
+    },
+    { 
+        value: 'VN100', 
+        label: 'VN100',
+        description: 'Chỉ số của 100 cổ phiếu có vốn hóa thị trường lớn nhất và thanh khoản tốt trên HOSE.'
+    },
+    { 
+        value: 'VNALL', 
+        label: 'VN All Share',
+        description: 'Chỉ số tổng hợp của tất cả cổ phiếu niêm yết trên HOSE và HNX.'
+    },
+    { 
+        value: 'VNMID', 
+        label: 'VN Mid Cap',
+        description: 'Chỉ số của các cổ phiếu có vốn hóa thị trường trung bình trên thị trường chứng khoán Việt Nam.'
+    },
+    { 
+        value: 'VNSML', 
+        label: 'VN Small Cap',
+        description: 'Chỉ số của các cổ phiếu có vốn hóa thị trường nhỏ trên thị trường chứng khoán Việt Nam.'
+    },
 ];
 
 const IndexChart = () => {
@@ -23,6 +52,7 @@ const IndexChart = () => {
     const [selectedSource, setSelectedSource] = useState('VNINDEX_EW');
     const [data, setData] = useState(null);
     const [chartInitialized, setChartInitialized] = useState(false);
+    const [showHelp, setShowHelp] = useState(false);
 
     const loadDataAndCreateChart = async (source) => {
         try {
@@ -190,6 +220,11 @@ const IndexChart = () => {
         return source ? source.label : selectedSource;
     };
 
+    const getSelectedSourceDescription = () => {
+        const source = INDEX_SOURCES.find(s => s.value === selectedSource);
+        return source ? source.description : '';
+    };
+
     if (error) {
         return (
             <Card>
@@ -206,13 +241,24 @@ const IndexChart = () => {
         <Card>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                    <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                            {getSelectedSourceLabel()}
-                        </h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                            Biểu đồ giá và khối lượng giao dịch
-                        </p>
+                    <div className="flex items-center gap-2">
+                        <div className="flex-1">
+                            <div className="flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                                    {getSelectedSourceLabel()}
+                                </h3>
+                                <button 
+                                    onClick={() => setShowHelp(!showHelp)} 
+                                    className="cursor-pointer text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                                    title="Hướng dẫn đọc biểu đồ"
+                                >
+                                    <HelpCircle className="h-5 w-5" />
+                                </button>
+                            </div>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                Biểu đồ giá và khối lượng giao dịch
+                            </p>
+                        </div>
                     </div>
                     <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-2">
@@ -241,6 +287,52 @@ const IndexChart = () => {
                         )}
                     </div>
                 </div>
+
+                {/* Help Section */}
+                {showHelp && (
+                    <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                        <div className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                            <p className="font-medium">
+                                Biểu đồ này hiển thị giá và khối lượng giao dịch của các chỉ số thị trường chứng khoán Việt Nam.
+                            </p>
+                            
+                            <div>
+                                <h4 className="font-semibold mb-2">Ý nghĩa các chỉ số</h4>
+                                <div className="space-y-2 text-xs">
+                                    <div>
+                                        <strong>VNINDEX:</strong> Chỉ số tổng hợp của thị trường chứng khoán Việt Nam, phản ánh xu hướng chung của toàn bộ thị trường.
+                                    </div>
+                                    <div>
+                                        <strong>VNINDEX_EW:</strong> VNINDEX_EW là một chỉ số riêng của TCCK, được tính bằng cách tính trung bình giá và khối lượng của các cổ phiếu có lượng giao dịch trung bình trên 50000 đơn vị 1 ngày trong 20 ngày. Chỉ số này giúp loại bỏ sự ảnh hưởng của các cổ phiếu trụ có vốn hóa lớn làm méo mó thị trường.
+                                    </div>
+                                    <div>
+                                        <strong>VN30:</strong> Chỉ số của 30 cổ phiếu có vốn hóa thị trường lớn nhất và thanh khoản tốt nhất trên HOSE.
+                                    </div>
+                                    <div>
+                                        <strong>VN100:</strong> Chỉ số của 100 cổ phiếu có vốn hóa thị trường lớn nhất và thanh khoản tốt trên HOSE.
+                                    </div>
+                                    <div>
+                                        <strong>VNALL (VNAllShare):</strong> Chỉ số vốn hóa bao gồm các mã cổ phiếu được niêm yết trên sàn HOSE, thỏa mãn 4 tiêu chí bắt buộc:
+                                        <ul className="mt-1 ml-4 space-y-1">
+                                            <li><strong>Tư cách:</strong> Cổ phiếu hoạt động bình thường, niêm yết tối thiểu 6 tháng (3 tháng nếu thuộc top 5 vốn hóa)</li>
+                                            <li><strong>Free-float:</strong> Tối thiểu 10% (5% nếu thuộc top 10 vốn hóa)</li>
+                                            <li><strong>Thanh khoản:</strong> ≥ 0.05%</li>
+                                            <li><strong>Tỷ trọng vốn hóa:</strong> Giới hạn 10%</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <strong>VNMID:</strong> Chỉ số của các cổ phiếu có vốn hóa thị trường trung bình trên thị trường chứng khoán Việt Nam.
+                                    </div>
+                                    <div>
+                                        <strong>VNSML:</strong> Chỉ số của các cổ phiếu có vốn hóa thị trường nhỏ trên thị trường chứng khoán Việt Nam.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                )}
                 
                 <div 
                     ref={chartContainerRef} 

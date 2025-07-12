@@ -8,7 +8,7 @@ const ValuationReport = () => {
     const { data: peRatio, loading: peLoading, error: peError } = useDataLoader('pe_ratio');
     const { data: pbRatio, loading: pbLoading, error: pbError } = useDataLoader('pb_ratio');
 
-    // Merge PE and PB by date, show last 1 year
+    // Merge PE and PB by date, use full available data
     const peData = peRatio?.data || [];
     const pbData = pbRatio?.data || [];
     const merged = useMemo(() => {
@@ -20,25 +20,24 @@ const ValuationReport = () => {
         })).filter(d => d.pb !== undefined);
     }, [peData, pbData]);
     
-    // Show last 1 year
-    const oneYearAgo = useMemo(() => {
-        const lastDate = merged.length > 0 ? new Date(merged[merged.length - 1].date) : new Date();
-        const d = new Date(lastDate);
-        d.setFullYear(d.getFullYear() - 1);
-        return d;
-    }, [merged]);
-    
-    const chartData = useMemo(() =>
-        merged.filter(d => new Date(d.date) >= oneYearAgo),
-        [merged, oneYearAgo]
-    );
+    // Use all available data
+    const chartData = useMemo(() => merged, [merged]);
 
     // Calculate current and historical statistics
     const stats = useMemo(() => {
         if (chartData.length === 0) return null;
         
         const latest = chartData[chartData.length - 1];
-        const oneYearAgoData = chartData[0];
+        const latestDate = new Date(latest.date);
+        const oneYearAgo = new Date(latestDate);
+        oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+        
+        // Find the closest data point to exactly 1 year ago
+        const oneYearAgoData = chartData.find(d => {
+            const date = new Date(d.date);
+            return date >= oneYearAgo;
+        }) || chartData[0]; // Fallback to earliest if no data 1 year ago
+        
         const allPE = chartData.map(d => d.pe).filter(p => p !== null && !isNaN(p));
         const allPB = chartData.map(d => d.pb).filter(p => p !== null && !isNaN(p));
         
@@ -50,7 +49,8 @@ const ValuationReport = () => {
             },
             change: {
                 pe: oneYearAgoData ? latest.pe - oneYearAgoData.pe : 0,
-                pb: oneYearAgoData ? latest.pb - oneYearAgoData.pb : 0
+                pb: oneYearAgoData ? latest.pb - oneYearAgoData.pb : 0,
+                oneYearAgoDate: oneYearAgoData?.date
             },
             range: {
                 pe: { min: Math.min(...allPE), max: Math.max(...allPE) },
@@ -70,7 +70,7 @@ const ValuationReport = () => {
                     Báo cáo Định giá VN-Index
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400">
-                    Phân tích tỷ lệ P/E và P/B của VN-Index trong 1 năm gần nhất
+                    Phân tích tỷ lệ P/E và P/B của VN-Index trong toàn bộ dữ liệu có sẵn
                 </p>
             </div>
 
@@ -127,7 +127,7 @@ const ValuationReport = () => {
             {/* Chart */}
             <Card>
                 <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">
-                    Biểu đồ P/E và P/B VN-Index (1 năm gần nhất)
+                    Biểu đồ P/E và P/B VN-Index (Toàn bộ dữ liệu)
                 </h3>
                 <div className="h-96">
                     <ResponsiveContainer width="100%" height="100%">

@@ -86,7 +86,7 @@ export const useDataLoader = (dataType, options = {}) => {
                     result = await dataLoader.loadRSAnalysisData();
                     break;
                 case 'vsa_market_analysis':
-                    result = await dataLoader.loadVSAMarketAnalysisData();
+                    result = await dataLoader.loadVSAMarketAnalysisData(options.timeframe || '1D');
                     break;
                 case 'analyze_groups_mfi':
                     result = await dataLoader.loadMFIAnalysisData();
@@ -103,13 +103,13 @@ export const useDataLoader = (dataType, options = {}) => {
         } finally {
             setLoading(false);
         }
-    }, [dataType]);
+    }, [dataType, options.timeframe]);
 
     const refreshData = useCallback(() => {
         // Clear cache for this data type and reload
         dataLoader.clearCache(dataType);
         loadData();
-    }, [dataType, loadData]);
+    }, [dataType, loadData, options.timeframe]);
 
     // Load data on mount and when dataType changes
     useEffect(() => {
@@ -131,7 +131,7 @@ export const useDataLoader = (dataType, options = {}) => {
         return () => {
             window.removeEventListener('dataReloaded', handleGlobalReload);
         };
-    }, [dataType, refreshData]);
+    }, [dataType, refreshData, options.timeframe]);
 
     // Auto-refresh if refreshInterval is provided
     useEffect(() => {
@@ -240,7 +240,7 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
                         result = await dataLoader.loadRSAnalysisData();
                         break;
                     case 'vsa_market_analysis':
-                        result = await dataLoader.loadVSAMarketAnalysisData();
+                        result = await dataLoader.loadVSAMarketAnalysisData(options.timeframe || '1D');
                         break;
                     case 'analyze_groups_mfi':
                         result = await dataLoader.loadMFIAnalysisData();
@@ -263,13 +263,13 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
         } finally {
             setLoading(false);
         }
-    }, [dataTypes]);
+    }, [dataTypes, options.timeframe]);
 
     const refreshData = useCallback(() => {
         // Clear cache for all data types and reload
         dataTypes.forEach(dataType => dataLoader.clearCache(dataType));
         loadAllData();
-    }, [dataTypes, loadAllData]);
+    }, [dataTypes, loadAllData, options.timeframe]);
 
     // Load data on mount and when dataTypes change
     useEffect(() => {
@@ -291,7 +291,7 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
         return () => {
             window.removeEventListener('dataReloaded', handleGlobalReload);
         };
-    }, [dataTypes, refreshData]);
+    }, [dataTypes, refreshData, options.timeframe]);
 
     // Auto-refresh if refreshInterval is provided
     useEffect(() => {

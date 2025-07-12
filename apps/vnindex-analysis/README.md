@@ -419,258 +419,589 @@ Output:
 
 analyze_rs Output JSON structure:
 {
-  "analysis_date": "ISO timestamp",
+  "analysis_date": "2025-01-15T10:30:00",
+  "timeframe": "1D",
   "benchmark": "VNINDEX",
   "lookback_period": 21,
-  "industries": [
-    {
-      "custom_id": "industry_id",
-      "name": "Industry name",
-      "latest_date": "ISO timestamp",
-      "data_points": 0,
-      "metrics": {
-        "current_rs": 0.0,
-        "current_crs": 0.0,
-        "current_ma13": 0.0,
-        "current_ma49": 0.0,
-        "rs_5d_change": 0.0,
-        "rs_21d_change": 0.0,
-        "rs_49d_change": 0.0,
-        "crs_21d_avg": 0.0,
-        "rs_volatility": 0.0,
-        "crs_volatility": 0.0,
-        "outperforming_days": 0,
-        "underperforming_days": 0,
-        "total_days": 0
-      },
-      "performance_summary": {
-        "rs_trend": "bullish/bearish/neutral",
-        "crs_status": "outperforming/underperforming",
-        "strength_score": 0.0
-      },
-      "speed_analysis": {
-        "raw_speed_5d": 0.0,
-        "raw_speed_21d": 0.0,
-        "raw_speed_49d": 0.0,
-        "weighted_speed": 0.0,
-        "consistency_score": 0.0,
-        "short_term_momentum": 0.0,
-        "long_term_momentum": 0.0,
-        "momentum_ratio": 0.0,
-        "speed_category": "Speed category with acceleration"
-      },
-      "direction_analysis": {
-        "direction": "Strongly Improving/Improving/Sideways/Degrading/Strongly Degrading",
-        "direction_quality": {
-          "confirmed": true/false,
-          "strength": 0.0,
-          "sustainability": 0.0
-        },
-        "trend_strength": "Very Strong/Strong/Moderate/Weak",
-        "momentum_confirmed": true/false,
-        "signal_to_noise_ratio": 0.0
-      },
-      "risk_assessment": {
-        "risk_signals": {
-          "high_risk": true/false,
-          "medium_risk": true/false,
-          "low_risk": true/false,
-          "falling_knife": true/false,
-          "momentum_exhaustion": true/false,
-          "stealth_accumulation": true/false,
-          "distribution_signals": true/false,
-          "dead_cat_bounce": true/false
-        },
-        "suggested_position_size": "Avoid/Reduced/Normal/Full",
-        "time_horizon": "Short/Medium/Long",
-        "stop_loss_distance": 0.0,
-        "risk_level": "High/Medium/Low",
-        "volume_analysis": {
-          "volume_trend": "spiking/declining/weak/stable",
-          "institutional_activity": true/false,
-          "volume_quality": "high_volatility/low_volatility/normal",
-          "recent_volume_ratio": 0.0
-        }
-      },
-      "rrg_tail": [...]
-    }
-  ],
-  "groups": [
-    {
-      "custom_id": "VN30/VN100/VNMidCap/VNSmallCap/VNAllShare",
-      "name": "Group name",
-      "latest_date": "ISO timestamp",
-      "data_points": 0,
-      "metrics": {...},
-      "performance_summary": {...},
-      "speed_analysis": {...},
-      "direction_analysis": {...},
-      "risk_assessment": {...},
-      "rrg_tail": [...]
-    }
-  ],
-  "symbols": [
-    {
-      "symbol": "SYMBOL",
-      "name": "Symbol name",
-      "industries": [...],
-      "latest_date": "ISO timestamp",
-      "data_points": 0,
-      "metrics": {...},
-      "performance_summary": {...},
-      "speed_analysis": {...},
-      "direction_analysis": {...},
-      "risk_assessment": {...},
-      "rrg_tail": [...]
-    }
-  ],
+  "industries": 15,
+  "groups": 5,
+  "symbols": 500,
+  
   "insights": {
     "market_overview": {
       "title": "Tổng quan thị trường (Macro)",
-      "analysis_date": "ISO timestamp",
+      "analysis_date": "2025-01-15T10:30:00",
+      "timeframe": "1D",
       "benchmark": "VNINDEX",
-      "summary": "Market analysis summary",
+      "market_indices": {
+        "general_market": "VNINDEX",
+        "large_cap": "VN30", 
+        "mid_cap": "VNMID",
+        "small_cap": "VNSML"
+      },
       "key_metrics": {
-        "outperforming_industries": "X/Y (Z%)",
-        "outperforming_groups": "X/Y (Z%)",
-        "outperforming_symbols": "X/Y (Z%)",
-        "industry_sentiment": "Sentiment description",
-        "group_sentiment": "Sentiment description",
-        "symbol_sentiment": "Sentiment description"
+        "total_industries": 15,
+        "outperforming_industries": 10,
+        "underperforming_industries": 5,
+        "industry_sentiment_ratio": 0.67,
+        "total_symbols": 500,
+        "outperforming_symbols": 320,
+        "underperforming_symbols": 180,
+        "symbol_sentiment_ratio": 0.64,
+        "total_groups": 5,
+        "outperforming_groups": 3,
+        "underperforming_groups": 2,
+        "group_sentiment_ratio": 0.60
       },
-      "market_phase": {
-        "current_phase": "Tăng trưởng/Suy thoái/Đi ngang",
-        "trend_strength": "Mạnh/Yếu",
-        "volatility_level": "Cao/Thấp"
+      "market_regime": {
+        "regime": "Bull Market Vừa",
+        "confidence": 75,
+        "risk_score": 0.25,
+        "breadth": "Strong",
+        "momentum": "Leading",
+        "volatility": "Low"
+      },
+      "market_health": {
+        "overall_health": "Good",
+        "breadth_health": "Strong",
+        "momentum_health": "Strong",
+        "volatility_health": "Stable",
+        "sentiment": "Bullish"
+      },
+      "strategic_recommendation": {
+        "stance": "Tích cực",
+        "confidence": 75,
+        "rationale": "RRG cho thấy 67% ngành đang trong xu hướng tích cực"
       }
     },
-    "industry_analysis": {
-      "title": "Phân tích ngành (Sector Level)",
-      "money_flow_analysis": {
-        "title": "Phân tích dòng tiền theo ngành (RRG)",
-        "quadrant_distribution": {
-          "Leading (Dẫn dắt)": 0,
-          "Improving (Cải thiện)": 0,
-          "Lagging (Tụt hậu)": 0,
-          "Weakening (Suy yếu)": 0,
-          "Không xác định": 0
-        },
-        "summary": "Money flow distribution summary"
+    
+    "insights": {
+    "title": "Phân tích chuẩn hóa (Standardized Analysis)",
+    "industries": {
+      "title": "Phân tích industry",
+      "summary": {
+        "total_count": 15,
+        "top_performers_count": 5,
+        "bottom_performers_count": 5,
+        "improving_momentum_count": 8,
+        "degrading_momentum_count": 3,
+        "accumulation_count": 4,
+        "distribution_count": 2,
+        "breakout_count": 3,
+        "consolidation_count": 1,
+        "stealth_accumulation_count": 2,
+        "stealth_distribution_count": 1,
+        "institutional_activity_count": 6,
+        "high_volatility_count": 3,
+        "deteriorating_fundamentals_count": 1,
+        "falling_knife_count": 0
       },
-      "sector_momentum": {
-        "title": "Động lượng ngành",
-        "momentum_leaders": {
-          "title": "Các ngành có động lượng mạnh nhất",
-          "industries": [...]
-        },
-        "accumulation_candidates": {...},
-        "stealth_accumulation": {...},
-        "breakout_candidates": {...}
-      },
-      "sector_risk": {
-        "title": "Rủi ro ngành",
-        "momentum_exhaustion": {...},
-        "falling_knife": {...},
-        "dead_cat_bounce": {...},
-        "distribution_signals": {...}
-      },
-      "sector_performers": {
-        "title": "Top ngành mạnh và yếu",
-        "top_industries": [...],
-        "bottom_industries": [...]
+      "top_performers": [
+        {
+          "custom_id": "VN30",
+          "name": "VN30 - Large Cap",
+          "strength_score": 4.56,
+          "description": "Mạnh mẽ, xu hướng tăng"
+        }
+      ],
+      "bottom_performers": [
+        {
+          "custom_id": "VNSML",
+          "name": "VNSmallCap - Small Cap",
+          "strength_score": -2.34,
+          "description": "Yếu, xu hướng giảm"
+        }
+      ],
+      "improving_momentum": [...],
+      "degrading_momentum": [...],
+      "accumulation_candidates": [...],
+      "distribution_candidates": [...],
+      "breakout_candidates": [...],
+      "consolidation_candidates": [...],
+      "stealth_accumulation": [...],
+      "stealth_distribution": [...],
+      "institutional_activity": [...],
+      "high_volatility": [...],
+      "deteriorating_fundamentals": [...],
+      "falling_knife": [...],
+      "rrg_performers": {
+        "leading_quadrant": [...],
+        "lagging_quadrant": [...],
+        "improving_quadrant": [...],
+        "weakening_quadrant": [...]
       }
     },
-    "group_analysis": {
-      "title": "Phân tích nhóm vốn hóa (Market Cap Level)",
-      "money_flow_analysis": {
-        "title": "Phân tích dòng tiền theo nhóm vốn hóa (RRG)",
-        "quadrant_distribution": {
-          "Leading (Dẫn dắt)": 0,
-          "Improving (Cải thiện)": 0,
-          "Lagging (Tụt hậu)": 0,
-          "Weakening (Suy yếu)": 0,
-          "Không xác định": 0
-        },
-        "summary": "Money flow distribution summary"
+    "groups": {
+      "title": "Phân tích group",
+      "summary": {
+        "total_count": 5,
+        "top_performers_count": 2,
+        "bottom_performers_count": 2,
+        "improving_momentum_count": 3,
+        "degrading_momentum_count": 1,
+        "accumulation_count": 1,
+        "distribution_count": 0,
+        "breakout_count": 1,
+        "consolidation_count": 0,
+        "stealth_accumulation_count": 0,
+        "stealth_distribution_count": 0,
+        "institutional_activity_count": 2,
+        "high_volatility_count": 1,
+        "deteriorating_fundamentals_count": 0,
+        "falling_knife_count": 0
       },
-      "group_momentum": {
-        "title": "Động lượng nhóm vốn hóa",
-        "momentum_leaders": {
-          "title": "Các nhóm có động lượng mạnh nhất",
-          "groups": [...]
-        },
-        "accumulation_candidates": {...},
-        "stealth_accumulation": {...},
-        "breakout_candidates": {...}
-      },
-      "group_risk": {
-        "title": "Rủi ro nhóm vốn hóa",
-        "momentum_exhaustion": {...},
-        "falling_knife": {...},
-        "dead_cat_bounce": {...},
-        "distribution_signals": {...}
-      },
-      "group_performers": {
-        "title": "Top nhóm vốn hóa mạnh và yếu",
-        "top_groups": [...],
-        "bottom_groups": [...]
+      "top_performers": [...],
+      "bottom_performers": [...],
+      "improving_momentum": [...],
+      "degrading_momentum": [...],
+      "accumulation_candidates": [...],
+      "distribution_candidates": [...],
+      "breakout_candidates": [...],
+      "consolidation_candidates": [...],
+      "stealth_accumulation": [...],
+      "stealth_distribution": [...],
+      "institutional_activity": [...],
+      "high_volatility": [...],
+      "deteriorating_fundamentals": [...],
+      "falling_knife": [...],
+      "rrg_performers": {
+        "leading_quadrant": [...],
+        "lagging_quadrant": [...],
+        "improving_quadrant": [...],
+        "weakening_quadrant": [...]
       }
     },
-    "individual_stock_analysis": {
-      "title": "Phân tích cổ phiếu cá nhân (Stock Level)",
-      "stock_momentum": {
-        "title": "Động lượng cổ phiếu",
-        "momentum_leaders": {
-          "title": "Các cổ phiếu có động lượng mạnh nhất",
-          "symbols": [...]
-        },
-        "accumulation_candidates": {...},
-        "stealth_accumulation": {...},
-        "breakout_candidates": {...}
+    "tickers": {
+      "title": "Phân tích ticker",
+      "summary": {
+        "total_count": 500,
+        "top_performers_count": 50,
+        "bottom_performers_count": 50,
+        "improving_momentum_count": 200,
+        "degrading_momentum_count": 80,
+        "accumulation_count": 120,
+        "distribution_count": 40,
+        "breakout_count": 60,
+        "consolidation_count": 20,
+        "stealth_accumulation_count": 30,
+        "stealth_distribution_count": 10,
+        "institutional_activity_count": 100,
+        "high_volatility_count": 80,
+        "deteriorating_fundamentals_count": 25,
+        "falling_knife_count": 15
       },
-      "stock_risk": {
-        "title": "Rủi ro cổ phiếu",
-        "momentum_exhaustion": {...},
-        "falling_knife": {...},
-        "dead_cat_bounce": {...},
-        "distribution_signals": {...}
-      },
-      "stock_performers": {
-        "title": "Top cổ phiếu mạnh và yếu",
-        "top_symbols": [...],
-        "bottom_symbols": [...]
-      }
-    },
-    "investment_strategies": {
-      "title": "Chiến lược đầu tư đề xuất",
-      "macro_strategy": {
-        "title": "Chiến lược tổng thể thị trường (Macro)",
-        "market_phase_analysis": ["Market phase analysis points"],
-        "overall_positioning": ["Overall market positioning"],
-        "risk_management": ["Risk management recommendations"]
-      },
-      "sector_strategy": {
-        "title": "Chiến lược ngành (Sector)",
-        "sector_rotation_signals": ["Sector rotation signals"],
-        "sector_allocation": ["Sector allocation recommendations"],
-        "sector_risk_warnings": ["Sector risk warnings"]
-      },
-      "group_strategy": {
-        "title": "Chiến lược nhóm vốn hóa (Market Cap)",
-        "group_rotation_signals": ["Market cap group rotation signals"],
-        "group_allocation": ["Market cap group allocation recommendations"],
-        "group_risk_warnings": ["Market cap group risk warnings"]
-      },
-      "stock_strategy": {
-        "title": "Chiến lược cổ phiếu cá nhân (Stock)",
-        "momentum_strategy": ["Momentum-based strategy recommendations"],
-        "accumulation_strategy": ["Accumulation strategy recommendations"],
-        "risk_avoidance": ["Risk avoidance recommendations"],
-        "position_sizing": ["Position sizing recommendations"]
+      "top_performers": [
+        {
+          "symbol": "VNM",
+          "strength_score": 8.45,
+          "description": "Mạnh mẽ, xu hướng tăng"
+        }
+      ],
+      "bottom_performers": [
+        {
+          "symbol": "HPG",
+          "strength_score": -5.67,
+          "description": "Yếu, xu hướng giảm"
+        }
+      ],
+      "improving_momentum": [...],
+      "degrading_momentum": [...],
+      "accumulation_candidates": [...],
+      "distribution_candidates": [...],
+      "breakout_candidates": [...],
+      "consolidation_candidates": [...],
+      "stealth_accumulation": [...],
+      "stealth_distribution": [...],
+      "institutional_activity": [...],
+      "high_volatility": [...],
+      "deteriorating_fundamentals": [...],
+      "falling_knife": [...],
+      "rrg_performers": {
+        "leading_quadrant": [...],
+        "lagging_quadrant": [...],
+        "improving_quadrant": [...],
+        "weakening_quadrant": [...]
       }
     }
-  }
+  },
+  
+  "detailed_analysis": {
+    "title": "Phân tích chi tiết (Detailed Analysis)",
+    "sector_rotation": {
+      "rotation_theme": "Growth to Value",
+      "rotation_strength": "Moderate",
+      "top_rotating_sectors": ["Banking", "Real Estate", "Technology"]
+    },
+    "market_cap_flow": {
+      "title": "Phân tích nhóm vốn hóa thị trường",
+      "flow_theme": "Dòng tiền tập trung vào nhóm vốn hóa lớn",
+      "outperforming_count": 3,
+      "underperforming_count": 2,
+      "groups_summary": {
+        "strongest_group": {
+          "name": "VN30 - Large Cap",
+          "strength_score": 4.56,
+          "rrg_quadrant": "Leading (Dẫn dắt)",
+          "money_flow": "Inflow"
+        },
+        "weakest_group": {
+          "name": "VNSmallCap - Small Cap",
+          "strength_score": -2.34,
+          "rrg_quadrant": "Lagging (Tụt hậu)",
+          "money_flow": "Outflow"
+        },
+        "outperforming_groups": [...],
+        "underperforming_groups": [...]
+      },
+      "detailed_analysis": {...}
+    },
+    "momentum_cycles": {
+      "current_cycle": "Acceleration",
+      "cycle_strength": "Strong",
+      "cycle_duration": "Medium-term"
+    },
+    "institutional_flow": {
+      "flow_direction": "Inflow",
+      "flow_strength": "Moderate",
+      "preferred_segments": ["Large Cap", "Quality Growth"]
+    },
+    "speed_distribution": {
+      "fast_movers": 25,
+      "moderate_movers": 45,
+      "slow_movers": 30
+    },
+    "risk_distribution": {
+      "low_risk": 60,
+      "moderate_risk": 30,
+      "high_risk": 10
+    },
+    "systemic_risks": {
+      "overall_risk": "Low",
+      "risk_factors": [],
+      "risk_score": 0.15
+    },
+    "breadth_detail": {
+      "advance_decline_ratio": 1.8,
+      "new_highs": 45,
+      "new_lows": 8
+    },
+    "volatility_regime": {
+      "regime": "Low Volatility",
+      "volatility_score": 0.25,
+      "stability": "High"
+    }
+  },
+  
+  "investment_strategies": {
+    "title": "Chiến lược đầu tư đề xuất",
+    "macro_strategy": {
+      "market_phase_analysis": [
+        "Thị trường bull mạnh mẽ - ưu tiên vị thế long"
+      ],
+      "overall_positioning": [
+        "Tín hiệu rõ ràng (85% confidence) - có thể tăng tỷ trọng"
+      ],
+      "risk_management": [
+        "Rủi ro thấp - có thể nới lỏng quản lý rủi ro"
+      ]
+    },
+    "sector_strategy": {
+      "sector_rotation_signals": [
+        "Ưu tiên: Tập trung vào các ngành đang dẫn dắt như Ngân hàng, Bất động sản"
+      ],
+      "sector_allocation": [
+        "Tăng tỷ trọng: 5 ngành có tiềm năng tích lũy"
+      ],
+      "sector_risk_warnings": [
+        "Thận trọng: 1 ngành có dấu hiệu 'dao rơi'"
+      ]
+    },
+    "group_strategy": {
+      "group_rotation_signals": [
+        "Ưu tiên: Tập trung vào nhóm VN30 - Large Cap"
+      ],
+      "group_allocation": [
+        "Tăng tỷ trọng: 2 nhóm vốn hóa đang vượt trội"
+      ],
+      "group_risk_warnings": [
+        "Không có cảnh báo rủi ro lớn ở cấp độ nhóm"
+      ]
+    },
+    "stock_strategy": {
+      "momentum_strategy": [
+        "Bứt phá: 8 cổ phiếu có thể bứt phá"
+      ],
+      "accumulation_strategy": [
+        "Cơ hội tích lũy: 12 cổ phiếu có tiềm năng"
+      ],
+      "risk_avoidance": [
+        "Tránh rủi ro: 8 cổ phiếu có dấu hiệu rủi ro cao"
+      ],
+      "position_sizing": [
+        "Duy trì kích thước vị thế chuẩn"
+      ]
+    }
+  },
+  
+  "industries": [
+    {
+      "custom_id": "VN30",
+      "name": "VN30 - Large Cap",
+      "latest_date": "2025-01-15",
+      "data_points": 500,
+      
+      "metrics": {
+        "current_rs": 1.0234,
+        "current_crs": 0.0456,
+        "current_ma13": 1.0189,
+        "current_ma49": 1.0123,
+        "rs_5d_change": 0.0123,
+        "rs_21d_change": 0.0345,
+        "rs_49d_change": 0.0567,
+        "crs_21d_avg": 0.0234,
+        "rs_volatility": 0.0234,
+        "crs_volatility": 0.0456,
+        "outperforming_days": 320,
+        "underperforming_days": 180,
+        "total_days": 500,
+        "outperforming_periods": 320,
+        "underperforming_periods": 180,
+        "total_periods": 500
+      },
+      
+      "performance_summary": {
+        "rs_trend": "bullish",
+        "crs_status": "outperforming",
+        "strength_score": 4.56
+      },
+      
+      "speed_analysis": {
+        "raw_speed_5d": 0.00246,
+        "raw_speed_21d": 0.00164,
+        "raw_speed_49d": 0.00116,
+        "weighted_speed": 0.00189,
+        "consistency_score": 0.0808,
+        "short_term_momentum": 0.00082,
+        "long_term_momentum": 0.00048,
+        "momentum_ratio": 1.5,
+        "speed_category": "Vừa phải (Tăng tốc)"
+      },
+      
+      "direction_analysis": {
+        "direction": "Improving",
+        "direction_quality": {
+          "confirmed": true,
+          "strength": 1.47,
+          "sustainability": 0.64
+        },
+        "trend_strength": "Strong",
+        "momentum_confirmed": true,
+        "signal_to_noise_ratio": 1.47
+      },
+      
+      "risk_assessment": {
+        "risk_level": "Low",
+        "risk_score": 0.23,
+        "risk_factors": [
+          "Low volatility",
+          "Stable momentum"
+        ],
+        "warnings": [],
+        "volume_analysis": {
+          "volume_trend": "Increasing",
+          "volume_quality": "Good",
+          "volume_consistency": 0.78
+        }
+      }
+    }
+  ],
+  
+  "groups": [
+    {
+      "custom_id": "VN30",
+      "name": "VN30 - Large Cap",
+      "latest_date": "2025-01-15",
+      "data_points": 500,
+      
+      "metrics": {
+        "current_rs": 1.0234,
+        "current_crs": 0.0456,
+        "current_ma13": 1.0189,
+        "current_ma49": 1.0123,
+        "rs_5d_change": 0.0123,
+        "rs_21d_change": 0.0345,
+        "rs_49d_change": 0.0567,
+        "crs_21d_avg": 0.0234,
+        "rs_volatility": 0.0234,
+        "crs_volatility": 0.0456,
+        "outperforming_days": 320,
+        "underperforming_days": 180,
+        "total_days": 500,
+        "outperforming_periods": 320,
+        "underperforming_periods": 180,
+        "total_periods": 500
+      },
+      
+      "performance_summary": {
+        "rs_trend": "bullish",
+        "crs_status": "outperforming",
+        "strength_score": 4.56
+      },
+      
+      "speed_analysis": {
+        "raw_speed_5d": 0.00246,
+        "raw_speed_21d": 0.00164,
+        "raw_speed_49d": 0.00116,
+        "weighted_speed": 0.00189,
+        "consistency_score": 0.0808,
+        "short_term_momentum": 0.00082,
+        "long_term_momentum": 0.00048,
+        "momentum_ratio": 1.5,
+        "speed_category": "Vừa phải (Tăng tốc)"
+      },
+      
+      "direction_analysis": {
+        "direction": "Improving",
+        "direction_quality": {
+          "confirmed": true,
+          "strength": 1.47,
+          "sustainability": 0.64
+        },
+        "trend_strength": "Strong",
+        "momentum_confirmed": true,
+        "signal_to_noise_ratio": 1.47
+      },
+      
+      "risk_assessment": {
+        "risk_level": "Low",
+        "risk_score": 0.23,
+        "risk_factors": [
+          "Low volatility",
+          "Stable momentum"
+        ],
+        "warnings": [],
+        "volume_analysis": {
+          "volume_trend": "Increasing",
+          "volume_quality": "Good",
+          "volume_consistency": 0.78
+        }
+      }
+    }
+  ],
+  
+  "symbols": [
+    {
+      "symbol": "VNM",
+      "name": "VNM",
+      "industries": [
+        {
+          "custom_id": "VN30",
+          "name": "VN30 - Large Cap",
+          "is_primary": true,
+          "priority": 1
+        }
+      ],
+      "latest_date": "2025-01-15",
+      "data_points": 500,
+      
+      "metrics": {
+        "current_rs": 1.0234,
+        "current_crs": 0.0456,
+        "current_ma13": 1.0189,
+        "current_ma49": 1.0123,
+        "rs_5d_change": 0.0123,
+        "rs_21d_change": 0.0345,
+        "rs_49d_change": 0.0567,
+        "crs_21d_avg": 0.0234,
+        "rs_volatility": 0.0234,
+        "crs_volatility": 0.0456,
+        "outperforming_days": 320,
+        "underperforming_days": 180,
+        "total_days": 500,
+        "outperforming_periods": 320,
+        "underperforming_periods": 180,
+        "total_periods": 500
+      },
+      
+      "performance_summary": {
+        "rs_trend": "bullish",
+        "crs_status": "outperforming",
+        "strength_score": 4.56
+      },
+      
+      "speed_analysis": {
+        "raw_speed_5d": 0.00246,
+        "raw_speed_21d": 0.00164,
+        "raw_speed_49d": 0.00116,
+        "weighted_speed": 0.00189,
+        "consistency_score": 0.0808,
+        "short_term_momentum": 0.00082,
+        "long_term_momentum": 0.00048,
+        "momentum_ratio": 1.5,
+        "speed_category": "Vừa phải (Tăng tốc)"
+      },
+      
+      "direction_analysis": {
+        "direction": "Improving",
+        "direction_quality": {
+          "confirmed": true,
+          "strength": 1.47,
+          "sustainability": 0.64
+        },
+        "trend_strength": "Strong",
+        "momentum_confirmed": true,
+        "signal_to_noise_ratio": 1.47
+      },
+      
+      "risk_assessment": {
+        "risk_level": "Low",
+        "risk_score": 0.23,
+        "risk_factors": [
+          "Low volatility",
+          "Stable momentum"
+        ],
+        "warnings": [],
+        "volume_analysis": {
+          "volume_trend": "Increasing",
+          "volume_quality": "Good",
+          "volume_consistency": 0.78
+        }
+      }
+    }
+  ]
 }
+
+```
+
+### Signal Categories Explained
+
+#### Performance Categories (Absolute)
+- **`top_performers`**: Highest absolute strength scores
+- **`bottom_performers`**: Lowest absolute strength scores
+
+#### Momentum Categories (Direction-based)
+- **`improving_momentum`**: Positive momentum (accelerating, improving direction)
+- **`degrading_momentum`**: Negative momentum (decelerating, degrading direction)
+
+#### Pattern Categories (Momentum-based)
+- **`accumulation_candidates`**: Low speed + improving direction + positive acceleration
+- **`distribution_candidates`**: Low speed + degrading direction + negative acceleration
+- **`breakout_candidates`**: Strong positive acceleration + direction change
+- **`consolidation_candidates`**: Strong negative acceleration + direction change
+- **`stealth_accumulation`**: Very low speed + improving direction + positive acceleration
+- **`stealth_distribution`**: Very low speed + degrading direction + positive acceleration
+- **`institutional_activity`**: High speed + institutional volume patterns
+
+#### Risk Categories (Risk-based)
+- **`high_volatility`**: High volatility warning
+- **`deteriorating_fundamentals`**: Fundamental deterioration
+- **`falling_knife`**: Dangerous momentum pattern
+
+#### RRG Quadrant Categories (RRG-based)
+- **`leading_quadrant`**: Top performers in Leading quadrant (high RS, high momentum)
+- **`lagging_quadrant`**: Bottom performers in Lagging quadrant (low RS, low momentum)
+- **`improving_quadrant`**: Top performers in Improving quadrant (low RS, high momentum)
+- **`weakening_quadrant`**: Top performers in Weakening quadrant (high RS, low momentum)
 
 7. RRG Data Structure (rrg_data.json):
 {
@@ -826,6 +1157,7 @@ vsa_market_analysis.json Output JSON Structure:
 {
     "market_overview": {
         "timestamp": "YYYY-MM-DDTHH:MM:SS",
+        "timeframe": "1D",
         "total_stocks_analyzed": 500,
         "bullish_stocks": ["VNM", "FPT", ...],
         "bearish_stocks": ["HPG", "VIC", ...],
@@ -876,7 +1208,7 @@ vsa_market_analysis.json Output JSON Structure:
             "recent_analyses": [
                 {
                     "timestamp": "YYYY-MM-DDTHH:MM:SS",
-                    "days_ago": 0,
+                    "periods_ago": 0,
                     "time_decay_weight": 1.0,
                     "bullish_score": 25.5,
                     "volume_significance": 85.0,
@@ -898,7 +1230,7 @@ vsa_market_analysis.json Output JSON Structure:
                 },
                 {
                     "timestamp": "YYYY-MM-DDTHH:MM:SS",
-                    "days_ago": 2,
+                    "periods_ago": 2,
                     "time_decay_weight": 0.7,
                     "bullish_score": 15.2,
                     "volume_significance": 65.0,
@@ -982,29 +1314,123 @@ for the VN-Index market. The analysis helps identify market trends and momentum.
 
 market_breadth_5.json Output JSON Structure:
 {
-  "2024-01-01": {
-    "total_stocks": 500,
-    "stocks_with_data": 450,
-    "above_ema_5": 280,
-    "below_ema_5": 170,
-    "pct_above_ema_5": 62.2,
-    "pct_below_ema_5": 37.8,
-    "above_ema_10": 265,
-    "below_ema_10": 185,
-    "pct_above_ema_10": 58.9,
-    "pct_below_ema_10": 41.1,
-    "above_ema_20": 250,
-    "below_ema_20": 200,
-    "pct_above_ema_20": 55.6,
-    "pct_below_ema_20": 44.4,
-    "above_ema_50": 240,
-    "below_ema_50": 210,
-    "pct_above_ema_50": 53.3,
-    "pct_below_ema_50": 46.7,
-    "above_ema_200": 220,
-    "below_ema_200": 230,
-    "pct_above_ema_200": 48.9,
-    "pct_below_ema_200": 51.1
+  "metadata": {
+    "analysis_info": {
+      "title": "VN-Index EMA Breadth Analysis",
+      "description": "Market breadth analysis using Exponential Moving Averages",
+      "version": "2.0",
+      "generated_at": "2024-01-01T10:00:00",
+      "generated_by": "EMA Breadth Analyzer"
+    },
+    "date_range": {
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "total_trading_days": 252,
+      "analysis_period": "1 year"
+    },
+    "parameters": {
+      "ema_periods": [5, 10, 20, 50, 200],
+      "min_volume_threshold": 1000000,
+      "volume_lookback_days": 20,
+      "data_source": "VN-Index Market Data"
+    },
+    "data_quality": {
+      "total_symbols_available": 500,
+      "symbols_with_sufficient_data": 450,
+      "data_coverage_percentage": 90.0,
+      "analysis_quality": "High"
+    }
+  },
+  "breadth_data": {
+    "2024-01-01": {
+      "date": "2024-01-01",
+      "summary": {
+        "total_stocks": 500,
+        "stocks_with_data": 450,
+        "data_coverage": 90.0
+      },
+      "ema_5": {
+        "above_count": 280,
+        "below_count": 170,
+        "above_percentage": 62.2,
+        "below_percentage": 37.8,
+        "strength": "Strong",
+        "sentiment": "Bullish"
+      },
+      "ema_10": {
+        "above_count": 265,
+        "below_count": 185,
+        "above_percentage": 58.9,
+        "below_percentage": 41.1,
+        "strength": "Moderate",
+        "sentiment": "Bullish"
+      },
+      "ema_20": {
+        "above_count": 250,
+        "below_count": 200,
+        "above_percentage": 55.6,
+        "below_percentage": 44.4,
+        "strength": "Moderate",
+        "sentiment": "Neutral"
+      },
+      "ema_50": {
+        "above_count": 240,
+        "below_count": 210,
+        "above_percentage": 53.3,
+        "below_percentage": 46.7,
+        "strength": "Weak",
+        "sentiment": "Neutral"
+      },
+      "ema_200": {
+        "above_count": 220,
+        "below_count": 230,
+        "above_percentage": 48.9,
+        "below_percentage": 51.1,
+        "strength": "Weak",
+        "sentiment": "Bearish"
+      },
+      "market_regime": {
+        "classification": "Transition",
+        "confidence": 0.75,
+        "description": "Market showing mixed signals across timeframes"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": 2.5,
+        "ema_50_change_5d": -1.2,
+        "ema_200_change_5d": 0.8,
+        "overall_momentum": "Mixed"
+      }
+    }
+  },
+  "analysis_summary": {
+    "current_market_state": {
+      "regime": "Bull Market",
+      "strength": "Strong",
+      "confidence": 0.85,
+      "trend_direction": "Upward"
+    },
+    "key_metrics": {
+      "breadth_strength": 65.2,
+      "participation_level": 90.0,
+      "trend_consistency": "High"
+    },
+    "risk_assessment": {
+      "overall_risk": "Low",
+      "risk_factors": ["Low volatility", "Strong breadth"],
+      "risk_level": "Green"
+    }
+  },
+  "vietnamese_insights": {
+    "report_metadata": { ... },
+    "executive_summary": { ... },
+    "market_overview": { ... },
+    "technical_analysis": { ... },
+    "market_structure": { ... },
+    "money_flow_analysis": { ... },
+    "risk_analysis": { ... },
+    "trading_strategy": { ... },
+    "market_sentiment": { ... },
+    "forecast_outlook": { ... }
   }
 }
 
@@ -1032,74 +1458,208 @@ Output:
 
 JSON Structure:
 {
-  "analysis_date": "ISO timestamp",
-  "period": 3,
-  "period_unit": "years",
-  "mfi_period": 14,
-  "indices": [
-    {
-      "symbol": "VN30",
-      "name": "VN30 - Large Cap",
-      "data_points": 0,
-      "latest_date": "ISO timestamp",
-      "mfi_data": [
+    "analysis_date": "2024-01-15T10:30:00",
+    "period": 3,
+    "period_unit": "years",
+    "mfi_period": 14,
+    "overbought_threshold": 80.0,
+    "oversold_threshold": 20.0,
+    "indices": [
         {
-          "date": "ISO timestamp",
-          "mfi": 0.0,
-          "signal": "buy/sell/neutral",
-          "price": 0.0,
-          "volume": 0.0,
-          "typical_price": 0.0,
-          "raw_money_flow": 0.0,
-          "positive_money_flow": 0.0,
-          "negative_money_flow": 0.0
+            "symbol": "VN30",
+            "name": "VN30 - Large Cap",
+            "data_points": 750,
+            "latest_date": "2024-01-15",
+            "mfi_data": [
+                {
+                    "date": "2024-01-15",
+                    "mfi": 65.23,
+                    "signal": "neutral",
+                    "price": 1250.50,
+                    "volume": 1500000,
+                    "typical_price": 1248.75,
+                    "raw_money_flow": 1873125000,
+                    "positive_money_flow": 1873125000,
+                    "negative_money_flow": 0
+                }
+            ],
+            "statistics": {
+                "current_mfi": 65.23,
+                "mfi_5d_avg": 62.15,
+                "mfi_21d_avg": 58.90,
+                "mfi_50d_avg": 55.20,
+                "mfi_min": 25.10,
+                "mfi_max": 85.30,
+                "mfi_std": 12.45,
+                "MFI_ROC": 3.08,
+                "MFI_ROC_5d_avg": 2.15,
+                "MFI_Acceleration": 0.45,
+                "MFI_Acceleration_5d_avg": 0.32,
+                "overbought_days": 45,
+                "oversold_days": 23,
+                "neutral_days": 682,
+                "total_days": 750
+            },
+            "signals": {
+                "current_signal": "neutral",
+                "signal_strength": "moderate",
+                "signal_confidence": 0.75,
+                "trend_direction": "bullish",
+                "momentum": "increasing"
+            },
+            "analysis": {
+                "market_condition": "neutral",
+                "volume_analysis": "normal",
+                "price_momentum": "weak",
+                "risk_level": "medium",
+                "recommendation": "hold"
+            }
         }
-      ],
-      "statistics": {
-        "current_mfi": 0.0,
-        "mfi_5d_avg": 0.0,
-        "mfi_21d_avg": 0.0,
-        "mfi_50d_avg": 0.0,
-        "mfi_min": 0.0,
-        "mfi_max": 0.0,
-        "mfi_std": 0.0,
-        "overbought_days": 0,
-        "oversold_days": 0,
-        "neutral_days": 0,
-        "total_days": 0
-      },
-      "signals": {
-        "current_signal": "buy/sell/neutral",
-        "signal_strength": "strong/moderate/weak",
-        "signal_confidence": 0.0,
-        "trend_direction": "bullish/bearish/neutral",
-        "momentum": "increasing/decreasing/stable"
-      },
-      "analysis": {
-        "market_condition": "overbought/oversold/neutral",
-        "volume_analysis": "high/low/normal",
-        "price_momentum": "strong/weak/neutral",
-        "risk_level": "high/medium/low",
-        "recommendation": "buy/hold/sell"
-      }
-    }
-  ],
-  "market_overview": {
-    "overall_sentiment": "bullish/bearish/neutral",
-    "index_performance": {
-      "best_performer": "symbol",
-      "worst_performer": "symbol",
-      "most_volatile": "symbol",
-      "least_volatile": "symbol"
+    ],
+    "market_overview": {
+        "overall_sentiment": "bullish",
+        "index_performance": {
+            "best_performer": "VNSML",
+            "worst_performer": "VN30",
+            "most_volatile": "VNSML",
+            "least_volatile": "VN30"
+        },
+        "money_flow_distribution": {
+            "overbought_indices": 1,
+            "oversold_indices": 0,
+            "neutral_indices": 4
+        },
+        "mfi_spread": 8.45,
+        "correlation_matrix": {
+            "VN30": {"VN30": 1.0, "VN100": 0.95, "VNALL": 0.92, "VNMID": 0.88, "VNSML": 0.82},
+            "VN100": {"VN30": 0.95, "VN100": 1.0, "VNALL": 0.98, "VNMID": 0.94, "VNSML": 0.87},
+            "VNALL": {"VN30": 0.92, "VN100": 0.98, "VNALL": 1.0, "VNMID": 0.96, "VNSML": 0.89},
+            "VNMID": {"VN30": 0.88, "VN100": 0.94, "VNALL": 0.96, "VNMID": 1.0, "VNSML": 0.93},
+            "VNSML": {"VN30": 0.82, "VN100": 0.87, "VNALL": 0.89, "VNMID": 0.93, "VNSML": 1.0}
+        }
     },
-    "money_flow_distribution": {
-      "overbought_indices": 0,
-      "oversold_indices": 0,
-      "neutral_indices": 0
-    },
-    "correlation_analysis": {
-      "high_correlation_pairs": [],
-      "low_correlation_pairs": []
+    "vietnamese_insights": {
+        "metadata": {
+            "analysis_timestamp": "2024-01-15T10:30:00",
+            "data_quality": {
+                "quality": "Tốt",
+                "average_data_points": 750,
+                "issues": ["Chất lượng dữ liệu tốt."]
+            },
+            "analysis_period": "3 năm",
+            "mfi_period": "14 ngày"
+        },
+        "signal_coordination": {
+            "overall_signal": {
+                "direction": "Tích cực",
+                "strength": "Mạnh",
+                "confidence": 0.82,
+                "consensus_score": 0.75
+            },
+            "component_signals": [
+                {
+                    "name": "Mức MFI Hiện tại",
+                    "direction": "Tích cực",
+                    "strength": "Vừa phải",
+                    "value": 62.15,
+                    "weight": 0.20,
+                    "description": "MFI trung bình của thị trường là 62.2."
+                },
+                {
+                    "name": "Động lượng (ROC)",
+                    "direction": "Tích cực",
+                    "strength": "Mạnh",
+                    "value": 2.85,
+                    "weight": 0.20,
+                    "description": "Tốc độ thay đổi MFI trung bình (5 ngày): 2.85."
+                },
+                {
+                    "name": "Gia tốc Dòng tiền",
+                    "direction": "Tích cực",
+                    "strength": "Vừa phải",
+                    "value": 0.38,
+                    "weight": 0.15,
+                    "description": "Gia tốc MFI: 0.38. Cho thấy động lượng đang mạnh lên hay yếu đi."
+                },
+                {
+                    "name": "Cấu trúc Thị trường (Spread)",
+                    "direction": "Tích cực",
+                    "strength": "Mạnh",
+                    "value": 8.45,
+                    "weight": 0.25,
+                    "description": "Chênh lệch MFI Small-cap vs Large-cap: 8.45. Dương cho thấy tâm lý ưa thích rủi ro (risk-on)."
+                },
+                {
+                    "name": "Mức độ Cực đoan",
+                    "direction": "Trung lập",
+                    "strength": "Yếu",
+                    "value": 0.12,
+                    "weight": 0.10,
+                    "description": "Điểm cực đoan tổng hợp: 0.12. Dương = quá mua, Âm = quá bán."
+                },
+                {
+                    "name": "Mức độ Tham gia",
+                    "direction": "Tích cực",
+                    "strength": "Mạnh",
+                    "value": 100.0,
+                    "weight": 0.10,
+                    "description": "Tỷ lệ chỉ số có dữ liệu: 100%."
+                }
+            ],
+            "conflicts_detected": []
+        },
+        "market_analysis": {
+            "trading_recommendation": {
+                "action": "Xem xét Mua/Tăng tỷ trọng thận trọng",
+                "reasoning": "Tín hiệu tăng vừa phải, cần theo dõi thêm.",
+                "confidence": 0.82
+            },
+            "risk_assessment": {
+                "risk_level": "Trung bình",
+                "consensus_score": 0.75,
+                "recommendation": "Rủi ro trung bình. Giao dịch bình thường nhưng tuân thủ kỷ luật.",
+                "risk_factors": ["Rủi ro thị trường ở mức bình thường."]
+            },
+            "market_outlook": {
+                "short_term": {
+                    "timeframe": "1-2 tuần",
+                    "outlook": "Tích cực, có khả năng tăng điểm trong ngắn hạn.",
+                    "confidence": 0.74
+                },
+                "medium_term": {
+                    "timeframe": "1-3 tháng",
+                    "outlook": "Triển vọng tích cực khi dòng tiền chấp nhận rủi ro.",
+                    "confidence": 0.57
+                }
+            },
+            "market_regime": {
+                "regime": "Trung tính",
+                "description": "Thị trường ở trạng thái cân bằng, dòng tiền ổn định.",
+                "average_mfi": 62.15,
+                "supporting_signals": "Tín hiệu phối hợp cho thấy xu hướng chung là tích cực."
+            },
+            "key_insights": [
+                "Tín hiệu tổng thể: **Tích cực (Mạnh)** với độ tin cậy 82%.",
+                "Cấu trúc thị trường **ủng hộ xu hướng tăng (Risk-on)**, dòng tiền đang ưu tiên nhóm vốn hóa nhỏ và vừa.",
+                "Động lượng đang **mạnh lên**, củng cố cho xu hướng hiện tại."
+            ]
+        },
+        "current_state": {
+            "indices_summary": {
+                "VN30": 58.90,
+                "VN100": 60.15,
+                "VNALL": 62.30,
+                "VNMID": 64.75,
+                "VNSML": 67.35
+            },
+            "mfi_spread_VNSML_vs_VN30": 8.45,
+            "mfi_correlation": {
+                "VN30": {"VN30": 1.0, "VN100": 0.95, "VNALL": 0.92, "VNMID": 0.88, "VNSML": 0.82},
+                "VN100": {"VN30": 0.95, "VN100": 1.0, "VNALL": 0.98, "VNMID": 0.94, "VNSML": 0.87},
+                "VNALL": {"VN30": 0.92, "VN100": 0.98, "VNALL": 1.0, "VNMID": 0.96, "VNSML": 0.89},
+                "VNMID": {"VN30": 0.88, "VN100": 0.94, "VNALL": 0.96, "VNMID": 1.0, "VNSML": 0.93},
+                "VNSML": {"VN30": 0.82, "VN100": 0.87, "VNALL": 0.89, "VNMID": 0.93, "VNSML": 1.0}
+            }
+        }
     }
-  }
 }

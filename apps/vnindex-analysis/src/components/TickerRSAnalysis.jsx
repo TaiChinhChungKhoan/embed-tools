@@ -143,12 +143,14 @@ const TickerRSAnalysis = () => {
         }
     };
 
-    // Get unique industries for filter dropdown
-    const uniqueIndustries = [...new Set(
-        symbols
-            .map(symbol => symbol.industries?.find(i => i.is_primary)?.name || symbol.industries?.[0]?.name)
-            .filter(Boolean)
-    )].sort();
+    // Helper function to safely get industry name
+    const getIndustryName = (industries) => {
+      if (!industries || !industries.length) return 'Unknown Industry';
+      const primary = industries.find(i => i.is_primary);
+      const first = industries[0];
+      const name = primary?.name || first?.name;
+      return typeof name === 'string' ? name : 'Unknown Industry';
+    };
 
     // Handle sort
     const handleSort = (field) => {
@@ -366,7 +368,7 @@ const TickerRSAnalysis = () => {
                                     </div>
                                     {symbol.industries && symbol.industries.length > 0 && (
                                         <div className="text-xs text-gray-500 dark:text-gray-400">
-                                            Ngành: {symbol.industries.find(i => i.is_primary)?.name || symbol.industries[0].name}
+                                            Ngành: {getIndustryName(symbol.industries)}
                                         </div>
                                     )}
                                 </div>
@@ -432,7 +434,7 @@ const TickerRSAnalysis = () => {
                                     </div>
                                     {symbol.industries && symbol.industries.length > 0 && (
                                         <div className="text-xs text-gray-500 dark:text-gray-400">
-                                            Ngành: {symbol.industries.find(i => i.is_primary)?.name || symbol.industries[0].name}
+                                            Ngành: {getIndustryName(symbol.industries)}
                                         </div>
                                     )}
                                 </div>
@@ -636,7 +638,7 @@ const TickerRSAnalysis = () => {
                                             </div>
                                             {symbol.industries && symbol.industries.length > 0 && (
                                                 <div className="text-xs text-gray-500 dark:text-gray-400">
-                                                    {symbol.industries.find(i => i.is_primary)?.name || symbol.industries[0].name}
+                                                    {getIndustryName(symbol.industries)}
                                                 </div>
                                             )}
                                         </td>

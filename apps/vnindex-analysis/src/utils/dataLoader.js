@@ -66,7 +66,7 @@ class DataLoader {
 
     // Load market breadth 5 data (EMA breadth analysis)
     async loadMarketBreadth5() {
-        return this.fetchData(`${this.basePath}/data/market_breadth_5.json`);
+        return this.fetchData(`${this.basePath}/data/analyze_breadth_5.json`);
     }
 
     // Load other data files (to be added as needed)
@@ -90,12 +90,14 @@ class DataLoader {
         return this.fetchData(`${this.basePath}/data/abnormal_signals_intra.json`);
     }
 
-    async loadRSAnalysisData() {
-        return this.fetchData(`${this.basePath}/data/analyze_rs.json`);
+    async loadRSAnalysisData(timeframe = '1D') {
+        const file = timeframe === '1W' ? 'analyze_rs_1W.json' : 'analyze_rs_1D.json';
+        return this.fetchData(`${this.basePath}/data/${file}`);
     }
 
-    async loadVSAMarketAnalysisData() {
-        return this.fetchData(`${this.basePath}/data/vsa_market_analysis.json`);
+    async loadVSAMarketAnalysisData(timeframe = '1D') {
+        const file = timeframe === '1W' ? 'vsa_market_analysis_1W.json' : 'vsa_market_analysis_1D.json';
+        return this.fetchData(`${this.basePath}/data/${file}`);
     }
 
     // Market overview data

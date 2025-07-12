@@ -8,7 +8,8 @@ import VSAStockCard from './VSAStockCard';
 import VSAStockTable from './VSAStockTable';
 
 const VSAReport = () => {
-    const { data, loading, error } = useDataLoader('vsa_market_analysis');
+    const [timeframe, setTimeframe] = useState('1D');
+    const { data, loading, error } = useDataLoader('vsa_market_analysis', { timeframe });
     const [activeSection, setActiveSection] = useState('market_overview');
 
     if (loading) {
@@ -51,6 +52,23 @@ const VSAReport = () => {
                 market_overview={market_overview} 
                 strongSignalsCount={strongSignals.length} 
             />
+
+            {/* Timeframe Selector */}
+            <div className="bg-white rounded-lg shadow-sm border p-4 flex items-center space-x-4">
+                <span className="text-sm font-medium text-gray-700">Khung thời gian:</span>
+                <button
+                    className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1D' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+                    onClick={() => setTimeframe('1D')}
+                >
+                    Hàng ngày (1D)
+                </button>
+                <button
+                    className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1W' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+                    onClick={() => setTimeframe('1W')}
+                >
+                    Hàng tuần (1W)
+                </button>
+            </div>
 
             {/* Section Navigation */}
             <VSASectionNav 

@@ -15,6 +15,7 @@ import MarketOverviewReport from './components/MarketOverviewReport';
 import MacroeconomicsReport from './components/MacroeconomicsReport';
 import IndustryStrengthChart from './components/IndustryStrengthChart';
 import VSAReport from './components/VSAReport';
+import VCPAnalysis from './components/VCPAnalysis';
 import EMABreadthChart from './components/EMABreadthChart';
 import MFIAnalysis from './components/MFIAnalysis';
 import GlobalReloadButton from './components/GlobalReloadButton';
@@ -45,13 +46,14 @@ export default function App() {
             { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS của các mã chứng khoán' },
             { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong mã chứng khoán' },
             { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các mã chứng khoán' },
-            { id: 'vsa_report', name: 'Báo cáo VSA', description: 'Phân tích Volume Spread Analysis cho từng mã chứng khoán' }
+            { id: 'vsa_report', name: 'Báo cáo VSA', description: 'Phân tích Volume Spread Analysis cho từng mã chứng khoán' },
+            { id: 'vcp_analysis', name: 'Phân tích VCP', description: 'Phân tích mẫu Volume, Close, Price cho các mã chứng khoán' }
         ],
         'Market': [
             { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
             { id: 'macroeconomics', name: 'Báo cáo Vĩ mô', description: 'Phân tích các chỉ số kinh tế vĩ mô và xu hướng thị trường' },
             { id: 'valuation_report', name: 'Báo cáo Định giá', description: 'Phân tích tỷ lệ P/E và P/B của VN-Index' },
-            { id: 'mfi_analysis', name: 'Phân tích MFI', description: 'Phân tích Money Flow Index cho các chỉ số thị trường' }
+            // { id: 'mfi_analysis', name: 'Phân tích MFI', description: 'Phân tích Money Flow Index cho các chỉ số thị trường' }
         ]
     };
 
@@ -277,6 +279,7 @@ export default function App() {
                                             {activeReport === 'abnormal_signals' && <StockAbnormalSignals />}
                                             {activeReport === 'rrg_analysis' && <RRGAnalysis />}
                                             {activeReport === 'vsa_report' && <VSAReport />}
+                                            {activeReport === 'vcp_analysis' && <VCPAnalysis />}
                                         </div>
                                     )}
                                     {activeTab === 'Market' && (

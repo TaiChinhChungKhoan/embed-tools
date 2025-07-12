@@ -1,29 +1,35 @@
 import React, { useState } from 'react';
 import RRGChart from './RRGChart';
 import MarketOverview from './MarketOverview';
-import StockRankingByScore from './StockRankingByScore';
-import StockRankingBySpeed from './StockRankingBySpeed';
-import IndustryRankingByScore from './IndustryRankingByScore';
-import IndustryRankingBySpeed from './IndustryRankingBySpeed';
-import GroupRankingByScore from './GroupRankingByScore';
-import GroupRankingBySpeed from './GroupRankingBySpeed';
+import UnifiedRankingByScore from './UnifiedRankingByScore';
+import UnifiedRankingBySpeed from './UnifiedRankingBySpeed';
 import InvestmentStrategy from './InvestmentStrategy';
-import { loadRRGData } from '../utils/rrgDataLoader';
-import analyzeRsData from '../data/analyze_rs.json';
+import DetailedAnalysis from './DetailedAnalysis';
+import { loadRRGData, getAnalyzeRsData } from '../utils/rrgDataLoader';
 
 
 // Main RRGAnalysis Component
 export default function RRGAnalysis() {
   const [activeTab, setActiveTab] = useState('overview');
-  const rrgData = loadRRGData();
+  const [timeframe, setTimeframe] = useState('1D');
   
-  // Safely access insights data with fallbacks for new structure
+  const rrgData = loadRRGData(timeframe);
+  const analyzeRsData = getAnalyzeRsData(timeframe);
+  
+  // Safely access insights data with fallbacks for new standardized structure
   const insights = analyzeRsData?.insights || {};
   const marketOverview = insights?.market_overview || {};
-  const industryAnalysis = insights?.industry_analysis || {};
-  const groupAnalysis = insights?.group_analysis || {};
-  const individualStockAnalysis = insights?.individual_stock_analysis || {};
-  const investmentStrategies = insights?.investment_strategies || {};
+  const industryAnalysis = insights?.insights?.industries || {};
+  const groupAnalysis = insights?.insights?.groups || {};
+  const tickerAnalysis = insights?.insights?.tickers || {};
+  const advancedAnalysis = insights?.advanced_analysis || {};
+  const investmentStrategies = analyzeRsData?.investment_strategies || {};
+  const detailedAnalysis = analyzeRsData?.detailed_analysis || {};
+  
+  // Access the main data arrays
+  const industries = analyzeRsData?.industries || [];
+  const groups = analyzeRsData?.groups || [];
+  const symbols = analyzeRsData?.symbols || [];
 
   const getQuadrantColor = (quadrant) => {
     if (quadrant?.includes('Leading') || quadrant?.includes('Dẫn dắt')) return 'text-green-600';
@@ -61,14 +67,12 @@ export default function RRGAnalysis() {
     return 'text-gray-600';
   };
 
-
-
   // Update active tab
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
-  // Helper function to safely render insight items
+  // Helper function to safely render insight items with standardized structure
   const renderInsightItems = (items, type) => {
     if (!items || !Array.isArray(items) || items.length === 0) {
       return null;
@@ -79,27 +83,74 @@ export default function RRGAnalysis() {
         {items.slice(0, 5).map((item, index) => (
           <div key={index} className="bg-white p-3 rounded border">
             <div className="flex justify-between items-start">
-              <div>
+              <div className="flex-1">
                 <div className="font-medium text-gray-900">
-                  {item?.name || 'Unknown'}
+                  {item?.name || item?.custom_id || item?.symbol || 'Unknown'}
                   {item?.symbol && ` (${item.symbol})`}
                 </div>
-                {item?.primary_industry && (
-                  <div className="text-xs text-gray-500">{item.primary_industry}</div>
+                {/* Use primary_industry if available, otherwise fall back to industries array */}
+                <div className="text-xs text-gray-500">
+                  {item?.primary_industry || (item?.industries && item.industries.length > 0 ? (() => {
+                    const primaryIndustry = item.industries.find(ind => ind.is_primary);
+                    const firstIndustry = item.industries[0];
+                    const industryName = primaryIndustry?.name || firstIndustry?.name;
+                    return typeof industryName === 'string' ? industryName : 'Unknown Industry';
+                  })() : 'N/A')}
+                </div>
+                {/* Use new direct fields if available */}
+                <div className="text-sm text-gray-600 mt-1">
+                  {item?.speed_category || item?.speed_analysis?.speed_category || 'N/A'}
+                </div>
+                <div className={`text-xs mt-1 ${getDirectionColor(item?.direction || item?.direction_analysis?.direction)}`}>
+                  {item?.direction || item?.direction_analysis?.direction || 'N/A'}
+                </div>
+                {/* Add description if available */}
+                {item?.description && (
+                  <div className="text-xs text-gray-500 mt-1">
+                    {item.description}
+                  </div>
                 )}
-                <div className="text-sm text-gray-600 mt-1">{item?.speed_category || 'N/A'}</div>
-                <div className={`text-xs mt-1 ${getDirectionColor(item?.direction)}`}>
-                  {item?.direction || 'N/A'}
-                </div>
+                {/* Add money flow if available */}
+                {item?.money_flow && (
+                  <div className="text-xs text-blue-600 mt-1">
+                    {item.money_flow}
+                  </div>
+                )}
+                {/* Add performance summary if available */}
+                {item?.performance_summary && (
+                  <div className="text-xs text-gray-500 mt-1">
+                    RS Trend: {item.performance_summary.rs_trend || 'N/A'}
+                  </div>
+                )}
               </div>
-              <div className="text-right">
+              <div className="text-right ml-4">
                 <div className="text-sm font-medium text-purple-600">
-                  {(item?.weighted_speed || 0).toFixed(3)}
+                  {(item?.weighted_speed || item?.speed_analysis?.weighted_speed || 0).toFixed(3)}
                 </div>
-                <div className={`text-xs mt-1 ${getRiskColor(item?.risk_level)}`}>
-                  {item?.risk_level || 'Unknown'} Risk
+                <div className={`text-xs mt-1 ${getRiskColor(item?.risk_level || item?.risk_assessment?.risk_level)}`}>
+                  {item?.risk_level || item?.risk_assessment?.risk_level || 'Unknown'} Risk
                 </div>
-                <div className="text-xs text-gray-500 mt-1">{item?.position_size || 'N/A'}</div>
+                <div className="text-xs text-gray-500 mt-1">
+                  {item?.position_size || item?.risk_assessment?.suggested_position_size || 'N/A'}
+                </div>
+                {/* Add strength score if available */}
+                {item?.strength_score && (
+                  <div className="text-xs text-green-600 mt-1">
+                    Score: {item.strength_score.toFixed(2)}
+                  </div>
+                )}
+                {/* Add acceleration if available */}
+                {item?.acceleration && (
+                  <div className="text-xs text-green-600 mt-1">
+                    Acc: {item.acceleration.toFixed(2)}
+                  </div>
+                )}
+                {/* Add RRG position if available */}
+                {item?.rrg_position && (
+                  <div className="text-xs text-blue-600 mt-1">
+                    {item.rrg_position}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -133,12 +184,6 @@ export default function RRGAnalysis() {
     </div>
   );
 
-  // Add state for trail length and filter for industries and tickers
-  const [industryTrailLength, setIndustryTrailLength] = useState(10);
-  const [industryFilter, setIndustryFilter] = useState('');
-  const [tickerTrailLength, setTickerTrailLength] = useState(10);
-  const [tickerFilter, setTickerFilter] = useState('');
-
   return (
     <div className="w-full space-y-6">
       {/* Header */}
@@ -150,24 +195,43 @@ export default function RRGAnalysis() {
           Phân tích sức mạnh tương đối và động lượng của các ngành và cổ phiếu so với VN-Index.
         </p>
         
+        {/* Timeframe Selector */}
+        <div className="bg-gray-50 rounded-lg border p-4 flex items-center space-x-4 mb-4">
+          <span className="text-sm font-medium text-gray-700">Khung thời gian:</span>
+          <button
+            className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1D' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+            onClick={() => setTimeframe('1D')}
+          >
+            Hàng ngày (1D)
+          </button>
+          <button
+            className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1W' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+            onClick={() => setTimeframe('1W')}
+          >
+            Hàng tuần (1W)
+          </button>
+        </div>
+        
         {/* Data Info */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
           <div className="bg-gray-50 p-3 rounded">
             <div className="font-medium text-gray-700">Ngày phân tích</div>
-            <div className="text-gray-900">{new Date(rrgData.rrgDate).toLocaleDateString()}</div>
+            <div className="text-gray-900">
+              {analyzeRsData?.analysis_date ? new Date(analyzeRsData.analysis_date).toLocaleDateString() : new Date(rrgData.rrgDate).toLocaleDateString()}
+            </div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
-            <div className="font-medium text-gray-700">Độ dài vệt</div>
-            <div className="text-gray-900">{rrgData.tailLength} days</div>
+            <div className="font-medium text-gray-700">Khung thời gian</div>
+            <div className="text-gray-900">{analyzeRsData?.timeframe || timeframe}</div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
             <div className="font-medium text-gray-700">Tổng số chuỗi</div>
-            <div className="text-gray-900">{rrgData.industries.length + rrgData.groups.length + rrgData.tickers.length}</div>
+            <div className="text-gray-900">{industries.length + groups.length + symbols.length}</div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
             <div className="font-medium text-gray-700">Chi tiết</div>
             <div className="text-gray-900">
-              {rrgData.industries.length} ngành, {rrgData.groups.length} nhóm, {rrgData.tickers.length} cổ phiếu
+              {industries.length} ngành, {groups.length} nhóm, {symbols.length} cổ phiếu
             </div>
           </div>
         </div>
@@ -195,7 +259,7 @@ export default function RRGAnalysis() {
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
-              Ngành nghề ({rrgData.industries.length})
+              Ngành nghề ({industries.length})
             </button>
             <button
               onClick={() => handleTabChange('groups')}
@@ -205,7 +269,7 @@ export default function RRGAnalysis() {
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
-              Nhóm vốn hóa ({rrgData.groups.length})
+              Nhóm vốn hóa ({groups.length})
             </button>
             <button
               onClick={() => handleTabChange('tickers')}
@@ -215,7 +279,7 @@ export default function RRGAnalysis() {
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
-              Cổ phiếu ({rrgData.tickers.length})
+              Cổ phiếu ({symbols.length})
             </button>
           </nav>
         </div>
@@ -230,12 +294,14 @@ export default function RRGAnalysis() {
               {overviewType === 'industry' ? (
                 <>
                   <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />
-                  <IndustryRankingByScore 
-                    industryAnalysis={industryAnalysis} 
+                  <UnifiedRankingByScore 
+                    analysisData={industryAnalysis} 
+                    type="industry"
                     getQuadrantColor={getQuadrantColor} 
                   />
-                  <IndustryRankingBySpeed 
-                    industryAnalysis={industryAnalysis} 
+                  <UnifiedRankingBySpeed 
+                    analysisData={industryAnalysis} 
+                    type="industry"
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                   />
@@ -243,12 +309,14 @@ export default function RRGAnalysis() {
               ) : overviewType === 'group' ? (
                 <>
                   <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />
-                  <GroupRankingByScore 
-                    groupAnalysis={groupAnalysis} 
+                  <UnifiedRankingByScore 
+                    analysisData={groupAnalysis} 
+                    type="group"
                     getQuadrantColor={getQuadrantColor} 
                   />
-                  <GroupRankingBySpeed 
-                    groupAnalysis={groupAnalysis} 
+                  <UnifiedRankingBySpeed 
+                    analysisData={groupAnalysis} 
+                    type="group"
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                     investmentStrategies={investmentStrategies}
@@ -257,12 +325,14 @@ export default function RRGAnalysis() {
               ) : (
                 <>
                   <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />
-                  <StockRankingByScore 
-                    individualStockAnalysis={individualStockAnalysis} 
+                  <UnifiedRankingByScore 
+                    analysisData={tickerAnalysis} 
+                    type="ticker"
                     getQuadrantColor={getQuadrantColor} 
                   />
-                  <StockRankingBySpeed 
-                    individualStockAnalysis={individualStockAnalysis} 
+                  <UnifiedRankingBySpeed 
+                    analysisData={tickerAnalysis} 
+                    type="ticker"
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                   />
@@ -271,6 +341,9 @@ export default function RRGAnalysis() {
 
               {/* Investment Strategy */}
               <InvestmentStrategy investmentStrategies={investmentStrategies} />
+              
+              {/* Detailed Analysis */}
+              <DetailedAnalysis detailedAnalysis={detailedAnalysis} />
             </div>
           )}
 
@@ -284,7 +357,7 @@ export default function RRGAnalysis() {
               </div>              
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type="industries" />
+                  <RRGChart type="industries" timeframe={timeframe} />
                 </div>
               </div>
               <div className="w-full mb-6">
@@ -326,7 +399,7 @@ export default function RRGAnalysis() {
               </div>              
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type="groups" />
+                  <RRGChart type="groups" timeframe={timeframe} />
                 </div>
               </div>
               <div className="w-full mb-6">
@@ -368,11 +441,10 @@ export default function RRGAnalysis() {
               </div>
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type="tickers" />
+                  <RRGChart type="tickers" timeframe={timeframe} />
                 </div>
               </div>
               <div className="w-full mb-6">
-                {/* Interpretation Guide */}
                 <div className="bg-white rounded-lg shadow-sm border p-6 w-full">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Hướng dẫn đọc RRG</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

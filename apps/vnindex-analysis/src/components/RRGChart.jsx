@@ -22,6 +22,8 @@ import {
 } from '../utils/rrgDataLoader';
 import { MultiSelect } from "@embed-tools/components/components/ui/multi-select";
 
+
+
 // Custom Tooltip Component - Compact Design
 const CustomTooltip = ({ data, x, y }) => {
   if (!data) return null;
@@ -35,7 +37,9 @@ const CustomTooltip = ({ data, x, y }) => {
         transform: 'translateY(-100%)'
       }}
     >
-      <div className="font-semibold text-sm mb-1">{data.name}</div>
+      <div className="font-semibold text-sm mb-1">
+        {typeof data.name === 'string' ? data.name : String(data.name || 'Unknown')}
+      </div>
       <div className="space-y-0.5">
         <div className="flex justify-between gap-4">
           <span className="text-gray-400">Tỷ số RS:</span>
@@ -160,7 +164,8 @@ const ZoomControls = ({ onZoomIn, onZoomOut, onReset, zoomLevel }) => {
 };
 
 // RRG Chart Component
-export default function RRGChart({ type = 'industries' }) {
+export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
+  
   const [selectedIndustries, setSelectedIndustries] = useState([]);
   const [selectedGroups, setSelectedGroups] = useState([]);
   const [selectedTickerIndustries, setSelectedTickerIndustries] = useState([]);
@@ -172,6 +177,7 @@ export default function RRGChart({ type = 'industries' }) {
   const containerRef = useRef(null);
   const chartRef = useRef(null);
   const [zoom, setZoom] = useState(1);
+  const [error, setError] = useState(null);
 
   const handleResetZoom = () => setZoom(1);
 
@@ -191,15 +197,20 @@ export default function RRGChart({ type = 'industries' }) {
 
   const rrgData = useMemo(() => {
     try {
-      return loadRRGData();
+      return loadRRGData(timeframe);
     } catch (error) {
       console.error('Error loading RRG data in component:', error);
       return null;
     }
-  }, []);
+  }, [timeframe]);
   
-  const availableIndustries = useMemo(() => getAvailableIndustries(), []);
-  const availableGroups = useMemo(() => getAvailableGroups(), []);
+  const availableIndustries = useMemo(() => {
+    return getAvailableIndustries(timeframe);
+  }, [timeframe]);
+  
+  const availableGroups = useMemo(() => {
+    return getAvailableGroups(timeframe);
+  }, [timeframe]);
 
   // Ensure a default industry is always selected for stock RRG when special filter is 'all'
   useEffect(() => {
@@ -215,35 +226,35 @@ export default function RRGChart({ type = 'industries' }) {
 
   const filteredData = useMemo(() => {
     if (type === 'industries') {
-      const selected = selectedIndustries.length > 0 ? selectedIndustries : rrgData.industries.map(i => i.id);
-      return getIndustryData(selected);
+      const selected = selectedIndustries.length > 0 ? selectedIndustries : rrgData.industries.map(i => i.custom_id);
+      return getIndustryData(selected, timeframe);
     } else if (type === 'groups') {
-      const selected = selectedGroups.length > 0 ? selectedGroups : rrgData.groups.map(g => g.id);
-      return getGroupData(selected);
+      const selected = selectedGroups.length > 0 ? selectedGroups : rrgData.groups.map(g => g.custom_id);
+      return getGroupData(selected, timeframe);
     } else {
       // Ticker filtering logic with special filter
       if (specialTickerFilter && specialTickerFilter !== 'all') {
-        const allTickers = rrgData.tickers;
+        const allTickers = rrgData.symbols;
         if (specialTickerFilter === 'top10rs') {
           // Top 10 by RS Score (latest x value)
           return allTickers
-            .map(ticker => ({ ...ticker, latestRS: ticker.tail[ticker.tail.length - 1]?.x || 0 }))
+            .map(ticker => ({ ...ticker, latestRS: ticker.tail?.[ticker.tail.length - 1]?.x || 0 }))
             .sort((a, b) => b.latestRS - a.latestRS)
             .slice(0, 10);
         } else if (specialTickerFilter === 'bottom10rs') {
           return allTickers
-            .map(ticker => ({ ...ticker, latestRS: ticker.tail[ticker.tail.length - 1]?.x || 0 }))
+            .map(ticker => ({ ...ticker, latestRS: ticker.tail?.[ticker.tail.length - 1]?.x || 0 }))
             .sort((a, b) => a.latestRS - b.latestRS)
             .slice(0, 10);
         } else if (specialTickerFilter === 'top10momentum') {
           // Top 10 by RS Momentum (latest y value)
           return allTickers
-            .map(ticker => ({ ...ticker, latestMomentum: ticker.tail[ticker.tail.length - 1]?.y || 0 }))
+            .map(ticker => ({ ...ticker, latestMomentum: ticker.tail?.[ticker.tail.length - 1]?.y || 0 }))
             .sort((a, b) => b.latestMomentum - a.latestMomentum)
             .slice(0, 10);
         } else if (specialTickerFilter === 'bottom10momentum') {
           return allTickers
-            .map(ticker => ({ ...ticker, latestMomentum: ticker.tail[ticker.tail.length - 1]?.y || 0 }))
+            .map(ticker => ({ ...ticker, latestMomentum: ticker.tail?.[ticker.tail.length - 1]?.y || 0 }))
             .sort((a, b) => a.latestMomentum - b.latestMomentum)
             .slice(0, 10);
         }
@@ -251,23 +262,30 @@ export default function RRGChart({ type = 'industries' }) {
       } else {
         // Only show by industry, never all
         const selected = selectedTickerIndustries.length > 0 ? selectedTickerIndustries : [availableIndustries[0]?.id].filter(Boolean);
-        const filtered = getTickersByIndustry(selected);
-        if (selected.length > 0) {
-          console.log(`Filtering tickers by industries: ${selected.join(', ')}`);
-          console.log(`Found ${filtered.length} tickers out of ${rrgData.tickers.length} total`);
-        }
+        const filtered = getTickersByIndustry(selected, timeframe);
+        
+
+        
         return filtered;
       }
     }
-  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, rrgData, availableIndustries]);
+  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, rrgData, availableIndustries, timeframe]);
 
   // Limit the number of series to prevent chart freeze
   const MAX_SERIES = 50;
   const limitedData = filteredData.slice(0, MAX_SERIES);
 
   const { domainX, domainY } = useMemo(() => {
-    const allX = limitedData.flatMap(series => series.tail.map(point => point.x));
-    const allY = limitedData.flatMap(series => series.tail.map(point => point.y));
+    const allX = limitedData.flatMap(series => series.tail?.map(point => point.x) || []);
+    const allY = limitedData.flatMap(series => series.tail?.map(point => point.y) || []);
+    
+    // Handle empty data case
+    if (allX.length === 0 || allY.length === 0) {
+      return {
+        domainX: [90, 110],
+        domainY: [90, 110]
+      };
+    }
     
     const xRange = Math.max(...allX.map(x => Math.abs(x - 100)));
     const yRange = Math.max(...allY.map(y => Math.abs(y - 100)));
@@ -283,25 +301,47 @@ export default function RRGChart({ type = 'industries' }) {
 
   const latestPoints = useMemo(() => {
     return limitedData.map((series, index) => {
-      const latest = series.tail[series.tail.length - 1];
-      const tickerIndustry = type === 'tickers' ? getTickerIndustry(series.id) : null;
-      return {
+      const latest = series.tail?.[series.tail.length - 1];
+      const tickerIndustry = type === 'tickers' ? getTickerIndustry(series.symbol || series.custom_id, timeframe) : null;
+      
+
+      
+      const result = {
         ...latest,
-        name: series.name,
-        id: series.id,
+        name: typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown'),
+        id: series.symbol || series.custom_id,
         type: type,
-        industry: tickerIndustry?.name,
-        color: getSeriesColor(series.id, index, limitedData.length),
+        industry: tickerIndustry?.name || null,
+        color: getSeriesColor(series.symbol || series.custom_id, index, limitedData.length),
         seriesIndex: index
       };
+      
+
+      
+      return result;
     });
-  }, [limitedData, type]);
+  }, [limitedData, type, timeframe]);
 
   if (!rrgData) {
     return (
       <div className="w-full p-8 text-center">
         <div className="text-red-600 text-lg font-medium">Error loading RRG data</div>
         <div className="text-gray-600 mt-2">Please check the console for more details</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="w-full p-8 text-center">
+        <div className="text-red-600 text-lg font-medium">Error in RRG Chart</div>
+        <div className="text-gray-600 mt-2">{error}</div>
+        <button 
+          onClick={() => setError(null)} 
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Try Again
+        </button>
       </div>
     );
   }
@@ -325,6 +365,20 @@ export default function RRGChart({ type = 'industries' }) {
       </div>
     );
   }
+
+  // Don't render if no data
+  if (limitedData.length === 0) {
+    return (
+      <div className="w-full p-8 text-center">
+        <div className="text-orange-600 text-lg font-medium">No data available</div>
+        <div className="text-gray-600 mt-2">
+          No {type} data found for the current selection. Try changing filters or timeframe.
+        </div>
+      </div>
+    );
+  }
+
+
 
   return (
     <div className="w-full space-y-4">
@@ -505,16 +559,20 @@ export default function RRGChart({ type = 'industries' }) {
 
               {/* Trails with dots */}
               {trailLength > 0 && limitedData.map((series, index) => {
-                const color = getSeriesColor(series.id, index, limitedData.length);
+                const color = getSeriesColor(series.symbol || series.custom_id, index, limitedData.length);
                 return (
                   <Line
-                    key={`trail-${series.id}`}
-                    data={series.tail.slice(-trailLength).map(point => ({
-                      ...point,
-                      name: series.name,
-                      date: point.date,
-                      industry: type === 'tickers' ? getTickerIndustry(series.id)?.name : null
-                    }))}
+                    key={`trail-${series.symbol || series.custom_id}`}
+                    data={series.tail?.slice(-trailLength).map(point => {
+                      const tickerIndustry = type === 'tickers' ? getTickerIndustry(series.symbol, timeframe) : null;
+                      
+                      return {
+                        ...point,
+                        name: typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown'),
+                        date: point.date,
+                        industry: type === 'tickers' ? tickerIndustry?.name || null : null
+                      };
+                    }) || []}
                     type="monotone"
                     dataKey="y"
                     stroke={color}
@@ -590,7 +648,7 @@ export default function RRGChart({ type = 'industries' }) {
                         textAnchor="start"
                         style={{ pointerEvents: 'none', userSelect: 'none' }}
                       >
-                        {name}
+                        {String(name)}
                       </text>
                     </g>
                   );
@@ -624,12 +682,14 @@ export default function RRGChart({ type = 'industries' }) {
             <p className="text-sm font-medium text-gray-700 mb-2">Series:</p>
             <div className="flex flex-wrap gap-2">
               {limitedData.map((series, index) => (
-                <div key={series.id} className="flex items-center gap-1 text-xs">
+                <div key={series.symbol || series.custom_id} className="flex items-center gap-1 text-xs">
                   <div 
                     className="w-3 h-3 rounded-full" 
-                    style={{ backgroundColor: getSeriesColor(series.id, index, limitedData.length) }}
+                    style={{ backgroundColor: getSeriesColor(series.symbol || series.custom_id, index, limitedData.length) }}
                   />
-                  <span className="text-gray-600">{series.name}</span>
+                  <span className="text-gray-600">
+                    {typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown')}
+                  </span>
                 </div>
               ))}
             </div>
