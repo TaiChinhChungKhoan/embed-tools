@@ -1,13 +1,50 @@
 import React from 'react';
 
 const InvestmentStrategy = ({ investmentStrategies }) => {
-  if (!investmentStrategies || !investmentStrategies.title) {
+  if (!investmentStrategies) {
     return (
       <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-        <h3 className="text-lg font-semibold text-orange-900 mb-3">Chiến lược đầu tư đề xuất</h3>
+        <h3 className="text-lg font-semibold text-orange-900 mb-3">Chiến lược đầu tư</h3>
         <p className="text-gray-500">Không có dữ liệu để hiển thị</p>
+      </div>
+    );
+  }
+
+  // Check if any strategy sections have data
+  const hasMacroData = investmentStrategies.macro_strategy && (
+    (investmentStrategies.macro_strategy.overall_positioning && investmentStrategies.macro_strategy.overall_positioning.length > 0) ||
+    (investmentStrategies.macro_strategy.market_phase_analysis && investmentStrategies.macro_strategy.market_phase_analysis.length > 0) ||
+    (investmentStrategies.macro_strategy.risk_management && investmentStrategies.macro_strategy.risk_management.length > 0)
+  );
+
+  const hasSectorData = investmentStrategies.sector_strategy && (
+    (investmentStrategies.sector_strategy.sector_rotation_signals && investmentStrategies.sector_strategy.sector_rotation_signals.length > 0) ||
+    (investmentStrategies.sector_strategy.sector_allocation && investmentStrategies.sector_strategy.sector_allocation.length > 0) ||
+    (investmentStrategies.sector_strategy.sector_risk_warnings && investmentStrategies.sector_strategy.sector_risk_warnings.length > 0)
+  );
+
+  const hasGroupData = investmentStrategies.group_strategy && (
+    (investmentStrategies.group_strategy.group_rotation_signals && investmentStrategies.group_strategy.group_rotation_signals.length > 0) ||
+    (investmentStrategies.group_strategy.group_allocation && investmentStrategies.group_strategy.group_allocation.length > 0) ||
+    (investmentStrategies.group_strategy.group_risk_warnings && investmentStrategies.group_strategy.group_risk_warnings.length > 0)
+  );
+
+  const hasStockData = investmentStrategies.stock_strategy && (
+    (investmentStrategies.stock_strategy.momentum_strategy && investmentStrategies.stock_strategy.momentum_strategy.length > 0) ||
+    (investmentStrategies.stock_strategy.accumulation_strategy && investmentStrategies.stock_strategy.accumulation_strategy.length > 0) ||
+    (investmentStrategies.stock_strategy.risk_avoidance && investmentStrategies.stock_strategy.risk_avoidance.length > 0) ||
+    (investmentStrategies.stock_strategy.position_sizing && investmentStrategies.stock_strategy.position_sizing.length > 0)
+  );
+
+  const hasAnyData = hasMacroData || hasSectorData || hasGroupData || hasStockData;
+
+  if (!hasAnyData) {
+    return (
+      <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+        <h3 className="text-lg font-semibold text-orange-900 mb-3">{investmentStrategies.title || 'Chiến lược đầu tư đề xuất'}</h3>
+        <p className="text-gray-500">Chưa có dữ liệu chiến lược đầu tư cụ thể để hiển thị</p>
         <p className="text-xs text-gray-400 mt-2">
-          Debug: investmentStrategies keys: {investmentStrategies ? Object.keys(investmentStrategies).join(', ') : 'null'}
+          Debug: investmentStrategies keys: {Object.keys(investmentStrategies).join(', ')}
         </p>
         <div className="text-xs text-gray-400 mt-2">
           <p>Available data:</p>
@@ -38,12 +75,12 @@ const InvestmentStrategy = ({ investmentStrategies }) => {
       
       <div className="space-y-4">
         {/* Macro Strategy */}
-        {investmentStrategies.macro_strategy && (
+        {hasMacroData && (
           <div>
-            <h4 className="font-medium text-orange-800 mb-2">Chiến lược tổng thể thị trường (Macro)</h4>
+            <h4 className="font-medium text-orange-800 mb-2">Chiến lược tổng thể thị trường</h4>
             <div className="bg-white p-3 rounded border">
               <div className="space-y-2">
-                {investmentStrategies.macro_strategy.overall_positioning && (
+                {investmentStrategies.macro_strategy.overall_positioning && investmentStrategies.macro_strategy.overall_positioning.length > 0 && (
                   <div>
                     <div className="text-sm font-medium text-gray-700 mb-1">Tư thế tổng thể:</div>
                     {investmentStrategies.macro_strategy.overall_positioning.map((position, index) => (
@@ -73,9 +110,9 @@ const InvestmentStrategy = ({ investmentStrategies }) => {
         )}
 
         {/* Sector Strategy */}
-        {investmentStrategies.sector_strategy && (
+        {hasSectorData && (
           <div>
-            <h4 className="font-medium text-orange-800 mb-2">Chiến lược ngành (Sector)</h4>
+            <h4 className="font-medium text-orange-800 mb-2">Chiến lược ngành</h4>
             <div className="bg-white p-3 rounded border">
               <div className="space-y-2">
                 {investmentStrategies.sector_strategy.sector_rotation_signals && investmentStrategies.sector_strategy.sector_rotation_signals.length > 0 && (
@@ -108,9 +145,9 @@ const InvestmentStrategy = ({ investmentStrategies }) => {
         )}
 
         {/* Group Strategy */}
-        {investmentStrategies.group_strategy && (
+        {hasGroupData && (
           <div>
-            <h4 className="font-medium text-orange-800 mb-2">Chiến lược nhóm vốn hóa (Group)</h4>
+            <h4 className="font-medium text-orange-800 mb-2">Chiến lược nhóm vốn hóa</h4>
             <div className="bg-white p-3 rounded border">
               <div className="space-y-2">
                 {investmentStrategies.group_strategy.group_rotation_signals && investmentStrategies.group_strategy.group_rotation_signals.length > 0 && (
@@ -143,7 +180,7 @@ const InvestmentStrategy = ({ investmentStrategies }) => {
         )}
 
         {/* Stock Strategy */}
-        {investmentStrategies.stock_strategy && (
+        {hasStockData && (
           <div>
             <h4 className="font-medium text-orange-800 mb-2">Chiến lược cổ phiếu cá nhân (Stock)</h4>
             <div className="bg-white p-3 rounded border">

@@ -16,6 +16,10 @@ export default function RRGAnalysis() {
   const rrgData = loadRRGData(timeframe);
   const analyzeRsData = getAnalyzeRsData(timeframe);
   
+  // Debug logging
+  console.log('RRGAnalysis - analyzeRsData keys:', Object.keys(analyzeRsData));
+  console.log('RRGAnalysis - investment_strategies:', analyzeRsData?.investment_strategies);
+  
   // Safely access insights data with fallbacks for new standardized structure
   const insights = analyzeRsData?.insights || {};
   const marketOverview = insights?.market_overview || {};
@@ -23,8 +27,13 @@ export default function RRGAnalysis() {
   const groupAnalysis = insights?.insights?.groups || {};
   const tickerAnalysis = insights?.insights?.tickers || {};
   const advancedAnalysis = insights?.advanced_analysis || {};
-  const investmentStrategies = analyzeRsData?.investment_strategies || {};
-  const detailedAnalysis = analyzeRsData?.detailed_analysis || {};
+  // investment_strategies is under insights
+  const investmentStrategies = insights?.investment_strategies || {};
+  const detailedAnalysis = insights?.detailed_analysis || {};
+  
+  // Debug logging for investment strategies
+  console.log('RRGAnalysis - investmentStrategies:', investmentStrategies);
+  console.log('RRGAnalysis - investmentStrategies keys:', Object.keys(investmentStrategies));
   
   // Access the main data arrays
   const industries = analyzeRsData?.industries || [];
@@ -293,8 +302,7 @@ export default function RRGAnalysis() {
               {/* Overview Panels */}
               {overviewType === 'industry' ? (
                 <>
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />
-                  <UnifiedRankingByScore 
+                <UnifiedRankingByScore 
                     analysisData={industryAnalysis} 
                     type="industry"
                     getQuadrantColor={getQuadrantColor} 
@@ -305,11 +313,11 @@ export default function RRGAnalysis() {
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                   />
+                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />                  
                 </>
               ) : overviewType === 'group' ? (
                 <>
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />
-                  <UnifiedRankingByScore 
+                <UnifiedRankingByScore 
                     analysisData={groupAnalysis} 
                     type="group"
                     getQuadrantColor={getQuadrantColor} 
@@ -321,11 +329,11 @@ export default function RRGAnalysis() {
                     rrgData={rrgData}
                     investmentStrategies={investmentStrategies}
                   />
+                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />                  
                 </>
               ) : (
                 <>
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />
-                  <UnifiedRankingByScore 
+                <UnifiedRankingByScore 
                     analysisData={tickerAnalysis} 
                     type="ticker"
                     getQuadrantColor={getQuadrantColor} 
@@ -336,9 +344,9 @@ export default function RRGAnalysis() {
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                   />
+                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />                  
                 </>
               )}
-
               {/* Investment Strategy */}
               <InvestmentStrategy investmentStrategies={investmentStrategies} />
               

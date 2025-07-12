@@ -622,127 +622,124 @@ analyze_rs Output JSON structure:
         "improving_quadrant": [...],
         "weakening_quadrant": [...]
       }
-    }
-  },
-  
-  "detailed_analysis": {
-    "title": "Phân tích chi tiết (Detailed Analysis)",
-    "sector_rotation": {
-      "rotation_theme": "Growth to Value",
-      "rotation_strength": "Moderate",
-      "top_rotating_sectors": ["Banking", "Real Estate", "Technology"]
-    },
-    "market_cap_flow": {
-      "title": "Phân tích nhóm vốn hóa thị trường",
-      "flow_theme": "Dòng tiền tập trung vào nhóm vốn hóa lớn",
-      "outperforming_count": 3,
-      "underperforming_count": 2,
-      "groups_summary": {
-        "strongest_group": {
-          "name": "VN30 - Large Cap",
-          "strength_score": 4.56,
-          "rrg_quadrant": "Leading (Dẫn dắt)",
-          "money_flow": "Inflow"
-        },
-        "weakest_group": {
-          "name": "VNSmallCap - Small Cap",
-          "strength_score": -2.34,
-          "rrg_quadrant": "Lagging (Tụt hậu)",
-          "money_flow": "Outflow"
-        },
-        "outperforming_groups": [...],
-        "underperforming_groups": [...]
+    },  
+    "detailed_analysis": {
+      "title": "Phân tích chi tiết (Detailed Analysis)",
+      "sector_rotation": {
+        "rotation_theme": "Growth to Value",
+        "rotation_strength": "Moderate",
+        "top_rotating_sectors": ["Banking", "Real Estate", "Technology"]
       },
-      "detailed_analysis": {...}
+      "market_cap_flow": {
+        "title": "Phân tích nhóm vốn hóa thị trường",
+        "flow_theme": "Dòng tiền tập trung vào nhóm vốn hóa lớn",
+        "outperforming_count": 3,
+        "underperforming_count": 2,
+        "groups_summary": {
+          "strongest_group": {
+            "name": "VN30 - Large Cap",
+            "strength_score": 4.56,
+            "rrg_quadrant": "Leading (Dẫn dắt)",
+            "money_flow": "Inflow"
+          },
+          "weakest_group": {
+            "name": "VNSmallCap - Small Cap",
+            "strength_score": -2.34,
+            "rrg_quadrant": "Lagging (Tụt hậu)",
+            "money_flow": "Outflow"
+          },
+          "outperforming_groups": [...],
+          "underperforming_groups": [...]
+        },
+        "detailed_analysis": {...}
+      },
+      "momentum_cycles": {
+        "current_cycle": "Acceleration",
+        "cycle_strength": "Strong",
+        "cycle_duration": "Medium-term"
+      },
+      "institutional_flow": {
+        "flow_direction": "Inflow",
+        "flow_strength": "Moderate",
+        "preferred_segments": ["Large Cap", "Quality Growth"]
+      },
+      "speed_distribution": {
+        "fast_movers": 25,
+        "moderate_movers": 45,
+        "slow_movers": 30
+      },
+      "risk_distribution": {
+        "low_risk": 60,
+        "moderate_risk": 30,
+        "high_risk": 10
+      },
+      "systemic_risks": {
+        "overall_risk": "Low",
+        "risk_factors": [],
+        "risk_score": 0.15
+      },
+      "breadth_detail": {
+        "advance_decline_ratio": 1.8,
+        "new_highs": 45,
+        "new_lows": 8
+      },
+      "volatility_regime": {
+        "regime": "Low Volatility",
+        "volatility_score": 0.25,
+        "stability": "High"
+      }
     },
-    "momentum_cycles": {
-      "current_cycle": "Acceleration",
-      "cycle_strength": "Strong",
-      "cycle_duration": "Medium-term"
-    },
-    "institutional_flow": {
-      "flow_direction": "Inflow",
-      "flow_strength": "Moderate",
-      "preferred_segments": ["Large Cap", "Quality Growth"]
-    },
-    "speed_distribution": {
-      "fast_movers": 25,
-      "moderate_movers": 45,
-      "slow_movers": 30
-    },
-    "risk_distribution": {
-      "low_risk": 60,
-      "moderate_risk": 30,
-      "high_risk": 10
-    },
-    "systemic_risks": {
-      "overall_risk": "Low",
-      "risk_factors": [],
-      "risk_score": 0.15
-    },
-    "breadth_detail": {
-      "advance_decline_ratio": 1.8,
-      "new_highs": 45,
-      "new_lows": 8
-    },
-    "volatility_regime": {
-      "regime": "Low Volatility",
-      "volatility_score": 0.25,
-      "stability": "High"
+    "investment_strategies": {
+      "title": "Chiến lược đầu tư đề xuất",
+      "macro_strategy": {
+        "market_phase_analysis": [
+          "Thị trường bull mạnh mẽ - ưu tiên vị thế long"
+        ],
+        "overall_positioning": [
+          "Tín hiệu rõ ràng (85% confidence) - có thể tăng tỷ trọng"
+        ],
+        "risk_management": [
+          "Rủi ro thấp - có thể nới lỏng quản lý rủi ro"
+        ]
+      },
+      "sector_strategy": {
+        "sector_rotation_signals": [
+          "Ưu tiên: Tập trung vào các ngành đang dẫn dắt như Ngân hàng, Bất động sản"
+        ],
+        "sector_allocation": [
+          "Tăng tỷ trọng: 5 ngành có tiềm năng tích lũy"
+        ],
+        "sector_risk_warnings": [
+          "Thận trọng: 1 ngành có dấu hiệu 'dao rơi'"
+        ]
+      },
+      "group_strategy": {
+        "group_rotation_signals": [
+          "Ưu tiên: Tập trung vào nhóm VN30 - Large Cap"
+        ],
+        "group_allocation": [
+          "Tăng tỷ trọng: 2 nhóm vốn hóa đang vượt trội"
+        ],
+        "group_risk_warnings": [
+          "Không có cảnh báo rủi ro lớn ở cấp độ nhóm"
+        ]
+      },
+      "stock_strategy": {
+        "momentum_strategy": [
+          "Bứt phá: 8 cổ phiếu có thể bứt phá"
+        ],
+        "accumulation_strategy": [
+          "Cơ hội tích lũy: 12 cổ phiếu có tiềm năng"
+        ],
+        "risk_avoidance": [
+          "Tránh rủi ro: 8 cổ phiếu có dấu hiệu rủi ro cao"
+        ],
+        "position_sizing": [
+          "Duy trì kích thước vị thế chuẩn"
+        ]
+      }
     }
-  },
-  
-  "investment_strategies": {
-    "title": "Chiến lược đầu tư đề xuất",
-    "macro_strategy": {
-      "market_phase_analysis": [
-        "Thị trường bull mạnh mẽ - ưu tiên vị thế long"
-      ],
-      "overall_positioning": [
-        "Tín hiệu rõ ràng (85% confidence) - có thể tăng tỷ trọng"
-      ],
-      "risk_management": [
-        "Rủi ro thấp - có thể nới lỏng quản lý rủi ro"
-      ]
-    },
-    "sector_strategy": {
-      "sector_rotation_signals": [
-        "Ưu tiên: Tập trung vào các ngành đang dẫn dắt như Ngân hàng, Bất động sản"
-      ],
-      "sector_allocation": [
-        "Tăng tỷ trọng: 5 ngành có tiềm năng tích lũy"
-      ],
-      "sector_risk_warnings": [
-        "Thận trọng: 1 ngành có dấu hiệu 'dao rơi'"
-      ]
-    },
-    "group_strategy": {
-      "group_rotation_signals": [
-        "Ưu tiên: Tập trung vào nhóm VN30 - Large Cap"
-      ],
-      "group_allocation": [
-        "Tăng tỷ trọng: 2 nhóm vốn hóa đang vượt trội"
-      ],
-      "group_risk_warnings": [
-        "Không có cảnh báo rủi ro lớn ở cấp độ nhóm"
-      ]
-    },
-    "stock_strategy": {
-      "momentum_strategy": [
-        "Bứt phá: 8 cổ phiếu có thể bứt phá"
-      ],
-      "accumulation_strategy": [
-        "Cơ hội tích lũy: 12 cổ phiếu có tiềm năng"
-      ],
-      "risk_avoidance": [
-        "Tránh rủi ro: 8 cổ phiếu có dấu hiệu rủi ro cao"
-      ],
-      "position_sizing": [
-        "Duy trì kích thước vị thế chuẩn"
-      ]
-    }
-  },
-  
+  },  
   "industries": [
     {
       "custom_id": "VN30",
@@ -815,7 +812,6 @@ analyze_rs Output JSON structure:
       }
     }
   ],
-  
   "groups": [
     {
       "custom_id": "VN30",
@@ -888,7 +884,6 @@ analyze_rs Output JSON structure:
       }
     }
   ],
-  
   "symbols": [
     {
       "symbol": "VNM",
