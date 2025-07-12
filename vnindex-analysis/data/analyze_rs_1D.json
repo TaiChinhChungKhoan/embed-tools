@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2025-07-12T21:37:03.561379",
+  "analysis_date": "2025-07-12T23:46:37.977168",
   "timeframe": "1D",
   "benchmark": "VNINDEX",
   "lookback_period": 21,
@@ -10,16 +10,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.23478487542531007,
-        "current_crs": -0.05076538722326507,
-        "current_ma13": 0.24360157504272498,
-        "current_ma49": 0.2460514969131296,
-        "rs_5d_change": -0.04928302385658556,
-        "rs_21d_change": -0.05076538722326518,
-        "rs_49d_change": -0.07926699101497181,
-        "crs_21d_avg": -0.0014623106483181013,
-        "rs_volatility": 0.013396048865158453,
-        "crs_volatility": 0.05481540587568127,
+        "current_rs": 0.23557375699703656,
+        "current_crs": -0.05076683589830533,
+        "current_ma13": 0.24441608396814046,
+        "current_ma49": 0.24687486586581242,
+        "rs_5d_change": -0.049252942611360706,
+        "rs_21d_change": -0.05076683589830533,
+        "rs_49d_change": -0.07925981856407727,
+        "crs_21d_avg": -0.0014684860267008151,
+        "rs_volatility": 0.01344095137925768,
+        "crs_volatility": 0.054813529043551315,
         "outperforming_days": 163,
         "underperforming_days": 131,
         "total_days": 294,
@@ -30,29 +30,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -5.076538722326507
+        "strength_score": -5.076683589830533
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.009856604771317112,
-        "raw_speed_21d": 0.002417399391584056,
-        "raw_speed_49d": 0.001617693694183098,
-        "weighted_speed": 0.0059770609419703925,
-        "consistency_score": 0.4461808852844681,
-        "short_term_momentum": 0.007439205379733057,
-        "long_term_momentum": 0.0007997056974009581,
-        "momentum_ratio": 4.077358836786315,
+        "raw_speed_5d": 0.00985058852227214,
+        "raw_speed_21d": 0.0024174683761097777,
+        "raw_speed_49d": 0.00161754731763423,
+        "weighted_speed": 0.00597404423749585,
+        "consistency_score": 0.4444658766279821,
+        "short_term_momentum": 0.007433120146162363,
+        "long_term_momentum": 0.0007999210584755479,
+        "momentum_ratio": 4.074753829096139,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 3.7895791314482272,
+          "strength": 3.7770269727074255,
           "sustainability": 0.5544217687074829
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 3.7895791314482272
+        "signal_to_noise_ratio": 3.7770269727074255
       },
       "risk_assessment": {
         "risk_signals": {
@@ -65,7 +65,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.026792097730316905,
+        "stop_loss_distance": 0.02688190275851536,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -73,6 +73,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.0700724480452952
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.48,
+        "trend_alignment": "bearish",
+        "symbol_count": 5,
+        "bullish_count": 0,
+        "bearish_count": 3,
+        "neutral_count": 2,
+        "consensus_strength": -0.6,
+        "trend_confidence": 0.024714058916738068,
+        "direction_consistency": 0.6,
+        "avg_strength": 5.148762274320431
       }
     },
     {
@@ -81,16 +93,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.32220667325211283,
-        "current_crs": -0.005514635484759278,
-        "current_ma13": 0.32166014798419645,
-        "current_ma49": 0.3190231109310693,
-        "rs_5d_change": -0.000690989265467512,
-        "rs_21d_change": -0.005514635484759278,
-        "rs_49d_change": 0.016233143846891895,
-        "crs_21d_avg": 0.010970783854387751,
-        "rs_volatility": 0.010992453375506828,
-        "crs_volatility": 0.01946536634092128,
+        "current_rs": 0.3268782241246844,
+        "current_crs": -0.005503916903032646,
+        "current_ma13": 0.3263215905943068,
+        "current_ma49": 0.3236469820913377,
+        "rs_5d_change": -0.0006826606546165292,
+        "rs_21d_change": -0.005503916903032757,
+        "rs_49d_change": 0.01623421622537391,
+        "crs_21d_avg": 0.01097016350658363,
+        "rs_volatility": 0.01115179822330525,
+        "crs_volatility": 0.019465024405683193,
         "outperforming_days": 177,
         "underperforming_days": 117,
         "total_days": 294,
@@ -101,29 +113,29 @@
       "performance_summary": {
         "rs_trend": "bullish",
         "crs_status": "underperforming",
-        "strength_score": -0.5514635484759278
+        "strength_score": -0.5503916903032646
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.00013819785309350242,
-        "raw_speed_21d": 0.0002626016897504418,
-        "raw_speed_49d": 0.0003312886499365693,
-        "weighted_speed": 0.0002141371634591976,
-        "consistency_score": 0.019480379506210496,
-        "short_term_momentum": -0.0001244038366569394,
-        "long_term_momentum": -6.868696018612748e-05,
-        "momentum_ratio": 0.5262641425682978,
+        "raw_speed_5d": 0.00013653213092330586,
+        "raw_speed_21d": 0.00026209128109679796,
+        "raw_speed_49d": 0.00033131053521171243,
+        "weighted_speed": 0.0002131555568330348,
+        "consistency_score": 0.019114007675244522,
+        "short_term_momentum": -0.0001255591501734921,
+        "long_term_momentum": -6.921925411491447e-05,
+        "momentum_ratio": 0.5209335096991669,
         "speed_category": "Chậm (Ổn định)"
       },
       "direction_analysis": {
         "direction": "Đứng yên",
         "direction_quality": {
           "confirmed": true,
-          "strength": 0.5016746759232914,
+          "strength": 0.493545237532236,
           "sustainability": 0.6020408163265306
         },
-        "trend_strength": "Moderate",
+        "trend_strength": "Weak",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 0.5016746759232914
+        "signal_to_noise_ratio": 0.493545237532236
       },
       "risk_assessment": {
         "risk_signals": {
@@ -136,7 +148,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Long",
-        "stop_loss_distance": 0.021984906751013656,
+        "stop_loss_distance": 0.0223035964466105,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -144,6 +156,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.49267036508263
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.37760416666666663,
+        "trend_alignment": "neutral",
+        "symbol_count": 24,
+        "bullish_count": 2,
+        "bearish_count": 7,
+        "neutral_count": 15,
+        "consensus_strength": -0.20833333333333334,
+        "trend_confidence": 0.014843420969026393,
+        "direction_consistency": 0.625,
+        "avg_strength": 3.9309473462800937
       }
     },
     {
@@ -152,16 +176,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.19453133574799691,
-        "current_crs": -0.0712939813754242,
-        "current_ma13": 0.19970388655960084,
-        "current_ma49": 0.20258649337378243,
-        "rs_5d_change": -0.026627487490893276,
-        "rs_21d_change": -0.07129398137542431,
-        "rs_49d_change": -0.05788485493339757,
-        "crs_21d_avg": -0.007810903484168897,
-        "rs_volatility": 0.010254526611406209,
-        "crs_volatility": 0.039607476345168806,
+        "current_rs": 0.19743304796399958,
+        "current_crs": -0.07128196221905136,
+        "current_ma13": 0.2026812006585083,
+        "current_ma49": 0.20560690718207242,
+        "rs_5d_change": -0.026611280624809885,
+        "rs_21d_change": -0.07128196221905136,
+        "rs_49d_change": -0.05788720849748852,
+        "crs_21d_avg": -0.007803616321865431,
+        "rs_volatility": 0.010407570643741823,
+        "crs_volatility": 0.03960971733911411,
         "outperforming_days": 97,
         "underperforming_days": 197,
         "total_days": 294,
@@ -172,29 +196,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -7.12939813754242
+        "strength_score": -7.128196221905137
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.005325497498178655,
-        "raw_speed_21d": 0.003394951494067824,
-        "raw_speed_49d": 0.001181323570069338,
-        "weighted_speed": 0.003917498911323543,
-        "consistency_score": 0.3820263050432841,
-        "short_term_momentum": 0.0019305460041108306,
-        "long_term_momentum": 0.0022136279239984864,
-        "momentum_ratio": 1.5686520138753601,
+        "raw_speed_5d": 0.005322256124961977,
+        "raw_speed_21d": 0.0033943791532881603,
+        "raw_speed_49d": 0.0011813716019895616,
+        "weighted_speed": 0.003915716128865349,
+        "consistency_score": 0.3762372856166879,
+        "short_term_momentum": 0.0019278769716738172,
+        "long_term_momentum": 0.0022130075512985987,
+        "momentum_ratio": 1.5679615872629515,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 6.9524400371757125,
+          "strength": 6.849049087350075,
           "sustainability": 0.3299319727891156
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 6.9524400371757125
+        "signal_to_noise_ratio": 6.849049087350075
       },
       "risk_assessment": {
         "risk_signals": {
@@ -207,7 +231,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.020509053222812417,
+        "stop_loss_distance": 0.020815141287483647,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -215,6 +239,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.2356542135077504
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.4320987654320988,
+        "trend_alignment": "bearish",
+        "symbol_count": 9,
+        "bullish_count": 0,
+        "bearish_count": 5,
+        "neutral_count": 4,
+        "consensus_strength": -0.5555555555555556,
+        "trend_confidence": 0.03423290474712772,
+        "direction_consistency": 0.5555555555555556,
+        "avg_strength": 7.922472241478129
       }
     },
     {
@@ -223,16 +259,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.3863804741521238,
-        "current_crs": 0.04385849193081137,
-        "current_ma13": 0.3959418292837935,
-        "current_ma49": 0.3776458650828288,
-        "rs_5d_change": -0.04680079288029193,
-        "rs_21d_change": 0.04385849193081115,
-        "rs_49d_change": 0.03274368877945655,
-        "crs_21d_avg": 0.055017058492466415,
-        "rs_volatility": 0.04828632781050981,
-        "crs_volatility": 0.04324182402126264,
+        "current_rs": 0.387059598287784,
+        "current_crs": 0.04386003330633437,
+        "current_ma13": 0.3966394084427509,
+        "current_ma49": 0.37831231355054373,
+        "rs_5d_change": -0.04680388665268498,
+        "rs_21d_change": 0.04386003330633437,
+        "rs_49d_change": 0.03273357185809145,
+        "crs_21d_avg": 0.05501320733262355,
+        "rs_volatility": 0.0483715031539666,
+        "crs_volatility": 0.04324164795515456,
         "outperforming_days": 101,
         "underperforming_days": 193,
         "total_days": 294,
@@ -243,29 +279,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "outperforming",
-        "strength_score": 4.385849193081137
+        "strength_score": 4.386003330633437
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.009360158576058385,
-        "raw_speed_21d": 0.002088499615752912,
-        "raw_speed_49d": 0.0006682385465195214,
-        "weighted_speed": 0.005440276882058971,
-        "consistency_score": 0.11266702457491211,
-        "short_term_momentum": 0.0072716589603054735,
-        "long_term_momentum": 0.0014202610692333906,
-        "momentum_ratio": 4.481762172929112,
+        "raw_speed_5d": 0.009360777330536996,
+        "raw_speed_21d": 0.0020885730145873507,
+        "raw_speed_49d": 0.0006680320787365602,
+        "weighted_speed": 0.005440566985392015,
+        "consistency_score": 0.11247463135629006,
+        "short_term_momentum": 0.007272204315949646,
+        "long_term_momentum": 0.0014205409358507906,
+        "momentum_ratio": 4.481900927167945,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Tăng trưởng",
         "direction_quality": {
           "confirmed": false,
-          "strength": 0.9083004220765176,
+          "strength": 0.9067328994661957,
           "sustainability": 0.3435374149659864
         },
         "trend_strength": "Moderate",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 0.9083004220765176
+        "signal_to_noise_ratio": 0.9067328994661957
       },
       "risk_assessment": {
         "risk_signals": {
@@ -278,7 +314,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.09657265562101962,
+        "stop_loss_distance": 0.0967430063079332,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -286,6 +322,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.0184600254371583
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.3515625,
+        "trend_alignment": "neutral",
+        "symbol_count": 8,
+        "bullish_count": 1,
+        "bearish_count": 2,
+        "neutral_count": 5,
+        "consensus_strength": -0.125,
+        "trend_confidence": 0.021902047830649758,
+        "direction_consistency": 0.625,
+        "avg_strength": 6.22991582738482
       }
     },
     {
@@ -294,16 +342,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.5379486335199211,
-        "current_crs": -0.023489115748030587,
-        "current_ma13": 0.5549502726108062,
-        "current_ma49": 0.5414696632983681,
-        "rs_5d_change": -0.022189088220791575,
-        "rs_21d_change": -0.023489115748030587,
-        "rs_49d_change": 0.029942106557732995,
-        "crs_21d_avg": 0.032056193783928724,
-        "rs_volatility": 0.04085402272528517,
-        "crs_volatility": 0.07391400552124827,
+        "current_rs": 0.5377908572055757,
+        "current_crs": -0.02350755376684066,
+        "current_ma13": 0.5547927960764155,
+        "current_ma49": 0.5413165732537104,
+        "rs_5d_change": -0.02220677308686314,
+        "rs_21d_change": -0.02350755376684055,
+        "rs_49d_change": 0.029926259791777987,
+        "crs_21d_avg": 0.032056642287169534,
+        "rs_volatility": 0.04084289840732646,
+        "crs_volatility": 0.07391464847739178,
         "outperforming_days": 161,
         "underperforming_days": 133,
         "total_days": 294,
@@ -314,29 +362,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "underperforming",
-        "strength_score": -2.3489115748030587
+        "strength_score": -2.350755376684066
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.004437817644158315,
-        "raw_speed_21d": 0.0011185293213347898,
-        "raw_speed_49d": 0.000611063399137408,
-        "weighted_speed": 0.0026766802983070764,
-        "consistency_score": 0.06551815757057478,
-        "short_term_momentum": 0.003319288322823526,
-        "long_term_momentum": 0.0005074659221973817,
-        "momentum_ratio": 3.9675469918504005,
+        "raw_speed_5d": 0.0044413546173726285,
+        "raw_speed_21d": 0.0011194073222305025,
+        "raw_speed_49d": 0.0006107399957505712,
+        "weighted_speed": 0.0026786475045055794,
+        "consistency_score": 0.06558416784703702,
+        "short_term_momentum": 0.003321947295142126,
+        "long_term_momentum": 0.0005086673264799313,
+        "momentum_ratio": 3.9675947523041915,
         "speed_category": "Vừa phải (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": false,
-          "strength": 0.5749523347058996,
+          "strength": 0.5755603711666,
           "sustainability": 0.5476190476190477
         },
         "trend_strength": "Moderate",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 0.5749523347058996
+        "signal_to_noise_ratio": 0.5755603711666
       },
       "risk_assessment": {
         "risk_signals": {
@@ -349,7 +397,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Medium",
-        "stop_loss_distance": 0.08170804545057034,
+        "stop_loss_distance": 0.08168579681465292,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -357,6 +405,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 0.9339584734374512
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.4753086419753087,
+        "trend_alignment": "neutral",
+        "symbol_count": 9,
+        "bullish_count": 0,
+        "bearish_count": 2,
+        "neutral_count": 7,
+        "consensus_strength": -0.2222222222222222,
+        "trend_confidence": 0.024919087406611706,
+        "direction_consistency": 0.7777777777777778,
+        "avg_strength": 5.242717090741683
       }
     },
     {
@@ -365,49 +425,49 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.42039841949292067,
-        "current_crs": -0.07658364462662226,
-        "current_ma13": 0.432615749517419,
-        "current_ma49": 0.4454890466922711,
-        "rs_5d_change": -0.04486707637706,
-        "rs_21d_change": -0.07658364462662215,
-        "rs_49d_change": -0.09786792861336246,
-        "crs_21d_avg": -0.03338558813889577,
-        "rs_volatility": 0.02243734761348312,
-        "crs_volatility": 0.03560757587357139,
-        "outperforming_days": 185,
-        "underperforming_days": 109,
+        "current_rs": 0.42654483591263304,
+        "current_crs": -0.07657450792156173,
+        "current_ma13": 0.4389404722380449,
+        "current_ma49": 0.45200050052156276,
+        "rs_5d_change": -0.044874247552882385,
+        "rs_21d_change": -0.07657450792156184,
+        "rs_49d_change": -0.09786989395985035,
+        "crs_21d_avg": -0.03338352875167586,
+        "rs_volatility": 0.022765261647548468,
+        "crs_volatility": 0.0356068952159433,
+        "outperforming_days": 186,
+        "underperforming_days": 108,
         "total_days": 294,
-        "outperforming_periods": 185,
-        "underperforming_periods": 109,
+        "outperforming_periods": 186,
+        "underperforming_periods": 108,
         "total_periods": 294
       },
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -7.658364462662226
+        "strength_score": -7.6574507921561725
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.008973415275412,
-        "raw_speed_21d": 0.0036468402203153403,
-        "raw_speed_49d": 0.0019973046655788257,
-        "weighted_speed": 0.005980220636916367,
-        "consistency_score": 0.2665297494131042,
-        "short_term_momentum": 0.00532657505509666,
-        "long_term_momentum": 0.0016495355547365147,
-        "momentum_ratio": 2.4606000628774667,
+        "raw_speed_5d": 0.008974849510576477,
+        "raw_speed_21d": 0.0036464051391219923,
+        "raw_speed_49d": 0.0019973447746908235,
+        "weighted_speed": 0.005980815251963001,
+        "consistency_score": 0.26271673677895374,
+        "short_term_momentum": 0.005328444371454485,
+        "long_term_momentum": 0.0016490603644311688,
+        "momentum_ratio": 2.46128698489535,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 3.4132218275479795,
-          "sustainability": 0.6292517006802721
+          "strength": 3.3636559555997,
+          "sustainability": 0.6326530612244898
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 3.4132218275479795
+        "signal_to_noise_ratio": 3.3636559555997
       },
       "risk_assessment": {
         "risk_signals": {
@@ -420,7 +480,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.04487469522696624,
+        "stop_loss_distance": 0.045530523295096936,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -428,6 +488,18 @@
           "volume_quality": "low_volatility",
           "recent_volume_ratio": 1.0439479958238755
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.65625,
+        "trend_alignment": "bearish",
+        "symbol_count": 4,
+        "bullish_count": 0,
+        "bearish_count": 3,
+        "neutral_count": 1,
+        "consensus_strength": -0.75,
+        "trend_confidence": 0.050097273591591614,
+        "direction_consistency": 0.75,
+        "avg_strength": 7.633870261575864
       }
     },
     {
@@ -436,16 +508,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.8924788716935572,
-        "current_crs": -0.03513767429203973,
-        "current_ma13": 0.9235475284860626,
-        "current_ma49": 0.926185662957729,
-        "rs_5d_change": -0.033804456408060735,
-        "rs_21d_change": -0.03513767429203973,
-        "rs_49d_change": -0.029781601623933285,
-        "crs_21d_avg": -0.012670316542872666,
-        "rs_volatility": 0.07995724789530452,
-        "crs_volatility": 0.053717944115444595,
+        "current_rs": 0.8883355284820547,
+        "current_crs": -0.035130724661160406,
+        "current_ma13": 0.9192581820769826,
+        "current_ma49": 0.9218841565115233,
+        "rs_5d_change": -0.033802754125819234,
+        "rs_21d_change": -0.035130724661160406,
+        "rs_49d_change": -0.02977789826035837,
+        "crs_21d_avg": -0.012669862795247991,
+        "rs_volatility": 0.07958604840383393,
+        "crs_volatility": 0.05371835442719894,
         "outperforming_days": 149,
         "underperforming_days": 145,
         "total_days": 294,
@@ -456,29 +528,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -3.5137674292039733
+        "strength_score": -3.5130724661160406
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.006760891281612147,
-        "raw_speed_21d": 0.0016732225853352254,
-        "raw_speed_49d": 0.0006077877882435365,
-        "weighted_speed": 0.004003969974055348,
-        "consistency_score": 0.05007638556167065,
-        "short_term_momentum": 0.005087668696276922,
-        "long_term_momentum": 0.001065434797091689,
-        "momentum_ratio": 4.040640701881048,
+        "raw_speed_5d": 0.006760550825163847,
+        "raw_speed_21d": 0.0016728916505314479,
+        "raw_speed_49d": 0.0006077122093950688,
+        "weighted_speed": 0.004003685349620372,
+        "consistency_score": 0.05030637190710804,
+        "short_term_momentum": 0.005087659174632398,
+        "long_term_momentum": 0.001065179441136379,
+        "momentum_ratio": 4.041236515835404,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": true,
-          "strength": 0.43945577439144434,
+          "strength": 0.44141813000817415,
           "sustainability": 0.5068027210884354
         },
         "trend_strength": "Weak",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 0.43945577439144434
+        "signal_to_noise_ratio": 0.44141813000817415
       },
       "risk_assessment": {
         "risk_signals": {
@@ -491,7 +563,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.15991449579060904,
+        "stop_loss_distance": 0.15917209680766786,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -499,6 +571,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.0116200905117587
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.49704142011834324,
+        "trend_alignment": "bearish",
+        "symbol_count": 13,
+        "bullish_count": 0,
+        "bearish_count": 8,
+        "neutral_count": 5,
+        "consensus_strength": -0.6153846153846154,
+        "trend_confidence": 0.023167992916019033,
+        "direction_consistency": 0.6153846153846154,
+        "avg_strength": 4.6611795271514485
       }
     },
     {
@@ -507,16 +591,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.42316979475359456,
-        "current_crs": -0.05812683923105977,
-        "current_ma13": 0.429735601795005,
-        "current_ma49": 0.44428351185025317,
-        "rs_5d_change": -0.02611122319484771,
-        "rs_21d_change": -0.05812683923105977,
-        "rs_49d_change": -0.09179510897697263,
-        "crs_21d_avg": -0.03411771488803317,
-        "rs_volatility": 0.026295818895114953,
-        "crs_volatility": 0.05204508652003839,
+        "current_rs": 0.4225181099769509,
+        "current_crs": -0.05813537832413973,
+        "current_ma13": 0.42907816800705834,
+        "current_ma49": 0.44360390116750065,
+        "rs_5d_change": -0.026124334438907826,
+        "rs_21d_change": -0.05813537832413984,
+        "rs_49d_change": -0.09179479584517602,
+        "crs_21d_avg": -0.034115166729903015,
+        "rs_volatility": 0.02625571653726687,
+        "crs_volatility": 0.052044641210127474,
         "outperforming_days": 169,
         "underperforming_days": 125,
         "total_days": 294,
@@ -527,29 +611,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -5.812683923105977
+        "strength_score": -5.813537832413973
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.005222244638969542,
-        "raw_speed_21d": 0.0027679447252885606,
-        "raw_speed_49d": 0.0018733695709586252,
-        "weighted_speed": 0.0038161796512630646,
-        "consistency_score": 0.1451249594654003,
-        "short_term_momentum": 0.0024542999136809816,
-        "long_term_momentum": 0.0008945751543299354,
-        "momentum_ratio": 1.886686750374005,
+        "raw_speed_5d": 0.005224866887781565,
+        "raw_speed_21d": 0.002768351348768564,
+        "raw_speed_49d": 0.0018733631805137965,
+        "weighted_speed": 0.003817611484624111,
+        "consistency_score": 0.14540115403841541,
+        "short_term_momentum": 0.002456515539013001,
+        "long_term_momentum": 0.0008949881682547675,
+        "momentum_ratio": 1.8873568523394706,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 2.2104973974344704,
+          "strength": 2.214198886616695,
           "sustainability": 0.5748299319727891
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 2.2104973974344704
+        "signal_to_noise_ratio": 2.214198886616695
       },
       "risk_assessment": {
         "risk_signals": {
@@ -562,7 +646,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.052591637790229906,
+        "stop_loss_distance": 0.05251143307453374,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -570,6 +654,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.3199400909606431
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.7063711911357341,
+        "trend_alignment": "bearish",
+        "symbol_count": 19,
+        "bullish_count": 0,
+        "bearish_count": 15,
+        "neutral_count": 4,
+        "consensus_strength": -0.7894736842105263,
+        "trend_confidence": 0.053466365956527886,
+        "direction_consistency": 0.7894736842105263,
+        "avg_strength": 7.569160043257476
       }
     },
     {
@@ -578,16 +674,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.8215206892766984,
-        "current_crs": -0.05962756172785533,
-        "current_ma13": 0.8404015304577107,
-        "current_ma49": 0.8519194265750281,
-        "rs_5d_change": -0.0412919222498086,
-        "rs_21d_change": -0.05962756172785544,
-        "rs_49d_change": -0.052303148297530244,
-        "crs_21d_avg": -0.009290096224510465,
-        "rs_volatility": 0.09108041084980403,
-        "crs_volatility": 0.10420669770009715,
+        "current_rs": 0.8257806497640215,
+        "current_crs": -0.059624932791083496,
+        "current_ma13": 0.8447593639326576,
+        "current_ma49": 0.8563357607500103,
+        "rs_5d_change": -0.04128958213784262,
+        "rs_21d_change": -0.059624932791083496,
+        "rs_49d_change": -0.052299545829901484,
+        "crs_21d_avg": -0.009288787550602261,
+        "rs_volatility": 0.0915521758625851,
+        "crs_volatility": 0.10420654853572196,
         "outperforming_days": 152,
         "underperforming_days": 142,
         "total_days": 294,
@@ -598,29 +694,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -5.962756172785532
+        "strength_score": -5.962493279108349
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.00825838444996172,
-        "raw_speed_21d": 0.0028394077013264496,
-        "raw_speed_49d": 0.0010674111897455152,
-        "weighted_speed": 0.005194496773327898,
-        "consistency_score": 0.05703198662436726,
-        "short_term_momentum": 0.00541897674863527,
-        "long_term_momentum": 0.0017719965115809344,
-        "momentum_ratio": 2.9084884309159817,
+        "raw_speed_5d": 0.008257916427568523,
+        "raw_speed_21d": 0.002839282513861119,
+        "raw_speed_49d": 0.0010673376699979894,
+        "weighted_speed": 0.005194210501942196,
+        "consistency_score": 0.05673497601781116,
+        "short_term_momentum": 0.005418633913707404,
+        "long_term_momentum": 0.0017719448438631295,
+        "momentum_ratio": 2.9084518314940926,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 0.6546694417769388,
+          "strength": 0.6512672389193384,
           "sustainability": 0.5170068027210885
         },
         "trend_strength": "Moderate",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 0.6546694417769388
+        "signal_to_noise_ratio": 0.6512672389193384
       },
       "risk_assessment": {
         "risk_signals": {
@@ -633,7 +729,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.18216082169960807,
+        "stop_loss_distance": 0.1831043517251702,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -641,6 +737,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.283921686346146
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.4320987654320988,
+        "trend_alignment": "bearish",
+        "symbol_count": 9,
+        "bullish_count": 0,
+        "bearish_count": 5,
+        "neutral_count": 4,
+        "consensus_strength": -0.5555555555555556,
+        "trend_confidence": 0.03342144875727876,
+        "direction_consistency": 0.5555555555555556,
+        "avg_strength": 7.734678140970227
       }
     },
     {
@@ -649,16 +757,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.4806209526945451,
-        "current_crs": -0.05450221676204625,
-        "current_ma13": 0.49799073565107865,
-        "current_ma49": 0.5002949451639659,
-        "rs_5d_change": -0.04911725042971404,
-        "rs_21d_change": -0.05450221676204636,
-        "rs_49d_change": -0.044927307358827884,
-        "crs_21d_avg": 0.0001406886768731765,
-        "rs_volatility": 0.0267756185199678,
-        "crs_volatility": 0.03549842302134915,
+        "current_rs": 0.47702639666337393,
+        "current_crs": -0.054501779047046894,
+        "current_ma13": 0.4942673311375064,
+        "current_ma49": 0.49655424198277964,
+        "rs_5d_change": -0.04912144095975879,
+        "rs_21d_change": -0.054501779047047005,
+        "rs_49d_change": -0.044938270851967665,
+        "crs_21d_avg": 0.00013957322071635918,
+        "rs_volatility": 0.026575195830479778,
+        "crs_volatility": 0.03549766975262451,
         "outperforming_days": 137,
         "underperforming_days": 157,
         "total_days": 294,
@@ -669,29 +777,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -5.450221676204626
+        "strength_score": -5.45017790470469
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.00982345008594281,
-        "raw_speed_21d": 0.002595343655335541,
-        "raw_speed_49d": 0.0009168838236495487,
-        "weighted_speed": 0.005873704904301977,
-        "consistency_score": 0.21936766465064803,
-        "short_term_momentum": 0.007228106430607268,
-        "long_term_momentum": 0.0016784598316859924,
-        "momentum_ratio": 3.785028647650431,
+        "raw_speed_5d": 0.009824288191951757,
+        "raw_speed_21d": 0.002595322811764143,
+        "raw_speed_49d": 0.0009171075684075034,
+        "weighted_speed": 0.0058741624531866215,
+        "consistency_score": 0.22103929132478464,
+        "short_term_momentum": 0.007228965380187614,
+        "long_term_momentum": 0.0016782152433566398,
+        "momentum_ratio": 3.7853819753827853,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 2.0355166294814655,
+          "strength": 2.050851455421356,
           "sustainability": 0.46598639455782315
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 2.0355166294814655
+        "signal_to_noise_ratio": 2.050851455421356
       },
       "risk_assessment": {
         "risk_signals": {
@@ -704,7 +812,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.0535512370399356,
+        "stop_loss_distance": 0.053150391660959556,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -712,6 +820,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.0202967498128863
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.6804733727810651,
+        "trend_alignment": "bearish",
+        "symbol_count": 13,
+        "bullish_count": 0,
+        "bearish_count": 10,
+        "neutral_count": 3,
+        "consensus_strength": -0.7692307692307693,
+        "trend_confidence": 0.03783308488132751,
+        "direction_consistency": 0.7692307692307693,
+        "avg_strength": 5.5598185608211725
       }
     },
     {
@@ -720,16 +840,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.2550625617385578,
-        "current_crs": -0.055780349895084735,
-        "current_ma13": 0.2648614962324408,
-        "current_ma49": 0.26506081190398717,
-        "rs_5d_change": -0.047048672643570155,
-        "rs_21d_change": -0.055780349895084846,
-        "rs_49d_change": -0.061926239926747395,
-        "crs_21d_avg": 0.003980625587767979,
-        "rs_volatility": 0.018439639372635975,
-        "crs_volatility": 0.041292958902173105,
+        "current_rs": 0.25358083635166284,
+        "current_crs": -0.055796598224405636,
+        "current_ma13": 0.2633265918092437,
+        "current_ma49": 0.2635246262184645,
+        "rs_5d_change": -0.04706564269354652,
+        "rs_21d_change": -0.055796598224405636,
+        "rs_49d_change": -0.06192262725491626,
+        "crs_21d_avg": 0.0039811591827078685,
+        "rs_volatility": 0.01833303667297939,
+        "crs_volatility": 0.041294180730342064,
         "outperforming_days": 126,
         "underperforming_days": 168,
         "total_days": 294,
@@ -740,29 +860,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -5.578034989508474
+        "strength_score": -5.579659822440563
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.00940973452871403,
-        "raw_speed_21d": 0.0026562071378611832,
-        "raw_speed_49d": 0.0012638008148315794,
-        "weighted_speed": 0.005754489568681687,
-        "consistency_score": 0.3120716979542032,
-        "short_term_momentum": 0.006753527390852847,
-        "long_term_momentum": 0.0013924063230296038,
-        "momentum_ratio": 3.542545456861804,
+        "raw_speed_5d": 0.009413128538709303,
+        "raw_speed_21d": 0.00265698086782884,
+        "raw_speed_49d": 0.0012637270868350258,
+        "weighted_speed": 0.005756403947070309,
+        "consistency_score": 0.3139907506733203,
+        "short_term_momentum": 0.006756147670880463,
+        "long_term_momentum": 0.001393253780993814,
+        "momentum_ratio": 3.5427912382377333,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 3.0250239046356664,
+          "strength": 3.043500060556954,
           "sustainability": 0.42857142857142855
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 3.0250239046356664
+        "signal_to_noise_ratio": 3.043500060556954
       },
       "risk_assessment": {
         "risk_signals": {
@@ -775,7 +895,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.03687927874527195,
+        "stop_loss_distance": 0.03666607334595878,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -783,6 +903,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.2187301075832742
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.65625,
+        "trend_alignment": "bearish",
+        "symbol_count": 4,
+        "bullish_count": 0,
+        "bearish_count": 3,
+        "neutral_count": 1,
+        "consensus_strength": -0.75,
+        "trend_confidence": 0.053449922175114614,
+        "direction_consistency": 0.75,
+        "avg_strength": 8.144750045731751
       }
     },
     {
@@ -791,16 +923,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.17925447261551972,
-        "current_crs": -0.027508100034419614,
-        "current_ma13": 0.17881575174010012,
-        "current_ma49": 0.18033871852363983,
-        "rs_5d_change": -0.008650361324026523,
-        "rs_21d_change": -0.027508100034419614,
-        "rs_49d_change": 0.01020045794798774,
-        "crs_21d_avg": -0.015992148564805,
-        "rs_volatility": 0.005351510470056737,
-        "crs_volatility": 0.03883745845002244,
+        "current_rs": 0.18007079354626276,
+        "current_crs": -0.02750598377854352,
+        "current_ma13": 0.17962989510356192,
+        "current_ma49": 0.18115904860520926,
+        "rs_5d_change": -0.008642128667248561,
+        "rs_21d_change": -0.02750598377854363,
+        "rs_49d_change": 0.010209860373883162,
+        "crs_21d_avg": -0.01598856801162209,
+        "rs_volatility": 0.005375958125259449,
+        "crs_volatility": 0.038838343379392466,
         "outperforming_days": 153,
         "underperforming_days": 141,
         "total_days": 294,
@@ -811,29 +943,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "underperforming",
-        "strength_score": -2.7508100034419614
+        "strength_score": -2.750598377854352
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.0017300722648053047,
-        "raw_speed_21d": 0.001309909525448553,
-        "raw_speed_49d": 0.00020817261118342327,
-        "weighted_speed": 0.0012996435122739028,
-        "consistency_score": 0.24285545539820722,
-        "short_term_momentum": 0.00042016273935675157,
-        "long_term_momentum": 0.0011017369142651298,
-        "momentum_ratio": 1.3207570684798822,
+        "raw_speed_5d": 0.0017284257334497122,
+        "raw_speed_21d": 0.0013098087513592205,
+        "raw_speed_49d": 0.00020836449742618696,
+        "weighted_speed": 0.0012988283916178596,
+        "consistency_score": 0.2415994249499808,
+        "short_term_momentum": 0.00041861698209049174,
+        "long_term_momentum": 0.0011014442539330335,
+        "momentum_ratio": 1.3196016072240186,
         "speed_category": "Vừa phải (Ổn định)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": false,
-          "strength": 5.140249689939965,
+          "strength": 5.116480288286502,
           "sustainability": 0.5204081632653061
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 5.140249689939965
+        "signal_to_noise_ratio": 5.116480288286502
       },
       "risk_assessment": {
         "risk_signals": {
@@ -846,7 +978,7 @@
         },
         "suggested_position_size": "Full",
         "time_horizon": "Medium",
-        "stop_loss_distance": 0.010703020940113474,
+        "stop_loss_distance": 0.010751916250518898,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "spiking",
@@ -854,6 +986,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.5100595232781246
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.3111111111111111,
+        "trend_alignment": "bearish",
+        "symbol_count": 15,
+        "bullish_count": 2,
+        "bearish_count": 7,
+        "neutral_count": 6,
+        "consensus_strength": -0.3333333333333333,
+        "trend_confidence": 0.021761444717744674,
+        "direction_consistency": 0.4666666666666667,
+        "avg_strength": 6.994750087846501
       }
     },
     {
@@ -862,16 +1006,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.3775312808692789,
-        "current_crs": -0.0782303375830522,
-        "current_ma13": 0.3902217110629793,
-        "current_ma49": 0.40741933095717586,
-        "rs_5d_change": -0.04332853322018537,
-        "rs_21d_change": -0.07823033758305231,
-        "rs_49d_change": -0.10740402135036087,
-        "crs_21d_avg": -0.03963070208676086,
-        "rs_volatility": 0.016189316264831638,
-        "crs_volatility": 0.04125872748121895,
+        "current_rs": 0.37124766765448364,
+        "current_crs": -0.07822807628893236,
+        "current_ma13": 0.383728648962491,
+        "current_ma49": 0.40064095086007995,
+        "rs_5d_change": -0.04334613256774089,
+        "rs_21d_change": -0.07822807628893236,
+        "rs_49d_change": -0.10740330720695201,
+        "crs_21d_avg": -0.03963122757186426,
+        "rs_volatility": 0.015919701117184847,
+        "crs_volatility": 0.04125738598317581,
         "outperforming_days": 157,
         "underperforming_days": 137,
         "total_days": 294,
@@ -882,29 +1026,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -7.82303375830522
+        "strength_score": -7.822807628893235
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.008665706644037074,
-        "raw_speed_21d": 0.0037252541706215385,
-        "raw_speed_49d": 0.0021919188030685892,
-        "weighted_speed": 0.005888813333818716,
-        "consistency_score": 0.3637468832832118,
-        "short_term_momentum": 0.004940452473415536,
-        "long_term_momentum": 0.0015333353675529493,
-        "momentum_ratio": 2.3262054740794365,
+        "raw_speed_5d": 0.008669226513548178,
+        "raw_speed_21d": 0.0037251464899491597,
+        "raw_speed_49d": 0.0021919042287133063,
+        "weighted_speed": 0.005890538049501498,
+        "consistency_score": 0.3700156181414007,
+        "short_term_momentum": 0.004944080023599019,
+        "long_term_momentum": 0.0015332422612358535,
+        "momentum_ratio": 2.327217610619789,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 4.832219984051678,
+          "strength": 4.913916141584308,
           "sustainability": 0.5340136054421769
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 4.832219984051678
+        "signal_to_noise_ratio": 4.913916141584308
       },
       "risk_assessment": {
         "risk_signals": {
@@ -917,7 +1061,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.032378632529663276,
+        "stop_loss_distance": 0.03183940223436969,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -925,6 +1069,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 0.9540905094803674
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.691358024691358,
+        "trend_alignment": "bearish",
+        "symbol_count": 9,
+        "bullish_count": 0,
+        "bearish_count": 7,
+        "neutral_count": 2,
+        "consensus_strength": -0.7777777777777778,
+        "trend_confidence": 0.05947573617602583,
+        "direction_consistency": 0.7777777777777778,
+        "avg_strength": 8.602740411175166
       }
     },
     {
@@ -933,16 +1089,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.3237501371967951,
-        "current_crs": -0.06177561988524505,
-        "current_ma13": 0.32794975771723295,
-        "current_ma49": 0.33655115618320586,
-        "rs_5d_change": -0.01694128820229235,
-        "rs_21d_change": -0.06177561988524494,
-        "rs_49d_change": -0.0729544228723833,
-        "crs_21d_avg": -0.02671997752413307,
-        "rs_volatility": 0.016505015849752377,
-        "crs_volatility": 0.031059827006909638,
+        "current_rs": 0.3261099220722204,
+        "current_crs": -0.0617806549911345,
+        "current_ma13": 0.33033942290778145,
+        "current_ma49": 0.33900346104677065,
+        "rs_5d_change": -0.016942667645060805,
+        "rs_21d_change": -0.06178065499113439,
+        "rs_49d_change": -0.07296178793806596,
+        "crs_21d_avg": -0.0267202316582875,
+        "rs_volatility": 0.016625605031776514,
+        "crs_volatility": 0.031060322990912114,
         "outperforming_days": 125,
         "underperforming_days": 169,
         "total_days": 294,
@@ -953,29 +1109,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -6.177561988524505
+        "strength_score": -6.178065499113449
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.0033882576404584697,
-        "raw_speed_21d": 0.0029416961850116637,
-        "raw_speed_49d": 0.0014888657729057815,
-        "weighted_speed": 0.00287441083031389,
-        "consistency_score": 0.17415377582669905,
-        "short_term_momentum": 0.00044656145544680597,
-        "long_term_momentum": 0.0014528304121058822,
-        "momentum_ratio": 1.1518040706317996,
+        "raw_speed_5d": 0.003388533529012161,
+        "raw_speed_21d": 0.00294193595195878,
+        "raw_speed_49d": 0.001489016080368693,
+        "weighted_speed": 0.002874650766167453,
+        "consistency_score": 0.17290503176715277,
+        "short_term_momentum": 0.00044659757705338074,
+        "long_term_momentum": 0.0014529198715900872,
+        "momentum_ratio": 1.1518039768187442,
         "speed_category": "Vừa phải (Ổn định)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 3.742839173715289,
+          "strength": 3.7159943877562975,
           "sustainability": 0.42517006802721086
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 3.742839173715289
+        "signal_to_noise_ratio": 3.7159943877562975
       },
       "risk_assessment": {
         "risk_signals": {
@@ -988,7 +1144,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Medium",
-        "stop_loss_distance": 0.033010031699504755,
+        "stop_loss_distance": 0.03325121006355303,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -996,6 +1152,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.4924500308155337
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.46090534979423864,
+        "trend_alignment": "bearish",
+        "symbol_count": 27,
+        "bullish_count": 1,
+        "bearish_count": 16,
+        "neutral_count": 10,
+        "consensus_strength": -0.5555555555555556,
+        "trend_confidence": 0.0320442371185555,
+        "direction_consistency": 0.5925925925925926,
+        "avg_strength": 6.952455017686596
       }
     },
     {
@@ -1004,16 +1172,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.21310092196246294,
-        "current_crs": -0.07986165552506896,
-        "current_ma13": 0.22186996280293234,
-        "current_ma49": 0.22927153351302243,
-        "rs_5d_change": -0.048223785231283456,
-        "rs_21d_change": -0.07986165552506896,
-        "rs_49d_change": -0.11314629566885215,
-        "crs_21d_avg": -0.028015755642464828,
-        "rs_volatility": 0.010444276864011311,
-        "crs_volatility": 0.038610801990426,
+        "current_rs": 0.21557046427395457,
+        "current_crs": -0.07985943368350013,
+        "current_ma13": 0.22444141402808426,
+        "current_ma49": 0.23192927607971897,
+        "rs_5d_change": -0.04822764743729924,
+        "rs_21d_change": -0.07985943368350001,
+        "rs_49d_change": -0.11313730269087208,
+        "crs_21d_avg": -0.028011904137700796,
+        "rs_volatility": 0.010565485886643125,
+        "crs_volatility": 0.03861043981296337,
         "outperforming_days": 147,
         "underperforming_days": 147,
         "total_days": 294,
@@ -1024,29 +1192,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -7.986165552506897
+        "strength_score": -7.9859433683500125
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.009644757046256692,
-        "raw_speed_21d": 0.0038029359773842364,
-        "raw_speed_49d": 0.0023091080748745335,
-        "weighted_speed": 0.006425080931318523,
-        "consistency_score": 0.6151771936894879,
-        "short_term_momentum": 0.005841821068872455,
-        "long_term_momentum": 0.001493827902509703,
-        "momentum_ratio": 2.536134477049656,
+        "raw_speed_5d": 0.009645529487459847,
+        "raw_speed_21d": 0.0038028301754047624,
+        "raw_speed_49d": 0.002308924544711675,
+        "weighted_speed": 0.006425398705293688,
+        "consistency_score": 0.6081498545577226,
+        "short_term_momentum": 0.005842699312055085,
+        "long_term_momentum": 0.0014939056306930874,
+        "momentum_ratio": 2.5364081598603607,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 7.646451407301805,
+          "strength": 7.558519744412155,
           "sustainability": 0.5
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 7.646451407301805
+        "signal_to_noise_ratio": 7.558519744412155
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1059,7 +1227,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.020888553728022622,
+        "stop_loss_distance": 0.02113097177328625,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1067,6 +1235,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.3721601782596855
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 1.0,
+        "trend_alignment": "bearish",
+        "symbol_count": 6,
+        "bullish_count": 0,
+        "bearish_count": 6,
+        "neutral_count": 0,
+        "consensus_strength": -1.0,
+        "trend_confidence": 0.080117227295796,
+        "direction_consistency": 1.0,
+        "avg_strength": 8.0117227295796
       }
     },
     {
@@ -1075,16 +1255,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.4126948194490177,
-        "current_crs": -0.0336953450562697,
-        "current_ma13": 0.4109735093369862,
-        "current_ma49": 0.4176680929067316,
-        "rs_5d_change": 0.004096645495569096,
-        "rs_21d_change": -0.0336953450562697,
-        "rs_49d_change": -0.026938545323989094,
-        "crs_21d_avg": -0.015425233091923335,
-        "rs_volatility": 0.04626688853710409,
-        "crs_volatility": 0.06454226084831649,
+        "current_rs": 0.41642657227527163,
+        "current_crs": -0.03367970313005508,
+        "current_ma13": 0.41468664432483127,
+        "current_ma49": 0.4214416105291387,
+        "rs_5d_change": 0.004104871175107272,
+        "rs_21d_change": -0.033679703130055194,
+        "rs_49d_change": -0.02694648297508806,
+        "crs_21d_avg": -0.015424047520418017,
+        "rs_volatility": 0.046685051178641655,
+        "crs_volatility": 0.0645414893555051,
         "outperforming_days": 104,
         "underperforming_days": 190,
         "total_days": 294,
@@ -1095,29 +1275,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "underperforming",
-        "strength_score": -3.36953450562697
+        "strength_score": -3.3679703130055083
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.0008193290991138191,
-        "raw_speed_21d": 0.0016045402407747476,
-        "raw_speed_49d": 0.0005497662311018183,
-        "weighted_speed": 0.0010009798680096975,
-        "consistency_score": 0.021634907806842338,
-        "short_term_momentum": -0.0007852111416609285,
-        "long_term_momentum": 0.0010547740096729292,
-        "momentum_ratio": 0.5106316926761577,
+        "raw_speed_5d": 0.0008209742350214544,
+        "raw_speed_21d": 0.0016037953871454855,
+        "raw_speed_49d": 0.000549928223981389,
+        "weighted_speed": 0.0010016113784506505,
+        "consistency_score": 0.021454648825765588,
+        "short_term_momentum": -0.0007828211521240311,
+        "long_term_momentum": 0.0010538671631640964,
+        "momentum_ratio": 0.5118946229684979,
         "speed_category": "Vừa phải (Ổn định)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": false,
-          "strength": 0.7282820635160597,
+          "strength": 0.7214237165806859,
           "sustainability": 0.35374149659863946
         },
         "trend_strength": "Moderate",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 0.7282820635160597
+        "signal_to_noise_ratio": 0.7214237165806859
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1130,7 +1310,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Medium",
-        "stop_loss_distance": 0.09253377707420818,
+        "stop_loss_distance": 0.09337010235728331,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "spiking",
@@ -1138,6 +1318,18 @@
           "volume_quality": "high_volatility",
           "recent_volume_ratio": 1.6869807510752262
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.325,
+        "trend_alignment": "bearish",
+        "symbol_count": 10,
+        "bullish_count": 2,
+        "bearish_count": 5,
+        "neutral_count": 3,
+        "consensus_strength": -0.3,
+        "trend_confidence": 0.02077244672200642,
+        "direction_consistency": 0.5,
+        "avg_strength": 6.391522068309667
       }
     },
     {
@@ -1146,16 +1338,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.6084677861925145,
-        "current_crs": -0.032851002649356253,
-        "current_ma13": 0.6372229102994547,
-        "current_ma49": 0.6278758318179085,
-        "rs_5d_change": -0.052619482021293185,
-        "rs_21d_change": -0.032851002649356364,
-        "rs_49d_change": -0.045743672356105214,
-        "crs_21d_avg": 0.04947164471803337,
-        "rs_volatility": 0.028298528214355197,
-        "crs_volatility": 0.060816952212255665,
+        "current_rs": 0.6036178794863352,
+        "current_crs": -0.03284435220827586,
+        "current_ma13": 0.6321412368295618,
+        "current_ma49": 0.6228681635451404,
+        "rs_5d_change": -0.05261979143242923,
+        "rs_21d_change": -0.03284435220827597,
+        "rs_49d_change": -0.04574661976411276,
+        "crs_21d_avg": 0.049470738930027146,
+        "rs_volatility": 0.028072751025129846,
+        "crs_volatility": 0.06081655193388859,
         "outperforming_days": 173,
         "underperforming_days": 121,
         "total_days": 294,
@@ -1166,29 +1358,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "underperforming",
-        "strength_score": -3.2851002649356253
+        "strength_score": -3.284435220827586
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.010523896404258637,
-        "raw_speed_21d": 0.0015643334594931603,
-        "raw_speed_49d": 0.0009335443337980656,
-        "weighted_speed": 0.0059179571067368795,
-        "consistency_score": 0.20912596803302425,
-        "short_term_momentum": 0.008959562944765477,
-        "long_term_momentum": 0.0006307891256950947,
-        "momentum_ratio": 6.727399673256589,
+        "raw_speed_5d": 0.010523958286485845,
+        "raw_speed_21d": 0.0015640167718226653,
+        "raw_speed_49d": 0.0009336044849818931,
+        "weighted_speed": 0.005917905071786101,
+        "consistency_score": 0.2108060256185287,
+        "short_term_momentum": 0.00895994151466318,
+        "long_term_momentum": 0.0006304122868407723,
+        "momentum_ratio": 6.728801427251635,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": false,
-          "strength": 1.1608731874858353,
+          "strength": 1.1699726962589003,
           "sustainability": 0.5884353741496599
         },
         "trend_strength": "Strong",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 1.1608731874858353
+        "signal_to_noise_ratio": 1.1699726962589003
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1201,7 +1393,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.05659705642871039,
+        "stop_loss_distance": 0.05614550205025969,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1209,6 +1401,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 0.9650496068297938
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.44897959183673464,
+        "trend_alignment": "bearish",
+        "symbol_count": 7,
+        "bullish_count": 0,
+        "bearish_count": 4,
+        "neutral_count": 3,
+        "consensus_strength": -0.5714285714285714,
+        "trend_confidence": 0.018900844508343513,
+        "direction_consistency": 0.5714285714285714,
+        "avg_strength": 4.209733549585601
       }
     },
     {
@@ -1217,16 +1421,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.07868922181977829,
-        "current_crs": -0.0392667628705381,
-        "current_ma13": 0.08115585654680929,
-        "current_ma49": 0.0817531409864081,
-        "rs_5d_change": -0.034846215180598716,
-        "rs_21d_change": -0.03926676287053821,
-        "rs_49d_change": -0.024019108645568443,
-        "crs_21d_avg": 0.03712777231810831,
-        "rs_volatility": 0.010820197116791929,
-        "crs_volatility": 0.052415576834731914,
+        "current_rs": 0.07921056964109319,
+        "current_crs": -0.03928500614714092,
+        "current_ma13": 0.08169446413978097,
+        "current_ma49": 0.08229696207067794,
+        "rs_5d_change": -0.03485299327851166,
+        "rs_21d_change": -0.03928500614714081,
+        "rs_49d_change": -0.023995758312424398,
+        "crs_21d_avg": 0.03711426627885223,
+        "rs_volatility": 0.01089218913075639,
+        "crs_volatility": 0.05241710392566522,
         "outperforming_days": 118,
         "underperforming_days": 176,
         "total_days": 294,
@@ -1237,29 +1441,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -3.9266762870538097
+        "strength_score": -3.928500614714092
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.0069692430361197434,
-        "raw_speed_21d": 0.0018698458509780098,
-        "raw_speed_49d": 0.0004901858907258866,
-        "weighted_speed": 0.004143612451498452,
-        "consistency_score": 0.38295166037852996,
-        "short_term_momentum": 0.005099397185141734,
-        "long_term_momentum": 0.0013796599602521231,
-        "momentum_ratio": 3.727175174613741,
+        "raw_speed_5d": 0.0069705986557023316,
+        "raw_speed_21d": 0.0018707145784352768,
+        "raw_speed_49d": 0.0004897093533147836,
+        "weighted_speed": 0.004144455572044705,
+        "consistency_score": 0.38049794419580557,
+        "short_term_momentum": 0.005099884077267055,
+        "long_term_momentum": 0.0013810052251204932,
+        "momentum_ratio": 3.7261689923498404,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": true,
-          "strength": 3.629024725399862,
+          "strength": 3.606713551843433,
           "sustainability": 0.4013605442176871
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 3.629024725399862
+        "signal_to_noise_ratio": 3.606713551843433
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1272,7 +1476,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.021640394233583857,
+        "stop_loss_distance": 0.02178437826151278,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1280,6 +1484,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 0.844091578581145
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.5857988165680473,
+        "trend_alignment": "bearish",
+        "symbol_count": 13,
+        "bullish_count": 0,
+        "bearish_count": 9,
+        "neutral_count": 4,
+        "consensus_strength": -0.6923076923076923,
+        "trend_confidence": 0.04392210379442262,
+        "direction_consistency": 0.6923076923076923,
+        "avg_strength": 7.497813678037802
       }
     },
     {
@@ -1288,16 +1504,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.3085624519811217,
-        "current_crs": -0.08189762876370932,
-        "current_ma13": 0.3188211947326817,
-        "current_ma49": 0.3217263179110839,
-        "rs_5d_change": -0.045824346686309636,
-        "rs_21d_change": -0.08189762876370943,
-        "rs_49d_change": -0.05852844697802784,
-        "crs_21d_avg": -0.0011012312698197738,
-        "rs_volatility": 0.008520151244809595,
-        "crs_volatility": 0.026784650449682312,
+        "current_rs": 0.31075760070244757,
+        "current_crs": -0.08191152910088839,
+        "current_ma13": 0.32108730218748577,
+        "current_ma49": 0.32401325960678257,
+        "rs_5d_change": -0.04582260865096255,
+        "rs_21d_change": -0.08191152910088861,
+        "rs_49d_change": -0.0585254141089393,
+        "crs_21d_avg": -0.0011024565131059945,
+        "rs_volatility": 0.008580762708542768,
+        "crs_volatility": 0.0267850634881378,
         "outperforming_days": 151,
         "underperforming_days": 143,
         "total_days": 294,
@@ -1308,29 +1524,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -8.189762876370931
+        "strength_score": -8.191152910088839
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.009164869337261928,
-        "raw_speed_21d": 0.0038998870839861634,
-        "raw_speed_49d": 0.0011944581015924049,
-        "weighted_speed": 0.005991292414145294,
-        "consistency_score": 0.7031908521336566,
-        "short_term_momentum": 0.005264982253275765,
-        "long_term_momentum": 0.0027054289823937585,
-        "momentum_ratio": 2.35003453687031,
+        "raw_speed_5d": 0.009164521730192509,
+        "raw_speed_21d": 0.0039005490048042196,
+        "raw_speed_49d": 0.0011943962063048837,
+        "weighted_speed": 0.005991304807798497,
+        "consistency_score": 0.6982252057656507,
+        "short_term_momentum": 0.00526397272538829,
+        "long_term_momentum": 0.002706152798499336,
+        "momentum_ratio": 2.349546619951389,
         "speed_category": "Rất nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 9.61222710848012,
+          "strength": 9.545949688055092,
           "sustainability": 0.5136054421768708
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 9.61222710848012
+        "signal_to_noise_ratio": 9.545949688055092
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1343,7 +1559,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.01704030248961919,
+        "stop_loss_distance": 0.017161525417085537,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1351,6 +1567,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.1151583639194087
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.47337278106508873,
+        "trend_alignment": "bearish",
+        "symbol_count": 13,
+        "bullish_count": 1,
+        "bearish_count": 8,
+        "neutral_count": 4,
+        "consensus_strength": -0.5384615384615384,
+        "trend_confidence": 0.029573482548213632,
+        "direction_consistency": 0.6153846153846154,
+        "avg_strength": 6.247398188310131
       }
     },
     {
@@ -1359,16 +1587,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.27344693227966194,
-        "current_crs": -0.027898543768184902,
-        "current_ma13": 0.2832476180166252,
-        "current_ma49": 0.27707905000050875,
-        "rs_5d_change": -0.031529604290179813,
-        "rs_21d_change": -0.027898543768185013,
-        "rs_49d_change": 0.03763232771319425,
-        "crs_21d_avg": 0.020330304797454863,
-        "rs_volatility": 0.02761484094803104,
-        "crs_volatility": 0.05190496563120281,
+        "current_rs": 0.27480518055098235,
+        "current_crs": -0.02790239086325086,
+        "current_ma13": 0.2846553176729037,
+        "current_ma49": 0.27845599297552565,
+        "rs_5d_change": -0.031516856133157245,
+        "rs_21d_change": -0.02790239086325108,
+        "rs_49d_change": 0.037610876750032496,
+        "crs_21d_avg": 0.020330700238038128,
+        "rs_volatility": 0.027752179174363494,
+        "crs_volatility": 0.05190436056753128,
         "outperforming_days": 129,
         "underperforming_days": 165,
         "total_days": 294,
@@ -1379,29 +1607,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "underperforming",
-        "strength_score": -2.7898543768184902
+        "strength_score": -2.790239086325086
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.006305920858035963,
-        "raw_speed_21d": 0.0013285020841992863,
-        "raw_speed_49d": 0.0007680066880243724,
-        "weighted_speed": 0.0037051123918826418,
-        "consistency_score": 0.13417105674645644,
-        "short_term_momentum": 0.004977418773836677,
-        "long_term_momentum": 0.0005604953961749139,
-        "momentum_ratio": 4.746639793069397,
+        "raw_speed_5d": 0.006303371226631449,
+        "raw_speed_21d": 0.0013286852792024325,
+        "raw_speed_49d": 0.0007675689132659693,
+        "weighted_speed": 0.003703804979729648,
+        "consistency_score": 0.13345996926796636,
+        "short_term_momentum": 0.004974685947429017,
+        "long_term_momentum": 0.0005611163659364632,
+        "momentum_ratio": 4.744066428142534,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": false,
-          "strength": 1.0102735634323543,
+          "strength": 1.005412608788082,
           "sustainability": 0.4387755102040816
         },
         "trend_strength": "Strong",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 1.0102735634323543
+        "signal_to_noise_ratio": 1.005412608788082
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1414,7 +1642,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.05522968189606208,
+        "stop_loss_distance": 0.05550435834872699,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1422,6 +1650,18 @@
           "volume_quality": "high_volatility",
           "recent_volume_ratio": 0.9347944379593782
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.33950617283950624,
+        "trend_alignment": "neutral",
+        "symbol_count": 9,
+        "bullish_count": 1,
+        "bearish_count": 3,
+        "neutral_count": 5,
+        "consensus_strength": -0.2222222222222222,
+        "trend_confidence": 0.01658247358612685,
+        "direction_consistency": 0.5555555555555556,
+        "avg_strength": 4.884292219913726
       }
     },
     {
@@ -1430,16 +1670,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.36565689825485675,
-        "current_crs": -0.0732026365074756,
-        "current_ma13": 0.37618211765727305,
-        "current_ma49": 0.3834976245590852,
-        "rs_5d_change": -0.03613822876154338,
-        "rs_21d_change": -0.07320263650747572,
-        "rs_49d_change": -0.07244996076314802,
-        "crs_21d_avg": -0.019938893833850894,
-        "rs_volatility": 0.019403841489930677,
-        "crs_volatility": 0.05837538260311919,
+        "current_rs": 0.3659655910437932,
+        "current_crs": -0.07321921577461032,
+        "current_ma13": 0.3765020937009333,
+        "current_ma49": 0.3838242198374069,
+        "rs_5d_change": -0.036148843929190155,
+        "rs_21d_change": -0.07321921577461032,
+        "rs_49d_change": -0.0724638110371455,
+        "crs_21d_avg": -0.01993784596127051,
+        "rs_volatility": 0.019420072355435494,
+        "crs_volatility": 0.05837492577951291,
         "outperforming_days": 145,
         "underperforming_days": 149,
         "total_days": 294,
@@ -1450,29 +1690,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -7.3202636507475605
+        "strength_score": -7.3219215774610324
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.007227645752308676,
-        "raw_speed_21d": 0.00348583983368932,
-        "raw_speed_49d": 0.0014785706278193475,
-        "weighted_speed": 0.004955288951825003,
-        "consistency_score": 0.2553766971553789,
-        "short_term_momentum": 0.003741805918619356,
-        "long_term_momentum": 0.0020072692058699724,
-        "momentum_ratio": 2.073430248417102,
+        "raw_speed_5d": 0.007229768785838031,
+        "raw_speed_21d": 0.0034866293226004917,
+        "raw_speed_49d": 0.0014788532864723571,
+        "weighted_speed": 0.004956643846993634,
+        "consistency_score": 0.2552330267506092,
+        "short_term_momentum": 0.0037431394632375394,
+        "long_term_momentum": 0.0020077760361281345,
+        "momentum_ratio": 2.073569661958137,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm mạnh",
         "direction_quality": {
           "confirmed": true,
-          "strength": 3.7725847505744206,
+          "strength": 3.770285426053882,
           "sustainability": 0.4931972789115646
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 3.7725847505744206
+        "signal_to_noise_ratio": 3.770285426053882
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1485,7 +1725,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.038807682979861355,
+        "stop_loss_distance": 0.03884014471087099,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1493,6 +1733,18 @@
           "volume_quality": "normal",
           "recent_volume_ratio": 1.2126279462319858
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.5078125,
+        "trend_alignment": "bearish",
+        "symbol_count": 8,
+        "bullish_count": 0,
+        "bearish_count": 5,
+        "neutral_count": 3,
+        "consensus_strength": -0.625,
+        "trend_confidence": 0.03994875022054773,
+        "direction_consistency": 0.625,
+        "avg_strength": 7.866830812661707
       }
     },
     {
@@ -1501,16 +1753,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.3292242893206015,
-        "current_crs": -0.04436253778519772,
-        "current_ma13": 0.332819583490944,
-        "current_ma49": 0.3425305749685627,
-        "rs_5d_change": -0.02489063688606241,
-        "rs_21d_change": -0.04436253778519772,
-        "rs_49d_change": -0.08651530481515302,
-        "crs_21d_avg": -0.03222270135903044,
-        "rs_volatility": 0.021003544812898952,
-        "crs_volatility": 0.06701246058970371,
+        "current_rs": 0.32811299528043025,
+        "current_crs": -0.04435934390177776,
+        "current_ma13": 0.3316947696456802,
+        "current_ma49": 0.34137330540480404,
+        "rs_5d_change": -0.024892048287768698,
+        "rs_21d_change": -0.04435934390177787,
+        "rs_49d_change": -0.08651238230507274,
+        "crs_21d_avg": -0.03222205677608979,
+        "rs_volatility": 0.020932573021599246,
+        "crs_volatility": 0.06701163987102186,
         "outperforming_days": 151,
         "underperforming_days": 143,
         "total_days": 294,
@@ -1521,29 +1773,29 @@
       "performance_summary": {
         "rs_trend": "bearish",
         "crs_status": "underperforming",
-        "strength_score": -4.436253778519772
+        "strength_score": -4.435934390177776
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.004978127377212482,
-        "raw_speed_21d": 0.0021125017992951294,
-        "raw_speed_49d": 0.0017656184656153677,
-        "weighted_speed": 0.0034759379215178535,
-        "consistency_score": 0.1654929180993852,
-        "short_term_momentum": 0.002865625577917353,
-        "long_term_momentum": 0.00034688333367976164,
-        "momentum_ratio": 2.35650799392148,
+        "raw_speed_5d": 0.004978409657553739,
+        "raw_speed_21d": 0.00211234970960847,
+        "raw_speed_49d": 0.001765558822552505,
+        "weighted_speed": 0.0034760215061699117,
+        "consistency_score": 0.16605801410954993,
+        "short_term_momentum": 0.0028660599479452694,
+        "long_term_momentum": 0.00034679088705596496,
+        "momentum_ratio": 2.356811296400586,
         "speed_category": "Nhanh (Tăng tốc)"
       },
       "direction_analysis": {
         "direction": "Suy giảm",
         "direction_quality": {
           "confirmed": true,
-          "strength": 2.112145267876557,
+          "strength": 2.119153906975781,
           "sustainability": 0.5136054421768708
         },
         "trend_strength": "Very Strong",
         "momentum_confirmed": true,
-        "signal_to_noise_ratio": 2.112145267876557
+        "signal_to_noise_ratio": 2.119153906975781
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1556,7 +1808,7 @@
         },
         "suggested_position_size": "Normal",
         "time_horizon": "Short",
-        "stop_loss_distance": 0.042007089625797904,
+        "stop_loss_distance": 0.04186514604319849,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1564,6 +1816,18 @@
           "volume_quality": "high_volatility",
           "recent_volume_ratio": 1.4663824818064064
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.5555555555555555,
+        "trend_alignment": "bearish",
+        "symbol_count": 6,
+        "bullish_count": 0,
+        "bearish_count": 4,
+        "neutral_count": 2,
+        "consensus_strength": -0.6666666666666666,
+        "trend_confidence": 0.024919774511731975,
+        "direction_consistency": 0.6666666666666666,
+        "avg_strength": 4.485559412111756
       }
     },
     {
@@ -1572,16 +1836,16 @@
       "latest_date": "2025-07-11T00:00:00",
       "data_points": 294,
       "metrics": {
-        "current_rs": 0.6460254088464493,
-        "current_crs": -0.012255826775111056,
-        "current_ma13": 0.6394769092483539,
-        "current_ma49": 0.6418434825195277,
-        "rs_5d_change": 0.007814751715567558,
-        "rs_21d_change": -0.012255826775111167,
-        "rs_49d_change": -0.0012419795037533765,
-        "crs_21d_avg": -0.007125312230154932,
-        "rs_volatility": 0.037933320518355636,
-        "crs_volatility": 0.04033685962486593,
+        "current_rs": 0.6605133904072001,
+        "current_crs": -0.012249928930109233,
+        "current_ma13": 0.6538173672434476,
+        "current_ma49": 0.6562377934898915,
+        "rs_5d_change": 0.0078131781752393,
+        "rs_21d_change": -0.012249928930109344,
+        "rs_49d_change": -0.0012442173731559425,
+        "crs_21d_avg": -0.007125709723057435,
+        "rs_volatility": 0.03878367464330953,
+        "crs_volatility": 0.040335853059239576,
         "outperforming_days": 117,
         "underperforming_days": 177,
         "total_days": 294,
@@ -1592,29 +1856,29 @@
       "performance_summary": {
         "rs_trend": "neutral",
         "crs_status": "underperforming",
-        "strength_score": -1.2255826775111056
+        "strength_score": -1.2249928930109233
       },
       "speed_analysis": {
-        "raw_speed_5d": 0.0015629503431135116,
-        "raw_speed_21d": 0.0005836107988148175,
-        "raw_speed_49d": 2.5346520484762787e-05,
-        "weighted_speed": 0.0009616277152981537,
-        "consistency_score": 0.025350475575499107,
-        "short_term_momentum": 0.000979339544298694,
-        "long_term_momentum": 0.0005582642783300547,
-        "momentum_ratio": 2.6780696078405555,
+        "raw_speed_5d": 0.00156263563504786,
+        "raw_speed_21d": 0.0005833299490528259,
+        "raw_speed_49d": 2.5392191288896785e-05,
+        "weighted_speed": 0.0009613952404975571,
+        "consistency_score": 0.02478865783965638,
+        "short_term_momentum": 0.000979305685995034,
+        "long_term_momentum": 0.0005579377577639291,
+        "momentum_ratio": 2.6788194872990294,
         "speed_category": "Chậm (Ổn định)"
       },
       "direction_analysis": {
         "direction": "Đứng yên",
         "direction_quality": {
           "confirmed": false,
-          "strength": 0.3230886884574386,
+          "strength": 0.31585271490571737,
           "sustainability": 0.3979591836734694
         },
         "trend_strength": "Weak",
         "momentum_confirmed": false,
-        "signal_to_noise_ratio": 0.3230886884574386
+        "signal_to_noise_ratio": 0.31585271490571737
       },
       "risk_assessment": {
         "risk_signals": {
@@ -1627,7 +1891,7 @@
         },
         "suggested_position_size": "Full",
         "time_horizon": "Long",
-        "stop_loss_distance": 0.07586664103671127,
+        "stop_loss_distance": 0.07756734928661906,
         "risk_level": "Low",
         "volume_analysis": {
           "volume_trend": "stable",
@@ -1635,6 +1899,18 @@
           "volume_quality": "high_volatility",
           "recent_volume_ratio": 1.4974168754360488
         }
+      },
+      "trend_consistency": {
+        "consistency_score": 0.24970273483947683,
+        "trend_alignment": "neutral",
+        "symbol_count": 29,
+        "bullish_count": 8,
+        "bearish_count": 7,
+        "neutral_count": 14,
+        "consensus_strength": 0.034482758620689655,
+        "trend_confidence": 0.012655385460271637,
+        "direction_consistency": 0.4827586206896552,
+        "avg_strength": 5.068180558137355
       }
     }
   ],
@@ -31508,7 +31784,7 @@
   "insights": {
     "market_overview": {
       "title": "Tổng quan thị trường (Macro)",
-      "analysis_date": "2025-07-12T21:37:03.561379",
+      "analysis_date": "2025-07-12T23:46:37.977168",
       "timeframe": "1D",
       "benchmark": "VNINDEX",
       "market_indices": {
@@ -31642,35 +31918,35 @@
         "top_performers": [
           {
             "name": "Thủy sản",
-            "strength_score": 4.385849193081137,
+            "strength_score": 4.386003330633437,
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Weakening (Suy yếu)",
             "money_flow": "Dòng tiền đang rút ra nhanh (tốc độ: 1.5), rủi ro suy yếu cao."
           },
           {
             "name": "Ngân hàng",
-            "strength_score": -0.5514635484759278,
+            "strength_score": -0.5503916903032646,
             "description": "Có xu hướng tăng nhưng yếu hơn thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi."
           },
           {
             "name": "Chứng khoán",
-            "strength_score": -1.2255826775111056,
+            "strength_score": -1.2249928930109233,
             "description": "Đi ngang",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi."
           },
           {
             "name": "Cao su",
-            "strength_score": -2.3489115748030587,
+            "strength_score": -2.350755376684066,
             "description": "Đi ngang",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Bất động sản",
-            "strength_score": -2.7508100034419614,
+            "strength_score": -2.750598377854352,
             "description": "Đi ngang",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi."
@@ -31679,35 +31955,35 @@
         "bottom_performers": [
           {
             "name": "Vật liệu xây dựng",
-            "strength_score": -8.189762876370931,
+            "strength_score": -8.191152910088839,
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Điện",
-            "strength_score": -7.986165552506897,
+            "strength_score": -7.9859433683500125,
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Y tế",
-            "strength_score": -7.82303375830522,
+            "strength_score": -7.822807628893235,
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Mía đường",
-            "strength_score": -7.658364462662226,
+            "strength_score": -7.6574507921561725,
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Hàng không",
-            "strength_score": -7.3202636507475605,
+            "strength_score": -7.3219215774610324,
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
@@ -31731,7 +32007,7 @@
             {
               "name": "Bảo hiểm",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 0.961,
+              "velocity": 0.96,
               "trajectory_strength": "Giảm tốc",
               "speed_category": "Rất nhanh (Tăng tốc)",
               "direction": "Suy giảm mạnh",
@@ -31953,7 +32229,7 @@
             {
               "name": "Bảo hiểm",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 0.961,
+              "velocity": 0.96,
               "trajectory_strength": "Giảm tốc",
               "speed_category": "Rất nhanh (Tăng tốc)",
               "direction": "Suy giảm mạnh",
@@ -32999,6 +33275,278 @@
     },
     "detailed_analysis": {
       "title": "Phân tích chi tiết",
+      "industry_trend_consistency": {
+        "confirmed_trends": [],
+        "mixed_trends": [],
+        "weak_trends": [
+          {
+            "id": "bao-hiem",
+            "name": "Bảo hiểm",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.48,
+            "trend_confidence": 0.024714058916738068,
+            "symbol_count": 5,
+            "bullish_count": 0,
+            "bearish_count": 3,
+            "neutral_count": 2
+          },
+          {
+            "id": "ngan-hang",
+            "name": "Ngân hàng",
+            "trend_alignment": "neutral",
+            "consistency_score": 0.37760416666666663,
+            "trend_confidence": 0.014843420969026393,
+            "symbol_count": 24,
+            "bullish_count": 2,
+            "bearish_count": 7,
+            "neutral_count": 15
+          },
+          {
+            "id": "dau-tu-cong",
+            "name": "Đầu tư công",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.4320987654320988,
+            "trend_confidence": 0.03423290474712772,
+            "symbol_count": 9,
+            "bullish_count": 0,
+            "bearish_count": 5,
+            "neutral_count": 4
+          },
+          {
+            "id": "thuy-san",
+            "name": "Thủy sản",
+            "trend_alignment": "neutral",
+            "consistency_score": 0.3515625,
+            "trend_confidence": 0.021902047830649758,
+            "symbol_count": 8,
+            "bullish_count": 1,
+            "bearish_count": 2,
+            "neutral_count": 5
+          },
+          {
+            "id": "cao-su",
+            "name": "Cao su",
+            "trend_alignment": "neutral",
+            "consistency_score": 0.4753086419753087,
+            "trend_confidence": 0.024919087406611706,
+            "symbol_count": 9,
+            "bullish_count": 0,
+            "bearish_count": 2,
+            "neutral_count": 7
+          },
+          {
+            "id": "duong",
+            "name": "Mía đường",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.65625,
+            "trend_confidence": 0.050097273591591614,
+            "symbol_count": 4,
+            "bullish_count": 0,
+            "bearish_count": 3,
+            "neutral_count": 1
+          },
+          {
+            "id": "bds-kcn",
+            "name": "Bất động sản khu công nghiệp",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.49704142011834324,
+            "trend_confidence": 0.023167992916019033,
+            "symbol_count": 13,
+            "bullish_count": 0,
+            "bearish_count": 8,
+            "neutral_count": 5
+          },
+          {
+            "id": "van-tai",
+            "name": "Vận tải",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.7063711911357341,
+            "trend_confidence": 0.053466365956527886,
+            "symbol_count": 19,
+            "bullish_count": 0,
+            "bearish_count": 15,
+            "neutral_count": 4
+          },
+          {
+            "id": "cong-nghe",
+            "name": "Công nghệ",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.4320987654320988,
+            "trend_confidence": 0.03342144875727876,
+            "symbol_count": 9,
+            "bullish_count": 0,
+            "bearish_count": 5,
+            "neutral_count": 4
+          },
+          {
+            "id": "ban-le",
+            "name": "Bán lẻ",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.6804733727810651,
+            "trend_confidence": 0.03783308488132751,
+            "symbol_count": 13,
+            "bullish_count": 0,
+            "bearish_count": 10,
+            "neutral_count": 3
+          },
+          {
+            "id": "hang-tieu-dung",
+            "name": "Hàng tiêu dùng",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.65625,
+            "trend_confidence": 0.053449922175114614,
+            "symbol_count": 4,
+            "bullish_count": 0,
+            "bearish_count": 3,
+            "neutral_count": 1
+          },
+          {
+            "id": "bds",
+            "name": "Bất động sản",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.3111111111111111,
+            "trend_confidence": 0.021761444717744674,
+            "symbol_count": 15,
+            "bullish_count": 2,
+            "bearish_count": 7,
+            "neutral_count": 6
+          },
+          {
+            "id": "y-te",
+            "name": "Y tế",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.691358024691358,
+            "trend_confidence": 0.05947573617602583,
+            "symbol_count": 9,
+            "bullish_count": 0,
+            "bearish_count": 7,
+            "neutral_count": 2
+          },
+          {
+            "id": "xay-dung",
+            "name": "Xây dựng",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.46090534979423864,
+            "trend_confidence": 0.0320442371185555,
+            "symbol_count": 27,
+            "bullish_count": 1,
+            "bearish_count": 16,
+            "neutral_count": 10
+          },
+          {
+            "id": "dien",
+            "name": "Điện",
+            "trend_alignment": "bearish",
+            "consistency_score": 1.0,
+            "trend_confidence": 0.080117227295796,
+            "symbol_count": 6,
+            "bullish_count": 0,
+            "bearish_count": 6,
+            "neutral_count": 0
+          },
+          {
+            "id": "thep",
+            "name": "Thép",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.325,
+            "trend_confidence": 0.02077244672200642,
+            "symbol_count": 10,
+            "bullish_count": 2,
+            "bearish_count": 5,
+            "neutral_count": 3
+          },
+          {
+            "id": "hoa-chat",
+            "name": "Hóa chất",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.44897959183673464,
+            "trend_confidence": 0.018900844508343513,
+            "symbol_count": 7,
+            "bullish_count": 0,
+            "bearish_count": 4,
+            "neutral_count": 3
+          },
+          {
+            "id": "dau-khi",
+            "name": "Dầu khí",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.5857988165680473,
+            "trend_confidence": 0.04392210379442262,
+            "symbol_count": 13,
+            "bullish_count": 0,
+            "bearish_count": 9,
+            "neutral_count": 4
+          },
+          {
+            "id": "vlxd",
+            "name": "Vật liệu xây dựng",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.47337278106508873,
+            "trend_confidence": 0.029573482548213632,
+            "symbol_count": 13,
+            "bullish_count": 1,
+            "bearish_count": 8,
+            "neutral_count": 4
+          },
+          {
+            "id": "det-may",
+            "name": "Dệt may",
+            "trend_alignment": "neutral",
+            "consistency_score": 0.33950617283950624,
+            "trend_confidence": 0.01658247358612685,
+            "symbol_count": 9,
+            "bullish_count": 1,
+            "bearish_count": 3,
+            "neutral_count": 5
+          },
+          {
+            "id": "hang-khong",
+            "name": "Hàng không",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.5078125,
+            "trend_confidence": 0.03994875022054773,
+            "symbol_count": 8,
+            "bullish_count": 0,
+            "bearish_count": 5,
+            "neutral_count": 3
+          },
+          {
+            "id": "cang-bien",
+            "name": "Cảng biển",
+            "trend_alignment": "bearish",
+            "consistency_score": 0.5555555555555555,
+            "trend_confidence": 0.024919774511731975,
+            "symbol_count": 6,
+            "bullish_count": 0,
+            "bearish_count": 4,
+            "neutral_count": 2
+          },
+          {
+            "id": "chung-khoan",
+            "name": "Chứng khoán",
+            "trend_alignment": "neutral",
+            "consistency_score": 0.24970273483947683,
+            "trend_confidence": 0.012655385460271637,
+            "symbol_count": 29,
+            "bullish_count": 8,
+            "bearish_count": 7,
+            "neutral_count": 14
+          }
+        ],
+        "consistency_summary": {
+          "total_industries": 23,
+          "confirmed_count": 0,
+          "mixed_count": 0,
+          "weak_count": 23,
+          "bullish_confirmed": 0,
+          "bearish_confirmed": 0,
+          "neutral_confirmed": 0,
+          "overall_trend": "neutral"
+        },
+        "key_insights": [
+          "23 ngành chưa có xu hướng rõ ràng"
+        ]
+      },
       "sector_rotation": {
         "title": "Phân tích xoay vòng ngành",
         "money_flow_summary": {
@@ -33163,7 +33711,7 @@
             "name": "Hóa chất",
             "velocity": 0.92,
             "quadrant": "Lagging (Tụt hậu)",
-            "strength_score": -3.29,
+            "strength_score": -3.28,
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
@@ -33265,7 +33813,7 @@
               "name": "Hóa chất",
               "quadrant": "Lagging (Tụt hậu)",
               "velocity": 0.92,
-              "strength_score": -3.29
+              "strength_score": -3.28
             },
             {
               "name": "Công nghệ",
@@ -33621,32 +34169,32 @@
             "items": [
               {
                 "name": "Bảo hiểm",
-                "speed": 0.0059770609419703925,
-                "acceleration": 0.007439205379733057,
+                "speed": 0.00597404423749585,
+                "acceleration": 0.007433120146162363,
                 "type": "industry"
               },
               {
                 "name": "Thủy sản",
-                "speed": 0.005440276882058971,
-                "acceleration": 0.0072716589603054735,
+                "speed": 0.005440566985392015,
+                "acceleration": 0.007272204315949646,
                 "type": "industry"
               },
               {
                 "name": "Mía đường",
-                "speed": 0.005980220636916367,
-                "acceleration": 0.00532657505509666,
+                "speed": 0.005980815251963001,
+                "acceleration": 0.005328444371454485,
                 "type": "industry"
               },
               {
                 "name": "Công nghệ",
-                "speed": 0.005194496773327898,
-                "acceleration": 0.00541897674863527,
+                "speed": 0.005194210501942196,
+                "acceleration": 0.005418633913707404,
                 "type": "industry"
               },
               {
                 "name": "Bán lẻ",
-                "speed": 0.005873704904301977,
-                "acceleration": 0.007228106430607268,
+                "speed": 0.0058741624531866215,
+                "acceleration": 0.007228965380187614,
                 "type": "industry"
               }
             ]
@@ -33657,32 +34205,32 @@
             "items": [
               {
                 "name": "Đầu tư công",
-                "speed": 0.003917498911323543,
-                "acceleration": 0.0019305460041108306,
+                "speed": 0.003915716128865349,
+                "acceleration": 0.0019278769716738172,
                 "type": "industry"
               },
               {
                 "name": "Bất động sản khu công nghiệp",
-                "speed": 0.004003969974055348,
-                "acceleration": 0.005087668696276922,
+                "speed": 0.004003685349620372,
+                "acceleration": 0.005087659174632398,
                 "type": "industry"
               },
               {
                 "name": "Vận tải",
-                "speed": 0.0038161796512630646,
-                "acceleration": 0.0024542999136809816,
+                "speed": 0.003817611484624111,
+                "acceleration": 0.002456515539013001,
                 "type": "industry"
               },
               {
                 "name": "Dầu khí",
-                "speed": 0.004143612451498452,
-                "acceleration": 0.005099397185141734,
+                "speed": 0.004144455572044705,
+                "acceleration": 0.005099884077267055,
                 "type": "industry"
               },
               {
                 "name": "Dệt may",
-                "speed": 0.0037051123918826418,
-                "acceleration": 0.004977418773836677,
+                "speed": 0.003703804979729648,
+                "acceleration": 0.004974685947429017,
                 "type": "industry"
               }
             ]
@@ -33703,32 +34251,32 @@
             "items": [
               {
                 "name": "Bảo hiểm",
-                "speed": 0.0059770609419703925,
-                "acceleration": 0.007439205379733057,
+                "speed": 0.00597404423749585,
+                "acceleration": 0.007433120146162363,
                 "type": "industry"
               },
               {
                 "name": "Đầu tư công",
-                "speed": 0.003917498911323543,
-                "acceleration": 0.0019305460041108306,
+                "speed": 0.003915716128865349,
+                "acceleration": 0.0019278769716738172,
                 "type": "industry"
               },
               {
                 "name": "Thủy sản",
-                "speed": 0.005440276882058971,
-                "acceleration": 0.0072716589603054735,
+                "speed": 0.005440566985392015,
+                "acceleration": 0.007272204315949646,
                 "type": "industry"
               },
               {
                 "name": "Cao su",
-                "speed": 0.0026766802983070764,
-                "acceleration": 0.003319288322823526,
+                "speed": 0.0026786475045055794,
+                "acceleration": 0.003321947295142126,
                 "type": "industry"
               },
               {
                 "name": "Mía đường",
-                "speed": 0.005980220636916367,
-                "acceleration": 0.00532657505509666,
+                "speed": 0.005980815251963001,
+                "acceleration": 0.005328444371454485,
                 "type": "industry"
               }
             ]
@@ -33747,8 +34295,8 @@
             "items": [
               {
                 "name": "Thép",
-                "speed": 0.0010009798680096975,
-                "acceleration": -0.0007852111416609285,
+                "speed": 0.0010016113784506505,
+                "acceleration": -0.0007828211521240311,
                 "type": "industry"
               },
               {
@@ -33805,31 +34353,31 @@
               {
                 "name": "Bảo hiểm",
                 "risk_level": "Low",
-                "volatility": 0.013396048865158453,
+                "volatility": 0.01344095137925768,
                 "type": "industry"
               },
               {
                 "name": "Ngân hàng",
                 "risk_level": "Low",
-                "volatility": 0.010992453375506828,
+                "volatility": 0.01115179822330525,
                 "type": "industry"
               },
               {
                 "name": "Đầu tư công",
                 "risk_level": "Low",
-                "volatility": 0.010254526611406209,
+                "volatility": 0.010407570643741823,
                 "type": "industry"
               },
               {
                 "name": "Thủy sản",
                 "risk_level": "Low",
-                "volatility": 0.04828632781050981,
+                "volatility": 0.0483715031539666,
                 "type": "industry"
               },
               {
                 "name": "Cao su",
                 "risk_level": "Low",
-                "volatility": 0.04085402272528517,
+                "volatility": 0.04084289840732646,
                 "type": "industry"
               }
             ]
@@ -33856,31 +34404,31 @@
               {
                 "name": "Bảo hiểm",
                 "risk_level": "Low",
-                "volatility": 0.013396048865158453,
+                "volatility": 0.01344095137925768,
                 "type": "industry"
               },
               {
                 "name": "Ngân hàng",
                 "risk_level": "Low",
-                "volatility": 0.010992453375506828,
+                "volatility": 0.01115179822330525,
                 "type": "industry"
               },
               {
                 "name": "Đầu tư công",
                 "risk_level": "Low",
-                "volatility": 0.010254526611406209,
+                "volatility": 0.010407570643741823,
                 "type": "industry"
               },
               {
                 "name": "Thủy sản",
                 "risk_level": "Low",
-                "volatility": 0.04828632781050981,
+                "volatility": 0.0483715031539666,
                 "type": "industry"
               },
               {
                 "name": "Cao su",
                 "risk_level": "Low",
-                "volatility": 0.04085402272528517,
+                "volatility": 0.04084289840732646,
                 "type": "industry"
               }
             ]
