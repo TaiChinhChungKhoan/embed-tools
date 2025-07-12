@@ -624,7 +624,7 @@ analyze_rs Output JSON structure:
       }
     },  
     "detailed_analysis": {
-      "title": "Phân tích chi tiết (Detailed Analysis)",
+      "title": "Phân tích chi tiết",
       "sector_rotation": {
         "rotation_theme": "Growth to Value",
         "rotation_strength": "Moderate",
@@ -809,6 +809,19 @@ analyze_rs Output JSON structure:
           "volume_quality": "Good",
           "volume_consistency": 0.78
         }
+      },
+      
+      "trend_consistency": {
+        "consistency_score": 0.75,
+        "trend_alignment": "bullish",
+        "symbol_count": 15,
+        "bullish_count": 12,
+        "bearish_count": 2,
+        "neutral_count": 1,
+        "consensus_strength": 0.67,
+        "trend_confidence": 0.56,
+        "direction_consistency": 0.80,
+        "avg_strength": 8.45
       }
     }
   ],

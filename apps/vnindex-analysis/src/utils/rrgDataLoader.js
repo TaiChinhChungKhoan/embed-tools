@@ -3,10 +3,6 @@ import rrgData1W from '../data/rrg_data_1W.json';
 import analyzeRsData1D from '../data/analyze_rs_1D.json';
 import analyzeRsData1W from '../data/analyze_rs_1W.json';
 
-// Debug logging for imports
-console.log('rrgDataLoader - analyzeRsData1D keys:', Object.keys(analyzeRsData1D));
-console.log('rrgDataLoader - analyzeRsData1D.investment_strategies:', analyzeRsData1D?.investment_strategies);
-
 // Cache for processed data
 let processedData1D = null;
 let processedData1W = null;
@@ -271,10 +267,6 @@ export const getTickersForIndustry = (industryId, timeframe = '1D') => {
 export const getAnalyzeRsData = (timeframe = '1D') => {
   const analyzeRsData = timeframe === '1W' ? analyzeRsData1W : analyzeRsData1D;
   
-  // Debug logging
-  console.log(`getAnalyzeRsData (${timeframe}) - analyzeRsData keys:`, Object.keys(analyzeRsData));
-  console.log(`getAnalyzeRsData (${timeframe}) - investment_strategies:`, analyzeRsData?.investment_strategies);
-  
   // Ensure the data has the standardized structure
   const standardizedData = {
     ...analyzeRsData,
@@ -290,10 +282,6 @@ export const getAnalyzeRsData = (timeframe = '1D') => {
     groups: analyzeRsData.groups || [],
     symbols: analyzeRsData.symbols || []
   };
-
-  // Debug logging for standardized data
-  console.log(`getAnalyzeRsData (${timeframe}) - standardizedData keys:`, Object.keys(standardizedData));
-  console.log(`getAnalyzeRsData (${timeframe}) - standardizedData.investment_strategies:`, standardizedData?.investment_strategies);
 
   // Ensure each section has the standardized structure
   if (!standardizedData.insights.industries) {

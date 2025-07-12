@@ -16,10 +16,6 @@ export default function RRGAnalysis() {
   const rrgData = loadRRGData(timeframe);
   const analyzeRsData = getAnalyzeRsData(timeframe);
   
-  // Debug logging
-  console.log('RRGAnalysis - analyzeRsData keys:', Object.keys(analyzeRsData));
-  console.log('RRGAnalysis - investment_strategies:', analyzeRsData?.investment_strategies);
-  
   // Safely access insights data with fallbacks for new standardized structure
   const insights = analyzeRsData?.insights || {};
   const marketOverview = insights?.market_overview || {};
@@ -30,10 +26,6 @@ export default function RRGAnalysis() {
   // investment_strategies is under insights
   const investmentStrategies = insights?.investment_strategies || {};
   const detailedAnalysis = insights?.detailed_analysis || {};
-  
-  // Debug logging for investment strategies
-  console.log('RRGAnalysis - investmentStrategies:', investmentStrategies);
-  console.log('RRGAnalysis - investmentStrategies keys:', Object.keys(investmentStrategies));
   
   // Access the main data arrays
   const industries = analyzeRsData?.industries || [];
@@ -368,32 +360,6 @@ export default function RRGAnalysis() {
                   <RRGChart type="industries" timeframe={timeframe} />
                 </div>
               </div>
-              <div className="w-full mb-6">
-                {/* Interpretation Guide */}
-                <div className="bg-white rounded-lg shadow-sm border p-6 w-full">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Hướng dẫn đọc RRG</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Các góc phần tư</h4>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li><span className="font-medium text-green-600">Dẫn đầu:</span> Vượt trội với động lượng tích cực</li>
-                        <li><span className="font-medium text-yellow-600">Suy yếu:</span> Vượt trội nhưng động lượng giảm</li>
-                        <li><span className="font-medium text-red-600">Tụt hậu:</span> Kém hiệu quả với động lượng tiêu cực</li>
-                        <li><span className="font-medium text-blue-600">Cải thiện:</span> Kém hiệu quả nhưng động lượng tăng</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Chỉ số</h4>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li><span className="font-medium">Tỷ số RS:</span> Sức mạnh tương đối hiện tại so với VN-Index</li>
-                        <li><span className="font-medium">CRS:</span> Sức mạnh tương đối tích lũy (chuẩn hóa về 100)</li>
-                        <li><span className="font-medium">Vệt:</span> Đường đi lịch sử thể hiện sự xoay chuyển theo thời gian</li>
-                        <li><span className="font-medium">Màu sắc:</span> Dựa trên thời lượng dữ liệu (xanh = ngắn, đỏ = dài)</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 
@@ -410,32 +376,6 @@ export default function RRGAnalysis() {
                   <RRGChart type="groups" timeframe={timeframe} />
                 </div>
               </div>
-              <div className="w-full mb-6">
-                {/* Interpretation Guide */}
-                <div className="bg-white rounded-lg shadow-sm border p-6 w-full">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Hướng dẫn đọc RRG</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Các góc phần tư</h4>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li><span className="font-medium text-green-600">Dẫn đầu:</span> Vượt trội với động lượng tích cực</li>
-                        <li><span className="font-medium text-yellow-600">Suy yếu:</span> Vượt trội nhưng động lượng giảm</li>
-                        <li><span className="font-medium text-red-600">Tụt hậu:</span> Kém hiệu quả với động lượng tiêu cực</li>
-                        <li><span className="font-medium text-blue-600">Cải thiện:</span> Kém hiệu quả nhưng động lượng tăng</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Chỉ số</h4>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li><span className="font-medium">Tỷ số RS:</span> Sức mạnh tương đối hiện tại so với VN-Index</li>
-                        <li><span className="font-medium">CRS:</span> Sức mạnh tương đối tích lũy (chuẩn hóa về 100)</li>
-                        <li><span className="font-medium">Vệt:</span> Đường đi lịch sử thể hiện sự xoay chuyển theo thời gian</li>
-                        <li><span className="font-medium">Màu sắc:</span> Dựa trên thời lượng dữ liệu (xanh = ngắn, đỏ = dài)</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 
@@ -450,31 +390,6 @@ export default function RRGAnalysis() {
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
                   <RRGChart type="tickers" timeframe={timeframe} />
-                </div>
-              </div>
-              <div className="w-full mb-6">
-                <div className="bg-white rounded-lg shadow-sm border p-6 w-full">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Hướng dẫn đọc RRG</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Các góc phần tư</h4>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li><span className="font-medium text-green-600">Dẫn đầu:</span> Vượt trội với động lượng tích cực</li>
-                        <li><span className="font-medium text-yellow-600">Suy yếu:</span> Vượt trội nhưng động lượng giảm</li>
-                        <li><span className="font-medium text-red-600">Tụt hậu:</span> Kém hiệu quả với động lượng tiêu cực</li>
-                        <li><span className="font-medium text-blue-600">Cải thiện:</span> Kém hiệu quả nhưng động lượng tăng</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-2">Chỉ số</h4>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li><span className="font-medium">Tỷ số RS:</span> Sức mạnh tương đối hiện tại so với VN-Index</li>
-                        <li><span className="font-medium">CRS:</span> Sức mạnh tương đối tích lũy (chuẩn hóa về 100)</li>
-                        <li><span className="font-medium">Vệt:</span> Đường đi lịch sử thể hiện sự xoay chuyển theo thời gian</li>
-                        <li><span className="font-medium">Màu sắc:</span> Dựa trên thời lượng dữ liệu (xanh = ngắn, đỏ = dài)</li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
