@@ -55,17 +55,17 @@ class DataLoader {
     }
 
     // Load market breadth data
-    async loadMarketBreadth() {
-        return this.fetchData(`${this.basePath}/data/market_breadth.json`);
+    async loadAnalyzeBreadth() {
+        return this.fetchData(`${this.basePath}/data/analyze_breadth.json`);
     }
 
     // Load market breadth 4 data (up/down counts)
-    async loadMarketBreadth4() {
-        return this.fetchData(`${this.basePath}/data/market_breadth_4.json`);
+    async loadAnalyzeBreadth4() {
+        return this.fetchData(`${this.basePath}/data/analyze_breadth_4.json`);
     }
 
     // Load market breadth 5 data (EMA breadth analysis)
-    async loadMarketBreadth5() {
+    async loadAnalyzeBreadth5() {
         return this.fetchData(`${this.basePath}/data/analyze_breadth_5.json`);
     }
 
@@ -79,7 +79,7 @@ class DataLoader {
     }
 
     async loadMarketOverviewData() {
-        return this.fetchData(`${this.basePath}/data/market_breadth_4.json`);
+        return this.fetchData(`${this.basePath}/data/analyze_breadth_4.json`);
     }
 
     async loadAbnormalSignalsData() {

@@ -16,14 +16,14 @@ export const useDataLoader = (dataType, options = {}) => {
             let result;
             
             switch (dataType) {
-                case 'market_breadth':
-                    result = await dataLoader.loadMarketBreadth();
+                case 'analyze_breadth':
+                    result = await dataLoader.loadAnalyzeBreadth();
                     break;
-                case 'market_breadth_4':
-                    result = await dataLoader.loadMarketBreadth4();
+                case 'analyze_breadth_4':
+                    result = await dataLoader.loadAnalyzeBreadth4();
                     break;
-                case 'market_breadth_5':
-                    result = await dataLoader.loadMarketBreadth5();
+                case 'analyze_breadth_5':
+                    result = await dataLoader.loadAnalyzeBreadth5();
                     break;
                 case 'industries':
                     result = await dataLoader.loadIndustriesData();
@@ -170,14 +170,14 @@ export const useMultiDataLoader = (dataTypes, options = {}) => {
                 let result;
                 
                 switch (dataType) {
-                    case 'market_breadth':
-                        result = await dataLoader.loadMarketBreadth();
+                    case 'analyze_breadth':
+                        result = await dataLoader.loadAnalyzeBreadth();
                         break;
-                    case 'market_breadth_4':
-                        result = await dataLoader.loadMarketBreadth4();
+                    case 'analyze_breadth_4':
+                        result = await dataLoader.loadAnalyzeBreadth4();
                         break;
-                    case 'market_breadth_5':
-                        result = await dataLoader.loadMarketBreadth5();
+                    case 'analyze_breadth_5':
+                        result = await dataLoader.loadAnalyzeBreadth5();
                         break;
                     case 'industries':
                         result = await dataLoader.loadIndustriesData();

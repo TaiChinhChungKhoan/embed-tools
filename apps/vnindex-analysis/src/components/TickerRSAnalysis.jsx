@@ -37,6 +37,22 @@ const TickerRSAnalysis = () => {
         }
     };
 
+    // Extract unique industries for filter dropdown - must be called before any conditional returns
+    const uniqueIndustries = useMemo(() => {
+        if (!data || !data.symbols) return [];
+        const industries = new Set();
+        data.symbols.forEach(symbol => {
+            if (symbol.industries && symbol.industries.length > 0) {
+                symbol.industries.forEach(industry => {
+                    if (industry.name) {
+                        industries.add(industry.name);
+                    }
+                });
+            }
+        });
+        return Array.from(industries).sort();
+    }, [data]);
+
     // Filter and sort symbols - must be called before any conditional returns
     const filteredAndSortedSymbols = useMemo(() => {
         if (!data || !data.symbols) return [];

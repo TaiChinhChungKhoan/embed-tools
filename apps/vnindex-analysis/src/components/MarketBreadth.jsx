@@ -13,7 +13,7 @@ const MarketBreadth = ({ turnover, volume }) => {
     const chartRef = useRef(null);
     const seriesRef = useRef([]);
 
-    const { data, loading, error, lastUpdated, refresh } = useDataLoader('market_breadth_4', {
+    const { data, loading, error, lastUpdated, refresh } = useDataLoader('analyze_breadth_4', {
         refreshInterval: 5 * 60 * 1000 // Refresh every 5 minutes
     });
 

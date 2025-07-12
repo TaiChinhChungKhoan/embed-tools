@@ -5,7 +5,7 @@ import Card from './Card';
 import { useDataLoader } from '../hooks/useDataLoader';
 
 const MarketBreadthAnalysis = () => {
-    const { data: marketBreadthData, loading, error, lastUpdated, refresh } = useDataLoader('market_breadth', {
+    const { data: marketBreadthData, loading, error, lastUpdated, refresh } = useDataLoader('analyze_breadth', {
         refreshInterval: 5 * 60 * 1000 // Refresh every 5 minutes
     });
 

@@ -45,7 +45,7 @@ Mua (Strong Buy): Close ≥ High for 4 consecutive days
 Output: Market-wide sentiment indicators with smoothing
 Use Case: Market timing and overall sentiment assessment
 
-market_breadth.json Output Structure:
+analyze_breadth.json Output Structure:
 JSON Output Structure:
 {
   "metadata": {
@@ -265,7 +265,7 @@ Moving average smoothing options
 Output: Daily breadth data with charts and statistics
 Use Case: Market participation analysis and trend identification
 
-market_breadth_4.json Output Structure:
+analyze_breadth_4.json Output Structure:
 {
   "metadata": {
     "analysis_date": "2025-07-06T12:34:56.789012",

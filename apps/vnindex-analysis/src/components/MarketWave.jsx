@@ -14,7 +14,7 @@ const MarketWave = () => {
   const chartRef = useRef(null);
   const seriesRef = useRef([]);
 
-  const { data, loading, error } = useDataLoader('market_breadth');
+  const { data, loading, error } = useDataLoader('analyze_breadth');
 
   // Initialize chart
   useEffect(() => {

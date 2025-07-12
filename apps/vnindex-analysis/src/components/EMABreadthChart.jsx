@@ -56,7 +56,7 @@ const EMABreadthChart = () => {
     const [timeAgo, setTimeAgo] = useState('');
     const [chartType, setChartType] = useState('line'); // 'line' or 'area'
 
-    const { data, loading, error } = useDataLoader('market_breadth_5', {
+    const { data, loading, error } = useDataLoader('analyze_breadth_5', {
         refreshInterval: 5 * 60 * 1000,
     });
     
