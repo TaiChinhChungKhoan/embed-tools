@@ -7,8 +7,7 @@ import TickerChart from './components/TickerChart';
 import IndexChart from './components/IndexChart';
 import StockAbnormalSignals from './components/StockAbnormalSignals';
 import IndustryAbnormalSignals from './components/IndustryAbnormalSignals';
-import IndustryRSAnalysis from './components/IndustryRSAnalysis';
-import TickerRSAnalysis from './components/TickerRSAnalysis';
+import RelativeStrengthAnalysis from './components/RelativeStrengthAnalysis';
 import RRGAnalysis from './components/RRGAnalysis';
 import ValuationReport from './components/ValuationReport';
 import MarketOverviewReport from './components/MarketOverviewReport';
@@ -37,17 +36,14 @@ export default function App() {
     // Report options for each tab
     const reportOptions = {
         'Industries': [
-            { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS của các ngành nghề' },
-            { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong ngành' },
-            { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các ngành' },
-            { id: 'industry_strength', name: 'Biểu đồ Sức mạnh Ngành', description: 'Phân tích xu hướng sức mạnh và điểm yếu của từng ngành theo thời gian' }
+            { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS, RRG và xu hướng sức mạnh của các ngành nghề' },
+            { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong ngành' }
         ],
         'Tickers': [
-            { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS của các mã chứng khoán' },
+            { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS và RRG của các mã chứng khoán' },
             { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong mã chứng khoán' },
-            { id: 'rrg_analysis', name: 'Đồ thị Xoay Tương đối (RRG)', description: 'Phân tích sức mạnh tương đối và động lượng của các mã chứng khoán' },
             { id: 'vsa_report', name: 'Báo cáo VSA', description: 'Phân tích Volume Spread Analysis cho từng mã chứng khoán' },
-            { id: 'vcp_analysis', name: 'Phân tích VCP', description: 'Phân tích mẫu Volume, Close, Price cho các mã chứng khoán' }
+            { id: 'vcp_analysis', name: 'Phân tích VCP', description: 'Phân tích mẫu hình tích lũy VCP cho các mã chứng khoán' }
         ],
         'Market': [
             { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
@@ -258,7 +254,7 @@ export default function App() {
                                     )}
                                     {activeTab === 'Tickers' && (
                                         <div className="space-y-8">
-                                            <StockAbnormalSignals />
+                                            <RelativeStrengthAnalysis type="tickers" />
                                         </div>
                                     )}
                                 </>
@@ -267,17 +263,14 @@ export default function App() {
                                 <>
                                     {activeTab === 'Industries' && (
                                         <div className="space-y-8">
-                                            {activeReport === 'rs_analysis' && <IndustryRSAnalysis />}
+                                            {activeReport === 'rs_analysis' && <RelativeStrengthAnalysis type="industries" />}
                                             {activeReport === 'abnormal_signals' && <IndustryAbnormalSignals />}
-                                            {activeReport === 'rrg_analysis' && <RRGAnalysis />}
-                                            {activeReport === 'industry_strength' && <IndustryStrengthChart />}
                                         </div>
                                     )}
                                     {activeTab === 'Tickers' && (
                                         <div className="space-y-8">
-                                            {activeReport === 'rs_analysis' && <TickerRSAnalysis />}
+                                            {activeReport === 'rs_analysis' && <RelativeStrengthAnalysis type="tickers" />}
                                             {activeReport === 'abnormal_signals' && <StockAbnormalSignals />}
-                                            {activeReport === 'rrg_analysis' && <RRGAnalysis />}
                                             {activeReport === 'vsa_report' && <VSAReport />}
                                             {activeReport === 'vcp_analysis' && <VCPAnalysis />}
                                         </div>
@@ -306,7 +299,7 @@ export default function App() {
 
                 {/* Data Source Attribution - Always Show */}
                 <div className="text-center py-4 text-xs text-gray-500 border-t border-gray-200 dark:border-gray-700">
-                    <p>Sử dụng dữ liệu từ <a href="https://vnstocks.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">https://vnstocks.com/</a> Wichart.vn và Investing.com</p>
+                    <p>Sử dụng dữ liệu từ <a href="https://vnstocks.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline cursor-pointer">https://vnstocks.com/</a> Wichart.vn và Investing.com</p>
                 </div>
 
                 {!isEmbedded && (

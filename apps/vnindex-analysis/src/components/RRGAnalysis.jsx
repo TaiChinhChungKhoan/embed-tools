@@ -9,7 +9,7 @@ import { loadRRGData, getAnalyzeRsData } from '../utils/rrgDataLoader';
 
 
 // Main RRGAnalysis Component
-export default function RRGAnalysis() {
+export default function RRGAnalysis({ type = 'industries' }) {
   const [activeTab, setActiveTab] = useState('overview');
   const [timeframe, setTimeframe] = useState('1D');
   
@@ -160,30 +160,43 @@ export default function RRGAnalysis() {
     );
   };
 
-  const [overviewType, setOverviewType] = useState('industry');
-  const OverviewToggle = () => (
-    <div className="bg-gray-50 rounded-lg border p-4 flex items-center space-x-4 mb-4">
-      <span className="text-sm font-medium text-gray-700">Hiển thị tổng quan cho:</span>
-      <button
-        className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${overviewType === 'industry' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
-        onClick={() => setOverviewType('industry')}
-      >
-        Ngành nghề
-      </button>
-      <button
-        className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${overviewType === 'group' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
-        onClick={() => setOverviewType('group')}
-      >
-        Nhóm vốn hóa
-      </button>
-      <button
-        className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${overviewType === 'ticker' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
-        onClick={() => setOverviewType('ticker')}
-      >
-        Cổ phiếu
-      </button>
-    </div>
-  );
+  const [overviewType, setOverviewType] = useState(type === 'tickers' ? 'ticker' : 'industry');
+  const OverviewToggle = () => {
+    if (type === 'tickers') {
+      return (
+        <div className="bg-gray-50 rounded-lg border p-4 flex items-center space-x-4 mb-4">
+          <span className="text-sm font-medium text-gray-700">Phân tích cổ phiếu:</span>
+          <div className="text-sm text-gray-600">
+            Hiển thị xếp hạng và phân tích chi tiết cho các mã chứng khoán
+          </div>
+        </div>
+      );
+    }
+    
+    return (
+      <div className="bg-gray-50 rounded-lg border p-4 flex items-center space-x-4 mb-4">
+        <span className="text-sm font-medium text-gray-700">Hiển thị tổng quan cho:</span>
+        <button
+          className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${overviewType === 'industry' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+          onClick={() => setOverviewType('industry')}
+        >
+          Ngành nghề
+        </button>
+        <button
+          className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${overviewType === 'group' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+          onClick={() => setOverviewType('group')}
+        >
+          Nhóm vốn hóa
+        </button>
+        <button
+          className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${overviewType === 'ticker' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+          onClick={() => setOverviewType('ticker')}
+        >
+          Cổ phiếu
+        </button>
+      </div>
+    );
+  };
 
   return (
     <div className="w-full space-y-6">
@@ -252,36 +265,41 @@ export default function RRGAnalysis() {
             >
               Tổng quan
             </button>
-            <button
-              onClick={() => handleTabChange('industries')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer ${
-                activeTab === 'industries'
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              }`}
-            >
-              Ngành nghề ({industries.length})
-            </button>
-            <button
-              onClick={() => handleTabChange('groups')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer ${
-                activeTab === 'groups'
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              }`}
-            >
-              Nhóm vốn hóa ({groups.length})
-            </button>
-            <button
-              onClick={() => handleTabChange('tickers')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer ${
-                activeTab === 'tickers'
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              }`}
-            >
-              Cổ phiếu ({symbols.length})
-            </button>
+            {type === 'industries' ? (
+              <>
+                <button
+                  onClick={() => handleTabChange('chart-industries')}
+                  className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer ${
+                    activeTab === 'chart-industries'
+                      ? 'border-blue-500 text-blue-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  Biểu đồ RRG Ngành
+                </button>
+                <button
+                  onClick={() => handleTabChange('chart-groups')}
+                  className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer ${
+                    activeTab === 'chart-groups'
+                      ? 'border-blue-500 text-blue-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  Biểu đồ RRG Vốn Hóa
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={() => handleTabChange('chart')}
+                className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer ${
+                  activeTab === 'chart'
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                Biểu đồ RRG
+              </button>
+            )}
           </nav>
         </div>
 
@@ -294,7 +312,7 @@ export default function RRGAnalysis() {
               {/* Overview Panels */}
               {overviewType === 'industry' ? (
                 <>
-                <UnifiedRankingByScore 
+                  <UnifiedRankingByScore 
                     analysisData={industryAnalysis} 
                     type="industry"
                     getQuadrantColor={getQuadrantColor} 
@@ -305,11 +323,11 @@ export default function RRGAnalysis() {
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                   />
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />                  
+                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />
                 </>
               ) : overviewType === 'group' ? (
                 <>
-                <UnifiedRankingByScore 
+                  <UnifiedRankingByScore 
                     analysisData={groupAnalysis} 
                     type="group"
                     getQuadrantColor={getQuadrantColor} 
@@ -321,11 +339,11 @@ export default function RRGAnalysis() {
                     rrgData={rrgData}
                     investmentStrategies={investmentStrategies}
                   />
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />                  
+                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />                  
                 </>
               ) : (
                 <>
-                <UnifiedRankingByScore 
+                  <UnifiedRankingByScore 
                     analysisData={tickerAnalysis} 
                     type="ticker"
                     getQuadrantColor={getQuadrantColor} 
@@ -336,7 +354,7 @@ export default function RRGAnalysis() {
                     renderInsightItems={renderInsightItems} 
                     rrgData={rrgData}
                   />
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} />                  
+                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />                  
                 </>
               )}
               {/* Investment Strategy */}
@@ -347,10 +365,12 @@ export default function RRGAnalysis() {
             </div>
           )}
 
-          {activeTab === 'industries' && (
+          {activeTab === 'chart-industries' && (
             <div className="space-y-6">
               <div className="mb-4 w-full">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phân tích RRG ngành nghề</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Phân tích RRG ngành nghề
+                </h3>
                 <p className="text-gray-600">
                   Hiển thị sức mạnh tương đối và động lượng của các ngành. Ngành ở góc Dẫn đầu đang vượt trội với động lượng tích cực.
                 </p>
@@ -363,10 +383,12 @@ export default function RRGAnalysis() {
             </div>
           )}
 
-          {activeTab === 'groups' && (
+          {activeTab === 'chart-groups' && (
             <div className="space-y-6">
               <div className="mb-4 w-full">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phân tích RRG nhóm vốn hóa</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Phân tích RRG nhóm vốn hóa
+                </h3>
                 <p className="text-gray-600">
                   Hiển thị sức mạnh tương đối và động lượng của các nhóm vốn hóa (VN30, VN100, VNMidCap, VNSmallCap). Nhóm ở góc Dẫn đầu đang vượt trội với động lượng tích cực.
                 </p>
@@ -379,17 +401,22 @@ export default function RRGAnalysis() {
             </div>
           )}
 
-          {activeTab === 'tickers' && (
+          {activeTab === 'chart' && (
             <div className="space-y-6">
               <div className="mb-4 w-full">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phân tích RRG cổ phiếu</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Phân tích RRG {type === 'tickers' ? 'cổ phiếu' : 'nhóm vốn hóa'}
+                </h3>
                 <p className="text-gray-600">
-                  Hiển thị sức mạnh tương đối và động lượng của các cổ phiếu. Sử dụng bộ lọc ngành để tập trung vào các nhóm cụ thể và giảm nhiễu.
+                  {type === 'tickers'
+                    ? 'Hiển thị sức mạnh tương đối và động lượng của các cổ phiếu. Sử dụng bộ lọc ngành để tập trung vào các nhóm cụ thể và giảm nhiễu.'
+                    : 'Hiển thị sức mạnh tương đối và động lượng của các nhóm vốn hóa (VN30, VN100, VNMidCap, VNSmallCap). Nhóm ở góc Dẫn đầu đang vượt trội với động lượng tích cực.'
+                  }
                 </p>
-              </div>
+              </div>              
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type="tickers" timeframe={timeframe} />
+                  <RRGChart type={type} timeframe={timeframe} />
                 </div>
               </div>
             </div>

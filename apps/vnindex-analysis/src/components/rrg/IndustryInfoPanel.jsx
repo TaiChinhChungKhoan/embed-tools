@@ -41,52 +41,52 @@ const InfoCard = ({ title, tooltip, children }) => (
   </div>
 );
 
-const IndustryInfoPanel = ({ industry, analyzeData }) => {
+const IndustryInfoPanel = ({ industry }) => {
+  console.log('IndustryInfoPanel received:', industry); // DEBUG
   const [showTrendDesc, setShowTrendDesc] = useState(false);
-  const industryData = analyzeData.industries?.find(
-    ind => ind.custom_id === industry.id
-  );
 
-  if (!industryData) {
+  if (!industry) {
     return (
-      <div
-        key={industry.id}
-        className="bg-white border rounded-lg p-4 shadow-sm text-center"
-      >
-        <h3 className="text-lg font-bold text-gray-800">{industry.name}</h3>
-        <p className="text-gray-500 text-sm mt-1">
-          Không có dữ liệu chi tiết cho ngành này.
-        </p>
+      <div className="bg-white border rounded-lg p-4 shadow-sm text-center">
+        <h3 className="text-lg font-bold text-gray-800">Không có dữ liệu chi tiết cho ngành này.</h3>
       </div>
     );
   }
 
+  // Destructure all relevant fields from the industry object
   const {
+    name,
     metrics = {},
     speed_analysis = {},
     direction_analysis = {},
     risk_assessment = {},
-    trend_consistency = {}
-  } = industryData;
+    trend_consistency = {},
+    performance_summary = {},
+    custom_id,
+    latest_date,
+    breadth_detail = {}
+  } = industry;
 
   // Helper functions matching SymbolInfoPanel style
   const getRiskColor = (level) => {
     switch (level) {
-      case 'High': return 'text-red-500';
-      case 'Medium': return 'text-yellow-500';
-      case 'Low': return 'text-green-500';
+      case 'Cao': return 'text-red-500';
+      case 'Trung bình': return 'text-yellow-500';
+      case 'Thấp': return 'text-green-500';
       default: return 'text-gray-500';
     }
   };
-  
-  const translateRiskLevel = (level) => {
-    const translations = { 'High': 'Cao', 'Medium': 'Trung bình', 'Low': 'Thấp' };
-    return translations[level] || 'K/C';
-  };
 
-  const translateDirection = (direction) => {
-    const translations = { 'Uptrend': 'Xu hướng tăng', 'Downtrend': 'Xu hướng giảm', 'Sideways': 'Đi ngang' };
-    return translations[direction] || 'K/C';
+  // Helper to determine icon and color based on direction string
+  const getDirectionIconAndColor = (direction) => {
+    if (!direction) return { icon: TrendingDown, color: 'text-gray-600' };
+    if (direction === 'Tăng trưởng mạnh' || direction === 'Tăng trưởng')
+      return { icon: TrendingUp, color: 'text-green-600' };
+    if (direction === 'Đứng yên')
+      return { icon: Activity, color: 'text-yellow-600' };
+    if (direction === 'Suy giảm' || direction === 'Suy giảm mạnh')
+      return { icon: TrendingDown, color: 'text-red-600' };
+    return { icon: TrendingDown, color: 'text-gray-600' };
   };
 
   const formatPercent = (val) => (typeof val === 'number' ? `${(val * 100).toFixed(1)}%` : 'K/C');
@@ -94,7 +94,7 @@ const IndustryInfoPanel = ({ industry, analyzeData }) => {
   return (
     <div key={industry.id} className="bg-white border rounded-lg p-4 shadow-sm">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {/* Performance Summary */}
         <InfoCard
@@ -131,12 +131,17 @@ const IndustryInfoPanel = ({ industry, analyzeData }) => {
             label="Tốc độ 5 ngày"
             value={formatPercent(speed_analysis?.raw_speed_5d)}
           />
-          <MetricItem
-            icon={direction_analysis?.direction === 'Uptrend' ? TrendingUp : TrendingDown}
-            label="Hướng"
-            value={translateDirection(direction_analysis?.direction)}
-            valueClassName={direction_analysis?.direction === 'Uptrend' ? 'text-green-600' : 'text-red-600'}
-          />
+          {(() => {
+            const { icon: DirectionIcon, color: directionColor } = getDirectionIconAndColor(direction_analysis?.direction);
+            return (
+              <MetricItem
+                icon={DirectionIcon}
+                label="Hướng"
+                value={direction_analysis?.direction || 'K/C'}
+                valueClassName={directionColor}
+              />
+            );
+          })()}
           <MetricItem
             icon={Activity}
             label="Sức mạnh xu hướng"
@@ -146,14 +151,14 @@ const IndustryInfoPanel = ({ industry, analyzeData }) => {
         </InfoCard>
 
         {/* Risk Assessment */}
-        <InfoCard 
-          title="Đánh giá Rủi ro" 
+        <InfoCard
+          title="Đánh giá Rủi ro"
           tooltip="Mức độ rủi ro và quy mô vị thế gợi ý"
         >
           <MetricItem
             icon={Shield}
             label="Mức rủi ro"
-            value={translateRiskLevel(risk_assessment?.risk_level)}
+            value={risk_assessment?.risk_level}
             valueClassName={getRiskColor(risk_assessment?.risk_level)}
           />
           <MetricItem
@@ -163,86 +168,46 @@ const IndustryInfoPanel = ({ industry, analyzeData }) => {
           />
           <MetricItem
             icon={Users}
-            label="Chân trời đầu tư"
+            label="Khung thời gian"
             value={risk_assessment?.time_horizon || 'K/C'}
           />
         </InfoCard>
       </div>
 
-      {/* Trend Consistency - Full width section */}
-      <div className="mt-4">
+      {/* Breadth Detail and Trend Consistency - Side by Side */}
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Trend Consistency Section */}
         <InfoCard title="Tính Nhất Quán Xu Hướng Ngành">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-1">
-            <MetricItem
-              icon={BarChart}
-              label="Điểm nhất quán"
-              value={formatPercent(trend_consistency?.consistency_score)}
-            />
-            <MetricItem
-              icon={trend_consistency?.trend_alignment === 'bullish' ? TrendingUp : TrendingDown}
-              label="Căn chỉnh xu hướng"
-              value={
-                trend_consistency?.trend_alignment === 'bullish'
-                  ? 'Tăng giá'
-                  : trend_consistency?.trend_alignment === 'bearish'
-                  ? 'Giảm giá'
-                  : 'Trung lập'
-              }
-              valueClassName={
-                trend_consistency?.trend_alignment === 'bullish'
-                  ? 'text-green-600'
-                  : trend_consistency?.trend_alignment === 'bearish'
-                  ? 'text-red-600'
-                  : 'text-gray-600'
-              }
-            />
-            <MetricItem
-              icon={Users}
-              label="Số mã phân tích"
-              value={trend_consistency?.symbol_count || 'K/C'}
-            />
-            <MetricItem
-              icon={Activity}
-              label="Độ tin cậy xu hướng"
-              value={formatPercent(trend_consistency?.trend_confidence)}
-            />
-          </div>
-          
-          <div className="mt-2">
-            <button
-              className="flex items-center justify-between w-full text-xs text-blue-600 hover:text-blue-800 focus:outline-none"
-              onClick={() => setShowTrendDesc(prev => !prev)}
-              type="button"
-            >
-              <span>{showTrendDesc ? 'Ẩn' : 'Xem'} giải thích</span>
-              {showTrendDesc ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-            </button>
-          </div>
-          
-          {showTrendDesc && (
-            <div className="mt-2 p-3 bg-blue-50/50 border border-blue-200/50 rounded text-xs text-gray-700 space-y-2">
-              <p>
-                <b>Tính nhất quán xu hướng</b> phân tích mức độ đồng nhất trong
-                hướng di chuyển của các cổ phiếu trong ngành, qua đó xác nhận
-                xu hướng chung.
-              </p>
-              <ul className="list-disc list-inside space-y-1">
-                <li>
-                  <b>
-                    Điểm Nhất Quán ({trend_consistency?.consistency_score?.toFixed(2)})
-                  </b>
-                  : Điểm cao cho thấy sự đồng thuận mạnh mẽ giữa các cổ phiếu.
-                </li>
-                <li>
-                  <b>
-                    Sức Mạnh Đồng Thuận (
-                    {trend_consistency?.consensus_strength?.toFixed(2)})
-                  </b>
-                  : Dương là đồng thuận tăng, âm là đồng thuận giảm.
-                </li>
-              </ul>
+          <div className="grid grid-cols-4 gap-x-6 text-center">
+            <div>
+              <div className="text-xs text-gray-500">Điểm nhất quán</div>
+              <div className="font-mono font-semibold text-base">
+                {formatPercent(trend_consistency?.consistency_score)}
+              </div>
             </div>
-          )}
+            <div>
+              <div className="text-xs text-gray-500">Căn chỉnh xu hướng</div>
+              <div className="font-mono font-semibold text-base">
+                {trend_consistency?.trend_alignment === 'Tích cực'
+                  ? 'Tăng giá'
+                  : trend_consistency?.trend_alignment === 'Tiêu cực'
+                  ? 'Giảm giá'
+                  : 'Trung lập'}
+              </div>
+            </div>
+            <div>
+              <div className="text-xs text-gray-500">Số mã phân tích</div>
+              <div className="font-mono font-semibold text-base">
+                {trend_consistency?.symbol_count || 'K/C'}
+              </div>
+            </div>
+            <div>
+              <div className="text-xs text-gray-500">Độ tin cậy xu hướng</div>
+              <div className="font-mono font-semibold text-base">
+                {formatPercent(trend_consistency?.trend_confidence)}
+              </div>
+            </div>
+          </div>
         </InfoCard>
       </div>
     </div>

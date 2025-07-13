@@ -74,40 +74,78 @@ const InvestmentStrategy = ({ investmentStrategies }) => {
       <h3 className="text-lg font-semibold text-orange-900 mb-3">{investmentStrategies.title || 'Chiến lược đầu tư đề xuất'}</h3>
       
       <div className="space-y-4">
-        {/* Macro Strategy */}
-        {hasMacroData && (
-          <div>
-            <h4 className="font-medium text-orange-800 mb-2">Chiến lược tổng thể thị trường</h4>
-            <div className="bg-white p-3 rounded border">
-              <div className="space-y-2">
-                {investmentStrategies.macro_strategy.overall_positioning && investmentStrategies.macro_strategy.overall_positioning.length > 0 && (
-                  <div>
-                    <div className="text-sm font-medium text-gray-700 mb-1">Tư thế tổng thể:</div>
-                    {investmentStrategies.macro_strategy.overall_positioning.map((position, index) => (
-                      <div key={index} className="text-sm text-gray-700 ml-2">• {position}</div>
-                    ))}
-                  </div>
-                )}
-                {investmentStrategies.macro_strategy.market_phase_analysis && investmentStrategies.macro_strategy.market_phase_analysis.length > 0 && (
-                  <div>
-                    <div className="text-sm font-medium text-gray-700 mb-1">Phân tích giai đoạn thị trường:</div>
-                    {investmentStrategies.macro_strategy.market_phase_analysis.map((analysis, index) => (
-                      <div key={index} className="text-sm text-gray-700 ml-2">• {analysis}</div>
-                    ))}
-                  </div>
-                )}
-                {investmentStrategies.macro_strategy.risk_management && investmentStrategies.macro_strategy.risk_management.length > 0 && (
-                  <div>
-                    <div className="text-sm font-medium text-gray-700 mb-1">Quản lý rủi ro:</div>
-                    {investmentStrategies.macro_strategy.risk_management.map((risk, index) => (
-                      <div key={index} className="text-sm text-gray-700 ml-2">• {risk}</div>
-                    ))}
-                  </div>
-                )}
+        {/* Macro and Group Strategy in 2 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Macro Strategy */}
+          {hasMacroData && (
+            <div>
+              <h4 className="font-medium text-orange-800 mb-2">Chiến lược tổng thể thị trường</h4>
+              <div className="bg-white p-3 rounded border">
+                <div className="space-y-2">
+                  {investmentStrategies.macro_strategy.overall_positioning && investmentStrategies.macro_strategy.overall_positioning.length > 0 && (
+                    <div>
+                      <div className="text-sm font-medium text-gray-700 mb-1">Tư thế tổng thể:</div>
+                      {investmentStrategies.macro_strategy.overall_positioning.map((position, index) => (
+                        <div key={index} className="text-sm text-gray-700 ml-2">• {position}</div>
+                      ))}
+                    </div>
+                  )}
+                  {investmentStrategies.macro_strategy.market_phase_analysis && investmentStrategies.macro_strategy.market_phase_analysis.length > 0 && (
+                    <div>
+                      <div className="text-sm font-medium text-gray-700 mb-1">Phân tích giai đoạn thị trường:</div>
+                      {investmentStrategies.macro_strategy.market_phase_analysis.map((analysis, index) => (
+                        <div key={index} className="text-sm text-gray-700 ml-2">• {analysis}</div>
+                      ))}
+                    </div>
+                  )}
+                  {investmentStrategies.macro_strategy.risk_management && investmentStrategies.macro_strategy.risk_management.length > 0 && (
+                    <div>
+                      <div className="text-sm font-medium text-gray-700 mb-1">Quản lý rủi ro:</div>
+                      {investmentStrategies.macro_strategy.risk_management.map((risk, index) => (
+                        <div key={index} className="text-sm text-gray-700 ml-2">• {risk}</div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+
+          {/* Group Strategy */}
+          {hasGroupData && (
+            <div>
+              <h4 className="font-medium text-orange-800 mb-2">Chiến lược nhóm vốn hóa</h4>
+              <div className="bg-white p-3 rounded border">
+                <div className="space-y-2">
+                  {investmentStrategies.group_strategy.group_rotation_signals && investmentStrategies.group_strategy.group_rotation_signals.length > 0 && (
+                    <div>
+                      <div className="text-sm font-medium text-blue-700 mb-1">Tín hiệu luân chuyển nhóm:</div>
+                      {investmentStrategies.group_strategy.group_rotation_signals.map((signal, index) => (
+                        <div key={index} className="text-sm text-gray-700 ml-2">• {signal}</div>
+                      ))}
+                    </div>
+                  )}
+                  {investmentStrategies.group_strategy.group_allocation && investmentStrategies.group_strategy.group_allocation.length > 0 && (
+                    <div>
+                      <div className="text-sm font-medium text-green-700 mb-1">Phân bổ nhóm:</div>
+                      {investmentStrategies.group_strategy.group_allocation.map((allocation, index) => (
+                        <div key={index} className="text-sm text-gray-700 ml-2">• {allocation}</div>
+                      ))}
+                    </div>
+                  )}
+                  {investmentStrategies.group_strategy.group_risk_warnings && investmentStrategies.group_strategy.group_risk_warnings.length > 0 && (
+                    <div>
+                      <div className="text-sm font-medium text-red-700 mb-1">Cảnh báo rủi ro nhóm:</div>
+                      {investmentStrategies.group_strategy.group_risk_warnings.map((warning, index) => (
+                        <div key={index} className="text-sm text-gray-700 ml-2">• {warning}</div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Sector Strategy */}
         {hasSectorData && (
@@ -135,41 +173,6 @@ const InvestmentStrategy = ({ investmentStrategies }) => {
                   <div>
                     <div className="text-sm font-medium text-red-700 mb-1">Cảnh báo rủi ro ngành:</div>
                     {investmentStrategies.sector_strategy.sector_risk_warnings.map((warning, index) => (
-                      <div key={index} className="text-sm text-gray-700 ml-2">• {warning}</div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Group Strategy */}
-        {hasGroupData && (
-          <div>
-            <h4 className="font-medium text-orange-800 mb-2">Chiến lược nhóm vốn hóa</h4>
-            <div className="bg-white p-3 rounded border">
-              <div className="space-y-2">
-                {investmentStrategies.group_strategy.group_rotation_signals && investmentStrategies.group_strategy.group_rotation_signals.length > 0 && (
-                  <div>
-                    <div className="text-sm font-medium text-blue-700 mb-1">Tín hiệu luân chuyển nhóm:</div>
-                    {investmentStrategies.group_strategy.group_rotation_signals.map((signal, index) => (
-                      <div key={index} className="text-sm text-gray-700 ml-2">• {signal}</div>
-                    ))}
-                  </div>
-                )}
-                {investmentStrategies.group_strategy.group_allocation && investmentStrategies.group_strategy.group_allocation.length > 0 && (
-                  <div>
-                    <div className="text-sm font-medium text-green-700 mb-1">Phân bổ nhóm:</div>
-                    {investmentStrategies.group_strategy.group_allocation.map((allocation, index) => (
-                      <div key={index} className="text-sm text-gray-700 ml-2">• {allocation}</div>
-                    ))}
-                  </div>
-                )}
-                {investmentStrategies.group_strategy.group_risk_warnings && investmentStrategies.group_strategy.group_risk_warnings.length > 0 && (
-                  <div>
-                    <div className="text-sm font-medium text-red-700 mb-1">Cảnh báo rủi ro nhóm:</div>
-                    {investmentStrategies.group_strategy.group_risk_warnings.map((warning, index) => (
                       <div key={index} className="text-sm text-gray-700 ml-2">• {warning}</div>
                     ))}
                   </div>

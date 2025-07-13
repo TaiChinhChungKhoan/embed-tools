@@ -106,9 +106,9 @@ const MarketBreadthAnalysis = () => {
         <div className="space-y-6">
             {/* Header with refresh button */}
             <div className="flex items-center justify-between">
-                <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
                     Phân tích độ rộng thị trường
-                </h2>
+                </h3>
                 <div className="flex items-center space-x-4">
                     {lastUpdated && (
                         <p className="text-sm text-gray-500 dark:text-gray-400">

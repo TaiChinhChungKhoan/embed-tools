@@ -283,6 +283,28 @@ export const getAnalyzeRsData = (timeframe = '1D') => {
     symbols: analyzeRsData.symbols || []
   };
 
+  // Ensure detailed_analysis structure exists and include momentum_distribution
+  if (!standardizedData.insights.detailed_analysis) {
+    standardizedData.insights.detailed_analysis = {
+      title: "Phân tích chi tiết",
+      sector_rotation: {},
+      market_cap_flow: {},
+      momentum_cycles: {},
+      institutional_flow: {},
+      speed_distribution: {},
+      risk_distribution: {},
+      systemic_risks: {},
+      breadth_detail: {},
+      volatility_regime: {}
+    };
+  }
+
+  // Add momentum_distribution to detailed_analysis if it exists in market_overview
+  if (standardizedData.insights.market_overview?.market_health?.key_metrics?.momentum_distribution) {
+    standardizedData.insights.detailed_analysis.momentum_distribution = 
+      standardizedData.insights.market_overview.market_health.key_metrics.momentum_distribution;
+  }
+
   // Ensure each section has the standardized structure
   if (!standardizedData.insights.industries) {
     standardizedData.insights.industries = {

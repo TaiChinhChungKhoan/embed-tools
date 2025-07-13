@@ -36,11 +36,12 @@ const InfoCard = ({ title, children }) => (
 );
 
 const SymbolInfoPanel = ({ symbol, analyzeData }) => {
-    const symbolData = analyzeData.symbols?.find(s => s.symbol === symbol.id);
+    // Use the symbol object directly since it contains all the data we need
+    const symbolData = symbol;
 
     if (!symbolData) {
         return (
-            <div key={symbol.id} className="bg-white border rounded-lg p-4 shadow-sm">
+            <div key={symbol.symbol} className="bg-white border rounded-lg p-4 shadow-sm">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">{symbol.name}</h3>
                 <p className="text-gray-500 text-sm">Không có dữ liệu chi tiết cho mã này.</p>
             </div>

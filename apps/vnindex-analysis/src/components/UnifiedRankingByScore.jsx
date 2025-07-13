@@ -29,8 +29,8 @@ const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor }) => {
   const typeLabels = {
     industry: {
       title: 'Xếp hạng ngành theo điểm số',
-      topLabel: 'Top 10 ngành mạnh nhất',
-      bottomLabel: 'Top 10 ngành yếu nhất',
+      topLabel: 'Ngành mạnh nhất',
+      bottomLabel: 'Ngành yếu nhất',
       bgColor: 'bg-green-50',
       borderColor: 'border-green-200',
       textColor: 'text-green-900',
@@ -49,8 +49,8 @@ const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor }) => {
     },
     ticker: {
       title: 'Xếp hạng cổ phiếu theo điểm số',
-      topLabel: 'Top 10 cổ phiếu mạnh nhất',
-      bottomLabel: 'Top 10 cổ phiếu yếu nhất',
+      topLabel: 'Cổ phiếu mạnh nhất',
+      bottomLabel: 'Cổ phiếu yếu nhất',
       bgColor: 'bg-purple-50',
       borderColor: 'border-purple-200',
       textColor: 'text-purple-900',

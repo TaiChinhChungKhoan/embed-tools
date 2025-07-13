@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useDataLoader } from '../hooks/useDataLoader';
 import { TrendingUp, TrendingDown, Activity, BarChart3, Target, AlertTriangle, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import Card from './Card';
+import SymbolInfoPanel from './rrg/SymbolInfoPanel';
 
 const TickerRSAnalysis = () => {
     const { data, loading, error } = useDataLoader('rs_analysis');
@@ -12,6 +13,7 @@ const TickerRSAnalysis = () => {
     const [statusFilter, setStatusFilter] = useState('');
     const [sortField, setSortField] = useState('current_crs');
     const [sortDirection, setSortDirection] = useState('desc');
+    const [expandedSymbolId, setExpandedSymbolId] = useState(null);
 
     // Helper function to get sort value
     const getSortValue = (symbol, field) => {
@@ -32,6 +34,16 @@ const TickerRSAnalysis = () => {
                 return symbol.performance_summary.rs_trend;
             case 'crs_status':
                 return symbol.performance_summary.crs_status;
+            case 'short_term_momentum':
+                return symbol.speed_analysis?.short_term_momentum || 0;
+            case 'long_term_momentum':
+                return symbol.speed_analysis?.long_term_momentum || 0;
+            case 'weighted_speed':
+                return symbol.speed_analysis?.weighted_speed || 0;
+            case 'momentum_ratio':
+                return symbol.speed_analysis?.momentum_ratio || 0;
+            case 'speed_category':
+                return symbol.speed_analysis?.speed_category || '';
             default:
                 return 0;
         }
@@ -138,10 +150,12 @@ const TickerRSAnalysis = () => {
     // Helper function to get trend color
     const getTrendColor = (trend) => {
         switch (trend) {
-            case 'bullish':
+            case 'Tăng trưởng':
                 return 'text-green-600 dark:text-green-400';
-            case 'bearish':
+            case 'Suy giảm':
                 return 'text-red-600 dark:text-red-400';
+            case 'Trung lập':
+                return 'text-gray-600 dark:text-gray-400';
             default:
                 return 'text-gray-600 dark:text-gray-400';
         }
@@ -150,12 +164,26 @@ const TickerRSAnalysis = () => {
     // Helper function to get trend icon
     const getTrendIcon = (trend) => {
         switch (trend) {
-            case 'bullish':
+            case 'Tăng trưởng':
                 return <TrendingUp className="h-4 w-4" />;
-            case 'bearish':
+            case 'Suy giảm':
                 return <TrendingDown className="h-4 w-4" />;
             default:
                 return <Activity className="h-4 w-4" />;
+        }
+    };
+
+    // Helper function to get status color
+    const getStatusColor = (status) => {
+        switch (status) {
+            case 'Vượt trội':
+                return 'text-green-600 dark:text-green-400';
+            case 'Kém hiệu quả':
+                return 'text-red-600 dark:text-red-400';
+            case 'Trung lập':
+                return 'text-gray-600 dark:text-gray-400';
+            default:
+                return 'text-gray-600 dark:text-gray-400';
         }
     };
 
@@ -166,6 +194,18 @@ const TickerRSAnalysis = () => {
       const first = industries[0];
       const name = primary?.name || first?.name;
       return typeof name === 'string' ? name : 'Unknown Industry';
+    };
+
+    // Helper function to get contextual momentum color
+    const getMomentumColor = (trend, momentum) => {
+        if (trend === 'Tăng trưởng') {
+            if (momentum > 0) return 'text-green-600 dark:text-green-400'; // accelerating up
+            if (momentum < 0) return 'text-red-600 dark:text-red-400'; // losing steam
+        } else if (trend === 'Suy giảm') {
+            if (momentum > 0) return 'text-red-600 dark:text-red-400'; // accelerating down
+            if (momentum < 0) return 'text-green-600 dark:text-green-400'; // decline slowing
+        }
+        return 'text-gray-600 dark:text-gray-400'; // neutral
     };
 
     // Handle sort
@@ -332,7 +372,7 @@ const TickerRSAnalysis = () => {
             {activeSection === 'top_performers' && (
                 <div className="space-y-4">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                        Top 10 Mã mạnh nhất
+                        Mã mạnh nhất
                     </h3>
                     
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -352,9 +392,9 @@ const TickerRSAnalysis = () => {
                                     </div>
                                     <div className="text-right">
                                         <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                                            symbol.performance_summary.rs_trend === 'bullish' 
+                                            symbol.performance_summary.rs_trend === 'Tăng trưởng' 
                                                 ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
-                                                : symbol.performance_summary.rs_trend === 'bearish'
+                                                : symbol.performance_summary.rs_trend === 'Suy giảm'
                                                 ? 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200'
                                                 : 'bg-gray-100 dark:bg-gray-900/50 text-gray-800 dark:text-gray-200'
                                         }`}>
@@ -398,7 +438,7 @@ const TickerRSAnalysis = () => {
             {activeSection === 'bottom_performers' && (
                 <div className="space-y-4">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                        Top 10 Mã yếu nhất
+                        Mã yếu nhất
                     </h3>
                     
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -418,9 +458,9 @@ const TickerRSAnalysis = () => {
                                     </div>
                                     <div className="text-right">
                                         <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                                            symbol.performance_summary.rs_trend === 'bullish' 
+                                            symbol.performance_summary.rs_trend === 'Tăng trưởng' 
                                                 ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
-                                                : symbol.performance_summary.rs_trend === 'bearish'
+                                                : symbol.performance_summary.rs_trend === 'Suy giảm'
                                                 ? 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200'
                                                 : 'bg-gray-100 dark:bg-gray-900/50 text-gray-800 dark:text-gray-200'
                                         }`}>
@@ -509,7 +549,7 @@ const TickerRSAnalysis = () => {
                                     ))}
                                 </select>
                             </div>
-                            {/* Trend Filter */}
+                            {/* Xu hướng (Trend) Filter */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                     Xu hướng
@@ -520,12 +560,12 @@ const TickerRSAnalysis = () => {
                                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-sm"
                                 >
                                     <option value="">Tất cả xu hướng</option>
-                                    <option value="bullish">Bullish</option>
-                                    <option value="bearish">Bearish</option>
-                                    <option value="neutral">Neutral</option>
+                                    <option value="Tăng trưởng">Tăng trưởng</option>
+                                    <option value="Suy giảm">Suy giảm</option>
+                                    <option value="Trung lập">Trung lập</option>
                                 </select>
                             </div>
-                            {/* Status Filter */}
+                            {/* Trạng thái (Status) Filter */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                     Trạng thái
@@ -536,8 +576,9 @@ const TickerRSAnalysis = () => {
                                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-sm"
                                 >
                                     <option value="">Tất cả trạng thái</option>
-                                    <option value="outperforming">Outperforming</option>
-                                    <option value="underperforming">Underperforming</option>
+                                    <option value="Vượt trội">Vượt trội</option>
+                                    <option value="Kém hiệu quả">Kém hiệu quả</option>
+                                    <option value="Trung lập">Trung lập</option>
                                 </select>
                             </div>
                             {/* Clear Filters */}
@@ -578,6 +619,11 @@ const TickerRSAnalysis = () => {
                                             Tên công ty
                                             <SortIcon field="name" />
                                         </div>
+                                    </th>
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                                    >
+                                        Ngành
                                     </th>
                                     <th 
                                         className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
@@ -633,71 +679,152 @@ const TickerRSAnalysis = () => {
                                             <SortIcon field="crs_status" />
                                         </div>
                                     </th>
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('short_term_momentum')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Momentum ngắn hạn
+                                            <SortIcon field="short_term_momentum" />
+                                        </div>
+                                    </th>
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('long_term_momentum')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Momentum dài hạn
+                                            <SortIcon field="long_term_momentum" />
+                                        </div>
+                                    </th>
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('weighted_speed')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Tốc độ tổng hợp
+                                            <SortIcon field="weighted_speed" />
+                                        </div>
+                                    </th>
+                                    <th 
+                                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        onClick={() => handleSort('speed_category')}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            Phân loại tốc độ
+                                            <SortIcon field="speed_category" />
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                                 {filteredAndSortedSymbols.map((symbol, index) => (
-                                    <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                                        <td className="px-4 py-3 whitespace-nowrap">
-                                            <div>
-                                                <div className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                                    {symbol.symbol}
+                                    <React.Fragment key={index}>
+                                        <tr 
+                                            className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+                                            onClick={() => setExpandedSymbolId(expandedSymbolId === symbol.symbol ? null : symbol.symbol)}
+                                        >
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <div className="flex items-center">
+                                                    {expandedSymbolId === symbol.symbol ? (
+                                                        <ChevronUp className="w-4 h-4 text-gray-400 mr-2" />
+                                                    ) : (
+                                                        <ChevronDown className="w-4 h-4 text-gray-400 mr-2" />
+                                                    )}
+                                                    <div>
+                                                        <div className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                            {symbol.symbol}
+                                                        </div>
+                                                        <div className="text-sm text-gray-500 dark:text-gray-400">
+                                                            #{index + 1}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div className="text-sm text-gray-500 dark:text-gray-400">
-                                                    #{index + 1}
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <div className="text-sm text-gray-900 dark:text-gray-100">
+                                                    {symbol.name}
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap">
-                                            <div className="text-sm text-gray-900 dark:text-gray-100">
-                                                {symbol.name}
-                                            </div>
-                                            {symbol.industries && symbol.industries.length > 0 && (
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
                                                 <div className="text-xs text-gray-500 dark:text-gray-400">
                                                     {getIndustryName(symbol.industries)}
                                                 </div>
-                                            )}
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap">
-                                            <span className={`text-sm font-medium ${
-                                                symbol.metrics.current_crs > 0 
-                                                    ? 'text-green-600 dark:text-green-400' 
-                                                    : 'text-red-600 dark:text-red-400'
-                                            }`}>
-                                                {formatCRS(symbol.metrics.current_crs)}
-                                            </span>
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
-                                            {symbol.metrics.current_rs.toFixed(4)}
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
-                                            {symbol.metrics.current_ma13.toFixed(4)}
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
-                                            {symbol.metrics.current_ma49.toFixed(4)}
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap">
-                                            <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                                                symbol.performance_summary.rs_trend === 'bullish' 
-                                                    ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
-                                                    : symbol.performance_summary.rs_trend === 'bearish'
-                                                    ? 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200'
-                                                    : 'bg-gray-100 dark:bg-gray-900/50 text-gray-800 dark:text-gray-200'
-                                            }`}>
-                                                {getTrendIcon(symbol.performance_summary.rs_trend)}
-                                                <span className="ml-1">{symbol.performance_summary.rs_trend}</span>
-                                            </span>
-                                        </td>
-                                        <td className="px-4 py-3 whitespace-nowrap">
-                                            <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                                                symbol.performance_summary.crs_status === 'outperforming' 
-                                                    ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
-                                                    : 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200'
-                                            }`}>
-                                                {symbol.performance_summary.crs_status}
-                                            </span>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className={`text-sm font-medium ${
+                                                    symbol.metrics.current_crs > 0 
+                                                        ? 'text-green-600 dark:text-green-400' 
+                                                        : 'text-red-600 dark:text-red-400'
+                                                }`}>
+                                                    {formatCRS(symbol.metrics.current_crs)}
+                                                </span>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                                                {symbol.metrics.current_rs.toFixed(4)}
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                                                {symbol.metrics.current_ma13.toFixed(4)}
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                                                {symbol.metrics.current_ma49.toFixed(4)}
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                                                    symbol.performance_summary.rs_trend === 'Tăng trưởng' 
+                                                        ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
+                                                        : symbol.performance_summary.rs_trend === 'Suy giảm'
+                                                        ? 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200'
+                                                        : 'bg-gray-100 dark:bg-gray-900/50 text-gray-800 dark:text-gray-200'
+                                                }`}>
+                                                    {getTrendIcon(symbol.performance_summary.rs_trend)}
+                                                    <span className="ml-1">{symbol.performance_summary.rs_trend}</span>
+                                                </span>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                                                    symbol.performance_summary.crs_status === 'Vượt trội' 
+                                                        ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
+                                                        : 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200'
+                                                }`}>
+                                                    {symbol.performance_summary.crs_status}
+                                                </span>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className={`text-sm font-medium ${getMomentumColor(symbol.performance_summary.rs_trend, symbol.speed_analysis?.short_term_momentum)}`}>
+                                                    {symbol.speed_analysis?.short_term_momentum ? 
+                                                        (symbol.speed_analysis.short_term_momentum > 0 ? '+' : '') + formatPercentage(symbol.speed_analysis.short_term_momentum) 
+                                                        : 'N/A'}
+                                                </span>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className={`text-sm font-medium ${getMomentumColor(symbol.performance_summary.rs_trend, symbol.speed_analysis?.long_term_momentum)}`}>
+                                                    {symbol.speed_analysis?.long_term_momentum ? 
+                                                        (symbol.speed_analysis.long_term_momentum > 0 ? '+' : '') + formatPercentage(symbol.speed_analysis.long_term_momentum) 
+                                                        : 'N/A'}
+                                                </span>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className={`text-sm font-medium ${getMomentumColor(symbol.performance_summary.rs_trend, symbol.speed_analysis?.weighted_speed)}`}>
+                                                    {symbol.speed_analysis?.weighted_speed ? 
+                                                        (symbol.speed_analysis.weighted_speed > 0 ? '+' : '') + formatPercentage(symbol.speed_analysis.weighted_speed) 
+                                                        : 'N/A'}
+                                                </span>
+                                            </td>
+                                            <td className="px-4 py-3 whitespace-nowrap">
+                                                <span className="text-sm text-gray-900 dark:text-gray-100">
+                                                    {symbol.speed_analysis?.speed_category || 'N/A'}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        {expandedSymbolId === symbol.symbol && (
+                                            <tr>
+                                                <td colSpan={13} className="bg-gray-50 dark:bg-gray-900/50 p-4">
+                                                    <SymbolInfoPanel symbol={symbol} analyzeData={data} />
+                                                </td>
+                                            </tr>
+                                        )}
+                                    </React.Fragment>
                                 ))}
                             </tbody>
                         </table>

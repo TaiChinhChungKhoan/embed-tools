@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MarketOverview = ({ marketOverview, getSentimentColor }) => {
+const MarketOverview = ({ marketOverview, getSentimentColor, breadth_detail }) => {
   if (!marketOverview || !marketOverview.title) return null;
   
   return (
@@ -162,13 +162,16 @@ const MarketOverview = ({ marketOverview, getSentimentColor }) => {
                 <div className="p-2 bg-red-50 rounded">
                   <div className="font-medium text-sm text-red-700 mb-1">Phân bổ rủi ro</div>
                   <div className="text-xs text-gray-600 mb-1">
-                    <span className="font-medium">Cao:</span> {marketOverview.market_health.key_metrics.momentum_distribution.risk_distribution.High || 'N/A'}
+                    <span className="font-medium">Cao:</span> {marketOverview.market_health.key_metrics.momentum_distribution.risk_distribution['Cao'] || 'N/A'}
                   </div>
                   <div className="text-xs text-gray-600 mb-1">
-                    <span className="font-medium">Trung bình:</span> {marketOverview.market_health.key_metrics.momentum_distribution.risk_distribution.Medium || 'N/A'}
+                    <span className="font-medium">Trung bình:</span> {marketOverview.market_health.key_metrics.momentum_distribution.risk_distribution['Trung bình'] || 'N/A'}
                   </div>
                   <div className="text-xs text-gray-600 mb-1">
-                    <span className="font-medium">Thấp:</span> {marketOverview.market_health.key_metrics.momentum_distribution.risk_distribution.Low || 'N/A'}
+                    <span className="font-medium">Thấp:</span> {marketOverview.market_health.key_metrics.momentum_distribution.risk_distribution['Thấp'] || 'N/A'}
+                  </div>
+                  <div className="text-xs text-red-600 font-medium mt-1">
+                    {marketOverview.market_health.key_metrics.momentum_distribution.momentum_summary || 'N/A'}
                   </div>
                 </div>
               )}
@@ -193,7 +196,67 @@ const MarketOverview = ({ marketOverview, getSentimentColor }) => {
         </div>
       )}
 
-
+      {/* Breadth Detail (Market Level) */}
+      {breadth_detail && (
+        <div className="bg-white p-3 rounded border mb-4">
+          <h3 className="font-medium text-gray-700 mb-2">Phân tích độ rộng thị trường</h3>
+          <div className="grid grid-cols-4 gap-x-6 text-center">
+            <div>
+              <div className="text-xs text-gray-500">Breadth Thrust (Đà lan tỏa)</div>
+              <div className="font-mono font-semibold text-base">
+                {breadth_detail.industry_breadth_thrust?.value ?? 'K/C'}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">
+                {breadth_detail.industry_breadth_thrust?.interpretation ?? ''}
+              </div>
+              <div className="text-xs text-gray-500 mt-2">
+                Chỉ báo cho thấy mức độ đồng thuận tăng giá trong ngành.
+              </div>
+            </div>
+            <div>
+              <div className="text-xs text-gray-500">Momentum Breadth (Độ rộng động lượng)</div>
+              <div className="font-mono font-semibold text-base">
+                {breadth_detail.momentum_breadth?.value ?? 'K/C'}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">
+                {breadth_detail.momentum_breadth?.interpretation ?? ''}
+              </div>
+              <div className="text-xs text-gray-500 mt-2">
+                Tỷ lệ cổ phiếu trong ngành đang có động lượng mạnh.
+              </div>
+            </div>
+            <div>
+              <div className="text-xs text-gray-500">Tập trung động lượng</div>
+              <div className="font-mono font-semibold text-base">
+                {breadth_detail.momentum_concentration?.value ?? 'K/C'}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">
+                {breadth_detail.momentum_concentration?.interpretation ?? ''}
+              </div>
+              <div className="text-xs text-gray-500 mt-2">
+                Đo lường mức độ các cổ phiếu dẫn dắt có sức ảnh hưởng lớn.
+              </div>
+            </div>
+            <div>
+              <div className="text-xs text-gray-500">Phân tán biến động</div>
+              <div className="font-mono font-semibold text-base">
+                {breadth_detail.volatility_dispersion?.value ?? 'K/C'}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">
+                {breadth_detail.volatility_dispersion?.interpretation ?? ''}
+              </div>
+              <div className="text-xs text-gray-500 mt-2">
+                Xác định mức độ phân tán rủi ro giữa các mã cổ phiếu trong ngành.
+              </div>
+            </div>
+          </div>
+          {breadth_detail.summary && (
+            <div className="text-blue-700 text-xs mt-2">
+              {breadth_detail.summary}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Market Cap Rotation */}
       {marketOverview.market_health?.market_cap_rotation && (

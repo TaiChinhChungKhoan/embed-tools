@@ -139,7 +139,7 @@ const IndividualStockAnalysis = ({ individualStockAnalysis, getQuadrantColor, re
             {/* Top Symbols */}
             {individualStockAnalysis.stock_performers.top_symbols?.length > 0 && (
               <div>
-                <h5 className="font-medium text-purple-700 mb-2">Top cổ phiếu mạnh nhất</h5>
+                <h5 className="font-medium text-purple-700 mb-2">Cổ phiếu mạnh nhất</h5>
                 <div className="space-y-2">
                   {individualStockAnalysis.stock_performers.top_symbols.slice(0, 5).map((symbol, index) => (
                     <div key={index} className="bg-white p-3 rounded border">
@@ -166,7 +166,7 @@ const IndividualStockAnalysis = ({ individualStockAnalysis, getQuadrantColor, re
             {/* Bottom Symbols */}
             {individualStockAnalysis.stock_performers.bottom_symbols?.length > 0 && (
               <div>
-                <h5 className="font-medium text-red-700 mb-2">Top cổ phiếu yếu nhất</h5>
+                <h5 className="font-medium text-red-700 mb-2">Cổ phiếu yếu nhất</h5>
                 <div className="space-y-2">
                   {individualStockAnalysis.stock_performers.bottom_symbols.slice(0, 5).map((symbol, index) => (
                     <div key={index} className="bg-white p-3 rounded border">

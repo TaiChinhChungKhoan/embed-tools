@@ -48,11 +48,17 @@ const DetailedInfoPanel = ({ selectedItems, type, timeframe }) => {
       <div className="space-y-4">
         {selectedItems.map(item => {
           if (item.type === 'symbol') {
-            return <SymbolInfoPanel key={item.id} symbol={item} analyzeData={analyzeData} />;
+            // Look up the full symbol object
+            const fullSymbol = analyzeData.symbols?.find(s => s.symbol === item.id);
+            if (!fullSymbol) return null;
+            return <SymbolInfoPanel key={item.id} symbol={fullSymbol} analyzeData={analyzeData} />;
           } else if (item.type === 'group') {
             return <GroupInfoPanel key={item.id} group={item} analyzeData={analyzeData} />;
           } else {
-            return <IndustryInfoPanel key={item.id} industry={item} analyzeData={analyzeData} />;
+            // Look up the full industry object
+            const fullIndustry = analyzeData.industries?.find(ind => ind.custom_id === item.id || ind.id === item.id);
+            if (!fullIndustry) return null;
+            return <IndustryInfoPanel key={item.id} industry={fullIndustry} />;
           }
         })}
       </div>
