@@ -1,38 +1,24 @@
 {
-  "generated_at": "2025-07-16T01:01:43.498129",
-  "latest_value": 72.24855682714421,
-  "latest_sentiment": "GREED",
+  "generated_at": "2025-07-16T18:04:50.158179",
+  "latest_value": 78.19928685953305,
+  "latest_sentiment": "EXTREME GREED",
   "data_quality": {
-    "total_days": 681,
-    "valid_calculations": 306,
-    "percentage_valid": 44.93392070484582
+    "total_days": 682,
+    "valid_calculations": 307,
+    "percentage_valid": 45.01466275659824
   },
   "components": {
-    "market_momentum": 96.67868816762241,
-    "price_strength": 58.881844768587875,
-    "volume_ratio": 41.07198943650687,
-    "volatility": 15.746372123116828,
-    "rsi14": 83.37321016171863
+    "market_momentum": 100.0,
+    "price_strength": 60.87855278890031,
+    "volume_ratio": 62.75663583511208,
+    "volatility": 16.942416119789357,
+    "rsi14": 86.4645594216931
   },
   "last_20_days": [
     {
-      "date": "2025-06-18",
-      "greed_fear_index": 63.199312784005585,
-      "change": null,
-      "sentiment": "GREED",
-      "all_components_valid": true,
-      "components": {
-        "market_momentum": 97.12211233618662,
-        "price_strength": 47.85566963912439,
-        "volume_ratio": 28.82654205847098,
-        "volatility": 24.1741380903966,
-        "rsi14": 65.4378639469542
-      }
-    },
-    {
       "date": "2025-06-19",
       "greed_fear_index": 64.9864202976586,
-      "change": 1.7871075136530123,
+      "change": null,
       "sentiment": "GREED",
       "all_components_valid": true,
       "components": {
@@ -293,6 +279,20 @@
         "volume_ratio": 41.07198943650687,
         "volatility": 15.746372123116828,
         "rsi14": 83.37321016171863
+      }
+    },
+    {
+      "date": "2025-07-16",
+      "greed_fear_index": 78.19928685953305,
+      "change": 5.950730032388833,
+      "sentiment": "EXTREME GREED",
+      "all_components_valid": true,
+      "components": {
+        "market_momentum": 100.0,
+        "price_strength": 60.87855278890031,
+        "volume_ratio": 62.75663583511208,
+        "volatility": 16.942416119789357,
+        "rsi14": 86.4645594216931
       }
     }
   ]
