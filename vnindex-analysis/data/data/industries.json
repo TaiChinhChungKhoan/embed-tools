@@ -1,0 +1,242 @@
+{
+  "bao-hiem": {
+    "name": "Bảo hiểm",
+    "is_primary": true,
+    "parent_custom_id": "tai-chinh"
+  },
+  "ngan-hang": {
+    "name": "Ngân hàng",
+    "is_primary": true,
+    "parent_custom_id": "tai-chinh"
+  },
+  "ngan-hang-tu-nhan": {
+    "name": "Ngân hàng tư nhân",
+    "is_primary": false,
+    "parent_custom_id": "ngan-hang"
+  },
+  "ngan-hang-nha-nuoc": {
+    "name": "Ngân hàng nhà nước",
+    "is_primary": false,
+    "parent_custom_id": "ngan-hang"
+  },
+  "bds-nha-o": {
+    "name": "Bất động sản nhà ở",
+    "is_primary": false,
+    "parent_custom_id": "bds"
+  },
+  "bds-nha-o-xh": {
+    "name": "Bất động sản nhà ở xã hội",
+    "is_primary": false,
+    "parent_custom_id": "bds"
+  },
+  "bds-nghi-duong": {
+    "name": "Bất động sản nghỉ dưỡng",
+    "is_primary": false,
+    "parent_custom_id": "bds"
+  },
+  "bds-thuong-mai": {
+    "name": "Bất động sản thương mại",
+    "is_primary": false,
+    "parent_custom_id": "bds"
+  },
+  "xay-lap-dien": {
+    "name": "Xây lắp điện",
+    "is_primary": false,
+    "parent_custom_id": "dien"
+  },
+  "dau-tu-cong": {
+    "name": "Đầu tư công",
+    "is_primary": true,
+    "parent_custom_id": "xay-dung"
+  },
+  "dien-tai-tao": {
+    "name": "Điện tái tạo",
+    "is_primary": false,
+    "parent_custom_id": "dien"
+  },
+  "thuy-dien": {
+    "name": "Thủy điện",
+    "is_primary": false,
+    "parent_custom_id": "dien"
+  },
+  "nhiet-dien": {
+    "name": "Nhiệt điện",
+    "is_primary": false,
+    "parent_custom_id": "dien"
+  },
+  "chan-nuoi": {
+    "name": "Chăn nuôi",
+    "is_primary": false,
+    "parent_custom_id": "nong-nghiep"
+  },
+  "thuy-san": {
+    "name": "Thủy sản",
+    "is_primary": true,
+    "parent_custom_id": "nong-nghiep"
+  },
+  "cao-su": {
+    "name": "Cao su",
+    "is_primary": true,
+    "parent_custom_id": "nong-nghiep"
+  },
+  "duong": {
+    "name": "Mía đường",
+    "is_primary": true,
+    "parent_custom_id": "nong-nghiep"
+  },
+  "cong-nghiep": {
+    "name": "Công nghiệp",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "bds-kcn": {
+    "name": "Bất động sản khu công nghiệp",
+    "is_primary": true,
+    "parent_custom_id": "bds"
+  },
+  "tai-chinh": {
+    "name": "Tài chính",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "van-tai": {
+    "name": "Vận tải",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "cong-nghe": {
+    "name": "Công nghệ",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "ban-le": {
+    "name": "Bán lẻ",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "hang-tieu-dung": {
+    "name": "Hàng tiêu dùng",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "nuoc": {
+    "name": "Nuớc",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "go": {
+    "name": "Gỗ",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "truyen-thong": {
+    "name": "Truyền thông",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "giai-tri": {
+    "name": "Giải trí",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "khac": {
+    "name": "Khác",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "bds": {
+    "name": "Bất động sản",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "tradable": {
+    "name": "Tradable",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "y-te": {
+    "name": "Y tế",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "xay-dung": {
+    "name": "Xây dựng",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "nong-san-khac": {
+    "name": "Nông sản khác",
+    "is_primary": false,
+    "parent_custom_id": "nong-nghiep"
+  },
+  "dien": {
+    "name": "Điện",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "thep": {
+    "name": "Thép",
+    "is_primary": true,
+    "parent_custom_id": "cong-nghiep"
+  },
+  "hoa-chat": {
+    "name": "Hóa chất",
+    "is_primary": true,
+    "parent_custom_id": "cong-nghiep"
+  },
+  "dau-khi": {
+    "name": "Dầu khí",
+    "is_primary": true,
+    "parent_custom_id": null
+  },
+  "nhua": {
+    "name": "Nhựa",
+    "is_primary": false,
+    "parent_custom_id": "cong-nghiep"
+  },
+  "vlxd": {
+    "name": "Vật liệu xây dựng",
+    "is_primary": true,
+    "parent_custom_id": "cong-nghiep"
+  },
+  "det-may": {
+    "name": "Dệt may",
+    "is_primary": true,
+    "parent_custom_id": "cong-nghiep"
+  },
+  "nong-nghiep": {
+    "name": "Nông nghiệp",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "hang-khong": {
+    "name": "Hàng không",
+    "is_primary": true,
+    "parent_custom_id": "van-tai"
+  },
+  "thuc-pham": {
+    "name": "Thực phẩm",
+    "is_primary": false,
+    "parent_custom_id": null
+  },
+  "cang-bien": {
+    "name": "Cảng biển",
+    "is_primary": true,
+    "parent_custom_id": "van-tai"
+  },
+  "chung-khoan": {
+    "name": "Chứng khoán",
+    "is_primary": true,
+    "parent_custom_id": "tai-chinh"
+  },
+  "cntt": {
+    "name": "Phần mềm / Công nghệ thông tin",
+    "is_primary": false,
+    "parent_custom_id": "cong-nghe"
+  },
+  "vien-thong": {
+    "name": "Viễn thông",
+    "is_primary": false,
+    "parent_custom_id": "cong-nghe"
+  }
+}

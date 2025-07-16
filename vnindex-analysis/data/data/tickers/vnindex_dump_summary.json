@@ -1,0 +1,102 @@
+{
+  "dump_info": {
+    "timestamp": "2025-07-16T15:36:51.066655",
+    "years_back": 3,
+    "start_date": "2022-07-17",
+    "end_date": "2025-07-16",
+    "total_symbols_processed": 6,
+    "successful_dumps": 6
+  },
+  "results": {
+    "VNINDEX": {
+      "file": "reports/tickers/VNINDEX.json",
+      "data_points": 748,
+      "start_date": "2022-07-18",
+      "end_date": "2025-07-16",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VN30": {
+      "file": "reports/tickers/VN30.json",
+      "data_points": 748,
+      "start_date": "2022-07-18",
+      "end_date": "2025-07-16",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VN100": {
+      "file": "reports/tickers/VN100.json",
+      "data_points": 748,
+      "start_date": "2022-07-18",
+      "end_date": "2025-07-16",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VNMID": {
+      "file": "reports/tickers/VNMID.json",
+      "data_points": 748,
+      "start_date": "2022-07-18",
+      "end_date": "2025-07-16",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VNSML": {
+      "file": "reports/tickers/VNSML.json",
+      "data_points": 748,
+      "start_date": "2022-07-18",
+      "end_date": "2025-07-16",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    },
+    "VNALL": {
+      "file": "reports/tickers/VNALL.json",
+      "data_points": 748,
+      "start_date": "2022-07-18",
+      "end_date": "2025-07-16",
+      "columns": [
+        "Time",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Updated"
+      ]
+    }
+  }
+}
