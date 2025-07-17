@@ -1,0 +1,3921 @@
+{
+  "type": "dict",
+  "keys": {
+    "analysis_date": {
+      "type": "str"
+    },
+    "timeframe": {
+      "type": "str"
+    },
+    "benchmark": {
+      "type": "str"
+    },
+    "lookback_period": {
+      "type": "int"
+    },
+    "industries": {
+      "type": "list",
+      "length": 23,
+      "sample_item": {
+        "type": "dict",
+        "keys": {
+          "custom_id": {
+            "type": "str"
+          },
+          "name": {
+            "type": "str"
+          },
+          "latest_date": {
+            "type": "str"
+          },
+          "data_points": {
+            "type": "int"
+          },
+          "metrics": {
+            "type": "dict",
+            "keys": {
+              "current_rs": {
+                "type": "float"
+              },
+              "current_crs": {
+                "type": "float"
+              },
+              "current_ma13": {
+                "type": "float"
+              },
+              "current_ma49": {
+                "type": "float"
+              },
+              "rs_5d_change": {
+                "type": "float"
+              },
+              "rs_21d_change": {
+                "type": "float"
+              },
+              "rs_49d_change": {
+                "type": "float"
+              },
+              "crs_21d_avg": {
+                "type": "float"
+              },
+              "rs_volatility": {
+                "type": "float"
+              },
+              "crs_volatility": {
+                "type": "float"
+              },
+              "outperforming_days": {
+                "type": "int"
+              },
+              "underperforming_days": {
+                "type": "int"
+              },
+              "total_days": {
+                "type": "int"
+              },
+              "outperforming_periods": {
+                "type": "int"
+              },
+              "underperforming_periods": {
+                "type": "int"
+              },
+              "total_periods": {
+                "type": "int"
+              }
+            }
+          },
+          "performance_summary": {
+            "type": "dict",
+            "keys": {
+              "rs_trend": {
+                "type": "str"
+              },
+              "crs_status": {
+                "type": "str"
+              },
+              "strength_score": {
+                "type": "float"
+              }
+            }
+          },
+          "speed_analysis": {
+            "type": "dict",
+            "keys": {
+              "raw_speed_5d": {
+                "type": "float"
+              },
+              "raw_speed_21d": {
+                "type": "float"
+              },
+              "raw_speed_49d": {
+                "type": "float"
+              },
+              "weighted_speed": {
+                "type": "float"
+              },
+              "consistency_score": {
+                "type": "float"
+              },
+              "short_term_momentum": {
+                "type": "float"
+              },
+              "long_term_momentum": {
+                "type": "float"
+              },
+              "momentum_ratio": {
+                "type": "float"
+              },
+              "speed_category": {
+                "type": "str"
+              }
+            }
+          },
+          "direction_analysis": {
+            "type": "dict",
+            "keys": {
+              "direction": {
+                "type": "str"
+              },
+              "direction_quality": {
+                "type": "dict",
+                "keys": {
+                  "confirmed": {
+                    "type": "bool"
+                  },
+                  "strength": {
+                    "type": "float"
+                  },
+                  "sustainability": {
+                    "type": "float"
+                  }
+                }
+              },
+              "trend_strength": {
+                "type": "str"
+              },
+              "momentum_confirmed": {
+                "type": "bool"
+              },
+              "signal_to_noise_ratio": {
+                "type": "float"
+              }
+            }
+          },
+          "risk_assessment": {
+            "type": "dict",
+            "keys": {
+              "risk_signals": {
+                "type": "dict",
+                "keys": {
+                  "high_risk": {
+                    "type": "bool"
+                  },
+                  "medium_risk": {
+                    "type": "bool"
+                  },
+                  "low_risk": {
+                    "type": "bool"
+                  },
+                  "falling_knife": {
+                    "type": "bool"
+                  },
+                  "momentum_exhaustion": {
+                    "type": "bool"
+                  },
+                  "stealth_accumulation": {
+                    "type": "bool"
+                  }
+                }
+              },
+              "suggested_position_size": {
+                "type": "str"
+              },
+              "time_horizon": {
+                "type": "str"
+              },
+              "stop_loss_distance": {
+                "type": "float"
+              },
+              "risk_level": {
+                "type": "str"
+              },
+              "volume_analysis": {
+                "type": "dict",
+                "keys": {
+                  "volume_trend": {
+                    "type": "str"
+                  },
+                  "institutional_activity": {
+                    "type": "bool"
+                  },
+                  "volume_quality": {
+                    "type": "str"
+                  },
+                  "recent_volume_ratio": {
+                    "type": "float"
+                  }
+                }
+              }
+            }
+          },
+          "trend_consistency": {
+            "type": "dict",
+            "keys": {
+              "consistency_score": {
+                "type": "float"
+              },
+              "trend_alignment": {
+                "type": "str"
+              },
+              "symbol_count": {
+                "type": "int"
+              },
+              "bullish_count": {
+                "type": "int"
+              },
+              "bearish_count": {
+                "type": "int"
+              },
+              "neutral_count": {
+                "type": "int"
+              },
+              "consensus_strength": {
+                "type": "float"
+              },
+              "trend_confidence": {
+                "type": "float"
+              },
+              "direction_consistency": {
+                "type": "float"
+              },
+              "avg_strength": {
+                "type": "float"
+              }
+            }
+          }
+        }
+      }
+    },
+    "groups": {
+      "type": "list",
+      "length": 5,
+      "sample_item": {
+        "type": "dict",
+        "keys": {
+          "custom_id": {
+            "type": "str"
+          },
+          "name": {
+            "type": "str"
+          },
+          "latest_date": {
+            "type": "str"
+          },
+          "data_points": {
+            "type": "int"
+          },
+          "metrics": {
+            "type": "dict",
+            "keys": {
+              "current_rs": {
+                "type": "float"
+              },
+              "current_crs": {
+                "type": "float"
+              },
+              "current_ma13": {
+                "type": "float"
+              },
+              "current_ma49": {
+                "type": "float"
+              },
+              "rs_5d_change": {
+                "type": "float"
+              },
+              "rs_21d_change": {
+                "type": "float"
+              },
+              "rs_49d_change": {
+                "type": "float"
+              },
+              "crs_21d_avg": {
+                "type": "float"
+              },
+              "rs_volatility": {
+                "type": "float"
+              },
+              "crs_volatility": {
+                "type": "float"
+              },
+              "outperforming_days": {
+                "type": "int"
+              },
+              "underperforming_days": {
+                "type": "int"
+              },
+              "total_days": {
+                "type": "int"
+              },
+              "outperforming_periods": {
+                "type": "int"
+              },
+              "underperforming_periods": {
+                "type": "int"
+              },
+              "total_periods": {
+                "type": "int"
+              }
+            }
+          },
+          "performance_summary": {
+            "type": "dict",
+            "keys": {
+              "rs_trend": {
+                "type": "str"
+              },
+              "crs_status": {
+                "type": "str"
+              },
+              "strength_score": {
+                "type": "float"
+              }
+            }
+          },
+          "speed_analysis": {
+            "type": "dict",
+            "keys": {
+              "raw_speed_5d": {
+                "type": "float"
+              },
+              "raw_speed_21d": {
+                "type": "float"
+              },
+              "raw_speed_49d": {
+                "type": "float"
+              },
+              "weighted_speed": {
+                "type": "float"
+              },
+              "consistency_score": {
+                "type": "float"
+              },
+              "short_term_momentum": {
+                "type": "float"
+              },
+              "long_term_momentum": {
+                "type": "float"
+              },
+              "momentum_ratio": {
+                "type": "float"
+              },
+              "speed_category": {
+                "type": "str"
+              }
+            }
+          },
+          "direction_analysis": {
+            "type": "dict",
+            "keys": {
+              "direction": {
+                "type": "str"
+              },
+              "direction_quality": {
+                "type": "dict",
+                "keys": {
+                  "confirmed": {
+                    "type": "bool"
+                  },
+                  "strength": {
+                    "type": "float"
+                  },
+                  "sustainability": {
+                    "type": "float"
+                  }
+                }
+              },
+              "trend_strength": {
+                "type": "str"
+              },
+              "momentum_confirmed": {
+                "type": "bool"
+              },
+              "signal_to_noise_ratio": {
+                "type": "float"
+              }
+            }
+          },
+          "risk_assessment": {
+            "type": "dict",
+            "keys": {
+              "risk_signals": {
+                "type": "dict",
+                "keys": {
+                  "high_risk": {
+                    "type": "bool"
+                  },
+                  "medium_risk": {
+                    "type": "bool"
+                  },
+                  "low_risk": {
+                    "type": "bool"
+                  },
+                  "falling_knife": {
+                    "type": "bool"
+                  },
+                  "momentum_exhaustion": {
+                    "type": "bool"
+                  },
+                  "stealth_accumulation": {
+                    "type": "bool"
+                  }
+                }
+              },
+              "suggested_position_size": {
+                "type": "str"
+              },
+              "time_horizon": {
+                "type": "str"
+              },
+              "stop_loss_distance": {
+                "type": "float"
+              },
+              "risk_level": {
+                "type": "str"
+              },
+              "volume_analysis": {
+                "type": "dict",
+                "keys": {
+                  "volume_trend": {
+                    "type": "str"
+                  },
+                  "institutional_activity": {
+                    "type": "bool"
+                  },
+                  "volume_quality": {
+                    "type": "str"
+                  },
+                  "recent_volume_ratio": {
+                    "type": "float"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "symbols": {
+      "type": "list",
+      "length": 395,
+      "sample_item": {
+        "type": "dict",
+        "keys": {
+          "symbol": {
+            "type": "str"
+          },
+          "name": {
+            "type": "str"
+          },
+          "industries": {
+            "type": "list",
+            "length": 2,
+            "sample_item": {
+              "type": "dict",
+              "keys": {
+                "custom_id": {
+                  "type": "str"
+                },
+                "name": {
+                  "type": "str"
+                },
+                "is_primary": {
+                  "type": "bool"
+                },
+                "priority": {
+                  "type": "int"
+                }
+              }
+            }
+          },
+          "interest_groups": {
+            "type": "list",
+            "length": 3,
+            "sample_item": {
+              "type": "str"
+            }
+          },
+          "latest_date": {
+            "type": "str"
+          },
+          "data_points": {
+            "type": "int"
+          },
+          "metrics": {
+            "type": "dict",
+            "keys": {
+              "current_rs": {
+                "type": "float"
+              },
+              "current_crs": {
+                "type": "float"
+              },
+              "current_ma13": {
+                "type": "float"
+              },
+              "current_ma49": {
+                "type": "float"
+              },
+              "rs_5d_change": {
+                "type": "float"
+              },
+              "rs_21d_change": {
+                "type": "float"
+              },
+              "rs_49d_change": {
+                "type": "float"
+              },
+              "crs_21d_avg": {
+                "type": "float"
+              },
+              "rs_volatility": {
+                "type": "float"
+              },
+              "crs_volatility": {
+                "type": "float"
+              },
+              "outperforming_days": {
+                "type": "int"
+              },
+              "underperforming_days": {
+                "type": "int"
+              },
+              "total_days": {
+                "type": "int"
+              },
+              "outperforming_periods": {
+                "type": "int"
+              },
+              "underperforming_periods": {
+                "type": "int"
+              },
+              "total_periods": {
+                "type": "int"
+              }
+            }
+          },
+          "performance_summary": {
+            "type": "dict",
+            "keys": {
+              "rs_trend": {
+                "type": "str"
+              },
+              "crs_status": {
+                "type": "str"
+              },
+              "strength_score": {
+                "type": "float"
+              }
+            }
+          },
+          "speed_analysis": {
+            "type": "dict",
+            "keys": {
+              "raw_speed_5d": {
+                "type": "float"
+              },
+              "raw_speed_21d": {
+                "type": "float"
+              },
+              "raw_speed_49d": {
+                "type": "float"
+              },
+              "weighted_speed": {
+                "type": "float"
+              },
+              "consistency_score": {
+                "type": "float"
+              },
+              "short_term_momentum": {
+                "type": "float"
+              },
+              "long_term_momentum": {
+                "type": "float"
+              },
+              "momentum_ratio": {
+                "type": "float"
+              },
+              "speed_category": {
+                "type": "str"
+              }
+            }
+          },
+          "direction_analysis": {
+            "type": "dict",
+            "keys": {
+              "direction": {
+                "type": "str"
+              },
+              "direction_quality": {
+                "type": "dict",
+                "keys": {
+                  "confirmed": {
+                    "type": "bool"
+                  },
+                  "strength": {
+                    "type": "float"
+                  },
+                  "sustainability": {
+                    "type": "float"
+                  }
+                }
+              },
+              "trend_strength": {
+                "type": "str"
+              },
+              "momentum_confirmed": {
+                "type": "bool"
+              },
+              "signal_to_noise_ratio": {
+                "type": "float"
+              }
+            }
+          },
+          "risk_assessment": {
+            "type": "dict",
+            "keys": {
+              "risk_signals": {
+                "type": "dict",
+                "keys": {
+                  "high_risk": {
+                    "type": "bool"
+                  },
+                  "medium_risk": {
+                    "type": "bool"
+                  },
+                  "low_risk": {
+                    "type": "bool"
+                  },
+                  "falling_knife": {
+                    "type": "bool"
+                  },
+                  "momentum_exhaustion": {
+                    "type": "bool"
+                  },
+                  "stealth_accumulation": {
+                    "type": "bool"
+                  }
+                }
+              },
+              "suggested_position_size": {
+                "type": "str"
+              },
+              "time_horizon": {
+                "type": "str"
+              },
+              "stop_loss_distance": {
+                "type": "float"
+              },
+              "risk_level": {
+                "type": "str"
+              },
+              "volume_analysis": {
+                "type": "dict",
+                "keys": {
+                  "volume_trend": {
+                    "type": "str"
+                  },
+                  "institutional_activity": {
+                    "type": "bool"
+                  },
+                  "volume_quality": {
+                    "type": "str"
+                  },
+                  "recent_volume_ratio": {
+                    "type": "float"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insights": {
+      "type": "dict",
+      "keys": {
+        "market_overview": {
+          "type": "dict",
+          "keys": {
+            "title": {
+              "type": "str"
+            },
+            "analysis_date": {
+              "type": "str"
+            },
+            "timeframe": {
+              "type": "str"
+            },
+            "benchmark": {
+              "type": "str"
+            },
+            "market_indices": {
+              "type": "dict",
+              "keys": {
+                "general_market": {
+                  "type": "str"
+                },
+                "large_cap": {
+                  "type": "str"
+                },
+                "mid_cap": {
+                  "type": "str"
+                },
+                "small_cap": {
+                  "type": "str"
+                }
+              }
+            },
+            "key_metrics": {
+              "type": "dict",
+              "keys": {
+                "total_industries": {
+                  "type": "int"
+                },
+                "total_symbols": {
+                  "type": "int"
+                },
+                "total_groups": {
+                  "type": "int"
+                },
+                "outperforming_industries": {
+                  "type": "int"
+                },
+                "outperforming_symbols": {
+                  "type": "int"
+                },
+                "outperforming_groups": {
+                  "type": "int"
+                },
+                "industry_sentiment_ratio": {
+                  "type": "float"
+                },
+                "symbol_sentiment_ratio": {
+                  "type": "float"
+                },
+                "group_sentiment_ratio": {
+                  "type": "float"
+                },
+                "outperforming_industries_pct": {
+                  "type": "str"
+                },
+                "outperforming_symbols_pct": {
+                  "type": "str"
+                },
+                "outperforming_groups_pct": {
+                  "type": "str"
+                },
+                "industry_sentiment": {
+                  "type": "str"
+                },
+                "symbol_sentiment": {
+                  "type": "str"
+                },
+                "group_sentiment": {
+                  "type": "str"
+                }
+              }
+            },
+            "market_regime": {
+              "type": "dict",
+              "keys": {
+                "regime": {
+                  "type": "str"
+                },
+                "confidence": {
+                  "type": "int"
+                },
+                "description": {
+                  "type": "str"
+                },
+                "breadth_score": {
+                  "type": "float"
+                },
+                "momentum_score": {
+                  "type": "float"
+                },
+                "risk_score": {
+                  "type": "float"
+                },
+                "supporting_evidence": {
+                  "type": "list",
+                  "length": 3,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                }
+              }
+            },
+            "market_health": {
+              "type": "dict",
+              "keys": {
+                "title": {
+                  "type": "str"
+                },
+                "analysis_date": {
+                  "type": "str"
+                },
+                "benchmark": {
+                  "type": "str"
+                },
+                "summary": {
+                  "type": "str"
+                },
+                "key_metrics": {
+                  "type": "dict",
+                  "keys": {
+                    "outperforming_industries": {
+                      "type": "str"
+                    },
+                    "outperforming_symbols": {
+                      "type": "str"
+                    },
+                    "industry_sentiment": {
+                      "type": "str"
+                    },
+                    "symbol_sentiment": {
+                      "type": "str"
+                    },
+                    "market_breadth": {
+                      "type": "dict",
+                      "keys": {
+                        "score": {
+                          "type": "float"
+                        },
+                        "interpretation": {
+                          "type": "str"
+                        },
+                        "description": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "momentum_distribution": {
+                      "type": "dict",
+                      "keys": {
+                        "momentum_categories": {
+                          "type": "dict",
+                          "keys": {
+                            "very_strong": {
+                              "type": "str"
+                            },
+                            "strong": {
+                              "type": "str"
+                            },
+                            "moderate": {
+                              "type": "str"
+                            },
+                            "weak": {
+                              "type": "str"
+                            },
+                            "declining": {
+                              "type": "str"
+                            }
+                          }
+                        },
+                        "risk_distribution": {
+                          "type": "dict",
+                          "keys": {
+                            "Cao": {
+                              "type": "str"
+                            },
+                            "Trung b\u00ecnh": {
+                              "type": "str"
+                            },
+                            "Th\u1ea5p": {
+                              "type": "str"
+                            }
+                          }
+                        },
+                        "speed_distribution": {
+                          "type": "dict",
+                          "keys": {
+                            "fast": {
+                              "type": "str"
+                            },
+                            "moderate": {
+                              "type": "str"
+                            },
+                            "slow": {
+                              "type": "str"
+                            }
+                          }
+                        },
+                        "momentum_summary": {
+                          "type": "str"
+                        }
+                      }
+                    }
+                  }
+                },
+                "market_cap_rotation": {
+                  "type": "dict",
+                  "keys": {
+                    "large_cap": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "performance": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "direction": {
+                          "type": "str"
+                        },
+                        "interpretation": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "mid_cap": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "performance": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "direction": {
+                          "type": "str"
+                        },
+                        "interpretation": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "small_cap": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "performance": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "direction": {
+                          "type": "str"
+                        },
+                        "interpretation": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "rotation_theme": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "market_character": {
+                  "type": "dict",
+                  "keys": {
+                    "character": {
+                      "type": "str"
+                    },
+                    "description": {
+                      "type": "str"
+                    },
+                    "strategy": {
+                      "type": "str"
+                    }
+                  }
+                }
+              }
+            },
+            "strategic_recommendation": {
+              "type": "dict",
+              "keys": {
+                "stance": {
+                  "type": "str"
+                },
+                "confidence": {
+                  "type": "int"
+                },
+                "rationale": {
+                  "type": "str"
+                }
+              }
+            }
+          }
+        },
+        "insights": {
+          "type": "dict",
+          "keys": {
+            "title": {
+              "type": "str"
+            },
+            "industries": {
+              "type": "dict",
+              "keys": {
+                "title": {
+                  "type": "str"
+                },
+                "summary": {
+                  "type": "dict",
+                  "keys": {
+                    "total_count": {
+                      "type": "int"
+                    },
+                    "top_performers_count": {
+                      "type": "int"
+                    },
+                    "bottom_performers_count": {
+                      "type": "int"
+                    },
+                    "improving_momentum_count": {
+                      "type": "int"
+                    },
+                    "degrading_momentum_count": {
+                      "type": "int"
+                    },
+                    "accumulation_count": {
+                      "type": "int"
+                    },
+                    "distribution_count": {
+                      "type": "int"
+                    },
+                    "breakout_count": {
+                      "type": "int"
+                    },
+                    "consolidation_count": {
+                      "type": "int"
+                    },
+                    "stealth_accumulation_count": {
+                      "type": "int"
+                    },
+                    "institutional_activity_count": {
+                      "type": "int"
+                    },
+                    "high_volatility_count": {
+                      "type": "int"
+                    },
+                    "deteriorating_fundamentals_count": {
+                      "type": "int"
+                    },
+                    "falling_knife_count": {
+                      "type": "int"
+                    }
+                  }
+                },
+                "top_performers": {
+                  "type": "list",
+                  "length": 5,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "rrg_position": {
+                        "type": "str"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "performance_status": {
+                        "type": "str"
+                      },
+                      "rs_trend": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "bottom_performers": {
+                  "type": "list",
+                  "length": 5,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "rrg_position": {
+                        "type": "str"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "performance_status": {
+                        "type": "str"
+                      },
+                      "rs_trend": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "improving_momentum": {
+                  "type": "empty_list"
+                },
+                "degrading_momentum": {
+                  "type": "empty_list"
+                },
+                "accumulation_candidates": {
+                  "type": "empty_list"
+                },
+                "distribution_candidates": {
+                  "type": "empty_list"
+                },
+                "breakout_candidates": {
+                  "type": "empty_list"
+                },
+                "consolidation_candidates": {
+                  "type": "empty_list"
+                },
+                "stealth_accumulation": {
+                  "type": "empty_list"
+                },
+                "stealth_distribution": {
+                  "type": "empty_list"
+                },
+                "institutional_activity": {
+                  "type": "empty_list"
+                },
+                "high_volatility": {
+                  "type": "empty_list"
+                },
+                "deteriorating_fundamentals": {
+                  "type": "empty_list"
+                },
+                "falling_knife": {
+                  "type": "empty_list"
+                },
+                "rrg_performers": {
+                  "type": "dict",
+                  "keys": {
+                    "leading_quadrant": {
+                      "type": "list",
+                      "length": 1,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "lagging_quadrant": {
+                      "type": "list",
+                      "length": 1,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "improving_quadrant": {
+                      "type": "list",
+                      "length": 1,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "weakening_quadrant": {
+                      "type": "empty_list"
+                    }
+                  }
+                },
+                "signal_categories": {
+                  "type": "dict",
+                  "keys": {
+                    "momentum_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "top_momentum": {
+                          "type": "empty_list"
+                        },
+                        "improving_accumulation": {
+                          "type": "empty_list"
+                        },
+                        "improving_breakout": {
+                          "type": "empty_list"
+                        },
+                        "consolidation_candidates": {
+                          "type": "empty_list"
+                        },
+                        "stealth_accumulation": {
+                          "type": "empty_list"
+                        },
+                        "institutional_activity": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "risk_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "degrading_momentum": {
+                          "type": "empty_list"
+                        },
+                        "high_volatility": {
+                          "type": "empty_list"
+                        },
+                        "deteriorating_fundamentals": {
+                          "type": "empty_list"
+                        },
+                        "falling_knife": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "distribution_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "distribution_candidates": {
+                          "type": "empty_list"
+                        },
+                        "stealth_distribution": {
+                          "type": "empty_list"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "type": "dict",
+              "keys": {
+                "title": {
+                  "type": "str"
+                },
+                "summary": {
+                  "type": "dict",
+                  "keys": {
+                    "total_count": {
+                      "type": "int"
+                    },
+                    "top_performers_count": {
+                      "type": "int"
+                    },
+                    "bottom_performers_count": {
+                      "type": "int"
+                    },
+                    "improving_momentum_count": {
+                      "type": "int"
+                    },
+                    "degrading_momentum_count": {
+                      "type": "int"
+                    },
+                    "accumulation_count": {
+                      "type": "int"
+                    },
+                    "distribution_count": {
+                      "type": "int"
+                    },
+                    "breakout_count": {
+                      "type": "int"
+                    },
+                    "consolidation_count": {
+                      "type": "int"
+                    },
+                    "stealth_accumulation_count": {
+                      "type": "int"
+                    },
+                    "institutional_activity_count": {
+                      "type": "int"
+                    },
+                    "high_volatility_count": {
+                      "type": "int"
+                    },
+                    "deteriorating_fundamentals_count": {
+                      "type": "int"
+                    },
+                    "falling_knife_count": {
+                      "type": "int"
+                    }
+                  }
+                },
+                "top_performers": {
+                  "type": "list",
+                  "length": 5,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "rrg_position": {
+                        "type": "str"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "performance_status": {
+                        "type": "str"
+                      },
+                      "rs_trend": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "bottom_performers": {
+                  "type": "list",
+                  "length": 5,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "rrg_position": {
+                        "type": "str"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "performance_status": {
+                        "type": "str"
+                      },
+                      "rs_trend": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "improving_momentum": {
+                  "type": "empty_list"
+                },
+                "degrading_momentum": {
+                  "type": "empty_list"
+                },
+                "accumulation_candidates": {
+                  "type": "empty_list"
+                },
+                "distribution_candidates": {
+                  "type": "empty_list"
+                },
+                "breakout_candidates": {
+                  "type": "empty_list"
+                },
+                "consolidation_candidates": {
+                  "type": "empty_list"
+                },
+                "stealth_accumulation": {
+                  "type": "empty_list"
+                },
+                "stealth_distribution": {
+                  "type": "empty_list"
+                },
+                "institutional_activity": {
+                  "type": "empty_list"
+                },
+                "high_volatility": {
+                  "type": "empty_list"
+                },
+                "deteriorating_fundamentals": {
+                  "type": "empty_list"
+                },
+                "falling_knife": {
+                  "type": "empty_list"
+                },
+                "rrg_performers": {
+                  "type": "dict",
+                  "keys": {
+                    "leading_quadrant": {
+                      "type": "list",
+                      "length": 1,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "lagging_quadrant": {
+                      "type": "list",
+                      "length": 1,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "improving_quadrant": {
+                      "type": "list",
+                      "length": 1,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "weakening_quadrant": {
+                      "type": "empty_list"
+                    }
+                  }
+                },
+                "signal_categories": {
+                  "type": "dict",
+                  "keys": {
+                    "momentum_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "top_momentum": {
+                          "type": "empty_list"
+                        },
+                        "improving_accumulation": {
+                          "type": "empty_list"
+                        },
+                        "improving_breakout": {
+                          "type": "empty_list"
+                        },
+                        "consolidation_candidates": {
+                          "type": "empty_list"
+                        },
+                        "stealth_accumulation": {
+                          "type": "empty_list"
+                        },
+                        "institutional_activity": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "risk_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "degrading_momentum": {
+                          "type": "empty_list"
+                        },
+                        "high_volatility": {
+                          "type": "empty_list"
+                        },
+                        "deteriorating_fundamentals": {
+                          "type": "empty_list"
+                        },
+                        "falling_knife": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "distribution_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "distribution_candidates": {
+                          "type": "empty_list"
+                        },
+                        "stealth_distribution": {
+                          "type": "empty_list"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "tickers": {
+              "type": "dict",
+              "keys": {
+                "title": {
+                  "type": "str"
+                },
+                "summary": {
+                  "type": "dict",
+                  "keys": {
+                    "total_count": {
+                      "type": "int"
+                    },
+                    "top_performers_count": {
+                      "type": "int"
+                    },
+                    "bottom_performers_count": {
+                      "type": "int"
+                    },
+                    "improving_momentum_count": {
+                      "type": "int"
+                    },
+                    "degrading_momentum_count": {
+                      "type": "int"
+                    },
+                    "accumulation_count": {
+                      "type": "int"
+                    },
+                    "distribution_count": {
+                      "type": "int"
+                    },
+                    "breakout_count": {
+                      "type": "int"
+                    },
+                    "consolidation_count": {
+                      "type": "int"
+                    },
+                    "stealth_accumulation_count": {
+                      "type": "int"
+                    },
+                    "institutional_activity_count": {
+                      "type": "int"
+                    },
+                    "high_volatility_count": {
+                      "type": "int"
+                    },
+                    "deteriorating_fundamentals_count": {
+                      "type": "int"
+                    },
+                    "falling_knife_count": {
+                      "type": "int"
+                    }
+                  }
+                },
+                "top_performers": {
+                  "type": "list",
+                  "length": 10,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "rrg_position": {
+                        "type": "str"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "performance_status": {
+                        "type": "str"
+                      },
+                      "rs_trend": {
+                        "type": "str"
+                      },
+                      "symbol": {
+                        "type": "str"
+                      },
+                      "primary_industry": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "bottom_performers": {
+                  "type": "list",
+                  "length": 10,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "rrg_position": {
+                        "type": "str"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "performance_status": {
+                        "type": "str"
+                      },
+                      "rs_trend": {
+                        "type": "str"
+                      },
+                      "symbol": {
+                        "type": "str"
+                      },
+                      "primary_industry": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "improving_momentum": {
+                  "type": "empty_list"
+                },
+                "degrading_momentum": {
+                  "type": "empty_list"
+                },
+                "accumulation_candidates": {
+                  "type": "empty_list"
+                },
+                "distribution_candidates": {
+                  "type": "empty_list"
+                },
+                "breakout_candidates": {
+                  "type": "empty_list"
+                },
+                "consolidation_candidates": {
+                  "type": "empty_list"
+                },
+                "stealth_accumulation": {
+                  "type": "empty_list"
+                },
+                "stealth_distribution": {
+                  "type": "empty_list"
+                },
+                "institutional_activity": {
+                  "type": "list",
+                  "length": 8,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "speed_category": {
+                        "type": "str"
+                      },
+                      "direction": {
+                        "type": "str"
+                      },
+                      "trend_strength": {
+                        "type": "str"
+                      },
+                      "weighted_speed": {
+                        "type": "float"
+                      },
+                      "acceleration": {
+                        "type": "float"
+                      },
+                      "momentum_ratio": {
+                        "type": "float"
+                      },
+                      "consistency_score": {
+                        "type": "float"
+                      },
+                      "signal_noise_ratio": {
+                        "type": "float"
+                      },
+                      "risk_level": {
+                        "type": "str"
+                      },
+                      "position_size": {
+                        "type": "str"
+                      },
+                      "time_horizon": {
+                        "type": "str"
+                      },
+                      "volume_trend": {
+                        "type": "str"
+                      },
+                      "institutional_activity": {
+                        "type": "bool"
+                      },
+                      "symbol": {
+                        "type": "str"
+                      },
+                      "primary_industry": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "high_volatility": {
+                  "type": "empty_list"
+                },
+                "deteriorating_fundamentals": {
+                  "type": "list",
+                  "length": 8,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "speed_category": {
+                        "type": "str"
+                      },
+                      "direction": {
+                        "type": "str"
+                      },
+                      "weighted_speed": {
+                        "type": "float"
+                      },
+                      "acceleration": {
+                        "type": "float"
+                      },
+                      "volatility": {
+                        "type": "float"
+                      },
+                      "rs_21d_change": {
+                        "type": "float"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "risk_level": {
+                        "type": "str"
+                      },
+                      "suggested_action": {
+                        "type": "str"
+                      },
+                      "stop_loss_distance": {
+                        "type": "str"
+                      },
+                      "symbol": {
+                        "type": "str"
+                      },
+                      "primary_industry": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "falling_knife": {
+                  "type": "empty_list"
+                },
+                "rrg_performers": {
+                  "type": "dict",
+                  "keys": {
+                    "leading_quadrant": {
+                      "type": "list",
+                      "length": 10,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          },
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "primary_industry": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "lagging_quadrant": {
+                      "type": "list",
+                      "length": 10,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          },
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "primary_industry": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "improving_quadrant": {
+                      "type": "list",
+                      "length": 10,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          },
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "primary_industry": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "weakening_quadrant": {
+                      "type": "list",
+                      "length": 10,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "custom_id": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "trajectory_strength": {
+                            "type": "str"
+                          },
+                          "speed_category": {
+                            "type": "str"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "performer_type": {
+                            "type": "str"
+                          },
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "primary_industry": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "signal_categories": {
+                  "type": "dict",
+                  "keys": {
+                    "momentum_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "top_momentum": {
+                          "type": "empty_list"
+                        },
+                        "improving_accumulation": {
+                          "type": "empty_list"
+                        },
+                        "improving_breakout": {
+                          "type": "empty_list"
+                        },
+                        "consolidation_candidates": {
+                          "type": "empty_list"
+                        },
+                        "stealth_accumulation": {
+                          "type": "empty_list"
+                        },
+                        "institutional_activity": {
+                          "type": "list",
+                          "length": 8,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "custom_id": {
+                                "type": "str"
+                              },
+                              "speed_category": {
+                                "type": "str"
+                              },
+                              "direction": {
+                                "type": "str"
+                              },
+                              "trend_strength": {
+                                "type": "str"
+                              },
+                              "weighted_speed": {
+                                "type": "float"
+                              },
+                              "acceleration": {
+                                "type": "float"
+                              },
+                              "momentum_ratio": {
+                                "type": "float"
+                              },
+                              "consistency_score": {
+                                "type": "float"
+                              },
+                              "signal_noise_ratio": {
+                                "type": "float"
+                              },
+                              "risk_level": {
+                                "type": "str"
+                              },
+                              "position_size": {
+                                "type": "str"
+                              },
+                              "time_horizon": {
+                                "type": "str"
+                              },
+                              "volume_trend": {
+                                "type": "str"
+                              },
+                              "institutional_activity": {
+                                "type": "bool"
+                              },
+                              "symbol": {
+                                "type": "str"
+                              },
+                              "primary_industry": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "risk_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "degrading_momentum": {
+                          "type": "empty_list"
+                        },
+                        "high_volatility": {
+                          "type": "empty_list"
+                        },
+                        "deteriorating_fundamentals": {
+                          "type": "list",
+                          "length": 8,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "custom_id": {
+                                "type": "str"
+                              },
+                              "speed_category": {
+                                "type": "str"
+                              },
+                              "direction": {
+                                "type": "str"
+                              },
+                              "weighted_speed": {
+                                "type": "float"
+                              },
+                              "acceleration": {
+                                "type": "float"
+                              },
+                              "volatility": {
+                                "type": "float"
+                              },
+                              "rs_21d_change": {
+                                "type": "float"
+                              },
+                              "strength_score": {
+                                "type": "float"
+                              },
+                              "risk_level": {
+                                "type": "str"
+                              },
+                              "suggested_action": {
+                                "type": "str"
+                              },
+                              "stop_loss_distance": {
+                                "type": "str"
+                              },
+                              "symbol": {
+                                "type": "str"
+                              },
+                              "primary_industry": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        },
+                        "falling_knife": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "distribution_signals": {
+                      "type": "dict",
+                      "keys": {
+                        "distribution_candidates": {
+                          "type": "empty_list"
+                        },
+                        "stealth_distribution": {
+                          "type": "empty_list"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "detailed_analysis": {
+          "type": "dict",
+          "keys": {
+            "title": {
+              "type": "str"
+            },
+            "industry_trend_consistency": {
+              "type": "dict",
+              "keys": {
+                "confirmed_trends": {
+                  "type": "empty_list"
+                },
+                "mixed_trends": {
+                  "type": "empty_list"
+                },
+                "weak_trends": {
+                  "type": "list",
+                  "length": 23,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "custom_id": {
+                        "type": "str"
+                      },
+                      "name": {
+                        "type": "str"
+                      },
+                      "trend_alignment": {
+                        "type": "str"
+                      },
+                      "consistency_score": {
+                        "type": "float"
+                      },
+                      "trend_confidence": {
+                        "type": "float"
+                      },
+                      "symbol_count": {
+                        "type": "int"
+                      },
+                      "bullish_count": {
+                        "type": "int"
+                      },
+                      "bearish_count": {
+                        "type": "int"
+                      },
+                      "neutral_count": {
+                        "type": "int"
+                      }
+                    }
+                  }
+                },
+                "consistency_summary": {
+                  "type": "dict",
+                  "keys": {
+                    "total_industries": {
+                      "type": "int"
+                    },
+                    "confirmed_count": {
+                      "type": "int"
+                    },
+                    "mixed_count": {
+                      "type": "int"
+                    },
+                    "weak_count": {
+                      "type": "int"
+                    },
+                    "bullish_confirmed": {
+                      "type": "int"
+                    },
+                    "bearish_confirmed": {
+                      "type": "int"
+                    },
+                    "neutral_confirmed": {
+                      "type": "int"
+                    },
+                    "overall_trend": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "key_insights": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                }
+              }
+            },
+            "sector_rotation": {
+              "type": "dict",
+              "keys": {
+                "title": {
+                  "type": "str"
+                },
+                "money_flow_summary": {
+                  "type": "dict",
+                  "keys": {
+                    "dominant_theme": {
+                      "type": "str"
+                    },
+                    "rotation_strength": {
+                      "type": "str"
+                    },
+                    "flow_velocity": {
+                      "type": "float"
+                    },
+                    "inflow_count": {
+                      "type": "int"
+                    },
+                    "outflow_count": {
+                      "type": "int"
+                    }
+                  }
+                },
+                "sector_leadership": {
+                  "type": "dict",
+                  "keys": {
+                    "current_leaders": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "sectors": {
+                          "type": "list",
+                          "length": 1,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "strength_score": {
+                                "type": "float"
+                              },
+                              "velocity": {
+                                "type": "float"
+                              },
+                              "quadrant": {
+                                "type": "str"
+                              },
+                              "money_flow": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        },
+                        "strength": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "emerging_leaders": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "sectors": {
+                          "type": "list",
+                          "length": 1,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "strength_score": {
+                                "type": "float"
+                              },
+                              "velocity": {
+                                "type": "float"
+                              },
+                              "quadrant": {
+                                "type": "str"
+                              },
+                              "money_flow": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        },
+                        "potential": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "declining_leaders": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "sectors": {
+                          "type": "list",
+                          "length": 1,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "strength_score": {
+                                "type": "float"
+                              },
+                              "velocity": {
+                                "type": "float"
+                              },
+                              "quadrant": {
+                                "type": "str"
+                              },
+                              "money_flow": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        },
+                        "warning_level": {
+                          "type": "str"
+                        }
+                      }
+                    }
+                  }
+                },
+                "rotation_patterns": {
+                  "type": "dict",
+                  "keys": {
+                    "stability": {
+                      "type": "str"
+                    },
+                    "rotation_speed": {
+                      "type": "str"
+                    },
+                    "theme": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "market_cap_flow": {
+                  "type": "dict",
+                  "keys": {
+                    "title": {
+                      "type": "str"
+                    },
+                    "market_indices": {
+                      "type": "dict",
+                      "keys": {
+                        "large_cap": {
+                          "type": "str"
+                        },
+                        "mid_cap": {
+                          "type": "str"
+                        },
+                        "small_cap": {
+                          "type": "str"
+                        },
+                        "general_market": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "flow_summary": {
+                      "type": "dict",
+                      "keys": {
+                        "theme": {
+                          "type": "str"
+                        },
+                        "large_cap_pct": {
+                          "type": "str"
+                        },
+                        "mid_cap_pct": {
+                          "type": "str"
+                        },
+                        "small_cap_pct": {
+                          "type": "str"
+                        },
+                        "unclassified_pct": {
+                          "type": "str"
+                        },
+                        "dominant_flow": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "strength_analysis": {
+                      "type": "dict",
+                      "keys": {
+                        "large_cap_avg_strength": {
+                          "type": "float"
+                        },
+                        "mid_cap_avg_strength": {
+                          "type": "float"
+                        },
+                        "small_cap_avg_strength": {
+                          "type": "float"
+                        },
+                        "strongest_segment": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "velocity_analysis": {
+                      "type": "dict",
+                      "keys": {
+                        "large_cap_velocity": {
+                          "type": "float"
+                        },
+                        "mid_cap_velocity": {
+                          "type": "float"
+                        },
+                        "small_cap_velocity": {
+                          "type": "float"
+                        },
+                        "fastest_segment": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "top_large_cap": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "groups": {
+                            "type": "list",
+                            "length": 3,
+                            "sample_item": {
+                              "type": "str"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "top_mid_cap": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "groups": {
+                            "type": "list",
+                            "length": 1,
+                            "sample_item": {
+                              "type": "str"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "top_small_cap": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "groups": {
+                            "type": "list",
+                            "length": 2,
+                            "sample_item": {
+                              "type": "str"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "counts": {
+                      "type": "dict",
+                      "keys": {
+                        "large_cap_count": {
+                          "type": "int"
+                        },
+                        "mid_cap_count": {
+                          "type": "int"
+                        },
+                        "small_cap_count": {
+                          "type": "int"
+                        },
+                        "unclassified_count": {
+                          "type": "int"
+                        },
+                        "total_count": {
+                          "type": "int"
+                        }
+                      }
+                    }
+                  }
+                },
+                "top_rotating_sectors": {
+                  "type": "list",
+                  "length": 10,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "name": {
+                        "type": "str"
+                      },
+                      "velocity": {
+                        "type": "float"
+                      },
+                      "quadrant": {
+                        "type": "str"
+                      },
+                      "strength_score": {
+                        "type": "float"
+                      },
+                      "money_flow": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "detailed_flow": {
+                  "type": "dict",
+                  "keys": {
+                    "inflow_sectors": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "name": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    },
+                    "outflow_sectors": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "name": {
+                            "type": "str"
+                          },
+                          "quadrant": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "market_cap_flow": {
+              "type": "dict",
+              "keys": {
+                "title": {
+                  "type": "str"
+                },
+                "flow_theme": {
+                  "type": "str"
+                },
+                "outperforming_count": {
+                  "type": "int"
+                },
+                "underperforming_count": {
+                  "type": "int"
+                },
+                "groups_summary": {
+                  "type": "dict",
+                  "keys": {
+                    "strongest_group": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "type": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "crs_status": {
+                          "type": "str"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance_description": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "weakest_group": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "type": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "crs_status": {
+                          "type": "str"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance_description": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "outperforming_groups": {
+                      "type": "list",
+                      "length": 3,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "name": {
+                            "type": "str"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          },
+                          "rrg_quadrant": {
+                            "type": "str"
+                          },
+                          "money_flow": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "performance": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    },
+                    "underperforming_groups": {
+                      "type": "list",
+                      "length": 2,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "name": {
+                            "type": "str"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          },
+                          "rrg_quadrant": {
+                            "type": "str"
+                          },
+                          "money_flow": {
+                            "type": "str"
+                          },
+                          "velocity": {
+                            "type": "float"
+                          },
+                          "performance": {
+                            "type": "str"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "detailed_analysis": {
+                  "type": "dict",
+                  "keys": {
+                    "VN30": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "VN100": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "VNMID": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "VNSML": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "VNALL": {
+                      "type": "dict",
+                      "keys": {
+                        "name": {
+                          "type": "str"
+                        },
+                        "strength_score": {
+                          "type": "float"
+                        },
+                        "rrg_quadrant": {
+                          "type": "str"
+                        },
+                        "money_flow": {
+                          "type": "str"
+                        },
+                        "velocity": {
+                          "type": "float"
+                        },
+                        "performance": {
+                          "type": "str"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "momentum_cycles": {
+              "type": "dict",
+              "keys": {
+                "accumulation_phase": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "percentage": {
+                      "type": "str"
+                    },
+                    "top_candidates": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "speed": {
+                            "type": "float"
+                          },
+                          "acceleration": {
+                            "type": "float"
+                          },
+                          "momentum_ratio": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "acceleration_phase": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "percentage": {
+                      "type": "str"
+                    },
+                    "top_candidates": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "speed": {
+                            "type": "float"
+                          },
+                          "acceleration": {
+                            "type": "float"
+                          },
+                          "momentum_ratio": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "momentum_phase": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "percentage": {
+                      "type": "str"
+                    },
+                    "top_candidates": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "speed": {
+                            "type": "float"
+                          },
+                          "acceleration": {
+                            "type": "float"
+                          },
+                          "momentum_ratio": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "exhaustion_phase": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "percentage": {
+                      "type": "str"
+                    },
+                    "warning_list": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "speed": {
+                            "type": "float"
+                          },
+                          "acceleration": {
+                            "type": "float"
+                          },
+                          "momentum_ratio": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "reversal_phase": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "percentage": {
+                      "type": "str"
+                    },
+                    "watch_list": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "speed": {
+                            "type": "float"
+                          },
+                          "acceleration": {
+                            "type": "float"
+                          },
+                          "momentum_ratio": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "cycle_interpretation": {
+                  "type": "str"
+                }
+              }
+            },
+            "institutional_flow": {
+              "type": "dict",
+              "keys": {
+                "institutional_buying": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "top_targets": {
+                      "type": "empty_list"
+                    },
+                    "sentiment": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "institutional_selling": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "top_exits": {
+                      "type": "empty_list"
+                    }
+                  }
+                },
+                "mixed_signals": {
+                  "type": "dict",
+                  "keys": {
+                    "count": {
+                      "type": "int"
+                    },
+                    "watch_list": {
+                      "type": "list",
+                      "length": 5,
+                      "sample_item": {
+                        "type": "dict",
+                        "keys": {
+                          "symbol": {
+                            "type": "str"
+                          },
+                          "volume_trend": {
+                            "type": "str"
+                          },
+                          "strength_score": {
+                            "type": "float"
+                          },
+                          "direction": {
+                            "type": "str"
+                          },
+                          "speed": {
+                            "type": "float"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "overall_sentiment": {
+                  "type": "dict",
+                  "keys": {
+                    "buying_percentage": {
+                      "type": "str"
+                    },
+                    "selling_percentage": {
+                      "type": "str"
+                    },
+                    "interpretation": {
+                      "type": "str"
+                    }
+                  }
+                }
+              }
+            },
+            "speed_distribution": {
+              "type": "dict",
+              "keys": {
+                "speed_distribution": {
+                  "type": "dict",
+                  "keys": {
+                    "very_high_speed": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "speed": {
+                                "type": "float"
+                              },
+                              "acceleration": {
+                                "type": "float"
+                              },
+                              "type": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "high_speed": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "speed": {
+                                "type": "float"
+                              },
+                              "acceleration": {
+                                "type": "float"
+                              },
+                              "type": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "medium_speed": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "low_speed": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    }
+                  }
+                },
+                "acceleration_distribution": {
+                  "type": "dict",
+                  "keys": {
+                    "strong_acceleration": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "speed": {
+                                "type": "float"
+                              },
+                              "acceleration": {
+                                "type": "float"
+                              },
+                              "type": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "weak_acceleration": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "weak_deceleration": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "strong_deceleration": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "speed": {
+                                "type": "float"
+                              },
+                              "acceleration": {
+                                "type": "float"
+                              },
+                              "type": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "market_momentum_health": {
+                  "type": "dict",
+                  "keys": {
+                    "status": {
+                      "type": "str"
+                    },
+                    "description": {
+                      "type": "str"
+                    },
+                    "high_speed_percentage": {
+                      "type": "str"
+                    },
+                    "accelerating_percentage": {
+                      "type": "str"
+                    },
+                    "decelerating_percentage": {
+                      "type": "str"
+                    },
+                    "recommendation": {
+                      "type": "str"
+                    }
+                  }
+                }
+              }
+            },
+            "risk_distribution": {
+              "type": "dict",
+              "keys": {
+                "risk_level_distribution": {
+                  "type": "dict",
+                  "keys": {
+                    "high_risk": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "medium_risk": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "low_risk": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "risk_level": {
+                                "type": "str"
+                              },
+                              "volatility": {
+                                "type": "float"
+                              },
+                              "type": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "volatility_distribution": {
+                  "type": "dict",
+                  "keys": {
+                    "very_high_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "empty_list"
+                        }
+                      }
+                    },
+                    "high_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "medium_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "low_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "items": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "name": {
+                                "type": "str"
+                              },
+                              "risk_level": {
+                                "type": "str"
+                              },
+                              "volatility": {
+                                "type": "float"
+                              },
+                              "type": {
+                                "type": "str"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "risk_assessment": {
+                  "type": "dict",
+                  "keys": {
+                    "environment": {
+                      "type": "str"
+                    },
+                    "description": {
+                      "type": "str"
+                    },
+                    "recommendation": {
+                      "type": "str"
+                    },
+                    "high_risk_percentage": {
+                      "type": "str"
+                    },
+                    "high_volatility_percentage": {
+                      "type": "str"
+                    },
+                    "low_risk_percentage": {
+                      "type": "str"
+                    },
+                    "has_systemic_risks": {
+                      "type": "bool"
+                    },
+                    "systemic_risk_level": {
+                      "type": "str"
+                    },
+                    "assessment_note": {
+                      "type": "str"
+                    }
+                  }
+                }
+              }
+            },
+            "systemic_risks": {
+              "type": "dict",
+              "keys": {
+                "systemic_risks": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "type": {
+                        "type": "str"
+                      },
+                      "severity": {
+                        "type": "str"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "implication": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                },
+                "risk_count": {
+                  "type": "int"
+                },
+                "overall_systemic_risk": {
+                  "type": "dict",
+                  "keys": {
+                    "level": {
+                      "type": "str"
+                    },
+                    "description": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "mitigation_strategies": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "dict",
+                    "keys": {
+                      "strategy": {
+                        "type": "str"
+                      },
+                      "description": {
+                        "type": "str"
+                      },
+                      "timeframe": {
+                        "type": "str"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "breadth_detail": {
+              "type": "dict",
+              "keys": {
+                "industry_breadth_thrust": {
+                  "type": "dict",
+                  "keys": {
+                    "value": {
+                      "type": "str"
+                    },
+                    "interpretation": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "momentum_breadth": {
+                  "type": "dict",
+                  "keys": {
+                    "value": {
+                      "type": "str"
+                    },
+                    "interpretation": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "momentum_concentration": {
+                  "type": "dict",
+                  "keys": {
+                    "value": {
+                      "type": "str"
+                    },
+                    "interpretation": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "volatility_dispersion": {
+                  "type": "dict",
+                  "keys": {
+                    "value": {
+                      "type": "str"
+                    },
+                    "interpretation": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "breadth_summary": {
+                  "type": "str"
+                }
+              }
+            },
+            "volatility_regime": {
+              "type": "dict",
+              "keys": {
+                "regime": {
+                  "type": "str"
+                },
+                "regime_description": {
+                  "type": "str"
+                },
+                "statistics": {
+                  "type": "dict",
+                  "keys": {
+                    "average_volatility": {
+                      "type": "str"
+                    },
+                    "median_volatility": {
+                      "type": "str"
+                    },
+                    "high_volatility_percentage": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "volatility_distribution": {
+                  "type": "dict",
+                  "keys": {
+                    "low_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "top_symbols": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "symbol": {
+                                "type": "str"
+                              },
+                              "volatility": {
+                                "type": "float"
+                              },
+                              "strength_score": {
+                                "type": "float"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "medium_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        }
+                      }
+                    },
+                    "high_volatility": {
+                      "type": "dict",
+                      "keys": {
+                        "count": {
+                          "type": "int"
+                        },
+                        "percentage": {
+                          "type": "str"
+                        },
+                        "top_symbols": {
+                          "type": "list",
+                          "length": 5,
+                          "sample_item": {
+                            "type": "dict",
+                            "keys": {
+                              "symbol": {
+                                "type": "str"
+                              },
+                              "volatility": {
+                                "type": "float"
+                              },
+                              "strength_score": {
+                                "type": "float"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "trading_implications": {
+                  "type": "dict",
+                  "keys": {
+                    "position_sizing": {
+                      "type": "str"
+                    },
+                    "stop_losses": {
+                      "type": "str"
+                    },
+                    "strategy": {
+                      "type": "str"
+                    },
+                    "risk_management": {
+                      "type": "str"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "investment_strategies": {
+          "type": "dict",
+          "keys": {
+            "title": {
+              "type": "str"
+            },
+            "macro_strategy": {
+              "type": "dict",
+              "keys": {
+                "market_phase_analysis": {
+                  "type": "empty_list"
+                },
+                "overall_positioning": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                },
+                "risk_management": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                },
+                "breadth_insights": {
+                  "type": "list",
+                  "length": 4,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                }
+              }
+            },
+            "sector_strategy": {
+              "type": "dict",
+              "keys": {
+                "sector_rotation_signals": {
+                  "type": "empty_list"
+                },
+                "sector_allocation": {
+                  "type": "empty_list"
+                },
+                "sector_risk_warnings": {
+                  "type": "empty_list"
+                }
+              }
+            },
+            "group_strategy": {
+              "type": "dict",
+              "keys": {
+                "group_rotation_signals": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                },
+                "group_allocation": {
+                  "type": "list",
+                  "length": 1,
+                  "sample_item": {
+                    "type": "str"
+                  }
+                },
+                "group_risk_warnings": {
+                  "type": "empty_list"
+                }
+              }
+            },
+            "stock_strategy": {
+              "type": "dict",
+              "keys": {
+                "momentum_strategy": {
+                  "type": "empty_list"
+                },
+                "accumulation_strategy": {
+                  "type": "empty_list"
+                },
+                "risk_avoidance": {
+                  "type": "empty_list"
+                },
+                "position_sizing": {
+                  "type": "empty_list"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

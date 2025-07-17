@@ -1,0 +1,45 @@
+{
+  "inflation_mode": {
+    "status": "ON",
+    "description": "Lạm phát đang tăng cao, Fed có thể duy trì lãi suất cao",
+    "indicators": {
+      "cpi": "3.2%",
+      "cpi_change": "+0.3%",
+      "core_cpi": "4.1%",
+      "core_cpi_change": "+0.2%",
+      "pce": "2.8%",
+      "pce_change": "+0.1%"
+    }
+  },
+  "risk_mode": {
+    "status": "OFF",
+    "description": "Thị trường đang trong trạng thái risk-on, VIX thấp",
+    "indicators": {
+      "vix": "12.5",
+      "vix_change": "-2.1",
+      "treasury_yield": "4.2%",
+      "treasury_yield_change": "+0.1%",
+      "credit_spread": "1.2%",
+      "credit_spread_change": "-0.1%"
+    }
+  },
+  "market_regime": {
+    "current": "Expansion",
+    "description": "Thị trường đang trong giai đoạn mở rộng với tăng trưởng kinh tế ổn định",
+    "strength": "Mạnh",
+    "duration": "8 tháng",
+    "confidence": "75%"
+  },
+  "global_macro": {
+    "us_economy": "Tăng trưởng ổn định",
+    "fed_policy": "Duy trì lãi suất cao",
+    "global_growth": "Chậm lại nhưng ổn định",
+    "geopolitical": "Tương đối ổn định"
+  },
+  "asset_correlation": {
+    "stocks_bonds": "Tương quan âm",
+    "stocks_gold": "Tương quan thấp",
+    "stocks_dollar": "Tương quan âm",
+    "bonds_gold": "Tương quan dương"
+  }
+} 
