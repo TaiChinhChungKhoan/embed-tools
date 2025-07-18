@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { Search, ChevronDown, ChevronUp, TrendingUp, TrendingDown, Activity } from 'lucide-react';
 import Card from './Card';
-import { getTickerIndustry, getAvailableIndustries } from '../utils/rrgDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 
-const VSAStockTable = ({ individual_results }) => {
+const VSAStockTable = ({ individual_results, timeframe = '1D' }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [marketStateFilter, setMarketStateFilter] = useState('');
     const [sentimentFilter, setSentimentFilter] = useState('');
@@ -13,8 +13,9 @@ const VSAStockTable = ({ individual_results }) => {
     const [sortDirection, setSortDirection] = useState('desc');
     const [expandedRows, setExpandedRows] = useState(new Set());
 
-    // Get available industries for filtering
-    const availableIndustries = useMemo(() => getAvailableIndustries(), []);
+    // Get available industries and symbols for filtering using centralized data loader
+    const { data: analyticsData } = useDataLoader('RRG_ANALYSIS', timeframe);
+    const { industries: availableIndustries, symbols: availableSymbols } = analyticsData || { industries: [], symbols: [] };
 
     // Helper function to get sentiment color
     const getSentimentColor = (sentiment) => {
@@ -138,7 +139,8 @@ const VSAStockTable = ({ individual_results }) => {
                 allSignals.some(signal => signal.strength === strengthFilter);
             
             // Check industry filter
-            const stockIndustry = getTickerIndustry(stock.symbol);
+            const stockData = availableSymbols.find(s => s.symbol === stock.symbol);
+            const stockIndustry = stockData?.industries?.[0];
             const matchesIndustry = industryFilter === '' || 
                 (stockIndustry && stockIndustry.id === industryFilter);
             
@@ -158,7 +160,7 @@ const VSAStockTable = ({ individual_results }) => {
         });
 
         return filtered;
-    }, [individual_results, searchTerm, marketStateFilter, sentimentFilter, strengthFilter, industryFilter, sortField, sortDirection]);
+    }, [individual_results, searchTerm, marketStateFilter, sentimentFilter, strengthFilter, industryFilter, sortField, sortDirection, availableSymbols]);
 
     // Handle sort
     const handleSort = (field) => {
@@ -406,7 +408,10 @@ const VSAStockTable = ({ individual_results }) => {
                                             </div>
                                         </td>
                                         <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
-                                            {getTickerIndustry(stock.symbol)?.name || 'Unknown'}
+                                            {(() => {
+                                                const stockData = availableSymbols.find(s => s.symbol === stock.symbol);
+                                                return stockData?.industries?.[0]?.name || 'Unknown';
+                                            })()}
                                         </td>
                                         <td className="px-4 py-3 whitespace-nowrap">
                                             <span className={`text-sm font-medium ${

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, Activity, Shield, BarChart3 } from 'lucide-react';
+import { TrendingUp, Activity, Shield, BarChart3, Globe } from 'lucide-react';
 
 const TabbedDetailedAnalysisLayout = ({ title, tabs }) => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.key || 'market-flow');
@@ -7,6 +7,8 @@ const TabbedDetailedAnalysisLayout = ({ title, tabs }) => {
   // Icon mapping for tabs
   const getTabIcon = (tabKey) => {
     switch (tabKey) {
+      case 'market-interconnection':
+        return <Globe className="w-4 h-4" />;
       case 'market-flow':
         return <TrendingUp className="w-4 h-4" />;
       case 'momentum-analysis':

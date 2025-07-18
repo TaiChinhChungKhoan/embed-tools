@@ -312,6 +312,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
+      react-gauge-chart:
+        specifier: ^0.5.1
+        version: 0.5.1(react-dom@19.1.0)(react@19.1.0)
       recharts:
         specifier: ^3.0.2
         version: 3.0.2(@types/react@19.1.8)(react-dom@19.1.0)(react-is@16.13.1)(react@19.1.0)(redux@5.0.1)
@@ -5249,6 +5252,17 @@ packages:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       warning: 4.0.3
+    dev: false
+
+  /react-gauge-chart@0.5.1(react-dom@19.1.0)(react@19.1.0):
+    resolution: {integrity: sha512-Kd0pLIfHWOVEWJCz+xAxFfrKzCdOkLHNKR13V+O3h06ocyGT7fWjz2oevMXsPt3bVn1Du2od7gPrjUhqXKdASg==}
+    peerDependencies:
+      react: ^16.8.2 || ^17.0 || ^18.x
+      react-dom: ^16.8.2 || ^17.0 || ^18.x
+    dependencies:
+      d3: 7.8.5
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
     dev: false
 
   /react-is@16.13.1:

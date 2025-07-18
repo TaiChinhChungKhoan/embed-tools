@@ -14,6 +14,7 @@ import {
     CheckCircle,
     XCircle
 } from 'lucide-react';
+import { getRiskColor, getCrsColor, getCrsStatusColor, getDirectionColor, getRecentVolumeRatioColor, getRsTrendColor, getRsChangeColor, getStrengthScoreColor } from '../detailed-analysis/utils/colorUtils';
 
 // Thành phần con có thể tái sử dụng cho mỗi chỉ số
 const MetricItem = ({ icon: Icon, label, value, valueClassName = '' }) => (
@@ -34,69 +35,42 @@ const InfoCard = ({ title, children }) => (
     </div>
 );
 
-const GroupInfoPanel = ({ group, analyzeData }) => {
-    const groupData = analyzeData.groups?.find(g => g.custom_id === group.id);
+const GroupInfoPanel = ({ group }) => {
+  if (!group) {
+    return (
+      <div className="bg-white border rounded-lg p-4 shadow-sm text-center">
+        <h3 className="text-lg font-bold text-gray-800">Không có dữ liệu chi tiết cho nhóm này.</h3>
+      </div>
+    );
+  }
 
-    if (!groupData) {
-        return (
-            <div key={group.id} className="bg-white border rounded-lg p-4 shadow-sm">
-                <h3 className="text-lg font-bold text-gray-800 mb-2">{group.name}</h3>
-                <p className="text-gray-500 text-sm">Không có dữ liệu chi tiết cho nhóm này.</p>
-            </div>
-        );
-    }
+  // Destructure relevant fields from the group object
+  const {
+    custom_id,
+    name,
+    metrics = {},
+    speed_analysis = {},
+    direction_analysis = {},
+    risk_assessment = {},
+    trend_consistency = {},
+    performance_summary = {},
+    latest_date,
+    data_points,
+    ...rest
+  } = group;
 
-    const {
-        metrics = {},
-        performance_summary = {},
-        speed_analysis = {},
-        direction_analysis = {},
-        risk_assessment = {}
-    } = groupData;
-
-    // --- Helpers for translation and formatting ---
-    const getRiskColor = (level) => {
-        switch (level) {
-            case 'High': return 'text-red-500';
-            case 'Medium': return 'text-yellow-500';
-            case 'Low': return 'text-green-500';
-            default: return 'text-gray-500';
-        }
-    };
-    
-    const translateRiskLevel = (level) => {
-        const translations = { 'High': 'Cao', 'Medium': 'Trung bình', 'Low': 'Thấp' };
-        return translations[level] || 'K/C';
-    };
-
-    const translateDirection = (direction) => {
-        const translations = { 
-            'Uptrend': 'Xu hướng tăng', 
-            'Downtrend': 'Xu hướng giảm', 
-            'Sideways': 'Đi ngang',
-            'Suy giảm': 'Suy giảm',
-            'Tăng trưởng': 'Tăng trưởng',
-            'Đứng yên': 'Đứng yên'
-        };
-        return translations[direction] || 'K/C';
-    };
-
-    const translateRSTrend = (trend) => {
-        const translations = { 'bullish': 'Tăng giá', 'bearish': 'Giảm giá', 'neutral': 'Trung lập' };
-        return translations[trend] || 'K/C';
-    };
-
-    const translateCRSStatus = (status) => {
-        const translations = { 'outperforming': 'Vượt trội', 'underperforming': 'Tụt hậu', 'neutral': 'Trung lập' };
-        return translations[status] || 'K/C';
-    };
-
+  // --- Helpers for translation and formatting ---
     const formatPercent = (val) => (typeof val === 'number' ? `${(val * 100).toFixed(1)}%` : 'K/C');
     const formatNumber = (val) => (typeof val === 'number' ? val.toFixed(2) : 'K/C');
 
-    return (
-        <div key={group.id} className="bg-white border rounded-lg p-4 shadow-sm">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">{group.name}</h3>
+  return (
+    <div className="bg-white border rounded-lg p-4 shadow-sm">
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{name}</h3>
+      {/* Add your group metrics, performance, risk, etc. here, similar to IndustryInfoPanel */}
+      {/* Example: */}
+      <div className="text-sm text-gray-600 mb-2">Mã nhóm: {custom_id}</div>
+      <div className="text-xs text-gray-500 mb-2">Ngày cập nhật: {latest_date}</div>
+      {/* ...more group details... */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
 
@@ -109,35 +83,35 @@ const GroupInfoPanel = ({ group, analyzeData }) => {
                     />
                     <MetricItem
                         icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 5 ngày"
+                        label="Thay đổi 5 phiên"
                         value={formatPercent(metrics?.rs_5d_change)}
-                        valueClassName={metrics?.rs_5d_change > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
                     />
                     <MetricItem
                         icon={metrics?.rs_21d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 21 ngày"
+                        label="Thay đổi 21 phiên"
                         value={formatPercent(metrics?.rs_21d_change)}
-                        valueClassName={metrics?.rs_21d_change > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getRsChangeColor(metrics?.rs_21d_change)}
                     />
                     <MetricItem
                         icon={Target}
                         label="Xu hướng RS"
-                        value={translateRSTrend(performance_summary?.rs_trend)}
-                        valueClassName={performance_summary?.rs_trend === 'bullish' ? 'text-green-600' : 'text-red-600'}
+                        value={performance_summary?.rs_trend}
+                        valueClassName={getRsTrendColor(performance_summary?.rs_trend)}
                     />
                 </InfoCard>
 
                 <InfoCard title="Tốc độ & Hướng">
                     <MetricItem
                         icon={Zap}
-                        label="Tốc độ 5 ngày"
+                        label="Tốc độ 5 phiên"
                         value={formatPercent(speed_analysis?.raw_speed_5d)}
                     />
                     <MetricItem
                         icon={direction_analysis?.direction === 'Tăng trưởng' ? TrendingUp : TrendingDown}
                         label="Hướng"
-                        value={translateDirection(direction_analysis?.direction)}
-                        valueClassName={direction_analysis?.direction === 'Tăng trưởng' ? 'text-green-600' : 'text-red-600'}
+                        value={direction_analysis?.direction}
+                        valueClassName={getDirectionColor(direction_analysis?.direction)}
                     />
                     <MetricItem
                         icon={Activity}
@@ -157,7 +131,7 @@ const GroupInfoPanel = ({ group, analyzeData }) => {
                     <MetricItem
                         icon={Shield}
                         label="Mức rủi ro"
-                        value={translateRiskLevel(risk_assessment?.risk_level)}
+                        value={risk_assessment?.risk_level}
                         valueClassName={getRiskColor(risk_assessment?.risk_level)}
                     />
                     <MetricItem
@@ -173,7 +147,7 @@ const GroupInfoPanel = ({ group, analyzeData }) => {
                     />
                     <MetricItem
                         icon={Target}
-                        label="Chân trời đầu tư"
+                        label="Khung thời gian"
                         value={risk_assessment?.time_horizon || 'K/C'}
                     />
                 </InfoCard>
@@ -183,19 +157,19 @@ const GroupInfoPanel = ({ group, analyzeData }) => {
                         icon={BarChart}
                         label="CRS Hiện tại"
                         value={formatPercent(metrics?.current_crs)}
-                        valueClassName={metrics?.current_crs > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getCrsColor(metrics?.current_crs)}
                     />
                     <MetricItem
                         icon={Activity}
                         label="Trạng thái CRS"
-                        value={translateCRSStatus(performance_summary?.crs_status)}
-                        valueClassName={performance_summary?.crs_status === 'outperforming' ? 'text-green-600' : 'text-red-600'}
+                        value={performance_summary?.crs_status}
+                        valueClassName={getCrsStatusColor(performance_summary?.crs_status)}
                     />
                     <MetricItem
                         icon={Target}
                         label="Điểm sức mạnh"
                         value={formatNumber(performance_summary?.strength_score)}
-                        valueClassName={performance_summary?.strength_score > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getStrengthScoreColor(performance_summary?.strength_score)}
                     />
                     <MetricItem
                         icon={Zap}
@@ -221,7 +195,7 @@ const GroupInfoPanel = ({ group, analyzeData }) => {
                         icon={TrendingUp}
                         label="Tỷ lệ khối lượng"
                         value={formatNumber(risk_assessment?.volume_analysis?.recent_volume_ratio)}
-                        valueClassName={risk_assessment?.volume_analysis?.recent_volume_ratio > 1 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getRecentVolumeRatioColor(risk_assessment?.volume_analysis?.recent_volume_ratio)}
                     />
                     <MetricItem
                         icon={Shield}
@@ -234,13 +208,13 @@ const GroupInfoPanel = ({ group, analyzeData }) => {
                 <InfoCard title="Thống kê Hiệu suất">
                     <MetricItem
                         icon={CheckCircle}
-                        label="Ngày vượt trội"
+                        label="phiên vượt trội"
                         value={`${metrics?.outperforming_days || 0}/${metrics?.total_days || 0}`}
                         valueClassName="text-green-600"
                     />
                     <MetricItem
                         icon={XCircle}
-                        label="Ngày tụt hậu"
+                        label="phiên tụt hậu"
                         value={`${metrics?.underperforming_days || 0}/${metrics?.total_days || 0}`}
                         valueClassName="text-red-600"
                     />

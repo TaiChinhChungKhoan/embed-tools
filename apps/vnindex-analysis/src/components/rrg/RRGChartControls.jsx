@@ -37,18 +37,19 @@ const RRGChartControls = ({
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium">Filter by:</label>
           <MultiSelect
-            options={availableIndustries.map(ind => ({ value: ind.id, label: ind.name }))}
+            options={availableIndustries
+              .map(ind => ({ value: ind.custom_id, label: ind.name || ind.custom_id || 'Unknown' }))
+              .sort((a, b) => (a.label || '').localeCompare(b.label || '', 'vi-VN'))
+            }
             onValueChange={setSelectedIndustries}
-            defaultValue={selectedIndustries}
+            value={selectedIndustries}
             placeholder="Chọn ngành"
             maxCount={3}
             variant="default"
           />
-          {selectedIndustries.length > 0 && (
-            <span className="text-xs text-gray-500">
-              Showing {filteredData.length} industries
-            </span>
-          )}
+          <span className="text-xs text-gray-500">
+            Showing {filteredData.length} industries
+          </span>
         </div>
       )}
       
@@ -56,18 +57,19 @@ const RRGChartControls = ({
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium">Filter by:</label>
           <MultiSelect
-            options={availableGroups.map(group => ({ value: group.id, label: group.name }))}
+            options={availableGroups
+              .map(group => ({ value: group.custom_id, label: group.name || group.custom_id || 'Unknown' }))
+              .sort((a, b) => (a.label || '').localeCompare(b.label || '', 'vi-VN'))
+            }
             onValueChange={setSelectedGroups}
-            defaultValue={selectedGroups}
+            value={selectedGroups}
             placeholder="Chọn nhóm"
             maxCount={3}
             variant="default"
           />
-          {selectedGroups.length > 0 && (
-            <span className="text-xs text-gray-500">
-              Showing {filteredData.length} groups
-            </span>
-          )}
+          <span className="text-xs text-gray-500">
+            Showing {filteredData.length} groups
+          </span>
         </div>
       )}
       
@@ -91,11 +93,14 @@ const RRGChartControls = ({
               onChange={e => setSelectedTickerIndustries([e.target.value])}
               className="border rounded px-2 py-1 text-sm min-w-[200px] focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-black cursor-pointer"
             >
-              {availableIndustries.map(industry => (
-                <option key={industry.id} value={industry.id}>
-                  {industry.name}
-                </option>
-              ))}
+              {availableIndustries
+                .sort((a, b) => (a.name || a.custom_id || '').localeCompare(b.name || b.custom_id || '', 'vi-VN'))
+                .map(industry => (
+                  <option key={industry.custom_id} value={industry.custom_id}>
+                    {industry.name}
+                  </option>
+                ))
+              }
             </select>
           )}
           {specialTickerFilter !== 'all' ? (

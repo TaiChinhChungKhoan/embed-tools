@@ -1,6 +1,9 @@
 import React from 'react';
+import IndustryInfoPanelMinified from './rrg/IndustryInfoPanelMinified';
+import GroupInfoPanelMinified from './rrg/GroupInfoPanelMinified';
+import SymbolInfoPanelMinified from './rrg/SymbolInfoPanelMinified';
 
-const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData, investmentStrategies }) => {
+const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData, investmentStrategies, analyzeData }) => {
   if (!analysisData) return null;
   
   // The analysisData is already at the insights.industries level, so access directly
@@ -79,6 +82,24 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
     analysisData.bottom_performers
   ].some(arr => Array.isArray(arr) && arr.length > 0);
 
+  // Helper function to render the appropriate minified panel
+  const renderMinifiedPanel = (item) => {
+    switch (type) {
+      case 'industry':
+        // For industries, we need to look up the full data from analyzeData using custom_id
+        const fullIndustryData = analyzeData?.industries?.find(industry => 
+          industry.custom_id === item.custom_id || industry.id === item.custom_id
+        );
+        return <IndustryInfoPanelMinified industry={fullIndustryData || item} />;
+      case 'group':
+        return <GroupInfoPanelMinified group={item} analyzeData={analyzeData} />;
+      case 'ticker':
+        return <SymbolInfoPanelMinified symbol={item} analyzeData={analyzeData} />;
+      default:
+        return null;
+    }
+  };
+
   // Renders RRG quadrant performer items with only relevant fields
   const renderRRGInsightItems = (items, quadrantKey) => {
     if (!items || !Array.isArray(items) || items.length === 0) {
@@ -87,30 +108,8 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
     return (
       <div className="space-y-2">
         {items.slice(0, 5).map((item, index) => (
-          <div key={index} className="bg-white p-3 rounded border">
-            <div className="flex justify-between items-start gap-2">
-              {/* Left: Main info */}
-              <div className="flex-1 min-w-0">
-                <div className="font-medium text-gray-900 truncate">
-                  {item?.name || item?.symbol || 'Unknown'}
-                </div>
-                {item?.speed_category && (
-                  <div className="text-sm text-gray-600 truncate">{item.speed_category}</div>
-                )}
-                {item?.direction && (
-                  <div className="text-xs text-gray-700 truncate">{item.direction}</div>
-                )}
-              </div>
-              {/* Right: Key metrics */}
-              <div className="flex flex-col items-end min-w-[80px]">
-                {typeof item.velocity === 'number' && (
-                  <div className="text-base font-semibold text-purple-700 leading-tight">{item.velocity.toFixed(2)}</div>
-                )}
-                {item?.trajectory_strength && (
-                  <div className="text-xs text-blue-700 mt-1 whitespace-nowrap">{item.trajectory_strength}</div>
-                )}
-              </div>
-            </div>
+          <div key={index}>
+            {renderMinifiedPanel(item)}
           </div>
         ))}
       </div>
@@ -126,37 +125,73 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
           {Array.isArray(analysisData.top_performers) && analysisData.top_performers.some(Boolean) && (
             <div>
               <h4 className="font-medium text-green-800 mb-2">{type === 'ticker' ? 'Top cổ phiếu mạnh nhất' : type === 'group' ? 'Top nhóm mạnh nhất' : 'Top ngành mạnh nhất'}</h4>
-              {renderInsightItems(analysisData.top_performers, 'Top performers')}
+              <div className="space-y-2">
+                {analysisData.top_performers.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.improving_momentum) && analysisData.improving_momentum.some(Boolean) && (
             <div>
               <h4 className="font-medium text-green-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} có động lượng cải thiện</h4>
-              {renderInsightItems(analysisData.improving_momentum, `${typeName} có động lượng cải thiện`)}
+              <div className="space-y-2">
+                {analysisData.improving_momentum.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.accumulation_candidates) && analysisData.accumulation_candidates.some(Boolean) && (
             <div>
               <h4 className="font-medium text-purple-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} tích lũy tiềm năng</h4>
-              {renderInsightItems(analysisData.accumulation_candidates, `${typeName} tích lũy tiềm năng`)}
+              <div className="space-y-2">
+                {analysisData.accumulation_candidates.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.breakout_candidates) && analysisData.breakout_candidates.some(Boolean) && (
             <div>
               <h4 className="font-medium text-blue-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} có thể bứt phá</h4>
-              {renderInsightItems(analysisData.breakout_candidates, `${typeName} có thể bứt phá`)}
+              <div className="space-y-2">
+                {analysisData.breakout_candidates.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.stealth_accumulation) && analysisData.stealth_accumulation.some(Boolean) && (
             <div>
               <h4 className="font-medium text-indigo-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} tích lũy âm thầm</h4>
-              {renderInsightItems(analysisData.stealth_accumulation, `${typeName} tích lũy âm thầm`)}
+              <div className="space-y-2">
+                {analysisData.stealth_accumulation.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.institutional_activity) && analysisData.institutional_activity.some(Boolean) && (
             <div>
               <h4 className="font-medium text-cyan-700 mb-2">Hoạt động tổ chức</h4>
-              {renderInsightItems(analysisData.institutional_activity, 'Hoạt động tổ chức')}
+              <div className="space-y-2">
+                {analysisData.institutional_activity.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
@@ -164,49 +199,97 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
           {Array.isArray(analysisData.bottom_performers) && analysisData.bottom_performers.some(Boolean) && (
             <div>
               <h4 className="font-medium text-red-800 mb-2">{type === 'ticker' ? 'Cổ phiếu yếu nhất' : type === 'group' ? 'Nhóm yếu nhất' : 'Ngành yếu nhất'}</h4>
-              {renderInsightItems(analysisData.bottom_performers, 'Bottom performers')}
+              <div className="space-y-2">
+                {analysisData.bottom_performers.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.degrading_momentum) && analysisData.degrading_momentum.some(Boolean) && (
             <div>
               <h4 className="font-medium text-red-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} có động lượng suy giảm</h4>
-              {renderInsightItems(analysisData.degrading_momentum, `${typeName} có động lượng suy giảm`)}
+              <div className="space-y-2">
+                {analysisData.degrading_momentum.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.distribution_candidates) && analysisData.distribution_candidates.some(Boolean) && (
             <div>
               <h4 className="font-medium text-orange-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} có thể phân phối</h4>
-              {renderInsightItems(analysisData.distribution_candidates, `${typeName} có thể phân phối`)}
+              <div className="space-y-2">
+                {analysisData.distribution_candidates.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.consolidation_candidates) && analysisData.consolidation_candidates.some(Boolean) && (
             <div>
               <h4 className="font-medium text-yellow-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} củng cố</h4>
-              {renderInsightItems(analysisData.consolidation_candidates, `${typeName} củng cố`)}
+              <div className="space-y-2">
+                {analysisData.consolidation_candidates.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.stealth_distribution) && analysisData.stealth_distribution.some(Boolean) && (
             <div>
               <h4 className="font-medium text-pink-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} phân phối âm thầm</h4>
-              {renderInsightItems(analysisData.stealth_distribution, `${typeName} phân phối âm thầm`)}
+              <div className="space-y-2">
+                {analysisData.stealth_distribution.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.falling_knife) && analysisData.falling_knife.some(Boolean) && (
             <div>
               <h4 className="font-medium text-red-800 mb-2">Dao rơi (tránh hoàn toàn)</h4>
-              {renderInsightItems(analysisData.falling_knife, 'Dao rơi')}
+              <div className="space-y-2">
+                {analysisData.falling_knife.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.high_volatility) && analysisData.high_volatility.some(Boolean) && (
             <div>
               <h4 className="font-medium text-orange-800 mb-2">Biến động cao</h4>
-              {renderInsightItems(analysisData.high_volatility, 'Biến động cao')}
+              <div className="space-y-2">
+                {analysisData.high_volatility.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {Array.isArray(analysisData.deteriorating_fundamentals) && analysisData.deteriorating_fundamentals.some(Boolean) && (
             <div>
               <h4 className="font-medium text-red-800 mb-2">Cơ bản suy giảm</h4>
-              {renderInsightItems(analysisData.deteriorating_fundamentals, 'Cơ bản suy giảm')}
+              <div className="space-y-2">
+                {analysisData.deteriorating_fundamentals.slice(0, 5).map((item, index) => (
+                  <div key={index}>
+                    {renderMinifiedPanel(item)}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>

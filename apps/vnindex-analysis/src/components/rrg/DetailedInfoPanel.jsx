@@ -1,69 +1,74 @@
 import React, { useState, useEffect } from 'react';
-import { getAnalyzeRsData } from '../../utils/rrgDataLoader';
 import IndustryInfoPanel from './IndustryInfoPanel';
 import SymbolInfoPanel from './SymbolInfoPanel';
 import GroupInfoPanel from './GroupInfoPanel';
 
 // Detailed Information Panel Component
-const DetailedInfoPanel = ({ selectedItems, type, timeframe }) => {
-  const [analyzeData, setAnalyzeData] = useState(null);
-
-  useEffect(() => {
-    try {
-      const data = getAnalyzeRsData(timeframe);
-      setAnalyzeData(data);
-    } catch (error) {
-      console.error('Error loading analyze data:', error);
-    }
-  }, [timeframe]);
-
-  if (!selectedItems || selectedItems.length === 0 || !analyzeData) {
+export default function DetailedInfoPanel({ 
+  selectedItems, 
+  hoveredPoint, 
+  mousePosition, 
+  onClose, 
+  getSeriesColor, 
+  type, 
+  timeframe,
+  availableIndustries, 
+  availableGroups 
+}) {
+  // If no items are selected, don't show anything
+  if (!selectedItems || selectedItems.length === 0) {
     return null;
-  }
-
-  // Check if we have any valid data to display
-  const hasValidData = selectedItems.some(item => {
-    if (item.type === 'symbol') {
-      return analyzeData.symbols?.some(s => s.symbol === item.id);
-    } else if (item.type === 'group') {
-      return analyzeData.groups?.some(g => g.custom_id === item.id);
-    } else {
-      return analyzeData.industries?.some(ind => ind.custom_id === item.id);
-    }
-  });
-
-  if (!hasValidData) {
-    return (
-      <div className="mt-6 p-4 bg-gray-50 border rounded-lg">
-        <p className="text-gray-600 text-sm">Không có dữ liệu chi tiết cho các mục đã chọn.</p>
-      </div>
-    );
   }
 
   return (
     <div className="mt-6 space-y-4">
-      <h2 className="text-xl font-bold text-gray-800">
-        Thông tin chi tiết
-      </h2>
-      <div className="space-y-4">
-        {selectedItems.map(item => {
-          if (item.type === 'symbol') {
-            // Look up the full symbol object
-            const fullSymbol = analyzeData.symbols?.find(s => s.symbol === item.id);
-            if (!fullSymbol) return null;
-            return <SymbolInfoPanel key={item.id} symbol={fullSymbol} analyzeData={analyzeData} />;
-          } else if (item.type === 'group') {
-            return <GroupInfoPanel key={item.id} group={item} analyzeData={analyzeData} />;
-          } else {
-            // Look up the full industry object
-            const fullIndustry = analyzeData.industries?.find(ind => ind.custom_id === item.id || ind.id === item.id);
-            if (!fullIndustry) return null;
-            return <IndustryInfoPanel key={item.id} industry={fullIndustry} />;
-          }
-        })}
-      </div>
+      {selectedItems.map((item, index) => {
+        // Find the actual data for this item
+        let itemData = null;
+        
+        if (item.type === 'industry') {
+          // For industries, the item already contains the full analytics data
+          itemData = item;
+        } else if (item.type === 'group') {
+          // For groups, the item already contains the full analytics data
+          itemData = item;
+        } else if (item.type === 'symbol') {
+          // For symbols, the item already contains the full analytics data
+          itemData = item;
+        }
+
+        if (!itemData) {
+          return (
+            <div key={`${item.type}-${item.custom_id || item.id}-${index}`} className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+              <div className="text-center py-4">
+                <div className="text-yellow-600 font-medium">Không có dữ liệu</div>
+                <div className="text-yellow-500 text-sm mt-1">
+                  Không tìm thấy dữ liệu cho {item.type === 'symbol' ? 'cổ phiếu' : item.type === 'group' ? 'nhóm' : 'ngành'}: {item.name || item.custom_id || item.id}
+                </div>
+
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <div key={`${item.type}-${item.custom_id || item.id}-${index}`} className="p-4 bg-white border rounded-lg shadow-sm">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              Thông tin chi tiết - {item.type === 'symbol' ? 'Cổ phiếu' : item.type === 'group' ? 'Nhóm vốn hóa' : 'Ngành nghề'}: {item.name || item.custom_id || item.id}
+            </h2>
+            <div className="space-y-4">
+              {item.type === 'symbol' ? (
+                <SymbolInfoPanel key={`${item.id}-${timeframe}-${index}`} symbol={itemData} timeframe={timeframe} />
+              ) : item.type === 'group' ? (
+                <GroupInfoPanel key={`${item.custom_id}-${timeframe}-${index}`} group={itemData} timeframe={timeframe} />
+              ) : (
+                <IndustryInfoPanel key={`${item.custom_id}-${timeframe}-${index}`} industry={itemData} timeframe={timeframe} />
+              )}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
-};
+}; 
 
-export default DetailedInfoPanel; 

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useContext } from 'react';
 import {
   ComposedChart,
   Scatter,
@@ -11,16 +11,7 @@ import {
   ReferenceLine,
   ResponsiveContainer
 } from 'recharts';
-import { 
-  loadRRGData, 
-  getAvailableIndustries, 
-  getAvailableGroups,
-  getTickersByIndustry, 
-  getIndustryData,
-  getGroupData,
-  getTickerIndustry,
-  getAnalyzeRsData
-} from '../../utils/rrgDataLoader';
+import { cacheUtils } from '../../utils/dataLoader';
 
 // Import sub-components
 import CustomTooltip from './CustomTooltip';
@@ -30,10 +21,22 @@ import RRGChartControls from './RRGChartControls';
 import RRGChartLegend from './RRGChartLegend';
 import DetailedInfoPanel from './DetailedInfoPanel';
 import { getSeriesColor, MAX_SERIES } from './utils';
+import { useTickerInfoWithData } from '../../utils/dataLoader';
+import { DataReloadContext } from '../../contexts/DataReloadContext';
 
 // RRG Chart Component
-export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
+export default function RRGChart(props) {
+  const { type = 'industries', timeframe, analyticsData } = props;
   
+  // Get pre-loaded data from context
+  const { companies, industries, essentialDataLoading, essentialDataError } = useContext(DataReloadContext);
+  
+  // Use the pre-loaded data for ticker info
+  const { getTickerInfo, getIndustryTickers, loading: tickerInfoLoading } = useTickerInfoWithData(companies, industries);
+  
+  // Use the pre-loaded industries data directly
+  const availableIndustries = industries || [];
+
   const [selectedIndustries, setSelectedIndustries] = useState([]);
   const [selectedGroups, setSelectedGroups] = useState([]);
   const [selectedTickerIndustries, setSelectedTickerIndustries] = useState([]);
@@ -47,7 +50,36 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
   const [zoom, setZoom] = useState(1);
   const [error, setError] = useState(null);
 
+  // Show loading state if ticker info is still loading
+  if (essentialDataLoading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-gray-500">Đang tải dữ liệu...</div>
+      </div>
+    );
+  }
+
+  // Show error state if there's an error
+  if (essentialDataError) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-red-500">Lỗi: {essentialDataError}</div>
+      </div>
+    );
+  }
+
   const handleResetZoom = () => setZoom(1);
+
+  // Clear cache for industries and companies to remove processed_at
+  useEffect(() => {
+    // Clear specific cache entries that might contain processed_at
+    const cacheKeys = Array.from(cacheUtils.getCacheKeys());
+    cacheKeys.forEach(key => {
+      if (key.includes('industries') || key.includes('companies')) {
+        cacheUtils.removeFromCache(key);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -63,22 +95,25 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
-  const rrgData = useMemo(() => {
-    try {
-      return loadRRGData(timeframe);
-    } catch (error) {
-      console.error('Error loading RRG data in component:', error);
-      return null;
-    }
-  }, [timeframe]);
+  // Use passed analyticsData instead of loading it again
+  const { groups: availableGroups = [], symbols: availableSymbols = [], industries: analyticsIndustries = [] } = analyticsData || {};
+
+  // Ensure arrays are properly initialized
+  const safeAvailableIndustries = Array.isArray(availableIndustries) ? availableIndustries : [];
+  const safeAvailableGroups = Array.isArray(availableGroups) ? availableGroups : [];
+  const safeAvailableSymbols = Array.isArray(availableSymbols) ? availableSymbols : [];
+  const safeAnalyticsIndustries = Array.isArray(analyticsIndustries) ? analyticsIndustries : [];
   
-  const availableIndustries = useMemo(() => {
-    return getAvailableIndustries(timeframe);
-  }, [timeframe]);
+  // Additional safety check - if any of the safe arrays are still problematic, use empty arrays
+  const finalAvailableIndustries = safeAvailableIndustries && typeof safeAvailableIndustries.slice === 'function' ? safeAvailableIndustries : [];
+  const finalAvailableGroups = safeAvailableGroups && typeof safeAvailableGroups.slice === 'function' ? safeAvailableGroups : [];
+  const finalAvailableSymbols = safeAvailableSymbols && typeof safeAvailableSymbols.slice === 'function' ? safeAvailableSymbols : [];
+  const finalAnalyticsIndustries = safeAnalyticsIndustries && typeof safeAnalyticsIndustries.slice === 'function' ? safeAnalyticsIndustries : [];
   
-  const availableGroups = useMemo(() => {
-    return getAvailableGroups(timeframe);
-  }, [timeframe]);
+  // Convert object-based industries to array for compatibility with existing code
+  const industriesArray = availableIndustries && typeof availableIndustries === 'object' && !Array.isArray(availableIndustries) 
+    ? Object.entries(availableIndustries).map(([custom_id, industry]) => ({ custom_id, ...industry }))
+    : finalAvailableIndustries;
 
   // Ensure a default industry is always selected for stock RRG when special filter is 'all'
   useEffect(() => {
@@ -86,23 +121,52 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
       type === 'tickers' &&
       specialTickerFilter === 'all' &&
       (!selectedTickerIndustries.length) &&
-      availableIndustries.length > 0
+      industriesArray.length > 0
     ) {
-      setSelectedTickerIndustries([availableIndustries[0].id]);
+      setSelectedTickerIndustries([industriesArray[0].custom_id]);
     }
-  }, [type, specialTickerFilter, selectedTickerIndustries, availableIndustries]);
+  }, [type, specialTickerFilter, industriesArray, selectedTickerIndustries.length]);
 
+  // Auto-select all industries on initial load if none selected
+  useEffect(() => {
+    if (
+      type === 'industries' &&
+      selectedIndustries.length === 0 &&
+      industriesArray.length > 0
+    ) {
+      setSelectedIndustries(industriesArray.map(ind => ind.custom_id));
+    }
+  }, [type, industriesArray, selectedIndustries.length]);
+
+  useEffect(() => {
+    if (
+      type === 'groups' &&
+      selectedGroups.length === 0 &&
+      finalAvailableGroups.length > 0
+    ) {
+      setSelectedGroups(finalAvailableGroups.map(g => g.custom_id));
+    }
+  }, [type, selectedGroups, finalAvailableGroups]);
+  
   const filteredData = useMemo(() => {
     if (type === 'industries') {
-      const selected = selectedIndustries.length > 0 ? selectedIndustries : rrgData.industries.map(i => i.custom_id);
-      return getIndustryData(selected, timeframe);
+      // If no industries are selected, show all industries
+      if (selectedIndustries.length === 0) {
+        return finalAnalyticsIndustries || [];
+      }
+      // If industries are selected, filter by selection
+      return (finalAnalyticsIndustries || []).filter(ind => selectedIndustries.includes(ind.custom_id));
     } else if (type === 'groups') {
-      const selected = selectedGroups.length > 0 ? selectedGroups : rrgData.groups.map(g => g.custom_id);
-      return getGroupData(selected, timeframe);
+      // If no groups are selected, show all groups
+      if (selectedGroups.length === 0) {
+        return finalAvailableGroups || [];
+      }
+      // If groups are selected, filter by selection
+      return (finalAvailableGroups || []).filter(group => selectedGroups.includes(group.custom_id));
     } else {
       // Ticker filtering logic with special filter
       if (specialTickerFilter && specialTickerFilter !== 'all') {
-        const allTickers = rrgData.symbols;
+        const allTickers = finalAvailableSymbols;
         if (specialTickerFilter === 'top10rs') {
           // Top 10 by RS Score (latest x value)
           return allTickers
@@ -128,47 +192,75 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
         }
         return [];
       } else {
-        // Only show by industry, never all
-        const selected = selectedTickerIndustries.length > 0 ? selectedTickerIndustries : [availableIndustries[0]?.id].filter(Boolean);
-        const filtered = getTickersByIndustry(selected, timeframe);
+              // Only show by industry, never all
+      const filtered = selectedTickerIndustries.length > 0
+        ? (finalAvailableSymbols || []).filter(symbol => {
+            // For now, fall back to the original embedded industry data until we have proper mapping
+            return symbol.industries && symbol.industries.some(ind => selectedTickerIndustries.includes(ind.custom_id));
+          })
+        : (finalAvailableSymbols || []);
         return filtered;
       }
     }
-  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, rrgData, availableIndustries, timeframe]);
+  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, finalAvailableSymbols, finalAvailableIndustries, finalAvailableGroups, finalAnalyticsIndustries]);
 
   // Determine which items to show detailed information for
   const selectedItemsForDetails = useMemo(() => {
     if (type === 'industries') {
-      // For industry RRG: show details for selected industries
-      const selectedIndustryData = selectedIndustries.length > 0 
-        ? availableIndustries.filter(ind => selectedIndustries.includes(ind.id))
-        : availableIndustries.slice(0, 3); // Show first 3 if none selected
-      return selectedIndustryData.map(ind => ({ ...ind, type: 'industry' }));
+          // For industry RRG: show details for selected industries
+    const selectedIndustryData = selectedIndustries.length > 0 
+      ? (finalAnalyticsIndustries || []).filter(ind => selectedIndustries.includes(ind.custom_id))
+      : (finalAnalyticsIndustries || []).slice(0, 5); // Show first 5 if none selected
+    
+    // Ensure unique industries by custom_id to prevent duplicates
+    const uniqueIndustries = selectedIndustryData.filter((industry, index, self) => 
+      index === self.findIndex(ind => ind.custom_id === industry.custom_id)
+    );
+      
+      return uniqueIndustries.map(ind => {
+        // Add the industry name from metadata
+        const industryMetadata = industriesArray.find(meta => meta.custom_id === ind.custom_id);
+        return { 
+          ...ind, 
+          type: 'industry',
+          name: industryMetadata?.name || ind.custom_id
+        };
+      });
     } else if (type === 'groups') {
       // For group RRG: show details for selected groups
       const selectedGroupData = selectedGroups.length > 0 
-        ? availableGroups.filter(group => selectedGroups.includes(group.id))
-        : availableGroups.slice(0, 3); // Show first 3 if none selected
-      return selectedGroupData.map(group => ({ ...group, type: 'group' }));
+        ? (finalAvailableGroups || []).filter(group => selectedGroups.includes(group.custom_id))
+        : (finalAvailableGroups || []).slice(0, 3); // Show first 3 if none selected
+      return selectedGroupData.map(group => ({ 
+        ...group, 
+        type: 'group',
+        name: group.name || group.custom_id
+      }));
     } else if (type === 'tickers') {
       // Create symbol data directly from filteredData to avoid circular dependency
       if (!filteredData || filteredData.length === 0) return [];
       
       if (specialTickerFilter === 'all' && selectedTickerIndustries.length > 0) {
         // When filtering by industry: show both industry and symbol details
-        const selectedIndustryData = availableIndustries.filter(ind => selectedTickerIndustries.includes(ind.id))
-          .map(ind => ({ ...ind, type: 'industry' }));
+        const selectedIndustryData = (finalAvailableIndustries || []).filter(ind => selectedTickerIndustries.includes(ind.custom_id))
+          .map(ind => ({ 
+            ...ind, 
+            type: 'industry',
+            name: ind.name || ind.custom_id
+          }));
         const symbolData = filteredData.slice(0, MAX_SERIES).map(series => ({
+          ...series,
           id: series.symbol || series.custom_id,
-          name: typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown'),
+          name: series.symbol || series.custom_id, // Use symbol or custom_id as name
           type: 'symbol'
         }));
         return [...selectedIndustryData, ...symbolData];
       } else {
         // When using special filters: only show symbol details
         const symbolData = filteredData.slice(0, MAX_SERIES).map(series => ({
+          ...series,
           id: series.symbol || series.custom_id,
-          name: typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown'),
+          name: series.symbol || series.custom_id, // Use symbol or custom_id as name
           type: 'symbol'
         }));
         return symbolData;
@@ -176,7 +268,7 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
     } else {
       return [];
     }
-  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, availableIndustries, availableGroups, filteredData]);
+  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, finalAvailableIndustries, finalAvailableGroups, finalAnalyticsIndustries, filteredData]);
 
   // Limit the number of series to prevent chart freeze
   const limitedData = filteredData.slice(0, MAX_SERIES);
@@ -210,11 +302,27 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
     
     return limitedData.map((series, index) => {
       const latest = series.tail?.[series.tail.length - 1];
-      const tickerIndustry = type === 'tickers' ? getTickerIndustry(series.symbol || series.custom_id, timeframe) : null;
+      const tickerInfo = getTickerInfo(series.symbol || series.custom_id);
+      const tickerIndustry = tickerInfo?.industry_id ? getIndustryTickers(tickerInfo.industry_id) : null;
+      
+      // Get the proper name based on type
+      let displayName;
+      if (type === 'industries') {
+        // For industries, use the looked up industry name from metadata
+        const industry = industriesArray.find(ind => ind.custom_id === series.custom_id);
+        displayName = industry?.name || series.custom_id;
+      } else if (type === 'groups') {
+        // For groups, use the looked up group name
+        const group = finalAvailableGroups.find(g => g.custom_id === series.custom_id);
+        displayName = group?.name || series.custom_id;
+      } else {
+        // For tickers, use symbol or custom_id
+        displayName = series.symbol || series.custom_id;
+      }
       
       const result = {
         ...latest,
-        name: typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown'),
+        name: displayName,
         id: series.symbol || series.custom_id,
         type: type,
         industry: tickerIndustry?.name || null,
@@ -224,28 +332,41 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
       
       return result;
     });
-  }, [limitedData, type, timeframe]);
+  }, [limitedData, type, finalAvailableIndustries, finalAvailableGroups, getTickerInfo, getIndustryTickers, industriesArray]);
 
-  if (!rrgData) {
+  // Show error state if no data arrays
+  if (!finalAvailableIndustries || !finalAvailableGroups || !finalAvailableSymbols) {
     return (
       <div className="w-full p-8 text-center">
-        <div className="text-red-600 text-lg font-medium">Error loading RRG data</div>
-        <div className="text-gray-600 mt-2">Please check the console for more details</div>
+        <div className="text-red-600 text-lg font-medium">Không có dữ liệu RRG</div>
+        <div className="text-gray-600 mt-2">Vui lòng kiểm tra lại sau</div>
       </div>
     );
   }
 
-  if (error) {
+  // Check if analyticsData has the expected structure
+  if (!analyticsData || !analyticsData.industries) {
     return (
       <div className="w-full p-8 text-center">
-        <div className="text-red-600 text-lg font-medium">Error in RRG Chart</div>
-        <div className="text-gray-600 mt-2">{error}</div>
-        <button 
-          onClick={() => setError(null)} 
-          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        >
-          Try Again
-        </button>
+        <div className="text-red-600 text-lg font-medium">Dữ liệu RRG không đúng định dạng</div>
+        <div className="text-gray-600 mt-2">Thiếu dữ liệu ngành nghề trong analyticsData</div>
+        <div className="text-xs text-gray-500 mt-2">
+          analyticsData: {JSON.stringify(analyticsData ? Object.keys(analyticsData) : 'null')}
+        </div>
+      </div>
+    );
+  }
+
+  // Check if industries data has the required tail property
+  const industriesWithTail = finalAnalyticsIndustries.filter(ind => ind.tail && Array.isArray(ind.tail) && ind.tail.length > 0);
+  if (type === 'industries' && industriesWithTail.length === 0) {
+    return (
+      <div className="w-full p-8 text-center">
+        <div className="text-red-600 text-lg font-medium">Dữ liệu RRG ngành nghề không có tọa độ</div>
+        <div className="text-gray-600 mt-2">Thiếu thuộc tính 'tail' với tọa độ x,y trong dữ liệu ngành nghề</div>
+        <div className="text-xs text-gray-500 mt-2">
+          Tổng số ngành: {finalAnalyticsIndustries.length}, Có tail: {industriesWithTail.length}
+        </div>
       </div>
     );
   }
@@ -296,8 +417,8 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
         setSelectedTickerIndustries={setSelectedTickerIndustries}
         specialTickerFilter={specialTickerFilter}
         setSpecialTickerFilter={setSpecialTickerFilter}
-        availableIndustries={availableIndustries}
-        availableGroups={availableGroups}
+        availableIndustries={industriesArray}
+        availableGroups={finalAvailableGroups}
         filteredData={filteredData}
       />
 
@@ -382,11 +503,24 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
                   <Line
                     key={`trail-${series.symbol || series.custom_id}`}
                     data={series.tail?.slice(-trailLength).map(point => {
-                      const tickerIndustry = type === 'tickers' ? getTickerIndustry(series.symbol, timeframe) : null;
+                      const tickerInfo = getTickerInfo(series.symbol || series.custom_id);
+                      const tickerIndustry = tickerInfo?.industry_id ? getIndustryTickers(tickerInfo.industry_id) : null;
+                      
+                      // Get the proper name based on type
+                      let displayName;
+                      if (type === 'industries') {
+                        const industry = industriesArray.find(ind => ind.custom_id === series.custom_id);
+                        displayName = industry?.name || series.custom_id;
+                      } else if (type === 'groups') {
+                        const group = finalAvailableGroups.find(g => g.custom_id === series.custom_id);
+                        displayName = group?.name || series.custom_id;
+                      } else {
+                        displayName = series.symbol || series.custom_id;
+                      }
                       
                       return {
                         ...point,
-                        name: typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown'),
+                        name: displayName,
                         date: point.date,
                         industry: type === 'tickers' ? tickerIndustry?.name || null : null
                       };
@@ -420,7 +554,7 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
                 shape={(props) => {
                   const { cx, cy, payload } = props;
                   const { name, color } = payload;
-                  const isHovered = hoveredPoint?.id === payload.id && hoveredPoint?.name === payload.name;
+                  const isHovered = hoveredPoint?.custom_id === payload.custom_id && hoveredPoint?.name === payload.name;
 
                   return (
                     <g
@@ -488,7 +622,13 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
         </div>
       </div>
 
-      <RRGChartLegend limitedData={limitedData} getSeriesColor={getSeriesColor} />
+      <RRGChartLegend 
+        limitedData={limitedData} 
+        getSeriesColor={getSeriesColor} 
+        type={type}
+        availableIndustries={industriesArray}
+        availableGroups={finalAvailableGroups}
+      />
 
       {/* RRG Reading Guide */}
       <div className="mt-6 bg-white rounded-lg shadow-sm border p-6">
@@ -516,10 +656,16 @@ export default function RRGChart({ type = 'industries', timeframe = '1D' }) {
       </div>
 
       {/* Detailed Info Panel */}
-      <DetailedInfoPanel 
-        selectedItems={selectedItemsForDetails} 
-        type={type} 
-        timeframe={timeframe} 
+      <DetailedInfoPanel
+        selectedItems={selectedItemsForDetails}
+        hoveredPoint={hoveredPoint}
+        mousePosition={mousePosition}
+        onClose={() => setHoveredPoint(null)}
+        getSeriesColor={getSeriesColor} 
+        type={type}
+        timeframe={timeframe}
+        availableIndustries={industriesArray}
+        availableGroups={finalAvailableGroups}
       />
     </div>
   );

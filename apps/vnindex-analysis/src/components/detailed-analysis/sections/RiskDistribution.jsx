@@ -37,7 +37,7 @@ const RiskDistributionCard = ({ title, data, color }) => {
 const RiskDistribution = ({ riskDistribution }) => {
   if (!riskDistribution) return null;
 
-  const { risk_assessment: assessment, risk_level_distribution: riskLevels, volatility_distribution: volatility } = riskDistribution;
+  const { risk_level_distribution: riskLevels, volatility_distribution: volatility } = riskDistribution;
 
   // --- CONFIGURATION ---
   // This makes the rendering logic clean and easy to update
@@ -56,27 +56,7 @@ const RiskDistribution = ({ riskDistribution }) => {
 
   return (
     <div className="bg-white p-4 rounded-lg border space-y-6">
-      {/* 1. Redesigned and Complete Risk Assessment Summary */}
-      {assessment && (
-        <div>
-          <h3 className="font-bold text-base text-slate-800">Đánh giá rủi ro</h3>
-          <div className="mt-2 p-3 border rounded-lg bg-slate-50">
-            <p className="font-bold text-lg text-green-600">{assessment.environment}</p>
-            <p className="text-sm text-slate-600 mt-1">{assessment.description}</p>
-            
-            {/* Displaying the previously missing stats */}
-            <div className="flex flex-wrap gap-3 mt-3 text-sm">
-              <div className="bg-red-100 text-red-800 font-medium px-2 py-1 rounded">Rủi ro cao: <b>{assessment.high_risk_percentage}</b></div>
-              <div className="bg-orange-100 text-orange-800 font-medium px-2 py-1 rounded">Biến động cao: <b>{assessment.high_volatility_percentage}</b></div>
-              <div className="bg-green-100 text-green-800 font-medium px-2 py-1 rounded">Rủi ro thấp: <b>{assessment.low_risk_percentage}</b></div>
-            </div>
-            
-            <p className="text-sm text-blue-700 font-semibold mt-3 pt-3 border-t border-slate-200">{assessment.recommendation}</p>
-          </div>
-        </div>
-      )}
-
-      {/* 2. Cleaner Two-Column Rendering */}
+      {/* Two-Column Distribution Charts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Risk Level Column */}
         <div className="space-y-4">

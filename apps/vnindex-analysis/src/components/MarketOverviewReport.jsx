@@ -1,8 +1,12 @@
 import React, { useMemo } from 'react';
-import { BarChart2, DollarSign, AlertTriangle, Zap } from 'lucide-react';
+import { BarChart2, DollarSign, AlertTriangle, Zap, TrendingUp, Activity, BarChart3 } from 'lucide-react';
 import Card from './Card';
 import TopListCard from './TopListCard';
-import { useDataLoader } from '../hooks/useDataLoader';
+import IndexChart from './IndexChart';
+import MarketBreadth from './MarketBreadth';
+import MFIAnalysis from './MFIAnalysis';
+import EMABreadthChart from './EMABreadthChart';
+import { useDataLoader } from '../utils/dataLoader';
 
 const MarketOverviewReport = () => {
     // Load data using the data loader
@@ -72,6 +76,35 @@ const MarketOverviewReport = () => {
                 <p className="text-gray-600 dark:text-gray-400">
                     Phân tích toàn diện về giao dịch và tín hiệu bất thường
                 </p>
+            </div>
+
+            
+
+            {/* VNINDEX Equal Weight Chart */}
+            <div className="space-y-4">
+                <Card className="p-6">
+                    <IndexChart />
+                </Card>
+            </div>
+
+            <div className="space-y-4">
+                <Card className="p-6">
+                    <MarketBreadth turnover="N/A" volume="N/A" />
+                </Card>
+            </div>
+
+            {/* Money Flow Index Analysis */}
+            <div className="space-y-4">
+                <Card className="p-6">
+                    <MFIAnalysis />
+                </Card>
+            </div>
+
+            {/* Market Breadth Analysis */}
+            <div className="space-y-4">
+                <Card className="p-6">
+                    <EMABreadthChart />
+                </Card>
             </div>
 
             {/* Top Deals and Value */}
@@ -251,7 +284,7 @@ const MarketOverviewReport = () => {
                     </div>
 
                     {/* Market Sentiment Summary */}
-                    {abnormalSignalsData.summary.market_sentiment && (
+                    {/* {abnormalSignalsData.summary.market_sentiment && (
                         <Card className="p-4">
                             <div className="flex items-center gap-2 mb-3">
                                 <Zap className="text-yellow-500" />
@@ -290,11 +323,9 @@ const MarketOverviewReport = () => {
                                 )}
                             </div>
                         </Card>
-                    )}
+                    )} */}
                 </div>
             )}
-
-
         </div>
     );
 };

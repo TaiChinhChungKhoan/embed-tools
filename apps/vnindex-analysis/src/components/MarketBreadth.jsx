@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUp, ArrowDown, Minus, AlertCircle, Info, HelpCircle, TrendingUp, TrendingDown, ChevronDown, ChevronUp } from 'lucide-react';
 import Card from './Card';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 import { createChart, LineSeries } from 'lightweight-charts';
 
 const MarketBreadth = ({ turnover, volume }) => {
@@ -13,7 +13,7 @@ const MarketBreadth = ({ turnover, volume }) => {
     const chartRef = useRef(null);
     const seriesRef = useRef([]);
 
-    const { data, loading, error, lastUpdated, refresh } = useDataLoader('analyze_breadth_4', {
+    const { data, loading, error, lastUpdated, refresh } = useDataLoader('analyze_breadth_4', null, [], {
         refreshInterval: 5 * 60 * 1000 // Refresh every 5 minutes
     });
 
@@ -484,7 +484,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                 <div className="lg:w-[600px] flex-shrink-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Liquidity Metrics */}
-                        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                        {/* <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
                             <h5 className="text-xs font-medium text-blue-700 dark:text-blue-300 mb-2">Thanh khoản thị trường</h5>
                             <div className="flex flex-col gap-2 text-xs">
                                 <div className="flex justify-between">
@@ -496,7 +496,7 @@ const MarketBreadth = ({ turnover, volume }) => {
                                     <span className="font-semibold text-gray-800 dark:text-gray-200">{volume}</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* Data Coverage Information */}
                         <div className="bg-gray-50 dark:bg-gray-900/20 rounded-lg p-3">
                             <h5 className="text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">Thông tin dữ liệu</h5>

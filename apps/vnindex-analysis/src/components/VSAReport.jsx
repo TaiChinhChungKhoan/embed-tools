@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 import { AlertTriangle } from 'lucide-react';
 import VSAHeader from './VSAHeader';
 import VSASectionNav from './VSASectionNav';
@@ -9,7 +9,7 @@ import VSAStockTable from './VSAStockTable';
 
 const VSAReport = () => {
     const [timeframe, setTimeframe] = useState('1D');
-    const { data, loading, error } = useDataLoader('vsa_market_analysis', { timeframe });
+    const { data, loading, error } = useDataLoader('vsa_market_analysis', timeframe);
     const [activeSection, setActiveSection] = useState('market_overview');
 
     if (loading) {
@@ -83,7 +83,7 @@ const VSAReport = () => {
 
             {/* Individual Stocks Section */}
             {activeSection === 'individual_stocks' && (
-                <VSAStockTable individual_results={individual_results} />
+                <VSAStockTable individual_results={individual_results} timeframe={timeframe} />
             )}
 
             {/* Strong Signals Section */}

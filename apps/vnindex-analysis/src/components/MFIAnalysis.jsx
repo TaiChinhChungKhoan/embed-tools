@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { TrendingUp, TrendingDown, Info, HelpCircle, AlertCircle, BarChart3, Activity, Target, Eye, Zap, Scale, ChevronDown, ChevronUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, ReferenceLine } from 'recharts';
 import Card from './Card';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 
 // Reusable components
 const InsightCard = ({ title, icon, children, gradientColors, className = "" }) => {
@@ -105,7 +105,7 @@ const MFIAnalysis = () => {
     const [activeTab, setActiveTab] = useState('summary');
     const [timeAgo, setTimeAgo] = useState('');
 
-    const { data, loading, error, lastUpdated, refresh } = useDataLoader('analyze_groups_mfi', {
+    const { data, loading, error, lastUpdated, refresh } = useDataLoader('analyze_groups_mfi', null, [], {
         refreshInterval: 5 * 60 * 1000
     });
 
@@ -352,11 +352,6 @@ const MFIAnalysis = () => {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                         Phân tích Money Flow Index (MFI)
                     </h3>
-                    {timeAgo && (
-                        <span className="text-xs text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-md">
-                            Cập nhật {timeAgo}
-                        </span>
-                    )}
                     <button
                         onClick={() => setShowHelp(!showHelp)}
                         className="cursor-pointer text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"

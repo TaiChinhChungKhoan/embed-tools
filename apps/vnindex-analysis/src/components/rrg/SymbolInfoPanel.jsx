@@ -11,10 +11,10 @@ import {
     Activity,
     Clock,
     Target,
-    AlertTriangle,
     CheckCircle,
     XCircle
 } from 'lucide-react';
+import { getRiskColor, getCrsColor, getCrsStatusColor, getDirectionColor, getRsChangeColor, getRsTrendColor } from '../detailed-analysis/utils/colorUtils';
 
 // Thành phần con có thể tái sử dụng cho mỗi chỉ số
 const MetricItem = ({ icon: Icon, label, value, valueClassName = '' }) => (
@@ -35,7 +35,7 @@ const InfoCard = ({ title, children }) => (
     </div>
 );
 
-const SymbolInfoPanel = ({ symbol, analyzeData }) => {
+const SymbolInfoPanel = ({ symbol }) => {
     // Use the symbol object directly since it contains all the data we need
     const symbolData = symbol;
 
@@ -57,41 +57,6 @@ const SymbolInfoPanel = ({ symbol, analyzeData }) => {
     } = symbolData;
 
     // --- Helpers for translation and formatting ---
-    const getRiskColor = (level) => {
-        switch (level) {
-            case 'High': return 'text-red-500';
-            case 'Medium': return 'text-yellow-500';
-            case 'Low': return 'text-green-500';
-            default: return 'text-gray-500';
-        }
-    };
-    
-    const translateRiskLevel = (level) => {
-        const translations = { 'High': 'Cao', 'Medium': 'Trung bình', 'Low': 'Thấp' };
-        return translations[level] || 'K/C';
-    };
-
-    const translateDirection = (direction) => {
-        const translations = { 
-            'Uptrend': 'Xu hướng tăng', 
-            'Downtrend': 'Xu hướng giảm', 
-            'Sideways': 'Đi ngang',
-            'Suy giảm': 'Suy giảm',
-            'Tăng trưởng': 'Tăng trưởng'
-        };
-        return translations[direction] || 'K/C';
-    };
-
-    const translateRSTrend = (trend) => {
-        const translations = { 'bullish': 'Tăng giá', 'bearish': 'Giảm giá', 'neutral': 'Trung lập' };
-        return translations[trend] || 'K/C';
-    };
-
-    const translateCRSStatus = (status) => {
-        const translations = { 'outperforming': 'Vượt trội', 'underperforming': 'Tụt hậu', 'neutral': 'Trung lập' };
-        return translations[status] || 'K/C';
-    };
-
     const formatPercent = (val) => (typeof val === 'number' ? `${(val * 100).toFixed(1)}%` : 'K/C');
     const formatNumber = (val) => (typeof val === 'number' ? val.toFixed(2) : 'K/C');
 
@@ -110,35 +75,35 @@ const SymbolInfoPanel = ({ symbol, analyzeData }) => {
                     />
                     <MetricItem
                         icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 5 ngày"
+                        label="Thay đổi 5 phiên"
                         value={formatPercent(metrics?.rs_5d_change)}
-                        valueClassName={metrics?.rs_5d_change > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
                     />
                     <MetricItem
                         icon={metrics?.rs_21d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 21 ngày"
+                        label="Thay đổi 21 phiên"
                         value={formatPercent(metrics?.rs_21d_change)}
-                        valueClassName={metrics?.rs_21d_change > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getRsChangeColor(metrics?.rs_21d_change)}
                     />
                     <MetricItem
                         icon={Target}
                         label="Xu hướng RS"
-                        value={translateRSTrend(performance_summary?.rs_trend)}
-                        valueClassName={performance_summary?.rs_trend === 'bullish' ? 'text-green-600' : 'text-red-600'}
+                        value={performance_summary?.rs_trend}
+                        valueClassName={getRsTrendColor(performance_summary?.rs_trend)}
                     />
                 </InfoCard>
 
                 <InfoCard title="Tốc độ & Hướng">
                     <MetricItem
                         icon={Zap}
-                        label="Tốc độ 5 ngày"
+                        label="Tốc độ 5 phiên"
                         value={formatPercent(speed_analysis?.raw_speed_5d)}
                     />
                     <MetricItem
                         icon={direction_analysis?.direction === 'Tăng trưởng' ? TrendingUp : TrendingDown}
                         label="Hướng"
-                        value={translateDirection(direction_analysis?.direction)}
-                        valueClassName={direction_analysis?.direction === 'Tăng trưởng' ? 'text-green-600' : 'text-red-600'}
+                        value={direction_analysis?.direction}
+                        valueClassName={getDirectionColor(direction_analysis?.direction)}
                     />
                     <MetricItem
                         icon={Activity}
@@ -153,12 +118,11 @@ const SymbolInfoPanel = ({ symbol, analyzeData }) => {
                         valueClassName="text-orange-600"
                     />
                 </InfoCard>
-
                 <InfoCard title="Đánh giá Rủi ro">
                     <MetricItem
                         icon={Shield}
                         label="Mức rủi ro"
-                        value={translateRiskLevel(risk_assessment?.risk_level)}
+                        value={risk_assessment?.risk_level}
                         valueClassName={getRiskColor(risk_assessment?.risk_level)}
                     />
                     <MetricItem
@@ -174,7 +138,7 @@ const SymbolInfoPanel = ({ symbol, analyzeData }) => {
                     />
                     <MetricItem
                         icon={Target}
-                        label="Chân trời đầu tư"
+                        label="Khung thời gian"
                         value={risk_assessment?.time_horizon || 'K/C'}
                     />
                 </InfoCard>
@@ -184,13 +148,13 @@ const SymbolInfoPanel = ({ symbol, analyzeData }) => {
                         icon={BarChart}
                         label="CRS Hiện tại"
                         value={formatPercent(metrics?.current_crs)}
-                        valueClassName={metrics?.current_crs > 0 ? 'text-green-600' : 'text-red-600'}
+                        valueClassName={getCrsColor(metrics?.current_crs)}
                     />
                     <MetricItem
                         icon={Activity}
                         label="Trạng thái CRS"
-                        value={translateCRSStatus(performance_summary?.crs_status)}
-                        valueClassName={performance_summary?.crs_status === 'outperforming' ? 'text-green-600' : 'text-red-600'}
+                        value={performance_summary?.crs_status}
+                        valueClassName={getCrsStatusColor(performance_summary?.crs_status)}
                     />
                     <MetricItem
                         icon={Target}
@@ -235,13 +199,13 @@ const SymbolInfoPanel = ({ symbol, analyzeData }) => {
                 <InfoCard title="Thống kê Hiệu suất">
                     <MetricItem
                         icon={CheckCircle}
-                        label="Ngày vượt trội"
+                        label="Phiên vượt trội"
                         value={`${metrics?.outperforming_days || 0}/${metrics?.total_days || 0}`}
                         valueClassName="text-green-600"
                     />
                     <MetricItem
                         icon={XCircle}
-                        label="Ngày tụt hậu"
+                        label="Phiên tụt hậu"
                         value={`${metrics?.underperforming_days || 0}/${metrics?.total_days || 0}`}
                         valueClassName="text-red-600"
                     />

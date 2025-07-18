@@ -1,6 +1,6 @@
 import React from 'react';
 import { Database, RefreshCw, Trash2 } from 'lucide-react';
-import { useCacheStats } from '../hooks/useDataLoader';
+import { useCacheStats } from '../utils/dataLoader';
 import { useDataReload } from '../contexts/DataReloadContext';
 import Card from './Card';
 

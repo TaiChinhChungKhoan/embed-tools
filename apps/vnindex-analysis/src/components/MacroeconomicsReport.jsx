@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
+import { TrendingUp, TrendingDown, Activity, BarChart3, AlertCircle } from 'lucide-react';
 import Card from './Card';
 import InteractiveChart from './InteractiveChart';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 
 const MacroeconomicsReport = () => {
     // Load economic data using the data loader

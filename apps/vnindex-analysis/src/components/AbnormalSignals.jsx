@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 import { TrendingUp, TrendingDown, AlertTriangle, Activity, BarChart3, Target } from 'lucide-react';
 import Card from './Card';
 

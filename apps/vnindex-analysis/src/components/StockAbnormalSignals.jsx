@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useDataLoader } from '../hooks/useDataLoader';
-import { TrendingUp, TrendingDown, AlertTriangle, Activity, BarChart3, Target } from 'lucide-react';
+import { useDataLoader } from '../utils/dataLoader';
+import { AlertTriangle, TrendingUp, TrendingDown, Activity, BarChart3, Target } from 'lucide-react';
 import Card from './Card';
 import SignalInterpretationGuide from './SignalInterpretationGuide';
 

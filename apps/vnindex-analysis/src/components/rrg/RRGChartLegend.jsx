@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RRGChartLegend = ({ limitedData, getSeriesColor }) => {
+const RRGChartLegend = ({ limitedData, getSeriesColor, type, availableIndustries, availableGroups }) => {
   return (
     <div className="space-y-4">
       <div className="text-sm text-gray-600 space-y-1">
@@ -13,17 +13,31 @@ const RRGChartLegend = ({ limitedData, getSeriesColor }) => {
         <div className="border-t pt-3">
           <p className="text-sm font-medium text-gray-700 mb-2">Cấu phần:</p>
           <div className="flex flex-wrap gap-2">
-            {limitedData.map((series, index) => (
-              <div key={series.symbol || series.custom_id} className="flex items-center gap-1 text-xs">
-                <div 
-                  className="w-3 h-3 rounded-full" 
-                  style={{ backgroundColor: getSeriesColor(series.symbol || series.custom_id, index, limitedData.length) }}
-                />
-                <span className="text-gray-600">
-                  {typeof series.name === 'string' ? series.name : String(series.name || series.symbol || 'Unknown')}
-                </span>
-              </div>
-            ))}
+            {limitedData.map((series, index) => {
+              // Get the proper name based on type
+              let displayName;
+              if (type === 'industries') {
+                const industry = availableIndustries?.find(ind => ind.custom_id === series.custom_id);
+                displayName = industry?.name || series.custom_id;
+              } else if (type === 'groups') {
+                const group = availableGroups?.find(g => g.id === series.id);
+                displayName = group?.name || series.id;
+              } else {
+                displayName = series.symbol || series.custom_id;
+              }
+              
+              return (
+                <div key={series.symbol || series.custom_id} className="flex items-center gap-1 text-xs">
+                  <div 
+                    className="w-3 h-3 rounded-full" 
+                    style={{ backgroundColor: getSeriesColor(series.symbol || series.custom_id, index, limitedData.length) }}
+                  />
+                  <span className="text-gray-600">
+                    {displayName}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

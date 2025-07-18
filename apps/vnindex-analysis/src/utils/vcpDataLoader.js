@@ -1,100 +1,68 @@
-import filterVcp1D from '../data/filter_vcp_1D.json';
-import filterVcp1W from '../data/filter_vcp_1W.json';
+import { useDataLoader } from './dataLoader';
 
-// Cache for processed data
-let processedVcpData1D = null;
-let processedVcpData1W = null;
-
-// Load VCP data for a specific timeframe
-export const loadVCPData = (timeframe = '1D') => {
-  // Determine which data to use based on timeframe
-  const vcpData = timeframe === '1W' ? filterVcp1W : filterVcp1D;
+// Hook to get VCP data using centralized data loader
+export const useVCPData = (timeframe = '1D') => {
+  const { data, loading, error } = useDataLoader('vcp_analysis', timeframe);
   
-  // Use appropriate cache
-  const cache = timeframe === '1W' ? processedVcpData1W : processedVcpData1D;
-  
-  if (cache) {
-    return cache;
-  }
-
-  try {
-    // Process VCP data
-    const processedData = {
-      timeframe: timeframe,
-      totalSignals: vcpData.length,
-      recentSignals: vcpData.filter(signal => signal.days_since_vcp <= 7).length,
-      highConfidenceSignals: vcpData.filter(signal => signal.last_vcp_confidence >= 0.5).length,
-      signals: vcpData.map(signal => ({
-        ...signal,
-        confidenceLevel: signal.last_vcp_confidence >= 0.7 ? 'high' : 
-                        signal.last_vcp_confidence >= 0.5 ? 'medium' : 'low',
-        recency: signal.days_since_vcp <= 3 ? 'recent' : 
-                signal.days_since_vcp <= 7 ? 'moderate' : 'old'
-      }))
-    };
-
-    // Store in appropriate cache
-    if (timeframe === '1W') {
-      processedVcpData1W = processedData;
-    } else {
-      processedVcpData1D = processedData;
+  return {
+    data,
+    loading,
+    error,
+    // Legacy compatibility functions
+    loadVCPData: () => data,
+    getVCPSummary: () => {
+      if (!data) return null;
+      
+      const signals = data.signals || [];
+      const totalSignals = signals.length;
+      const recentSignals = signals.filter(signal => signal.days_since_vcp <= 7).length;
+      const highConfidenceSignals = signals.filter(signal => signal.last_vcp_confidence >= 0.5).length;
+      
+      return {
+        totalSignals,
+        recentSignals,
+        highConfidenceSignals,
+        averageConfidence: signals.length > 0 
+          ? signals.reduce((sum, signal) => sum + signal.last_vcp_confidence, 0) / signals.length 
+          : 0,
+        averageDaysSince: signals.length > 0 
+          ? signals.reduce((sum, signal) => sum + signal.days_since_vcp, 0) / signals.length 
+          : 0
+      };
     }
+  };
+};
 
-    console.log(`VCP Data loaded successfully (${timeframe}):`, {
-      totalSignals: processedData.totalSignals,
-      recentSignals: processedData.recentSignals,
-      highConfidenceSignals: processedData.highConfidenceSignals,
-      sampleSignal: processedData.signals[0] ? {
-        symbol: processedData.signals[0].symbol,
-        confidence: processedData.signals[0].last_vcp_confidence,
-        daysSince: processedData.signals[0].days_since_vcp
-      } : null
-    });
+// Legacy functions for backward compatibility
+export const loadVCPData = (timeframe = '1D') => {
+  // This function is now deprecated - use useVCPData hook instead
+  console.warn('loadVCPData is deprecated. Use useVCPData hook instead.');
+  return null;
+};
 
-    return processedData;
-  } catch (error) {
-    console.error(`Error loading VCP data (${timeframe}):`, error);
-    throw error;
-  }
+export const getVCPSummary = (timeframe = '1D') => {
+  // This function is now deprecated - use useVCPData hook instead
+  console.warn('getVCPSummary is deprecated. Use useVCPData hook instead.');
+  return null;
 };
 
 // Get VCP signals filtered by confidence level
 export const getVCPSignalsByConfidence = (confidenceLevel = 'all', timeframe = '1D') => {
-  const data = loadVCPData(timeframe);
-  
-  if (confidenceLevel === 'all') {
-    return data.signals;
-  }
-  
-  return data.signals.filter(signal => signal.confidenceLevel === confidenceLevel);
+  // This function is now deprecated - use useVCPData hook instead
+  console.warn('getVCPSignalsByConfidence is deprecated. Use useVCPData hook instead.');
+  return [];
 };
 
 // Get VCP signals filtered by recency
 export const getVCPSignalsByRecency = (recency = 'all', timeframe = '1D') => {
-  const data = loadVCPData(timeframe);
-  
-  if (recency === 'all') {
-    return data.signals;
-  }
-  
-  return data.signals.filter(signal => signal.recency === recency);
+  // This function is now deprecated - use useVCPData hook instead
+  console.warn('getVCPSignalsByRecency is deprecated. Use useVCPData hook instead.');
+  return [];
 };
 
 // Get VCP signals for a specific symbol
 export const getVCPSignalsForSymbol = (symbol, timeframe = '1D') => {
-  const data = loadVCPData(timeframe);
-  return data.signals.find(signal => signal.symbol === symbol);
-};
-
-// Get VCP summary statistics
-export const getVCPSummary = (timeframe = '1D') => {
-  const data = loadVCPData(timeframe);
-  
-  return {
-    totalSignals: data.totalSignals,
-    recentSignals: data.recentSignals,
-    highConfidenceSignals: data.highConfidenceSignals,
-    averageConfidence: data.signals.reduce((sum, signal) => sum + signal.last_vcp_confidence, 0) / data.totalSignals,
-    averageDaysSince: data.signals.reduce((sum, signal) => sum + signal.days_since_vcp, 0) / data.totalSignals
-  };
+  // This function is now deprecated - use useVCPData hook instead
+  console.warn('getVCPSignalsForSymbol is deprecated. Use useVCPData hook instead.');
+  return null;
 }; 

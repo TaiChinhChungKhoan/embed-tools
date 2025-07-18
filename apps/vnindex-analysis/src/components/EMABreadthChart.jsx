@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, AreaChart, Area } from 'recharts';
 import { HelpCircle, BarChart3, AlertCircle, TrendingUp, Target, Eye, ChevronDown, ChevronUp, Zap, Scale, Activity } from 'lucide-react';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 
 // --- Reusable UI Components (Không thay đổi) ---
 
@@ -56,7 +56,7 @@ const EMABreadthChart = () => {
     const [timeAgo, setTimeAgo] = useState('');
     const [chartType, setChartType] = useState('line'); // 'line' or 'area'
 
-    const { data, loading, error } = useDataLoader('analyze_breadth_5', {
+    const { data, loading, error } = useDataLoader('analyze_breadth_5', null, [], {
         refreshInterval: 5 * 60 * 1000,
     });
     
@@ -172,11 +172,6 @@ const EMABreadthChart = () => {
             <div className="flex flex-wrap items-center justify-between mb-4 gap-2">
                 <div className="flex items-center gap-2">
                     <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Phân tích Độ rộng Thị trường</h2>
-                    {timeAgo && (
-                        <span className="text-xs text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-md">
-                            Cập nhật {timeAgo}
-                        </span>
-                    )}
                     <button
                         onClick={() => setShowHelp(!showHelp)}
                         className="cursor-pointer text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"

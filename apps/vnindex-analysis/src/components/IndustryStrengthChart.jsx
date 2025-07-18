@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Activity, BarChart3, Calendar } from 'lucide-react';
 import Card from './Card';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 
 const IndustryStrengthChart = () => {
     const [selectedIndustry, setSelectedIndustry] = useState('');

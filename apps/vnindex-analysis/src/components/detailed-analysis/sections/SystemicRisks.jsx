@@ -44,33 +44,13 @@ const SystemicRisks = ({ systemicRisks }) => {
   if (!systemicRisks) return null;
 
   const { 
-    overall_systemic_risk: overall, 
     systemic_risks: risks, 
-    mitigation_strategies: strategies, 
-    risk_count 
+    mitigation_strategies: strategies
   } = systemicRisks;
 
   return (
     <div className="bg-white p-4 rounded-lg border space-y-6">
-      {/* 1. Summary Banner (No Change) */}
-      {overall && (
-        <div className="p-4 bg-red-100 border border-red-200 rounded-lg text-red-900">
-          <div className="flex items-center gap-3">
-            {/* Icon placeholder */}
-            <div>
-              <h3 className="font-bold text-xl">{overall.level}</h3>
-              <p className="text-sm font-semibold">
-                Tổng quan rủi ro hệ thống ({risk_count || 0} yếu tố)
-              </p>
-            </div>
-          </div>
-          <p className="text-sm mt-2">{overall.description}</p>
-        </div>
-      )}
-
-      {/* --- NEW LAYOUT: Grid for Risks, Section for Strategies --- */}
-
-      {/* 2. Risk Factors in a Compact Grid */}
+      {/* Risk Factors in a Compact Grid */}
       <div className="space-y-3">
         <h4 className="font-bold text-base text-slate-800">Các yếu tố rủi ro</h4>
         {risks?.length > 0 ? (
@@ -82,7 +62,7 @@ const SystemicRisks = ({ systemicRisks }) => {
         )}
       </div>
       
-      {/* 3. Mitigation Strategies Below */}
+      {/* Mitigation Strategies Below */}
       <div className="space-y-3 pt-4 border-t">
         <h4 className="font-bold text-base text-slate-800">Chiến lược giảm thiểu</h4>
         {strategies?.length > 0 ? (

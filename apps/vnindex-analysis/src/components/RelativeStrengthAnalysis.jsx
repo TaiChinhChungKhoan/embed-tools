@@ -1,39 +1,27 @@
 import React, { useState } from 'react';
 import { BarChart3, TrendingUp, Activity, Target } from 'lucide-react';
 import IndustryRSAnalysis from './IndustryRSAnalysis';
-import TickerRSAnalysis from './TickerRSAnalysis';
 import RRGAnalysis from './RRGAnalysis';
 import IndustryStrengthChart from './IndustryStrengthChart';
 
-const RelativeStrengthAnalysis = ({ type = 'industries' }) => {
-    const [activeTab, setActiveTab] = useState(type === 'industries' ? 'rrg' : 'rankings');
+const RelativeStrengthAnalysis = () => {
+    const [activeTab, setActiveTab] = useState('rrg');
 
-    // Define tabs based on type
-    const getTabs = () => {
-        if (type === 'industries') {
-            return [
-                { id: 'rankings', name: 'Xếp hạng & Phân tích', icon: BarChart3 },
-                { id: 'rrg', name: 'Phân tích RRG', icon: TrendingUp },
-                { id: 'trends', name: 'Xu hướng sức mạnh', icon: Activity }
-            ];
-        } else {
-            return [
-                { id: 'rankings', name: 'Xếp hạng & Phân tích', icon: BarChart3 },
-                { id: 'rrg', name: 'Phân tích RRG', icon: TrendingUp }
-            ];
-        }
-    };
-
-    const tabs = getTabs();
+    // Define tabs for industries only
+    const tabs = [
+        { id: 'rankings', name: 'Xếp hạng & Phân tích', icon: BarChart3 },
+        { id: 'rrg', name: 'Phân tích RRG', icon: TrendingUp },
+        { id: 'trends', name: 'Xu hướng sức mạnh', icon: Activity }
+    ];
 
     const renderTabContent = () => {
         switch (activeTab) {
             case 'rankings':
-                return type === 'industries' ? <IndustryRSAnalysis /> : <TickerRSAnalysis />;
+                return <IndustryRSAnalysis />;
             case 'rrg':
-                return <RRGAnalysis type={type} />;
+                return <RRGAnalysis type="industries" />;
             case 'trends':
-                return type === 'industries' ? <IndustryStrengthChart /> : null;
+                return <IndustryStrengthChart />;
             default:
                 return null;
         }
@@ -46,7 +34,7 @@ const RelativeStrengthAnalysis = ({ type = 'industries' }) => {
                 <div className="flex items-center gap-2">
                     <BarChart3 className="h-6 w-6 text-blue-500" />
                     <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                        Phân tích sức mạnh tương đối {type === 'industries' ? 'ngành' : 'cổ phiếu'}
+                        Phân tích sức mạnh tương đối ngành
                     </h2>
                 </div>
             </div>

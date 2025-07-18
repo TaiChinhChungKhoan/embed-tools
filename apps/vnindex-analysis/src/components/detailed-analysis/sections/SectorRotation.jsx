@@ -13,7 +13,9 @@ const LeadershipCard = ({ title, data, color, Icon }) => {
       </div>
       <div className={`text-xs font-medium mb-1 ${color.text}`}>{data.strength || data.potential || data.warning_level || 'N/A'}</div>
       {data.sectors?.length > 0 && (
-        <p className="text-xs text-slate-600">{data.sectors.join(', ')}</p>
+        <p className="text-xs text-slate-600">
+          {data.sectors.map(sector => typeof sector === 'string' ? sector : sector.name || sector.sector || 'Unknown').join(', ')}
+        </p>
       )}
     </div>
   );
@@ -56,7 +58,7 @@ const SectorRotation = ({ sectorRotation }) => {
       {/* Rotation Patterns Summary Card */}
       {rotation_patterns && (
         <div className="p-3 bg-yellow-50 rounded-lg border mb-4">
-          <h4 className="font-semibold text-sm text-yellow-700 mb-1">Mô hình xoay vòng</h4>
+          <h4 className="font-semibold text-sm text-yellow-700 mb-1">Mô hình luân chuyển</h4>
           <div className="text-xs text-slate-700"><b>Ổn định:</b> {rotation_patterns.stability}</div>
           <div className="text-xs text-slate-700"><b>Tốc độ:</b> {rotation_patterns.rotation_speed}</div>
           <div className="text-xs text-slate-700"><b>Chủ đề:</b> {rotation_patterns.theme}</div>
@@ -95,7 +97,7 @@ const SectorRotation = ({ sectorRotation }) => {
           {/* Top Rotating Sectors */}
           {top_rotating_sectors?.length > 0 && (
             <div>
-              <h4 className="font-semibold text-sm text-slate-700 mb-2 flex items-center">{/*<List className="w-4 h-4 mr-2" />*/} Top ngành xoay vòng</h4>
+              <h4 className="font-semibold text-sm text-slate-700 mb-2 flex items-center">{/*<List className="w-4 h-4 mr-2" />*/} Top luân chuyển ngành</h4>
               <div className="space-y-2">
                 {top_rotating_sectors.slice(0, 5).map((sector, index) => (
                   <SectorListItem key={index} sector={sector} />

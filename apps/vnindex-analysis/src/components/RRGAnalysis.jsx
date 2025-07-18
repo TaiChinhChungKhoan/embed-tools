@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import RRGChart from './RRGChart';
+import RRGChart from './rrg/RRGChart';
+
 import MarketOverview from './MarketOverview';
 import UnifiedRankingByScore from './UnifiedRankingByScore';
 import UnifiedRankingBySpeed from './UnifiedRankingBySpeed';
-import InvestmentStrategy from './InvestmentStrategy';
 import DetailedAnalysis from './DetailedAnalysis';
-import { loadRRGData, getAnalyzeRsData } from '../utils/rrgDataLoader';
-
+import { useRRGAnalysis } from '../utils/dataLoader';
+import { getSentimentColor, getRiskColor, getDirectionColor, getQuadrantColor } from './detailed-analysis/utils/colorUtils';
 
 // Main RRGAnalysis Component
 export default function RRGAnalysis({ type = 'industries' }) {
   const [activeTab, setActiveTab] = useState('overview');
   const [timeframe, setTimeframe] = useState('1D');
   
-  const rrgData = loadRRGData(timeframe);
-  const analyzeRsData = getAnalyzeRsData(timeframe);
+  const { data: analyzeRsData, loading, error } = useRRGAnalysis(timeframe);
   
   // Safely access insights data with fallbacks for new standardized structure
   const insights = analyzeRsData?.insights || {};
@@ -31,42 +30,6 @@ export default function RRGAnalysis({ type = 'industries' }) {
   const industries = analyzeRsData?.industries || [];
   const groups = analyzeRsData?.groups || [];
   const symbols = analyzeRsData?.symbols || [];
-
-  const getQuadrantColor = (quadrant) => {
-    if (quadrant?.includes('Leading') || quadrant?.includes('Dẫn dắt')) return 'text-green-600';
-    if (quadrant?.includes('Improving') || quadrant?.includes('Cải thiện')) return 'text-blue-600';
-    if (quadrant?.includes('Weakening') || quadrant?.includes('Suy yếu')) return 'text-yellow-600';
-    if (quadrant?.includes('Lagging') || quadrant?.includes('Tụt hậu')) return 'text-red-600';
-    return 'text-gray-600';
-  };
-
-  const getSentimentColor = (sentiment) => {
-    if (sentiment?.includes('tích cực')) return 'text-green-600';
-    if (sentiment?.includes('tiêu cực')) return 'text-red-600';
-    if (sentiment?.includes('trung tính')) return 'text-yellow-600';
-    return 'text-gray-600';
-  };
-
-  const getDirectionColor = (direction) => {
-    if (direction?.includes('Strongly Improving') || direction?.includes('Improving')) return 'text-green-600';
-    if (direction?.includes('Strongly Degrading') || direction?.includes('Degrading')) return 'text-red-600';
-    if (direction?.includes('Sideways')) return 'text-yellow-600';
-    return 'text-gray-600';
-  };
-
-  const getRiskColor = (riskLevel) => {
-    if (riskLevel === 'High') return 'text-red-600';
-    if (riskLevel === 'Medium') return 'text-yellow-600';
-    if (riskLevel === 'Low') return 'text-green-600';
-    return 'text-gray-600';
-  };
-
-  const getTrendStrengthColor = (strength) => {
-    if (strength?.includes('Very Strong') || strength?.includes('Strong')) return 'text-green-600';
-    if (strength?.includes('Moderate')) return 'text-yellow-600';
-    if (strength?.includes('Weak')) return 'text-red-600';
-    return 'text-gray-600';
-  };
 
   // Update active tab
   const handleTabChange = (tab) => {
@@ -214,13 +177,17 @@ export default function RRGAnalysis({ type = 'industries' }) {
           <span className="text-sm font-medium text-gray-700">Khung thời gian:</span>
           <button
             className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1D' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
-            onClick={() => setTimeframe('1D')}
+            onClick={() => {
+              setTimeframe('1D');
+            }}
           >
             Hàng ngày (1D)
           </button>
           <button
             className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1W' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
-            onClick={() => setTimeframe('1W')}
+            onClick={() => {
+              setTimeframe('1W');
+            }}
           >
             Hàng tuần (1W)
           </button>
@@ -231,7 +198,7 @@ export default function RRGAnalysis({ type = 'industries' }) {
           <div className="bg-gray-50 p-3 rounded">
             <div className="font-medium text-gray-700">Ngày phân tích</div>
             <div className="text-gray-900">
-              {analyzeRsData?.analysis_date ? new Date(analyzeRsData.analysis_date).toLocaleDateString() : new Date(rrgData.rrgDate).toLocaleDateString()}
+              {analyzeRsData?.analysis_date ? new Date(analyzeRsData.analysis_date).toLocaleDateString() : new Date(analyzeRsData.rrgDate).toLocaleDateString()}
             </div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
@@ -313,55 +280,65 @@ export default function RRGAnalysis({ type = 'industries' }) {
               {overviewType === 'industry' ? (
                 <>
                   <UnifiedRankingByScore 
+                    key={`industry-score-${timeframe}`}
                     analysisData={industryAnalysis} 
                     type="industry"
-                    getQuadrantColor={getQuadrantColor} 
+                    getQuadrantColor={getQuadrantColor}
+                    analyzeData={analyzeRsData}
                   />
                   <UnifiedRankingBySpeed 
+                    key={`industry-speed-${timeframe}`}
                     analysisData={industryAnalysis} 
                     type="industry"
                     renderInsightItems={renderInsightItems} 
-                    rrgData={rrgData}
+                    rrgData={analyzeRsData}
+                    analyzeData={analyzeRsData}
                   />
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />
+                  <MarketOverview key={`market-overview-industry-${timeframe}`} marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />
                 </>
               ) : overviewType === 'group' ? (
                 <>
                   <UnifiedRankingByScore 
+                    key={`group-score-${timeframe}`}
                     analysisData={groupAnalysis} 
                     type="group"
-                    getQuadrantColor={getQuadrantColor} 
+                    getQuadrantColor={getQuadrantColor}
+                    analyzeData={analyzeRsData}
                   />
                   <UnifiedRankingBySpeed 
+                    key={`group-speed-${timeframe}`}
                     analysisData={groupAnalysis} 
                     type="group"
                     renderInsightItems={renderInsightItems} 
-                    rrgData={rrgData}
+                    rrgData={analyzeRsData}
                     investmentStrategies={investmentStrategies}
+                    analyzeData={analyzeRsData}
                   />
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />                  
+                  <MarketOverview key={`market-overview-group-${timeframe}`} marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />                  
                 </>
               ) : (
                 <>
                   <UnifiedRankingByScore 
+                    key={`ticker-score-${timeframe}`}
                     analysisData={tickerAnalysis} 
                     type="ticker"
-                    getQuadrantColor={getQuadrantColor} 
+                    getQuadrantColor={getQuadrantColor}
+                    analyzeData={analyzeRsData}
                   />
                   <UnifiedRankingBySpeed 
+                    key={`ticker-speed-${timeframe}`}
                     analysisData={tickerAnalysis} 
                     type="ticker"
                     renderInsightItems={renderInsightItems} 
-                    rrgData={rrgData}
+                    rrgData={analyzeRsData}
+                    analyzeData={analyzeRsData}
                   />
-                  <MarketOverview marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />                  
+                  <MarketOverview key={`market-overview-ticker-${timeframe}`} marketOverview={marketOverview} getSentimentColor={getSentimentColor} breadth_detail={detailedAnalysis.breadth_detail} />                  
                 </>
               )}
-              {/* Investment Strategy */}
-              <InvestmentStrategy investmentStrategies={investmentStrategies} />
               
               {/* Detailed Analysis */}
-              <DetailedAnalysis detailedAnalysis={detailedAnalysis} />
+              <DetailedAnalysis key={`detailed-analysis-${timeframe}`} detailedAnalysis={detailedAnalysis} />
             </div>
           )}
 
@@ -377,7 +354,32 @@ export default function RRGAnalysis({ type = 'industries' }) {
               </div>              
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type="industries" timeframe={timeframe} />
+                  {(() => {
+                    if (loading) {
+                      return (
+                        <div className="w-full p-8 text-center">
+                          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+                          <div className="text-gray-600 mt-2">Đang tải dữ liệu RRG...</div>
+                        </div>
+                      );
+                    } else if (error) {
+                      return (
+                        <div className="w-full p-8 text-center">
+                          <div className="text-red-600 text-lg font-medium">Lỗi tải dữ liệu RRG</div>
+                          <div className="text-gray-600 mt-2">{error.message}</div>
+                        </div>
+                      );
+                    } else {
+                      return (
+                        <RRGChart 
+                          key={`industries-${timeframe}`} 
+                          type="industries" 
+                          timeframe={timeframe}
+                          analyticsData={analyzeRsData}
+                        />
+                      );
+                    }
+                  })()}
                 </div>
               </div>
             </div>
@@ -395,7 +397,24 @@ export default function RRGAnalysis({ type = 'industries' }) {
               </div>              
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type="groups" timeframe={timeframe} />
+                  {loading ? (
+                    <div className="w-full p-8 text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+                      <div className="text-gray-600 mt-2">Đang tải dữ liệu RRG...</div>
+                    </div>
+                  ) : error ? (
+                    <div className="w-full p-8 text-center">
+                      <div className="text-red-600 text-lg font-medium">Lỗi tải dữ liệu RRG</div>
+                      <div className="text-gray-600 mt-2">{error.message}</div>
+                    </div>
+                  ) : (
+                    <RRGChart 
+                      key={`groups-${timeframe}`} 
+                      type="groups" 
+                      timeframe={timeframe} 
+                      analyticsData={analyzeRsData}
+                    />
+                  )}
                 </div>
               </div>
             </div>
@@ -416,7 +435,24 @@ export default function RRGAnalysis({ type = 'industries' }) {
               </div>              
               <div className="bg-white rounded-lg shadow-sm border p-6 w-full mb-6">
                 <div className="w-full">
-                  <RRGChart type={type} timeframe={timeframe} />
+                  {loading ? (
+                    <div className="w-full p-8 text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+                      <div className="text-gray-600 mt-2">Đang tải dữ liệu RRG...</div>
+                    </div>
+                  ) : error ? (
+                    <div className="w-full p-8 text-center">
+                      <div className="text-red-600 text-lg font-medium">Lỗi tải dữ liệu RRG</div>
+                      <div className="text-gray-600 mt-2">{error.message}</div>
+                    </div>
+                  ) : (
+                    <RRGChart 
+                      key={`${type}-${timeframe}`} 
+                      type={type} 
+                      timeframe={timeframe} 
+                      analyticsData={analyzeRsData}
+                    />
+                  )}
                 </div>
               </div>
             </div>

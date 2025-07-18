@@ -252,13 +252,11 @@ const calculateEMA = (data, period) => {
 // Placeholder functions for other indicators
 const addBollingerBands = (chart, data, options = {}) => {
   // Implementation for Bollinger Bands
-  console.log('Bollinger Bands not implemented yet');
   return null;
 };
 
 const addRSI = (chart, data, options = {}) => {
   // Implementation for RSI
-  console.log('RSI not implemented yet');
   return null;
 };
 

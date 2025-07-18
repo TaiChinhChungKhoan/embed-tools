@@ -1,6 +1,9 @@
 import React from 'react';
+import IndustryInfoPanelMinified from './rrg/IndustryInfoPanelMinified';
+import GroupInfoPanelMinified from './rrg/GroupInfoPanelMinified';
+import SymbolInfoPanelMinified from './rrg/SymbolInfoPanelMinified';
 
-const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor }) => {
+const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor, analyzeData }) => {
   // The analysisData is already at the insights.industries level, so access directly
   if (!analysisData?.top_performers?.length && !analysisData?.bottom_performers?.length) {
     return (
@@ -60,6 +63,24 @@ const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor }) => {
   };
 
   const labels = typeLabels[type] || typeLabels.industry;
+
+  // Helper function to render the appropriate minified panel
+  const renderMinifiedPanel = (item) => {
+    switch (type) {
+      case 'industry':
+        // For industries, we need to look up the full data from analyzeData using custom_id
+        const fullIndustryData = analyzeData?.industries?.find(industry => 
+          industry.custom_id === item.custom_id || industry.id === item.custom_id
+        );
+        return <IndustryInfoPanelMinified industry={fullIndustryData || item} />;
+      case 'group':
+        return <GroupInfoPanelMinified group={item} analyzeData={analyzeData} />;
+      case 'ticker':
+        return <SymbolInfoPanelMinified symbol={item} analyzeData={analyzeData} />;
+      default:
+        return null;
+    }
+  };
   
   return (
     <div className={`${labels.bgColor} border ${labels.borderColor} rounded-lg p-4`}>
@@ -72,47 +93,8 @@ const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor }) => {
             <h4 className={`font-medium ${labels.topTextColor} mb-2`}>{labels.topLabel}</h4>
             <div className="space-y-2">
               {analysisData.top_performers.slice(0, 10).map((item, index) => (
-                <div key={index} className="bg-white p-3 rounded border">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <div className="font-medium text-gray-900">
-                        {item?.name || item?.custom_id || item?.symbol || 'Unknown'}
-                        {type === 'ticker' && item?.symbol && ` (${item.symbol})`}
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        {type === 'ticker' ? (
-                          item?.primary_industry || (item?.industries && item.industries.length > 0 ? (() => {
-                            const primaryIndustry = item.industries.find(ind => ind.is_primary);
-                            const firstIndustry = item.industries[0];
-                            const industryName = primaryIndustry?.name || firstIndustry?.name;
-                            return typeof industryName === 'string' ? industryName : 'N/A';
-                          })() : 'N/A')
-                        ) : (
-                          item?.description || 'N/A'
-                        )}
-                      </div>
-                      <div className="text-sm text-gray-600 mt-1">{item?.description || 'N/A'}</div>
-                      <div className={`text-xs mt-1 ${getQuadrantColor(item?.rrg_position)}`}>
-                        {item?.rrg_position || 'N/A'}
-                      </div>
-                      {/* Add RS trend if available */}
-                      {item?.rs_trend && (
-                        <div className={`text-xs mt-1 ${item.rs_trend === 'bullish' ? 'text-green-600' : item.rs_trend === 'bearish' ? 'text-red-600' : 'text-gray-600'}`}>
-                          RS Trend: {item.rs_trend}
-                        </div>
-                      )}
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-medium text-green-600">{(item?.strength_score || 0).toFixed(2)}</div>
-                      <div className="text-xs text-gray-500 mt-1">{item?.money_flow || 'N/A'}</div>
-                      {/* Add additional metrics if available */}
-                      {item?.metrics && (
-                        <div className="text-xs text-gray-500 mt-1">
-                          RS: {(item.metrics.current_rs || 0).toFixed(3)}
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                <div key={index}>
+                  {renderMinifiedPanel(item)}
                 </div>
               ))}
             </div>
@@ -125,47 +107,8 @@ const UnifiedRankingByScore = ({ analysisData, type, getQuadrantColor }) => {
             <h4 className={`font-medium ${labels.bottomTextColor} mb-2`}>{labels.bottomLabel}</h4>
             <div className="space-y-2">
               {analysisData.bottom_performers.slice(0, 10).map((item, index) => (
-                <div key={index} className="bg-white p-3 rounded border">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <div className="font-medium text-gray-900">
-                        {item?.name || item?.custom_id || item?.symbol || 'Unknown'}
-                        {type === 'ticker' && item?.symbol && ` (${item.symbol})`}
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        {type === 'ticker' ? (
-                          item?.primary_industry || (item?.industries && item.industries.length > 0 ? (() => {
-                            const primaryIndustry = item.industries.find(ind => ind.is_primary);
-                            const firstIndustry = item.industries[0];
-                            const industryName = primaryIndustry?.name || firstIndustry?.name;
-                            return typeof industryName === 'string' ? industryName : 'N/A';
-                          })() : 'N/A')
-                        ) : (
-                          item?.description || 'N/A'
-                        )}
-                      </div>
-                      <div className="text-sm text-gray-600 mt-1">{item?.description || 'N/A'}</div>
-                      <div className={`text-xs mt-1 ${getQuadrantColor(item?.rrg_position)}`}>
-                        {item?.rrg_position || 'N/A'}
-                      </div>
-                      {/* Add RS trend if available */}
-                      {item?.rs_trend && (
-                        <div className={`text-xs mt-1 ${item.rs_trend === 'bullish' ? 'text-green-600' : item.rs_trend === 'bearish' ? 'text-red-600' : 'text-gray-600'}`}>
-                          RS Trend: {item.rs_trend}
-                        </div>
-                      )}
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-medium text-red-600">{(item?.strength_score || 0).toFixed(2)}</div>
-                      <div className="text-xs text-gray-500 mt-1">{item?.money_flow || 'N/A'}</div>
-                      {/* Add additional metrics if available */}
-                      {item?.metrics && (
-                        <div className="text-xs text-gray-500 mt-1">
-                          RS: {(item.metrics.current_rs || 0).toFixed(3)}
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                <div key={index}>
+                  {renderMinifiedPanel(item)}
                 </div>
               ))}
             </div>

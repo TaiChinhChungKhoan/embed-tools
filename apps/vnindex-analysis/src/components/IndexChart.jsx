@@ -336,8 +336,7 @@ const IndexChart = () => {
                 
                 <div 
                     ref={chartContainerRef} 
-                    className="w-full h-[500px]"
-                    style={{ minHeight: '500px' }}
+                    className="w-full"
                 >
                     {isLoading && (
                         <div className="flex items-center justify-center h-full">

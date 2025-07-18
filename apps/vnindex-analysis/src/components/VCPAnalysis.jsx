@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { loadVCPData, getVCPSummary } from '../utils/vcpDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
+import { AlertTriangle } from 'lucide-react';
 
 const VCPAnalysis = () => {
   const [timeframe, setTimeframe] = useState('1D');
@@ -7,23 +8,72 @@ const VCPAnalysis = () => {
   const [recencyFilter, setRecencyFilter] = useState('all');
   const [sortBy, setSortBy] = useState('confidence');
 
-  const vcpData = useMemo(() => {
-    try {
-      return loadVCPData(timeframe);
-    } catch (error) {
-      console.error('Error loading VCP data in component:', error);
-      return null;
-    }
-  }, [timeframe]);
+      const { data: vcpData, loading, error } = useDataLoader('VCP_ANALYSIS', timeframe);
 
   const summary = useMemo(() => {
-    return vcpData ? getVCPSummary(timeframe) : null;
-  }, [vcpData, timeframe]);
+    if (!vcpData) return null;
+    
+    // Handle different data formats: array, object with signals property, or object with numeric keys
+    let signals = [];
+    if (Array.isArray(vcpData)) {
+      signals = vcpData;
+    } else if (vcpData.signals) {
+      signals = vcpData.signals;
+    } else if (typeof vcpData === 'object' && vcpData !== null) {
+      // Convert object with numeric keys to array
+      signals = Object.values(vcpData);
+    }
+    
+    const totalSignals = signals.length;
+    const recentSignals = signals.filter(signal => signal.days_since_vcp <= 7).length;
+    
+    // Filter out signals with invalid confidence values
+    const validSignals = signals.filter(signal => {
+      const confidence = Number(signal.last_vcp_confidence);
+      return !isNaN(confidence) && confidence >= 0 && confidence <= 1;
+    });
+    
+    const highConfidenceSignals = validSignals.filter(signal => Number(signal.last_vcp_confidence) >= 0.7).length;
+    
+    const averageConfidence = validSignals.length > 0 
+      ? validSignals.reduce((sum, signal) => sum + Number(signal.last_vcp_confidence), 0) / validSignals.length 
+      : 0;
+
+    return {
+      totalSignals,
+      recentSignals,
+      highConfidenceSignals,
+      averageConfidence
+    };
+  }, [vcpData]);
 
   const filteredSignals = useMemo(() => {
     if (!vcpData) return [];
 
-    let filtered = vcpData.signals;
+    // Handle different data formats: array, object with signals property, or object with numeric keys
+    let signals = [];
+    if (Array.isArray(vcpData)) {
+      signals = vcpData;
+    } else if (vcpData.signals) {
+      signals = vcpData.signals;
+    } else if (typeof vcpData === 'object' && vcpData !== null) {
+      // Convert object with numeric keys to array
+      signals = Object.values(vcpData);
+    }
+    
+    // Add computed properties for filtering
+    signals = signals.map(signal => {
+      const confidence = Number(signal.last_vcp_confidence);
+      return {
+        ...signal,
+        confidenceLevel: confidence >= 0.7 ? 'high' : 
+                        confidence >= 0.5 ? 'medium' : 'low',
+        recency: signal.days_since_vcp <= 3 ? 'recent' : 
+                 signal.days_since_vcp <= 7 ? 'moderate' : 'old'
+      };
+    });
+    
+    let filtered = signals;
 
     // Apply confidence filter
     if (confidenceFilter !== 'all') {
@@ -45,7 +95,7 @@ const VCPAnalysis = () => {
         case 'price':
           return b.last_close - a.last_close;
         case 'symbol':
-          return a.symbol.localeCompare(b.symbol);
+          return (a.symbol || '').localeCompare(b.symbol || '');
         default:
           return 0;
       }
@@ -78,12 +128,35 @@ const VCPAnalysis = () => {
     return 'bg-red-100 text-red-800';
   };
 
+  if (loading) {
+    return (
+      <div className="bg-white rounded-lg shadow-sm border p-6">
+        <div className="flex items-center justify-center py-12">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+          <span className="ml-3 text-gray-600">Đang tải dữ liệu VCP...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-white rounded-lg shadow-sm border p-6">
+        <div className="text-center py-12">
+          <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />
+          <h3 className="mt-2 text-sm font-medium text-gray-900">Lỗi tải dữ liệu</h3>
+          <p className="mt-1 text-sm text-gray-500">{error?.message || error?.toString() || 'Lỗi không xác định'}</p>
+        </div>
+      </div>
+    );
+  }
+
   if (!vcpData) {
     return (
       <div className="bg-white rounded-lg shadow-sm border p-6">
-        <div className="text-center py-8">
-          <div className="text-red-600 text-lg font-medium">Error loading VCP data</div>
-          <div className="text-gray-600 mt-2">Please check the console for more details</div>
+        <div className="text-center py-12">
+          <div className="text-gray-600 text-lg font-medium">Không có dữ liệu VCP</div>
+          <div className="text-gray-500 mt-2">Vui lòng thử lại sau</div>
         </div>
       </div>
     );

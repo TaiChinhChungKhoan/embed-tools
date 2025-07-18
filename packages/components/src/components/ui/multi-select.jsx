@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { cva } from "class-variance-authority";
 import {
   CheckIcon,
@@ -54,6 +54,7 @@ export const MultiSelect = React.forwardRef(
       onValueChange,
       variant,
       defaultValue = [],
+      value, // Add this prop
       placeholder = "Select options",
       animation = 0,
       maxCount = 3,
@@ -64,9 +65,17 @@ export const MultiSelect = React.forwardRef(
     },
     ref
   ) => {
-    const [selectedValues, setSelectedValues] = useState(defaultValue);
+    // Use value prop if provided, otherwise use defaultValue
+    const [selectedValues, setSelectedValues] = useState(value || defaultValue);
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
+
+    // Sync internal state with external value prop
+    useEffect(() => {
+      if (value !== undefined) {
+        setSelectedValues(value);
+      }
+    }, [value]);
 
     const handleInputKeyDown = (event) => {
       if (event.key === "Enter") {
@@ -216,7 +225,7 @@ export const MultiSelect = React.forwardRef(
               <CommandEmpty>No results found.</CommandEmpty>
               <CommandGroup>
                 <CommandItem
-                  key="all"
+                  key="select-all"
                   onSelect={toggleAll}
                   className="cursor-pointer"
                 >
@@ -263,24 +272,26 @@ export const MultiSelect = React.forwardRef(
                 <div className="flex items-center justify-between">
                   {selectedValues.length > 0 && (
                     <>
-                      <CommandItem
-                        onSelect={handleClear}
-                        className="flex-1 justify-center cursor-pointer"
-                      >
-                        Clear
-                      </CommandItem>
-                      <Separator
-                        orientation="vertical"
-                        className="flex min-h-6 h-full"
-                      />
-                    </>
-                  )}
-                  <CommandItem
-                    onSelect={() => setIsPopoverOpen(false)}
-                    className="flex-1 justify-center cursor-pointer max-w-full"
+                                        <CommandItem
+                    key="clear-all"
+                    onSelect={handleClear}
+                    className="flex-1 justify-center cursor-pointer"
                   >
-                    Close
+                    Clear
                   </CommandItem>
+                  <Separator
+                    orientation="vertical"
+                    className="flex min-h-6 h-full"
+                  />
+                </>
+              )}
+              <CommandItem
+                key="close-popover"
+                onSelect={() => setIsPopoverOpen(false)}
+                className="flex-1 justify-center cursor-pointer max-w-full"
+              >
+                Close
+              </CommandItem>
                 </div>
               </CommandGroup>
             </CommandList>
@@ -300,4 +311,4 @@ export const MultiSelect = React.forwardRef(
   }
 );
 
-MultiSelect.displayName = "MultiSelect"; 
+MultiSelect.displayName = "MultiSelect";

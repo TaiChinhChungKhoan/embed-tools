@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Info, HelpCircle } from 'lucide-react';
 import { Card } from '@embed-tools/components';
 import { createChart, LineSeries, HistogramSeries, BarSeries } from 'lightweight-charts';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 import { PieChart, Pie, Cell } from 'recharts';
 
 const MarketWave = () => {

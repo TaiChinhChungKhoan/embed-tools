@@ -2,10 +2,10 @@ import React, { useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, AreaChart, Area } from 'recharts';
 import { TrendingUp, TrendingDown, Activity, BarChart3, AlertCircle } from 'lucide-react';
 import Card from './Card';
-import { useDataLoader } from '../hooks/useDataLoader';
+import { useDataLoader } from '../utils/dataLoader';
 
 const MarketBreadthAnalysis = () => {
-    const { data: marketBreadthData, loading, error, lastUpdated, refresh } = useDataLoader('analyze_breadth', {
+    const { data: marketBreadthData, loading, error, lastUpdated, refresh } = useDataLoader('analyze_breadth', null, [], {
         refreshInterval: 5 * 60 * 1000 // Refresh every 5 minutes
     });
 

@@ -3,17 +3,15 @@ import {
   TrendingUp,
   TrendingDown,
   Zap,
-  Compass,
   Shield,
   Info,
-  ChevronUp,
-  ChevronDown,
   ArrowUpRight,
   ArrowDownRight,
   BarChart,
   Users,
   Activity
 } from 'lucide-react';
+import { getDirectionIconAndColor, getRiskColor, getRsChangeColor } from '../detailed-analysis/utils/colorUtils';
 
 // Reusable component for displaying a single statistic - matching SymbolInfoPanel style
 const MetricItem = ({ icon: Icon, label, value, valueClassName = '' }) => (
@@ -42,9 +40,8 @@ const InfoCard = ({ title, tooltip, children }) => (
 );
 
 const IndustryInfoPanel = ({ industry }) => {
-  console.log('IndustryInfoPanel received:', industry); // DEBUG
   const [showTrendDesc, setShowTrendDesc] = useState(false);
-
+  
   if (!industry) {
     return (
       <div className="bg-white border rounded-lg p-4 shadow-sm text-center">
@@ -55,39 +52,12 @@ const IndustryInfoPanel = ({ industry }) => {
 
   // Destructure all relevant fields from the industry object
   const {
-    name,
     metrics = {},
     speed_analysis = {},
     direction_analysis = {},
     risk_assessment = {},
     trend_consistency = {},
-    performance_summary = {},
-    custom_id,
-    latest_date,
-    breadth_detail = {}
   } = industry;
-
-  // Helper functions matching SymbolInfoPanel style
-  const getRiskColor = (level) => {
-    switch (level) {
-      case 'Cao': return 'text-red-500';
-      case 'Trung bình': return 'text-yellow-500';
-      case 'Thấp': return 'text-green-500';
-      default: return 'text-gray-500';
-    }
-  };
-
-  // Helper to determine icon and color based on direction string
-  const getDirectionIconAndColor = (direction) => {
-    if (!direction) return { icon: TrendingDown, color: 'text-gray-600' };
-    if (direction === 'Tăng trưởng mạnh' || direction === 'Tăng trưởng')
-      return { icon: TrendingUp, color: 'text-green-600' };
-    if (direction === 'Đứng yên')
-      return { icon: Activity, color: 'text-yellow-600' };
-    if (direction === 'Suy giảm' || direction === 'Suy giảm mạnh')
-      return { icon: TrendingDown, color: 'text-red-600' };
-    return { icon: TrendingDown, color: 'text-gray-600' };
-  };
 
   const formatPercent = (val) => (typeof val === 'number' ? `${(val * 100).toFixed(1)}%` : 'K/C');
 
@@ -109,15 +79,15 @@ const IndustryInfoPanel = ({ industry }) => {
           />
           <MetricItem
             icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-            label="Thay đổi 5 ngày"
+            label="Thay đổi 5 phiên"
             value={formatPercent(metrics?.rs_5d_change)}
-            valueClassName={metrics?.rs_5d_change > 0 ? 'text-green-600' : 'text-red-600'}
+            valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
           />
           <MetricItem
             icon={metrics?.rs_21d_change > 0 ? ArrowUpRight : ArrowDownRight}
-            label="Thay đổi 21 ngày"
+            label="Thay đổi 21 phiên"
             value={formatPercent(metrics?.rs_21d_change)}
-            valueClassName={metrics?.rs_21d_change > 0 ? 'text-green-600' : 'text-red-600'}
+            valueClassName={getRsChangeColor(metrics?.rs_21d_change)}
           />
         </InfoCard>
 
@@ -128,7 +98,7 @@ const IndustryInfoPanel = ({ industry }) => {
         >
           <MetricItem
             icon={Zap}
-            label="Tốc độ 5 ngày"
+            label="Tốc độ 5 phiên"
             value={formatPercent(speed_analysis?.raw_speed_5d)}
           />
           {(() => {
