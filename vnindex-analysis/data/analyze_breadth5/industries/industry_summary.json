@@ -1,0 +1,152 @@
+{
+  "nhua": {
+    "name": "Nhựa",
+    "symbol_count": 12,
+    "trading_days": 384,
+    "filename": "nhua.json"
+  },
+  "chung-khoan": {
+    "name": "Chứng khoán",
+    "symbol_count": 32,
+    "trading_days": 384,
+    "filename": "chung-khoan.json"
+  },
+  "det-may": {
+    "name": "Dệt may",
+    "symbol_count": 10,
+    "trading_days": 384,
+    "filename": "det-may.json"
+  },
+  "bds": {
+    "name": "Bất động sản",
+    "symbol_count": 26,
+    "trading_days": 384,
+    "filename": "bds.json"
+  },
+  "ngan-hang": {
+    "name": "Ngân hàng",
+    "symbol_count": 24,
+    "trading_days": 384,
+    "filename": "ngan-hang.json"
+  },
+  "hoa-chat": {
+    "name": "Hóa chất",
+    "symbol_count": 11,
+    "trading_days": 384,
+    "filename": "hoa-chat.json"
+  },
+  "vlxd": {
+    "name": "Vật liệu xây dựng",
+    "symbol_count": 17,
+    "trading_days": 384,
+    "filename": "vlxd.json"
+  },
+  "thuy-san": {
+    "name": "Thủy sản",
+    "symbol_count": 9,
+    "trading_days": 384,
+    "filename": "thuy-san.json"
+  },
+  "bds-nha-o": {
+    "name": "Bất động sản nhà ở",
+    "symbol_count": 30,
+    "trading_days": 384,
+    "filename": "bds-nha-o.json"
+  },
+  "xay-dung": {
+    "name": "Xây dựng",
+    "symbol_count": 40,
+    "trading_days": 384,
+    "filename": "xay-dung.json"
+  },
+  "cong-nghiep": {
+    "name": "Công nghiệp",
+    "symbol_count": 6,
+    "trading_days": 384,
+    "filename": "cong-nghiep.json"
+  },
+  "dau-khi": {
+    "name": "Dầu khí",
+    "symbol_count": 14,
+    "trading_days": 384,
+    "filename": "dau-khi.json"
+  },
+  "nong-nghiep": {
+    "name": "Nông nghiệp",
+    "symbol_count": 9,
+    "trading_days": 384,
+    "filename": "nong-nghiep.json"
+  },
+  "bds-kcn": {
+    "name": "Bất động sản khu công nghiệp",
+    "symbol_count": 12,
+    "trading_days": 384,
+    "filename": "bds-kcn.json"
+  },
+  "dau-tu-cong": {
+    "name": "Đầu tư công",
+    "symbol_count": 9,
+    "trading_days": 384,
+    "filename": "dau-tu-cong.json"
+  },
+  "ban-le": {
+    "name": "Bán lẻ",
+    "symbol_count": 12,
+    "trading_days": 384,
+    "filename": "ban-le.json"
+  },
+  "cong-nghe": {
+    "name": "Công nghệ",
+    "symbol_count": 8,
+    "trading_days": 384,
+    "filename": "cong-nghe.json"
+  },
+  "cao-su": {
+    "name": "Cao su",
+    "symbol_count": 8,
+    "trading_days": 384,
+    "filename": "cao-su.json"
+  },
+  "xay-lap-dien": {
+    "name": "Xây lắp điện",
+    "symbol_count": 4,
+    "trading_days": 384,
+    "filename": "xay-lap-dien.json"
+  },
+  "khac": {
+    "name": "Khác",
+    "symbol_count": 7,
+    "trading_days": 384,
+    "filename": "khac.json"
+  },
+  "van-tai": {
+    "name": "Vận tải",
+    "symbol_count": 21,
+    "trading_days": 384,
+    "filename": "van-tai.json"
+  },
+  "thep": {
+    "name": "Thép",
+    "symbol_count": 16,
+    "trading_days": 384,
+    "filename": "thep.json"
+  },
+  "go": {
+    "name": "Gỗ",
+    "symbol_count": 3,
+    "trading_days": 384,
+    "filename": "go.json"
+  },
+  "dien": {
+    "name": "Điện",
+    "symbol_count": 12,
+    "trading_days": 384,
+    "filename": "dien.json"
+  },
+  "duong": {
+    "name": "Mía đường",
+    "symbol_count": 3,
+    "trading_days": 384,
+    "filename": "duong.json"
+  }
+}

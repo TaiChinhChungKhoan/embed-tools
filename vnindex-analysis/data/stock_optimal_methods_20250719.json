@@ -1,0 +1,2392 @@
+{
+  "AAV": {
+    "symbol": "AAV",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:05:08.333405"
+  },
+  "ACB": {
+    "symbol": "ACB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:05:10.567932"
+  },
+  "ACC": {
+    "symbol": "ACC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:05:11.855757"
+  },
+  "ACL": {
+    "symbol": "ACL",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:05:13.544305"
+  },
+  "AGR": {
+    "symbol": "AGR",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:05:17.316582"
+  },
+  "ALV": {
+    "symbol": "ALV",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:05:18.684953"
+  },
+  "AMS": {
+    "symbol": "AMS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cong-nghiep",
+    "last_analysis": "2025-07-19T21:05:19.665907"
+  },
+  "ANV": {
+    "symbol": "ANV",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:05:21.800718"
+  },
+  "APG": {
+    "symbol": "APG",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:05:23.608517"
+  },
+  "API": {
+    "symbol": "API",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:05:25.095511"
+  },
+  "APP": {
+    "symbol": "APP",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hoa-chat",
+    "last_analysis": "2025-07-19T21:05:26.400100"
+  },
+  "ASM": {
+    "symbol": "ASM",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:05:30.124834"
+  },
+  "ASP": {
+    "symbol": "ASP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:05:32.270567"
+  },
+  "BCE": {
+    "symbol": "BCE",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:05:36.656194"
+  },
+  "BCG": {
+    "symbol": "BCG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:05:37.526021"
+  },
+  "BCM": {
+    "symbol": "BCM",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.3333333333333333,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 0.6666666666666666,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:05:38.071212"
+  },
+  "BID": {
+    "symbol": "BID",
+    "best_method_tops": "cycle_confirmed",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:05:40.057617"
+  },
+  "BLF": {
+    "symbol": "BLF",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:05:41.845625"
+  },
+  "BMC": {
+    "symbol": "BMC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:05:43.697071"
+  },
+  "BMI": {
+    "symbol": "BMI",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bao-hiem",
+    "last_analysis": "2025-07-19T21:05:45.482253"
+  },
+  "BMP": {
+    "symbol": "BMP",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nhua",
+    "last_analysis": "2025-07-19T21:05:47.679541"
+  },
+  "BVH": {
+    "symbol": "BVH",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "cycle_confirmed",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bao-hiem",
+    "last_analysis": "2025-07-19T21:05:51.834281"
+  },
+  "BWE": {
+    "symbol": "BWE",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nuoc",
+    "last_analysis": "2025-07-19T21:05:54.374412"
+  },
+  "C4G": {
+    "symbol": "C4G",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:05:55.029959"
+  },
+  "C69": {
+    "symbol": "C69",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:05:55.833989"
+  },
+  "CCL": {
+    "symbol": "CCL",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:05:57.586812"
+  },
+  "CDC": {
+    "symbol": "CDC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:05:59.516784"
+  },
+  "CII": {
+    "symbol": "CII",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:06:05.180605"
+  },
+  "CLX": {
+    "symbol": "CLX",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:06:06.264132"
+  },
+  "CMG": {
+    "symbol": "CMG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cong-nghe",
+    "last_analysis": "2025-07-19T21:06:07.891086"
+  },
+  "CMX": {
+    "symbol": "CMX",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:06:11.484654"
+  },
+  "CNG": {
+    "symbol": "CNG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:06:13.376865"
+  },
+  "CRC": {
+    "symbol": "CRC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:06:14.155384"
+  },
+  "CRE": {
+    "symbol": "CRE",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:06:14.888342"
+  },
+  "CSM": {
+    "symbol": "CSM",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cao-su",
+    "last_analysis": "2025-07-19T21:06:16.709107"
+  },
+  "CTD": {
+    "symbol": "CTD",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 0.1,
+    "predictability_score": 0.55,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:06:19.190538"
+  },
+  "CTF": {
+    "symbol": "CTF",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.3333333333333333,
+    "bottom_accuracy": 0.3333333333333333,
+    "predictability_score": 0.3333333333333333,
+    "industry": "cong-nghiep",
+    "last_analysis": "2025-07-19T21:06:19.822977"
+  },
+  "CTG": {
+    "symbol": "CTG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:06:21.632583"
+  },
+  "CTI": {
+    "symbol": "CTI",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:06:23.107448"
+  },
+  "CTP": {
+    "symbol": "CTP",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:06:23.943882"
+  },
+  "CTR": {
+    "symbol": "CTR",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.3333333333333333,
+    "bottom_accuracy": 0.3333333333333333,
+    "predictability_score": 0.3333333333333333,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:06:24.585961"
+  },
+  "CTX": {
+    "symbol": "CTX",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:06:27.372001"
+  },
+  "D2D": {
+    "symbol": "D2D",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:06:29.604542"
+  },
+  "DAH": {
+    "symbol": "DAH",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:06:30.677970"
+  },
+  "DBC": {
+    "symbol": "DBC",
+    "best_method_tops": "original",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:06:33.111979"
+  },
+  "DBD": {
+    "symbol": "DBD",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:06:34.014092"
+  },
+  "DC4": {
+    "symbol": "DC4",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:06:35.950959"
+  },
+  "DCL": {
+    "symbol": "DCL",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:06:37.973882"
+  },
+  "DDV": {
+    "symbol": "DDV",
+    "best_method_tops": "cycle_confirmed",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hoa-chat",
+    "last_analysis": "2025-07-19T21:06:40.807452"
+  },
+  "DGT": {
+    "symbol": "DGT",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:06:42.926115"
+  },
+  "DGW": {
+    "symbol": "DGW",
+    "best_method_tops": "original",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:06:44.115519"
+  },
+  "DHA": {
+    "symbol": "DHA",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:06:47.281321"
+  },
+  "DHC": {
+    "symbol": "DHC",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:06:49.256751"
+  },
+  "DL1": {
+    "symbol": "DL1",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:06:52.665996"
+  },
+  "DPM": {
+    "symbol": "DPM",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hoa-chat",
+    "last_analysis": "2025-07-19T21:06:56.914370"
+  },
+  "DPR": {
+    "symbol": "DPR",
+    "best_method_tops": "original",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cao-su",
+    "last_analysis": "2025-07-19T21:06:59.500381"
+  },
+  "DRC": {
+    "symbol": "DRC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cao-su",
+    "last_analysis": "2025-07-19T21:07:02.139473"
+  },
+  "DRH": {
+    "symbol": "DRH",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:07:03.891678"
+  },
+  "DSC": {
+    "symbol": "DSC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:07:05.664420"
+  },
+  "DST": {
+    "symbol": "DST",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "khac",
+    "last_analysis": "2025-07-19T21:07:08.512559"
+  },
+  "DTD": {
+    "symbol": "DTD",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:07:09.500837"
+  },
+  "DVN": {
+    "symbol": "DVN",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:07:11.077464"
+  },
+  "DXG": {
+    "symbol": "DXG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:07:13.224138"
+  },
+  "DXP": {
+    "symbol": "DXP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:07:15.188363"
+  },
+  "EIB": {
+    "symbol": "EIB",
+    "best_method_tops": "original",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:07:17.669928"
+  },
+  "ELC": {
+    "symbol": "ELC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cong-nghe",
+    "last_analysis": "2025-07-19T21:07:19.954082"
+  },
+  "EVE": {
+    "symbol": "EVE",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "det-may",
+    "last_analysis": "2025-07-19T21:07:22.180633"
+  },
+  "EVF": {
+    "symbol": "EVF",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:07:22.939669"
+  },
+  "EVG": {
+    "symbol": "EVG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:07:23.816771"
+  },
+  "FCM": {
+    "symbol": "FCM",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:07:26.283251"
+  },
+  "FCN": {
+    "symbol": "FCN",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:07:28.030758"
+  },
+  "FIT": {
+    "symbol": "FIT",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "khac",
+    "last_analysis": "2025-07-19T21:07:30.220596"
+  },
+  "FMC": {
+    "symbol": "FMC",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:07:33.075693"
+  },
+  "FPT": {
+    "symbol": "FPT",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.3333333333333333,
+    "bottom_accuracy": 0.5,
+    "predictability_score": 0.41666666666666663,
+    "industry": "cong-nghe",
+    "last_analysis": "2025-07-19T21:07:36.106620"
+  },
+  "GAS": {
+    "symbol": "GAS",
+    "best_method_tops": "cycle_confirmed",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:07:39.757136"
+  },
+  "GDT": {
+    "symbol": "GDT",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "go",
+    "last_analysis": "2025-07-19T21:07:42.347388"
+  },
+  "GEG": {
+    "symbol": "GEG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:07:43.769472"
+  },
+  "GIL": {
+    "symbol": "GIL",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "det-may",
+    "last_analysis": "2025-07-19T21:07:48.614381"
+  },
+  "GSP": {
+    "symbol": "GSP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:07:52.584782"
+  },
+  "HAG": {
+    "symbol": "HAG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:07:54.845608"
+  },
+  "HAP": {
+    "symbol": "HAP",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:08:00.666875"
+  },
+  "HAR": {
+    "symbol": "HAR",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:08:02.574047"
+  },
+  "HAX": {
+    "symbol": "HAX",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:08:05.376490"
+  },
+  "HBC": {
+    "symbol": "HBC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:08:07.959559"
+  },
+  "HBS": {
+    "symbol": "HBS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:08:10.333345"
+  },
+  "HCM": {
+    "symbol": "HCM",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:08:13.523616"
+  },
+  "HDB": {
+    "symbol": "HDB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:08:14.482920"
+  },
+  "HDC": {
+    "symbol": "HDC",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:08:17.341726"
+  },
+  "HDG": {
+    "symbol": "HDG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:08:19.283968"
+  },
+  "HHG": {
+    "symbol": "HHG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:08:21.545983"
+  },
+  "HHP": {
+    "symbol": "HHP",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:08:22.378692"
+  },
+  "HID": {
+    "symbol": "HID",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:08:25.376394"
+  },
+  "HII": {
+    "symbol": "HII",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nhua",
+    "last_analysis": "2025-07-19T21:08:26.295276"
+  },
+  "HLD": {
+    "symbol": "HLD",
+    "best_method_tops": "original",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:08:28.019967"
+  },
+  "HNG": {
+    "symbol": "HNG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:08:29.074564"
+  },
+  "HNM": {
+    "symbol": "HNM",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuc-pham",
+    "last_analysis": "2025-07-19T21:08:31.353854"
+  },
+  "HPG": {
+    "symbol": "HPG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:08:33.707978"
+  },
+  "HSG": {
+    "symbol": "HSG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:08:37.615913"
+  },
+  "HSL": {
+    "symbol": "HSL",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuc-pham",
+    "last_analysis": "2025-07-19T21:08:38.318980"
+  },
+  "HT1": {
+    "symbol": "HT1",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:08:40.679493"
+  },
+  "HTI": {
+    "symbol": "HTI",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:08:42.451079"
+  },
+  "HVH": {
+    "symbol": "HVH",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:08:48.144207"
+  },
+  "HVT": {
+    "symbol": "HVT",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hoa-chat",
+    "last_analysis": "2025-07-19T21:08:50.783349"
+  },
+  "IDC": {
+    "symbol": "IDC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:08:51.477512"
+  },
+  "IJC": {
+    "symbol": "IJC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:08:57.272212"
+  },
+  "IMP": {
+    "symbol": "IMP",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.5,
+    "bottom_accuracy": 0.5,
+    "predictability_score": 0.5,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:08:59.750296"
+  },
+  "IPA": {
+    "symbol": "IPA",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "tai-chinh",
+    "last_analysis": "2025-07-19T21:09:00.994844"
+  },
+  "ITC": {
+    "symbol": "ITC",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:09:03.786331"
+  },
+  "ITQ": {
+    "symbol": "ITQ",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:09:05.518693"
+  },
+  "IVS": {
+    "symbol": "IVS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:09:07.531425"
+  },
+  "JVC": {
+    "symbol": "JVC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:09:08.995334"
+  },
+  "KBC": {
+    "symbol": "KBC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:09:10.585807"
+  },
+  "KDC": {
+    "symbol": "KDC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:09:12.661501"
+  },
+  "KDH": {
+    "symbol": "KDH",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:09:13.899031"
+  },
+  "KHP": {
+    "symbol": "KHP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:09:16.842837"
+  },
+  "KLB": {
+    "symbol": "KLB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:09:17.596611"
+  },
+  "KOS": {
+    "symbol": "KOS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:09:18.216290"
+  },
+  "KSB": {
+    "symbol": "KSB",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:09:19.750382"
+  },
+  "KSQ": {
+    "symbol": "KSQ",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:09:21.480342"
+  },
+  "KVC": {
+    "symbol": "KVC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:09:22.992128"
+  },
+  "LCG": {
+    "symbol": "LCG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:09:27.428600"
+  },
+  "LDG": {
+    "symbol": "LDG",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:09:28.263885"
+  },
+  "LDP": {
+    "symbol": "LDP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:09:29.364184"
+  },
+  "LHG": {
+    "symbol": "LHG",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:09:32.492904"
+  },
+  "LIG": {
+    "symbol": "LIG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:09:34.500591"
+  },
+  "LSS": {
+    "symbol": "LSS",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "duong",
+    "last_analysis": "2025-07-19T21:09:37.636520"
+  },
+  "MBB": {
+    "symbol": "MBB",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:09:39.128806"
+  },
+  "MBG": {
+    "symbol": "MBG",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "khac",
+    "last_analysis": "2025-07-19T21:09:39.995735"
+  },
+  "MCG": {
+    "symbol": "MCG",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:09:42.939101"
+  },
+  "MHC": {
+    "symbol": "MHC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:09:46.477316"
+  },
+  "MPC": {
+    "symbol": "MPC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuy-san",
+    "last_analysis": "2025-07-19T21:09:49.219474"
+  },
+  "MSR": {
+    "symbol": "MSR",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:09:52.771093"
+  },
+  "MWG": {
+    "symbol": "MWG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:09:54.912919"
+  },
+  "NAF": {
+    "symbol": "NAF",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:09:56.066980"
+  },
+  "NDN": {
+    "symbol": "NDN",
+    "best_method_tops": "original",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:10:02.302957"
+  },
+  "NHA": {
+    "symbol": "NHA",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:10:04.196263"
+  },
+  "NHH": {
+    "symbol": "NHH",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nhua",
+    "last_analysis": "2025-07-19T21:10:04.778757"
+  },
+  "NRC": {
+    "symbol": "NRC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:10:08.544974"
+  },
+  "NT2": {
+    "symbol": "NT2",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:10:11.574652"
+  },
+  "NTC": {
+    "symbol": "NTC",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:10:12.282382"
+  },
+  "NVB": {
+    "symbol": "NVB",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:10:19.093248"
+  },
+  "OCH": {
+    "symbol": "OCH",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thuc-pham",
+    "last_analysis": "2025-07-19T21:10:21.348113"
+  },
+  "OGC": {
+    "symbol": "OGC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "tai-chinh",
+    "last_analysis": "2025-07-19T21:10:23.285614"
+  },
+  "OIL": {
+    "symbol": "OIL",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:10:24.010523"
+  },
+  "ORS": {
+    "symbol": "ORS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:10:26.380703"
+  },
+  "PAC": {
+    "symbol": "PAC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:10:29.177104"
+  },
+  "PAN": {
+    "symbol": "PAN",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:10:32.188660"
+  },
+  "PDR": {
+    "symbol": "PDR",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:10:34.909073"
+  },
+  "PFL": {
+    "symbol": "PFL",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:10:39.639120"
+  },
+  "PHC": {
+    "symbol": "PHC",
+    "best_method_tops": "cycle_confirmed",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:10:41.545348"
+  },
+  "PHP": {
+    "symbol": "PHP",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:10:42.526995"
+  },
+  "PHR": {
+    "symbol": "PHR",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cao-su",
+    "last_analysis": "2025-07-19T21:10:43.696547"
+  },
+  "PLC": {
+    "symbol": "PLC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:10:46.693635"
+  },
+  "PLP": {
+    "symbol": "PLP",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nhua",
+    "last_analysis": "2025-07-19T21:10:47.334722"
+  },
+  "PLX": {
+    "symbol": "PLX",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:10:48.004747"
+  },
+  "PNJ": {
+    "symbol": "PNJ",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:10:49.767860"
+  },
+  "POW": {
+    "symbol": "POW",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:10:50.579869"
+  },
+  "PPC": {
+    "symbol": "PPC",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:10:52.585582"
+  },
+  "PSB": {
+    "symbol": "PSB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:10:54.659746"
+  },
+  "PSI": {
+    "symbol": "PSI",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:10:57.226056"
+  },
+  "PTB": {
+    "symbol": "PTB",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:10:58.987105"
+  },
+  "PTL": {
+    "symbol": "PTL",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:11:05.543259"
+  },
+  "PV2": {
+    "symbol": "PV2",
+    "best_method_tops": "original",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:11:08.085172"
+  },
+  "PVB": {
+    "symbol": "PVB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:11:09.161863"
+  },
+  "PVC": {
+    "symbol": "PVC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:11:12.239448"
+  },
+  "PVD": {
+    "symbol": "PVD",
+    "best_method_tops": "cycle_confirmed",
+    "best_method_bottoms": "cycle_confirmed",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:11:14.289118"
+  },
+  "PVG": {
+    "symbol": "PVG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:11:16.910016"
+  },
+  "PVP": {
+    "symbol": "PVP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:11:17.816407"
+  },
+  "PXL": {
+    "symbol": "PXL",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:11:23.795919"
+  },
+  "QCG": {
+    "symbol": "QCG",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:11:25.472447"
+  },
+  "QNS": {
+    "symbol": "QNS",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "duong",
+    "last_analysis": "2025-07-19T21:11:26.387620"
+  },
+  "REE": {
+    "symbol": "REE",
+    "best_method_tops": "original",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 0.25,
+    "predictability_score": 0.625,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:11:30.233839"
+  },
+  "S99": {
+    "symbol": "S99",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:11:32.349218"
+  },
+  "SAB": {
+    "symbol": "SAB",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ban-le",
+    "last_analysis": "2025-07-19T21:11:33.303862"
+  },
+  "SAM": {
+    "symbol": "SAM",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vien-thong",
+    "last_analysis": "2025-07-19T21:11:37.054282"
+  },
+  "SAS": {
+    "symbol": "SAS",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hang-khong",
+    "last_analysis": "2025-07-19T21:11:38.936466"
+  },
+  "SAV": {
+    "symbol": "SAV",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "go",
+    "last_analysis": "2025-07-19T21:11:42.837594"
+  },
+  "SBT": {
+    "symbol": "SBT",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "duong",
+    "last_analysis": "2025-07-19T21:11:48.058329"
+  },
+  "SCS": {
+    "symbol": "SCS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hang-khong",
+    "last_analysis": "2025-07-19T21:11:50.355542"
+  },
+  "SGR": {
+    "symbol": "SGR",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:11:52.080763"
+  },
+  "SGT": {
+    "symbol": "SGT",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cong-nghe",
+    "last_analysis": "2025-07-19T21:11:54.413729"
+  },
+  "SHB": {
+    "symbol": "SHB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:11:56.565900"
+  },
+  "SHI": {
+    "symbol": "SHI",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.5,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 0.75,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:11:58.182287"
+  },
+  "SJD": {
+    "symbol": "SJD",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:12:03.084613"
+  },
+  "SJE": {
+    "symbol": "SJE",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:12:05.036177"
+  },
+  "SKG": {
+    "symbol": "SKG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:12:06.187733"
+  },
+  "SSI": {
+    "symbol": "SSI",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:12:10.709848"
+  },
+  "STB": {
+    "symbol": "STB",
+    "best_method_tops": "original",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:12:15.171097"
+  },
+  "SVN": {
+    "symbol": "SVN",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:12:17.281792"
+  },
+  "SZC": {
+    "symbol": "SZC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:12:17.878115"
+  },
+  "TCB": {
+    "symbol": "TCB",
+    "best_method_tops": "original",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:12:18.514267"
+  },
+  "TCH": {
+    "symbol": "TCH",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:12:20.250693"
+  },
+  "TCL": {
+    "symbol": "TCL",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:12:22.245076"
+  },
+  "TCO": {
+    "symbol": "TCO",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:12:25.551984"
+  },
+  "TDG": {
+    "symbol": "TDG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-khi",
+    "last_analysis": "2025-07-19T21:12:28.016179"
+  },
+  "TDH": {
+    "symbol": "TDH",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:12:29.953846"
+  },
+  "TEG": {
+    "symbol": "TEG",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:12:31.219705"
+  },
+  "THG": {
+    "symbol": "THG",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:12:32.860550"
+  },
+  "TIP": {
+    "symbol": "TIP",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:12:35.731901"
+  },
+  "TIS": {
+    "symbol": "TIS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:12:37.249695"
+  },
+  "TLD": {
+    "symbol": "TLD",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:12:38.121134"
+  },
+  "TNG": {
+    "symbol": "TNG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "det-may",
+    "last_analysis": "2025-07-19T21:12:44.784806"
+  },
+  "TNT": {
+    "symbol": "TNT",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:12:47.858387"
+  },
+  "TRC": {
+    "symbol": "TRC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cao-su",
+    "last_analysis": "2025-07-19T21:12:50.831381"
+  },
+  "TTF": {
+    "symbol": "TTF",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "go",
+    "last_analysis": "2025-07-19T21:12:54.709064"
+  },
+  "TTN": {
+    "symbol": "TTN",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cong-nghe",
+    "last_analysis": "2025-07-19T21:12:56.333622"
+  },
+  "TV2": {
+    "symbol": "TV2",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 0.2,
+    "predictability_score": 0.6,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:12:57.935283"
+  },
+  "TVC": {
+    "symbol": "TVC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:13:00.084157"
+  },
+  "TVN": {
+    "symbol": "TVN",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "thep",
+    "last_analysis": "2025-07-19T21:13:01.129397"
+  },
+  "UDC": {
+    "symbol": "UDC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:13:03.827931"
+  },
+  "VC2": {
+    "symbol": "VC2",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "xay-dung",
+    "last_analysis": "2025-07-19T21:13:05.715312"
+  },
+  "VC3": {
+    "symbol": "VC3",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:13:07.493325"
+  },
+  "VCB": {
+    "symbol": "VCB",
+    "best_method_tops": "cycle_confirmed",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:13:11.332304"
+  },
+  "VCG": {
+    "symbol": "VCG",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dau-tu-cong",
+    "last_analysis": "2025-07-19T21:13:12.987723"
+  },
+  "VCS": {
+    "symbol": "VCS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:13:15.625364"
+  },
+  "VDS": {
+    "symbol": "VDS",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:13:17.389162"
+  },
+  "VEA": {
+    "symbol": "VEA",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cong-nghiep",
+    "last_analysis": "2025-07-19T21:13:20.455420"
+  },
+  "VGC": {
+    "symbol": "VGC",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-kcn",
+    "last_analysis": "2025-07-19T21:13:21.439944"
+  },
+  "VHE": {
+    "symbol": "VHE",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "y-te",
+    "last_analysis": "2025-07-19T21:13:26.722532"
+  },
+  "VHM": {
+    "symbol": "VHM",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:13:29.382098"
+  },
+  "VIC": {
+    "symbol": "VIC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:13:31.982406"
+  },
+  "VIP": {
+    "symbol": "VIP",
+    "best_method_tops": "original",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:13:36.876982"
+  },
+  "VIX": {
+    "symbol": "VIX",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "chung-khoan",
+    "last_analysis": "2025-07-19T21:13:40.098123"
+  },
+  "VJC": {
+    "symbol": "VJC",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hang-khong",
+    "last_analysis": "2025-07-19T21:13:41.127921"
+  },
+  "VLB": {
+    "symbol": "VLB",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:13:41.817669"
+  },
+  "VLC": {
+    "symbol": "VLC",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "nong-nghiep",
+    "last_analysis": "2025-07-19T21:13:42.851744"
+  },
+  "VNE": {
+    "symbol": "VNE",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 0.16666666666666666,
+    "predictability_score": 0.5833333333333334,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:13:47.686479"
+  },
+  "VNM": {
+    "symbol": "VNM",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "hang-tieu-dung",
+    "last_analysis": "2025-07-19T21:13:50.185369"
+  },
+  "VPB": {
+    "symbol": "VPB",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "ngan-hang",
+    "last_analysis": "2025-07-19T21:13:52.860597"
+  },
+  "VPG": {
+    "symbol": "VPG",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "UNCLASSIFIED",
+    "last_analysis": "2025-07-19T21:13:53.493612"
+  },
+  "VPH": {
+    "symbol": "VPH",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds",
+    "last_analysis": "2025-07-19T21:13:55.055352"
+  },
+  "VRE": {
+    "symbol": "VRE",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "bds-nha-o",
+    "last_analysis": "2025-07-19T21:13:56.328537"
+  },
+  "VRG": {
+    "symbol": "VRG",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "cao-su",
+    "last_analysis": "2025-07-19T21:13:57.172303"
+  },
+  "VSC": {
+    "symbol": "VSC",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "original",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 0.3333333333333333,
+    "predictability_score": 0.6666666666666666,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:13:59.258134"
+  },
+  "VSH": {
+    "symbol": "VSH",
+    "best_method_tops": "hybrid",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "dien",
+    "last_analysis": "2025-07-19T21:14:01.305637"
+  },
+  "VTO": {
+    "symbol": "VTO",
+    "best_method_tops": "enhanced",
+    "best_method_bottoms": "enhanced",
+    "top_accuracy": 0.3333333333333333,
+    "bottom_accuracy": 0.3333333333333333,
+    "predictability_score": 0.3333333333333333,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:14:03.671063"
+  },
+  "VTP": {
+    "symbol": "VTP",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "van-tai",
+    "last_analysis": "2025-07-19T21:14:04.184390"
+  },
+  "VTV": {
+    "symbol": "VTV",
+    "best_method_tops": "major_pivot",
+    "best_method_bottoms": "major_pivot",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "vlxd",
+    "last_analysis": "2025-07-19T21:14:06.283171"
+  },
+  "YEG": {
+    "symbol": "YEG",
+    "best_method_tops": "pivot",
+    "best_method_bottoms": "hybrid",
+    "top_accuracy": 1.0,
+    "bottom_accuracy": 1.0,
+    "predictability_score": 1.0,
+    "industry": "giai-tri",
+    "last_analysis": "2025-07-19T21:14:07.009202"
+  }
+}
