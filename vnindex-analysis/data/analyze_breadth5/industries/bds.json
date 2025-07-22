@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Bất động sản",
       "description": "Phân tích breadth cho bất động sản",
       "version": "3.0",
-      "generated_at": "2025-07-22T15:46:06.920506",
+      "generated_at": "2025-07-23T00:57:15.183210",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -3706,10 +3706,10 @@
         "sentiment": "Tiêu cực"
       },
       "ema_10": {
-        "above_count": 2,
-        "below_count": 8,
-        "above_percentage": 20.0,
-        "below_percentage": 80.0,
+        "above_count": 3,
+        "below_count": 7,
+        "above_percentage": 30.0,
+        "below_percentage": 70.0,
         "strength": "Rất yếu",
         "sentiment": "Tiêu cực"
       },
@@ -22004,7 +22004,7 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-22T15:46:06.918517",
+      "analysis_timestamp": "2025-07-23T00:57:15.181232",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [

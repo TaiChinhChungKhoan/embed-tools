@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Công nghiệp",
       "description": "Phân tích breadth cho công nghiệp",
       "version": "3.0",
-      "generated_at": "2025-07-22T15:46:10.802050",
+      "generated_at": "2025-07-23T00:57:19.238629",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -18974,20 +18974,20 @@
         "stocks_with_data": 1
       },
       "ema_5": {
-        "above_count": 1,
-        "below_count": 0,
-        "above_percentage": 100.0,
-        "below_percentage": 0.0,
-        "strength": "Mạnh",
-        "sentiment": "Tích cực"
+        "above_count": 0,
+        "below_count": 1,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
       },
       "ema_10": {
-        "above_count": 1,
-        "below_count": 0,
-        "above_percentage": 100.0,
-        "below_percentage": 0.0,
-        "strength": "Mạnh",
-        "sentiment": "Tích cực"
+        "above_count": 0,
+        "below_count": 1,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
       },
       "ema_20": {
         "above_count": 0,
@@ -21457,17 +21457,17 @@
         "sentiment": "Tích cực"
       },
       "ema_200": {
-        "above_count": 0,
-        "below_count": 1,
-        "above_percentage": 0.0,
-        "below_percentage": 100.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
       },
       "market_regime": {
-        "classification": "Thị trường giảm",
+        "classification": "Thị trường tăng",
         "confidence": 1.0,
-        "description": "Công nghiệp thể hiện đặc điểm thị trường giảm"
+        "description": "Công nghiệp thể hiện đặc điểm thị trường tăng"
       },
       "breadth_momentum": {
         "ema_20_change_5d": 0.0,
@@ -21514,17 +21514,17 @@
         "sentiment": "Tích cực"
       },
       "ema_200": {
-        "above_count": 0,
-        "below_count": 1,
-        "above_percentage": 0.0,
-        "below_percentage": 100.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
       },
       "market_regime": {
-        "classification": "Thị trường giảm",
+        "classification": "Thị trường tăng",
         "confidence": 1.0,
-        "description": "Công nghiệp thể hiện đặc điểm thị trường giảm"
+        "description": "Công nghiệp thể hiện đặc điểm thị trường tăng"
       },
       "breadth_momentum": {
         "ema_20_change_5d": 0.0,
@@ -22004,7 +22004,7 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-22T15:46:10.799847",
+      "analysis_timestamp": "2025-07-23T00:57:19.236912",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [

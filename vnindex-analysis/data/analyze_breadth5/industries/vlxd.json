@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Vật liệu xây dựng",
       "description": "Phân tích breadth cho vật liệu xây dựng",
       "version": "3.0",
-      "generated_at": "2025-07-22T15:46:08.592789",
+      "generated_at": "2025-07-23T00:57:16.530079",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -2102,12 +2102,12 @@
         "stocks_with_data": 2
       },
       "ema_5": {
-        "above_count": 0,
-        "below_count": 2,
-        "above_percentage": 0.0,
-        "below_percentage": 100.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
       },
       "ema_10": {
         "above_count": 1,
@@ -7582,12 +7582,12 @@
         "sentiment": "Tiêu cực"
       },
       "ema_10": {
-        "above_count": 0,
-        "below_count": 2,
-        "above_percentage": 0.0,
-        "below_percentage": 100.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
       },
       "ema_20": {
         "above_count": 1,
@@ -12207,12 +12207,12 @@
         "sentiment": "Trung lập"
       },
       "ema_20": {
-        "above_count": 1,
-        "below_count": 1,
-        "above_percentage": 50.0,
-        "below_percentage": 50.0,
-        "strength": "Yếu",
-        "sentiment": "Trung lập"
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
       },
       "ema_50": {
         "above_count": 2,
@@ -14300,12 +14300,12 @@
         "stocks_with_data": 2
       },
       "ema_5": {
-        "above_count": 0,
-        "below_count": 2,
-        "above_percentage": 0.0,
-        "below_percentage": 100.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
       },
       "ema_10": {
         "above_count": 0,
@@ -14414,12 +14414,12 @@
         "stocks_with_data": 2
       },
       "ema_5": {
-        "above_count": 1,
-        "below_count": 1,
-        "above_percentage": 50.0,
-        "below_percentage": 50.0,
-        "strength": "Yếu",
-        "sentiment": "Trung lập"
+        "above_count": 0,
+        "below_count": 2,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
       },
       "ema_10": {
         "above_count": 0,
@@ -20179,12 +20179,12 @@
         "sentiment": "Trung lập"
       },
       "ema_10": {
-        "above_count": 1,
-        "below_count": 1,
-        "above_percentage": 50.0,
-        "below_percentage": 50.0,
-        "strength": "Yếu",
-        "sentiment": "Trung lập"
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
       },
       "ema_20": {
         "above_count": 2,
@@ -22004,7 +22004,7 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-22T15:46:08.590752",
+      "analysis_timestamp": "2025-07-23T00:57:16.528392",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [

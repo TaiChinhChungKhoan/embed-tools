@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Đầu tư công",
       "description": "Phân tích breadth cho đầu tư công",
       "version": "3.0",
-      "generated_at": "2025-07-22T15:46:13.188683",
+      "generated_at": "2025-07-23T00:57:21.749494",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -2533,16 +2533,16 @@
         "sentiment": "Tích cực"
       },
       "ema_200": {
-        "above_count": 6,
-        "below_count": 1,
-        "above_percentage": 85.7,
-        "below_percentage": 14.3,
+        "above_count": 5,
+        "below_count": 2,
+        "above_percentage": 71.4,
+        "below_percentage": 28.6,
         "strength": "Mạnh",
         "sentiment": "Tích cực"
       },
       "market_regime": {
         "classification": "Thị trường tăng",
-        "confidence": 0.64,
+        "confidence": 0.29,
         "description": "Đầu tư công thể hiện đặc điểm thị trường tăng"
       },
       "breadth_momentum": {
@@ -2590,16 +2590,16 @@
         "sentiment": "Tích cực"
       },
       "ema_200": {
-        "above_count": 6,
-        "below_count": 1,
-        "above_percentage": 85.7,
-        "below_percentage": 14.3,
+        "above_count": 5,
+        "below_count": 2,
+        "above_percentage": 71.4,
+        "below_percentage": 28.6,
         "strength": "Mạnh",
         "sentiment": "Tích cực"
       },
       "market_regime": {
         "classification": "Thị trường tăng",
-        "confidence": 0.64,
+        "confidence": 0.29,
         "description": "Đầu tư công thể hiện đặc điểm thị trường tăng"
       },
       "breadth_momentum": {
@@ -2761,16 +2761,16 @@
         "sentiment": "Tích cực"
       },
       "ema_200": {
-        "above_count": 6,
-        "below_count": 1,
-        "above_percentage": 85.7,
-        "below_percentage": 14.3,
+        "above_count": 5,
+        "below_count": 2,
+        "above_percentage": 71.4,
+        "below_percentage": 28.6,
         "strength": "Mạnh",
         "sentiment": "Tích cực"
       },
       "market_regime": {
         "classification": "Thị trường tăng",
-        "confidence": 0.64,
+        "confidence": 0.29,
         "description": "Đầu tư công thể hiện đặc điểm thị trường tăng"
       },
       "breadth_momentum": {
@@ -2818,16 +2818,16 @@
         "sentiment": "Tích cực"
       },
       "ema_200": {
-        "above_count": 6,
-        "below_count": 1,
-        "above_percentage": 85.7,
-        "below_percentage": 14.3,
+        "above_count": 5,
+        "below_count": 2,
+        "above_percentage": 71.4,
+        "below_percentage": 28.6,
         "strength": "Mạnh",
         "sentiment": "Tích cực"
       },
       "market_regime": {
         "classification": "Thị trường tăng",
-        "confidence": 0.64,
+        "confidence": 0.29,
         "description": "Đầu tư công thể hiện đặc điểm thị trường tăng"
       },
       "breadth_momentum": {
@@ -5709,11 +5709,11 @@
         "sentiment": "Tích cực"
       },
       "ema_20": {
-        "above_count": 5,
-        "below_count": 2,
-        "above_percentage": 71.4,
-        "below_percentage": 28.6,
-        "strength": "Mạnh",
+        "above_count": 4,
+        "below_count": 3,
+        "above_percentage": 57.1,
+        "below_percentage": 42.9,
+        "strength": "Trung bình",
         "sentiment": "Tích cực"
       },
       "ema_50": {
@@ -6206,12 +6206,12 @@
         "stocks_with_data": 7
       },
       "ema_5": {
-        "above_count": 3,
-        "below_count": 4,
-        "above_percentage": 42.9,
-        "below_percentage": 57.1,
-        "strength": "Yếu",
-        "sentiment": "Trung lập"
+        "above_count": 2,
+        "below_count": 5,
+        "above_percentage": 28.6,
+        "below_percentage": 71.4,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
       },
       "ema_10": {
         "above_count": 2,
@@ -22004,7 +22004,7 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-22T15:46:13.185991",
+      "analysis_timestamp": "2025-07-23T00:57:21.747504",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [

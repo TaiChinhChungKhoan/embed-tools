@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Thép",
       "description": "Phân tích breadth cho thép",
       "version": "3.0",
-      "generated_at": "2025-07-22T15:46:17.571605",
+      "generated_at": "2025-07-23T00:57:25.615050",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -16254,10 +16254,10 @@
         "sentiment": "Tích cực"
       },
       "ema_20": {
-        "above_count": 4,
-        "below_count": 1,
-        "above_percentage": 80.0,
-        "below_percentage": 20.0,
+        "above_count": 5,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
         "strength": "Mạnh",
         "sentiment": "Tích cực"
       },
@@ -16482,10 +16482,10 @@
         "sentiment": "Tích cực"
       },
       "ema_20": {
-        "above_count": 4,
-        "below_count": 1,
-        "above_percentage": 80.0,
-        "below_percentage": 20.0,
+        "above_count": 5,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
         "strength": "Mạnh",
         "sentiment": "Tích cực"
       },
@@ -16694,12 +16694,12 @@
         "stocks_with_data": 5
       },
       "ema_5": {
-        "above_count": 3,
-        "below_count": 2,
-        "above_percentage": 60.0,
-        "below_percentage": 40.0,
-        "strength": "Trung bình",
-        "sentiment": "Tích cực"
+        "above_count": 2,
+        "below_count": 3,
+        "above_percentage": 40.0,
+        "below_percentage": 60.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
       },
       "ema_10": {
         "above_count": 4,
@@ -16865,12 +16865,12 @@
         "stocks_with_data": 5
       },
       "ema_5": {
-        "above_count": 1,
-        "below_count": 4,
-        "above_percentage": 20.0,
-        "below_percentage": 80.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 2,
+        "below_count": 3,
+        "above_percentage": 40.0,
+        "below_percentage": 60.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
       },
       "ema_10": {
         "above_count": 2,
@@ -16922,10 +16922,10 @@
         "stocks_with_data": 5
       },
       "ema_5": {
-        "above_count": 1,
-        "below_count": 4,
-        "above_percentage": 20.0,
-        "below_percentage": 80.0,
+        "above_count": 0,
+        "below_count": 5,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
         "strength": "Rất yếu",
         "sentiment": "Tiêu cực"
       },
@@ -16946,11 +16946,11 @@
         "sentiment": "Tích cực"
       },
       "ema_50": {
-        "above_count": 4,
-        "below_count": 1,
-        "above_percentage": 80.0,
-        "below_percentage": 20.0,
-        "strength": "Mạnh",
+        "above_count": 3,
+        "below_count": 2,
+        "above_percentage": 60.0,
+        "below_percentage": 40.0,
+        "strength": "Trung bình",
         "sentiment": "Tích cực"
       },
       "ema_200": {
@@ -17093,10 +17093,10 @@
         "stocks_with_data": 5
       },
       "ema_5": {
-        "above_count": 0,
-        "below_count": 5,
-        "above_percentage": 0.0,
-        "below_percentage": 100.0,
+        "above_count": 1,
+        "below_count": 4,
+        "above_percentage": 20.0,
+        "below_percentage": 80.0,
         "strength": "Rất yếu",
         "sentiment": "Tiêu cực"
       },
@@ -17125,17 +17125,17 @@
         "sentiment": "Trung lập"
       },
       "ema_200": {
-        "above_count": 1,
-        "below_count": 4,
-        "above_percentage": 20.0,
-        "below_percentage": 80.0,
-        "strength": "Rất yếu",
-        "sentiment": "Tiêu cực"
+        "above_count": 2,
+        "below_count": 3,
+        "above_percentage": 40.0,
+        "below_percentage": 60.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
       },
       "market_regime": {
-        "classification": "Thị trường giảm",
-        "confidence": 0.33,
-        "description": "Thép thể hiện đặc điểm thị trường giảm"
+        "classification": "Thị trường chuyển tiếp",
+        "confidence": 0.5,
+        "description": "Thép thể hiện đặc điểm thị trường chuyển tiếp"
       },
       "breadth_momentum": {
         "ema_20_change_5d": 0.0,
@@ -17223,12 +17223,12 @@
         "sentiment": "Tiêu cực"
       },
       "ema_20": {
-        "above_count": 2,
-        "below_count": 3,
-        "above_percentage": 40.0,
-        "below_percentage": 60.0,
-        "strength": "Yếu",
-        "sentiment": "Trung lập"
+        "above_count": 1,
+        "below_count": 4,
+        "above_percentage": 20.0,
+        "below_percentage": 80.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
       },
       "ema_50": {
         "above_count": 3,
@@ -22004,7 +22004,7 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-22T15:46:17.569498",
+      "analysis_timestamp": "2025-07-23T00:57:25.612968",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [

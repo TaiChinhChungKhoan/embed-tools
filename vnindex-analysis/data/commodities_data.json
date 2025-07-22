@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "fetched_at": "2025-01-19T10:00:00.000Z",
+    "source": "bloomberg_api",
+    "data_type": "commodities",
+    "description": "Seven C's commodities data for inflation analysis"
+  },
+  "data": {
+    "corn": {
+      "symbol": "ZC",
+      "current_price": 4.85,
+      "change_percent": 2.1,
+      "yoy_change": 8.5,
+      "description": "Agricultural commodity - food inflation indicator"
+    },
+    "cotton": {
+      "symbol": "CT",
+      "current_price": 0.85,
+      "change_percent": -1.2,
+      "yoy_change": 3.2,
+      "description": "Textile commodity - consumer goods inflation"
+    },
+    "crude_oil": {
+      "symbol": "CL",
+      "current_price": 82.45,
+      "change_percent": 1.8,
+      "yoy_change": 15.3,
+      "description": "Energy commodity - energy inflation indicator"
+    },
+    "copper": {
+      "symbol": "HG",
+      "current_price": 4.85,
+      "change_percent": 5.2,
+      "yoy_change": 22.1,
+      "description": "Industrial metal - economic growth indicator"
+    },
+    "coffee": {
+      "symbol": "KC",
+      "current_price": 2.85,
+      "change_percent": 12.5,
+      "yoy_change": 45.2,
+      "description": "Soft commodity - consumer inflation pressure"
+    },
+    "cocoa": {
+      "symbol": "CC",
+      "current_price": 3.25,
+      "change_percent": 8.7,
+      "yoy_change": 38.9,
+      "description": "Soft commodity - food inflation indicator"
+    },
+    "cattle": {
+      "symbol": "LE",
+      "current_price": 1.85,
+      "change_percent": -0.5,
+      "yoy_change": 2.1,
+      "description": "Livestock commodity - protein inflation"
+    }
+  },
+  "summary": {
+    "bcom_index": 85.2,
+    "bcom_change": 2.1,
+    "inflation_signal": "moderate",
+    "correlation_with_cpi": 0.78,
+    "lag_months": 4,
+    "analysis": {
+      "coffee_cocoa_surge": "Coffee and cocoa hitting unprecedented levels",
+      "copper_surge": "Copper surging to November 2022 highs",
+      "oil_stability": "Oil prices relatively stable",
+      "agricultural_mixed": "Agricultural commodities showing mixed signals"
+    }
+  }
+} 

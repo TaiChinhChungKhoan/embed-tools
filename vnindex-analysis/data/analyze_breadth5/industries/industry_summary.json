@@ -47,6 +47,12 @@
     "trading_days": 385,
     "filename": "thuy-san.json"
   },
+  "hang-khong": {
+    "name": "Hàng không",
+    "symbol_count": 5,
+    "trading_days": 385,
+    "filename": "hang-khong.json"
+  },
   "bds-nha-o": {
     "name": "Bất động sản nhà ở",
     "symbol_count": 30,
@@ -82,6 +88,12 @@
     "symbol_count": 12,
     "trading_days": 385,
     "filename": "bds-kcn.json"
+  },
+  "hang-tieu-dung": {
+    "name": "Hàng tiêu dùng",
+    "symbol_count": 3,
+    "trading_days": 385,
+    "filename": "hang-tieu-dung.json"
   },
   "dau-tu-cong": {
     "name": "Đầu tư công",
