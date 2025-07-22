@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-07-21T17:49:23.680702",
+  "generated_at": "2025-07-22T15:46:38.078651",
   "latest_value": 50.0,
   "latest_sentiment": "NEUTRAL",
   "data_quality": {
@@ -12,11 +12,11 @@
     "price_strength": null,
     "volume_ratio": null,
     "volatility": 50.0,
-    "rsi14": 0.0
+    "rsi14": 50.0
   },
   "last_20_days": [
     {
-      "date": "2025-07-18",
+      "date": "2025-07-21",
       "greed_fear_index": 50.0,
       "change": null,
       "sentiment": "NEUTRAL",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "date": "2025-07-21",
+      "date": "2025-07-22",
       "greed_fear_index": 50.0,
       "change": 0.0,
       "sentiment": "NEUTRAL",
@@ -40,7 +40,7 @@
         "price_strength": null,
         "volume_ratio": null,
         "volatility": 50.0,
-        "rsi14": 0.0
+        "rsi14": 50.0
       }
     }
   ]
