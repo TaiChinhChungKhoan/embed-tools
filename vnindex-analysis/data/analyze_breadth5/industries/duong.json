@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Mía đường",
       "description": "Phân tích breadth cho mía đường",
       "version": "3.0",
-      "generated_at": "2025-07-23T00:57:27.167019",
+      "generated_at": "2025-07-23T19:02:29.311975",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-07-22",
-      "total_trading_days": 385,
-      "analysis_period": "385 ngày giao dịch"
+      "end_date": "2025-07-23",
+      "total_trading_days": 386,
+      "analysis_period": "386 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -21988,10 +21988,67 @@
         "ema_200_change_5d": 0.0,
         "overall_momentum": "Giảm nhẹ"
       }
+    },
+    "2025-07-23": {
+      "basic_stats": {
+        "total_stocks": 1,
+        "stocks_with_data": 1
+      },
+      "ema_5": {
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_10": {
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_20": {
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_50": {
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_200": {
+        "above_count": 1,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường tăng",
+        "confidence": 1.0,
+        "description": "Mía đường thể hiện đặc điểm thị trường tăng"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": 0.0,
+        "ema_50_change_5d": 0.0,
+        "ema_200_change_5d": 0.0,
+        "overall_momentum": "Giảm nhẹ"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-07-22",
+    "latest_date": "2025-07-23",
     "key_metrics": {
       "breadth_strength": 100.0,
       "participation_level": 100.0,
@@ -22004,15 +22061,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-23T00:57:27.164624",
+      "analysis_timestamp": "2025-07-23T19:02:29.310231",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 385
+        "data_points": 386
       },
-      "analysis_period": "2024-01-02 to 2025-07-22"
+      "analysis_period": "2024-01-02 to 2025-07-23"
     },
     "signal_coordination": {
       "overall_signal": {
