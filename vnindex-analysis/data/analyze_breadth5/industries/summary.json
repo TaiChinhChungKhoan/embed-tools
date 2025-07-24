@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-07-23T19:02:29.800754",
+  "generated_at": "2025-07-24T16:11:59.015600",
   "date_range": {
     "start_date": "2024-01-01",
-    "end_date": "2025-07-23"
+    "end_date": "2025-07-24"
   },
   "industries": {
     "nhua": {
@@ -36,6 +36,10 @@
     "thuy-san": {
       "name": "Thủy sản",
       "symbol_count": 9
+    },
+    "hang-khong": {
+      "name": "Hàng không",
+      "symbol_count": 5
     },
     "bds-nha-o": {
       "name": "Bất động sản nhà ở",

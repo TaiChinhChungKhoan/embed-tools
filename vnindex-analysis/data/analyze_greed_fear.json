@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-07-24T11:54:32.198217",
-  "latest_value": 73.4061123088486,
+  "generated_at": "2025-07-24T16:12:25.202332",
+  "latest_value": 74.13727991245953,
   "latest_sentiment": "GREED",
   "data_quality": {
     "total_days": 682,
@@ -8,11 +8,11 @@
     "percentage_valid": 45.01466275659824
   },
   "components": {
-    "market_momentum": 99.65481892688341,
-    "price_strength": 64.86932070519484,
-    "volume_ratio": 45.34078407840784,
-    "volatility": 28.546076347167112,
-    "rsi14": 83.25888024815029
+    "market_momentum": 100.0,
+    "price_strength": 65.15854028995965,
+    "volume_ratio": 48.363586358635864,
+    "volatility": 30.30039744893252,
+    "rsi14": 84.79991457054885
   },
   "last_20_days": [
     {
@@ -283,16 +283,16 @@
     },
     {
       "date": "2025-07-24",
-      "greed_fear_index": 73.4061123088486,
-      "change": -1.5025397922769486,
+      "greed_fear_index": 74.13727991245953,
+      "change": -0.771372188666021,
       "sentiment": "GREED",
       "all_components_valid": true,
       "components": {
-        "market_momentum": 99.65481892688341,
-        "price_strength": 64.86932070519484,
-        "volume_ratio": 45.34078407840784,
-        "volatility": 28.546076347167112,
-        "rsi14": 83.25888024815029
+        "market_momentum": 100.0,
+        "price_strength": 65.15854028995965,
+        "volume_ratio": 48.363586358635864,
+        "volatility": 30.30039744893252,
+        "rsi14": 84.79991457054885
       }
     }
   ]
