@@ -1,0 +1,72 @@
+[
+  {
+    "vcp_detected": true,
+    "days_since_vcp": 1,
+    "last_close": 145.3,
+    "resistance_level": 151.0,
+    "current_resistance": 151.0,
+    "price_above_resistance_pct": -3.7748344370860853,
+    "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-27",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 2,
+    "signal_selection_method": "best_in_range",
+    "symbol": "BMP"
+  },
+  {
+    "vcp_detected": true,
+    "days_since_vcp": 1,
+    "last_close": 55.0,
+    "resistance_level": 62.2,
+    "current_resistance": 62.2,
+    "price_above_resistance_pct": -11.575562700964634,
+    "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-27",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 4,
+    "signal_selection_method": "best_in_range",
+    "symbol": "DBD"
+  },
+  {
+    "vcp_detected": true,
+    "days_since_vcp": 1,
+    "last_close": 49.3,
+    "resistance_level": 49.71,
+    "current_resistance": 49.71,
+    "price_above_resistance_pct": -0.8247837457252136,
+    "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-27",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 2,
+    "signal_selection_method": "best_in_range",
+    "symbol": "QNS"
+  },
+  {
+    "vcp_detected": true,
+    "days_since_vcp": 1,
+    "last_close": 13.3,
+    "resistance_level": 14.1,
+    "current_resistance": 14.1,
+    "price_above_resistance_pct": -5.67375886524822,
+    "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-27",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 2,
+    "signal_selection_method": "best_in_range",
+    "symbol": "SMC"
+  },
+  {
+    "vcp_detected": true,
+    "days_since_vcp": 1,
+    "last_close": 15.35,
+    "resistance_level": 15.45,
+    "current_resistance": 15.45,
+    "price_above_resistance_pct": -0.647249190938509,
+    "last_vcp_confidence": 0.6666666666666666,
+    "vcp_signal_date": "2025-07-27",
+    "vcp_signal_confidence": 0.6666666666666666,
+    "pattern_duration": 8,
+    "signal_selection_method": "best_in_range",
+    "symbol": "SJD"
+  }
+]
