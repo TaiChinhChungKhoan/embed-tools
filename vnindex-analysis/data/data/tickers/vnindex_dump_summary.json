@@ -1,18 +1,18 @@
 {
   "dump_info": {
-    "timestamp": "2025-07-26T09:05:55.115627",
+    "timestamp": "2025-07-28T18:09:07.257614",
     "years_back": 3,
-    "start_date": "2022-07-27",
-    "end_date": "2025-07-26",
+    "start_date": "2022-07-29",
+    "end_date": "2025-07-28",
     "total_symbols_processed": 6,
     "successful_dumps": 6
   },
   "results": {
     "VNINDEX": {
       "file": "reports/tickers/VNINDEX.json",
-      "data_points": 748,
-      "start_date": "2022-07-27",
-      "end_date": "2025-07-25",
+      "data_points": 747,
+      "start_date": "2022-07-29",
+      "end_date": "2025-07-28",
       "columns": [
         "Time",
         "Open",
@@ -25,9 +25,9 @@
     },
     "VN30": {
       "file": "reports/tickers/VN30.json",
-      "data_points": 748,
-      "start_date": "2022-07-27",
-      "end_date": "2025-07-25",
+      "data_points": 747,
+      "start_date": "2022-07-29",
+      "end_date": "2025-07-28",
       "columns": [
         "Time",
         "Open",
@@ -40,9 +40,9 @@
     },
     "VN100": {
       "file": "reports/tickers/VN100.json",
-      "data_points": 748,
-      "start_date": "2022-07-27",
-      "end_date": "2025-07-25",
+      "data_points": 747,
+      "start_date": "2022-07-29",
+      "end_date": "2025-07-28",
       "columns": [
         "Time",
         "Open",
@@ -55,9 +55,9 @@
     },
     "VNMID": {
       "file": "reports/tickers/VNMID.json",
-      "data_points": 748,
-      "start_date": "2022-07-27",
-      "end_date": "2025-07-25",
+      "data_points": 747,
+      "start_date": "2022-07-29",
+      "end_date": "2025-07-28",
       "columns": [
         "Time",
         "Open",
@@ -70,9 +70,9 @@
     },
     "VNSML": {
       "file": "reports/tickers/VNSML.json",
-      "data_points": 748,
-      "start_date": "2022-07-27",
-      "end_date": "2025-07-25",
+      "data_points": 747,
+      "start_date": "2022-07-29",
+      "end_date": "2025-07-28",
       "columns": [
         "Time",
         "Open",
@@ -85,9 +85,9 @@
     },
     "VNALL": {
       "file": "reports/tickers/VNALL.json",
-      "data_points": 748,
-      "start_date": "2022-07-27",
-      "end_date": "2025-07-25",
+      "data_points": 747,
+      "start_date": "2022-07-29",
+      "end_date": "2025-07-28",
       "columns": [
         "Time",
         "Open",

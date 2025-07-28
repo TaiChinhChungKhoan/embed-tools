@@ -1,0 +1,5299 @@
+{
+  "metadata": {
+    "analysis_date": "2025-07-28T18:10:12.727798",
+    "parameters": {
+      "N": 14,
+      "periodHL": 4,
+      "periodR": 14,
+      "r_up": 60,
+      "r_down": 40
+    },
+    "industries_processed": 23,
+    "total_symbols": 312,
+    "analysis_type": "individual_stock_signals"
+  },
+  "results": [
+    {
+      "symbol": "BMI",
+      "date": "2025-07-28T00:00:00",
+      "close": 21.35,
+      "rs_rank": 281.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 888400.0,
+      "volume_prev": 386000.0
+    },
+    {
+      "symbol": "BVH",
+      "date": "2025-07-28T00:00:00",
+      "close": 52.2,
+      "rs_rank": 289.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 750300.0,
+      "volume_prev": 698000.0
+    },
+    {
+      "symbol": "MIG",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.25,
+      "rs_rank": 200.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 413800.0,
+      "volume_prev": 342700.0
+    },
+    {
+      "symbol": "ABB",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.4,
+      "rs_rank": 4.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 17912000.0,
+      "volume_prev": 6651076.0
+    },
+    {
+      "symbol": "ACB",
+      "date": "2025-07-28T00:00:00",
+      "close": 23.85,
+      "rs_rank": 163.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 16870500.0,
+      "volume_prev": 17559600.0
+    },
+    {
+      "symbol": "BID",
+      "date": "2025-07-28T00:00:00",
+      "close": 39.4,
+      "rs_rank": 279.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 11057400.0,
+      "volume_prev": 6289500.0
+    },
+    {
+      "symbol": "BVB",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.6,
+      "rs_rank": 56.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 13137100.0,
+      "volume_prev": 16468494.0
+    },
+    {
+      "symbol": "CTG",
+      "date": "2025-07-28T00:00:00",
+      "close": 45.6,
+      "rs_rank": 227.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 10570000.0,
+      "volume_prev": 5534900.0
+    },
+    {
+      "symbol": "EIB",
+      "date": "2025-07-28T00:00:00",
+      "close": 29.35,
+      "rs_rank": 27.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 23971400.0,
+      "volume_prev": 21972300.0
+    },
+    {
+      "symbol": "EVF",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.75,
+      "rs_rank": 10.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 26402500.0,
+      "volume_prev": 23916100.0
+    },
+    {
+      "symbol": "HDB",
+      "date": "2025-07-28T00:00:00",
+      "close": 28.45,
+      "rs_rank": 15.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 24563900.0,
+      "volume_prev": 20693800.0
+    },
+    {
+      "symbol": "KLB",
+      "date": "2025-07-28T00:00:00",
+      "close": 22.9,
+      "rs_rank": 31.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1276600.0,
+      "volume_prev": 704717.0
+    },
+    {
+      "symbol": "LPB",
+      "date": "2025-07-28T00:00:00",
+      "close": 36.55,
+      "rs_rank": 116.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 7287700.0,
+      "volume_prev": 3406100.0
+    },
+    {
+      "symbol": "MBB",
+      "date": "2025-07-28T00:00:00",
+      "close": 28.75,
+      "rs_rank": 126.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 24900200.0,
+      "volume_prev": 18105800.0
+    },
+    {
+      "symbol": "MSB",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.7,
+      "rs_rank": 29.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 16923600.0,
+      "volume_prev": 19992300.0
+    },
+    {
+      "symbol": "NAB",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.5,
+      "rs_rank": 120.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2251600.0,
+      "volume_prev": 2364000.0
+    },
+    {
+      "symbol": "NVB",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.8,
+      "rs_rank": 83.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2099400.0,
+      "volume_prev": 1679696.0
+    },
+    {
+      "symbol": "OCB",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.85,
+      "rs_rank": 48.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 18121700.0,
+      "volume_prev": 7032300.0
+    },
+    {
+      "symbol": "SHB",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.1,
+      "rs_rank": 46.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 137745500.0,
+      "volume_prev": 59211800.0
+    },
+    {
+      "symbol": "SSB",
+      "date": "2025-07-28T00:00:00",
+      "close": 21.1,
+      "rs_rank": 93.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3189100.0,
+      "volume_prev": 2938100.0
+    },
+    {
+      "symbol": "STB",
+      "date": "2025-07-28T00:00:00",
+      "close": 49.1,
+      "rs_rank": 224.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 15097200.0,
+      "volume_prev": 7947800.0
+    },
+    {
+      "symbol": "TCB",
+      "date": "2025-07-28T00:00:00",
+      "close": 35.6,
+      "rs_rank": 242.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 30577800.0,
+      "volume_prev": 18898200.0
+    },
+    {
+      "symbol": "TPB",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.45,
+      "rs_rank": 39.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 42094400.0,
+      "volume_prev": 23916200.0
+    },
+    {
+      "symbol": "VBB",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.8,
+      "rs_rank": 72.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 274600.0,
+      "volume_prev": 158842.0
+    },
+    {
+      "symbol": "VCB",
+      "date": "2025-07-28T00:00:00",
+      "close": 62.8,
+      "rs_rank": 255.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 10484700.0,
+      "volume_prev": 4978400.0
+    },
+    {
+      "symbol": "VIB",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.85,
+      "rs_rank": 59.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 30401200.0,
+      "volume_prev": 20586700.0
+    },
+    {
+      "symbol": "VPB",
+      "date": "2025-07-28T00:00:00",
+      "close": 25.1,
+      "rs_rank": 6.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 57164800.0,
+      "volume_prev": 54483100.0
+    },
+    {
+      "symbol": "C4G",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.3,
+      "rs_rank": 106.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3514000.0,
+      "volume_prev": 2174406.0
+    },
+    {
+      "symbol": "FCN",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.9,
+      "rs_rank": 104.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 9091100.0,
+      "volume_prev": 5525700.0
+    },
+    {
+      "symbol": "G36",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.0,
+      "rs_rank": 165.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1989400.0,
+      "volume_prev": 916663.0
+    },
+    {
+      "symbol": "HHV",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.45,
+      "rs_rank": 118.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 19319800.0,
+      "volume_prev": 14981300.0
+    },
+    {
+      "symbol": "HID",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.99,
+      "rs_rank": 162.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 352500.0,
+      "volume_prev": 187800.0
+    },
+    {
+      "symbol": "KSB",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.85,
+      "rs_rank": 140.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 4528400.0,
+      "volume_prev": 4041700.0
+    },
+    {
+      "symbol": "LCG",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.7,
+      "rs_rank": 154.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 5279800.0,
+      "volume_prev": 6083900.0
+    },
+    {
+      "symbol": "PLC",
+      "date": "2025-07-28T00:00:00",
+      "close": 27.0,
+      "rs_rank": 191.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 864000.0,
+      "volume_prev": 1012572.0
+    },
+    {
+      "symbol": "VCG",
+      "date": "2025-07-28T00:00:00",
+      "close": 26.35,
+      "rs_rank": 51.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 15109200.0,
+      "volume_prev": 29996400.0
+    },
+    {
+      "symbol": "ACL",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.35,
+      "rs_rank": 206.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 53200.0,
+      "volume_prev": 26000.0
+    },
+    {
+      "symbol": "ANV",
+      "date": "2025-07-28T00:00:00",
+      "close": 24.85,
+      "rs_rank": 78.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 5487800.0,
+      "volume_prev": 11451800.0
+    },
+    {
+      "symbol": "ASM",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.72,
+      "rs_rank": 71.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 5276900.0,
+      "volume_prev": 1688600.0
+    },
+    {
+      "symbol": "BLF",
+      "date": "2025-07-25T00:00:00",
+      "close": 2.5,
+      "rs_rank": 295.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": "Ban",
+      "volume": 68500.0,
+      "volume_prev": 277948.0
+    },
+    {
+      "symbol": "CMX",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.71,
+      "rs_rank": 105.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 935200.0,
+      "volume_prev": 950200.0
+    },
+    {
+      "symbol": "FMC",
+      "date": "2025-07-28T00:00:00",
+      "close": 38.6,
+      "rs_rank": 272.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 236400.0,
+      "volume_prev": 346200.0
+    },
+    {
+      "symbol": "IDI",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.7,
+      "rs_rank": 127.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3415500.0,
+      "volume_prev": 3154800.0
+    },
+    {
+      "symbol": "MPC",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.6,
+      "rs_rank": 62.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 396400.0,
+      "volume_prev": 429607.0
+    },
+    {
+      "symbol": "VHC",
+      "date": "2025-07-28T00:00:00",
+      "close": 58.4,
+      "rs_rank": 246.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2428800.0,
+      "volume_prev": 3823100.0
+    },
+    {
+      "symbol": "CSM",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.95,
+      "rs_rank": 236.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1873600.0,
+      "volume_prev": 1005200.0
+    },
+    {
+      "symbol": "DPR",
+      "date": "2025-07-28T00:00:00",
+      "close": 41.8,
+      "rs_rank": 218.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1532200.0,
+      "volume_prev": 1320600.0
+    },
+    {
+      "symbol": "DRC",
+      "date": "2025-07-28T00:00:00",
+      "close": 17.8,
+      "rs_rank": 196.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1257900.0,
+      "volume_prev": 963200.0
+    },
+    {
+      "symbol": "DRI",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.0,
+      "rs_rank": 171.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2132200.0,
+      "volume_prev": 1571201.0
+    },
+    {
+      "symbol": "GVR",
+      "date": "2025-07-28T00:00:00",
+      "close": 31.4,
+      "rs_rank": 194.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 9787300.0,
+      "volume_prev": 5447000.0
+    },
+    {
+      "symbol": "PHR",
+      "date": "2025-07-28T00:00:00",
+      "close": 61.6,
+      "rs_rank": 184.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 660200.0,
+      "volume_prev": 840800.0
+    },
+    {
+      "symbol": "TRC",
+      "date": "2025-07-28T00:00:00",
+      "close": 71.9,
+      "rs_rank": 190.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 413900.0,
+      "volume_prev": 165500.0
+    },
+    {
+      "symbol": "VRG",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.9,
+      "rs_rank": 237.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": "Ban",
+      "volume": 103000.0,
+      "volume_prev": 41983.0
+    },
+    {
+      "symbol": "LSS",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.86,
+      "rs_rank": 247.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1016000.0,
+      "volume_prev": 439100.0
+    },
+    {
+      "symbol": "QNS",
+      "date": "2025-07-28T00:00:00",
+      "close": 49.1,
+      "rs_rank": 296.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 214800.0,
+      "volume_prev": 235447.0
+    },
+    {
+      "symbol": "SBT",
+      "date": "2025-07-28T00:00:00",
+      "close": 24.95,
+      "rs_rank": 9.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3282100.0,
+      "volume_prev": 2476600.0
+    },
+    {
+      "symbol": "BCM",
+      "date": "2025-07-28T00:00:00",
+      "close": 69.7,
+      "rs_rank": 193.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1371300.0,
+      "volume_prev": 620100.0
+    },
+    {
+      "symbol": "D2D",
+      "date": "2025-07-28T00:00:00",
+      "close": 38.6,
+      "rs_rank": 139.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 413900.0,
+      "volume_prev": 314800.0
+    },
+    {
+      "symbol": "DTD",
+      "date": "2025-07-28T00:00:00",
+      "close": 19.3,
+      "rs_rank": 121.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1499900.0,
+      "volume_prev": 586798.0
+    },
+    {
+      "symbol": "IDC",
+      "date": "2025-07-28T00:00:00",
+      "close": 47.1,
+      "rs_rank": 216.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3924700.0,
+      "volume_prev": 2168446.0
+    },
+    {
+      "symbol": "KBC",
+      "date": "2025-07-28T00:00:00",
+      "close": 29.95,
+      "rs_rank": 107.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 8496700.0,
+      "volume_prev": 8298000.0
+    },
+    {
+      "symbol": "LHG",
+      "date": "2025-07-28T00:00:00",
+      "close": 33.35,
+      "rs_rank": 225.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 430100.0,
+      "volume_prev": 273100.0
+    },
+    {
+      "symbol": "NTC",
+      "date": "2025-07-28T00:00:00",
+      "close": 171.9,
+      "rs_rank": 213.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 57400.0,
+      "volume_prev": 56455.0
+    },
+    {
+      "symbol": "PXL",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.4,
+      "rs_rank": 13.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 1692000.0,
+      "volume_prev": 1246948.0
+    },
+    {
+      "symbol": "SIP",
+      "date": "2025-07-28T00:00:00",
+      "close": 67.0,
+      "rs_rank": 129.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 883600.0,
+      "volume_prev": 685800.0
+    },
+    {
+      "symbol": "SZC",
+      "date": "2025-07-28T00:00:00",
+      "close": 39.2,
+      "rs_rank": 151.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 4315600.0,
+      "volume_prev": 3636100.0
+    },
+    {
+      "symbol": "TIP",
+      "date": "2025-07-28T00:00:00",
+      "close": 21.65,
+      "rs_rank": 79.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 564700.0,
+      "volume_prev": 469500.0
+    },
+    {
+      "symbol": "VGC",
+      "date": "2025-07-28T00:00:00",
+      "close": 56.0,
+      "rs_rank": 24.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 576100.0,
+      "volume_prev": 2408600.0
+    },
+    {
+      "symbol": "DXP",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.6,
+      "rs_rank": 42.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 829500.0,
+      "volume_prev": 693039.0
+    },
+    {
+      "symbol": "GMD",
+      "date": "2025-07-28T00:00:00",
+      "close": 58.5,
+      "rs_rank": 238.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 4578100.0,
+      "volume_prev": 2843900.0
+    },
+    {
+      "symbol": "GSP",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.25,
+      "rs_rank": 278.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 158400.0,
+      "volume_prev": 173200.0
+    },
+    {
+      "symbol": "HAH",
+      "date": "2025-07-28T00:00:00",
+      "close": 76.0,
+      "rs_rank": 128.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 6189600.0,
+      "volume_prev": 7934700.0
+    },
+    {
+      "symbol": "HHG",
+      "date": "2025-07-28T00:00:00",
+      "close": 1.6,
+      "rs_rank": 142.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 766100.0,
+      "volume_prev": 932703.0
+    },
+    {
+      "symbol": "MHC",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.3,
+      "rs_rank": 20.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 866100.0,
+      "volume_prev": 651100.0
+    },
+    {
+      "symbol": "PHP",
+      "date": "2025-07-28T00:00:00",
+      "close": 40.8,
+      "rs_rank": 212.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 437300.0,
+      "volume_prev": 605399.0
+    },
+    {
+      "symbol": "PVP",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.55,
+      "rs_rank": 269.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 334600.0,
+      "volume_prev": 98400.0
+    },
+    {
+      "symbol": "PVT",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.65,
+      "rs_rank": 230.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 4916000.0,
+      "volume_prev": 5255500.0
+    },
+    {
+      "symbol": "SGP",
+      "date": "2025-07-28T00:00:00",
+      "close": 29.9,
+      "rs_rank": 148.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 315400.0,
+      "volume_prev": 368452.0
+    },
+    {
+      "symbol": "SKG",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.65,
+      "rs_rank": 99.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 989500.0,
+      "volume_prev": 471600.0
+    },
+    {
+      "symbol": "TCD",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.02,
+      "rs_rank": 82.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 7168400.0,
+      "volume_prev": 4607800.0
+    },
+    {
+      "symbol": "TCL",
+      "date": "2025-07-28T00:00:00",
+      "close": 34.55,
+      "rs_rank": 294.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 54300.0,
+      "volume_prev": 73300.0
+    },
+    {
+      "symbol": "TCO",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.95,
+      "rs_rank": 55.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1219800.0,
+      "volume_prev": 1090900.0
+    },
+    {
+      "symbol": "VIP",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.85,
+      "rs_rank": 134.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 962800.0,
+      "volume_prev": 643300.0
+    },
+    {
+      "symbol": "VOS",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.2,
+      "rs_rank": 137.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 5564300.0,
+      "volume_prev": 3958100.0
+    },
+    {
+      "symbol": "VSC",
+      "date": "2025-07-28T00:00:00",
+      "close": 24.55,
+      "rs_rank": 8.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 7208200.0,
+      "volume_prev": 35739100.0
+    },
+    {
+      "symbol": "VTD",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.0,
+      "rs_rank": 277.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 490100.0,
+      "volume_prev": 608023.0
+    },
+    {
+      "symbol": "VTO",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.1,
+      "rs_rank": 265.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1095300.0,
+      "volume_prev": 1643600.0
+    },
+    {
+      "symbol": "VTP",
+      "date": "2025-07-28T00:00:00",
+      "close": 121.7,
+      "rs_rank": 254.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 904000.0,
+      "volume_prev": 1129800.0
+    },
+    {
+      "symbol": "VTR",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.5,
+      "rs_rank": 100.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 256000.0,
+      "volume_prev": 128592.0
+    },
+    {
+      "symbol": "CMG",
+      "date": "2025-07-28T00:00:00",
+      "close": 42.65,
+      "rs_rank": 169.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2254400.0,
+      "volume_prev": 1975400.0
+    },
+    {
+      "symbol": "ELC",
+      "date": "2025-07-28T00:00:00",
+      "close": 23.95,
+      "rs_rank": 195.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1724400.0,
+      "volume_prev": 2750900.0
+    },
+    {
+      "symbol": "FOX",
+      "date": "2025-07-28T00:00:00",
+      "close": 73.9,
+      "rs_rank": 103.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 271400.0,
+      "volume_prev": 234075.0
+    },
+    {
+      "symbol": "FPT",
+      "date": "2025-07-28T00:00:00",
+      "close": 111.3,
+      "rs_rank": 253.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 7611000.0,
+      "volume_prev": 5137000.0
+    },
+    {
+      "symbol": "SGT",
+      "date": "2025-07-28T00:00:00",
+      "close": 17.0,
+      "rs_rank": 304.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 74900.0,
+      "volume_prev": 89300.0
+    },
+    {
+      "symbol": "ST8",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.22,
+      "rs_rank": 155.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 584300.0,
+      "volume_prev": 590700.0
+    },
+    {
+      "symbol": "TTN",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.4,
+      "rs_rank": 222.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": "Ban",
+      "volume": 777500.0,
+      "volume_prev": 157461.0
+    },
+    {
+      "symbol": "VGI",
+      "date": "2025-07-28T00:00:00",
+      "close": 78.0,
+      "rs_rank": 187.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 943600.0,
+      "volume_prev": 1912071.0
+    },
+    {
+      "symbol": "CLX",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.9,
+      "rs_rank": 239.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 573200.0,
+      "volume_prev": 154761.0
+    },
+    {
+      "symbol": "DGW",
+      "date": "2025-07-28T00:00:00",
+      "close": 46.5,
+      "rs_rank": 156.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 5029100.0,
+      "volume_prev": 2969900.0
+    },
+    {
+      "symbol": "FRT",
+      "date": "2025-07-28T00:00:00",
+      "close": 156.6,
+      "rs_rank": 172.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 317900.0,
+      "volume_prev": 463500.0
+    },
+    {
+      "symbol": "HAX",
+      "date": "2025-07-28T00:00:00",
+      "close": 17.6,
+      "rs_rank": 69.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 5127600.0,
+      "volume_prev": 4022300.0
+    },
+    {
+      "symbol": "KDC",
+      "date": "2025-07-28T00:00:00",
+      "close": 55.2,
+      "rs_rank": 292.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 549400.0,
+      "volume_prev": 527000.0
+    },
+    {
+      "symbol": "MCH",
+      "date": "2025-07-28T00:00:00",
+      "close": 115.5,
+      "rs_rank": 301.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 762400.0,
+      "volume_prev": 355517.0
+    },
+    {
+      "symbol": "MWG",
+      "date": "2025-07-28T00:00:00",
+      "close": 70.2,
+      "rs_rank": 235.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 9571200.0,
+      "volume_prev": 6469000.0
+    },
+    {
+      "symbol": "PET",
+      "date": "2025-07-28T00:00:00",
+      "close": 30.75,
+      "rs_rank": 19.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2620300.0,
+      "volume_prev": 3802000.0
+    },
+    {
+      "symbol": "PNJ",
+      "date": "2025-07-28T00:00:00",
+      "close": 86.0,
+      "rs_rank": 248.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 691100.0,
+      "volume_prev": 489900.0
+    },
+    {
+      "symbol": "PSD",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.2,
+      "rs_rank": 143.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 179800.0,
+      "volume_prev": 411773.0
+    },
+    {
+      "symbol": "SAB",
+      "date": "2025-07-28T00:00:00",
+      "close": 49.3,
+      "rs_rank": 276.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2668300.0,
+      "volume_prev": 1335000.0
+    },
+    {
+      "symbol": "TLG",
+      "date": "2025-07-28T00:00:00",
+      "close": 55.0,
+      "rs_rank": 250.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 453700.0,
+      "volume_prev": 276200.0
+    },
+    {
+      "symbol": "BKG",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.15,
+      "rs_rank": 161.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 201900.0,
+      "volume_prev": 281000.0
+    },
+    {
+      "symbol": "MCH",
+      "date": "2025-07-28T00:00:00",
+      "close": 115.5,
+      "rs_rank": 301.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 762400.0,
+      "volume_prev": 355517.0
+    },
+    {
+      "symbol": "MSN",
+      "date": "2025-07-28T00:00:00",
+      "close": 77.6,
+      "rs_rank": 199.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 12672700.0,
+      "volume_prev": 8684800.0
+    },
+    {
+      "symbol": "VNM",
+      "date": "2025-07-28T00:00:00",
+      "close": 63.3,
+      "rs_rank": 158.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 8462700.0,
+      "volume_prev": 5124000.0
+    },
+    {
+      "symbol": "AAV",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.0,
+      "rs_rank": 197.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1638500.0,
+      "volume_prev": 703431.0
+    },
+    {
+      "symbol": "BIG",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.5,
+      "rs_rank": 217.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 276900.0,
+      "volume_prev": 154812.0
+    },
+    {
+      "symbol": "CCL",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.6,
+      "rs_rank": 164.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1523200.0,
+      "volume_prev": 818500.0
+    },
+    {
+      "symbol": "CIG",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.95,
+      "rs_rank": 220.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 121000.0,
+      "volume_prev": 105600.0
+    },
+    {
+      "symbol": "CRE",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.4,
+      "rs_rank": 186.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 478600.0,
+      "volume_prev": 308300.0
+    },
+    {
+      "symbol": "DL1",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.7,
+      "rs_rank": 282.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2253300.0,
+      "volume_prev": 823174.0
+    },
+    {
+      "symbol": "DLG",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.11,
+      "rs_rank": 63.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 12762200.0,
+      "volume_prev": 4644800.0
+    },
+    {
+      "symbol": "DRH",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.5,
+      "rs_rank": 131.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 4165700.0,
+      "volume_prev": 1798700.0
+    },
+    {
+      "symbol": "DXS",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.85,
+      "rs_rank": 40.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 7174200.0,
+      "volume_prev": 5509300.0
+    },
+    {
+      "symbol": "EVG",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.31,
+      "rs_rank": 68.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 7347900.0,
+      "volume_prev": 1780200.0
+    },
+    {
+      "symbol": "FIR",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.05,
+      "rs_rank": 141.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2767900.0,
+      "volume_prev": 363700.0
+    },
+    {
+      "symbol": "HAR",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.27,
+      "rs_rank": 98.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1084600.0,
+      "volume_prev": 794500.0
+    },
+    {
+      "symbol": "HHS",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.35,
+      "rs_rank": 85.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 11223600.0,
+      "volume_prev": 5666600.0
+    },
+    {
+      "symbol": "HPX",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.47,
+      "rs_rank": 80.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 7960800.0,
+      "volume_prev": 4640500.0
+    },
+    {
+      "symbol": "KOS",
+      "date": "2025-07-28T00:00:00",
+      "close": 38.8,
+      "rs_rank": 305.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 369900.0,
+      "volume_prev": 350800.0
+    },
+    {
+      "symbol": "LGL",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.39,
+      "rs_rank": 138.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 619600.0,
+      "volume_prev": 371400.0
+    },
+    {
+      "symbol": "LSG",
+      "date": "2025-07-28T00:00:00",
+      "close": 21.6,
+      "rs_rank": 117.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 373500.0,
+      "volume_prev": 129455.0
+    },
+    {
+      "symbol": "NRC",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.7,
+      "rs_rank": 77.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1229000.0,
+      "volume_prev": 830527.0
+    },
+    {
+      "symbol": "PIV",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.9,
+      "rs_rank": 221.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 248100.0,
+      "volume_prev": 81720.0
+    },
+    {
+      "symbol": "PTL",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.43,
+      "rs_rank": 115.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 442900.0,
+      "volume_prev": 345400.0
+    },
+    {
+      "symbol": "PV2",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.8,
+      "rs_rank": 167.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 495500.0,
+      "volume_prev": 536118.0
+    },
+    {
+      "symbol": "TDH",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.93,
+      "rs_rank": 122.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1462000.0,
+      "volume_prev": 545100.0
+    },
+    {
+      "symbol": "TEG",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.2,
+      "rs_rank": 249.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 254400.0,
+      "volume_prev": 303800.0
+    },
+    {
+      "symbol": "TIG",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.2,
+      "rs_rank": 18.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3937600.0,
+      "volume_prev": 4725225.0
+    },
+    {
+      "symbol": "VPH",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.89,
+      "rs_rank": 178.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 499700.0,
+      "volume_prev": 345400.0
+    },
+    {
+      "symbol": "TAL",
+      "date": "2025-07-21T00:00:00",
+      "close": 28.7,
+      "rs_rank": 49.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 746400.0,
+      "volume_prev": 308664.0
+    },
+    {
+      "symbol": "DBD",
+      "date": "2025-07-28T00:00:00",
+      "close": 56.3,
+      "rs_rank": 244.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 343900.0,
+      "volume_prev": 131200.0
+    },
+    {
+      "symbol": "DCL",
+      "date": "2025-07-28T00:00:00",
+      "close": 22.95,
+      "rs_rank": 256.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 284200.0,
+      "volume_prev": 270400.0
+    },
+    {
+      "symbol": "DVM",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.6,
+      "rs_rank": 153.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 750800.0,
+      "volume_prev": 742506.0
+    },
+    {
+      "symbol": "DVN",
+      "date": "2025-07-28T00:00:00",
+      "close": 23.0,
+      "rs_rank": 297.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 65700.0,
+      "volume_prev": 60117.0
+    },
+    {
+      "symbol": "GPC",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.9,
+      "rs_rank": 149.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 65400.0,
+      "volume_prev": 197034.0
+    },
+    {
+      "symbol": "IMP",
+      "date": "2025-07-28T00:00:00",
+      "close": 51.9,
+      "rs_rank": 293.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 145500.0,
+      "volume_prev": 118900.0
+    },
+    {
+      "symbol": "JVC",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.45,
+      "rs_rank": 70.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 757500.0,
+      "volume_prev": 591800.0
+    },
+    {
+      "symbol": "LDP",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.9,
+      "rs_rank": 285.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 64100.0,
+      "volume_prev": 23214.0
+    },
+    {
+      "symbol": "TNH",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.85,
+      "rs_rank": 300.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 622700.0,
+      "volume_prev": 275200.0
+    },
+    {
+      "symbol": "VHE",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.4,
+      "rs_rank": 189.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 431200.0,
+      "volume_prev": 387408.0
+    },
+    {
+      "symbol": "ALV",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.7,
+      "rs_rank": 257.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": null,
+      "volume": 25300.0,
+      "volume_prev": 22624.0
+    },
+    {
+      "symbol": "BCE",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.85,
+      "rs_rank": 43.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 383200.0,
+      "volume_prev": 322200.0
+    },
+    {
+      "symbol": "BCG",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.86,
+      "rs_rank": 101.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 14831900.0,
+      "volume_prev": 14260800.0
+    },
+    {
+      "symbol": "C69",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.6,
+      "rs_rank": 12.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 723600.0,
+      "volume_prev": 524106.0
+    },
+    {
+      "symbol": "CDC",
+      "date": "2025-07-28T00:00:00",
+      "close": 19.0,
+      "rs_rank": 32.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 207900.0,
+      "volume_prev": 271200.0
+    },
+    {
+      "symbol": "CII",
+      "date": "2025-07-28T00:00:00",
+      "close": 17.6,
+      "rs_rank": 54.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 51393500.0,
+      "volume_prev": 23349900.0
+    },
+    {
+      "symbol": "CKG",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.0,
+      "rs_rank": 144.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 696100.0,
+      "volume_prev": 337500.0
+    },
+    {
+      "symbol": "CMS",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.8,
+      "rs_rank": 176.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 217300.0,
+      "volume_prev": 143648.0
+    },
+    {
+      "symbol": "CTD",
+      "date": "2025-07-28T00:00:00",
+      "close": 84.5,
+      "rs_rank": 274.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1585400.0,
+      "volume_prev": 2006600.0
+    },
+    {
+      "symbol": "CTX",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.0,
+      "rs_rank": 228.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 231900.0,
+      "volume_prev": 228801.0
+    },
+    {
+      "symbol": "DFF",
+      "date": "2025-07-28T00:00:00",
+      "close": 1.6,
+      "rs_rank": 125.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 749400.0,
+      "volume_prev": 1185167.0
+    },
+    {
+      "symbol": "DGT",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.4,
+      "rs_rank": 174.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 513900.0,
+      "volume_prev": 473044.0
+    },
+    {
+      "symbol": "DPG",
+      "date": "2025-07-28T00:00:00",
+      "close": 48.5,
+      "rs_rank": 112.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3532100.0,
+      "volume_prev": 2690500.0
+    },
+    {
+      "symbol": "HBC",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.5,
+      "rs_rank": 123.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 5943000.0,
+      "volume_prev": 8314827.0
+    },
+    {
+      "symbol": "HTI",
+      "date": "2025-07-28T00:00:00",
+      "close": 23.3,
+      "rs_rank": 44.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 673100.0,
+      "volume_prev": 318000.0
+    },
+    {
+      "symbol": "HUB",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.95,
+      "rs_rank": 192.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 120300.0,
+      "volume_prev": 52100.0
+    },
+    {
+      "symbol": "HUT",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.5,
+      "rs_rank": 66.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 6356300.0,
+      "volume_prev": 2463282.0
+    },
+    {
+      "symbol": "HVH",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.0,
+      "rs_rank": 245.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1037400.0,
+      "volume_prev": 299600.0
+    },
+    {
+      "symbol": "IDJ",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.2,
+      "rs_rank": 75.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3938600.0,
+      "volume_prev": 3979379.0
+    },
+    {
+      "symbol": "IJC",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.75,
+      "rs_rank": 152.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 7153100.0,
+      "volume_prev": 3850600.0
+    },
+    {
+      "symbol": "L14",
+      "date": "2025-07-28T00:00:00",
+      "close": 37.5,
+      "rs_rank": 67.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 591700.0,
+      "volume_prev": 412536.0
+    },
+    {
+      "symbol": "L40",
+      "date": "2025-07-28T00:00:00",
+      "close": 23.0,
+      "rs_rank": 262.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 115800.0,
+      "volume_prev": 91626.0
+    },
+    {
+      "symbol": "LAI",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.9,
+      "rs_rank": 290.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 53900.0,
+      "volume_prev": 55373.0
+    },
+    {
+      "symbol": "LIG",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.4,
+      "rs_rank": 35.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1566500.0,
+      "volume_prev": 1741677.0
+    },
+    {
+      "symbol": "MCG",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.9,
+      "rs_rank": 16.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 476900.0,
+      "volume_prev": 355390.0
+    },
+    {
+      "symbol": "MST",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.7,
+      "rs_rank": 110.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 7589000.0,
+      "volume_prev": 2735059.0
+    },
+    {
+      "symbol": "NED",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.1,
+      "rs_rank": 288.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 178600.0,
+      "volume_prev": 38321.0
+    },
+    {
+      "symbol": "PFL",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.0,
+      "rs_rank": 76.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 872700.0,
+      "volume_prev": 1046866.0
+    },
+    {
+      "symbol": "PHC",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.34,
+      "rs_rank": 270.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 216200.0,
+      "volume_prev": 150100.0
+    },
+    {
+      "symbol": "PSB",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.7,
+      "rs_rank": 208.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 157900.0,
+      "volume_prev": 104461.0
+    },
+    {
+      "symbol": "S99",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.5,
+      "rs_rank": 21.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 471100.0,
+      "volume_prev": 444692.0
+    },
+    {
+      "symbol": "SJE",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.5,
+      "rs_rank": 234.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 413200.0,
+      "volume_prev": 167950.0
+    },
+    {
+      "symbol": "SVN",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.2,
+      "rs_rank": 261.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 708300.0,
+      "volume_prev": 582923.0
+    },
+    {
+      "symbol": "THG",
+      "date": "2025-07-28T00:00:00",
+      "close": 56.4,
+      "rs_rank": 280.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": "Ban",
+      "volume": 203900.0,
+      "volume_prev": 116400.0
+    },
+    {
+      "symbol": "TLD",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.5,
+      "rs_rank": 170.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 558400.0,
+      "volume_prev": 712200.0
+    },
+    {
+      "symbol": "UDC",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.8,
+      "rs_rank": 147.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 79100.0,
+      "volume_prev": 57210.0
+    },
+    {
+      "symbol": "VC2",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.8,
+      "rs_rank": 124.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1681500.0,
+      "volume_prev": 586941.0
+    },
+    {
+      "symbol": "VC7",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.8,
+      "rs_rank": 73.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1897400.0,
+      "volume_prev": 751964.0
+    },
+    {
+      "symbol": "VE9",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.9,
+      "rs_rank": 7.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 138500.0,
+      "volume_prev": 172094.0
+    },
+    {
+      "symbol": "VIG",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.7,
+      "rs_rank": 86.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2297700.0,
+      "volume_prev": 1147321.0
+    },
+    {
+      "symbol": "GEE",
+      "date": "2025-07-28T00:00:00",
+      "close": 128.5,
+      "rs_rank": 57.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 977700.0,
+      "volume_prev": 1077300.0
+    },
+    {
+      "symbol": "GEG",
+      "date": "2025-07-28T00:00:00",
+      "close": 17.55,
+      "rs_rank": 177.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3003500.0,
+      "volume_prev": 3200500.0
+    },
+    {
+      "symbol": "KHP",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.5,
+      "rs_rank": 240.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 26500.0,
+      "volume_prev": 78600.0
+    },
+    {
+      "symbol": "NT2",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.7,
+      "rs_rank": 183.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1942000.0,
+      "volume_prev": 2181000.0
+    },
+    {
+      "symbol": "PAC",
+      "date": "2025-07-28T00:00:00",
+      "close": 32.35,
+      "rs_rank": 60.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 1031900.0,
+      "volume_prev": 1323500.0
+    },
+    {
+      "symbol": "POW",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.8,
+      "rs_rank": 109.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 24106100.0,
+      "volume_prev": 21347500.0
+    },
+    {
+      "symbol": "PPC",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.25,
+      "rs_rank": 306.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1403400.0,
+      "volume_prev": 1654000.0
+    },
+    {
+      "symbol": "QTP",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.3,
+      "rs_rank": 302.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 857100.0,
+      "volume_prev": 934007.0
+    },
+    {
+      "symbol": "REE",
+      "date": "2025-07-28T00:00:00",
+      "close": 69.5,
+      "rs_rank": 251.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1094600.0,
+      "volume_prev": 1123800.0
+    },
+    {
+      "symbol": "SJD",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.4,
+      "rs_rank": 298.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 212200.0,
+      "volume_prev": 55300.0
+    },
+    {
+      "symbol": "TTA",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.9,
+      "rs_rank": 130.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1196400.0,
+      "volume_prev": 791600.0
+    },
+    {
+      "symbol": "VSH",
+      "date": "2025-07-28T00:00:00",
+      "close": 49.0,
+      "rs_rank": 287.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 4300.0,
+      "volume_prev": 25000.0
+    },
+    {
+      "symbol": "GDA",
+      "date": "2025-07-28T00:00:00",
+      "close": 22.4,
+      "rs_rank": 81.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 672900.0,
+      "volume_prev": 119765.0
+    },
+    {
+      "symbol": "HPG",
+      "date": "2025-07-28T00:00:00",
+      "close": 26.35,
+      "rs_rank": 150.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 99592800.0,
+      "volume_prev": 51078400.0
+    },
+    {
+      "symbol": "HSG",
+      "date": "2025-07-28T00:00:00",
+      "close": 19.35,
+      "rs_rank": 95.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 21588000.0,
+      "volume_prev": 12585100.0
+    },
+    {
+      "symbol": "ITQ",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.1,
+      "rs_rank": 114.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 311400.0,
+      "volume_prev": 972822.0
+    },
+    {
+      "symbol": "KVC",
+      "date": "2025-07-28T00:00:00",
+      "close": 1.9,
+      "rs_rank": 133.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1240200.0,
+      "volume_prev": 939419.0
+    },
+    {
+      "symbol": "NKG",
+      "date": "2025-07-28T00:00:00",
+      "close": 16.1,
+      "rs_rank": 38.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 36637000.0,
+      "volume_prev": 18328100.0
+    },
+    {
+      "symbol": "NSH",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.5,
+      "rs_rank": 219.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 122300.0,
+      "volume_prev": 118625.0
+    },
+    {
+      "symbol": "PAS",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.5,
+      "rs_rank": 74.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 135100.0,
+      "volume_prev": 178600.0
+    },
+    {
+      "symbol": "SHI",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.3,
+      "rs_rank": 173.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 487300.0,
+      "volume_prev": 370200.0
+    },
+    {
+      "symbol": "SMC",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.4,
+      "rs_rank": 88.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 1041200.0,
+      "volume_prev": 657200.0
+    },
+    {
+      "symbol": "TIS",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.5,
+      "rs_rank": 273.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 186000.0,
+      "volume_prev": 135400.0
+    },
+    {
+      "symbol": "TLH",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.3,
+      "rs_rank": 96.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1791600.0,
+      "volume_prev": 861600.0
+    },
+    {
+      "symbol": "TNI",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.83,
+      "rs_rank": 58.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 633000.0,
+      "volume_prev": 673900.0
+    },
+    {
+      "symbol": "TTH",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.8,
+      "rs_rank": 166.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 616700.0,
+      "volume_prev": 108955.0
+    },
+    {
+      "symbol": "TVN",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.5,
+      "rs_rank": 94.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1442600.0,
+      "volume_prev": 678955.0
+    },
+    {
+      "symbol": "VGS",
+      "date": "2025-07-28T00:00:00",
+      "close": 32.7,
+      "rs_rank": 37.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2446200.0,
+      "volume_prev": 1078086.0
+    },
+    {
+      "symbol": "ABS",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.8,
+      "rs_rank": 243.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 736000.0,
+      "volume_prev": 561500.0
+    },
+    {
+      "symbol": "APP",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.4,
+      "rs_rank": 211.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 38300.0,
+      "volume_prev": 30992.0
+    },
+    {
+      "symbol": "BFC",
+      "date": "2025-07-28T00:00:00",
+      "close": 46.1,
+      "rs_rank": 231.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1033400.0,
+      "volume_prev": 1754800.0
+    },
+    {
+      "symbol": "CSV",
+      "date": "2025-07-28T00:00:00",
+      "close": 38.3,
+      "rs_rank": 159.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3079800.0,
+      "volume_prev": 2845800.0
+    },
+    {
+      "symbol": "DCM",
+      "date": "2025-07-28T00:00:00",
+      "close": 35.7,
+      "rs_rank": 209.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 4852200.0,
+      "volume_prev": 6382900.0
+    },
+    {
+      "symbol": "DDV",
+      "date": "2025-07-28T00:00:00",
+      "close": 31.5,
+      "rs_rank": 92.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2371100.0,
+      "volume_prev": 1710133.0
+    },
+    {
+      "symbol": "DGC",
+      "date": "2025-07-28T00:00:00",
+      "close": 105.5,
+      "rs_rank": 210.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3496900.0,
+      "volume_prev": 1990100.0
+    },
+    {
+      "symbol": "DPM",
+      "date": "2025-07-28T00:00:00",
+      "close": 41.55,
+      "rs_rank": 102.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 5218500.0,
+      "volume_prev": 3955700.0
+    },
+    {
+      "symbol": "HVT",
+      "date": "2025-07-28T00:00:00",
+      "close": 35.1,
+      "rs_rank": 241.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 348400.0,
+      "volume_prev": 221475.0
+    },
+    {
+      "symbol": "LAS",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.5,
+      "rs_rank": 229.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2304200.0,
+      "volume_prev": 1261508.0
+    },
+    {
+      "symbol": "AVG",
+      "date": "2025-07-28T00:00:00",
+      "close": 15.0,
+      "rs_rank": 271.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 271100.0,
+      "volume_prev": 114484.0
+    },
+    {
+      "symbol": "ASP",
+      "date": "2025-07-28T00:00:00",
+      "close": 5.75,
+      "rs_rank": 135.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 196300.0,
+      "volume_prev": 219800.0
+    },
+    {
+      "symbol": "BSR",
+      "date": "2025-07-28T00:00:00",
+      "close": 19.8,
+      "rs_rank": 146.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 15242600.0,
+      "volume_prev": 16043900.0
+    },
+    {
+      "symbol": "CNG",
+      "date": "2025-07-28T00:00:00",
+      "close": 29.95,
+      "rs_rank": 286.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 139300.0,
+      "volume_prev": 105900.0
+    },
+    {
+      "symbol": "DDG",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.9,
+      "rs_rank": 180.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 466200.0,
+      "volume_prev": 444792.0
+    },
+    {
+      "symbol": "GAS",
+      "date": "2025-07-28T00:00:00",
+      "close": 68.9,
+      "rs_rank": 266.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 1177700.0,
+      "volume_prev": 1098700.0
+    },
+    {
+      "symbol": "OIL",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.0,
+      "rs_rank": 205.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 2893900.0,
+      "volume_prev": 2560983.0
+    },
+    {
+      "symbol": "PLX",
+      "date": "2025-07-28T00:00:00",
+      "close": 37.85,
+      "rs_rank": 263.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3965000.0,
+      "volume_prev": 2922100.0
+    },
+    {
+      "symbol": "PPT",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.7,
+      "rs_rank": 258.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 299800.0,
+      "volume_prev": 117600.0
+    },
+    {
+      "symbol": "PVB",
+      "date": "2025-07-28T00:00:00",
+      "close": 31.0,
+      "rs_rank": 260.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": "Ban",
+      "volume": 370100.0,
+      "volume_prev": 257155.0
+    },
+    {
+      "symbol": "PVC",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.2,
+      "rs_rank": 160.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 3009900.0,
+      "volume_prev": 2676102.0
+    },
+    {
+      "symbol": "PVD",
+      "date": "2025-07-28T00:00:00",
+      "close": 21.45,
+      "rs_rank": 188.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 10030800.0,
+      "volume_prev": 8947200.0
+    },
+    {
+      "symbol": "PVG",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.9,
+      "rs_rank": 233.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 117200.0,
+      "volume_prev": 273992.0
+    },
+    {
+      "symbol": "PVS",
+      "date": "2025-07-28T00:00:00",
+      "close": 34.2,
+      "rs_rank": 203.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 9136700.0,
+      "volume_prev": 7933628.0
+    },
+    {
+      "symbol": "TDG",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.52,
+      "rs_rank": 198.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 236000.0,
+      "volume_prev": 120800.0
+    },
+    {
+      "symbol": "ACC",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.0,
+      "rs_rank": 303.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 21000.0,
+      "volume_prev": 9000.0
+    },
+    {
+      "symbol": "BCC",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.8,
+      "rs_rank": 108.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 215700.0,
+      "volume_prev": 242117.0
+    },
+    {
+      "symbol": "CRC",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.75,
+      "rs_rank": 61.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3210400.0,
+      "volume_prev": 2940800.0
+    },
+    {
+      "symbol": "CTI",
+      "date": "2025-07-28T00:00:00",
+      "close": 25.55,
+      "rs_rank": 179.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 3385200.0,
+      "volume_prev": 3177900.0
+    },
+    {
+      "symbol": "DHA",
+      "date": "2025-07-28T00:00:00",
+      "close": 48.45,
+      "rs_rank": 132.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 97900.0,
+      "volume_prev": 226200.0
+    },
+    {
+      "symbol": "FCM",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.39,
+      "rs_rank": 168.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 286800.0,
+      "volume_prev": 325900.0
+    },
+    {
+      "symbol": "GKM",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.3,
+      "rs_rank": 182.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 626100.0,
+      "volume_prev": 358176.0
+    },
+    {
+      "symbol": "HT1",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.8,
+      "rs_rank": 65.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1416900.0,
+      "volume_prev": 2443100.0
+    },
+    {
+      "symbol": "KSQ",
+      "date": "2025-07-28T00:00:00",
+      "close": 2.2,
+      "rs_rank": 136.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 260200.0,
+      "volume_prev": 244283.0
+    },
+    {
+      "symbol": "NAG",
+      "date": "2025-07-28T00:00:00",
+      "close": 13.1,
+      "rs_rank": 267.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 400900.0,
+      "volume_prev": 304933.0
+    },
+    {
+      "symbol": "NNC",
+      "date": "2025-07-28T00:00:00",
+      "close": 37.0,
+      "rs_rank": 145.0,
+      "buy_signal": false,
+      "sell_signal": true,
+      "storm_bird_signal": null,
+      "volume": 49900.0,
+      "volume_prev": 41800.0
+    },
+    {
+      "symbol": "NO1",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.3,
+      "rs_rank": 275.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 352700.0,
+      "volume_prev": 223500.0
+    },
+    {
+      "symbol": "PTB",
+      "date": "2025-07-28T00:00:00",
+      "close": 55.5,
+      "rs_rank": 252.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 75500.0,
+      "volume_prev": 105300.0
+    },
+    {
+      "symbol": "TDP",
+      "date": "2025-07-28T00:00:00",
+      "close": 33.4,
+      "rs_rank": 259.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 74400.0,
+      "volume_prev": 123300.0
+    },
+    {
+      "symbol": "VCS",
+      "date": "2025-07-28T00:00:00",
+      "close": 51.2,
+      "rs_rank": 226.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 320300.0,
+      "volume_prev": 223314.0
+    },
+    {
+      "symbol": "VLB",
+      "date": "2025-07-28T00:00:00",
+      "close": 47.9,
+      "rs_rank": 201.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 76900.0,
+      "volume_prev": 41008.0
+    },
+    {
+      "symbol": "VTV",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.8,
+      "rs_rank": 283.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 38900.0,
+      "volume_prev": 16000.0
+    },
+    {
+      "symbol": "RYG",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.0,
+      "rs_rank": 284.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 41300.0,
+      "volume_prev": 41200.0
+    },
+    {
+      "symbol": "AAT",
+      "date": "2025-07-28T00:00:00",
+      "close": 3.44,
+      "rs_rank": 181.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 268200.0,
+      "volume_prev": 97600.0
+    },
+    {
+      "symbol": "ADS",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.6,
+      "rs_rank": 157.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 226900.0,
+      "volume_prev": 222500.0
+    },
+    {
+      "symbol": "EVE",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.7,
+      "rs_rank": 207.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 357000.0,
+      "volume_prev": 259800.0
+    },
+    {
+      "symbol": "GIL",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.65,
+      "rs_rank": 111.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1401500.0,
+      "volume_prev": 2530800.0
+    },
+    {
+      "symbol": "MSH",
+      "date": "2025-07-28T00:00:00",
+      "close": 39.0,
+      "rs_rank": 214.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 979500.0,
+      "volume_prev": 488000.0
+    },
+    {
+      "symbol": "STK",
+      "date": "2025-07-28T00:00:00",
+      "close": 25.9,
+      "rs_rank": 299.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 148900.0,
+      "volume_prev": 70400.0
+    },
+    {
+      "symbol": "SVD",
+      "date": "2025-07-28T00:00:00",
+      "close": 4.17,
+      "rs_rank": 89.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 325300.0,
+      "volume_prev": 94800.0
+    },
+    {
+      "symbol": "TCM",
+      "date": "2025-07-28T00:00:00",
+      "close": 33.0,
+      "rs_rank": 204.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3065000.0,
+      "volume_prev": 2845400.0
+    },
+    {
+      "symbol": "TNG",
+      "date": "2025-07-28T00:00:00",
+      "close": 21.8,
+      "rs_rank": 175.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 2208600.0,
+      "volume_prev": 2297308.0
+    },
+    {
+      "symbol": "VGT",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.8,
+      "rs_rank": 185.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2281500.0,
+      "volume_prev": 2012068.0
+    },
+    {
+      "symbol": "ACV",
+      "date": "2025-07-28T00:00:00",
+      "close": 98.9,
+      "rs_rank": 215.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1097000.0,
+      "volume_prev": 891188.0
+    },
+    {
+      "symbol": "HVN",
+      "date": "2025-07-28T00:00:00",
+      "close": 33.5,
+      "rs_rank": 119.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 2443700.0,
+      "volume_prev": 1376900.0
+    },
+    {
+      "symbol": "SAS",
+      "date": "2025-07-28T00:00:00",
+      "close": 41.4,
+      "rs_rank": 291.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 90300.0,
+      "volume_prev": 104596.0
+    },
+    {
+      "symbol": "SCS",
+      "date": "2025-07-28T00:00:00",
+      "close": 68.4,
+      "rs_rank": 232.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 571700.0,
+      "volume_prev": 425100.0
+    },
+    {
+      "symbol": "VJC",
+      "date": "2025-07-28T00:00:00",
+      "close": 127.0,
+      "rs_rank": 14.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2342200.0,
+      "volume_prev": 3280800.0
+    },
+    {
+      "symbol": "DXP",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.6,
+      "rs_rank": 42.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": "ChoBan",
+      "volume": 829500.0,
+      "volume_prev": 693039.0
+    },
+    {
+      "symbol": "GMD",
+      "date": "2025-07-28T00:00:00",
+      "close": 58.5,
+      "rs_rank": 238.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 4578100.0,
+      "volume_prev": 2843900.0
+    },
+    {
+      "symbol": "PHP",
+      "date": "2025-07-28T00:00:00",
+      "close": 40.8,
+      "rs_rank": 212.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 437300.0,
+      "volume_prev": 605399.0
+    },
+    {
+      "symbol": "SGP",
+      "date": "2025-07-28T00:00:00",
+      "close": 29.9,
+      "rs_rank": 148.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 315400.0,
+      "volume_prev": 368452.0
+    },
+    {
+      "symbol": "VSC",
+      "date": "2025-07-28T00:00:00",
+      "close": 24.55,
+      "rs_rank": 8.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 7208200.0,
+      "volume_prev": 35739100.0
+    },
+    {
+      "symbol": "AAS",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.1,
+      "rs_rank": 33.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1981600.0,
+      "volume_prev": 2683497.0
+    },
+    {
+      "symbol": "ABW",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.7,
+      "rs_rank": 25.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 861100.0,
+      "volume_prev": 810250.0
+    },
+    {
+      "symbol": "AGR",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.05,
+      "rs_rank": 45.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3382300.0,
+      "volume_prev": 3698400.0
+    },
+    {
+      "symbol": "APG",
+      "date": "2025-07-28T00:00:00",
+      "close": 12.6,
+      "rs_rank": 202.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3862100.0,
+      "volume_prev": 1732800.0
+    },
+    {
+      "symbol": "API",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.5,
+      "rs_rank": 113.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1509100.0,
+      "volume_prev": 1546752.0
+    },
+    {
+      "symbol": "APS",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.8,
+      "rs_rank": 23.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2658300.0,
+      "volume_prev": 5654567.0
+    },
+    {
+      "symbol": "BMS",
+      "date": "2025-07-28T00:00:00",
+      "close": 14.5,
+      "rs_rank": 34.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1252600.0,
+      "volume_prev": 1223360.0
+    },
+    {
+      "symbol": "BSI",
+      "date": "2025-07-28T00:00:00",
+      "close": 49.4,
+      "rs_rank": 84.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 3331900.0,
+      "volume_prev": 3416000.0
+    },
+    {
+      "symbol": "BVS",
+      "date": "2025-07-28T00:00:00",
+      "close": 41.9,
+      "rs_rank": 22.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2021700.0,
+      "volume_prev": 1676183.0
+    },
+    {
+      "symbol": "CSI",
+      "date": "2025-07-28T00:00:00",
+      "close": 32.0,
+      "rs_rank": 264.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 41000.0,
+      "volume_prev": 62300.0
+    },
+    {
+      "symbol": "CTS",
+      "date": "2025-07-28T00:00:00",
+      "close": 42.5,
+      "rs_rank": 2.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 4267500.0,
+      "volume_prev": 7808500.0
+    },
+    {
+      "symbol": "DSC",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.5,
+      "rs_rank": 52.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 797100.0,
+      "volume_prev": 199800.0
+    },
+    {
+      "symbol": "EVS",
+      "date": "2025-07-28T00:00:00",
+      "close": 7.9,
+      "rs_rank": 30.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1132800.0,
+      "volume_prev": 1178634.0
+    },
+    {
+      "symbol": "FTS",
+      "date": "2025-07-28T00:00:00",
+      "close": 44.1,
+      "rs_rank": 90.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 9578100.0,
+      "volume_prev": 10113200.0
+    },
+    {
+      "symbol": "HBS",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.0,
+      "rs_rank": 64.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 341500.0,
+      "volume_prev": 72000.0
+    },
+    {
+      "symbol": "HCM",
+      "date": "2025-07-28T00:00:00",
+      "close": 27.15,
+      "rs_rank": 47.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 27605900.0,
+      "volume_prev": 22317900.0
+    },
+    {
+      "symbol": "IVS",
+      "date": "2025-07-28T00:00:00",
+      "close": 10.8,
+      "rs_rank": 97.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 823600.0,
+      "volume_prev": 517210.0
+    },
+    {
+      "symbol": "MBS",
+      "date": "2025-07-28T00:00:00",
+      "close": 35.2,
+      "rs_rank": 17.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 10926200.0,
+      "volume_prev": 13833274.0
+    },
+    {
+      "symbol": "ORS",
+      "date": "2025-07-28T00:00:00",
+      "close": 11.75,
+      "rs_rank": 36.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 19479500.0,
+      "volume_prev": 9893000.0
+    },
+    {
+      "symbol": "PSI",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.0,
+      "rs_rank": 41.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 1649500.0,
+      "volume_prev": 683392.0
+    },
+    {
+      "symbol": "SBS",
+      "date": "2025-07-28T00:00:00",
+      "close": 6.7,
+      "rs_rank": 26.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 8320000.0,
+      "volume_prev": 5316152.0
+    },
+    {
+      "symbol": "SHS",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.4,
+      "rs_rank": 3.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 43611100.0,
+      "volume_prev": 45770290.0
+    },
+    {
+      "symbol": "SSI",
+      "date": "2025-07-28T00:00:00",
+      "close": 35.8,
+      "rs_rank": 5.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 49584700.0,
+      "volume_prev": 62122900.0
+    },
+    {
+      "symbol": "TCI",
+      "date": "2025-07-28T00:00:00",
+      "close": 9.85,
+      "rs_rank": 53.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 802100.0,
+      "volume_prev": 583700.0
+    },
+    {
+      "symbol": "TVB",
+      "date": "2025-07-28T00:00:00",
+      "close": 8.9,
+      "rs_rank": 223.0,
+      "buy_signal": false,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 677000.0,
+      "volume_prev": 236600.0
+    },
+    {
+      "symbol": "TVS",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.6,
+      "rs_rank": 87.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 656100.0,
+      "volume_prev": 260900.0
+    },
+    {
+      "symbol": "VCI",
+      "date": "2025-07-28T00:00:00",
+      "close": 44.95,
+      "rs_rank": 50.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 19913900.0,
+      "volume_prev": 26119600.0
+    },
+    {
+      "symbol": "VDS",
+      "date": "2025-07-28T00:00:00",
+      "close": 18.55,
+      "rs_rank": 28.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 6419200.0,
+      "volume_prev": 5280700.0
+    },
+    {
+      "symbol": "VFS",
+      "date": "2025-07-28T00:00:00",
+      "close": 20.5,
+      "rs_rank": 268.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 7020800.0,
+      "volume_prev": 2335812.0
+    },
+    {
+      "symbol": "VIX",
+      "date": "2025-07-28T00:00:00",
+      "close": 25.7,
+      "rs_rank": 1.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": null,
+      "volume": 32943200.0,
+      "volume_prev": 35258900.0
+    },
+    {
+      "symbol": "VND",
+      "date": "2025-07-28T00:00:00",
+      "close": 22.6,
+      "rs_rank": 11.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 40160400.0,
+      "volume_prev": 61884300.0
+    },
+    {
+      "symbol": "DSE",
+      "date": "2025-07-28T00:00:00",
+      "close": 27.4,
+      "rs_rank": 91.0,
+      "buy_signal": true,
+      "sell_signal": false,
+      "storm_bird_signal": "Mua",
+      "volume": 2301300.0,
+      "volume_prev": 1289200.0
+    }
+  ],
+  "industry_summary": {
+    "BMI": {
+      "rs_rank": 281.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BVH": {
+      "rs_rank": 289.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MIG": {
+      "rs_rank": 200.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ABB": {
+      "rs_rank": 4.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ACB": {
+      "rs_rank": 163.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BID": {
+      "rs_rank": 279.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "BVB": {
+      "rs_rank": 56.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CTG": {
+      "rs_rank": 227.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "EIB": {
+      "rs_rank": 27.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "EVF": {
+      "rs_rank": 10.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HDB": {
+      "rs_rank": 15.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "KLB": {
+      "rs_rank": 31.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "LPB": {
+      "rs_rank": 116.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "MBB": {
+      "rs_rank": 126.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MSB": {
+      "rs_rank": 29.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "NAB": {
+      "rs_rank": 120.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "NVB": {
+      "rs_rank": 83.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "OCB": {
+      "rs_rank": 48.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SHB": {
+      "rs_rank": 46.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SSB": {
+      "rs_rank": 93.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "STB": {
+      "rs_rank": 224.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TCB": {
+      "rs_rank": 242.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TPB": {
+      "rs_rank": 39.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VBB": {
+      "rs_rank": 72.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VCB": {
+      "rs_rank": 255.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VIB": {
+      "rs_rank": 59.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VPB": {
+      "rs_rank": 6.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "C4G": {
+      "rs_rank": 106.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "FCN": {
+      "rs_rank": 104.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "G36": {
+      "rs_rank": 165.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HHV": {
+      "rs_rank": 118.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HID": {
+      "rs_rank": 162.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "KSB": {
+      "rs_rank": 140.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "LCG": {
+      "rs_rank": 154.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PLC": {
+      "rs_rank": 191.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VCG": {
+      "rs_rank": 51.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ACL": {
+      "rs_rank": 206.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ANV": {
+      "rs_rank": 78.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ASM": {
+      "rs_rank": 71.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BLF": {
+      "rs_rank": 295.0,
+      "storm_bird_signal": "Ban",
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "CMX": {
+      "rs_rank": 105.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "FMC": {
+      "rs_rank": 272.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "IDI": {
+      "rs_rank": 127.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "MPC": {
+      "rs_rank": 62.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VHC": {
+      "rs_rank": 246.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CSM": {
+      "rs_rank": 236.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DPR": {
+      "rs_rank": 218.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DRC": {
+      "rs_rank": 196.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DRI": {
+      "rs_rank": 171.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GVR": {
+      "rs_rank": 194.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PHR": {
+      "rs_rank": 184.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TRC": {
+      "rs_rank": 190.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VRG": {
+      "rs_rank": 237.0,
+      "storm_bird_signal": "Ban",
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "LSS": {
+      "rs_rank": 247.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "QNS": {
+      "rs_rank": 296.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SBT": {
+      "rs_rank": 9.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BCM": {
+      "rs_rank": 193.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "D2D": {
+      "rs_rank": 139.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DTD": {
+      "rs_rank": 121.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "IDC": {
+      "rs_rank": 216.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "KBC": {
+      "rs_rank": 107.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "LHG": {
+      "rs_rank": 225.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "NTC": {
+      "rs_rank": 213.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PXL": {
+      "rs_rank": 13.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SIP": {
+      "rs_rank": 129.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SZC": {
+      "rs_rank": 151.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TIP": {
+      "rs_rank": 79.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VGC": {
+      "rs_rank": 24.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DXP": {
+      "rs_rank": 42.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GMD": {
+      "rs_rank": 238.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GSP": {
+      "rs_rank": 278.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HAH": {
+      "rs_rank": 128.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HHG": {
+      "rs_rank": 142.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MHC": {
+      "rs_rank": 20.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "PHP": {
+      "rs_rank": 212.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PVP": {
+      "rs_rank": 269.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PVT": {
+      "rs_rank": 230.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SGP": {
+      "rs_rank": 148.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SKG": {
+      "rs_rank": 99.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TCD": {
+      "rs_rank": 82.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TCL": {
+      "rs_rank": 294.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TCO": {
+      "rs_rank": 55.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VIP": {
+      "rs_rank": 134.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VOS": {
+      "rs_rank": 137.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VSC": {
+      "rs_rank": 8.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VTD": {
+      "rs_rank": 277.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VTO": {
+      "rs_rank": 265.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VTP": {
+      "rs_rank": 254.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VTR": {
+      "rs_rank": 100.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CMG": {
+      "rs_rank": 169.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ELC": {
+      "rs_rank": 195.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "FOX": {
+      "rs_rank": 103.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "FPT": {
+      "rs_rank": 253.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SGT": {
+      "rs_rank": 304.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ST8": {
+      "rs_rank": 155.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TTN": {
+      "rs_rank": 222.0,
+      "storm_bird_signal": "Ban",
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "VGI": {
+      "rs_rank": 187.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CLX": {
+      "rs_rank": 239.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DGW": {
+      "rs_rank": 156.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "FRT": {
+      "rs_rank": 172.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HAX": {
+      "rs_rank": 69.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "KDC": {
+      "rs_rank": 292.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MCH": {
+      "rs_rank": 301.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MWG": {
+      "rs_rank": 235.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PET": {
+      "rs_rank": 19.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PNJ": {
+      "rs_rank": 248.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PSD": {
+      "rs_rank": 143.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SAB": {
+      "rs_rank": 276.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TLG": {
+      "rs_rank": 250.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "BKG": {
+      "rs_rank": 161.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MSN": {
+      "rs_rank": 199.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VNM": {
+      "rs_rank": 158.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "AAV": {
+      "rs_rank": 197.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BIG": {
+      "rs_rank": 217.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CCL": {
+      "rs_rank": 164.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CIG": {
+      "rs_rank": 220.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CRE": {
+      "rs_rank": 186.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DL1": {
+      "rs_rank": 282.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DLG": {
+      "rs_rank": 63.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DRH": {
+      "rs_rank": 131.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DXS": {
+      "rs_rank": 40.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "EVG": {
+      "rs_rank": 68.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "FIR": {
+      "rs_rank": 141.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HAR": {
+      "rs_rank": 98.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HHS": {
+      "rs_rank": 85.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HPX": {
+      "rs_rank": 80.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "KOS": {
+      "rs_rank": 305.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "LGL": {
+      "rs_rank": 138.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "LSG": {
+      "rs_rank": 117.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "NRC": {
+      "rs_rank": 77.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PIV": {
+      "rs_rank": 221.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PTL": {
+      "rs_rank": 115.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PV2": {
+      "rs_rank": 167.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TDH": {
+      "rs_rank": 122.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TEG": {
+      "rs_rank": 249.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TIG": {
+      "rs_rank": 18.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VPH": {
+      "rs_rank": 178.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TAL": {
+      "rs_rank": 49.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DBD": {
+      "rs_rank": 244.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DCL": {
+      "rs_rank": 256.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DVM": {
+      "rs_rank": 153.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DVN": {
+      "rs_rank": 297.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GPC": {
+      "rs_rank": 149.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "IMP": {
+      "rs_rank": 293.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "JVC": {
+      "rs_rank": 70.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "LDP": {
+      "rs_rank": 285.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TNH": {
+      "rs_rank": 300.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VHE": {
+      "rs_rank": 189.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ALV": {
+      "rs_rank": 257.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "BCE": {
+      "rs_rank": 43.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BCG": {
+      "rs_rank": 101.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "C69": {
+      "rs_rank": 12.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CDC": {
+      "rs_rank": 32.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CII": {
+      "rs_rank": 54.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CKG": {
+      "rs_rank": 144.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CMS": {
+      "rs_rank": 176.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CTD": {
+      "rs_rank": 274.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CTX": {
+      "rs_rank": 228.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DFF": {
+      "rs_rank": 125.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DGT": {
+      "rs_rank": 174.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DPG": {
+      "rs_rank": 112.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HBC": {
+      "rs_rank": 123.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HTI": {
+      "rs_rank": 44.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HUB": {
+      "rs_rank": 192.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HUT": {
+      "rs_rank": 66.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HVH": {
+      "rs_rank": 245.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "IDJ": {
+      "rs_rank": 75.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "IJC": {
+      "rs_rank": 152.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "L14": {
+      "rs_rank": 67.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "L40": {
+      "rs_rank": 262.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "LAI": {
+      "rs_rank": 290.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "LIG": {
+      "rs_rank": 35.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "MCG": {
+      "rs_rank": 16.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "MST": {
+      "rs_rank": 110.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "NED": {
+      "rs_rank": 288.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PFL": {
+      "rs_rank": 76.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PHC": {
+      "rs_rank": 270.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "PSB": {
+      "rs_rank": 208.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "S99": {
+      "rs_rank": 21.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SJE": {
+      "rs_rank": 234.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SVN": {
+      "rs_rank": 261.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "THG": {
+      "rs_rank": 280.0,
+      "storm_bird_signal": "Ban",
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "TLD": {
+      "rs_rank": 170.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "UDC": {
+      "rs_rank": 147.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VC2": {
+      "rs_rank": 124.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VC7": {
+      "rs_rank": 73.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VE9": {
+      "rs_rank": 7.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VIG": {
+      "rs_rank": 86.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "GEE": {
+      "rs_rank": 57.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "GEG": {
+      "rs_rank": 177.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "KHP": {
+      "rs_rank": 240.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "NT2": {
+      "rs_rank": 183.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PAC": {
+      "rs_rank": 60.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "POW": {
+      "rs_rank": 109.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "PPC": {
+      "rs_rank": 306.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "QTP": {
+      "rs_rank": 302.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "REE": {
+      "rs_rank": 251.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SJD": {
+      "rs_rank": 298.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TTA": {
+      "rs_rank": 130.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VSH": {
+      "rs_rank": 287.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GDA": {
+      "rs_rank": 81.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HPG": {
+      "rs_rank": 150.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HSG": {
+      "rs_rank": 95.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ITQ": {
+      "rs_rank": 114.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "KVC": {
+      "rs_rank": 133.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "NKG": {
+      "rs_rank": 38.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "NSH": {
+      "rs_rank": 219.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PAS": {
+      "rs_rank": 74.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SHI": {
+      "rs_rank": 173.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SMC": {
+      "rs_rank": 88.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TIS": {
+      "rs_rank": 273.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TLH": {
+      "rs_rank": 96.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TNI": {
+      "rs_rank": 58.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TTH": {
+      "rs_rank": 166.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TVN": {
+      "rs_rank": 94.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VGS": {
+      "rs_rank": 37.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ABS": {
+      "rs_rank": 243.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "APP": {
+      "rs_rank": 211.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "BFC": {
+      "rs_rank": 231.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CSV": {
+      "rs_rank": 159.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DCM": {
+      "rs_rank": 209.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DDV": {
+      "rs_rank": 92.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DGC": {
+      "rs_rank": 210.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DPM": {
+      "rs_rank": 102.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HVT": {
+      "rs_rank": 241.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "LAS": {
+      "rs_rank": 229.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "AVG": {
+      "rs_rank": 271.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ASP": {
+      "rs_rank": 135.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BSR": {
+      "rs_rank": 146.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CNG": {
+      "rs_rank": 286.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DDG": {
+      "rs_rank": 180.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GAS": {
+      "rs_rank": 266.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "OIL": {
+      "rs_rank": 205.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PLX": {
+      "rs_rank": 263.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PPT": {
+      "rs_rank": 258.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "PVB": {
+      "rs_rank": 260.0,
+      "storm_bird_signal": "Ban",
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "PVC": {
+      "rs_rank": 160.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PVD": {
+      "rs_rank": 188.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PVG": {
+      "rs_rank": 233.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "PVS": {
+      "rs_rank": 203.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TDG": {
+      "rs_rank": 198.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ACC": {
+      "rs_rank": 303.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "BCC": {
+      "rs_rank": 108.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "CRC": {
+      "rs_rank": 61.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CTI": {
+      "rs_rank": 179.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "DHA": {
+      "rs_rank": 132.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "FCM": {
+      "rs_rank": 168.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "GKM": {
+      "rs_rank": 182.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "HT1": {
+      "rs_rank": 65.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "KSQ": {
+      "rs_rank": 136.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "NAG": {
+      "rs_rank": 267.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "NNC": {
+      "rs_rank": 145.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": true
+    },
+    "NO1": {
+      "rs_rank": 275.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "PTB": {
+      "rs_rank": 252.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TDP": {
+      "rs_rank": 259.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VCS": {
+      "rs_rank": 226.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VLB": {
+      "rs_rank": 201.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VTV": {
+      "rs_rank": 283.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "RYG": {
+      "rs_rank": 284.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "AAT": {
+      "rs_rank": 181.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "ADS": {
+      "rs_rank": 157.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "EVE": {
+      "rs_rank": 207.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "GIL": {
+      "rs_rank": 111.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "MSH": {
+      "rs_rank": 214.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "STK": {
+      "rs_rank": 299.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SVD": {
+      "rs_rank": 89.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TCM": {
+      "rs_rank": 204.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TNG": {
+      "rs_rank": 175.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VGT": {
+      "rs_rank": 185.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ACV": {
+      "rs_rank": 215.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HVN": {
+      "rs_rank": 119.0,
+      "storm_bird_signal": "ChoBan",
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SAS": {
+      "rs_rank": 291.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "SCS": {
+      "rs_rank": 232.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "VJC": {
+      "rs_rank": 14.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "AAS": {
+      "rs_rank": 33.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ABW": {
+      "rs_rank": 25.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "AGR": {
+      "rs_rank": 45.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "APG": {
+      "rs_rank": 202.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "API": {
+      "rs_rank": 113.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "APS": {
+      "rs_rank": 23.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BMS": {
+      "rs_rank": 34.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BSI": {
+      "rs_rank": 84.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "BVS": {
+      "rs_rank": 22.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CSI": {
+      "rs_rank": 264.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "CTS": {
+      "rs_rank": 2.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DSC": {
+      "rs_rank": 52.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "EVS": {
+      "rs_rank": 30.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "FTS": {
+      "rs_rank": 90.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HBS": {
+      "rs_rank": 64.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "HCM": {
+      "rs_rank": 47.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "IVS": {
+      "rs_rank": 97.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "MBS": {
+      "rs_rank": 17.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "ORS": {
+      "rs_rank": 36.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "PSI": {
+      "rs_rank": 41.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SBS": {
+      "rs_rank": 26.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SHS": {
+      "rs_rank": 3.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "SSI": {
+      "rs_rank": 5.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TCI": {
+      "rs_rank": 53.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "TVB": {
+      "rs_rank": 223.0,
+      "storm_bird_signal": null,
+      "buy_signal": false,
+      "sell_signal": false
+    },
+    "TVS": {
+      "rs_rank": 87.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VCI": {
+      "rs_rank": 50.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VDS": {
+      "rs_rank": 28.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VFS": {
+      "rs_rank": 268.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VIX": {
+      "rs_rank": 1.0,
+      "storm_bird_signal": null,
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "VND": {
+      "rs_rank": 11.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    },
+    "DSE": {
+      "rs_rank": 91.0,
+      "storm_bird_signal": "Mua",
+      "buy_signal": true,
+      "sell_signal": false
+    }
+  },
+  "signals": {
+    "descriptions": {
+      "buy_signal": "Close >= High for 4 consecutive days",
+      "sell_signal": "Close <= Low for 3 consecutive days OR 3-day high > 1.1 * current close",
+      "storm_bird_signals": {
+        "ChoMua": "RSI < 40, Close > 1.03 * 3-day low, Volume > 50,000",
+        "ChoBan": "RSI > 60, Close < 0.97 * 3-day high, Volume > 50,000",
+        "Mua": "Close >= High for 3 days, Volume > 50,000, Volume >= 0.7 * 10-day MA",
+        "Ban": "Close <= Low for 3 days OR 3-day high > 1.1 * close, Volume > 50,000"
+      }
+    }
+  }
+}
