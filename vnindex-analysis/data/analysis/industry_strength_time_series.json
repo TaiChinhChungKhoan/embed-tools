@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "analysis_date": "2025-07-28T18:10:25.110297",
+    "analysis_date": "2025-07-29T19:15:13.319395",
     "analysis_type": "industry_strength_time_series",
     "ema_span": 5,
     "total_industries": 23,
     "date_range": {
       "start": "2025-06-11T00:00:00",
-      "end": "2025-07-28T00:00:00"
+      "end": "2025-07-29T00:00:00"
     }
   },
   "industries": [
@@ -692,6 +692,26 @@
             "early_weakness": 0.028575936663959016
           },
           "net_flow": -0.10911864779234982
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.08333333333333333,
+            "medium_strength": 0.08333333333333333,
+            "early_strength": 0.0,
+            "strong_weakness": 0.6666666666666666,
+            "medium_weakness": 0.08333333333333333,
+            "early_weakness": 0.08333333333333333
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.07335773971295159,
+            "medium_strength": 0.15853336390951317,
+            "early_strength": 0.04787913747407436,
+            "strong_weakness": 0.5984518287593803,
+            "medium_weakness": 0.07494952792366352,
+            "early_weakness": 0.04682840222041712
+          },
+          "net_flow": -0.14681983926897393
         }
       ]
     },
@@ -1377,6 +1397,26 @@
             "early_weakness": 0.00020798241340485928
           },
           "net_flow": -0.2534712539760791
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 1.0,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.0003891223918325337,
+            "medium_strength": 0.06471573749067892,
+            "early_strength": 0.014757219474742825,
+            "strong_weakness": 0.9147057227856807,
+            "medium_weakness": 0.005293542914795319,
+            "early_weakness": 0.00013865494226990622
+          },
+          "net_flow": -0.2800919470951639
         }
       ]
     },
@@ -2047,21 +2087,41 @@
           "date": "2025-07-28T00:00:00",
           "raw_signals": {
             "strong_strength": 0.16,
-            "medium_strength": 0.12,
+            "medium_strength": 0.08,
             "early_strength": 0.12,
-            "strong_weakness": 0.24,
+            "strong_weakness": 0.28,
             "medium_weakness": 0.28,
             "early_weakness": 0.08
           },
           "smoothed_signals": {
             "strong_strength": 0.1883807545475698,
-            "medium_strength": 0.06799255590703837,
+            "medium_strength": 0.05465922257370504,
             "early_strength": 0.056939550014710974,
-            "strong_weakness": 0.3220691622820257,
+            "strong_weakness": 0.33540249561535906,
             "medium_weakness": 0.262558438202265,
             "early_weakness": 0.1020595390463904
           },
-          "net_flow": -0.12445809302045396
+          "net_flow": -0.13334698190934288
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.08,
+            "medium_strength": 0.0,
+            "early_strength": 0.08,
+            "strong_weakness": 0.44,
+            "medium_weakness": 0.4,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.15225383636504655,
+            "medium_strength": 0.036439481715803364,
+            "early_strength": 0.06462636667647398,
+            "strong_weakness": 0.37026833041023943,
+            "medium_weakness": 0.30837229213484335,
+            "early_weakness": 0.0680396926975936
+          },
+          "net_flow": -0.1644535434951175
         }
       ]
     },
@@ -2747,6 +2807,26 @@
             "early_weakness": 0.12386317151846697
           },
           "net_flow": 0.029617227468605636
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.16666666666666666,
+            "early_strength": 0.08333333333333333,
+            "strong_weakness": 0.5833333333333334,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.16666666666666666
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.04558385285571121,
+            "medium_strength": 0.22877106910169998,
+            "early_strength": 0.17192897217786124,
+            "strong_weakness": 0.3599219966079049,
+            "medium_weakness": 0.055663106022289396,
+            "early_weakness": 0.13813100323453353
+          },
+          "net_flow": -0.035810737243151806
         }
       ]
     },
@@ -3432,6 +3512,26 @@
             "early_weakness": 0.06795449835899174
           },
           "net_flow": 0.04194273390073331
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.4,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 0.6,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.2518655652430696,
+            "medium_strength": 0.2302796488977538,
+            "early_strength": 0.026464186426576775,
+            "strong_weakness": 0.4397953037521462,
+            "medium_weakness": 0.006292296774459379,
+            "early_weakness": 0.0453029989059945
+          },
+          "net_flow": 0.005739600378266679
         }
       ]
     },
@@ -4117,6 +4217,26 @@
             "early_weakness": 0.05031374868095022
           },
           "net_flow": -0.12434999946961645
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 0.75,
+            "medium_weakness": 0.25,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.02143159036843408,
+            "medium_strength": 0.1249162718008336,
+            "early_strength": 0.06263547169444929,
+            "strong_weakness": 0.5324178091212752,
+            "medium_weakness": 0.2250563578943745,
+            "early_weakness": 0.033542499120633486
+          },
+          "net_flow": -0.19401111075752206
         }
       ]
     },
@@ -4802,6 +4922,26 @@
             "early_weakness": 0.11117670968543632
           },
           "net_flow": 0.10589710478471519
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.46875,
+            "medium_strength": 0.0625,
+            "early_strength": 0.21875,
+            "strong_weakness": 0.21875,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.03125
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.4429915816010657,
+            "medium_strength": 0.1316300799276535,
+            "early_strength": 0.11460877658932941,
+            "strong_weakness": 0.17685909702832275,
+            "medium_weakness": 0.04937599173000455,
+            "early_weakness": 0.08453447312362422
+          },
+          "net_flow": 0.12615362541203237
         }
       ]
     },
@@ -5487,6 +5627,26 @@
             "early_weakness": 0.1109618733408825
           },
           "net_flow": -0.1663736212285396
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.125,
+            "early_strength": 0.0,
+            "strong_weakness": 0.625,
+            "medium_weakness": 0.25,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.005998417615475171,
+            "medium_strength": 0.07761704767854452,
+            "early_strength": 0.12501091347744084,
+            "strong_weakness": 0.5414037845124623,
+            "medium_weakness": 0.17599525448882242,
+            "early_weakness": 0.07397458222725502
+          },
+          "net_flow": -0.1942490808190264
         }
       ]
     },
@@ -6172,6 +6332,26 @@
             "early_weakness": 0.044319485078242085
           },
           "net_flow": -0.08345606789744231
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.2857142857142857,
+            "early_strength": 0.07142857142857142,
+            "strong_weakness": 0.6428571428571429,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 1.7043276941072342e-05,
+            "medium_strength": 0.18240616081906688,
+            "early_strength": 0.1865016803875022,
+            "strong_weakness": 0.5751225642667979,
+            "medium_weakness": 0.026406227864197388,
+            "early_weakness": 0.029546323385494726
+          },
+          "net_flow": -0.08738341034432662
         }
       ]
     },
@@ -6857,6 +7037,26 @@
             "early_weakness": 0.18059368196729617
           },
           "net_flow": -0.016144084652249268
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.1111111111111111,
+            "medium_strength": 0.1111111111111111,
+            "early_strength": 0.0,
+            "strong_weakness": 0.6666666666666666,
+            "medium_weakness": 0.1111111111111111,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.1020020392399723,
+            "medium_strength": 0.22071680384288225,
+            "early_strength": 0.06854447967230369,
+            "strong_weakness": 0.38421760160262386,
+            "medium_weakness": 0.10412328766402065,
+            "early_weakness": 0.12039578797819746
+          },
+          "net_flow": -0.07249111816322791
         }
       ]
     },
@@ -7542,6 +7742,26 @@
             "early_weakness": 0.07780815847136094
           },
           "net_flow": -0.0017280082286007155
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.1,
+            "early_strength": 0.1,
+            "strong_weakness": 0.7,
+            "medium_weakness": 0.1,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.08572774435584123,
+            "medium_strength": 0.1152686602113045,
+            "early_strength": 0.19727558720425367,
+            "strong_weakness": 0.4421659017716868,
+            "medium_weakness": 0.10769000080934008,
+            "early_weakness": 0.05187210564757396
+          },
+          "net_flow": -0.06781867215240049
         }
       ]
     },
@@ -8227,6 +8447,26 @@
             "early_weakness": 0.1004409796925612
           },
           "net_flow": -0.1202827051406118
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.09090909090909091,
+            "medium_strength": 0.09090909090909091,
+            "early_strength": 0.0,
+            "strong_weakness": 0.7272727272727273,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.09090909090909091
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.08559038939930946,
+            "medium_strength": 0.15907792229645681,
+            "early_strength": 0.02898837710301593,
+            "strong_weakness": 0.6283373429882702,
+            "medium_weakness": 0.0007422847815434098,
+            "early_weakness": 0.09726368343140444
+          },
+          "net_flow": -0.15089554080081194
         }
       ]
     },
@@ -8912,6 +9152,26 @@
             "early_weakness": 0.00017618576309321802
           },
           "net_flow": -0.09864209899616568
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.3333333333333333,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 0.6666666666666666,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.32052303079529343,
+            "medium_strength": 0.00998015707252214,
+            "early_strength": 0.015299157580463213,
+            "strong_weakness": 0.6413865794070072,
+            "medium_weakness": 0.012693617969318682,
+            "early_weakness": 0.0001174571753954787
+          },
+          "net_flow": -0.10279843636781416
         }
       ]
     },
@@ -9597,6 +9857,26 @@
             "early_weakness": 0.0669543677769516
           },
           "net_flow": 0.023830900726308613
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.2,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 0.8,
+            "medium_weakness": 0.0,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.17371081653388087,
+            "medium_strength": 0.11095224891575074,
+            "early_strength": 0.13916783527667712,
+            "strong_weakness": 0.5292962757595738,
+            "medium_weakness": 0.002236578329483296,
+            "early_weakness": 0.0446362451846344
+          },
+          "net_flow": -0.05077939951579428
         }
       ]
     },
@@ -10282,6 +10562,26 @@
             "early_weakness": 0.0066153935230740995
           },
           "net_flow": -0.07312138751755372
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 0.5,
+            "medium_weakness": 0.25,
+            "early_weakness": 0.25
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.00498554249004497,
+            "medium_strength": 0.10009232334629335,
+            "early_strength": 0.15513407997944137,
+            "strong_weakness": 0.42578257318923396,
+            "medium_weakness": 0.22626188531293712,
+            "early_weakness": 0.0877435956820494
+          },
+          "net_flow": -0.15985870278948025
         }
       ]
     },
@@ -10967,6 +11267,26 @@
             "early_weakness": 0.08216683737840459
           },
           "net_flow": -0.07217377989191294
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.0,
+            "early_strength": 0.0,
+            "strong_weakness": 0.5454545454545454,
+            "medium_weakness": 0.2727272727272727,
+            "early_weakness": 0.18181818181818182
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.09137589102802583,
+            "medium_strength": 0.03694269916679171,
+            "early_strength": 0.1328409632466029,
+            "strong_weakness": 0.35465582949270463,
+            "medium_weakness": 0.2688006648742114,
+            "early_weakness": 0.11538395219166367
+          },
+          "net_flow": -0.1592269643723864
         }
       ]
     },
@@ -11652,6 +11972,26 @@
             "early_weakness": 0.061688411528517714
           },
           "net_flow": 0.09903117878518365
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.3333333333333333,
+            "medium_strength": 0.041666666666666664,
+            "early_strength": 0.08333333333333333,
+            "strong_weakness": 0.375,
+            "medium_weakness": 0.125,
+            "early_weakness": 0.041666666666666664
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.3591904593264853,
+            "medium_strength": 0.13434401753647152,
+            "early_strength": 0.09160781303333809,
+            "strong_weakness": 0.24534987725662114,
+            "medium_weakness": 0.11449333627251679,
+            "early_weakness": 0.05501449657456737
+          },
+          "net_flow": 0.056761526597529866
         }
       ]
     },
@@ -12337,6 +12677,26 @@
             "early_weakness": 0.09510213552664457
           },
           "net_flow": -0.019514125701004813
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0625,
+            "medium_strength": 0.125,
+            "early_strength": 0.125,
+            "strong_weakness": 0.4375,
+            "medium_weakness": 0.25,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.12561938970616857,
+            "medium_strength": 0.20249409896066506,
+            "early_strength": 0.08987238563216166,
+            "strong_weakness": 0.36203793407361834,
+            "medium_weakness": 0.15657476794295686,
+            "early_weakness": 0.06340142368442972
+          },
+          "net_flow": -0.05467608380066987
         }
       ]
     },
@@ -13022,6 +13382,26 @@
             "early_weakness": 0.010260613450697408
           },
           "net_flow": 0.01068627773686801
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.125,
+            "medium_strength": 0.0,
+            "early_strength": 0.25,
+            "strong_weakness": 0.375,
+            "medium_weakness": 0.25,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.27403813250421005,
+            "medium_strength": 0.05645798391877345,
+            "early_strength": 0.13852349464721797,
+            "strong_weakness": 0.3229614490158535,
+            "medium_weakness": 0.20117853094681365,
+            "early_weakness": 0.006840408967131607
+          },
+          "net_flow": -0.020653592619865765
         }
       ]
     },
@@ -13707,6 +14087,26 @@
             "early_weakness": 0.0650495916970418
           },
           "net_flow": -0.034343439697995
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.14285714285714285,
+            "medium_strength": 0.09523809523809523,
+            "early_strength": 0.09523809523809523,
+            "strong_weakness": 0.6190476190476191,
+            "medium_weakness": 0.047619047619047616,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.10357075090500882,
+            "medium_strength": 0.22111727925155594,
+            "early_strength": 0.08541297458988475,
+            "strong_weakness": 0.5011671788683298,
+            "medium_weakness": 0.045365421920526186,
+            "early_weakness": 0.04336639446469454
+          },
+          "net_flow": -0.05993266350236701
         }
       ]
     },
@@ -14392,6 +14792,26 @@
             "early_weakness": 0.11032176443995398
           },
           "net_flow": -0.138108046586825
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.125,
+            "medium_strength": 0.0625,
+            "early_strength": 0.0625,
+            "strong_weakness": 0.625,
+            "medium_weakness": 0.0625,
+            "early_weakness": 0.0625
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.12030546405450537,
+            "medium_strength": 0.08408183696172467,
+            "early_strength": 0.07417131906361174,
+            "strong_weakness": 0.5595383585234912,
+            "medium_weakness": 0.06752184510336459,
+            "early_weakness": 0.09438117629330266
+          },
+          "net_flow": -0.1476275866134389
         }
       ]
     },
@@ -15077,6 +15497,26 @@
             "early_weakness": 0.07993535152994435
           },
           "net_flow": -0.04761942825282351
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.2,
+            "medium_strength": 0.1,
+            "early_strength": 0.15,
+            "strong_weakness": 0.35,
+            "medium_weakness": 0.15,
+            "early_weakness": 0.05
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.16708027124349029,
+            "medium_strength": 0.17858863692911534,
+            "early_strength": 0.09004499690790427,
+            "strong_weakness": 0.3576665818853975,
+            "medium_weakness": 0.13666261201412983,
+            "early_weakness": 0.06995690101996291
+          },
+          "net_flow": -0.042857396612993454
         }
       ]
     },
@@ -15762,6 +16202,26 @@
             "early_weakness": 0.08787774785865916
           },
           "net_flow": -0.2106350096966291
+        },
+        {
+          "date": "2025-07-29T00:00:00",
+          "raw_signals": {
+            "strong_strength": 0.0,
+            "medium_strength": 0.0,
+            "early_strength": 0.1,
+            "strong_weakness": 0.8,
+            "medium_weakness": 0.1,
+            "early_weakness": 0.0
+          },
+          "smoothed_signals": {
+            "strong_strength": 0.028410290979097287,
+            "medium_strength": 0.0486763647552541,
+            "early_strength": 0.07894500123568624,
+            "strong_weakness": 0.750222570017534,
+            "medium_weakness": 0.035160607773322416,
+            "early_weakness": 0.05858516523910612
+          },
+          "net_flow": -0.22931222868664167
         }
       ]
     }
