@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Cao su",
       "description": "Phân tích breadth cho cao su",
       "version": "3.0",
-      "generated_at": "2025-07-29T19:16:46.917044",
+      "generated_at": "2025-07-30T23:15:49.777445",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-07-29",
-      "total_trading_days": 390,
-      "analysis_period": "390 ngày giao dịch"
+      "end_date": "2025-07-30",
+      "total_trading_days": 391,
+      "analysis_period": "391 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -22273,10 +22273,67 @@
         "ema_200_change_5d": -75.0,
         "overall_momentum": "Giảm mạnh"
       }
+    },
+    "2025-07-30": {
+      "basic_stats": {
+        "total_stocks": 5,
+        "stocks_with_data": 5
+      },
+      "ema_5": {
+        "above_count": 0,
+        "below_count": 5,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_10": {
+        "above_count": 0,
+        "below_count": 5,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_20": {
+        "above_count": 0,
+        "below_count": 5,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_50": {
+        "above_count": 2,
+        "below_count": 3,
+        "above_percentage": 40.0,
+        "below_percentage": 60.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_200": {
+        "above_count": 1,
+        "below_count": 4,
+        "above_percentage": 20.0,
+        "below_percentage": 80.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường giảm",
+        "confidence": 0.33,
+        "description": "Cao su thể hiện đặc điểm thị trường giảm"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": -100.0,
+        "ema_50_change_5d": -60.0,
+        "ema_200_change_5d": -75.0,
+        "overall_momentum": "Giảm mạnh"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-07-29",
+    "latest_date": "2025-07-30",
     "key_metrics": {
       "breadth_strength": 0.0,
       "participation_level": 100.0,
@@ -22289,15 +22346,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-29T19:16:46.915115",
+      "analysis_timestamp": "2025-07-30T23:15:49.774057",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 390
+        "data_points": 391
       },
-      "analysis_period": "2024-01-02 to 2025-07-29"
+      "analysis_period": "2024-01-02 to 2025-07-30"
     },
     "signal_coordination": {
       "overall_signal": {
@@ -22362,7 +22419,7 @@
         "risk_level": "Trung bình - Cao",
         "risk_factors": [
           "Thiếu sự đồng thuận giữa các tín hiệu",
-          "Biến động cao (24.69)"
+          "Biến động cao (31.52)"
         ],
         "consensus_score": 0.55,
         "recommendation": "Thận trọng với quy mô vị thế, quản lý rủi ro tốt"

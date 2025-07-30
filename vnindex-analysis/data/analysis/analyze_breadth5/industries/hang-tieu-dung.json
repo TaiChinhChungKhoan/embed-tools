@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Hàng tiêu dùng",
       "description": "Phân tích breadth cho hàng tiêu dùng",
       "version": "3.0",
-      "generated_at": "2025-07-29T19:16:44.336558",
+      "generated_at": "2025-07-30T23:15:46.374689",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-07-29",
-      "total_trading_days": 390,
-      "analysis_period": "390 ngày giao dịch"
+      "end_date": "2025-07-30",
+      "total_trading_days": 391,
+      "analysis_period": "391 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -22273,10 +22273,67 @@
         "ema_200_change_5d": 0.0,
         "overall_momentum": "Giảm mạnh"
       }
+    },
+    "2025-07-30": {
+      "basic_stats": {
+        "total_stocks": 2,
+        "stocks_with_data": 2
+      },
+      "ema_5": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_10": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_20": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_50": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_200": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường tăng",
+        "confidence": 1.0,
+        "description": "Hàng tiêu dùng thể hiện đặc điểm thị trường tăng"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": -50.0,
+        "ema_50_change_5d": 0.0,
+        "ema_200_change_5d": 0.0,
+        "overall_momentum": "Giảm mạnh"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-07-29",
+    "latest_date": "2025-07-30",
     "key_metrics": {
       "breadth_strength": 50.0,
       "participation_level": 100.0,
@@ -22289,15 +22346,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-29T19:16:44.333658",
+      "analysis_timestamp": "2025-07-30T23:15:46.371425",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 390
+        "data_points": 391
       },
-      "analysis_period": "2024-01-02 to 2025-07-29"
+      "analysis_period": "2024-01-02 to 2025-07-30"
     },
     "signal_coordination": {
       "overall_signal": {
@@ -22335,9 +22392,9 @@
           "name": "Mức độ cực đoan",
           "direction": "Tiêu cực",
           "strength": "Vừa phải",
-          "value": 1.45,
+          "value": 1.44,
           "weight": 0.15,
-          "description": "Z-score EMA 50: 1.45"
+          "description": "Z-score EMA 50: 1.44"
         },
         {
           "name": "Mức độ tham gia",
@@ -22362,7 +22419,7 @@
         "risk_level": "Trung bình - Cao",
         "risk_factors": [
           "Thiếu sự đồng thuận giữa các tín hiệu",
-          "Biến động cao (11.18)"
+          "Biến động cao (15.39)"
         ],
         "consensus_score": 0.4,
         "recommendation": "Thận trọng với quy mô vị thế, quản lý rủi ro tốt"
