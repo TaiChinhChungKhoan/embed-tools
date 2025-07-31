@@ -1,18 +1,18 @@
 {
   "dump_info": {
-    "timestamp": "2025-07-30T23:11:58.881213",
+    "timestamp": "2025-07-31T22:47:39.363300",
     "years_back": 3,
-    "start_date": "2022-07-31",
-    "end_date": "2025-07-30",
+    "start_date": "2022-08-01",
+    "end_date": "2025-07-31",
     "total_symbols_processed": 6,
     "successful_dumps": 6
   },
   "results": {
     "VNINDEX": {
       "file": "reports/data/tickers/VNINDEX.json",
-      "data_points": 748,
+      "data_points": 749,
       "start_date": "2022-08-01",
-      "end_date": "2025-07-30",
+      "end_date": "2025-07-31",
       "columns": [
         "Time",
         "Open",
@@ -25,9 +25,9 @@
     },
     "VN30": {
       "file": "reports/data/tickers/VN30.json",
-      "data_points": 748,
+      "data_points": 749,
       "start_date": "2022-08-01",
-      "end_date": "2025-07-30",
+      "end_date": "2025-07-31",
       "columns": [
         "Time",
         "Open",
@@ -40,9 +40,9 @@
     },
     "VN100": {
       "file": "reports/data/tickers/VN100.json",
-      "data_points": 748,
+      "data_points": 749,
       "start_date": "2022-08-01",
-      "end_date": "2025-07-30",
+      "end_date": "2025-07-31",
       "columns": [
         "Time",
         "Open",
@@ -55,9 +55,9 @@
     },
     "VNMID": {
       "file": "reports/data/tickers/VNMID.json",
-      "data_points": 748,
+      "data_points": 749,
       "start_date": "2022-08-01",
-      "end_date": "2025-07-30",
+      "end_date": "2025-07-31",
       "columns": [
         "Time",
         "Open",
@@ -70,9 +70,9 @@
     },
     "VNSML": {
       "file": "reports/data/tickers/VNSML.json",
-      "data_points": 748,
+      "data_points": 749,
       "start_date": "2022-08-01",
-      "end_date": "2025-07-30",
+      "end_date": "2025-07-31",
       "columns": [
         "Time",
         "Open",
@@ -85,9 +85,9 @@
     },
     "VNALL": {
       "file": "reports/data/tickers/VNALL.json",
-      "data_points": 748,
+      "data_points": 749,
       "start_date": "2022-08-01",
-      "end_date": "2025-07-30",
+      "end_date": "2025-07-31",
       "columns": [
         "Time",
         "Open",

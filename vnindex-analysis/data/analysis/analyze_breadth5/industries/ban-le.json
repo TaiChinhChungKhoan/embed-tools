@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Bán lẻ",
       "description": "Phân tích breadth cho bán lẻ",
       "version": "3.0",
-      "generated_at": "2025-07-30T23:15:47.963320",
+      "generated_at": "2025-07-31T22:51:23.173876",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-07-30",
-      "total_trading_days": 391,
-      "analysis_period": "391 ngày giao dịch"
+      "end_date": "2025-07-31",
+      "total_trading_days": 392,
+      "analysis_period": "392 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -22330,10 +22330,67 @@
         "ema_200_change_5d": -20.0,
         "overall_momentum": "Giảm mạnh"
       }
+    },
+    "2025-07-31": {
+      "basic_stats": {
+        "total_stocks": 5,
+        "stocks_with_data": 5
+      },
+      "ema_5": {
+        "above_count": 1,
+        "below_count": 4,
+        "above_percentage": 20.0,
+        "below_percentage": 80.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_10": {
+        "above_count": 2,
+        "below_count": 3,
+        "above_percentage": 40.0,
+        "below_percentage": 60.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_20": {
+        "above_count": 2,
+        "below_count": 3,
+        "above_percentage": 40.0,
+        "below_percentage": 60.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_50": {
+        "above_count": 5,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_200": {
+        "above_count": 4,
+        "below_count": 1,
+        "above_percentage": 80.0,
+        "below_percentage": 20.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường tăng",
+        "confidence": 0.5,
+        "description": "Bán lẻ thể hiện đặc điểm thị trường tăng"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": -60.0,
+        "ema_50_change_5d": 0.0,
+        "ema_200_change_5d": -20.0,
+        "overall_momentum": "Giảm mạnh"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-07-30",
+    "latest_date": "2025-07-31",
     "key_metrics": {
       "breadth_strength": 40.0,
       "participation_level": 100.0,
@@ -22346,15 +22403,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-30T23:15:47.959364",
+      "analysis_timestamp": "2025-07-31T22:51:23.172033",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 391
+        "data_points": 392
       },
-      "analysis_period": "2024-01-02 to 2025-07-30"
+      "analysis_period": "2024-01-02 to 2025-07-31"
     },
     "signal_coordination": {
       "overall_signal": {
@@ -22384,17 +22441,17 @@
           "name": "Cấu trúc thị trường",
           "direction": "Trung lập",
           "strength": "Yếu",
-          "value": 10.0,
+          "value": -10.0,
           "weight": 0.2,
-          "description": "Điểm cấu trúc: 10.00"
+          "description": "Điểm cấu trúc: -10.00"
         },
         {
           "name": "Mức độ cực đoan",
           "direction": "Tiêu cực",
           "strength": "Vừa phải",
-          "value": 1.62,
+          "value": 1.6,
           "weight": 0.15,
-          "description": "Z-score EMA 50: 1.62"
+          "description": "Z-score EMA 50: 1.60"
         },
         {
           "name": "Mức độ tham gia",
@@ -22424,7 +22481,7 @@
         "risk_factors": [
           "Thiếu sự đồng thuận giữa các tín hiệu",
           "Xung đột: Xu hướng và mức độ cực đoan không đồng thuận",
-          "Biến động cao (18.89)"
+          "Biến động cao (21.98)"
         ],
         "consensus_score": 0.4,
         "recommendation": "Giảm quy mô vị thế, đặt stop-loss chặt"
@@ -22457,7 +22514,7 @@
     },
     "current_state": {
       "percentages": {
-        "ema_5": 40.0,
+        "ema_5": 20.0,
         "ema_10": 40.0,
         "ema_20": 40.0,
         "ema_50": 100.0,
