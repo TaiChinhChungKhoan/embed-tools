@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2025-07-31T22:47:53.778324",
+  "analysis_date": "2025-08-01T17:02:11.368609",
   "period": 3,
   "period_unit": "years",
   "mfi_period": 14,
@@ -10,22 +10,11 @@
       "symbol": "VN30",
       "name": "VN30 - Large Cap",
       "data_points": 736,
-      "latest_date": "2025-07-31T00:00:00",
+      "latest_date": "2025-08-01T00:00:00",
       "mfi_data": [
         {
-          "date": "2022-08-18T00:00:00",
-          "mfi": 77.03,
-          "signal": "neutral",
-          "price": 1299.93,
-          "volume": 162054000,
-          "typical_price": 1302.4,
-          "raw_money_flow": 211059129600.0,
-          "positive_money_flow": 211059129600.0,
-          "negative_money_flow": 0
-        },
-        {
           "date": "2022-08-19T00:00:00",
-          "mfi": 71.5,
+          "mfi": 69.09,
           "signal": "neutral",
           "price": 1294.93,
           "volume": 154225000,
@@ -8107,20 +8096,31 @@
           "raw_money_flow": 1042860000941.03,
           "positive_money_flow": 0,
           "negative_money_flow": 1042860000941.03
+        },
+        {
+          "date": "2025-08-01T00:00:00",
+          "mfi": 44.29,
+          "signal": "neutral",
+          "price": 1614.11,
+          "volume": 506721195,
+          "typical_price": 1606.91,
+          "raw_money_flow": 814255355457.45,
+          "positive_money_flow": 0,
+          "negative_money_flow": 814255355457.45
         }
       ],
       "statistics": {
-        "current_mfi": 50.33,
-        "mfi_5d_avg": 65.65,
-        "mfi_21d_avg": 81.95,
-        "mfi_50d_avg": 67.21,
+        "current_mfi": 44.29,
+        "mfi_5d_avg": 59.19,
+        "mfi_21d_avg": 80.01,
+        "mfi_50d_avg": 66.6,
         "mfi_min": 5.8,
         "mfi_max": 95.1,
-        "mfi_std": 18.08,
-        "MFI_ROC": -26.54,
-        "MFI_ROC_5d_avg": -17.87,
-        "MFI_Acceleration": 0.08,
-        "MFI_Acceleration_5d_avg": -3.24,
+        "mfi_std": 18.06,
+        "MFI_ROC": -32.26,
+        "MFI_ROC_5d_avg": -22.06,
+        "MFI_Acceleration": -5.72,
+        "MFI_Acceleration_5d_avg": -4.2,
         "overbought_days": 49,
         "oversold_days": 25,
         "neutral_days": 662,
@@ -8145,22 +8145,11 @@
       "symbol": "VN100",
       "name": "VN100 - Large-Mid Cap",
       "data_points": 736,
-      "latest_date": "2025-07-31T00:00:00",
+      "latest_date": "2025-08-01T00:00:00",
       "mfi_data": [
         {
-          "date": "2022-08-18T00:00:00",
-          "mfi": 69.41,
-          "signal": "neutral",
-          "price": 1256.97,
-          "volume": 368605900,
-          "typical_price": 1258.77,
-          "raw_money_flow": 463988820056.67,
-          "positive_money_flow": 0,
-          "negative_money_flow": 463988820056.67
-        },
-        {
           "date": "2022-08-19T00:00:00",
-          "mfi": 64.84,
+          "mfi": 61.79,
           "signal": "neutral",
           "price": 1251.55,
           "volume": 375653000,
@@ -16242,20 +16231,31 @@
           "raw_money_flow": 2118447423087.84,
           "positive_money_flow": 2118447423087.84,
           "negative_money_flow": 0
+        },
+        {
+          "date": "2025-08-01T00:00:00",
+          "mfi": 73.38,
+          "signal": "neutral",
+          "price": 1593.67,
+          "volume": 1087891782,
+          "typical_price": 1591.84,
+          "raw_money_flow": 1731746027952.94,
+          "positive_money_flow": 0,
+          "negative_money_flow": 1731746027952.94
         }
       ],
       "statistics": {
-        "current_mfi": 79.74,
-        "mfi_5d_avg": 89.22,
-        "mfi_21d_avg": 93.69,
-        "mfi_50d_avg": 76.5,
+        "current_mfi": 73.38,
+        "mfi_5d_avg": 83.9,
+        "mfi_21d_avg": 93.0,
+        "mfi_50d_avg": 76.71,
         "mfi_min": 5.35,
         "mfi_max": 100.0,
-        "mfi_std": 18.58,
-        "MFI_ROC": -20.26,
-        "MFI_ROC_5d_avg": -10.78,
-        "MFI_Acceleration": 0.49,
-        "MFI_Acceleration_5d_avg": -4.05,
+        "mfi_std": 18.59,
+        "MFI_ROC": -26.62,
+        "MFI_ROC_5d_avg": -16.1,
+        "MFI_Acceleration": -6.37,
+        "MFI_Acceleration_5d_avg": -5.32,
         "overbought_days": 55,
         "oversold_days": 18,
         "neutral_days": 663,
@@ -16280,22 +16280,11 @@
       "symbol": "VNALL",
       "name": "VNALL - All Shares",
       "data_points": 736,
-      "latest_date": "2025-07-31T00:00:00",
+      "latest_date": "2025-08-01T00:00:00",
       "mfi_data": [
         {
-          "date": "2022-08-18T00:00:00",
-          "mfi": 69.42,
-          "signal": "neutral",
-          "price": 1275.42,
-          "volume": 477239500,
-          "typical_price": 1277.0,
-          "raw_money_flow": 609434841500.0,
-          "positive_money_flow": 0,
-          "negative_money_flow": 609434841500.0
-        },
-        {
           "date": "2022-08-19T00:00:00",
-          "mfi": 64.83,
+          "mfi": 61.76,
           "signal": "neutral",
           "price": 1270.06,
           "volume": 490015100,
@@ -24377,20 +24366,31 @@
           "raw_money_flow": 2459713597028.65,
           "positive_money_flow": 2459713597028.65,
           "negative_money_flow": 0
+        },
+        {
+          "date": "2025-08-01T00:00:00",
+          "mfi": 73.05,
+          "signal": "neutral",
+          "price": 1592.24,
+          "volume": 1282938690,
+          "typical_price": 1590.5,
+          "raw_money_flow": 2040513986445.0,
+          "positive_money_flow": 0,
+          "negative_money_flow": 2040513986445.0
         }
       ],
       "statistics": {
-        "current_mfi": 79.37,
-        "mfi_5d_avg": 88.96,
-        "mfi_21d_avg": 93.62,
-        "mfi_50d_avg": 74.31,
+        "current_mfi": 73.05,
+        "mfi_5d_avg": 83.57,
+        "mfi_21d_avg": 92.91,
+        "mfi_50d_avg": 74.59,
         "mfi_min": 5.34,
         "mfi_max": 100.0,
         "mfi_std": 18.28,
-        "MFI_ROC": -20.63,
-        "MFI_ROC_5d_avg": -11.04,
-        "MFI_Acceleration": 0.47,
-        "MFI_Acceleration_5d_avg": -4.13,
+        "MFI_ROC": -26.95,
+        "MFI_ROC_5d_avg": -16.43,
+        "MFI_Acceleration": -6.32,
+        "MFI_Acceleration_5d_avg": -5.39,
         "overbought_days": 53,
         "oversold_days": 17,
         "neutral_days": 666,
@@ -24415,22 +24415,11 @@
       "symbol": "VNMID",
       "name": "VNMID - Mid Cap",
       "data_points": 736,
-      "latest_date": "2025-07-31T00:00:00",
+      "latest_date": "2025-08-01T00:00:00",
       "mfi_data": [
         {
-          "date": "2022-08-18T00:00:00",
-          "mfi": 76.06,
-          "signal": "neutral",
-          "price": 1727.93,
-          "volume": 206551900,
-          "typical_price": 1728.52,
-          "raw_money_flow": 357029778694.33,
-          "positive_money_flow": 0,
-          "negative_money_flow": 357029778694.33
-        },
-        {
           "date": "2022-08-19T00:00:00",
-          "mfi": 71.34,
+          "mfi": 68.83,
           "signal": "neutral",
           "price": 1718.67,
           "volume": 221428000,
@@ -32512,20 +32501,31 @@
           "raw_money_flow": 1583171755837.91,
           "positive_money_flow": 1583171755837.91,
           "negative_money_flow": 0
+        },
+        {
+          "date": "2025-08-01T00:00:00",
+          "mfi": 78.68,
+          "signal": "neutral",
+          "price": 2315.64,
+          "volume": 581170587,
+          "typical_price": 2322.52,
+          "raw_money_flow": 1349780311719.24,
+          "positive_money_flow": 1349780311719.24,
+          "negative_money_flow": 0
         }
       ],
       "statistics": {
-        "current_mfi": 78.51,
-        "mfi_5d_avg": 83.65,
-        "mfi_21d_avg": 86.88,
-        "mfi_50d_avg": 72.96,
+        "current_mfi": 78.68,
+        "mfi_5d_avg": 80.67,
+        "mfi_21d_avg": 86.99,
+        "mfi_50d_avg": 73.19,
         "mfi_min": 18.72,
         "mfi_max": 93.83,
         "mfi_std": 16.91,
-        "MFI_ROC": -14.86,
-        "MFI_ROC_5d_avg": -9.45,
-        "MFI_Acceleration": 5.77,
-        "MFI_Acceleration_5d_avg": -3.18,
+        "MFI_ROC": -14.92,
+        "MFI_ROC_5d_avg": -12.6,
+        "MFI_Acceleration": -0.06,
+        "MFI_Acceleration_5d_avg": -3.16,
         "overbought_days": 62,
         "oversold_days": 3,
         "neutral_days": 671,
@@ -32535,8 +32535,8 @@
         "current_signal": "neutral",
         "signal_strength": "neutral",
         "signal_confidence": 0.6,
-        "trend_direction": "neutral",
-        "momentum": "stable"
+        "trend_direction": "bearish",
+        "momentum": "increasing"
       },
       "analysis": {
         "market_condition": "neutral",
@@ -32550,22 +32550,11 @@
       "symbol": "VNSML",
       "name": "VNSML - Small Cap",
       "data_points": 736,
-      "latest_date": "2025-07-31T00:00:00",
+      "latest_date": "2025-08-01T00:00:00",
       "mfi_data": [
         {
-          "date": "2022-08-18T00:00:00",
-          "mfi": 76.78,
-          "signal": "neutral",
-          "price": 1575.79,
-          "volume": 108633600,
-          "typical_price": 1574.4,
-          "raw_money_flow": 171032377728.0,
-          "positive_money_flow": 0,
-          "negative_money_flow": 171032377728.0
-        },
-        {
           "date": "2022-08-19T00:00:00",
-          "mfi": 71.64,
+          "mfi": 69.12,
           "signal": "neutral",
           "price": 1571.01,
           "volume": 114362100,
@@ -40647,20 +40636,31 @@
           "raw_money_flow": 338325544156.18,
           "positive_money_flow": 338325544156.18,
           "negative_money_flow": 0
+        },
+        {
+          "date": "2025-08-01T00:00:00",
+          "mfi": 69.22,
+          "signal": "neutral",
+          "price": 1575.39,
+          "volume": 195046908,
+          "typical_price": 1575.59,
+          "raw_money_flow": 307313307619.36,
+          "positive_money_flow": 307313307619.36,
+          "negative_money_flow": 0
         }
       ],
       "statistics": {
-        "current_mfi": 63.23,
-        "mfi_5d_avg": 66.23,
-        "mfi_21d_avg": 70.44,
-        "mfi_50d_avg": 65.82,
+        "current_mfi": 69.22,
+        "mfi_5d_avg": 65.45,
+        "mfi_21d_avg": 70.86,
+        "mfi_50d_avg": 65.63,
         "mfi_min": 10.07,
         "mfi_max": 94.37,
-        "mfi_std": 17.38,
-        "MFI_ROC": -8.92,
-        "MFI_ROC_5d_avg": -8.15,
-        "MFI_Acceleration": 5.58,
-        "MFI_Acceleration_5d_avg": -0.4,
+        "mfi_std": 17.37,
+        "MFI_ROC": -3.89,
+        "MFI_ROC_5d_avg": -7.46,
+        "MFI_Acceleration": 5.03,
+        "MFI_Acceleration_5d_avg": 0.69,
         "overbought_days": 65,
         "oversold_days": 6,
         "neutral_days": 665,
@@ -40669,15 +40669,15 @@
       "signals": {
         "current_signal": "neutral",
         "signal_strength": "neutral",
-        "signal_confidence": 0.6,
+        "signal_confidence": 0.4,
         "trend_direction": "neutral",
-        "momentum": "stable"
+        "momentum": "increasing"
       },
       "analysis": {
         "market_condition": "neutral",
         "volume_analysis": "normal",
         "price_momentum": "weak",
-        "risk_level": "low",
+        "risk_level": "medium",
         "recommendation": "neutral"
       }
     }
@@ -40685,7 +40685,7 @@
   "market_overview": {
     "overall_sentiment": "neutral",
     "index_performance": {
-      "best_performer": "VN100",
+      "best_performer": "VNMID",
       "worst_performer": "VN30",
       "most_volatile": "VN100",
       "least_volatile": "VNMID"
@@ -40695,48 +40695,48 @@
       "oversold_indices": 0,
       "neutral_indices": 5
     },
-    "mfi_spread": 12.9,
+    "mfi_spread": 24.93,
     "correlation_matrix": {
       "VN30": {
         "VN30": 1.0,
-        "VN100": 0.9304149367697543,
-        "VNALL": 0.9336701150731405,
-        "VNMID": 0.7640078395913912,
-        "VNSML": 0.566472457727594
+        "VN100": 0.928990067429377,
+        "VNALL": 0.93218826436193,
+        "VNMID": 0.7615071754967786,
+        "VNSML": 0.5645625485048831
       },
       "VN100": {
-        "VN30": 0.9304149367697543,
+        "VN30": 0.928990067429377,
         "VN100": 1.0,
-        "VNALL": 0.9830539937896322,
-        "VNMID": 0.8587654275319349,
-        "VNSML": 0.6174277257092329
+        "VNALL": 0.9830596268751025,
+        "VNMID": 0.8588221013834267,
+        "VNSML": 0.6172700765656733
       },
       "VNALL": {
-        "VN30": 0.9336701150731405,
-        "VN100": 0.9830539937896322,
+        "VN30": 0.93218826436193,
+        "VN100": 0.9830596268751025,
         "VNALL": 1.0,
-        "VNMID": 0.8655579109462649,
-        "VNSML": 0.6376527092085986
+        "VNMID": 0.8656002964743028,
+        "VNSML": 0.6374755641066887
       },
       "VNMID": {
-        "VN30": 0.7640078395913912,
-        "VN100": 0.8587654275319349,
-        "VNALL": 0.8655579109462649,
+        "VN30": 0.7615071754967786,
+        "VN100": 0.8588221013834267,
+        "VNALL": 0.8656002964743028,
         "VNMID": 1.0,
-        "VNSML": 0.7492110350257432
+        "VNSML": 0.7488346761284258
       },
       "VNSML": {
-        "VN30": 0.566472457727594,
-        "VN100": 0.6174277257092329,
-        "VNALL": 0.6376527092085986,
-        "VNMID": 0.7492110350257432,
+        "VN30": 0.5645625485048831,
+        "VN100": 0.6172700765656733,
+        "VNALL": 0.6374755641066887,
+        "VNMID": 0.7488346761284258,
         "VNSML": 1.0
       }
     }
   },
   "vietnamese_insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-31T22:47:53.820443",
+      "analysis_timestamp": "2025-08-01T17:02:11.440801",
       "data_quality": {
         "quality": "Tốt",
         "average_data_points": 736,
@@ -40751,41 +40751,41 @@
       "overall_signal": {
         "direction": "Tích cực",
         "strength": "Vừa phải",
-        "confidence": 0.58,
-        "consensus_score": 0.7
+        "confidence": 0.51,
+        "consensus_score": 0.55
       },
       "component_signals": [
         {
           "name": "Mức MFI Hiện tại",
           "direction": "Tích cực",
           "strength": "Mạnh",
-          "value": 70.24,
+          "value": 67.72,
           "weight": 0.2,
-          "description": "MFI trung bình của thị trường là 70.2."
+          "description": "MFI trung bình của thị trường là 67.7."
         },
         {
           "name": "Động lượng (ROC)",
           "direction": "Tiêu cực",
           "strength": "Rất mạnh",
-          "value": -18.24,
+          "value": -20.93,
           "weight": 0.2,
-          "description": "Tốc độ thay đổi MFI trung bình (5 ngày): -18.24."
+          "description": "Tốc độ thay đổi MFI trung bình (5 ngày): -20.93."
         },
         {
           "name": "Gia tốc Dòng tiền",
-          "direction": "Tích cực",
+          "direction": "Tiêu cực",
           "strength": "Mạnh",
-          "value": 2.48,
+          "value": -2.69,
           "weight": 0.15,
-          "description": "Gia tốc MFI: 2.48. Cho thấy động lượng đang mạnh lên hay yếu đi."
+          "description": "Gia tốc MFI: -2.69. Cho thấy động lượng đang mạnh lên hay yếu đi."
         },
         {
           "name": "Cấu trúc Thị trường (Spread)",
           "direction": "Tích cực",
-          "strength": "Mạnh",
-          "value": 12.9,
+          "strength": "Rất mạnh",
+          "value": 24.93,
           "weight": 0.25,
-          "description": "Chênh lệch MFI Small-cap vs Large-cap: 12.90. Dương cho thấy tâm lý ưa thích rủi ro (risk-on)."
+          "description": "Chênh lệch MFI Small-cap vs Large-cap: 24.93. Dương cho thấy tâm lý ưa thích rủi ro (risk-on)."
         },
         {
           "name": "Mức độ Cực đoan",
@@ -40812,11 +40812,11 @@
       "trading_recommendation": {
         "action": "Thận trọng, giảm quy mô giao dịch",
         "reasoning": "Tín hiệu tăng vừa phải, cần theo dõi thêm. Cảnh báo: Xu hướng-Động lượng Phân kỳ: Mức MFI chung và tốc độ thay đổi đang ngược chiều nhau.",
-        "confidence": 0.58
+        "confidence": 0.51
       },
       "risk_assessment": {
         "risk_level": "Trung bình",
-        "consensus_score": 0.7,
+        "consensus_score": 0.55,
         "recommendation": "Rủi ro trung bình. Giao dịch bình thường nhưng tuân thủ kỷ luật.",
         "risk_factors": [
           "Xu hướng-Động lượng Phân kỳ: Mức MFI chung và tốc độ thay đổi đang ngược chiều nhau."
@@ -40826,70 +40826,70 @@
         "short_term": {
           "timeframe": "1-2 tuần",
           "outlook": "Tiêu cực, có khả năng điều chỉnh trong ngắn hạn.",
-          "confidence": 0.52
+          "confidence": 0.46
         },
         "medium_term": {
           "timeframe": "1-3 tháng",
           "outlook": "Triển vọng tích cực khi dòng tiền chấp nhận rủi ro.",
-          "confidence": 0.41
+          "confidence": 0.36
         }
       },
       "market_regime": {
-        "regime": "Quá mua",
-        "description": "Thị trường đang ở vùng quá mua, cần thận trọng.",
-        "average_mfi": 70.24,
+        "regime": "Trung tính",
+        "description": "Thị trường ở trạng thái cân bằng, dòng tiền ổn định.",
+        "average_mfi": 67.72,
         "supporting_signals": "Tín hiệu phối hợp cho thấy xu hướng chung là tích cực."
       },
       "key_insights": [
-        "Tín hiệu tổng thể: **Tích cực (Vừa phải)** với độ tin cậy 58%.",
+        "Tín hiệu tổng thể: **Tích cực (Vừa phải)** với độ tin cậy 51%.",
         "Cấu trúc thị trường **ủng hộ xu hướng tăng (Risk-on)**, dòng tiền đang ưu tiên nhóm vốn hóa nhỏ và vừa.",
-        "Động lượng đang **mạnh lên**, củng cố cho xu hướng hiện tại.",
+        "Động lượng đang có dấu hiệu **chậm lại**, một cảnh báo sớm cho thấy xu hướng hiện tại có thể sắp chững lại.",
         "Phát hiện **mâu thuẫn tín hiệu** quan trọng: Xu hướng-Động lượng Phân kỳ: Mức MFI chung và tốc độ thay đổi đang ngược chiều nhau."
       ]
     },
     "current_state": {
       "indices_summary": {
-        "VN30": 50.33,
-        "VN100": 79.74,
-        "VNALL": 79.37,
-        "VNMID": 78.51,
-        "VNSML": 63.23
+        "VN30": 44.29,
+        "VN100": 73.38,
+        "VNALL": 73.05,
+        "VNMID": 78.68,
+        "VNSML": 69.22
       },
-      "mfi_spread_VNSML_vs_VN30": 12.9,
+      "mfi_spread_VNSML_vs_VN30": 24.93,
       "mfi_correlation": {
         "VN30": {
           "VN30": 1.0,
-          "VN100": 0.9304149367697543,
-          "VNALL": 0.9336701150731405,
-          "VNMID": 0.7640078395913912,
-          "VNSML": 0.566472457727594
+          "VN100": 0.928990067429377,
+          "VNALL": 0.93218826436193,
+          "VNMID": 0.7615071754967786,
+          "VNSML": 0.5645625485048831
         },
         "VN100": {
-          "VN30": 0.9304149367697543,
+          "VN30": 0.928990067429377,
           "VN100": 1.0,
-          "VNALL": 0.9830539937896322,
-          "VNMID": 0.8587654275319349,
-          "VNSML": 0.6174277257092329
+          "VNALL": 0.9830596268751025,
+          "VNMID": 0.8588221013834267,
+          "VNSML": 0.6172700765656733
         },
         "VNALL": {
-          "VN30": 0.9336701150731405,
-          "VN100": 0.9830539937896322,
+          "VN30": 0.93218826436193,
+          "VN100": 0.9830596268751025,
           "VNALL": 1.0,
-          "VNMID": 0.8655579109462649,
-          "VNSML": 0.6376527092085986
+          "VNMID": 0.8656002964743028,
+          "VNSML": 0.6374755641066887
         },
         "VNMID": {
-          "VN30": 0.7640078395913912,
-          "VN100": 0.8587654275319349,
-          "VNALL": 0.8655579109462649,
+          "VN30": 0.7615071754967786,
+          "VN100": 0.8588221013834267,
+          "VNALL": 0.8656002964743028,
           "VNMID": 1.0,
-          "VNSML": 0.7492110350257432
+          "VNSML": 0.7488346761284258
         },
         "VNSML": {
-          "VN30": 0.566472457727594,
-          "VN100": 0.6174277257092329,
-          "VNALL": 0.6376527092085986,
-          "VNMID": 0.7492110350257432,
+          "VN30": 0.5645625485048831,
+          "VN100": 0.6172700765656733,
+          "VNALL": 0.6374755641066887,
+          "VNMID": 0.7488346761284258,
           "VNSML": 1.0
         }
       }

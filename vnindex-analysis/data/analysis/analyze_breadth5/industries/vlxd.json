@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Vật liệu xây dựng",
       "description": "Phân tích breadth cho vật liệu xây dựng",
       "version": "3.0",
-      "generated_at": "2025-07-31T22:51:17.741243",
+      "generated_at": "2025-08-01T17:04:42.637985",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-07-31",
-      "total_trading_days": 392,
-      "analysis_period": "392 ngày giao dịch"
+      "end_date": "2025-08-01",
+      "total_trading_days": 393,
+      "analysis_period": "393 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -22387,10 +22387,67 @@
         "ema_200_change_5d": 0.0,
         "overall_momentum": "Giảm nhẹ"
       }
+    },
+    "2025-08-01": {
+      "basic_stats": {
+        "total_stocks": 3,
+        "stocks_with_data": 3
+      },
+      "ema_5": {
+        "above_count": 2,
+        "below_count": 1,
+        "above_percentage": 66.7,
+        "below_percentage": 33.3,
+        "strength": "Trung bình",
+        "sentiment": "Tích cực"
+      },
+      "ema_10": {
+        "above_count": 2,
+        "below_count": 1,
+        "above_percentage": 66.7,
+        "below_percentage": 33.3,
+        "strength": "Trung bình",
+        "sentiment": "Tích cực"
+      },
+      "ema_20": {
+        "above_count": 3,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_50": {
+        "above_count": 3,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_200": {
+        "above_count": 3,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường tăng",
+        "confidence": 1.0,
+        "description": "Vật liệu xây dựng thể hiện đặc điểm thị trường tăng"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": 0.0,
+        "ema_50_change_5d": 0.0,
+        "ema_200_change_5d": 0.0,
+        "overall_momentum": "Giảm nhẹ"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-07-31",
+    "latest_date": "2025-08-01",
     "key_metrics": {
       "breadth_strength": 100.0,
       "participation_level": 100.0,
@@ -22403,15 +22460,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-07-31T22:51:17.739431",
+      "analysis_timestamp": "2025-08-01T17:04:42.636356",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 392
+        "data_points": 393
       },
-      "analysis_period": "2024-01-02 to 2025-07-31"
+      "analysis_period": "2024-01-02 to 2025-08-01"
     },
     "signal_coordination": {
       "overall_signal": {
@@ -22449,9 +22506,9 @@
           "name": "Mức độ cực đoan",
           "direction": "Tiêu cực",
           "strength": "Vừa phải",
-          "value": 1.18,
+          "value": 1.17,
           "weight": 0.15,
-          "description": "Z-score EMA 50: 1.18"
+          "description": "Z-score EMA 50: 1.17"
         },
         {
           "name": "Mức độ tham gia",
@@ -22507,7 +22564,7 @@
     },
     "current_state": {
       "percentages": {
-        "ema_5": 33.33,
+        "ema_5": 66.67,
         "ema_10": 66.67,
         "ema_20": 100.0,
         "ema_50": 100.0,
