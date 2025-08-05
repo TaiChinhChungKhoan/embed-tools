@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Công nghệ",
       "description": "Phân tích breadth cho công nghệ",
       "version": "3.0",
-      "generated_at": "2025-08-01T17:04:48.413405",
+      "generated_at": "2025-08-04T23:33:14.092953",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-08-01",
-      "total_trading_days": 393,
-      "analysis_period": "393 ngày giao dịch"
+      "end_date": "2025-08-04",
+      "total_trading_days": 394,
+      "analysis_period": "394 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -22444,10 +22444,67 @@
         "ema_200_change_5d": -66.67,
         "overall_momentum": "Giảm mạnh"
       }
+    },
+    "2025-08-04": {
+      "basic_stats": {
+        "total_stocks": 3,
+        "stocks_with_data": 3
+      },
+      "ema_5": {
+        "above_count": 1,
+        "below_count": 2,
+        "above_percentage": 33.3,
+        "below_percentage": 66.7,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_10": {
+        "above_count": 1,
+        "below_count": 2,
+        "above_percentage": 33.3,
+        "below_percentage": 66.7,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_20": {
+        "above_count": 1,
+        "below_count": 2,
+        "above_percentage": 33.3,
+        "below_percentage": 66.7,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_50": {
+        "above_count": 3,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_200": {
+        "above_count": 1,
+        "below_count": 2,
+        "above_percentage": 33.3,
+        "below_percentage": 66.7,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "market_regime": {
+        "classification": "Thị trường chuyển tiếp",
+        "confidence": 0.5,
+        "description": "Công nghệ thể hiện đặc điểm thị trường chuyển tiếp"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": -66.67,
+        "ema_50_change_5d": 0.0,
+        "ema_200_change_5d": -66.67,
+        "overall_momentum": "Giảm mạnh"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-08-01",
+    "latest_date": "2025-08-04",
     "key_metrics": {
       "breadth_strength": 33.3,
       "participation_level": 100.0,
@@ -22460,21 +22517,21 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-08-01T17:04:48.411594",
+      "analysis_timestamp": "2025-08-04T23:33:14.090193",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 393
+        "data_points": 394
       },
-      "analysis_period": "2024-01-02 to 2025-08-01"
+      "analysis_period": "2024-01-02 to 2025-08-04"
     },
     "signal_coordination": {
       "overall_signal": {
         "direction": "Tiêu cực",
         "strength": "Yếu",
-        "confidence": 0.69,
+        "confidence": 0.68,
         "consensus_score": 0.7
       },
       "component_signals": [
@@ -22506,9 +22563,9 @@
           "name": "Mức độ cực đoan",
           "direction": "Tiêu cực",
           "strength": "Vừa phải",
-          "value": 1.48,
+          "value": 1.47,
           "weight": 0.15,
-          "description": "Z-score EMA 50: 1.48"
+          "description": "Z-score EMA 50: 1.47"
         },
         {
           "name": "Mức độ tham gia",
@@ -22525,14 +22582,14 @@
       "trading_recommendation": {
         "action": "QUAN SÁT",
         "reasoning": "Tín hiệu giảm yếu, chờ xác nhận",
-        "confidence": 0.69,
+        "confidence": 0.68,
         "signal_strength": "Yếu",
         "conflicts": []
       },
       "risk_assessment": {
         "risk_level": "Trung bình - Cao",
         "risk_factors": [
-          "Biến động cao (27.36)"
+          "Biến động cao (29.62)"
         ],
         "consensus_score": 0.7,
         "recommendation": "Thận trọng với quy mô vị thế, quản lý rủi ro tốt"
@@ -22540,7 +22597,7 @@
       "market_outlook": {
         "short_term": {
           "outlook": "Tiêu cực nhẹ",
-          "confidence": 0.69,
+          "confidence": 0.68,
           "timeframe": "1-2 tuần"
         },
         "medium_term": {
@@ -22553,7 +22610,7 @@
         "regime": "Thị trường giảm giá",
         "description": "Thị trường giảm giá dựa trên độ rộng EMA 200",
         "ema_200_percentage": 33.33,
-        "confidence": 0.69,
+        "confidence": 0.68,
         "supporting_signals": 3
       },
       "key_insights": [
@@ -22563,7 +22620,7 @@
     },
     "current_state": {
       "percentages": {
-        "ema_5": 66.67,
+        "ema_5": 33.33,
         "ema_10": 33.33,
         "ema_20": 33.33,
         "ema_50": 100.0,
