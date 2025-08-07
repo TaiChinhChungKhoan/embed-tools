@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Nhựa",
       "description": "Phân tích breadth cho nhựa",
       "version": "3.0",
-      "generated_at": "2025-08-06T20:37:15.840546",
+      "generated_at": "2025-08-07T23:11:43.297700",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-08-06",
-      "total_trading_days": 396,
-      "analysis_period": "396 ngày giao dịch"
+      "end_date": "2025-08-07",
+      "total_trading_days": 397,
+      "analysis_period": "397 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -22615,10 +22615,67 @@
         "ema_200_change_5d": 0.0,
         "overall_momentum": "Giảm nhẹ"
       }
+    },
+    "2025-08-07": {
+      "basic_stats": {
+        "total_stocks": 2,
+        "stocks_with_data": 2
+      },
+      "ema_5": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_10": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_20": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_50": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "ema_200": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường tăng",
+        "confidence": 1.0,
+        "description": "Nhựa thể hiện đặc điểm thị trường tăng"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": 0.0,
+        "ema_50_change_5d": 0.0,
+        "ema_200_change_5d": 0.0,
+        "overall_momentum": "Giảm nhẹ"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-08-06",
+    "latest_date": "2025-08-07",
     "key_metrics": {
       "breadth_strength": 100.0,
       "participation_level": 100.0,
@@ -22631,15 +22688,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-08-06T20:37:15.838620",
+      "analysis_timestamp": "2025-08-07T23:11:43.294728",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 396
+        "data_points": 397
       },
-      "analysis_period": "2024-01-02 to 2025-08-06"
+      "analysis_period": "2024-01-02 to 2025-08-07"
     },
     "signal_coordination": {
       "overall_signal": {
@@ -22677,9 +22734,9 @@
           "name": "Mức độ cực đoan",
           "direction": "Tiêu cực",
           "strength": "Vừa phải",
-          "value": 1.72,
+          "value": 1.71,
           "weight": 0.15,
-          "description": "Z-score EMA 50: 1.72"
+          "description": "Z-score EMA 50: 1.71"
         },
         {
           "name": "Mức độ tham gia",
@@ -22708,7 +22765,7 @@
         "risk_level": "Trung bình - Cao",
         "risk_factors": [
           "Xung đột: Xu hướng và mức độ cực đoan không đồng thuận",
-          "Biến động cao (24.47)"
+          "Biến động cao (23.51)"
         ],
         "consensus_score": 0.6,
         "recommendation": "Thận trọng với quy mô vị thế, quản lý rủi ro tốt"

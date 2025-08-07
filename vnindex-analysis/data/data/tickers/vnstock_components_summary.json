@@ -231,7 +231,6 @@
       "MCG",
       "MCH",
       "MCM",
-      "MCO",
       "MFS",
       "MHC",
       "MIG",
@@ -299,6 +298,7 @@
       "PSB",
       "PSD",
       "PSI",
+      "PSP",
       "PSW",
       "PTB",
       "PTC",
@@ -410,7 +410,6 @@
       "VFS",
       "VGC",
       "VGI",
-      "VGR",
       "VGS",
       "VGT",
       "VHC",
@@ -684,7 +683,6 @@
       "MCG",
       "MCH",
       "MCM",
-      "MCO",
       "MFS",
       "MHC",
       "MIG",
@@ -752,6 +750,7 @@
       "PSB",
       "PSD",
       "PSI",
+      "PSP",
       "PSW",
       "PTB",
       "PTC",
@@ -863,7 +862,6 @@
       "VFS",
       "VGC",
       "VGI",
-      "VGR",
       "VGS",
       "VGT",
       "VHC",
@@ -908,8 +906,8 @@
       "MZG",
       "DSE"
     ],
-    "valid_count": 451,
-    "total_count": 451,
-    "volume_filtered_count": 458
+    "valid_count": 450,
+    "total_count": 450,
+    "volume_filtered_count": 469
   }
 }
