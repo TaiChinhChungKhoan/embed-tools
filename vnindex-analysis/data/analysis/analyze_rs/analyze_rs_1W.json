@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2025-08-11T22:29:08.559405",
+  "analysis_date": "2025-08-11T23:39:12.599266",
   "timeframe": "1W",
   "benchmark": "VNINDEX",
   "lookback_period": 21,
@@ -37018,7 +37018,7 @@
   "insights": {
     "market_overview": {
       "title": "Tổng quan thị trường (Macro)",
-      "analysis_date": "2025-08-11T22:29:08.559405",
+      "analysis_date": "2025-08-11T23:39:12.599266",
       "timeframe": "1W",
       "benchmark": "VNINDEX",
       "market_indices": {
@@ -37157,7 +37157,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.9).",
-            "velocity": 93.0,
+            "velocity": 0.9,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập"
           },
@@ -37167,7 +37167,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
-            "velocity": 13.1,
+            "velocity": 0.1,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập"
           },
@@ -37177,7 +37177,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.9).",
-            "velocity": 190.1,
+            "velocity": 1.9,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37187,7 +37187,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.4).",
-            "velocity": 139.2,
+            "velocity": 1.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37197,7 +37197,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.9).",
-            "velocity": 189.2,
+            "velocity": 1.9,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           }
@@ -37209,7 +37209,7 @@
             "description": "Đi ngang",
             "rrg_position": "Improving (Cải thiện)",
             "money_flow": "Dòng tiền đang quay trở lại mạnh mẽ (tốc độ: 0.6), tín hiệu rất tích cực.",
-            "velocity": 64.3,
+            "velocity": 0.6,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập"
           },
@@ -37219,7 +37219,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu.",
-            "velocity": 86.4,
+            "velocity": 0.9,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm"
           },
@@ -37229,7 +37229,7 @@
             "description": "Đi ngang",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 2.1).",
-            "velocity": 206.2,
+            "velocity": 2.1,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập"
           },
@@ -37239,7 +37239,7 @@
             "description": "Đi ngang",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu.",
-            "velocity": 43.4,
+            "velocity": 0.4,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập"
           },
@@ -37249,7 +37249,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.6), tín hiệu phục hồi.",
-            "velocity": 56.1,
+            "velocity": 0.6,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm"
           }
@@ -37267,11 +37267,11 @@
             "custom_id": "cong-nghe",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Tăng trưởng mạnh",
-            "weighted_speed": 1556.21,
-            "acceleration": 1253.59,
-            "volatility": 23.366,
-            "current_crs": -16.6,
-            "strength_score": -16.6,
+            "weighted_speed": 1.5562111133119703,
+            "acceleration": 1.2535871037595614,
+            "volatility": 23.365689674686237,
+            "current_crs": -0.1662363239610084,
+            "strength_score": -16.62363239610084,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "7.1%"
@@ -37447,11 +37447,11 @@
                 "custom_id": "cong-nghe",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Tăng trưởng mạnh",
-                "weighted_speed": 1556.21,
-                "acceleration": 1253.59,
-                "volatility": 23.366,
-                "current_crs": -16.6,
-                "strength_score": -16.6,
+                "weighted_speed": 1.5562111133119703,
+                "acceleration": 1.2535871037595614,
+                "volatility": 23.365689674686237,
+                "current_crs": -0.1662363239610084,
+                "strength_score": -16.62363239610084,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "7.1%"
@@ -37490,7 +37490,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
-            "velocity": 41.9,
+            "velocity": 0.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập"
           },
@@ -37500,7 +37500,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-            "velocity": 38.5,
+            "velocity": 0.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37510,7 +37510,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.4).",
-            "velocity": 142.0,
+            "velocity": 1.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37520,7 +37520,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-            "velocity": 40.0,
+            "velocity": 0.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37530,7 +37530,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.7), tín hiệu phục hồi.",
-            "velocity": 67.3,
+            "velocity": 0.7,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm"
           }
@@ -37542,7 +37542,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.7), tín hiệu phục hồi.",
-            "velocity": 67.3,
+            "velocity": 0.7,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm"
           },
@@ -37552,7 +37552,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-            "velocity": 40.0,
+            "velocity": 0.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37562,7 +37562,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.4).",
-            "velocity": 142.0,
+            "velocity": 1.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37572,7 +37572,7 @@
             "description": "Xu hướng tăng tích cực",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-            "velocity": 38.5,
+            "velocity": 0.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng"
           },
@@ -37582,7 +37582,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
-            "velocity": 41.9,
+            "velocity": 0.4,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập"
           }
@@ -37600,11 +37600,11 @@
             "custom_id": "cong-nghe",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Tăng trưởng mạnh",
-            "weighted_speed": 1556.21,
-            "acceleration": 1253.59,
-            "volatility": 23.366,
-            "current_crs": -16.6,
-            "strength_score": -16.6,
+            "weighted_speed": 1.5562111133119703,
+            "acceleration": 1.2535871037595614,
+            "volatility": 23.365689674686237,
+            "current_crs": -0.1662363239610084,
+            "strength_score": -16.62363239610084,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "7.1%"
@@ -37780,11 +37780,11 @@
                 "custom_id": "cong-nghe",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Tăng trưởng mạnh",
-                "weighted_speed": 1556.21,
-                "acceleration": 1253.59,
-                "volatility": 23.366,
-                "current_crs": -16.6,
-                "strength_score": -16.6,
+                "weighted_speed": 1.5562111133119703,
+                "acceleration": 1.2535871037595614,
+                "volatility": 23.365689674686237,
+                "current_crs": -0.1662363239610084,
+                "strength_score": -16.62363239610084,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "7.1%"
@@ -37823,7 +37823,7 @@
             "description": "Xu hướng tăng mạnh, vượt trội thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.8).",
-            "velocity": 183.8,
+            "velocity": 1.8,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng",
             "symbol": "GEX",
@@ -37835,7 +37835,7 @@
             "description": "Xu hướng tăng mạnh, vượt trội thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 3.0).",
-            "velocity": 295.9,
+            "velocity": 3.0,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng",
             "symbol": "HSL",
@@ -37847,7 +37847,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại nhưng vẫn mạnh, cần theo dõi.",
-            "velocity": 326.7,
+            "velocity": 3.3,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập",
             "symbol": "LDG",
@@ -37871,7 +37871,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Weakening (Suy yếu)",
             "money_flow": "Dòng tiền không ổn định, có thể đang chững lại đà giảm.",
-            "velocity": 431.7,
+            "velocity": 4.3,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập",
             "symbol": "GEE",
@@ -37883,7 +37883,7 @@
             "description": "Xu hướng tăng mạnh, vượt trội thị trường",
             "rrg_position": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại nhưng vẫn mạnh, cần theo dõi.",
-            "velocity": 208.3,
+            "velocity": 2.1,
             "performance_status": "Vượt trội",
             "rs_trend": "Tăng trưởng",
             "symbol": "VE9",
@@ -37895,7 +37895,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Weakening (Suy yếu)",
             "money_flow": "Dòng tiền đang rút ra nhanh (tốc độ: 3.0), rủi ro suy yếu cao.",
-            "velocity": 303.4,
+            "velocity": 3.0,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập",
             "symbol": "VIC",
@@ -37907,7 +37907,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Weakening (Suy yếu)",
             "money_flow": "Dòng tiền đang rút ra nhanh (tốc độ: 2.1), rủi ro suy yếu cao.",
-            "velocity": 208.3,
+            "velocity": 2.1,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập",
             "symbol": "SMC",
@@ -37919,7 +37919,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Weakening (Suy yếu)",
             "money_flow": "Dòng tiền đang rút ra nhanh (tốc độ: 1.8), rủi ro suy yếu cao.",
-            "velocity": 176.0,
+            "velocity": 1.8,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập",
             "symbol": "HHS",
@@ -37931,7 +37931,7 @@
             "description": "Đi ngang nhưng mạnh hơn thị trường",
             "rrg_position": "Weakening (Suy yếu)",
             "money_flow": "Dòng tiền đang rút ra nhanh (tốc độ: 1.2), rủi ro suy yếu cao.",
-            "velocity": 121.6,
+            "velocity": 1.2,
             "performance_status": "Vượt trội",
             "rs_trend": "Trung lập",
             "symbol": "CRC",
@@ -37945,7 +37945,7 @@
             "description": "Đi ngang",
             "rrg_position": "Improving (Cải thiện)",
             "money_flow": "Dòng tiền đang quay trở lại mạnh mẽ (tốc độ: 2.5), tín hiệu rất tích cực.",
-            "velocity": 247.1,
+            "velocity": 2.5,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập",
             "symbol": "PGN",
@@ -37957,7 +37957,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu.",
-            "velocity": 411.5,
+            "velocity": 4.1,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm",
             "symbol": "BLF",
@@ -37981,7 +37981,7 @@
             "description": "Đi ngang",
             "rrg_position": "Improving (Cải thiện)",
             "money_flow": "Dòng tiền đang quay trở lại mạnh mẽ (tốc độ: 8.3), tín hiệu rất tích cực.",
-            "velocity": 834.2,
+            "velocity": 8.3,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập",
             "symbol": "CTP",
@@ -38005,7 +38005,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu.",
-            "velocity": 590.4,
+            "velocity": 5.9,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm",
             "symbol": "ACV",
@@ -38017,7 +38017,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 3.7), tín hiệu phục hồi.",
-            "velocity": 366.4,
+            "velocity": 3.7,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm",
             "symbol": "SVN",
@@ -38029,7 +38029,7 @@
             "description": "Xu hướng giảm mạnh, yếu hơn thị trường",
             "rrg_position": "Improving (Cải thiện)",
             "money_flow": "Dòng tiền phục hồi yếu, chưa rõ xu hướng.",
-            "velocity": 605.0,
+            "velocity": 6.1,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Suy giảm",
             "symbol": "APP",
@@ -38041,7 +38041,7 @@
             "description": "Đi ngang",
             "rrg_position": "Improving (Cải thiện)",
             "money_flow": "Dòng tiền đang quay trở lại mạnh mẽ (tốc độ: 1.1), tín hiệu rất tích cực.",
-            "velocity": 112.7,
+            "velocity": 1.1,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập",
             "symbol": "PV2",
@@ -38053,7 +38053,7 @@
             "description": "Đi ngang",
             "rrg_position": "Improving (Cải thiện)",
             "money_flow": "Dòng tiền đang quay trở lại mạnh mẽ (tốc độ: 2.2), tín hiệu rất tích cực.",
-            "velocity": 215.0,
+            "velocity": 2.2,
             "performance_status": "Kém hiệu quả",
             "rs_trend": "Trung lập",
             "symbol": "NTC",
@@ -38073,11 +38073,11 @@
             "custom_id": "",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Tăng trưởng mạnh",
-            "weighted_speed": 1572.71,
-            "acceleration": 389.83,
-            "volatility": 25.474,
-            "current_crs": -33.3,
-            "strength_score": -33.3,
+            "weighted_speed": 1.5727149039524382,
+            "acceleration": 0.3898302932074247,
+            "volatility": 25.47421690644094,
+            "current_crs": -0.3327845103666217,
+            "strength_score": -33.27845103666217,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "10.7%",
@@ -38088,11 +38088,11 @@
             "custom_id": "",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Suy giảm mạnh",
-            "weighted_speed": 3578.43,
-            "acceleration": 3721.98,
-            "volatility": 24.567,
-            "current_crs": -6.7,
-            "strength_score": -6.7,
+            "weighted_speed": 3.578425811481244,
+            "acceleration": 3.7219823997584753,
+            "volatility": 24.56676565630772,
+            "current_crs": -0.0668441361626736,
+            "strength_score": -6.68441361626736,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "9.4%",
@@ -38103,11 +38103,11 @@
             "custom_id": "",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Suy giảm mạnh",
-            "weighted_speed": 2317.57,
-            "acceleration": 2771.07,
-            "volatility": 23.086,
-            "current_crs": -0.9,
-            "strength_score": -0.9,
+            "weighted_speed": 2.317573913559267,
+            "acceleration": 2.7710684736201134,
+            "volatility": 23.086123824625183,
+            "current_crs": -0.008600713143624206,
+            "strength_score": -0.8600713143624206,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "8.6%",
@@ -38118,11 +38118,11 @@
             "custom_id": "",
             "speed_category": "Nhanh (Giảm tốc)",
             "direction": "Tăng trưởng",
-            "weighted_speed": 839.55,
-            "acceleration": -372.22,
-            "volatility": 23.046,
-            "current_crs": -14.5,
-            "strength_score": -14.5,
+            "weighted_speed": 0.8395548200504902,
+            "acceleration": -0.3722239687904385,
+            "volatility": 23.04580856471004,
+            "current_crs": -0.1453974689337788,
+            "strength_score": -14.539746893377881,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "10.8%",
@@ -38133,11 +38133,11 @@
             "custom_id": "",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Suy giảm mạnh",
-            "weighted_speed": 2568.71,
-            "acceleration": 2567.26,
-            "volatility": 22.833,
-            "current_crs": -32.2,
-            "strength_score": -32.2,
+            "weighted_speed": 2.568712556496382,
+            "acceleration": 2.5672625734342978,
+            "volatility": 22.832966499786455,
+            "current_crs": -0.32157780697249927,
+            "strength_score": -32.157780697249926,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "18.0%",
@@ -38148,11 +38148,11 @@
             "custom_id": "",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Tăng trưởng mạnh",
-            "weighted_speed": 1218.55,
-            "acceleration": 1066.7,
-            "volatility": 22.361,
-            "current_crs": -20.2,
-            "strength_score": -20.2,
+            "weighted_speed": 1.218553627579955,
+            "acceleration": 1.0666956915132557,
+            "volatility": 22.361319467426796,
+            "current_crs": -0.20242169702485557,
+            "strength_score": -20.24216970248556,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "14.0%",
@@ -38163,11 +38163,11 @@
             "custom_id": "",
             "speed_category": "Rất nhanh (Tăng tốc)",
             "direction": "Suy giảm mạnh",
-            "weighted_speed": 2371.25,
-            "acceleration": 1958.92,
-            "volatility": 22.178,
-            "current_crs": -27.2,
-            "strength_score": -27.2,
+            "weighted_speed": 2.3712503023100178,
+            "acceleration": 1.958915620758359,
+            "volatility": 22.177828380206197,
+            "current_crs": -0.2718831124930843,
+            "strength_score": -27.188311249308427,
             "risk_level": "Trung bình",
             "suggested_action": "Giảm",
             "stop_loss_distance": "17.4%",
@@ -38642,11 +38642,11 @@
                 "custom_id": "",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Tăng trưởng mạnh",
-                "weighted_speed": 1572.71,
-                "acceleration": 389.83,
-                "volatility": 25.474,
-                "current_crs": -33.3,
-                "strength_score": -33.3,
+                "weighted_speed": 1.5727149039524382,
+                "acceleration": 0.3898302932074247,
+                "volatility": 25.47421690644094,
+                "current_crs": -0.3327845103666217,
+                "strength_score": -33.27845103666217,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "10.7%",
@@ -38657,11 +38657,11 @@
                 "custom_id": "",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Suy giảm mạnh",
-                "weighted_speed": 3578.43,
-                "acceleration": 3721.98,
-                "volatility": 24.567,
-                "current_crs": -6.7,
-                "strength_score": -6.7,
+                "weighted_speed": 3.578425811481244,
+                "acceleration": 3.7219823997584753,
+                "volatility": 24.56676565630772,
+                "current_crs": -0.0668441361626736,
+                "strength_score": -6.68441361626736,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "9.4%",
@@ -38672,11 +38672,11 @@
                 "custom_id": "",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Suy giảm mạnh",
-                "weighted_speed": 2317.57,
-                "acceleration": 2771.07,
-                "volatility": 23.086,
-                "current_crs": -0.9,
-                "strength_score": -0.9,
+                "weighted_speed": 2.317573913559267,
+                "acceleration": 2.7710684736201134,
+                "volatility": 23.086123824625183,
+                "current_crs": -0.008600713143624206,
+                "strength_score": -0.8600713143624206,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "8.6%",
@@ -38687,11 +38687,11 @@
                 "custom_id": "",
                 "speed_category": "Nhanh (Giảm tốc)",
                 "direction": "Tăng trưởng",
-                "weighted_speed": 839.55,
-                "acceleration": -372.22,
-                "volatility": 23.046,
-                "current_crs": -14.5,
-                "strength_score": -14.5,
+                "weighted_speed": 0.8395548200504902,
+                "acceleration": -0.3722239687904385,
+                "volatility": 23.04580856471004,
+                "current_crs": -0.1453974689337788,
+                "strength_score": -14.539746893377881,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "10.8%",
@@ -38702,11 +38702,11 @@
                 "custom_id": "",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Suy giảm mạnh",
-                "weighted_speed": 2568.71,
-                "acceleration": 2567.26,
-                "volatility": 22.833,
-                "current_crs": -32.2,
-                "strength_score": -32.2,
+                "weighted_speed": 2.568712556496382,
+                "acceleration": 2.5672625734342978,
+                "volatility": 22.832966499786455,
+                "current_crs": -0.32157780697249927,
+                "strength_score": -32.157780697249926,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "18.0%",
@@ -38717,11 +38717,11 @@
                 "custom_id": "",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Tăng trưởng mạnh",
-                "weighted_speed": 1218.55,
-                "acceleration": 1066.7,
-                "volatility": 22.361,
-                "current_crs": -20.2,
-                "strength_score": -20.2,
+                "weighted_speed": 1.218553627579955,
+                "acceleration": 1.0666956915132557,
+                "volatility": 22.361319467426796,
+                "current_crs": -0.20242169702485557,
+                "strength_score": -20.24216970248556,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "14.0%",
@@ -38732,11 +38732,11 @@
                 "custom_id": "",
                 "speed_category": "Rất nhanh (Tăng tốc)",
                 "direction": "Suy giảm mạnh",
-                "weighted_speed": 2371.25,
-                "acceleration": 1958.92,
-                "volatility": 22.178,
-                "current_crs": -27.2,
-                "strength_score": -27.2,
+                "weighted_speed": 2.3712503023100178,
+                "acceleration": 1.958915620758359,
+                "volatility": 22.177828380206197,
+                "current_crs": -0.2718831124930843,
+                "strength_score": -27.188311249308427,
                 "risk_level": "Trung bình",
                 "suggested_action": "Giảm",
                 "stop_loss_distance": "17.4%",
@@ -39033,7 +39033,7 @@
         "money_flow_summary": {
           "dominant_theme": "Sector Rotation: Dòng tiền luân chuyển giữa các ngành",
           "rotation_strength": "Vừa",
-          "flow_velocity": 84.3,
+          "flow_velocity": 0.8,
           "inflow_count": 12,
           "outflow_count": 11
         },
@@ -39044,28 +39044,28 @@
               {
                 "name": "Ngân hàng",
                 "strength_score": 7.620035594902053,
-                "velocity": 93.0,
+                "velocity": 0.9,
                 "quadrant": "Leading (Dẫn dắt)",
                 "money_flow": ""
               },
               {
                 "name": "Bất động sản",
                 "strength_score": 4.096963454621516,
-                "velocity": 13.1,
+                "velocity": 0.1,
                 "quadrant": "Leading (Dẫn dắt)",
                 "money_flow": ""
               },
               {
                 "name": "Đầu tư công",
                 "strength_score": 3.9871428299417477,
-                "velocity": 190.1,
+                "velocity": 1.9,
                 "quadrant": "Leading (Dẫn dắt)",
                 "money_flow": ""
               },
               {
                 "name": "Xây dựng",
                 "strength_score": 3.8084917641304727,
-                "velocity": 139.2,
+                "velocity": 1.4,
                 "quadrant": "Leading (Dẫn dắt)",
                 "money_flow": ""
               }
@@ -39078,21 +39078,21 @@
               {
                 "name": "Thủy sản",
                 "strength_score": -12.718526801515662,
-                "velocity": 89.3,
+                "velocity": 0.9,
                 "quadrant": "Improving (Cải thiện)",
                 "money_flow": ""
               },
               {
                 "name": "Cao su",
                 "strength_score": -22.516722510396235,
-                "velocity": 64.3,
+                "velocity": 0.6,
                 "quadrant": "Improving (Cải thiện)",
                 "money_flow": ""
               },
               {
                 "name": "Dệt may",
                 "strength_score": -11.411865237168694,
-                "velocity": 52.2,
+                "velocity": 0.5,
                 "quadrant": "Improving (Cải thiện)",
                 "money_flow": ""
               }
@@ -39133,16 +39133,16 @@
             "strongest_segment": "Large Cap (VN30) (điểm mạnh: 3.33)"
           },
           "velocity_analysis": {
-            "large_cap_velocity": 15423.3,
-            "mid_cap_velocity": 19996.6,
-            "small_cap_velocity": 17507.6,
-            "fastest_segment": "Mid Cap (VNMID/HNXLCap) (tốc độ: 199.97)"
+            "large_cap_velocity": 1.5,
+            "mid_cap_velocity": 2.0,
+            "small_cap_velocity": 1.7,
+            "fastest_segment": "Mid Cap (VNMID/HNXLCap) (tốc độ: 1.99)"
           },
           "top_large_cap": [
             {
               "symbol": "VPB",
               "strength_score": 29.1,
-              "velocity": 54750.0,
+              "velocity": 5.5,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39154,7 +39154,7 @@
             {
               "symbol": "SHB",
               "strength_score": 39.67,
-              "velocity": 44440.0,
+              "velocity": 4.4,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39166,7 +39166,7 @@
             {
               "symbol": "TPB",
               "strength_score": 17.7,
-              "velocity": 32080.0,
+              "velocity": 3.2,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39178,7 +39178,7 @@
             {
               "symbol": "VHM",
               "strength_score": 60.41,
-              "velocity": 30660.0,
+              "velocity": 3.1,
               "quadrant": "Weakening (Suy yếu)",
               "groups": [
                 "VNALL",
@@ -39190,7 +39190,7 @@
             {
               "symbol": "VIC",
               "strength_score": 80.4,
-              "velocity": 30340.0,
+              "velocity": 3.0,
               "quadrant": "Weakening (Suy yếu)",
               "groups": [
                 "VNALL",
@@ -39204,7 +39204,7 @@
             {
               "symbol": "DPM",
               "strength_score": -31.62,
-              "velocity": 64670.0,
+              "velocity": 6.5,
               "quadrant": "Lagging (Tụt hậu)",
               "groups": [
                 "VNALL",
@@ -39216,7 +39216,7 @@
             {
               "symbol": "TIG",
               "strength_score": -26.83,
-              "velocity": 62690.0,
+              "velocity": 6.3,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "HNXLCap",
@@ -39226,7 +39226,7 @@
             {
               "symbol": "VSC",
               "strength_score": 55.7,
-              "velocity": 60090.0,
+              "velocity": 6.0,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39238,7 +39238,7 @@
             {
               "symbol": "IPA",
               "strength_score": 22.17,
-              "velocity": 52410.0,
+              "velocity": 5.2,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "HNXLCap",
@@ -39248,7 +39248,7 @@
             {
               "symbol": "VGC",
               "strength_score": -0.73,
-              "velocity": 51500.0,
+              "velocity": 5.1,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39260,10 +39260,10 @@
           ],
           "top_small_cap": [
             {
-              "symbol": "MHC",
-              "strength_score": 27.11,
-              "velocity": 62440.0,
-              "quadrant": "Leading (Dẫn dắt)",
+              "symbol": "CDC",
+              "strength_score": 2.59,
+              "velocity": 6.2,
+              "quadrant": "Improving (Cải thiện)",
               "groups": [
                 "VNALL",
                 "VNSML",
@@ -39271,10 +39271,10 @@
               ]
             },
             {
-              "symbol": "CDC",
-              "strength_score": 2.59,
-              "velocity": 62190.0,
-              "quadrant": "Improving (Cải thiện)",
+              "symbol": "MHC",
+              "strength_score": 27.11,
+              "velocity": 6.2,
+              "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
                 "VNSML",
@@ -39284,7 +39284,7 @@
             {
               "symbol": "VPG",
               "strength_score": -32.21,
-              "velocity": 57720.0,
+              "velocity": 5.8,
               "quadrant": "Improving (Cải thiện)",
               "groups": [
                 "VNALL",
@@ -39295,7 +39295,7 @@
             {
               "symbol": "PET",
               "strength_score": 28.29,
-              "velocity": 52030.0,
+              "velocity": 5.2,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39306,7 +39306,7 @@
             {
               "symbol": "SAM",
               "strength_score": 2.78,
-              "velocity": 45210.0,
+              "velocity": 4.5,
               "quadrant": "Leading (Dẫn dắt)",
               "groups": [
                 "VNALL",
@@ -39326,73 +39326,73 @@
         "top_rotating_sectors": [
           {
             "name": "Bất động sản khu công nghiệp",
-            "velocity": 20620.0,
+            "velocity": 2.1,
             "quadrant": "Leading (Dẫn dắt)",
             "strength_score": -16.04,
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 2.1)."
           },
           {
             "name": "Đầu tư công",
-            "velocity": 19010.0,
+            "velocity": 1.9,
             "quadrant": "Leading (Dẫn dắt)",
             "strength_score": 3.99,
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.9)."
           },
           {
             "name": "Chứng khoán",
-            "velocity": 18920.0,
+            "velocity": 1.9,
             "quadrant": "Leading (Dẫn dắt)",
             "strength_score": 2.47,
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.9)."
           },
           {
             "name": "Hàng không",
-            "velocity": 16060.0,
+            "velocity": 1.6,
             "quadrant": "Lagging (Tụt hậu)",
             "strength_score": -13.25,
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Hóa chất",
-            "velocity": 15260.0,
+            "velocity": 1.5,
             "quadrant": "Lagging (Tụt hậu)",
             "strength_score": -14.51,
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
           },
           {
             "name": "Xây dựng",
-            "velocity": 13920.0,
+            "velocity": 1.4,
             "quadrant": "Leading (Dẫn dắt)",
             "strength_score": 3.81,
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.4)."
           },
           {
             "name": "Ngân hàng",
-            "velocity": 9300.0,
+            "velocity": 0.9,
             "quadrant": "Leading (Dẫn dắt)",
             "strength_score": 7.62,
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.9)."
           },
           {
-            "name": "Điện",
-            "velocity": 8980.0,
-            "quadrant": "Lagging (Tụt hậu)",
-            "strength_score": -3.02,
-            "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.9), tín hiệu phục hồi."
-          },
-          {
             "name": "Thủy sản",
-            "velocity": 8930.0,
+            "velocity": 0.9,
             "quadrant": "Improving (Cải thiện)",
             "strength_score": -12.72,
             "money_flow": "Dòng tiền phục hồi yếu, chưa rõ xu hướng."
           },
           {
             "name": "Công nghệ",
-            "velocity": 8640.0,
+            "velocity": 0.9,
             "quadrant": "Lagging (Tụt hậu)",
             "strength_score": -16.62,
             "money_flow": "Dòng tiền tiếp tục rút ra, xu hướng yếu."
+          },
+          {
+            "name": "Điện",
+            "velocity": 0.9,
+            "quadrant": "Lagging (Tụt hậu)",
+            "strength_score": -3.02,
+            "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.9), tín hiệu phục hồi."
           }
         ],
         "detailed_flow": {
@@ -39400,31 +39400,31 @@
             {
               "name": "Bất động sản khu công nghiệp",
               "quadrant": "Leading (Dẫn dắt)",
-              "velocity": 206.2,
+              "velocity": 2.1,
               "strength_score": -16.04
             },
             {
               "name": "Đầu tư công",
               "quadrant": "Leading (Dẫn dắt)",
-              "velocity": 190.1,
+              "velocity": 1.9,
               "strength_score": 3.99
             },
             {
               "name": "Chứng khoán",
               "quadrant": "Leading (Dẫn dắt)",
-              "velocity": 189.2,
+              "velocity": 1.9,
               "strength_score": 2.47
             },
             {
               "name": "Xây dựng",
               "quadrant": "Leading (Dẫn dắt)",
-              "velocity": 139.2,
+              "velocity": 1.4,
               "strength_score": 3.81
             },
             {
               "name": "Ngân hàng",
               "quadrant": "Leading (Dẫn dắt)",
-              "velocity": 93.0,
+              "velocity": 0.9,
               "strength_score": 7.62
             }
           ],
@@ -39432,31 +39432,31 @@
             {
               "name": "Hàng không",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 160.6,
+              "velocity": 1.6,
               "strength_score": -13.25
             },
             {
               "name": "Hóa chất",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 152.6,
+              "velocity": 1.5,
               "strength_score": -14.51
             },
             {
               "name": "Điện",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 89.8,
+              "velocity": 0.9,
               "strength_score": -3.02
             },
             {
               "name": "Công nghệ",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 86.4,
+              "velocity": 0.9,
               "strength_score": -16.62
             },
             {
               "name": "Y tế",
               "quadrant": "Lagging (Tụt hậu)",
-              "velocity": 56.1,
+              "velocity": 0.6,
               "strength_score": -15.14
             }
           ]
@@ -39475,7 +39475,7 @@
             "crs_status": "Vượt trội",
             "rrg_quadrant": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
-            "velocity": 41.9,
+            "velocity": 0.4,
             "performance_description": "Đi ngang nhưng mạnh hơn thị trường"
           },
           "weakest_group": {
@@ -39485,7 +39485,7 @@
             "crs_status": "Kém hiệu quả",
             "rrg_quadrant": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.7), tín hiệu phục hồi.",
-            "velocity": 67.3,
+            "velocity": 0.7,
             "performance_description": "Xu hướng giảm mạnh, yếu hơn thị trường"
           },
           "outperforming_groups": [
@@ -39494,7 +39494,7 @@
               "strength_score": 4.62,
               "rrg_quadrant": "Leading (Dẫn dắt)",
               "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
-              "velocity": 4190.0,
+              "velocity": 0.4,
               "performance": "Đi ngang nhưng mạnh hơn thị trường"
             },
             {
@@ -39502,7 +39502,7 @@
               "strength_score": 4.36,
               "rrg_quadrant": "Leading (Dẫn dắt)",
               "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-              "velocity": 3850.0,
+              "velocity": 0.4,
               "performance": "Xu hướng tăng tích cực"
             },
             {
@@ -39510,7 +39510,7 @@
               "strength_score": 4.28,
               "rrg_quadrant": "Leading (Dẫn dắt)",
               "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.4).",
-              "velocity": 14200.0,
+              "velocity": 1.4,
               "performance": "Xu hướng tăng tích cực"
             }
           ],
@@ -39520,7 +39520,7 @@
               "strength_score": -7.68,
               "rrg_quadrant": "Lagging (Tụt hậu)",
               "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.7), tín hiệu phục hồi.",
-              "velocity": 6730.0,
+              "velocity": 0.7,
               "performance": "Xu hướng giảm mạnh, yếu hơn thị trường"
             }
           ]
@@ -39531,7 +39531,7 @@
             "strength_score": 4.62,
             "rrg_quadrant": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền có dấu hiệu chững lại, cần theo dõi.",
-            "velocity": 4190.0,
+            "velocity": 0.4,
             "performance": "Đi ngang nhưng mạnh hơn thị trường"
           },
           "VN100": {
@@ -39539,7 +39539,7 @@
             "strength_score": 4.36,
             "rrg_quadrant": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-            "velocity": 3850.0,
+            "velocity": 0.4,
             "performance": "Xu hướng tăng tích cực"
           },
           "VNMID": {
@@ -39547,7 +39547,7 @@
             "strength_score": 4.28,
             "rrg_quadrant": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 1.4).",
-            "velocity": 14200.0,
+            "velocity": 1.4,
             "performance": "Xu hướng tăng tích cực"
           },
           "VNSML": {
@@ -39555,7 +39555,7 @@
             "strength_score": -7.68,
             "rrg_quadrant": "Lagging (Tụt hậu)",
             "money_flow": "Dòng tiền có dấu hiệu bắt đáy mạnh (tốc độ: 0.7), tín hiệu phục hồi.",
-            "velocity": 6730.0,
+            "velocity": 0.7,
             "performance": "Xu hướng giảm mạnh, yếu hơn thị trường"
           },
           "VNALL": {
@@ -39563,7 +39563,7 @@
             "strength_score": 3.64,
             "rrg_quadrant": "Leading (Dẫn dắt)",
             "money_flow": "Dòng tiền mạnh đang tiếp tục đổ vào (tốc độ: 0.4).",
-            "velocity": 4000.0,
+            "velocity": 0.4,
             "performance": "Xu hướng tăng tích cực"
           }
         }
