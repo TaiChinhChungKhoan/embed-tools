@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-11T22:17:22.942248",
+  "generated_at": "2025-08-13T00:16:50.173767",
   "configuration": {
     "smoothing_span": 5,
     "normalization_method": "minmax",
@@ -11,46 +11,29 @@
       "rsi": 0.2
     }
   },
-  "latest_value_raw": 72.49371880214278,
-  "latest_value_smoothed": 69.46372693915647,
+  "latest_value_raw": 69.17887765506498,
+  "latest_value_smoothed": 69.34641813415375,
   "latest_sentiment_raw": "GREED",
   "latest_sentiment_smoothed": "GREED",
   "data_quality": {
-    "total_periods": 682,
-    "valid_calculations": 431,
-    "percentage_valid": 63.19648093841642
+    "total_periods": 681,
+    "valid_calculations": 430,
+    "percentage_valid": 63.1424375917768
   },
   "components": {
     "market_momentum": 100.0,
-    "price_strength": 69.16897075518422,
-    "volume_ratio": 61.46239623962396,
-    "volatility": 62.0778260467696,
-    "rsi14": 78.39559655098289
+    "price_strength": 69.4086361825648,
+    "volume_ratio": 42.56988198819883,
+    "volatility": 62.24974581754325,
+    "rsi14": 80.60317946771873
   },
   "last_20_days": [
-    {
-      "date": "2025-07-15",
-      "greed_fear_index_raw": 73.44262600971693,
-      "greed_fear_index_smoothed": 76.54845679554847,
-      "change_raw": null,
-      "change_smoothed": null,
-      "sentiment_raw": "GREED",
-      "sentiment_smoothed": "EXTREME GREED",
-      "all_components_valid": true,
-      "components": {
-        "market_momentum": 96.67868816762241,
-        "price_strength": 58.74285792159083,
-        "volume_ratio": 41.05848084808481,
-        "volatility": 15.746372123116828,
-        "rsi14": 83.37321016171863
-      }
-    },
     {
       "date": "2025-07-16",
       "greed_fear_index_raw": 79.3904681305938,
       "greed_fear_index_smoothed": 77.49579390723025,
-      "change_raw": 5.947842120876871,
-      "change_smoothed": 0.9473371116817759,
+      "change_raw": null,
+      "change_smoothed": null,
       "sentiment_raw": "EXTREME GREED",
       "sentiment_smoothed": "EXTREME GREED",
       "all_components_valid": true,
@@ -200,15 +183,15 @@
     },
     {
       "date": "2025-07-29",
-      "greed_fear_index_raw": 53.34985254075788,
+      "greed_fear_index_raw": 53.349852540757865,
       "greed_fear_index_smoothed": 69.65140492717364,
-      "change_raw": -28.07938140369481,
+      "change_raw": -28.079381403694825,
       "change_smoothed": -8.150776193207875,
       "sentiment_raw": "NEUTRAL",
       "sentiment_smoothed": "GREED",
       "all_components_valid": true,
       "components": {
-        "market_momentum": 84.2112151322392,
+        "market_momentum": 84.21121513223915,
         "price_strength": 60.767718869173045,
         "volume_ratio": 7.051955195519552,
         "volatility": 43.45688141233022,
@@ -219,7 +202,7 @@
       "date": "2025-07-30",
       "greed_fear_index_raw": 66.32215400635395,
       "greed_fear_index_smoothed": 68.54165462023376,
-      "change_raw": 12.972301465596075,
+      "change_raw": 12.97230146559609,
       "change_smoothed": -1.1097503069398869,
       "sentiment_raw": "GREED",
       "sentiment_smoothed": "GREED",
@@ -302,15 +285,15 @@
     },
     {
       "date": "2025-08-06",
-      "greed_fear_index_raw": 71.9347801508405,
+      "greed_fear_index_raw": 71.93478015084051,
       "greed_fear_index_smoothed": 66.39957817887804,
-      "change_raw": 11.46972248457611,
+      "change_raw": 11.469722484576124,
       "change_smoothed": 2.7676009859812396,
       "sentiment_raw": "GREED",
       "sentiment_smoothed": "GREED",
       "all_components_valid": true,
       "components": {
-        "market_momentum": 99.78557286807704,
+        "market_momentum": 99.7855728680771,
         "price_strength": 65.51858101361387,
         "volume_ratio": 69.52320232023203,
         "volatility": 65.0097051483502,
@@ -321,7 +304,7 @@
       "date": "2025-08-07",
       "greed_fear_index_raw": 70.48216945861806,
       "greed_fear_index_smoothed": 67.76044193879139,
-      "change_raw": -1.4526106922224358,
+      "change_raw": -1.45261069222245,
       "change_smoothed": 1.360863759913343,
       "sentiment_raw": "GREED",
       "sentiment_smoothed": "GREED",
@@ -353,19 +336,36 @@
     },
     {
       "date": "2025-08-11",
-      "greed_fear_index_raw": 72.49371880214278,
-      "greed_fear_index_smoothed": 69.46372693915647,
-      "change_raw": 4.1684096567356335,
-      "change_smoothed": 1.5149959314931607,
+      "greed_fear_index_raw": 72.39310310576774,
+      "greed_fear_index_smoothed": 69.43018837369813,
+      "change_raw": 4.067793960360589,
+      "change_smoothed": 1.4814573660348174,
       "sentiment_raw": "GREED",
       "sentiment_smoothed": "GREED",
       "all_components_valid": true,
       "components": {
         "market_momentum": 100.0,
-        "price_strength": 69.16897075518422,
-        "volume_ratio": 61.46239623962396,
+        "price_strength": 68.917792463328,
+        "volume_ratio": 61.21049604960496,
         "volatility": 62.0778260467696,
         "rsi14": 78.39559655098289
+      }
+    },
+    {
+      "date": "2025-08-12",
+      "greed_fear_index_raw": 69.17887765506498,
+      "greed_fear_index_smoothed": 69.34641813415375,
+      "change_raw": -3.214225450702756,
+      "change_smoothed": -0.08377023954437846,
+      "sentiment_raw": "GREED",
+      "sentiment_smoothed": "GREED",
+      "all_components_valid": true,
+      "components": {
+        "market_momentum": 100.0,
+        "price_strength": 69.4086361825648,
+        "volume_ratio": 42.56988198819883,
+        "volatility": 62.24974581754325,
+        "rsi14": 80.60317946771873
       }
     }
   ]
