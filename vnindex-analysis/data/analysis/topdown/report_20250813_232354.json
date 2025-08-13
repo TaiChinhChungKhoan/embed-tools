@@ -1,0 +1,442 @@
+{
+  "timestamp": "2025-08-13T23:23:54.135067",
+  "summary": {
+    "inflation_regime": "uncertain",
+    "risk_regime": "neutral",
+    "market_regime": "us_outperformance",
+    "overall_confidence": 0.7,
+    "overall_bias": "Neutral"
+  },
+  "signals": [
+    {
+      "type": "vix_extreme",
+      "signal": "complacency",
+      "confidence": 0.8,
+      "priority": 2,
+      "message": "VIX \u1edf m\u1ee9c complacency"
+    }
+  ],
+  "recommendations": {
+    "Maintain Balanced Portfolio": [
+      "Keep diversified allocation",
+      "Wait for clearer signals",
+      "Focus on quality names",
+      "Maintain appropriate hedges"
+    ]
+  },
+  "risks": [
+    "Extreme low volatility - potential for volatility spike",
+    "Extreme stock-bond correlation - traditional diversification may fail",
+    "Geopolitical events could shift market regime",
+    "Central bank policy changes",
+    "Economic data surprises"
+  ],
+  "metadata": {
+    "individual_analyses": {
+      "inflation_regime": {
+        "regime": "InflationRegime.UNCERTAIN",
+        "signal": -0.09,
+        "confidence": 0.25,
+        "indicators": {
+          "yield_curve": -0.3
+        },
+        "vietnamese_insights": [
+          "\u26aa CH\u01afA R\u00d5 CH\u1ebe \u0110\u1ed8 L\u1ea0M PH\u00c1T",
+          "\u2192 C\u1ea7n theo d\u00f5i th\u00eam c\u00e1c ch\u1ec9 b\u00e1o",
+          "\u274c \u0110\u1ed9 tin c\u1eady: TH\u1ea4P (25%) - C\u1ea7n th\u00eam d\u1eef li\u1ec7u"
+        ]
+      },
+      "macro_context": {
+        "bias": "neutral",
+        "strength": 0.13500000000000004,
+        "confidence": 1.0,
+        "components": {
+          "us_economy": {
+            "signal": -0.15,
+            "yield_curve": "flattening",
+            "equity_trend": "neutral",
+            "spreads": null
+          },
+          "intermarket": {
+            "signal": 0.5,
+            "stock_bond": "risk_on",
+            "stock_commodity": null,
+            "risk_appetite": null
+          },
+          "global_flows": {
+            "signal": 0,
+            "us_vs_international": null,
+            "em_flows": null
+          },
+          "sentiment": {
+            "signal": 0.25,
+            "vix_level": "low_fear",
+            "vix_trend": "stable"
+          }
+        },
+        "vietnamese_insights": [
+          "==================================================",
+          "B\u01af\u1edaC 1: B\u1ed0I C\u1ea2NH V\u0128 M\u00d4 D\u00c0I H\u1ea0N (3-12 TH\u00c1NG)",
+          "==================================================",
+          "\u27a1\ufe0f THI\u00caN KI\u1ebeN: TRUNG L\u1eacP (Neutral)",
+          "\u2192 Chi\u1ebfn l\u01b0\u1ee3c: Giao d\u1ecbch theo range, kh\u00f4ng gi\u1eef v\u1ecb th\u1ebf l\u00e2u",
+          "\n\ud83d\udcca KINH T\u1ebe M\u1ef8:",
+          "  \u26a1 \u0110\u01b0\u1eddng cong ph\u1eb3ng - Kinh t\u1ebf ch\u1eadm l\u1ea1i",
+          "  \u27a1\ufe0f S&P 500: \u0110i ngang, ch\u01b0a c\u00f3 xu h\u01b0\u1edbng r\u00f5 r\u00e0ng",
+          "\n\ud83d\udd04 LI\u00caN TH\u1eca TR\u01af\u1edcNG:",
+          "  \ud83d\udcc8 ES/ZN: Risk-On - C\u1ed5 phi\u1ebfu v\u01b0\u1ee3t tr\u1ed9i tr\u00e1i phi\u1ebfu",
+          "\n\ud83c\udf0d D\u00d2NG V\u1ed0N TO\u00c0N C\u1ea6U:",
+          "  \ud83c\udf0f Qu\u1ed1c t\u1ebf v\u01b0\u1ee3t tr\u1ed9i - D\u00f2ng v\u1ed1n ra kh\u1ecfi M\u1ef9",
+          "\n\ud83d\ude30 T\u00c2M L\u00dd TH\u1eca TR\u01af\u1edcNG:",
+          "  \ud83d\ude0a VIX th\u1ea5p (<20) - T\u1ef1 m\u00e3n"
+        ]
+      },
+      "intraday_mood": {
+        "mood": "neutral",
+        "strength": 0.12249999999999998,
+        "confidence": 1.0,
+        "indicators": {
+          "overnight": {
+            "signal": 0.0,
+            "asia_performance": "neutral",
+            "europe_performance": null,
+            "mood": "neutral"
+          },
+          "vix": {
+            "signal": 0.35,
+            "level": "low",
+            "trend": "stable",
+            "regime": "RiskRegime.RISK_ON"
+          },
+          "bonds": {
+            "signal": 0,
+            "price_action": "stable",
+            "interpretation": "neutral"
+          },
+          "usd_oil": {
+            "signal": 0.0,
+            "usd_action": "stable",
+            "oil_action": "stable",
+            "combined_message": "mixed_signals"
+          }
+        },
+        "recommendations": [
+          "Giao d\u1ecbch range-bound, tr\u00e1nh breakout trades",
+          "\u0110\u1ee3i t\u00edn hi\u1ec7u r\u00f5 r\u00e0ng h\u01a1n tr\u01b0\u1edbc khi v\u00e0o l\u1ec7nh",
+          "S\u1eed d\u1ee5ng khung th\u1eddi gian ng\u1eafn h\u01a1n \u0111\u1ec3 scalp"
+        ],
+        "vietnamese_insights": [
+          "==================================================",
+          "B\u01af\u1edaC 2: PH\u00c2N T\u00cdCH LI\u00caN TH\u1eca TR\u01af\u1edcNG NG\u1eaeN H\u1ea0N",
+          "==================================================",
+          "\u26aa T\u00c2M TR\u1ea0NG TH\u1eca TR\u01af\u1edcNG: TRUNG L\u1eacP",
+          "\u2192 Th\u1ecb tr\u01b0\u1eddng \u0111ang do d\u1ef1, ch\u01b0a c\u00f3 h\u01b0\u1edbng r\u00f5 r\u00e0ng",
+          "\n\ud83d\ude30 VIX ANALYSIS:",
+          "  \ud83d\udcca M\u1ee9c \u0111\u1ed9: TH\u1ea4P - T\u00e2m l\u00fd t\u1ef1 m\u00e3n, c\u1ea3nh gi\u00e1c v\u1edbi \u0111\u1ea3o chi\u1ec1u",
+          "\n\ud83d\udcca TR\u00c1I PHI\u1ebeU (ZN):",
+          "  \u27a1\ufe0f Gi\u00e1 tr\u00e1i phi\u1ebfu \u1ed5n \u0111\u1ecbnh",
+          "\n\ud83c\udf0f T\u00c2M TR\u1ea0NG CH\u00c2U \u00c1/CH\u00c2U \u00c2U:",
+          "  \ud83c\uddef\ud83c\uddf5 Ch\u00e2u \u00c1: TRUNG L\u1eacP",
+          "\n\ud83d\udcb5 USD & D\u1ea6U:",
+          "  \u27a1\ufe0f USD: \u1ed4n \u0111\u1ecbnh",
+          "  \u26fd D\u1ea7u: \u1ed4n \u0111\u1ecbnh",
+          "\n\ud83d\udca1 KHUY\u1ebeN NGH\u1eca GIAO D\u1ecaCH:",
+          "  1. Giao d\u1ecbch range-bound, tr\u00e1nh breakout trades",
+          "  2. \u0110\u1ee3i t\u00edn hi\u1ec7u r\u00f5 r\u00e0ng h\u01a1n tr\u01b0\u1edbc khi v\u00e0o l\u1ec7nh",
+          "  3. S\u1eed d\u1ee5ng khung th\u1eddi gian ng\u1eafn h\u01a1n \u0111\u1ec3 scalp"
+        ]
+      },
+      "risk_classification": {
+        "regime": "RiskRegime.NEUTRAL",
+        "confidence": 1.0,
+        "strength": 0.21499999999999997,
+        "components": {
+          "vix_sentiment": {
+            "signal": 0.6499999999999999,
+            "level": "complacency",
+            "momentum": "declining",
+            "interpretation": "extreme_risk_on"
+          },
+          "equity_leadership": {
+            "signal": 0,
+            "leadership": {
+              "tech_vs_utilities": 0.0074512504820878345,
+              "consumer_discretionary": 0.013227276789704145
+            },
+            "interpretation": "mixed_leadership"
+          },
+          "bond_flows": {
+            "signal": 0,
+            "price_action": "bonds_stable",
+            "yield_action": "yields_stable",
+            "interpretation": "neutral_flows"
+          },
+          "currency_flows": {
+            "signal": 0,
+            "usd_strength": -0.0019352210226116773,
+            "risk_currencies": {},
+            "interpretation": null
+          },
+          "correlations": {
+            "signal": 0.2,
+            "stock_bond_corr": -0.5393488425656217,
+            "risk_asset_corr": 0.5473582236317346,
+            "interpretation": "normal_correlation"
+          }
+        },
+        "flow_analysis": {
+          "into": [],
+          "out_of": [],
+          "regime_consistency": null
+        },
+        "vietnamese_insights": [
+          "============================================================",
+          "PH\u00c2N T\u00cdCH RISK-ON/RISK-OFF TO\u00c0N DI\u1ec6N",
+          "============================================================",
+          "\u26aa CH\u1ebe \u0110\u1ed8: NEUTRAL (Trung l\u1eadp)",
+          "   \u2192 Th\u1ecb tr\u01b0\u1eddng \u0111ang do d\u1ef1, t\u00edn hi\u1ec7u tr\u00e1i chi\u1ec1u",
+          "\n\ud83d\ude30 VIX & T\u00c2M L\u00dd TH\u1eca TR\u01af\u1edcNG:",
+          "   \ud83d\udcc9 T\u1ef0 M\u00c3N C\u1ef0C \u0110\u1ed8 - C\u1ea3nh gi\u00e1c \u0111\u1ea3o chi\u1ec1u",
+          "   \ud83d\udcc9 VIX GI\u1ea2M - B\u1edbt lo ng\u1ea1i",
+          "\n\ud83d\udcca L\u00c3NH \u0110\u1ea0O TH\u1eca TR\u01af\u1edcNG C\u1ed4 PHI\u1ebeU:",
+          "   \u27a1\ufe0f L\u00e3nh \u0111\u1ea1o kh\u00f4ng r\u00f5 r\u00e0ng",
+          "\n\ud83d\udcc8 D\u00d2NG TI\u1ec0N TR\u00c1I PHI\u1ebeU:",
+          "   \u27a1\ufe0f D\u00f2ng ti\u1ec1n trung l\u1eadp",
+          "\n\ud83d\udcb1 D\u00d2NG TI\u1ec0N NGO\u1ea0I T\u1ec6:",
+          "\n\ud83d\udcb0 B\u1ea2N \u0110\u1ed2 D\u00d2NG V\u1ed0N:"
+        ]
+      },
+      "usd_stock_relationship": {
+        "regime": "MarketRegime.US_OUTPERFORMANCE",
+        "correlation": 0.25,
+        "confidence": 0.25,
+        "scenarios": {
+          "crisis_haven": {
+            "probability": 0.0,
+            "signals": {
+              "vix_crisis": 0,
+              "flight_to_bonds": 0,
+              "usd_safe_haven": 0
+            },
+            "interpretation": "no_crisis"
+          },
+          "us_outperformance": {
+            "probability": 0.25,
+            "signals": {
+              "calm_environment": 0.5,
+              "rising_yields": 0
+            },
+            "interpretation": "no_clear_outperformance"
+          },
+          "global_growth": {
+            "probability": 0.0,
+            "signals": {
+              "em_outperformance": 0,
+              "risk_currency_strength": 0
+            },
+            "interpretation": "weak_global_growth"
+          }
+        },
+        "active_model": "us_outperformance",
+        "vietnamese_insights": [
+          "============================================================",
+          "PH\u00c2N T\u00cdCH M\u1ed0I QUAN H\u1ec6 USD - C\u1ed4 PHI\u1ebeU (USD SMILE MODEL)",
+          "============================================================",
+          "\ud83c\uddfa\ud83c\uddf8 K\u1ecaCH B\u1ea2N: KINH T\u1ebe M\u1ef8 V\u01af\u1ee2T TR\u1ed8I",
+          "   T\u01b0\u01a1ng quan d\u1ef1 ki\u1ebfn: D\u01af\u01a0NG (0.25)",
+          "   \u2192 USD t\u0103ng \u2194 C\u1ed5 phi\u1ebfu t\u0103ng",
+          "   \u2192 C\u01a1 ch\u1ebf: D\u1eef li\u1ec7u t\u1ed1t \u2192 H\u00fat v\u1ed1n v\u00e0o M\u1ef9",
+          "   \u0110\u1ed9 tin c\u1eady: 25.0%",
+          "\n\ud83d\udcca X\u00c1C SU\u1ea4T C\u00c1C K\u1ecaCH B\u1ea2N:",
+          "   Kh\u1ee7ng ho\u1ea3ng/Tr\u00fa \u1ea9n: 0.0%",
+          "   M\u1ef9 v\u01b0\u1ee3t tr\u1ed9i: 25.0%",
+          "   T\u0103ng tr\u01b0\u1edfng to\u00e0n c\u1ea7u: 0.0%",
+          "\n\ud83d\udca1 \u00dd NGH\u0128A GIAO D\u1ecaCH:",
+          "   \u2705 USD t\u0103ng + SPX t\u0103ng \u2192 X\u00e1c nh\u1eadn xu h\u01b0\u1edbng",
+          "   \u2705 Tr\u00e1nh b\u00e1n kh\u1ed1ng USD",
+          "   \u2705 L\u1ecdc nhi\u1ec5u khi t\u00edn hi\u1ec7u m\u00e2u thu\u1eabn"
+        ]
+      },
+      "stock_bond_correlation": {
+        "inflation_regime": "InflationRegime.UNCERTAIN",
+        "correlation": -0.5393488425656217,
+        "expected_correlation": 0,
+        "regime_consistency": "moderate_divergence",
+        "signals": {
+          "regime_transition": {
+            "signal": 0,
+            "interpretation": "stable_regime",
+            "message": "Ch\u1ebf \u0111\u1ed9 t\u01b0\u01a1ng quan \u1ed5n \u0111\u1ecbnh"
+          },
+          "mixed_signals": null,
+          "volatility": null
+        },
+        "interpretation": "uncertain_environment",
+        "vietnamese_insights": [
+          "=================================================================",
+          "PH\u00c2N T\u00cdCH M\u1ed0I QUAN H\u1ec6 C\u1ed4 PHI\u1ebeU - TR\u00c1I PHI\u1ebeU",
+          "=================================================================",
+          "\u26aa B\u1ed0I C\u1ea2NH: CH\u01afA R\u00d5 CH\u1ebe \u0110\u1ed8 L\u1ea0M PH\u00c1T",
+          "   \u2192 C\u1ea7n x\u00e1c \u0111\u1ecbnh regime tr\u01b0\u1edbc khi ph\u00e2n t\u00edch",
+          "\n\ud83d\udcca T\u01af\u01a0NG QUAN TH\u1ef0C T\u1ebe:",
+          "   Hi\u1ec7n t\u1ea1i: -0.54",
+          "   D\u1ef1 ki\u1ebfn: 0.00",
+          "   \u26a0\ufe0f CH\u00caNH L\u1ec6CH V\u1eeaA PH\u1ea2I so v\u1edbi regime",
+          "\n\ud83d\udca1 \u1ea0M \u0110I\u1ec0U GIAO D\u1ecaCH:",
+          "   \u26aa CH\u1ebe \u0110\u1ed8 KH\u00d4NG R\u00d5 R\u00c0NG:",
+          "     \u2022 C\u1ea7n x\u00e1c \u0111\u1ecbnh inflation regime tr\u01b0\u1edbc",
+          "     \u2022 Theo d\u00f5i signals \u0111\u1ec3 x\u00e1c \u0111\u1ecbnh h\u01b0\u1edbng",
+          "     \u2022 Giao d\u1ecbch th\u1eadn tr\u1ecdng v\u1edbi size nh\u1ecf",
+          "     \u2022 Chu\u1ea9n b\u1ecb cho c\u1ea3 2 scenarios",
+          "\n\ud83c\udfaf C\u00c1C M\u1ee8C QUAN TR\u1eccNG:",
+          "   T\u01b0\u01a1ng quan > 0.3: M\u00f4i tr\u01b0\u1eddng l\u1ea1m ph\u00e1t",
+          "   T\u01b0\u01a1ng quan < -0.3: M\u00f4i tr\u01b0\u1eddng gi\u1ea3m ph\u00e1t",
+          "   T\u01b0\u01a1ng quan -0.3 to 0.3: Kh\u00f4ng r\u00f5 r\u00e0ng"
+        ]
+      }
+    },
+    "vietnamese_insights": [
+      "================================================================================",
+      "B\u00c1O C\u00c1O PH\u00c2N T\u00cdCH TH\u1eca TR\u01af\u1edcNG TO\u00c0N DI\u1ec6N (TOP-DOWN STRATEGY)",
+      "================================================================================",
+      "Th\u1eddi gian: 2025-08-13 23:23:54",
+      "",
+      "\ud83d\udccb T\u00d3M T\u1eaeT \u0110I\u1ec0U H\u00c0NH:",
+      "   \u2022 Ch\u1ebf \u0111\u1ed9 l\u1ea1m ph\u00e1t: uncertain",
+      "   \u2022 Risk regime: neutral",
+      "   \u2022 Macro bias: neutral",
+      "   \u2022 \u0110\u1ed9 tin c\u1eady t\u1ed5ng: 70.0%",
+      "",
+      "\ud83c\udfaf T\u00cdN HI\u1ec6U \u01afU TI\u00caN:",
+      "   2. VIX \u1edf m\u1ee9c complacency (Tin c\u1eady: 80.0%)",
+      "",
+      "\u26aa CH\u01afA R\u00d5 CH\u1ebe \u0110\u1ed8 L\u1ea0M PH\u00c1T",
+      "\u2192 C\u1ea7n theo d\u00f5i th\u00eam c\u00e1c ch\u1ec9 b\u00e1o",
+      "\u274c \u0110\u1ed9 tin c\u1eady: TH\u1ea4P (25%) - C\u1ea7n th\u00eam d\u1eef li\u1ec7u",
+      "",
+      "==================================================",
+      "B\u01af\u1edaC 1: B\u1ed0I C\u1ea2NH V\u0128 M\u00d4 D\u00c0I H\u1ea0N (3-12 TH\u00c1NG)",
+      "==================================================",
+      "\u27a1\ufe0f THI\u00caN KI\u1ebeN: TRUNG L\u1eacP (Neutral)",
+      "\u2192 Chi\u1ebfn l\u01b0\u1ee3c: Giao d\u1ecbch theo range, kh\u00f4ng gi\u1eef v\u1ecb th\u1ebf l\u00e2u",
+      "\n\ud83d\udcca KINH T\u1ebe M\u1ef8:",
+      "  \u26a1 \u0110\u01b0\u1eddng cong ph\u1eb3ng - Kinh t\u1ebf ch\u1eadm l\u1ea1i",
+      "  \u27a1\ufe0f S&P 500: \u0110i ngang, ch\u01b0a c\u00f3 xu h\u01b0\u1edbng r\u00f5 r\u00e0ng",
+      "\n\ud83d\udd04 LI\u00caN TH\u1eca TR\u01af\u1edcNG:",
+      "  \ud83d\udcc8 ES/ZN: Risk-On - C\u1ed5 phi\u1ebfu v\u01b0\u1ee3t tr\u1ed9i tr\u00e1i phi\u1ebfu",
+      "\n\ud83c\udf0d D\u00d2NG V\u1ed0N TO\u00c0N C\u1ea6U:",
+      "  \ud83c\udf0f Qu\u1ed1c t\u1ebf v\u01b0\u1ee3t tr\u1ed9i - D\u00f2ng v\u1ed1n ra kh\u1ecfi M\u1ef9",
+      "\n\ud83d\ude30 T\u00c2M L\u00dd TH\u1eca TR\u01af\u1edcNG:",
+      "  \ud83d\ude0a VIX th\u1ea5p (<20) - T\u1ef1 m\u00e3n",
+      "",
+      "==================================================",
+      "B\u01af\u1edaC 2: PH\u00c2N T\u00cdCH LI\u00caN TH\u1eca TR\u01af\u1edcNG NG\u1eaeN H\u1ea0N",
+      "==================================================",
+      "\u26aa T\u00c2M TR\u1ea0NG TH\u1eca TR\u01af\u1edcNG: TRUNG L\u1eacP",
+      "\u2192 Th\u1ecb tr\u01b0\u1eddng \u0111ang do d\u1ef1, ch\u01b0a c\u00f3 h\u01b0\u1edbng r\u00f5 r\u00e0ng",
+      "\n\ud83d\ude30 VIX ANALYSIS:",
+      "  \ud83d\udcca M\u1ee9c \u0111\u1ed9: TH\u1ea4P - T\u00e2m l\u00fd t\u1ef1 m\u00e3n, c\u1ea3nh gi\u00e1c v\u1edbi \u0111\u1ea3o chi\u1ec1u",
+      "\n\ud83d\udcca TR\u00c1I PHI\u1ebeU (ZN):",
+      "  \u27a1\ufe0f Gi\u00e1 tr\u00e1i phi\u1ebfu \u1ed5n \u0111\u1ecbnh",
+      "\n\ud83c\udf0f T\u00c2M TR\u1ea0NG CH\u00c2U \u00c1/CH\u00c2U \u00c2U:",
+      "  \ud83c\uddef\ud83c\uddf5 Ch\u00e2u \u00c1: TRUNG L\u1eacP",
+      "\n\ud83d\udcb5 USD & D\u1ea6U:",
+      "  \u27a1\ufe0f USD: \u1ed4n \u0111\u1ecbnh",
+      "  \u26fd D\u1ea7u: \u1ed4n \u0111\u1ecbnh",
+      "\n\ud83d\udca1 KHUY\u1ebeN NGH\u1eca GIAO D\u1ecaCH:",
+      "  1. Giao d\u1ecbch range-bound, tr\u00e1nh breakout trades",
+      "  2. \u0110\u1ee3i t\u00edn hi\u1ec7u r\u00f5 r\u00e0ng h\u01a1n tr\u01b0\u1edbc khi v\u00e0o l\u1ec7nh",
+      "  3. S\u1eed d\u1ee5ng khung th\u1eddi gian ng\u1eafn h\u01a1n \u0111\u1ec3 scalp",
+      "",
+      "============================================================",
+      "PH\u00c2N T\u00cdCH RISK-ON/RISK-OFF TO\u00c0N DI\u1ec6N",
+      "============================================================",
+      "\u26aa CH\u1ebe \u0110\u1ed8: NEUTRAL (Trung l\u1eadp)",
+      "   \u2192 Th\u1ecb tr\u01b0\u1eddng \u0111ang do d\u1ef1, t\u00edn hi\u1ec7u tr\u00e1i chi\u1ec1u",
+      "\n\ud83d\ude30 VIX & T\u00c2M L\u00dd TH\u1eca TR\u01af\u1edcNG:",
+      "   \ud83d\udcc9 T\u1ef0 M\u00c3N C\u1ef0C \u0110\u1ed8 - C\u1ea3nh gi\u00e1c \u0111\u1ea3o chi\u1ec1u",
+      "   \ud83d\udcc9 VIX GI\u1ea2M - B\u1edbt lo ng\u1ea1i",
+      "\n\ud83d\udcca L\u00c3NH \u0110\u1ea0O TH\u1eca TR\u01af\u1edcNG C\u1ed4 PHI\u1ebeU:",
+      "   \u27a1\ufe0f L\u00e3nh \u0111\u1ea1o kh\u00f4ng r\u00f5 r\u00e0ng",
+      "\n\ud83d\udcc8 D\u00d2NG TI\u1ec0N TR\u00c1I PHI\u1ebeU:",
+      "   \u27a1\ufe0f D\u00f2ng ti\u1ec1n trung l\u1eadp",
+      "\n\ud83d\udcb1 D\u00d2NG TI\u1ec0N NGO\u1ea0I T\u1ec6:",
+      "\n\ud83d\udcb0 B\u1ea2N \u0110\u1ed2 D\u00d2NG V\u1ed0N:",
+      "",
+      "============================================================",
+      "PH\u00c2N T\u00cdCH M\u1ed0I QUAN H\u1ec6 USD - C\u1ed4 PHI\u1ebeU (USD SMILE MODEL)",
+      "============================================================",
+      "\ud83c\uddfa\ud83c\uddf8 K\u1ecaCH B\u1ea2N: KINH T\u1ebe M\u1ef8 V\u01af\u1ee2T TR\u1ed8I",
+      "   T\u01b0\u01a1ng quan d\u1ef1 ki\u1ebfn: D\u01af\u01a0NG (0.25)",
+      "   \u2192 USD t\u0103ng \u2194 C\u1ed5 phi\u1ebfu t\u0103ng",
+      "   \u2192 C\u01a1 ch\u1ebf: D\u1eef li\u1ec7u t\u1ed1t \u2192 H\u00fat v\u1ed1n v\u00e0o M\u1ef9",
+      "   \u0110\u1ed9 tin c\u1eady: 25.0%",
+      "\n\ud83d\udcca X\u00c1C SU\u1ea4T C\u00c1C K\u1ecaCH B\u1ea2N:",
+      "   Kh\u1ee7ng ho\u1ea3ng/Tr\u00fa \u1ea9n: 0.0%",
+      "   M\u1ef9 v\u01b0\u1ee3t tr\u1ed9i: 25.0%",
+      "   T\u0103ng tr\u01b0\u1edfng to\u00e0n c\u1ea7u: 0.0%",
+      "\n\ud83d\udca1 \u00dd NGH\u0128A GIAO D\u1ecaCH:",
+      "   \u2705 USD t\u0103ng + SPX t\u0103ng \u2192 X\u00e1c nh\u1eadn xu h\u01b0\u1edbng",
+      "   \u2705 Tr\u00e1nh b\u00e1n kh\u1ed1ng USD",
+      "   \u2705 L\u1ecdc nhi\u1ec5u khi t\u00edn hi\u1ec7u m\u00e2u thu\u1eabn",
+      "",
+      "=================================================================",
+      "PH\u00c2N T\u00cdCH M\u1ed0I QUAN H\u1ec6 C\u1ed4 PHI\u1ebeU - TR\u00c1I PHI\u1ebeU",
+      "=================================================================",
+      "\u26aa B\u1ed0I C\u1ea2NH: CH\u01afA R\u00d5 CH\u1ebe \u0110\u1ed8 L\u1ea0M PH\u00c1T",
+      "   \u2192 C\u1ea7n x\u00e1c \u0111\u1ecbnh regime tr\u01b0\u1edbc khi ph\u00e2n t\u00edch",
+      "\n\ud83d\udcca T\u01af\u01a0NG QUAN TH\u1ef0C T\u1ebe:",
+      "   Hi\u1ec7n t\u1ea1i: -0.54",
+      "   D\u1ef1 ki\u1ebfn: 0.00",
+      "   \u26a0\ufe0f CH\u00caNH L\u1ec6CH V\u1eeaA PH\u1ea2I so v\u1edbi regime",
+      "\n\ud83d\udca1 \u1ea0M \u0110I\u1ec0U GIAO D\u1ecaCH:",
+      "   \u26aa CH\u1ebe \u0110\u1ed8 KH\u00d4NG R\u00d5 R\u00c0NG:",
+      "     \u2022 C\u1ea7n x\u00e1c \u0111\u1ecbnh inflation regime tr\u01b0\u1edbc",
+      "     \u2022 Theo d\u00f5i signals \u0111\u1ec3 x\u00e1c \u0111\u1ecbnh h\u01b0\u1edbng",
+      "     \u2022 Giao d\u1ecbch th\u1eadn tr\u1ecdng v\u1edbi size nh\u1ecf",
+      "     \u2022 Chu\u1ea9n b\u1ecb cho c\u1ea3 2 scenarios",
+      "\n\ud83c\udfaf C\u00c1C M\u1ee8C QUAN TR\u1eccNG:",
+      "   T\u01b0\u01a1ng quan > 0.3: M\u00f4i tr\u01b0\u1eddng l\u1ea1m ph\u00e1t",
+      "   T\u01b0\u01a1ng quan < -0.3: M\u00f4i tr\u01b0\u1eddng gi\u1ea3m ph\u00e1t",
+      "   T\u01b0\u01a1ng quan -0.3 to 0.3: Kh\u00f4ng r\u00f5 r\u00e0ng",
+      "",
+      "\ud83d\udd0d KI\u1ec2M TRA NH\u1ea4T QU\u00c1N:",
+      "   \u0110i\u1ec3m nh\u1ea5t qu\u00e1n: 50.0%",
+      "   \u2705 X\u00e1c nh\u1eadn:",
+      "      \u2022 Macro bias v\u00e0 intraday mood nh\u1ea5t qu\u00e1n",
+      "   \u26a0\ufe0f Xung \u0111\u1ed9t:",
+      "      \u2022 M\u00e2u thu\u1eabn gi\u1eefa Inflation v\u00e0 Risk regime",
+      "",
+      "================================================================================",
+      "\ud83e\udd16 \u0110\u01b0\u1ee3c t\u1ea1o b\u1edfi Top-Down Analysis System",
+      "\ud83d\udcdd L\u01b0u \u00fd: \u0110\u00e2y l\u00e0 ph\u00e2n t\u00edch t\u1ef1 \u0111\u1ed9ng, c\u1ea7n k\u1ebft h\u1ee3p v\u1edbi ph\u00e1n \u0111o\u00e1n c\u1ee7a trader",
+      "================================================================================"
+    ],
+    "data_quality": {
+      "completeness": 0.9928217821782178,
+      "freshness": 1.0,
+      "coverage": 1.0,
+      "issues": []
+    },
+    "analysis_version": "1.0",
+    "inflation_confidence": 0.25,
+    "risk_confidence": 1.0,
+    "market_confidence": 1.0,
+    "vix_level": 0.0,
+    "stock_bond_correlation": -0.5393488425656217,
+    "usd_trend": "stable",
+    "signals": [
+      {
+        "type": "vix_extreme",
+        "signal": "complacency",
+        "confidence": 0.8,
+        "priority": 2,
+        "message": "VIX \u1edf m\u1ee9c complacency"
+      }
+    ]
+  },
+  "action_items": [
+    "Review portfolio risk metrics",
+    "Rebalance if allocations have drifted >5%"
+  ]
+}
