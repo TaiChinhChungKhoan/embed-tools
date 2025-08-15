@@ -1,24 +1,24 @@
 {
   "abnormalities": [
     {
-      "WideSpread": false,
+      "WideSpread": true,
       "NarrowSpread": false,
       "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "ABS",
-      "Date": "2025-08-13 00:00:00",
+      "AbnormalERRatio": false,
+      "Symbol": "AAT",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
-          "AbnormalERRatio"
+          "WideSpread"
         ],
         "overall_sentiment": "NEUTRAL",
         "confidence": "LOW",
         "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
+          "Monitor for follow-through in the direction of the close relative to the spread",
           "Market indecision; wait for clearer direction"
         ],
         "risk_level": "LOW"
@@ -33,7 +33,7 @@
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
       "Symbol": "ABW",
-      "Date": "2025-08-14 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -73,6 +73,32 @@
       }
     },
     {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": true,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "ACC",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "WideSpread",
+          "HighVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Volume confirms price direction; follow the trend",
+          "Consider long positions with proper risk management"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
       "WideSpread": false,
       "NarrowSpread": false,
       "HighVolume": false,
@@ -81,7 +107,7 @@
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
       "Symbol": "ANV",
-      "Date": "2025-08-13 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -104,8 +130,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "APH",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "BCM",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -128,56 +154,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "BAF",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "BCC",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "BMC",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "BKG",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -195,27 +173,25 @@
     {
       "WideSpread": true,
       "NarrowSpread": false,
-      "HighVolume": true,
+      "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Symbol": "BMI",
-      "Date": "2025-08-13 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 1,
         "signal_types": [
-          "WideSpread",
-          "HighVolume"
+          "WideSpread"
         ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Consider long positions with proper risk management"
+          "Market indecision; wait for clearer direction"
         ],
-        "risk_level": "MEDIUM"
+        "risk_level": "LOW"
       }
     },
     {
@@ -243,103 +219,75 @@
       }
     },
     {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "BNA",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "BSI",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
       "WideSpread": true,
       "NarrowSpread": false,
-      "HighVolume": true,
+      "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Symbol": "BVH",
-      "Date": "2025-08-13 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 1,
         "signal_types": [
-          "WideSpread",
-          "HighVolume"
+          "WideSpread"
         ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Consider long positions with proper risk management"
+          "Market indecision; wait for clearer direction"
         ],
-        "risk_level": "MEDIUM"
+        "risk_level": "LOW"
       }
     },
     {
       "WideSpread": true,
       "NarrowSpread": false,
-      "HighVolume": true,
+      "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "CMG",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "CII",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 1,
         "signal_types": [
-          "WideSpread",
-          "HighVolume"
+          "WideSpread"
         ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Consider long positions with proper risk management"
+          "Market indecision; wait for clearer direction"
         ],
-        "risk_level": "MEDIUM"
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": false,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": true,
+      "Symbol": "CSI",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "AbnormalERRatio"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Use as confirmation of trend strength or weakness",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
       }
     },
     {
@@ -376,8 +324,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "CST",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "CTX",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -387,30 +335,6 @@
         "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "CTI",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
           "Market indecision; wait for clearer direction"
         ],
         "risk_level": "LOW"
@@ -424,8 +348,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "CTP",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "DAH",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -448,8 +372,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "CTX",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "DBD",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -491,102 +415,6 @@
       }
     },
     {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "DDG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "DDV",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "DGT",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "DL1",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
       "WideSpread": true,
       "NarrowSpread": false,
       "HighVolume": true,
@@ -610,30 +438,6 @@
           "Consider long positions with proper risk management"
         ],
         "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "WideSpread": true,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Symbol": "DST",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "WideSpread"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
       }
     },
     {
@@ -692,32 +496,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "FIR",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "GEE",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "FCM",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -740,8 +520,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "GIL",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "FRT",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -757,72 +537,24 @@
       }
     },
     {
-      "WideSpread": false,
+      "WideSpread": true,
       "NarrowSpread": false,
       "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "GMD",
-      "Date": "2025-08-13 00:00:00",
+      "AbnormalERRatio": false,
+      "Symbol": "GDA",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
-          "AbnormalERRatio"
+          "WideSpread"
         ],
         "overall_sentiment": "NEUTRAL",
         "confidence": "LOW",
         "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "GVR",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "HAG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
+          "Monitor for follow-through in the direction of the close relative to the spread",
           "Market indecision; wait for clearer direction"
         ],
         "risk_level": "LOW"
@@ -853,6 +585,32 @@
       }
     },
     {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": true,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "HDG",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "WideSpread",
+          "HighVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Volume confirms price direction; follow the trend",
+          "Consider long positions with proper risk management"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
       "WideSpread": false,
       "NarrowSpread": false,
       "HighVolume": false,
@@ -860,8 +618,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "HDB",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "HII",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -884,8 +642,32 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "HTI",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "HLD",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "AbnormalERRatio"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Use as confirmation of trend strength or weakness",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": false,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": true,
+      "Symbol": "HPG",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -908,128 +690,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "IDI",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "WideSpread"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "KHG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "KLB",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "L40",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "LDP",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": true,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Symbol": "LGL",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "MBS",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1046,54 +708,6 @@
     },
     {
       "WideSpread": true,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Symbol": "LIG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "WideSpread"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "MCG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
       "NarrowSpread": false,
       "HighVolume": false,
       "LowVolume": false,
@@ -1101,16 +715,42 @@
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
       "Symbol": "MIG",
-      "Date": "2025-08-14 00:00:00",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "WideSpread",
+          "AbnormalERRatio"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Use as confirmation of trend strength or weakness",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "NAB",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
-          "AbnormalERRatio"
+          "WideSpread"
         ],
         "overall_sentiment": "NEUTRAL",
         "confidence": "LOW",
         "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
+          "Monitor for follow-through in the direction of the close relative to the spread",
           "Market indecision; wait for clearer direction"
         ],
         "risk_level": "LOW"
@@ -1125,7 +765,31 @@
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
       "Symbol": "NAF",
-      "Date": "2025-08-13 00:00:00",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "AbnormalERRatio"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Use as confirmation of trend strength or weakness",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": false,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": true,
+      "Symbol": "NDN",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1191,13 +855,63 @@
     {
       "WideSpread": true,
       "NarrowSpread": false,
+      "HighVolume": true,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "NSH",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 2,
+        "signal_types": [
+          "WideSpread",
+          "HighVolume"
+        ],
+        "overall_sentiment": "BULLISH",
+        "confidence": "MEDIUM",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Volume confirms price direction; follow the trend",
+          "Consider long positions with proper risk management"
+        ],
+        "risk_level": "MEDIUM"
+      }
+    },
+    {
+      "WideSpread": false,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": true,
+      "Symbol": "NT2",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "AbnormalERRatio"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Use as confirmation of trend strength or weakness",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": true,
+      "NarrowSpread": false,
       "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "OIL",
-      "Date": "2025-08-14 00:00:00",
+      "Symbol": "NTL",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1207,6 +921,30 @@
         "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": false,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": true,
+      "Symbol": "OIL",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "AbnormalERRatio"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Use as confirmation of trend strength or weakness",
           "Market indecision; wait for clearer direction"
         ],
         "risk_level": "LOW"
@@ -1263,13 +1001,61 @@
     {
       "WideSpread": true,
       "NarrowSpread": false,
-      "HighVolume": true,
+      "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Symbol": "PHC",
-      "Date": "2025-08-13 00:00:00",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "WideSpread"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "PHP",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "WideSpread"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": true,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "PIV",
+      "Date": "2025-08-14 00:00:00",
       "Interpretation": {
         "signal_count": 2,
         "signal_types": [
@@ -1294,8 +1080,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "PIV",
-      "Date": "2025-08-14 00:00:00",
+      "Symbol": "PLX",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 2,
         "signal_types": [
@@ -1337,31 +1123,51 @@
       }
     },
     {
-      "WideSpread": true,
+      "WideSpread": false,
       "NarrowSpread": false,
-      "HighVolume": true,
+      "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "QNS",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "PVD",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
-        "signal_count": 3,
+        "signal_count": 1,
         "signal_types": [
-          "WideSpread",
-          "HighVolume",
           "AbnormalERRatio"
         ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "HIGH",
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Use as confirmation of trend strength or weakness",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "PVG",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "WideSpread"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Use as confirmation of trend strength or weakness",
-          "Consider long positions with proper risk management"
+          "Market indecision; wait for clearer direction"
         ],
-        "risk_level": "HIGH"
+        "risk_level": "LOW"
       }
     },
     {
@@ -1391,32 +1197,6 @@
       }
     },
     {
-      "WideSpread": true,
-      "NarrowSpread": false,
-      "HighVolume": true,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Symbol": "SGT",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "WideSpread",
-          "HighVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Consider long positions with proper risk management"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
       "WideSpread": false,
       "NarrowSpread": false,
       "HighVolume": false,
@@ -1425,7 +1205,7 @@
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
       "Symbol": "SHS",
-      "Date": "2025-08-14 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1448,8 +1228,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "SVN",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "SSB",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1496,8 +1276,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
-      "Symbol": "TCL",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "TCO",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1520,80 +1300,8 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "TCM",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "THG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
       "Symbol": "TTA",
       "Date": "2025-08-14 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "TTH",
-      "Date": "2025-08-13 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1635,48 +1343,22 @@
     {
       "WideSpread": true,
       "NarrowSpread": false,
-      "HighVolume": true,
+      "HighVolume": false,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": false,
       "Symbol": "VCB",
-      "Date": "2025-08-14 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
-        "signal_count": 2,
+        "signal_count": 1,
         "signal_types": [
-          "WideSpread",
-          "HighVolume"
+          "WideSpread"
         ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
         "trading_implications": [
           "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Consider long positions with proper risk management"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VFS",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
           "Market indecision; wait for clearer direction"
         ],
         "risk_level": "LOW"
@@ -1684,169 +1366,25 @@
     },
     {
       "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VHG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VIB",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VIC",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VIG",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VJC",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VPH",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": true,
       "NarrowSpread": false,
       "HighVolume": true,
       "LowVolume": false,
       "EffortGTResult": false,
       "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Symbol": "VPI",
-      "Date": "2025-08-13 00:00:00",
+      "AbnormalERRatio": true,
+      "Symbol": "VCG",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 2,
         "signal_types": [
-          "WideSpread",
-          "HighVolume"
+          "HighVolume",
+          "AbnormalERRatio"
         ],
         "overall_sentiment": "BULLISH",
         "confidence": "MEDIUM",
         "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
           "Volume confirms price direction; follow the trend",
+          "Use as confirmation of trend strength or weakness",
           "Consider long positions with proper risk management"
         ],
         "risk_level": "MEDIUM"
@@ -1877,56 +1415,6 @@
       }
     },
     {
-      "WideSpread": false,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "VTD",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 1,
-        "signal_types": [
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "LOW",
-        "trading_implications": [
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "LOW"
-      }
-    },
-    {
-      "WideSpread": true,
-      "NarrowSpread": false,
-      "HighVolume": false,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": true,
-      "Symbol": "AAH",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "WideSpread",
-          "AbnormalERRatio"
-        ],
-        "overall_sentiment": "NEUTRAL",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
-          "Use as confirmation of trend strength or weakness",
-          "Market indecision; wait for clearer direction"
-        ],
-        "risk_level": "MEDIUM"
-      }
-    },
-    {
       "WideSpread": true,
       "NarrowSpread": false,
       "HighVolume": false,
@@ -1951,6 +1439,32 @@
       }
     },
     {
+      "WideSpread": true,
+      "NarrowSpread": false,
+      "HighVolume": false,
+      "LowVolume": false,
+      "EffortGTResult": false,
+      "ResultGTEffort": false,
+      "AbnormalERRatio": false,
+      "Symbol": "MZG",
+      "Date": "2025-08-15 00:00:00",
+      "Interpretation": {
+        "signal_count": 1,
+        "signal_types": [
+          "WideSpread"
+        ],
+        "overall_sentiment": "NEUTRAL",
+        "confidence": "LOW",
+        "trading_implications": [
+          "Monitor for follow-through in the direction of the close relative to the spread",
+          "Market indecision; wait for clearer direction"
+        ],
+        "risk_level": "LOW"
+      }
+    }
+  ],
+  "industry_abnormalities": [
+    {
       "WideSpread": false,
       "NarrowSpread": false,
       "HighVolume": false,
@@ -1958,8 +1472,9 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "DSE",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "bao-hiem",
+      "Name": "B\u1ea3o hi\u1ec3m",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -1973,35 +1488,6 @@
         ],
         "risk_level": "LOW"
       }
-    }
-  ],
-  "industry_abnormalities": [
-    {
-      "WideSpread": true,
-      "NarrowSpread": false,
-      "HighVolume": true,
-      "LowVolume": false,
-      "EffortGTResult": false,
-      "ResultGTEffort": false,
-      "AbnormalERRatio": false,
-      "Symbol": "bao-hiem",
-      "Name": "B\u1ea3o hi\u1ec3m",
-      "Date": "2025-08-13 00:00:00",
-      "Interpretation": {
-        "signal_count": 2,
-        "signal_types": [
-          "WideSpread",
-          "HighVolume"
-        ],
-        "overall_sentiment": "BULLISH",
-        "confidence": "MEDIUM",
-        "trading_implications": [
-          "Monitor for follow-through in the direction of the close relative to the spread",
-          "Volume confirms price direction; follow the trend",
-          "Consider long positions with proper risk management"
-        ],
-        "risk_level": "MEDIUM"
-      }
     },
     {
       "WideSpread": false,
@@ -2011,9 +1497,9 @@
       "EffortGTResult": false,
       "ResultGTEffort": false,
       "AbnormalERRatio": true,
-      "Symbol": "bds-kcn",
-      "Name": "B\u1ea5t \u0111\u1ed9ng s\u1ea3n khu c\u00f4ng nghi\u1ec7p",
-      "Date": "2025-08-13 00:00:00",
+      "Symbol": "duong",
+      "Name": "M\u00eda \u0111\u01b0\u1eddng",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -2038,7 +1524,7 @@
       "AbnormalERRatio": true,
       "Symbol": "vlxd",
       "Name": "V\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng",
-      "Date": "2025-08-13 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -2063,7 +1549,7 @@
       "AbnormalERRatio": true,
       "Symbol": "chung-khoan",
       "Name": "Ch\u1ee9ng kho\u00e1n",
-      "Date": "2025-08-14 00:00:00",
+      "Date": "2025-08-15 00:00:00",
       "Interpretation": {
         "signal_count": 1,
         "signal_types": [
@@ -2082,323 +1568,323 @@
   "performance": {
     "top_gainers": [
       {
-        "Symbol": "MBS",
-        "Return": 0.09975062344139651,
-        "Improvement": 0.0011204864550951044
-      },
-      {
-        "Symbol": "LIG",
-        "Return": 0.08888888888888902,
-        "Improvement": -0.008672086720867167
+        "Symbol": "HVA",
+        "Return": 0.11111111111111116,
+        "Improvement": 0.06316590563165914
       },
       {
         "Symbol": "GKM",
-        "Return": 0.0869565217391306,
-        "Improvement": 0.04150197628458541
+        "Return": 0.10000000000000009,
+        "Improvement": 0.01304347826086949
       },
       {
-        "Symbol": "EVS",
-        "Return": 0.07999999999999985,
-        "Improvement": 0.05260273972602714
+        "Symbol": "IPA",
+        "Return": 0.09905660377358494,
+        "Improvement": 0.094317267280694
       },
       {
-        "Symbol": "IDJ",
-        "Return": 0.0769230769230771,
-        "Improvement": -0.021668472372697645
+        "Symbol": "IVS",
+        "Return": 0.09708737864077666,
+        "Improvement": 0.08728345707214902
+      },
+      {
+        "Symbol": "CTX",
+        "Return": 0.0862068965517242,
+        "Improvement": 0.10315604909409715
       }
     ],
     "top_losers": [
       {
-        "Symbol": "DCL",
-        "Return": -0.0647321428571428,
-        "Improvement": -0.0647321428571428
+        "Symbol": "API",
+        "Return": -0.08823529411764697,
+        "Improvement": -0.06900452488687758
       },
       {
-        "Symbol": "CTP",
-        "Return": -0.045454545454545414,
-        "Improvement": -0.06871035940803383
+        "Symbol": "APS",
+        "Return": -0.078125,
+        "Improvement": -0.06274038461538467
       },
       {
-        "Symbol": "AAH",
-        "Return": -0.042553191489361764,
-        "Improvement": -0.042553191489361764
+        "Symbol": "DLG",
+        "Return": -0.06956521739130439,
+        "Improvement": -0.055279503105590155
       },
       {
-        "Symbol": "VHG",
-        "Return": -0.04166666666666674,
-        "Improvement": -0.04166666666666674
+        "Symbol": "IDJ",
+        "Return": -0.059523809523809534,
+        "Improvement": -0.13644688644688663
       },
       {
-        "Symbol": "VOS",
-        "Return": -0.041297935103244754,
-        "Improvement": -0.06238227245264216
+        "Symbol": "AAV",
+        "Return": -0.05797101449275366,
+        "Improvement": -0.08782176076141046
       }
     ],
     "top_improving": [
       {
-        "Symbol": "KVC",
-        "Return": 0.05263157894736836,
-        "Improvement": 0.1478696741854637
+        "Symbol": "DCL",
+        "Return": 0.05011933174224348,
+        "Improvement": 0.11485147459938627
       },
       {
-        "Symbol": "VPB",
-        "Return": 0.06944444444444442,
-        "Improvement": 0.0964714714714715
+        "Symbol": "CTX",
+        "Return": 0.0862068965517242,
+        "Improvement": 0.10315604909409715
       },
       {
-        "Symbol": "MZG",
-        "Return": 0.048387096774193505,
-        "Improvement": 0.0796370967741935
+        "Symbol": "IPA",
+        "Return": 0.09905660377358494,
+        "Improvement": 0.094317267280694
       },
       {
-        "Symbol": "CSM",
-        "Return": 0.06792452830188678,
-        "Improvement": 0.07911855815263302
+        "Symbol": "SHB",
+        "Return": 0.02216066481994461,
+        "Improvement": 0.0893441273522444
       },
       {
-        "Symbol": "CRE",
-        "Return": 0.06770833333333348,
-        "Improvement": 0.07288968048359257
+        "Symbol": "IVS",
+        "Return": 0.09708737864077666,
+        "Improvement": 0.08728345707214902
       }
     ],
     "top_degrading": [
       {
-        "Symbol": "AAS",
-        "Return": 0.0,
-        "Improvement": -0.13953488372093004
+        "Symbol": "IDJ",
+        "Return": -0.059523809523809534,
+        "Improvement": -0.13644688644688663
       },
       {
-        "Symbol": "VC7",
-        "Return": -0.015151515151515138,
-        "Improvement": -0.115151515151515
+        "Symbol": "CEO",
+        "Return": -0.047101449275362306,
+        "Improvement": -0.10863991081382385
       },
       {
-        "Symbol": "API",
-        "Return": -0.019230769230769384,
-        "Improvement": -0.11396761133603261
+        "Symbol": "HDG",
+        "Return": -0.036418816388467445,
+        "Improvement": -0.10622401119366243
       },
       {
-        "Symbol": "APS",
-        "Return": -0.01538461538461533,
-        "Improvement": -0.10782159017453119
+        "Symbol": "EVS",
+        "Return": -0.024691358024691246,
+        "Improvement": -0.1046913580246911
       },
       {
-        "Symbol": "MBG",
-        "Return": -0.021739130434782483,
-        "Improvement": -0.0915065722952475
+        "Symbol": "EVF",
+        "Return": -0.040000000000000036,
+        "Improvement": -0.1020915032679739
       }
     ]
   },
   "industry_performance": {
     "top_gainers": [
       {
-        "Symbol": "ngan-hang",
-        "Return": 0.03704866562009412,
-        "Improvement": 0.030156910435470863
-      },
-      {
-        "Symbol": "bao-hiem",
-        "Return": 0.026016125010389857,
-        "Improvement": -0.027486501959837817
-      },
-      {
-        "Symbol": "chung-khoan",
-        "Return": 0.01671452764892134,
-        "Improvement": -0.01090351109199883
-      },
-      {
         "Symbol": "hang-khong",
-        "Return": 0.00960743144365983,
-        "Improvement": 0.017497849320190606
+        "Return": 0.0047480374778425816,
+        "Improvement": -0.004839077439708239
       },
       {
-        "Symbol": "thep",
-        "Return": 0.009261884509970786,
-        "Improvement": 0.014433001471234386
+        "Symbol": "van-tai",
+        "Return": -0.0010944910616563774,
+        "Improvement": 0.0015254055979753156
+      },
+      {
+        "Symbol": "dau-tu-cong",
+        "Return": -0.0018791105543376485,
+        "Improvement": 0.00403620700481544
+      },
+      {
+        "Symbol": "y-te",
+        "Return": -0.0024666156332396882,
+        "Improvement": 0.009217984232261278
+      },
+      {
+        "Symbol": "dau-khi",
+        "Return": -0.002865622761232034,
+        "Improvement": -0.00904418315665989
       }
     ],
     "top_losers": [
       {
-        "Symbol": "y-te",
-        "Return": -0.011732171289700721,
-        "Improvement": -0.010643940919702444
+        "Symbol": "cong-nghe",
+        "Return": -0.029471302691117085,
+        "Improvement": -0.03120089057207376
       },
       {
-        "Symbol": "hoa-chat",
-        "Return": -0.010052471692902687,
-        "Improvement": -0.004013492829328724
+        "Symbol": "bds",
+        "Return": -0.022577190790647905,
+        "Improvement": -0.029496051425026537
       },
       {
-        "Symbol": "ban-le",
-        "Return": -0.0082341492626693,
-        "Improvement": 0.004112442486554291
+        "Symbol": "thuy-san",
+        "Return": -0.020240813784513256,
+        "Improvement": -0.019825789920641212
       },
       {
-        "Symbol": "bds-kcn",
-        "Return": -0.006866036008544407,
-        "Improvement": -0.01015727213560158
+        "Symbol": "det-may",
+        "Return": -0.01984408221119771,
+        "Improvement": -0.018226777045929232
       },
       {
-        "Symbol": "dau-tu-cong",
-        "Return": -0.005939974989578878,
-        "Improvement": -0.013711451570129207
+        "Symbol": "cao-su",
+        "Return": -0.019084738928835443,
+        "Improvement": -0.024761565312561795
       }
     ],
     "top_improving": [
       {
-        "Symbol": "ngan-hang",
-        "Return": 0.03704866562009412,
-        "Improvement": 0.030156910435470863
+        "Symbol": "y-te",
+        "Return": -0.0024666156332396882,
+        "Improvement": 0.009217984232261278
       },
       {
-        "Symbol": "hang-khong",
-        "Return": 0.00960743144365983,
-        "Improvement": 0.017497849320190606
+        "Symbol": "dau-tu-cong",
+        "Return": -0.0018791105543376485,
+        "Improvement": 0.00403620700481544
       },
       {
-        "Symbol": "dau-khi",
-        "Return": 0.006313392672324669,
-        "Improvement": 0.01645579611459491
+        "Symbol": "van-tai",
+        "Return": -0.0010944910616563774,
+        "Improvement": 0.0015254055979753156
       },
       {
-        "Symbol": "thep",
-        "Return": 0.009261884509970786,
-        "Improvement": 0.014433001471234386
+        "Symbol": "hoa-chat",
+        "Return": -0.010023946093445368,
+        "Improvement": 9.683103312951857e-06
       },
       {
-        "Symbol": "cao-su",
-        "Return": 0.005683717820126999,
-        "Improvement": 0.0068191706654381345
+        "Symbol": "duong",
+        "Return": -0.007144558228149633,
+        "Improvement": -0.0031910514676530832
       }
     ],
     "top_degrading": [
       {
-        "Symbol": "bao-hiem",
-        "Return": 0.026016125010389857,
-        "Improvement": -0.027486501959837817
-      },
-      {
-        "Symbol": "cang-bien",
-        "Return": 0.003453379378391741,
-        "Improvement": -0.016549136661361707
+        "Symbol": "ngan-hang",
+        "Return": -0.009276893776494544,
+        "Improvement": -0.041230231759123215
       },
       {
         "Symbol": "cong-nghe",
-        "Return": 0.0017216813108524853,
-        "Improvement": -0.01407858403711515
+        "Return": -0.029471302691117085,
+        "Improvement": -0.03120089057207376
       },
       {
-        "Symbol": "dau-tu-cong",
-        "Return": -0.005939974989578878,
-        "Improvement": -0.013711451570129207
+        "Symbol": "bao-hiem",
+        "Return": -0.004288719857582168,
+        "Improvement": -0.030444993211397597
       },
       {
-        "Symbol": "thuy-san",
-        "Return": -0.0004185851820845965,
-        "Improvement": -0.01195663959089166
+        "Symbol": "bds",
+        "Return": -0.022577190790647905,
+        "Improvement": -0.029496051425026537
+      },
+      {
+        "Symbol": "cao-su",
+        "Return": -0.019084738928835443,
+        "Improvement": -0.024761565312561795
       }
     ]
   },
   "immediate": {
     "top_immediate_gainers": [
       {
-        "Symbol": "FCS",
-        "ImmediateReturn": 0.10810810810810789
-      },
-      {
-        "Symbol": "MBS",
-        "ImmediateReturn": 0.09975062344139651
-      },
-      {
-        "Symbol": "LIG",
-        "ImmediateReturn": 0.08888888888888902
+        "Symbol": "HVA",
+        "ImmediateReturn": 0.11111111111111116
       },
       {
         "Symbol": "GKM",
-        "ImmediateReturn": 0.0869565217391306
+        "ImmediateReturn": 0.10000000000000009
       },
       {
-        "Symbol": "EVS",
-        "ImmediateReturn": 0.07999999999999985
+        "Symbol": "IPA",
+        "ImmediateReturn": 0.09905660377358494
+      },
+      {
+        "Symbol": "IVS",
+        "ImmediateReturn": 0.09708737864077666
+      },
+      {
+        "Symbol": "CTX",
+        "ImmediateReturn": 0.0862068965517242
       }
     ],
     "top_immediate_losers": [
       {
-        "Symbol": "DCL",
-        "ImmediateReturn": -0.0647321428571428
+        "Symbol": "API",
+        "ImmediateReturn": -0.08823529411764697
       },
       {
-        "Symbol": "CTP",
-        "ImmediateReturn": -0.045454545454545414
+        "Symbol": "APS",
+        "ImmediateReturn": -0.078125
       },
       {
-        "Symbol": "AAH",
-        "ImmediateReturn": -0.042553191489361764
+        "Symbol": "DLG",
+        "ImmediateReturn": -0.06956521739130439
       },
       {
-        "Symbol": "VHG",
-        "ImmediateReturn": -0.04166666666666674
+        "Symbol": "IDJ",
+        "ImmediateReturn": -0.059523809523809534
       },
       {
-        "Symbol": "VOS",
-        "ImmediateReturn": -0.041297935103244754
+        "Symbol": "AAV",
+        "ImmediateReturn": -0.05797101449275366
       }
     ]
   },
   "industry_immediate": {
     "top_immediate_gainers": [
       {
-        "Symbol": "ngan-hang",
-        "ImmediateReturn": 0.03704866562009412
-      },
-      {
-        "Symbol": "bao-hiem",
-        "ImmediateReturn": 0.026016125010389857
-      },
-      {
-        "Symbol": "chung-khoan",
-        "ImmediateReturn": 0.01671452764892134
-      },
-      {
         "Symbol": "hang-khong",
-        "ImmediateReturn": 0.00960743144365983
+        "ImmediateReturn": 0.0047480374778425816
       },
       {
-        "Symbol": "thep",
-        "ImmediateReturn": 0.009261884509970786
+        "Symbol": "van-tai",
+        "ImmediateReturn": -0.0010944910616563774
+      },
+      {
+        "Symbol": "dau-tu-cong",
+        "ImmediateReturn": -0.0018791105543376485
+      },
+      {
+        "Symbol": "y-te",
+        "ImmediateReturn": -0.0024666156332396882
+      },
+      {
+        "Symbol": "dau-khi",
+        "ImmediateReturn": -0.002865622761232034
       }
     ],
     "top_immediate_losers": [
       {
-        "Symbol": "y-te",
-        "ImmediateReturn": -0.011732171289700721
+        "Symbol": "cong-nghe",
+        "ImmediateReturn": -0.029471302691117085
       },
       {
-        "Symbol": "hoa-chat",
-        "ImmediateReturn": -0.010052471692902687
+        "Symbol": "bds",
+        "ImmediateReturn": -0.022577190790647905
       },
       {
-        "Symbol": "ban-le",
-        "ImmediateReturn": -0.0082341492626693
+        "Symbol": "thuy-san",
+        "ImmediateReturn": -0.020240813784513256
       },
       {
-        "Symbol": "bds-kcn",
-        "ImmediateReturn": -0.006866036008544407
+        "Symbol": "det-may",
+        "ImmediateReturn": -0.01984408221119771
       },
       {
-        "Symbol": "dau-tu-cong",
-        "ImmediateReturn": -0.005939974989578878
+        "Symbol": "cao-su",
+        "ImmediateReturn": -0.019084738928835443
       }
     ]
   },
   "summary": {
-    "analysis_date": "2025-08-14 00:00:00",
-    "total_stock_abnormalities": 81,
+    "analysis_date": "2025-08-15 00:00:00",
+    "total_stock_abnormalities": 60,
     "total_industry_abnormalities": 4,
     "market_sentiment": "NEUTRAL",
     "key_insights": [
-      "Detected 85 abnormal signals across stocks and industries",
-      "81 individual stocks showing abnormal behavior",
+      "Detected 64 abnormal signals across stocks and industries",
+      "60 individual stocks showing abnormal behavior",
       "4 industries showing abnormal behavior - consider sector rotation",
       "Mixed market sentiment - signals are inconclusive"
     ],

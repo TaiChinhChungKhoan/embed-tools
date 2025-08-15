@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-08-14T22:58:16.840102",
+  "generated_at": "2025-08-15T21:49:08.789731",
   "date_range": {
     "start_date": "2024-01-01",
-    "end_date": "2025-08-14"
+    "end_date": "2025-08-15"
   },
   "industries": {
     "nhua": {
@@ -67,6 +67,10 @@
     },
     "hang-tieu-dung": {
       "name": "Hàng tiêu dùng",
+      "symbol_count": 3
+    },
+    "bao-hiem": {
+      "name": "Bảo hiểm",
       "symbol_count": 3
     },
     "dau-tu-cong": {
