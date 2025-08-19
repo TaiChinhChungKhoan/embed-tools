@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Xây lắp điện",
       "description": "Phân tích breadth cho xây lắp điện",
       "version": "3.0",
-      "generated_at": "2025-08-18T22:25:21.920865",
+      "generated_at": "2025-08-19T20:08:35.174158",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-08-18",
-      "total_trading_days": 404,
-      "analysis_period": "404 ngày giao dịch"
+      "end_date": "2025-08-19",
+      "total_trading_days": 405,
+      "analysis_period": "405 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -23071,10 +23071,67 @@
         "ema_200_change_5d": 0.0,
         "overall_momentum": "Giảm mạnh"
       }
+    },
+    "2025-08-19": {
+      "basic_stats": {
+        "total_stocks": 2,
+        "stocks_with_data": 2
+      },
+      "ema_5": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_10": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_20": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_50": {
+        "above_count": 1,
+        "below_count": 1,
+        "above_percentage": 50.0,
+        "below_percentage": 50.0,
+        "strength": "Yếu",
+        "sentiment": "Trung lập"
+      },
+      "ema_200": {
+        "above_count": 2,
+        "below_count": 0,
+        "above_percentage": 100.0,
+        "below_percentage": 0.0,
+        "strength": "Mạnh",
+        "sentiment": "Tích cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường tăng",
+        "confidence": 1.0,
+        "description": "Xây lắp điện thể hiện đặc điểm thị trường tăng"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": -50.0,
+        "ema_50_change_5d": -50.0,
+        "ema_200_change_5d": 0.0,
+        "overall_momentum": "Giảm mạnh"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-08-18",
+    "latest_date": "2025-08-19",
     "key_metrics": {
       "breadth_strength": 50.0,
       "participation_level": 100.0,
@@ -23087,15 +23144,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-08-18T22:25:21.919046",
+      "analysis_timestamp": "2025-08-19T20:08:35.172227",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 404
+        "data_points": 405
       },
-      "analysis_period": "2024-01-02 to 2025-08-18"
+      "analysis_period": "2024-01-02 to 2025-08-19"
     },
     "signal_coordination": {
       "overall_signal": {
