@@ -4,7 +4,7 @@
       "title": "Phân tích EMA Breadth - Công nghệ",
       "description": "Phân tích breadth cho công nghệ",
       "version": "3.0",
-      "generated_at": "2025-08-22T23:41:55.123435",
+      "generated_at": "2025-08-25T17:39:36.056155",
       "generated_by": "EMA Breadth Analyzer"
     },
     "source_info": {
@@ -15,9 +15,9 @@
     },
     "date_range": {
       "start_date": "2024-01-02",
-      "end_date": "2025-08-22",
-      "total_trading_days": 408,
-      "analysis_period": "408 ngày giao dịch"
+      "end_date": "2025-08-25",
+      "total_trading_days": 409,
+      "analysis_period": "409 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [
@@ -23299,10 +23299,67 @@
         "ema_200_change_5d": -100.0,
         "overall_momentum": "Giảm mạnh"
       }
+    },
+    "2025-08-25": {
+      "basic_stats": {
+        "total_stocks": 4,
+        "stocks_with_data": 4
+      },
+      "ema_5": {
+        "above_count": 0,
+        "below_count": 4,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_10": {
+        "above_count": 0,
+        "below_count": 4,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_20": {
+        "above_count": 0,
+        "below_count": 4,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_50": {
+        "above_count": 0,
+        "below_count": 4,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "ema_200": {
+        "above_count": 0,
+        "below_count": 4,
+        "above_percentage": 0.0,
+        "below_percentage": 100.0,
+        "strength": "Rất yếu",
+        "sentiment": "Tiêu cực"
+      },
+      "market_regime": {
+        "classification": "Thị trường giảm",
+        "confidence": 1.0,
+        "description": "Công nghệ thể hiện đặc điểm thị trường giảm"
+      },
+      "breadth_momentum": {
+        "ema_20_change_5d": -100.0,
+        "ema_50_change_5d": -100.0,
+        "ema_200_change_5d": -100.0,
+        "overall_momentum": "Giảm mạnh"
+      }
     }
   },
   "summary": {
-    "latest_date": "2025-08-22",
+    "latest_date": "2025-08-25",
     "key_metrics": {
       "breadth_strength": 0.0,
       "participation_level": 100.0,
@@ -23315,15 +23372,15 @@
   },
   "insights": {
     "metadata": {
-      "analysis_timestamp": "2025-08-22T23:41:55.121243",
+      "analysis_timestamp": "2025-08-25T17:39:36.054381",
       "data_quality": {
         "quality": "Trung bình",
         "issues": [
           "Dữ liệu giá không hoàn toàn đầy đủ."
         ],
-        "data_points": 408
+        "data_points": 409
       },
-      "analysis_period": "2024-01-02 to 2025-08-22"
+      "analysis_period": "2024-01-02 to 2025-08-25"
     },
     "signal_coordination": {
       "overall_signal": {
@@ -23345,9 +23402,9 @@
           "name": "Động lượng ngắn hạn",
           "direction": "Tiêu cực",
           "strength": "Rất mạnh",
-          "value": -50.0,
+          "value": -25.0,
           "weight": 0.25,
-          "description": "Momentum 5 ngày: -50.00%"
+          "description": "Momentum 5 ngày: -25.00%"
         },
         {
           "name": "Cấu trúc thị trường",
@@ -23388,7 +23445,7 @@
         "risk_level": "Trung bình - Cao",
         "risk_factors": [
           "Thiếu sự đồng thuận giữa các tín hiệu",
-          "Biến động cao (33.54)"
+          "Biến động cao (31.93)"
         ],
         "consensus_score": 0.55,
         "recommendation": "Thận trọng với quy mô vị thế, quản lý rủi ro tốt"

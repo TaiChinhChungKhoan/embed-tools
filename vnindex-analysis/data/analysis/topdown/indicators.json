@@ -1,0 +1,142 @@
+{
+  "timestamp": "2025-08-25T23:05:12.106135",
+  "summary": {
+    "inflation_regime": "inflation_on",
+    "risk_regime": "neutral",
+    "market_regime": "normal",
+    "overall_signal": 0,
+    "confidence": 1.0
+  },
+  "indicators": {
+    "inflation": {
+      "pce_core": {
+        "status": 2,
+        "interpretation": "Hơi cao (2.79%), ổn định +0.03% 3T"
+      },
+      "wage_growth": {
+        "status": 1,
+        "interpretation": "Bình thường (3.88%), ổn định -0.14% 3T"
+      },
+      "cpi_core": {
+        "status": 2,
+        "interpretation": "CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T"
+      },
+      "ppi_core": {
+        "status": 2,
+        "interpretation": "PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn"
+      },
+      "ppi_headline": {
+        "status": 1,
+        "interpretation": "PPI Toàn bộ 2.1% ↑↑ - Lạm phát tăng nhẹ - theo dõi"
+      },
+      "ppi_services": {
+        "status": 2,
+        "interpretation": "PPI Dịch vụ 3.3% ↑ - Lạm phát tăng nhẹ"
+      },
+      "yield_curve": {
+        "status": 0,
+        "interpretation": "Phẳng (17bp) - Tăng trưởng chậm, dốc lên nhẹ +12bp 1T"
+      },
+      "commodities": {
+        "status": 1,
+        "interpretation": "Áp lực lạm phát từ hàng hóa"
+      },
+      "retail_sales": {
+        "status": 1,
+        "interpretation": "Tốt (3.66%) - Tăng trưởng ổn định, giảm nhẹ -1.01% 3T"
+      },
+      "credit_spread": {
+        "status": 1,
+        "interpretation": "Tín dụng bình thường (1.351) - Spread ổn định, ổn định "
+      },
+      "credit_delinquencies": {
+        "status": 0,
+        "interpretation": "Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao "
+      },
+      "breakeven": {
+        "status": 2,
+        "interpretation": "Bình thường (2.48%) - Kỳ vọng ổn định"
+      }
+    },
+    "macro": {
+      "us_economy": {
+        "status": 1,
+        "interpretation": "Thị trường lao động ổn định ở mức 4.2% | Fed giữ nguyên lãi suất ở mức 4.33%"
+      },
+      "gdp": {
+        "status": 2,
+        "interpretation": "Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng"
+      },
+      "intermarket": {
+        "status": 0,
+        "interpretation": "Tương quan liên thị trường tích cực (0.27)"
+      },
+      "global_flows": {
+        "status": 0,
+        "interpretation": "Dòng vốn toàn cầu mạnh (0.40)"
+      },
+      "sentiment": {
+        "status": 0,
+        "interpretation": "Tâm lý thị trường lạc quan (0.30)"
+      },
+      "sector_rotation": {
+        "status": 1,
+        "interpretation": "Luân chuyển sector trung tính (1.1%) → Xu hướng chưa rõ"
+      },
+      "labor_market": {
+        "status": 0,
+        "interpretation": "Thị trường lao động mạnh (0.30)"
+      },
+      "ism_pmi": {
+        "status": 1,
+        "interpretation": "Sản xuất thu hẹp nhẹ (48.0) → Kinh tế đang yếu đi"
+      },
+      "ism_pmi_services": {
+        "status": 0,
+        "interpretation": "Mở rộng dịch vụ ổn định (50.1) → Kinh tế ổn định"
+      },
+      "diesel_inventories": {
+        "status": 2,
+        "interpretation": "Tồn kho diesel tăng 5.6% → Nhu cầu công nghiệp yếu"
+      },
+      "gasoline_inventories": {
+        "status": 0,
+        "interpretation": "Tồn kho xăng giảm 3.3% → Nhu cầu tiêu dùng mạnh"
+      },
+      "macro_commodities": {
+        "status": 1,
+        "interpretation": "Kinh tế trung tính"
+      }
+    },
+    "risk": {
+      "vix_sentiment": {
+        "status": 1,
+        "interpretation": "Ôn hòa"
+      },
+      "move_volatility": {
+        "status": 2,
+        "interpretation": "bond_stability"
+      },
+      "equity_leadership": {
+        "status": 1,
+        "interpretation": "Dẫn dắt hỗn hợp"
+      },
+      "bond_flows": {
+        "status": 1,
+        "interpretation": "Dòng vốn trung lập"
+      },
+      "currency_flows": {
+        "status": 1,
+        "interpretation": "Dòng tiền tệ dao động nhẹ (0.00)"
+      },
+      "btc_risk": {
+        "status": 0,
+        "interpretation": "BTC downtrend (vs MA21: -4.1%, vs MA50: -4.2%)"
+      },
+      "correlations": {
+        "status": 0,
+        "interpretation": "risk_off_correlation"
+      }
+    }
+  }
+}
