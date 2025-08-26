@@ -1,9 +1,9 @@
 {
   "dump_info": {
-    "timestamp": "2025-08-25T17:29:35.525322",
+    "timestamp": "2025-08-26T17:45:29.409863",
     "years_back": 3,
-    "start_date": "2022-08-26",
-    "end_date": "2025-08-25",
+    "start_date": "2022-08-27",
+    "end_date": "2025-08-26",
     "total_symbols_processed": 6,
     "successful_dumps": 6
   },
@@ -11,8 +11,8 @@
     "VNINDEX": {
       "file": "reports/data/tickers/VNINDEX.json",
       "data_points": 747,
-      "start_date": "2022-08-26",
-      "end_date": "2025-08-25",
+      "start_date": "2022-08-29",
+      "end_date": "2025-08-26",
       "columns": [
         "Time",
         "Open",
@@ -26,8 +26,8 @@
     "VN30": {
       "file": "reports/data/tickers/VN30.json",
       "data_points": 747,
-      "start_date": "2022-08-26",
-      "end_date": "2025-08-25",
+      "start_date": "2022-08-29",
+      "end_date": "2025-08-26",
       "columns": [
         "Time",
         "Open",
@@ -41,8 +41,8 @@
     "VN100": {
       "file": "reports/data/tickers/VN100.json",
       "data_points": 747,
-      "start_date": "2022-08-26",
-      "end_date": "2025-08-25",
+      "start_date": "2022-08-29",
+      "end_date": "2025-08-26",
       "columns": [
         "Time",
         "Open",
@@ -56,8 +56,8 @@
     "VNMID": {
       "file": "reports/data/tickers/VNMID.json",
       "data_points": 747,
-      "start_date": "2022-08-26",
-      "end_date": "2025-08-25",
+      "start_date": "2022-08-29",
+      "end_date": "2025-08-26",
       "columns": [
         "Time",
         "Open",
@@ -71,8 +71,8 @@
     "VNSML": {
       "file": "reports/data/tickers/VNSML.json",
       "data_points": 747,
-      "start_date": "2022-08-26",
-      "end_date": "2025-08-25",
+      "start_date": "2022-08-29",
+      "end_date": "2025-08-26",
       "columns": [
         "Time",
         "Open",
@@ -86,8 +86,8 @@
     "VNALL": {
       "file": "reports/data/tickers/VNALL.json",
       "data_points": 747,
-      "start_date": "2022-08-26",
-      "end_date": "2025-08-25",
+      "start_date": "2022-08-29",
+      "end_date": "2025-08-26",
       "columns": [
         "Time",
         "Open",

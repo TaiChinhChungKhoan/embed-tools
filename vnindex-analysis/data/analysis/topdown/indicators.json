@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-25T23:05:12.106135",
+  "timestamp": "2025-08-26T19:29:20.697648",
   "summary": {
     "inflation_regime": "inflation_on",
     "risk_regime": "neutral",
@@ -35,7 +35,7 @@
       },
       "yield_curve": {
         "status": 0,
-        "interpretation": "Phẳng (17bp) - Tăng trưởng chậm, dốc lên nhẹ +12bp 1T"
+        "interpretation": "Phẳng (19bp) - Tăng trưởng chậm, dốc lên nhẹ +14bp 1T"
       },
       "commodities": {
         "status": 1,
@@ -47,7 +47,7 @@
       },
       "credit_spread": {
         "status": 1,
-        "interpretation": "Tín dụng bình thường (1.351) - Spread ổn định, ổn định "
+        "interpretation": "Tín dụng bình thường (1.350) - Spread ổn định, ổn định "
       },
       "credit_delinquencies": {
         "status": 0,
@@ -55,7 +55,7 @@
       },
       "breakeven": {
         "status": 2,
-        "interpretation": "Bình thường (2.48%) - Kỳ vọng ổn định"
+        "interpretation": "Bình thường (2.49%) - Kỳ vọng ổn định"
       }
     },
     "macro": {
@@ -68,20 +68,20 @@
         "interpretation": "Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng"
       },
       "intermarket": {
-        "status": 0,
-        "interpretation": "Tương quan liên thị trường tích cực (0.27)"
+        "status": 1,
+        "interpretation": "Tương quan liên thị trường trung lập (-0.07)"
       },
       "global_flows": {
         "status": 0,
-        "interpretation": "Dòng vốn toàn cầu mạnh (0.40)"
+        "interpretation": "Dòng vốn toàn cầu mạnh (0.20)"
       },
       "sentiment": {
         "status": 0,
-        "interpretation": "Tâm lý thị trường lạc quan (0.30)"
+        "interpretation": "Tâm lý thị trường lạc quan (0.25)"
       },
       "sector_rotation": {
-        "status": 1,
-        "interpretation": "Luân chuyển sector trung tính (1.1%) → Xu hướng chưa rõ"
+        "status": 0,
+        "interpretation": "Luân chuyển sector risk-on (2.8%) → Xu hướng tích cực"
       },
       "labor_market": {
         "status": 0,
@@ -131,7 +131,7 @@
       },
       "btc_risk": {
         "status": 0,
-        "interpretation": "BTC downtrend (vs MA21: -4.1%, vs MA50: -4.2%)"
+        "interpretation": "BTC downtrend (vs MA21: -5.7%, vs MA50: -6.0%)"
       },
       "correlations": {
         "status": 0,

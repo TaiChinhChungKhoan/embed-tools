@@ -1,324 +1,611 @@
 {
-  "timestamp": "2025-08-25T23:05:12.353194",
-  "headline": {
-    "title": "Phân Tích Thị Trường Top-Down",
-    "timestamp": "2025-08-25 23:05:12",
-    "regime": {
-      "inflation": "lạm phát tăng",
-      "risk": "ổn định"
-    },
-    "confidence": 100.0
-  },
-  "summary": {
-    "key_points": [],
-    "priority_signals": [
-      "Chế độ lạm phát: inflation_on (Tin cậy: 100.0%)",
-      "Ưu tiên các ngành hưởng lợi từ lạm phát",
-      "Giảm rủi ro kỳ hạn"
-    ],
-    "regime_details": {}
-  },
+  "timestamp": "2025-08-26T22:14:34.106951",
+  "analysis_version": "1.0",
+  "inflation_regime": "inflation_on",
+  "risk_regime": "neutral",
+  "market_regime": "normal",
+  "overall_confidence": 1.0,
   "sections": [
     {
-      "id": "inflation",
+      "type": "inflation",
       "title": "Chế Độ Lạm Phát",
-      "content": "🔴 **PCE Lõi**: Hơi cao (2.79%), ổn định +0.03% 3T\n     → Hiện tại: 2.79% →\n     → Thay đổi 3T: +0.03%\n     → MA 3T: 2.79% (Mục tiêu Fed: 2.0%)\n  🟡 **Tăng trưởng lương**: Bình thường (3.88%), ổn định -0.14% 3T\n     ⚡ Tăng lương bền vững → Tiêu dùng khỏe mạnh → Tích cực cho kinh tế\n     → Hiện tại: 3.88% →\n     → Thay đổi 3T: -0.14%\n     → MA 3T: 3.91% (Bình thường: 3-4%)\n  🔴 **Cpi_Core**: CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T\n  🔴 **PPI Lõi**: PPI Lõi 2.8% ↑ - Lạm phát trên mức...",
+      "summary": "Goldilocks - 'Tin tốt là tin tốt' - Độ tin cậy: 100.0%",
+      "confidence": 1.0,
+      "bias": null,
+      "regime": "inflation_on",
+      "key_points": [
+        "Bối cảnh đọc chỉ báo: Goldilocks - 'Tin tốt là tin tốt'",
+        "Ý nghĩa: Tăng trưởng vừa phải, lạm phát gần mục tiêu → Môi trường lý tưởng",
+        "Phản ứng thị trường: Thị trường phản ứng tích cực với dữ liệu tốt"
+      ],
       "indicators": [
         {
           "name": "PCE Lõi",
           "status": "negative",
-          "description": "Hơi cao (2.79%), ổn định +0.03% 3T\n     → Hiện tại: 2.79% →\n     → Thay đổi 3T: +0.03%\n     → MA 3T: 2.79% (Mục tiêu Fed: 2.0%)\n  🟡 **Tăng trưởng lương**: Bình thường (3.88%), ổn định -0.14% 3T\n     ⚡ Tăng lương bền vững → Tiêu dùng khỏe mạnh → Tích cực cho kinh tế\n     → Hiện tại: 3.88% →\n     → Thay đổi 3T: -0.14%\n     → MA 3T: 3.91% (Bình thường: 3-4%)\n  🔴 **Cpi_Core**: CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T\n  🔴 **PPI Lõi**: PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn\n     ⚡ PPI là chỉ báo dẫn đầu (1-3 tháng) - đang tăng\n     → PPI Lõi: 2.85% ↑\n     → Thay đổi 3T: +0.34%\n     → MA 3T: 2.85% (Bình thường: 1.0-3.0%)\n     → Chỉ báo dẫn đầu - báo hiệu lạm phát 1-3 tháng trước\n  🟡 **PPI Toàn bộ**: PPI Toàn bộ 2.1% ↑↑ - Lạm phát tăng nhẹ - theo dõi\n     ⚡ PPI là chỉ báo dẫn đầu (1-3 tháng) - tăng tốc\n     → PPI Toàn bộ: 2.05% ↑↑\n     → Thay đổi 3T: +1.63%\n     → MA 3T: 2.05% (Bình thường: 0.0-3.0%)\n     → Chỉ báo dẫn đầu - báo hiệu lạm phát 1-3 tháng trước\n  🔴 **PPI Dịch vụ**: PPI Dịch vụ 3.3% ↑ - Lạm phát tăng nhẹ\n     → PPI Dịch vụ: 3.31% ↑\n     → Thay đổi 3T: +0.89%\n     → MA 3T: 3.31% (Bình thường: 1.5-3.5%)\n     → Thay đổi 6T: -0.48% (Độ bền vững)\n     → Chỉ báo sticky inflation - nguy cơ xoắn ốc giá-lương\n  🔴 **Hàng hóa**: Áp lực lạm phát từ hàng hóa\n     → Dầu thô: $64.0\n       • Ngắn hạn: đi ngang (vs MA20: +0.8%)\n       • Trung hạn: bear_trend\n     → Khí thiên nhiên: $2.65\n       • Ngắn hạn: xu hướng giảm mạnh (vs MA20: -7.5%)\n       • Trung hạn: strong_bear_trend\n     → Đồng: $4.47\n       • Ngắn hạn: đi ngang (vs MA20: +0.4%)\n       • Trung hạn: strong_bear_trend\n     → Ngô: $416.00\n       • Ngắn hạn: xu hướng tăng mạnh (vs MA20: +8.3%)\n       • Trung hạn: bear_trend\n     → Lúa mì: $532.00\n       • Ngắn hạn: xu hướng tăng (vs MA20: +4.5%)\n       • Trung hạn: bear_trend\n     → Bông: $66.4\n       • Ngắn hạn: đi ngang (vs MA20: +0.5%)\n       • Trung hạn: consolidation\n  🔴 **Kỳ vọng lạm phát**: Bình thường (2.48%) - Kỳ vọng ổn định\n     → Kỳ vọng 5Y: 2.48%",
-          "value": "2.79%"
+          "interpretation": "Hơi cao (2.79%), ổn định +0.03% 3T",
+          "current_value": 2.7916088482572876,
+          "unit": "%",
+          "change_3m": 0.03473712050858779,
+          "ma_3m": 2.7916088482572876,
+          "trend_icon": "→",
+          "detailed_breakdown": [
+            "→ Hiện tại: 2.79% →",
+            "→ Thay đổi 3T: +0.03%",
+            "→ MA 3T: 2.79% (Mục tiêu Fed: 2.0%)"
+          ]
         },
         {
-          "name": "Ý nghĩa",
+          "name": "PCE Toàn bộ",
+          "status": "negative",
+          "interpretation": "Cao (4.75%), ổn định +0.09% 3T",
+          "current_value": 4.748449170781122,
+          "unit": "%",
+          "change_3m": 0.08841962358427935,
+          "ma_3m": 4.748449170781122,
+          "trend_icon": "→"
+        },
+        {
+          "name": "Tăng trưởng lương",
           "status": "neutral",
-          "description": "MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động",
-          "value": "13"
+          "interpretation": "Bình thường (3.88%), ổn định -0.14% 3T",
+          "current_value": 3.88,
+          "unit": "%",
+          "change_3m": -0.13999999999999968,
+          "ma_3m": 3.9133333333333336,
+          "context_interpretation": "Tăng lương bền vững → Tiêu dùng khỏe mạnh → Tích cực cho kinh tế",
+          "trend_icon": "→",
+          "normal_range": "3.0-4.0%",
+          "detailed_breakdown": [
+            "→ Hiện tại: 3.88% →",
+            "→ Thay đổi 3T: -0.14%",
+            "→ MA 3T: 3.91% (Bình thường: 3-4%)"
+          ]
         },
         {
-          "name": "Ý nghĩa",
+          "name": "CPI Lõi",
+          "status": "negative",
+          "interpretation": "CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T",
+          "current_value": 3.0508262001066155,
+          "unit": "%",
+          "change_3m": 0.2839656435903448,
+          "ma_3m": 3.003497335222175,
+          "target_range": "2.0-3.0%",
+          "trend_icon": "↗"
+        },
+        {
+          "name": "CPI Toàn bộ",
+          "status": "neutral",
+          "interpretation": "CPI Headline: Bình thường (2.73%) - Lạm phát kiểm soát, tăng nhẹ +0.40% 3T",
+          "current_value": 2.73,
+          "unit": "%",
+          "change_3m": 0.3999999999999999,
+          "ma_3m": 2.5933333333333333,
+          "target_range": "2.0-3.5%",
+          "trend_icon": "↗"
+        },
+        {
+          "name": "PPI Lõi",
+          "status": "negative",
+          "interpretation": "PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn",
+          "current_value": 2.8485638655130208,
+          "unit": "%",
+          "change_3m": 0.3424076974297918,
+          "ma_3m": 2.8485638655130203,
+          "context_interpretation": "PPI là chỉ báo dẫn đầu (1-3 tháng) - đang tăng",
+          "trend_icon": "↑",
+          "normal_range": "1.0-3.0%",
+          "detailed_breakdown": [
+            "→ PPI Lõi: 2.85% ↑",
+            "→ Thay đổi 3T: +0.34%",
+            "→ MA 3T: 2.85% (Bình thường: 1.0-3.0%)",
+            "→ Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng"
+          ]
+        },
+        {
+          "name": "PPI Toàn bộ",
+          "status": "neutral",
+          "interpretation": "PPI Toàn bộ 2.1% ↑↑ - Lạm phát tăng nhẹ - theo dõi",
+          "current_value": 2.0522388059701635,
+          "unit": "%",
+          "change_3m": 1.630477468715874,
+          "ma_3m": 2.0522388059701635,
+          "context_interpretation": "PPI là chỉ báo dẫn đầu (1-3 tháng) - tăng tốc",
+          "trend_icon": "↑↑",
+          "normal_range": "0.0-3.0%",
+          "detailed_breakdown": [
+            "→ PPI Toàn bộ: 2.05% ↑↑",
+            "→ Thay đổi 3T: +1.63%",
+            "→ MA 3T: 2.05% (Bình thường: 0.0-3.0%)",
+            "→ Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng"
+          ]
+        },
+        {
+          "name": "PPI Dịch vụ",
+          "status": "negative",
+          "interpretation": "PPI Dịch vụ 3.3% ↑ - Lạm phát tăng nhẹ",
+          "current_value": 3.3133153862083153,
+          "unit": "%",
+          "change_3m": 0.8932335610921882,
+          "ma_3m": 3.313315386208315,
+          "trend_icon": "↑",
+          "normal_range": "1.5-3.5%",
+          "detailed_breakdown": [
+            "→ PPI Dịch vụ: 3.31% ↑",
+            "→ Thay đổi 3T: +0.89%",
+            "→ MA 3T: 3.31% (Bình thường: 1.5-3.5%)",
+            "→ Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng",
+            "→ Chỉ báo sticky inflation - nguy cơ lạm phát gia tăng từ chu trình lương-giá"
+          ]
+        },
+        {
+          "name": "Kỳ vọng lạm phát",
+          "status": "negative",
+          "interpretation": "Bình thường (2.49%) - Kỳ vọng ổn định",
+          "current_value": 2.49,
+          "unit": "%",
+          "detailed_breakdown": [
+            "→ Kỳ vọng lạm phát 5Y: 2.49%",
+            "→ Phản ánh kỳ vọng thị trường về lạm phát dài hạn"
+          ]
+        },
+        {
+          "name": "Hàng hóa",
+          "status": "negative",
+          "interpretation": "Áp lực lạm phát từ hàng hóa",
+          "detailed_breakdown": [
+            "→ Oil $64.1 - Trend: sideways (vs MA20: +1.0%)",
+            "→ Natural_Gas $2.68 - Trend: strong_downtrend (vs MA20: -5.9%)",
+            "→ Copper $4.47 - Trend: sideways (vs MA20: +0.3%)",
+            "→ Corn $409.75/bu - Trend: strong_uptrend (vs MA20: +6.7%)",
+            "→ Wheat $531.50/bu - Trend: uptrend (vs MA20: +4.4%)",
+            "→ Cotton $65.3/lb - Trend: sideways (vs MA20: -1.0%)",
+            "→ Soybeans $1047.00/bu - Trend: uptrend (vs MA20: +3.5%)"
+          ]
+        },
+        {
+          "name": "Stock-Bond Correlation",
           "status": "positive",
-          "description": "Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất",
-          "value": null
-        },
-        {
-          "name": "Ý nghĩa",
-          "status": "neutral",
-          "description": "Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường",
-          "value": null
+          "interpretation": "Tương quan +0.38 confirms inflation regime",
+          "current_value": 0.37643538860652315,
+          "unit": "correlation",
+          "context_interpretation": "Tương quan dương XÁC NHẬN chế độ lạm phát cao → Cả stocks & bonds đều bị ảnh hưởng",
+          "trend_icon": "⚠️",
+          "detailed_breakdown": [
+            "→ Tương quan hiện tại: 0.38",
+            "→ Confirmation status: CONFIRMS",
+            "→ Ý nghĩa: Xác nhận chế độ lạm phát qua mối quan hệ stocks-bonds",
+            "→ ⚠️ Cẩn thận với tương quan dương stock-bond. Khi Fed thắt chặt, cả hai đều giảm cùng lúc."
+          ]
         }
       ],
-      "summary": "🔴 **PCE Lõi**: Hơi cao (2",
-      "key_metrics": {
-        "percentages": [
-          2.79,
-          0.03,
-          2.79
-        ],
-        "dollar_values": [
-          64.0,
-          2.65,
-          4.47
-        ]
-      }
+      "commodities": [
+        {
+          "name": "Oil",
+          "symbol": "oil",
+          "price": 64.13,
+          "currency": "USD",
+          "short_term_trend": "đi ngang",
+          "medium_term_trend": "xu hướng giảm"
+        },
+        {
+          "name": "Natural Gas",
+          "symbol": "natural_gas",
+          "price": 2.68,
+          "currency": "USD",
+          "short_term_trend": "xu hướng giảm mạnh",
+          "medium_term_trend": "xu hướng giảm mạnh"
+        },
+        {
+          "name": "Copper",
+          "symbol": "copper",
+          "price": 4.47,
+          "currency": "USD",
+          "short_term_trend": "đi ngang",
+          "medium_term_trend": "xu hướng giảm mạnh"
+        },
+        {
+          "name": "Corn",
+          "symbol": "corn",
+          "price": 409.75,
+          "currency": "USD",
+          "short_term_trend": "xu hướng tăng mạnh",
+          "medium_term_trend": "xu hướng giảm"
+        },
+        {
+          "name": "Wheat",
+          "symbol": "wheat",
+          "price": 531.5,
+          "currency": "USD",
+          "short_term_trend": "xu hướng tăng",
+          "medium_term_trend": "xu hướng giảm"
+        },
+        {
+          "name": "Cotton",
+          "symbol": "cotton",
+          "price": 65.31,
+          "currency": "USD",
+          "short_term_trend": "đi ngang",
+          "medium_term_trend": "consolidation"
+        },
+        {
+          "name": "Soybeans",
+          "symbol": "soybeans",
+          "price": 1047.0,
+          "currency": "USD",
+          "short_term_trend": "xu hướng tăng",
+          "medium_term_trend": "consolidation"
+        }
+      ]
     },
     {
-      "id": "macro",
+      "type": "macro",
       "title": "Bối Cảnh Kinh Tế Vĩ Mô",
-      "content": "============================================================\n➡️ THIÊN KIẾN: TRUNG LẬP (Neutral)\n→ Tín hiệu: Kinh tế vĩ mô cân bằng, không rõ hướng\n\n📊 KINH TẾ MỸ:\n  Thị trường lao động ổn định ở mức 4.2% | Fed giữ nguyên lãi suất ở mức 4.33%\n\n💰 TĂNG TRƯỞNG GDP:\n  Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng\n\n👥 THỊ TRƯỜNG LAO ĐỘNG:\n  Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)\n\n🏭 ISM PMI SẢN XUẤT:\n  Sản xuất thu h...",
+      "summary": "Thiên hướng: neutral - Độ mạnh: 9.2%",
+      "confidence": 1.0,
+      "bias": "neutral",
+      "regime": "neutral",
+      "key_points": [
+        "US Economy: Thị trường lao động ổn định ở mức 4.2% | Fed giữ nguyên lãi suất ở mức 4.33%",
+        "GDP: Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng",
+        "Credit delinquencies: Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao ",
+        "Sectors: Luân chuyển sector risk-on (2.7%) → Xu hướng tích cực",
+        "Labor: Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)"
+      ],
       "indicators": [
         {
-          "name": "Ý nghĩa",
-          "status": "neutral",
-          "description": "MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động",
-          "value": "13"
+          "name": "Tăng trưởng GDP",
+          "status": "negative",
+          "interpretation": "Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng",
+          "current_value": 1.99,
+          "unit": "%",
+          "context_interpretation": "GDP tăng trưởng chậm → Rủi ro suy thoái gia tăng",
+          "normal_range": "2.5-3.5%",
+          "detailed_breakdown": [
+            "→ Tăng trưởng hiện tại: 2.0% YoY",
+            "→ Mức bình thường: 2.5-3.5% YoY",
+            "→ Tín hiệu: Kinh tế đang suy yếu"
+          ]
         },
         {
-          "name": "Ý nghĩa",
+          "name": "Tỷ lệ nợ thẻ tín dụng quá hạn",
           "status": "positive",
-          "description": "Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất",
-          "value": null
+          "interpretation": "Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao ",
+          "current_value": 3.05,
+          "unit": "%",
+          "context_interpretation": "Tỷ lệ nợ quá hạn tăng → Chất lượng tín dụng xấu đi",
+          "normal_range": "1.5-3.0%",
+          "leading_indicator_note": "Chỉ báo dẫn đầu cho suy thoái (6-12 tháng trước)",
+          "detailed_breakdown": [
+            "→ Tỷ lệ hiện tại: 3.0%",
+            "→ Mức bình thường: 1.5-3.0%",
+            "→ Tín hiệu: Cảnh báo sớm về suy thoái"
+          ]
         },
         {
-          "name": "Ý nghĩa",
-          "status": "neutral",
-          "description": "Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường",
-          "value": null
+          "name": "Thị trường lao động",
+          "status": "positive",
+          "interpretation": "Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)",
+          "context_interpretation": "Thị trường lao động lành mạnh → Tăng trưởng ổn định → Hỗ trợ tiêu dùng",
+          "trend_icon": "📈",
+          "detailed_breakdown": [
+            "→ Thất nghiệp: 4.2% →",
+            "→ Việc làm: +1.0% YoY →",
+            "→ Đơn thất nghiệp: 226k →",
+            "→ Việc trống: +0.3% YoY ↑↑"
+          ]
+        },
+        {
+          "name": "ISM PMI Sản xuất",
+          "status": "negative",
+          "interpretation": "Sản xuất thu hẹp nhẹ (48.0) → Kinh tế đang yếu đi",
+          "current_value": 48.0,
+          "unit": "points",
+          "target_range": "50+ (Expansion)",
+          "context_interpretation": "Sản xuất thu hẹp nhẹ → Kinh tế đang yếu đi",
+          "leading_indicator_note": "PMI là chỉ báo dẫn đầu cho hoạt động sản xuất",
+          "detailed_breakdown": [
+            "→ PMI hiện tại: 48.0 points",
+            "→ Mức mở rộng: >50 points",
+            "→ Tín hiệu: Sản xuất suy yếu"
+          ]
+        },
+        {
+          "name": "ISM PMI Dịch vụ",
+          "status": "positive",
+          "interpretation": "Mở rộng dịch vụ ổn định (50.1) → Kinh tế ổn định",
+          "current_value": 50.1,
+          "unit": "points",
+          "target_range": "50+ (Expansion)",
+          "context_interpretation": "Dịch vụ mở rộng ổn định → Kinh tế ổn định",
+          "leading_indicator_note": "PMI Dịch vụ phản ánh 80% nền kinh tế Mỹ",
+          "detailed_breakdown": [
+            "→ PMI Dịch vụ: 50.1 points",
+            "→ Mức mở rộng: >50 points",
+            "→ Tác động: Dịch vụ chiếm 80% GDP"
+          ]
+        },
+        {
+          "name": "Dầu thô (Chỉ báo kinh tế)",
+          "status": "negative",
+          "interpretation": "Chỉ báo tăng trưởng toàn cầu: $64.1 (stable) - Trend: declining (vs MA20: +1.0%)",
+          "current_value": 64.13,
+          "unit": "USD/barrel"
+        },
+        {
+          "name": "Dr. Copper (Sức khỏe kinh tế)",
+          "status": "positive",
+          "interpretation": "Dr. Copper - sức khỏe kinh tế: $4.47 (growth) - Trend: declining (vs MA20: +0.3%)",
+          "current_value": 4.47,
+          "unit": "USD/lb"
         }
-      ],
-      "summary": "============================================================\n➡️ THIÊN KIẾN: TRUNG LẬP (Neutral)\n→ Tín hiệu: Kinh tế vĩ mô cân bằng, không rõ hướng\n\n📊 KINH TẾ MỸ:\n  Thị trường lao động ổn định ở mức 4",
-      "key_metrics": {
-        "percentages": [
-          4.2,
-          4.33,
-          2.0
-        ],
-        "dollar_values": [
-          64.0,
-          4.47
-        ]
-      }
+      ]
     },
     {
-      "id": "risk",
+      "type": "fed_policy",
+      "title": "Phân Tích Chính Sách Fed",
+      "summary": "Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng",
+      "confidence": 0.5,
+      "bias": "Fed hold",
+      "regime": "market",
+      "key_points": [],
+      "indicators": [
+        {
+          "name": "CME Fed Watch",
+          "status": "negative",
+          "interpretation": "market",
+          "current_value": 74.0,
+          "unit": "%",
+          "context_interpretation": "Market kỳ vọng mạnh cắt lãi suất → Fed pivot → Tích cực cho growth assets",
+          "trend_icon": "📉",
+          "detailed_breakdown": [
+            "→ Cắt 25bp: 74%",
+            "→ Giữ nguyên: 23%",
+            "→ Tăng 25bp: 3%",
+            "→ Nguồn: Fed Funds Futures (tính toán nội bộ theo phương pháp CME)"
+          ]
+        },
+        {
+          "name": "TỔNG HỢP & KHUYẾN NGHỊ",
+          "status": "neutral",
+          "interpretation": "HỖN HỢP",
+          "current_value": 74.0,
+          "unit": "%",
+          "context_interpretation": "Triển vọng chính sách Fed và kỳ vọng thị trường",
+          "trend_icon": "⚖️",
+          "detailed_breakdown": [
+            "→ Mức độ nhất quán: HỖN HỢP",
+            "→ Tín hiệu chính: thị trường",
+            "→ Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn",
+            "→ Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng"
+          ]
+        },
+        {
+          "name": "Ý NGHĨA GIAO DỊCH",
+          "status": "neutral",
+          "interpretation": "Ý nghĩa giao dịch",
+          "context_interpretation": "Các kịch bản giao dịch dựa trên kỳ vọng chính sách Fed",
+          "trend_icon": "📊",
+          "detailed_breakdown": [
+            "→ Kịch bản chính: Fed cắt lãi suất → Tích cực cho cổ phiếu, USD yếu",
+            "→ Rủi ro: Nếu Fed giữ nguyên → Thị trường thất vọng, điều chỉnh mạnh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "risk",
       "title": "Phân Tích Rủi Ro",
-      "content": "📊 Mức độ: 🟢 MÔI TRƯỜNG TÍCH CỰC (VIX 13-18) - Xu hướng giảm\n   📉 Xu hướng: ➡️ VIX ỔN ĐỊNH\n   🟡 **Ý nghĩa**: MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động\n\n📊 MOVE (BOND VOLATILITY):\n   📊 Mức độ: 📉 THẤP (78) - Trái phiếu ổn định\n   📉 Xu hướng: ➡️ MOVE ỔN ĐỊNH\n   🟢 **Ý nghĩa**: Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất\n\n📊 LÃNH ĐẠO THỊ TRƯỜNG CỔ PHIẾU:\n   ➡️ Lãnh đạo không rõ ràng\n\n📈 DÒNG TIỀN T...",
+      "summary": "Neutral - Trung lập - Độ tin cậy: 100.0%",
+      "confidence": 1.0,
+      "bias": null,
+      "regime": "neutral",
+      "key_points": [
+        "VIX: benign",
+        "Global capital flows analysis available"
+      ],
       "indicators": [
         {
-          "name": "Ý nghĩa",
-          "status": "neutral",
-          "description": "MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động",
-          "value": "13"
-        },
-        {
-          "name": "Ý nghĩa",
+          "name": "VIX",
           "status": "positive",
-          "description": "Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất",
-          "value": null
+          "interpretation": "bình thường - VIX 13-18",
+          "current_value": 14.95,
+          "unit": "points",
+          "trend": "stable",
+          "context_interpretation": "VIX ổn định → Môi trường thuận lợi cho risk-on",
+          "trend_icon": "✅",
+          "detailed_breakdown": [
+            "→ VIX hiện tại: 14.9 points",
+            "→ Mức: bình thường - VIX 13-18",
+            "→ Momentum: stable",
+            "→ Ngưỡng: <13 (tự mãn), 13-18 (tích cực), 18-25 (caution), >25 (risk-off)"
+          ]
         },
         {
-          "name": "Ý nghĩa",
+          "name": "MOVE Index",
+          "status": "positive",
+          "interpretation": "bond_stability",
+          "current_value": 77.56,
+          "unit": "points",
+          "context_interpretation": "MOVE bình thường → Thị trường trái phiếu hoạt động bình thường",
+          "trend_icon": "🟡",
+          "detailed_breakdown": [
+            "→ MOVE hiện tại: 77.6 points",
+            "→ Mức: bond_stability",
+            "→ Ngưỡng: <60 (low), 60-100 (normal), 100-150 (elevated), >150 (crisis)",
+            "→ MOVE là VIX của thị trường trái phiếu - đo lường volatility expected"
+          ]
+        },
+        {
+          "name": "Bitcoin (Khẩu vị rủi ro)",
+          "status": "negative",
+          "interpretation": "BTC downtrend (vs MA21: -5.0%, vs MA50: -5.3%)",
+          "current_value": 110339.77,
+          "unit": "USD",
+          "trend": "weak",
+          "context_interpretation": "BTC downtrend → Risk-off sentiment → DXY mạnh, bonds tăng",
+          "trend_icon": "📉",
+          "detailed_breakdown": [
+            "→ BTC hiện tại: $110,340",
+            "→ vs MA21: -5.0%",
+            "→ vs MA50: -5.3%",
+            "→ BTC là proxy cho risk appetite của institutional money"
+          ]
+        },
+        {
+          "name": "Khẩu vị rủi ro (AUD/JPY)",
           "status": "neutral",
-          "description": "Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường",
-          "value": null
+          "interpretation": "Trung lập - AUD/JPY +0.0%",
+          "current_value": 0.0031316220758480055,
+          "unit": "% vs MA20",
+          "context_interpretation": "AUD/JPY neutral → Risk appetite trung tính → Range-bound market",
+          "trend_icon": "⚖️",
+          "detailed_breakdown": [
+            "→ AUD/JPY vs MA20: +0.0%",
+            "→ AUD = Risk currency, JPY = Safe haven",
+            "→ Tỷ lệ này phản ánh global risk appetite",
+            "→ Ngưỡng: >2% (Risk-On), <-2% (Risk-Off)"
+          ]
+        },
+        {
+          "name": "Lãnh đạo thị trường",
+          "status": "neutral",
+          "interpretation": "Dẫn dắt hỗn hợp",
+          "current_value": 0.15,
+          "context_interpretation": "Leadership hỗn hợp → Thị trường đang tìm hướng → Sector rotation",
+          "trend_icon": "🔄",
+          "detailed_breakdown": [
+            "→ Leadership signal: 0.1",
+            "→ Dẫn đầu: N/A",
+            "→ Chậm chân: N/A",
+            "→ Sector rotation phản ánh risk appetite và economic cycle"
+          ]
         }
-      ],
-      "summary": "📊 Mức độ: 🟢 MÔI TRƯỜNG TÍCH CỰC (VIX 13-18) - Xu hướng giảm\n   📉 Xu hướng: ➡️ VIX ỔN ĐỊNH\n   🟡 **Ý nghĩa**: MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động\n\n📊 MOVE (BOND VOLATILITY):\n   📊 Mức độ: 📉 THẤP (78) - Trái phiếu ổn định\n   📉 Xu hướng: ➡️ MOVE ỔN ĐỊNH\n   🟢 **Ý nghĩa**: Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất\n\n📊 LÃNH ĐẠO THỊ TRƯỜNG CỔ PHIẾU:\n   ➡️ Lãnh đạo không rõ ràng\n\n📈 DÒNG TIỀN TRÁI PHIẾU:\n   ➡️ Dòng tiền trung lập\n\n₿ BITCOIN (KHẨU VỊ RỦI RO):\n   📊 Xu hướng: weak\n   🎯 Momentum: ➡️ ỔN ĐỊNH - Consolidation\n   🟡 **Ý nghĩa**: Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường\n\n💰 BẢN ĐỒ DÒNG VỐN:\n   🌍 Dòng vốn phân tán toàn cầu\n      • Châu Âu > US\n      • Nhật > US\n      • Hong Kong/Trung Quốc > US\n      • Thị trường mới nổi > US (Risk-On mạnh)\n   ⚖️ Chế độ Trung lập - thị trường thiếu hướng rõ ràng\n   📈 Có dòng vốn toàn cầu nhưng tín hiệu trái chiều\n   🎯 Thị trường chờ xác nhận trend mới\n   💰 Dòng tiền thận trọng - tránh rủi ro lớn\n   📊 Momentum yếu - thiếu catalyst rõ ràng\n   💱 Ngoại tệ:\n      • USD ổn định (vs MA20: -0",
-      "key_metrics": {
-        "percentages": [
-          0.3,
-          0.2,
-          90.0
-        ]
-      }
+      ]
     },
     {
-      "id": "fed_policy",
-      "title": "Chính Sách Fed",
-      "content": "============================================================\n*Sử dụng tín hiệu thị trường làm động cơ dự đoán chính, dữ liệu kinh tế cơ bản làm xác nhận*\n\n📈 TÍN HIỆU THỊ TRƯỜNG (CME Fed Watch):\n→ Cắt 25bp: 62%\n→ Giữ nguyên: 29%\n→ Tăng 25bp: 9%\n→ Thị trường nghiêng về CẮT lãi suất (62% xác suất)\n\n⚖️ TỔNG HỢP & KHUYẾN NGHỊ:\n→ Mức độ nhất quán: HỖN HỢP\n→ Tín hiệu chính: thị trường\n→ Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn\n→ Đánh giá: Thị trường kỳ vọng CẮT LÃI ...",
+      "type": "trading_playbook",
+      "title": "Trading Playbook",
+      "summary": "Trading bias: Neutral - Thiếu hướng rõ ràng",
+      "confidence": 0.8,
+      "bias": "NEUTRAL",
+      "regime": "NEUTRAL",
+      "key_points": [],
       "indicators": [
         {
-          "name": "Ý nghĩa",
+          "name": "Trading Bias",
           "status": "neutral",
-          "description": "MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động",
-          "value": "13"
+          "interpretation": "Neutral",
+          "context_interpretation": "Thiếu hướng rõ ràng → Duy trì cân bằng → Chờ catalyst mạnh",
+          "trend_icon": "⚖️",
+          "detailed_breakdown": [
+            "→ Trading bias: Neutral",
+            "→ Inflation regime: Lạm phát cao",
+            "→ Risk environment: Trung lập",
+            "→ Fed policy: Chờ data",
+            "→ Kiến nghị: Duy trì cân bằng"
+          ]
         },
         {
-          "name": "Ý nghĩa",
-          "status": "positive",
-          "description": "Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất",
-          "value": null
+          "name": "HƯỚNG DẪN PHÂN BỔ TÀI SẢN",
+          "status": "neutral",
+          "interpretation": "Hướng dẫn phân bổ tài sản dựa trên phân tích",
+          "context_interpretation": "Phân bổ tài sản phù hợp với môi trường hiện tại",
+          "trend_icon": "💼",
+          "detailed_breakdown": [
+            "→ Cổ phiếu: Giảm tỷ trọng cổ phiếu tăng trưởng, ưu tiên giá trị",
+            "→ Trái phiếu: Giảm kỳ hạn, ưu tiên TIPS",
+            "→ Alternatives: Tăng tỷ trọng hàng hóa",
+            "→ Tiền mặt: Dự trữ vừa phải để tận dụng cơ hội"
+          ]
         },
         {
-          "name": "Ý nghĩa",
+          "name": "CHỦ ĐỀ THỊ TRƯỜNG",
           "status": "neutral",
-          "description": "Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường",
-          "value": null
+          "interpretation": "Các chủ đề thị trường và hướng dẫn ngành",
+          "context_interpretation": "Những chủ đề đầu tư chính dựa trên phân tích",
+          "trend_icon": "💡",
+          "detailed_breakdown": [
+            "1. Ưu tiên các ngành hưởng lợi từ lạm phát",
+            "   Hướng dẫn: Xem xét các ngành năng lượng, nguyên vật liệu và ngân hàng được hưởng lợi từ giá cả tăng",
+            "2. Giảm rủi ro kỳ hạn",
+            "   Hướng dẫn: Hạn chế nắm giữ trái phiếu dài hạn vì lợi suất tăng tạo áp lực"
+          ]
+        },
+        {
+          "name": "QUẢN LÝ RỦI RO",
+          "status": "neutral",
+          "interpretation": "Tham số quản lý rủi ro cho môi trường hiện tại",
+          "context_interpretation": "Tham số quản lý rủi ro phù hợp với độ biến động hiện tại",
+          "trend_icon": "⚠️",
+          "detailed_breakdown": [
+            "→ Kích thước vị thế: 90% of normal",
+            "→ Stop loss: Normal (2-3%)",
+            "→ Rủi ro tối đa: 2% per day"
+          ]
         }
-      ],
-      "summary": "============================================================\n*Sử dụng tín hiệu thị trường làm động cơ dự đoán chính, dữ liệu kinh tế cơ bản làm xác nhận*\n\n📈 TÍN HIỆU THỊ TRƯỜNG (CME Fed Watch):\n→ Cắt 25bp: 62%\n→ Giữ nguyên: 29%\n→ Tăng 25bp: 9%\n→ Thị trường nghiêng về CẮT lãi suất (62% xác suất)\n\n⚖️ TỔNG HỢP & KHUYẾN NGHỊ:\n→ Mức độ nhất quán: HỖN HỢP\n→ Tín hiệu chính: thị trường\n→ Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn\n→ Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (62%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng\n\n📊 Ý NGHĨA GIAO DỊCH:\n→ Kịch bản chính: Fed cắt lãi suất → Tích cực cho cổ phiếu, USD yếu\n→ Rủi ro: Nếu Fed giữ nguyên → Thị trường thất vọng, điều chỉnh mạnh\n\n\n============================================================\nPHÂN TÍCH RISK-ON/RISK-OFF TOÀN DIỆN\n============================================================\n⚪ CHẾ ĐỘ: NEUTRAL (Trung lập)\n   → Thị trường đang do dự, tín hiệu trái chiều\n\n😰 VIX & TÂM LÝ THỊ TRƯỜNG:\n   📊 Mức độ: 🟢 MÔI TRƯỜNG TÍCH CỰC (VIX 13-18) - Xu hướng giảm\n   📉 Xu hướng: ➡️ VIX ỔN ĐỊNH\n   🟡 **Ý nghĩa**: MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động\n\n📊 MOVE (BOND VOLATILITY):\n   📊 Mức độ: 📉 THẤP (78) - Trái phiếu ổn định\n   📉 Xu hướng: ➡️ MOVE ỔN ĐỊNH\n   🟢 **Ý nghĩa**: Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất\n\n📊 LÃNH ĐẠO THỊ TRƯỜNG CỔ PHIẾU:\n   ➡️ Lãnh đạo không rõ ràng\n\n📈 DÒNG TIỀN TRÁI PHIẾU:\n   ➡️ Dòng tiền trung lập\n\n₿ BITCOIN (KHẨU VỊ RỦI RO):\n   📊 Xu hướng: weak\n   🎯 Momentum: ➡️ ỔN ĐỊNH - Consolidation\n   🟡 **Ý nghĩa**: Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường\n\n💰 BẢN ĐỒ DÒNG VỐN:\n   🌍 Dòng vốn phân tán toàn cầu\n      • Châu Âu > US\n      • Nhật > US\n      • Hong Kong/Trung Quốc > US\n      • Thị trường mới nổi > US (Risk-On mạnh)\n   ⚖️ Chế độ Trung lập - thị trường thiếu hướng rõ ràng\n   📈 Có dòng vốn toàn cầu nhưng tín hiệu trái chiều\n   🎯 Thị trường chờ xác nhận trend mới\n   💰 Dòng tiền thận trọng - tránh rủi ro lớn\n   📊 Momentum yếu - thiếu catalyst rõ ràng\n   💱 Ngoại tệ:\n      • USD ổn định (vs MA20: -0",
-      "key_metrics": {
-        "percentages": [
-          62.0,
-          29.0,
-          9.0
-        ]
-      }
+      ]
     }
   ],
-  "commodities": {
-    "oil": {
-      "price": 64.0,
-      "currency": "USD",
-      "trend": {
-        "direction": "unknown",
-        "description": ""
-      }
+  "trading_recommendations": [
+    {
+      "category": "policy",
+      "action": "monitor",
+      "description": "Theo dõi data-dependent Fed",
+      "reasoning": "Tạm dừng chính sách → Tập trung vào dữ liệu kinh tế để định hướng",
+      "priority": 1
     },
-    "gas": {
-      "price": 2.65,
-      "currency": "USD",
-      "trend": {
-        "direction": "unknown",
-        "description": ""
-      }
+    {
+      "category": "portfolio",
+      "action": "balance",
+      "description": "Duy trì cân bằng đa dạng hóa",
+      "reasoning": "Thị trường thiếu hướng rõ ràng - chờ catalyst",
+      "priority": 1
     },
-    "copper": {
-      "price": 4.47,
-      "currency": "USD",
-      "trend": {
-        "direction": "unknown",
-        "description": ""
-      }
+    {
+      "category": "general",
+      "action": "hold",
+      "description": "Ưu tiên các ngành hưởng lợi từ lạm phát",
+      "reasoning": "Xem xét các ngành năng lượng, nguyên vật liệu và ngân hàng được hưởng lợi từ giá cả tăng",
+      "priority": 1
     },
-    "corn": {
-      "price": 416.0,
-      "currency": "USD",
-      "trend": {
-        "direction": "unknown",
-        "description": ""
-      }
+    {
+      "category": "general",
+      "action": "hold",
+      "description": "Giảm rủi ro kỳ hạn",
+      "reasoning": "Hạn chế nắm giữ trái phiếu dài hạn vì lợi suất tăng tạo áp lực",
+      "priority": 2
     },
-    "wheat": {
-      "price": 532.0,
-      "currency": "USD",
-      "trend": {
-        "direction": "unknown",
-        "description": ""
-      }
+    {
+      "category": "strategy",
+      "action": "increase",
+      "description": "Ưu tiên cổ phiếu giá trị hơn cổ phiếu tăng trưởng",
+      "reasoning": "Môi trường lạm phát có lợi cho cổ phiếu giá trị hơn cổ phiếu tăng trưởng",
+      "priority": 1
     },
-    "cotton": {
-      "price": 66.4,
-      "currency": "USD",
-      "trend": {
-        "direction": "unknown",
-        "description": ""
-      }
+    {
+      "category": "commodity",
+      "action": "increase",
+      "description": "Tăng tỷ trọng hàng hóa & tài sản thực",
+      "reasoning": "Hàng hóa đóng vai trò hàng rào chống lạm phát",
+      "priority": 2
+    },
+    {
+      "category": "bond",
+      "action": "decrease",
+      "description": "Giảm thời gian đáo hạn trái phiếu",
+      "reasoning": "Lãi suất tăng gây bất lợi cho trái phiếu dài hạn",
+      "priority": 3
     }
+  ],
+  "risk_management": {
+    "position_size": 0.9,
+    "stop_loss": 0.02,
+    "max_daily_risk": 0.02
   },
-  "economic_data": {
-    "unemployment": {
-      "value": 4.2,
-      "unit": "%",
-      "context": ""
-    },
-    "gdp": {
-      "value": 2.0,
-      "unit": "%",
-      "context": "33%\n\n💰 TĂNG TRƯỞNG GDP:\n  Tăng trưởng GDP chậm 2"
-    },
-    "fed_rate": {
-      "value": 4.33,
-      "unit": "points",
-      "context": ""
-    },
-    "ism_pmi": {
-      "value": 48.0,
-      "unit": "points",
-      "context": ""
-    },
-    "vix": {
-      "value": 13.0,
-      "unit": "points",
-      "context": "0) → Kinh tế đang yếu đi\n\n🏦 PHÂN TÍCH CHÍNH SÁCH FED\n============================================================\n*Sử dụng tín hiệu thị trường làm động cơ dự đoán chính, dữ liệu kinh tế cơ bản làm xác nhận*\n\n📈 TÍN HIỆU THỊ TRƯỜNG (CME Fed Watch):\n→ Cắt 25bp: 62%\n→ Giữ nguyên: 29%\n→ Tăng 25bp: 9%\n→ Thị trường nghiêng về CẮT lãi suất (62% xác suất)\n\n⚖️ TỔNG HỢP & KHUYẾN NGHỊ:\n→ Mức độ nhất quán: HỖN HỢP\n→ Tín hiệu chính: thị trường\n→ Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn\n→ Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (62%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng\n\n📊 Ý NGHĨA GIAO DỊCH:\n→ Kịch bản chính: Fed cắt lãi suất → Tích cực cho cổ phiếu, USD yếu\n→ Rủi ro: Nếu Fed giữ nguyên → Thị trường thất vọng, điều chỉnh mạnh\n\n\n============================================================\nPHÂN TÍCH RISK-ON/RISK-OFF TOÀN DIỆN\n============================================================\n⚪ CHẾ ĐỘ: NEUTRAL (Trung lập)\n   → Thị trường đang do dự, tín hiệu trái chiều\n\n😰 VIX & TÂM LÝ THỊ TRƯỜNG:\n   📊 Mức độ: 🟢 MÔI TRƯỜNG TÍCH CỰC (VIX 13-18) - Xu hướng giảm\n   📉 Xu hướng: ➡️ VIX ỔN ĐỊNH\n   🟡 **Ý nghĩa**: MÔI TRƯỜNG TÍCH CỰC - VIX 13-18, xu hướng giảm\n   💡 VIX phản ánh tâm lý nhà đầu tư và kỳ vọng biến động\n\n📊 MOVE (BOND VOLATILITY):\n   📊 Mức độ: 📉 THẤP (78) - Trái phiếu ổn định\n   📉 Xu hướng: ➡️ MOVE ỔN ĐỊNH\n   🟢 **Ý nghĩa**: Cơ hội mua bond - thị trường oversold\n   💡 MOVE Index phản ánh kỳ vọng biến động lãi suất\n\n📊 LÃNH ĐẠO THỊ TRƯỜNG CỔ PHIẾU:\n   ➡️ Lãnh đạo không rõ ràng\n\n📈 DÒNG TIỀN TRÁI PHIẾU:\n   ➡️ Dòng tiền trung lập\n\n₿ BITCOIN (KHẨU VỊ RỦI RO):\n   📊 Xu hướng: weak\n   🎯 Momentum: ➡️ ỔN ĐỊNH - Consolidation\n   🟡 **Ý nghĩa**: Tâm lý crypto trung tính\n   💡 Bitcoin là chỉ báo tâm lý rủi ro của thị trường\n\n💰 BẢN ĐỒ DÒNG VỐN:\n   🌍 Dòng vốn phân tán toàn cầu\n      • Châu Âu > US\n      • Nhật > US\n      • Hong Kong/Trung Quốc > US\n      • Thị trường mới nổi > US (Risk-On mạnh)\n   ⚖️ Chế độ Trung lập - thị trường thiếu hướng rõ ràng\n   📈 Có dòng vốn toàn cầu nhưng tín hiệu trái chiều\n   🎯 Thị trường chờ xác nhận trend mới\n   💰 Dòng tiền thận trọng - tránh rủi ro lớn\n   📊 Momentum yếu - thiếu catalyst rõ ràng\n   💱 Ngoại tệ:\n      • USD ổn định (vs MA20: -0"
-    },
-    "pce": {
-      "value": 2.79,
-      "unit": "%",
-      "context": "0%)\n\n⚪ CHẾ ĐỘ LẠM PHÁT: INFLATION_ON\n→ Độ tin cậy: 100% (14/6 chỉ báo)\n→ Bối cảnh đọc chỉ báo: Goldilocks - 'Tin tốt là tin tốt'\n→ Ý nghĩa: Tăng trưởng vừa phải, lạm phát gần mục tiêu → Môi trường lý tưởng\n\n📊 CHI TIẾT CÁC CHỈ BÁO LẠM PHÁT:\n  🔴 **PCE Lõi**: Hơi cao (2"
-    },
-    "cpi": {
-      "value": 3.05,
-      "unit": "%",
-      "context": "91% (Bình thường: 3-4%)\n  🔴 **Cpi_Core**: CPI Core: Cao (3"
-    },
-    "ppi": {
-      "value": 2.8,
-      "unit": "%",
-      "context": "28% 3T\n  🔴 **PPI Lõi**: PPI Lõi 2"
-    }
-  },
-  "recommendations": [
-    {
-      "priority": 1,
-      "text": "2%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng",
-      "category": "general"
-    },
-    {
-      "priority": 2,
-      "text": "ON/RISK-OFF TOÀN DIỆN",
-      "category": "general"
-    },
-    {
-      "priority": 3,
-      "text": "3-18) - Xu hướng giảm",
-      "category": "reduce_exposure"
-    },
-    {
-      "priority": 4,
-      "text": "VIX 13-18, xu hướng giảm",
-      "category": "reduce_exposure"
-    },
-    {
-      "priority": 5,
-      "text": "8) - Trái phiếu ổn định",
-      "category": "general"
-    }
+  "priority_signals": [
+    "Chế độ lạm phát: inflation_on"
   ],
-  "alerts": [
-    {
-      "type": "warning",
-      "message": "Cẩn thận với tương quan dương stock-bond. Khi Fed thắt chặt, cả hai đều giảm cùng lúc.",
-      "level": "low"
-    },
-    {
-      "type": "warning",
-      "message": "**QUẢN LÝ RỦI RO:**",
-      "level": "low"
-    },
-    {
-      "type": "warning",
-      "message": "**PCE Lõi**: Hơi cao (2.79%), ổn định +0.03% 3T",
-      "level": "high"
-    },
-    {
-      "type": "warning",
-      "message": "**Cpi_Core**: CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T",
-      "level": "high"
-    },
-    {
-      "type": "warning",
-      "message": "**PPI Lõi**: PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn",
-      "level": "low"
-    }
-  ],
-  "metadata": {
-    "word_count": 1621,
-    "section_count": 0,
-    "indicator_count": 19,
-    "has_commodities": true,
-    "has_fed_policy": true,
-    "language": "vi"
-  }
+  "data_quality_score": 76.27655869035179,
+  "consistency_score": 100.0,
+  "missing_indicators": []
 }
