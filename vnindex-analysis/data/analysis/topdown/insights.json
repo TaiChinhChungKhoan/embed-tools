@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-26T22:14:34.106951",
+  "timestamp": "2025-08-27T15:01:44.106602",
   "analysis_version": "1.0",
   "inflation_regime": "inflation_on",
   "risk_regime": "neutral",
@@ -140,11 +140,11 @@
         {
           "name": "Kỳ vọng lạm phát",
           "status": "negative",
-          "interpretation": "Bình thường (2.49%) - Kỳ vọng ổn định",
-          "current_value": 2.49,
+          "interpretation": "Bình thường (2.50%) - Kỳ vọng ổn định",
+          "current_value": 2.5,
           "unit": "%",
           "detailed_breakdown": [
-            "→ Kỳ vọng lạm phát 5Y: 2.49%",
+            "→ Kỳ vọng lạm phát 5Y: 2.50%",
             "→ Phản ánh kỳ vọng thị trường về lạm phát dài hạn"
           ]
         },
@@ -153,25 +153,25 @@
           "status": "negative",
           "interpretation": "Áp lực lạm phát từ hàng hóa",
           "detailed_breakdown": [
-            "→ Oil $64.1 - Trend: sideways (vs MA20: +1.0%)",
-            "→ Natural_Gas $2.68 - Trend: strong_downtrend (vs MA20: -5.9%)",
-            "→ Copper $4.47 - Trend: sideways (vs MA20: +0.3%)",
-            "→ Corn $409.75/bu - Trend: strong_uptrend (vs MA20: +6.7%)",
-            "→ Wheat $531.50/bu - Trend: uptrend (vs MA20: +4.4%)",
-            "→ Cotton $65.3/lb - Trend: sideways (vs MA20: -1.0%)",
-            "→ Soybeans $1047.00/bu - Trend: uptrend (vs MA20: +3.5%)"
+            "→ Oil $63.2 - Trend: sideways (vs MA20: -0.3%)",
+            "→ Natural_Gas $2.72 - Trend: downtrend (vs MA20: -4.0%)",
+            "→ Copper $4.45 - Trend: sideways (vs MA20: -0.2%)",
+            "→ Corn $408.25/bu - Trend: strong_uptrend (vs MA20: +6.3%)",
+            "→ Wheat $530.25/bu - Trend: uptrend (vs MA20: +4.3%)",
+            "→ Cotton $65.3/lb - Trend: sideways (vs MA20: -1.1%)",
+            "→ Soybeans $1048.75/bu - Trend: uptrend (vs MA20: +3.3%)"
           ]
         },
         {
           "name": "Stock-Bond Correlation",
           "status": "positive",
-          "interpretation": "Tương quan +0.38 confirms inflation regime",
-          "current_value": 0.37643538860652315,
+          "interpretation": "Tương quan +0.39 confirms inflation regime",
+          "current_value": 0.3940901065744656,
           "unit": "correlation",
           "context_interpretation": "Tương quan dương XÁC NHẬN chế độ lạm phát cao → Cả stocks & bonds đều bị ảnh hưởng",
           "trend_icon": "⚠️",
           "detailed_breakdown": [
-            "→ Tương quan hiện tại: 0.38",
+            "→ Tương quan hiện tại: 0.39",
             "→ Confirmation status: CONFIRMS",
             "→ Ý nghĩa: Xác nhận chế độ lạm phát qua mối quan hệ stocks-bonds",
             "→ ⚠️ Cẩn thận với tương quan dương stock-bond. Khi Fed thắt chặt, cả hai đều giảm cùng lúc."
@@ -182,7 +182,7 @@
         {
           "name": "Oil",
           "symbol": "oil",
-          "price": 64.13,
+          "price": 63.25,
           "currency": "USD",
           "short_term_trend": "đi ngang",
           "medium_term_trend": "xu hướng giảm"
@@ -190,15 +190,15 @@
         {
           "name": "Natural Gas",
           "symbol": "natural_gas",
-          "price": 2.68,
+          "price": 2.72,
           "currency": "USD",
-          "short_term_trend": "xu hướng giảm mạnh",
+          "short_term_trend": "xu hướng giảm",
           "medium_term_trend": "xu hướng giảm mạnh"
         },
         {
           "name": "Copper",
           "symbol": "copper",
-          "price": 4.47,
+          "price": 4.45,
           "currency": "USD",
           "short_term_trend": "đi ngang",
           "medium_term_trend": "xu hướng giảm mạnh"
@@ -206,7 +206,7 @@
         {
           "name": "Corn",
           "symbol": "corn",
-          "price": 409.75,
+          "price": 408.25,
           "currency": "USD",
           "short_term_trend": "xu hướng tăng mạnh",
           "medium_term_trend": "xu hướng giảm"
@@ -214,7 +214,7 @@
         {
           "name": "Wheat",
           "symbol": "wheat",
-          "price": 531.5,
+          "price": 530.25,
           "currency": "USD",
           "short_term_trend": "xu hướng tăng",
           "medium_term_trend": "xu hướng giảm"
@@ -230,17 +230,17 @@
         {
           "name": "Soybeans",
           "symbol": "soybeans",
-          "price": 1047.0,
+          "price": 1048.75,
           "currency": "USD",
           "short_term_trend": "xu hướng tăng",
-          "medium_term_trend": "consolidation"
+          "medium_term_trend": "xu hướng tăng"
         }
       ]
     },
     {
       "type": "macro",
       "title": "Bối Cảnh Kinh Tế Vĩ Mô",
-      "summary": "Thiên hướng: neutral - Độ mạnh: 9.2%",
+      "summary": "Thiên hướng: neutral",
       "confidence": 1.0,
       "bias": "neutral",
       "regime": "neutral",
@@ -248,7 +248,7 @@
         "US Economy: Thị trường lao động ổn định ở mức 4.2% | Fed giữ nguyên lãi suất ở mức 4.33%",
         "GDP: Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng",
         "Credit delinquencies: Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao ",
-        "Sectors: Luân chuyển sector risk-on (2.7%) → Xu hướng tích cực",
+        "Sectors: Luân chuyển sector risk-on (2.0%) → Xu hướng tích cực",
         "Labor: Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)"
       ],
       "indicators": [
@@ -327,15 +327,15 @@
         {
           "name": "Dầu thô (Chỉ báo kinh tế)",
           "status": "negative",
-          "interpretation": "Chỉ báo tăng trưởng toàn cầu: $64.1 (stable) - Trend: declining (vs MA20: +1.0%)",
-          "current_value": 64.13,
+          "interpretation": "Chỉ báo tăng trưởng toàn cầu: $63.2 (stable) - Trend: declining (vs MA20: -0.3%)",
+          "current_value": 63.25,
           "unit": "USD/barrel"
         },
         {
           "name": "Dr. Copper (Sức khỏe kinh tế)",
           "status": "positive",
-          "interpretation": "Dr. Copper - sức khỏe kinh tế: $4.47 (growth) - Trend: declining (vs MA20: +0.3%)",
-          "current_value": 4.47,
+          "interpretation": "Dr. Copper - sức khỏe kinh tế: $4.45 (growth) - Trend: declining (vs MA20: -0.2%)",
+          "current_value": 4.45,
           "unit": "USD/lb"
         }
       ]
@@ -408,13 +408,13 @@
           "name": "VIX",
           "status": "positive",
           "interpretation": "bình thường - VIX 13-18",
-          "current_value": 14.95,
+          "current_value": 14.62,
           "unit": "points",
           "trend": "stable",
           "context_interpretation": "VIX ổn định → Môi trường thuận lợi cho risk-on",
           "trend_icon": "✅",
           "detailed_breakdown": [
-            "→ VIX hiện tại: 14.9 points",
+            "→ VIX hiện tại: 14.6 points",
             "→ Mức: bình thường - VIX 13-18",
             "→ Momentum: stable",
             "→ Ngưỡng: <13 (tự mãn), 13-18 (tích cực), 18-25 (caution), >25 (risk-off)"
@@ -424,12 +424,12 @@
           "name": "MOVE Index",
           "status": "positive",
           "interpretation": "bond_stability",
-          "current_value": 77.56,
+          "current_value": 79.36,
           "unit": "points",
           "context_interpretation": "MOVE bình thường → Thị trường trái phiếu hoạt động bình thường",
           "trend_icon": "🟡",
           "detailed_breakdown": [
-            "→ MOVE hiện tại: 77.6 points",
+            "→ MOVE hiện tại: 79.4 points",
             "→ Mức: bond_stability",
             "→ Ngưỡng: <60 (low), 60-100 (normal), 100-150 (elevated), >150 (crisis)",
             "→ MOVE là VIX của thị trường trái phiếu - đo lường volatility expected"
@@ -437,30 +437,30 @@
         },
         {
           "name": "Bitcoin (Khẩu vị rủi ro)",
-          "status": "negative",
-          "interpretation": "BTC downtrend (vs MA21: -5.0%, vs MA50: -5.3%)",
-          "current_value": 110339.77,
+          "status": "neutral",
+          "interpretation": "BTC downtrend (vs MA21: -4.0%, vs MA50: -4.5%)",
+          "current_value": 111330.47,
           "unit": "USD",
           "trend": "weak",
-          "context_interpretation": "BTC downtrend → Risk-off sentiment → DXY mạnh, bonds tăng",
-          "trend_icon": "📉",
+          "context_interpretation": "BTC consolidation → Risk appetite trung tính → Chờ breakout",
+          "trend_icon": "⏳",
           "detailed_breakdown": [
-            "→ BTC hiện tại: $110,340",
-            "→ vs MA21: -5.0%",
-            "→ vs MA50: -5.3%",
+            "→ BTC hiện tại: $111,330",
+            "→ vs MA21: -4.0%",
+            "→ vs MA50: -4.5%",
             "→ BTC là proxy cho risk appetite của institutional money"
           ]
         },
         {
           "name": "Khẩu vị rủi ro (AUD/JPY)",
           "status": "neutral",
-          "interpretation": "Trung lập - AUD/JPY +0.0%",
-          "current_value": 0.0031316220758480055,
+          "interpretation": "Trung lập - AUD/JPY +0.1%",
+          "current_value": 0.07567257260651922,
           "unit": "% vs MA20",
           "context_interpretation": "AUD/JPY neutral → Risk appetite trung tính → Range-bound market",
           "trend_icon": "⚖️",
           "detailed_breakdown": [
-            "→ AUD/JPY vs MA20: +0.0%",
+            "→ AUD/JPY vs MA20: +0.1%",
             "→ AUD = Risk currency, JPY = Safe haven",
             "→ Tỷ lệ này phản ánh global risk appetite",
             "→ Ngưỡng: >2% (Risk-On), <-2% (Risk-Off)"
@@ -470,11 +470,11 @@
           "name": "Lãnh đạo thị trường",
           "status": "neutral",
           "interpretation": "Dẫn dắt hỗn hợp",
-          "current_value": 0.15,
+          "current_value": 0,
           "context_interpretation": "Leadership hỗn hợp → Thị trường đang tìm hướng → Sector rotation",
           "trend_icon": "🔄",
           "detailed_breakdown": [
-            "→ Leadership signal: 0.1",
+            "→ Leadership signal: 0.0",
             "→ Dẫn đầu: N/A",
             "→ Chậm chân: N/A",
             "→ Sector rotation phản ánh risk appetite và economic cycle"
@@ -605,7 +605,7 @@
   "priority_signals": [
     "Chế độ lạm phát: inflation_on"
   ],
-  "data_quality_score": 76.27655869035179,
+  "data_quality_score": 76.28352490421456,
   "consistency_score": 100.0,
   "missing_indicators": []
 }

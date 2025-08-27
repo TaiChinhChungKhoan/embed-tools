@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-26T19:29:20.697648",
+  "timestamp": "2025-08-27T15:01:44.106602",
   "summary": {
     "inflation_regime": "inflation_on",
     "risk_regime": "neutral",
@@ -13,6 +13,10 @@
         "status": 2,
         "interpretation": "Hơi cao (2.79%), ổn định +0.03% 3T"
       },
+      "pce": {
+        "status": 2,
+        "interpretation": "Cao (4.75%), ổn định +0.09% 3T"
+      },
       "wage_growth": {
         "status": 1,
         "interpretation": "Bình thường (3.88%), ổn định -0.14% 3T"
@@ -20,6 +24,10 @@
       "cpi_core": {
         "status": 2,
         "interpretation": "CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T"
+      },
+      "cpi_headline": {
+        "status": 1,
+        "interpretation": "CPI Headline: Bình thường (2.73%) - Lạm phát kiểm soát, tăng nhẹ +0.40% 3T"
       },
       "ppi_core": {
         "status": 2,
@@ -35,7 +43,7 @@
       },
       "yield_curve": {
         "status": 0,
-        "interpretation": "Phẳng (19bp) - Tăng trưởng chậm, dốc lên nhẹ +14bp 1T"
+        "interpretation": "Phẳng (17bp) - Tăng trưởng chậm, ổn định +8bp 1T"
       },
       "commodities": {
         "status": 1,
@@ -49,13 +57,9 @@
         "status": 1,
         "interpretation": "Tín dụng bình thường (1.350) - Spread ổn định, ổn định "
       },
-      "credit_delinquencies": {
-        "status": 0,
-        "interpretation": "Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao "
-      },
       "breakeven": {
         "status": 2,
-        "interpretation": "Bình thường (2.49%) - Kỳ vọng ổn định"
+        "interpretation": "Bình thường (2.50%) - Kỳ vọng ổn định"
       }
     },
     "macro": {
@@ -67,13 +71,17 @@
         "status": 2,
         "interpretation": "Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng"
       },
-      "intermarket": {
+      "credit_delinquencies": {
         "status": 1,
-        "interpretation": "Tương quan liên thị trường trung lập (-0.07)"
+        "interpretation": "Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao "
+      },
+      "intermarket": {
+        "status": 0,
+        "interpretation": "Tương quan liên thị trường tích cực (0.27)"
       },
       "global_flows": {
-        "status": 0,
-        "interpretation": "Dòng vốn toàn cầu mạnh (0.20)"
+        "status": 1,
+        "interpretation": "Dòng vốn toàn cầu ổn định (-0.10)"
       },
       "sentiment": {
         "status": 0,
@@ -81,7 +89,7 @@
       },
       "sector_rotation": {
         "status": 0,
-        "interpretation": "Luân chuyển sector risk-on (2.8%) → Xu hướng tích cực"
+        "interpretation": "Luân chuyển sector risk-on (2.0%) → Xu hướng tích cực"
       },
       "labor_market": {
         "status": 0,
@@ -131,7 +139,7 @@
       },
       "btc_risk": {
         "status": 0,
-        "interpretation": "BTC downtrend (vs MA21: -5.7%, vs MA50: -6.0%)"
+        "interpretation": "BTC downtrend (vs MA21: -4.0%, vs MA50: -4.5%)"
       },
       "correlations": {
         "status": 0,
