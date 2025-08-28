@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-27T15:01:44.106602",
+  "timestamp": "2025-08-28T09:14:42.130890",
   "summary": {
     "inflation_regime": "inflation_on",
     "risk_regime": "neutral",
@@ -43,7 +43,7 @@
       },
       "yield_curve": {
         "status": 0,
-        "interpretation": "Phẳng (17bp) - Tăng trưởng chậm, ổn định +8bp 1T"
+        "interpretation": "Phẳng (18bp) - Tăng trưởng chậm, ổn định +8bp 1T"
       },
       "commodities": {
         "status": 1,
@@ -55,7 +55,7 @@
       },
       "credit_spread": {
         "status": 1,
-        "interpretation": "Tín dụng bình thường (1.350) - Spread ổn định, ổn định "
+        "interpretation": "Tín dụng bình thường (1.349) - Spread ổn định, ổn định "
       },
       "breakeven": {
         "status": 2,
@@ -76,8 +76,8 @@
         "interpretation": "Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao "
       },
       "intermarket": {
-        "status": 0,
-        "interpretation": "Tương quan liên thị trường tích cực (0.27)"
+        "status": 1,
+        "interpretation": "Tương quan liên thị trường trung lập (-0.07)"
       },
       "global_flows": {
         "status": 1,
@@ -88,8 +88,8 @@
         "interpretation": "Tâm lý thị trường lạc quan (0.25)"
       },
       "sector_rotation": {
-        "status": 0,
-        "interpretation": "Luân chuyển sector risk-on (2.0%) → Xu hướng tích cực"
+        "status": 1,
+        "interpretation": "Luân chuyển sector trung tính (0.9%) → Xu hướng chưa rõ"
       },
       "labor_market": {
         "status": 0,
@@ -104,12 +104,12 @@
         "interpretation": "Mở rộng dịch vụ ổn định (50.1) → Kinh tế ổn định"
       },
       "diesel_inventories": {
-        "status": 2,
-        "interpretation": "Tồn kho diesel tăng 5.6% → Nhu cầu công nghiệp yếu"
+        "status": 1,
+        "interpretation": "Tồn kho diesel ổn định (+0.6%) → Hoạt động công nghiệp không đổi"
       },
       "gasoline_inventories": {
         "status": 0,
-        "interpretation": "Tồn kho xăng giảm 3.3% → Nhu cầu tiêu dùng mạnh"
+        "interpretation": "Tồn kho xăng giảm 2.7% → Nhu cầu tiêu dùng mạnh"
       },
       "macro_commodities": {
         "status": 1,
@@ -139,7 +139,7 @@
       },
       "btc_risk": {
         "status": 0,
-        "interpretation": "BTC downtrend (vs MA21: -4.0%, vs MA50: -4.5%)"
+        "interpretation": "BTC downtrend (vs MA21: -3.6%, vs MA50: -4.3%)"
       },
       "correlations": {
         "status": 0,
