@@ -1,6 +1,6 @@
 # BÁO CÁO PHÂN TÍCH THỊ TRƯỜNG TOÀN DIỆN
 ============================================================
-Thời gian: 2025-08-29 05:16:34
+Thời gian: 2025-08-29 20:54:39
 
 ## TÓM TẮT ĐIỀU HÀNH
 • Chế độ lạm phát: Lạm phát cao
@@ -9,16 +9,15 @@ Thời gian: 2025-08-29 05:16:34
 • Độ tin cậy: 100.0%
 
 ## Chế Độ Lạm Phát
-Goldilocks - 'Tin tốt là tin tốt'
+Chuyển tiếp - Bối cảnh chưa rõ
 
 ### Chỉ số chính:
-• 🔴 **PCE Lõi** (2.79%): Hơi cao (2.79%), ổn định +0.03% 3T
-     → Hiện tại: 2.79% →
-     → Thay đổi 3T: +0.03%
-     → MA 3T: 2.79% (Mục tiêu Fed: 2.0%)
-• 🔴 **PCE Toàn bộ** (4.75%): Cao (4.75%), ổn định +0.09% 3T
+• 🔴 **PCE Lõi** (2.88%): Hơi cao (2.88%), tăng nhẹ +0.14% 3T
+     → Hiện tại: 2.88% ↗
+     → Thay đổi 3T: +0.14%
+     → MA 3T: 2.84% (Mục tiêu Fed: 2.0%)
+• 🔴 **PCE Toàn bộ** (4.71%): Cao (4.71%), ổn định +0.04% 3T
 • 🟡 **Tăng trưởng lương** (3.88%): Bình thường (3.88%), ổn định -0.14% 3T
-     ⚡ Tăng lương bền vững → Tiêu dùng khỏe mạnh → Tích cực cho kinh tế
      → Hiện tại: 3.88% →
      → Thay đổi 3T: -0.14%
      → MA 3T: 3.91% (Bình thường: 3-4%)
@@ -46,14 +45,14 @@ Goldilocks - 'Tin tốt là tin tốt'
      → Kỳ vọng lạm phát 5Y: 2.49%
      → Phản ánh kỳ vọng thị trường về lạm phát dài hạn
 • 🔴 **Hàng hóa**: Áp lực lạm phát từ hàng hóa
-     → Oil $64.2 - Trend: sideways (vs MA20: +1.1%)
-     → Natural_Gas $2.98 - Trend: uptrend (vs MA20: +5.0%)
-     → Copper $4.55 - Trend: sideways (vs MA20: +1.9%)
-     → Corn $411.50/bu - Trend: strong_uptrend (vs MA20: +6.7%)
-     → Wheat $530.75/bu - Trend: uptrend (vs MA20: +4.3%)
-     → Cotton $66.1/lb - Trend: sideways (vs MA20: -0.1%)
-     → Soybeans $1049.75/bu - Trend: uptrend (vs MA20: +2.7%)
-• 🟢 **Stock-Bond Correlation** (0.525correlation): Tương quan +0.53 confirms inflation regime
+     → Oil $64.4 - Trend: sideways (vs MA20: +1.4%)
+     → Natural_Gas $2.98 - Trend: strong_uptrend (vs MA20: +5.1%)
+     → Copper $4.57 - Trend: uptrend (vs MA20: +2.5%)
+     → Corn $412.25/bu - Trend: strong_uptrend (vs MA20: +7.2%)
+     → Wheat $528.00/bu - Trend: uptrend (vs MA20: +4.0%)
+     → Cotton $65.2/lb - Trend: sideways (vs MA20: -1.3%)
+     → Soybeans $1044.25/bu - Trend: uptrend (vs MA20: +2.3%)
+• 🟢 **Stock-Bond Correlation** (0.533correlation): Tương quan +0.53 confirms inflation regime
      ⚡ Tương quan dương XÁC NHẬN chế độ lạm phát cao → Cả stocks & bonds đều bị ảnh hưởng
      → Tương quan hiện tại: 0.53
      → Confirmation status: CONFIRMS
@@ -90,25 +89,25 @@ Thiên hướng: neutral
      → PMI Dịch vụ: 50.1 points
      → Mức mở rộng: >50 points
      → Tác động: Dịch vụ chiếm 80% GDP
-• 🔴 **Dầu thô (Chỉ báo kinh tế)** (64.21USD/barrel): Chỉ báo tăng trưởng toàn cầu: $64.2 (stable) - Trend: declining (vs MA20: +1.1%)
-• 🟢 **Dr. Copper (Sức khỏe kinh tế)** (4.55USD/lb): Dr. Copper - sức khỏe kinh tế: $4.55 (expansion) - Trend: declining (vs MA20: +1.9%)
+• 🔴 **Dầu thô (Chỉ báo kinh tế)** (64.44USD/barrel): Chỉ báo tăng trưởng toàn cầu: $64.4 (stable) - Trend: declining (vs MA20: +1.4%)
+• 🟢 **Dr. Copper (Sức khỏe kinh tế)** (4.57USD/lb): Dr. Copper - sức khỏe kinh tế: $4.57 (expansion) - Trend: growing (vs MA20: +2.5%)
 
 ## Phân Tích Chính Sách Fed
-Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
+Thị trường kỳ vọng CẮT LÃI SUẤT (75%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
 
 ### Chỉ số chính:
-• 🔴 **CME Fed Watch** (74.0%): market
+• 🔴 **CME Fed Watch** (75.0%): market
      ⚡ Market kỳ vọng mạnh cắt lãi suất → Fed pivot → Tích cực cho growth assets
-     → Cắt 25bp: 74%
-     → Giữ nguyên: 23%
-     → Tăng 25bp: 3%
+     → Cắt 25bp: 75%
+     → Giữ nguyên: 22%
+     → Tăng 25bp: 2%
      → Nguồn: Fed Funds Futures (tính toán nội bộ theo phương pháp CME)
-• 🟡 **TỔNG HỢP & KHUYẾN NGHỊ** (74.0%): HỖN HỢP
+• 🟡 **TỔNG HỢP & KHUYẾN NGHỊ** (75.0%): HỖN HỢP
      ⚡ Triển vọng chính sách Fed và kỳ vọng thị trường
      → Mức độ nhất quán: HỖN HỢP
      → Tín hiệu chính: thị trường
      → Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn
-     → Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
+     → Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (75%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
 • 🟡 **Ý NGHĨA GIAO DỊCH**: Ý nghĩa giao dịch
      ⚡ Các kịch bản giao dịch dựa trên kỳ vọng chính sách Fed
      → Kịch bản chính: Fed cắt lãi suất → Tích cực cho cổ phiếu, USD yếu
@@ -118,9 +117,9 @@ Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn 
 Neutral - Trung lập
 
 ### Chỉ số chính:
-• 🟢 **VIX** (14.4points): bình thường - VIX 13-18
+• 🟢 **VIX** (14.6points): bình thường - VIX 13-18
      ⚡ VIX ổn định → Môi trường thuận lợi cho risk-on
-     → VIX hiện tại: 14.4 points
+     → VIX hiện tại: 14.6 points
      → Mức: bình thường - VIX 13-18
      → Momentum: stable
      → Ngưỡng: <13 (tự mãn), 13-18 (tích cực), 18-25 (caution), >25 (risk-off)
@@ -130,21 +129,21 @@ Neutral - Trung lập
      → Mức: bond_stability
      → Ngưỡng: <60 (low), 60-100 (normal), 100-150 (elevated), >150 (crisis)
      → MOVE là VIX của thị trường trái phiếu - đo lường volatility expected
-• 🟡 **Bitcoin (Khẩu vị rủi ro)** (112464.5USD): BTC downtrend (vs MA21: -2.7%, vs MA50: -3.5%)
+• 🔴 **Bitcoin (Khẩu vị rủi ro)** (110062.3USD): BTC downtrend (vs MA21: -4.7%, vs MA50: -5.5%)
      ⚡ BTC consolidation → Risk appetite trung tính → Chờ breakout
-     → BTC hiện tại: $112,464
-     → vs MA21: -2.7%
-     → vs MA50: -3.5%
+     → BTC hiện tại: $110,062
+     → vs MA21: -4.7%
+     → vs MA50: -5.5%
      → BTC là proxy cho risk appetite của institutional money
-• 🟡 **Khẩu vị rủi ro (AUD/JPY)** (0.121% vs MA20): Trung lập - AUD/JPY +0.1%
+• 🟡 **Khẩu vị rủi ro (AUD/JPY)** (0.329% vs MA20): Trung lập - AUD/JPY +0.3%
      ⚡ AUD/JPY neutral → Risk appetite trung tính → Range-bound market
-     → AUD/JPY vs MA20: +0.1%
+     → AUD/JPY vs MA20: +0.3%
      → AUD = Risk currency, JPY = Safe haven
      → Tỷ lệ này phản ánh global risk appetite
      → Ngưỡng: >2% (Risk-On), <-2% (Risk-Off)
-• 🟢 **Lãnh đạo thị trường**: Dẫn dắt hỗn hợp
+• 🟡 **Lãnh đạo thị trường**: Dẫn dắt hỗn hợp
      ⚡ Leadership hỗn hợp → Thị trường đang tìm hướng → Sector rotation
-     → Leadership signal: 0.7
+     → Leadership signal: 0.0
      → Dẫn đầu: N/A
      → Chậm chân: N/A
      → Sector rotation phản ánh risk appetite và economic cycle

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T05:16:34.564179",
+  "timestamp": "2025-08-29T20:54:39.349206",
   "summary": {
     "inflation_regime": "inflation_on",
     "risk_regime": "neutral",
@@ -11,11 +11,11 @@
     "inflation": {
       "pce_core": {
         "status": 2,
-        "interpretation": "Hơi cao (2.79%), ổn định +0.03% 3T"
+        "interpretation": "Hơi cao (2.88%), tăng nhẹ +0.14% 3T"
       },
       "pce": {
         "status": 2,
-        "interpretation": "Cao (4.75%), ổn định +0.09% 3T"
+        "interpretation": "Cao (4.71%), ổn định +0.04% 3T"
       },
       "wage_growth": {
         "status": 1,
@@ -43,7 +43,7 @@
       },
       "yield_curve": {
         "status": 0,
-        "interpretation": "Phẳng (14bp) - Tăng trưởng chậm, ổn định "
+        "interpretation": "Phẳng (16bp) - Tăng trưởng chậm, ổn định "
       },
       "commodities": {
         "status": 1,
@@ -89,7 +89,7 @@
       },
       "sector_rotation": {
         "status": 1,
-        "interpretation": "Luân chuyển sector trung tính (2.0%) → Xu hướng chưa rõ"
+        "interpretation": "Luân chuyển sector trung tính (1.8%) → Xu hướng chưa rõ"
       },
       "labor_market": {
         "status": 0,
@@ -126,8 +126,8 @@
         "interpretation": "bond_stability"
       },
       "equity_leadership": {
-        "status": 2,
-        "interpretation": "risk_on_leadership"
+        "status": 1,
+        "interpretation": "Dẫn dắt hỗn hợp"
       },
       "bond_flows": {
         "status": 1,
@@ -139,7 +139,7 @@
       },
       "btc_risk": {
         "status": 0,
-        "interpretation": "BTC downtrend (vs MA21: -2.7%, vs MA50: -3.5%)"
+        "interpretation": "BTC downtrend (vs MA21: -4.7%, vs MA50: -5.5%)"
       },
       "correlations": {
         "status": 0,
