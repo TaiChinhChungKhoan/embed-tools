@@ -1,2438 +1,1697 @@
 {
-  "timestamp": "2025-08-29T04:22:33.119687",
+  "timestamp": "2025-08-29T11:31:41.139053",
   "market_summary": {
     "overview": {
-      "analyzed": 298,
-      "bullish": 244,
-      "bearish": 48,
-      "signals": 298,
-      "at_zones": 7
-    },
-    "top_bullish": [
-      {
-        "symbol": "KBC",
-        "score": 13.83,
-        "pattern": "Sideways Consolidation",
-        "at_zone": ""
-      },
-      {
-        "symbol": "NT2",
-        "score": 10.95,
-        "pattern": "Strengthening Bullish",
-        "at_zone": ""
-      },
-      {
-        "symbol": "PVS",
-        "score": 10.53,
-        "pattern": "Sideways Consolidation",
-        "at_zone": ""
-      },
-      {
-        "symbol": "BLF",
-        "score": 10.52,
-        "pattern": "Sideways Consolidation",
-        "at_zone": ""
-      },
-      {
-        "symbol": "HII",
-        "score": 10.48,
-        "pattern": "Sideways Consolidation",
-        "at_zone": ""
-      },
-      {
-        "symbol": "EVS",
-        "score": 10.45,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "HPX",
-        "score": 9.65,
-        "pattern": "Strengthening Bullish",
-        "at_zone": ""
-      },
-      {
-        "symbol": "PVC",
-        "score": 9.62,
-        "pattern": "Mixed Signals",
-        "at_zone": "🎯"
-      },
-      {
-        "symbol": "CMS",
-        "score": 9.6,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "HSL",
-        "score": 9.2,
-        "pattern": "Strengthening Bullish",
-        "at_zone": ""
-      }
-    ],
-    "top_bearish": [
-      {
-        "symbol": "HVA",
-        "score": -11.21,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "FTS",
-        "score": -9.14,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "THG",
-        "score": -8.56,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "HCM",
-        "score": -7.93,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "SVD",
-        "score": -7.22,
-        "pattern": "Strengthening Bullish",
-        "at_zone": ""
-      },
-      {
-        "symbol": "BCE",
-        "score": -6.64,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "SSB",
-        "score": -6.09,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "BMS",
-        "score": -3.92,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "JVC",
-        "score": -3.74,
-        "pattern": "Mixed Signals",
-        "at_zone": ""
-      },
-      {
-        "symbol": "TIP",
-        "score": -3.7,
-        "pattern": "Sideways Consolidation",
-        "at_zone": ""
-      }
-    ]
+      "analyzed": 28,
+      "bullish": 13,
+      "bearish": 5,
+      "signals": 28,
+      "at_zones": 4
+    }
   },
   "stocks": [
     {
       "symbol": "AAA",
-      "score": 4.33,
-      "price": 8.17,
+      "score": 0.37,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": -0.5
+        },
+        {
+          "2025-06-29": -0.5
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.3
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 0.1
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
-      "symbol": "AAV",
-      "score": 2.3,
-      "price": 5.9,
+      "symbol": "APH",
+      "score": -0.23,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BFC",
-      "score": 3.7,
-      "price": 44.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ABB",
-      "score": 3.8,
-      "price": 12.6,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ADS",
-      "score": 4.44,
-      "price": 8.99,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "AAT",
-      "score": 3.0,
-      "price": 3.46,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ALV",
-      "score": 4.2,
-      "price": 17.1,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ACL",
-      "score": 1.2,
-      "price": 12.3,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "AGG",
-      "score": 4.1,
-      "price": 19.45,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "AAS",
-      "score": 8.27,
-      "price": 23.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "ASP",
-      "score": 2.3,
-      "price": 4.85,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ABW",
-      "score": 8.05,
-      "price": 12.5,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "BCM",
-      "score": 1.3,
-      "price": 68.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "APS",
-      "score": 5.3,
-      "price": 11.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "API",
-      "score": 1.5,
-      "price": 9.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BIG",
-      "score": 1.2,
-      "price": 5.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ABS",
-      "score": 5.61,
-      "price": 3.76,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "AGR",
-      "score": 2.2,
-      "price": 18.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ASM",
-      "score": 3.05,
-      "price": 8.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ANV",
-      "score": 4.5,
-      "price": 28.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BID",
-      "score": 2.4,
-      "price": 42.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BCE",
-      "score": -6.64,
-      "price": 11.05,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Sell Signal"
-    },
-    {
-      "symbol": "BCC",
-      "score": 2.2,
-      "price": 8.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "APG",
-      "score": 1.1,
-      "price": 12.55,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BMS",
-      "score": -3.92,
-      "price": 15.3,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BKG",
-      "score": 2.02,
-      "price": 2.99,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BLF",
-      "score": 10.52,
-      "price": 2.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "CDC",
-      "score": 2.8,
-      "price": 28.9,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": 0.3
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": -0.8
+        },
+        {
+          "2025-05-25": -0.1
+        },
+        {
+          "2025-06-01": -0.1
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": 0.6
+        },
+        {
+          "2025-07-06": -0.5
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.0
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "BVS",
-      "score": 1.05,
-      "price": 39.9,
+      "score": -0.72,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": -0.5
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": -0.1
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.1
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": -0.5
+        },
+        {
+          "2025-08-10": 0.1
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
-      "symbol": "CCL",
-      "score": -1.9,
-      "price": 6.97,
+      "symbol": "BMS",
+      "score": 0.91,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BVB",
-      "score": 3.6,
-      "price": 16.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "C4G",
-      "score": 9.11,
-      "price": 9.3,
-      "at_zone": true,
-      "pattern": "Strengthening Bullish",
-      "rec": "Monitor for Confirmation"
-    },
-    {
-      "symbol": "C69",
-      "score": 1.6,
-      "price": 9.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BSR",
-      "score": 4.7,
-      "price": 27.15,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "BWE",
-      "score": -0.8,
-      "price": 47.3,
-      "at_zone": false
-    },
-    {
-      "symbol": "BVH",
-      "score": 2.3,
-      "price": 60.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CEO",
-      "score": 3.8,
-      "price": 24.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CMX",
-      "score": -0.8,
-      "price": 7.18,
-      "at_zone": false
-    },
-    {
-      "symbol": "DCL",
-      "score": 2.4,
-      "price": 21.3,
-      "at_zone": false,
-      "pattern": "Strengthening Bearish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CTG",
-      "score": -0.8,
-      "price": 51.6,
-      "at_zone": false
-    },
-    {
-      "symbol": "DCM",
-      "score": 2.4,
-      "price": 39.05,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DAH",
-      "score": 8.53,
-      "price": 3.8,
-      "at_zone": true,
-      "pattern": "Mixed Signals",
-      "rec": "Monitor for Confirmation"
-    },
-    {
-      "symbol": "CNG",
-      "score": 3.45,
-      "price": 28.35,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CTS",
-      "score": 2.6,
-      "price": 41.4,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CII",
-      "score": 4.5,
-      "price": 23.1,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CSI",
-      "score": -0.8,
-      "price": 30.0,
-      "at_zone": false
-    },
-    {
-      "symbol": "D2D",
-      "score": 0.9,
-      "price": 37.6,
-      "at_zone": false
-    },
-    {
-      "symbol": "CMG",
-      "score": 1.4,
-      "price": 40.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CRE",
-      "score": 5.5,
-      "price": 10.45,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "CTP",
-      "score": 1.8,
-      "price": 18.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CIG",
-      "score": 2.0,
-      "price": 10.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "CRC",
-      "score": 7.0,
-      "price": 11.6,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.3
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": -0.1
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": -0.1
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.6
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.6
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.3
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.3
+        },
+        {
+          "2025-08-03": -0.9
+        },
+        {
+          "2025-08-10": 0.1
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.1
+        },
+        {
+          "2025-08-31": 0.1
+        }
+      ]
     },
     {
       "symbol": "CTR",
-      "score": -0.1,
-      "price": 88.2,
-      "at_zone": false
-    },
-    {
-      "symbol": "CTI",
-      "score": -0.99,
-      "price": 24.45,
-      "at_zone": false
+      "score": 0.01,
+      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": -0.1
+        },
+        {
+          "2025-06-08": 0.6
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": 0.0
+        },
+        {
+          "2025-08-03": 0.1
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "CMS",
-      "score": 9.6,
-      "price": 8.4,
+      "score": 2.32,
       "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": -0.1
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.3
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": -0.1
+        },
+        {
+          "2025-07-06": 0.6
+        },
+        {
+          "2025-07-13": 1.5
+        },
+        {
+          "2025-07-20": 0.3
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 0.3
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ],
       "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "CTF",
-      "score": 2.0,
-      "price": 20.85,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
       "rec": "No Clear Signal"
     },
     {
-      "symbol": "DBD",
-      "score": -1.0,
-      "price": 53.0,
-      "at_zone": false
-    },
-    {
-      "symbol": "DDG",
-      "score": -1.8,
-      "price": 2.7,
+      "symbol": "CMG",
+      "score": 0.88,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.1
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.1
+        },
+        {
+          "2025-07-06": 0.3
+        },
+        {
+          "2025-07-13": 0.1
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.1
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.3
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
-      "symbol": "CST",
-      "score": -0.48,
-      "price": 14.9,
-      "at_zone": false
-    },
-    {
-      "symbol": "DRH",
-      "score": 2.7,
-      "price": 3.2,
+      "symbol": "DCL",
+      "score": -1.67,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DGT",
-      "score": 1.1,
-      "price": 5.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DHA",
-      "score": 3.9,
-      "price": 49.2,
-      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.1
+        },
+        {
+          "2025-05-04": -0.1
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": -0.1
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": -0.9
+        },
+        {
+          "2025-06-29": 0.1
+        },
+        {
+          "2025-07-06": -0.8
+        },
+        {
+          "2025-07-13": 0.6
+        },
+        {
+          "2025-07-20": -0.1
+        },
+        {
+          "2025-07-27": -0.1
+        },
+        {
+          "2025-08-03": 0.0
+        },
+        {
+          "2025-08-10": -0.8
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": -0.1
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ],
       "pattern": "Sideways Consolidation",
       "rec": "No Clear Signal"
     },
     {
       "symbol": "DHC",
-      "score": 3.0,
-      "price": 30.95,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DPG",
-      "score": 3.3,
-      "price": 43.35,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DIG",
-      "score": 1.0,
-      "price": 23.15,
-      "at_zone": false
-    },
-    {
-      "symbol": "DL1",
-      "score": 2.5,
-      "price": 6.4,
-      "at_zone": false,
-      "pattern": "Strengthening Bearish",
-      "rec": "No Clear Signal"
+      "score": 0.73,
+      "at_zone": true,
+      "scores": [
+        {
+          "2025-07-27": 0.3
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 0.1
+        },
+        {
+          "2025-08-17": 0.3
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "DRC",
-      "score": 1.2,
-      "price": 17.15,
+      "score": 0.56,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DLG",
-      "score": 1.5,
-      "price": 3.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DGW",
-      "score": 4.1,
-      "price": 42.1,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DTI",
-      "score": 3.5,
-      "price": 3.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DST",
-      "score": -1.3,
-      "price": 9.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DPM",
-      "score": 1.0,
-      "price": 26.65,
-      "at_zone": false
-    },
-    {
-      "symbol": "DSC",
-      "score": 2.26,
-      "price": 21.4,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DTD",
-      "score": 3.76,
-      "price": 20.6,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GEE",
-      "score": 1.1,
-      "price": 117.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GDA",
-      "score": 2.83,
-      "price": 17.8,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ELC",
-      "score": 1.3,
-      "price": 22.05,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GEX",
-      "score": 1.2,
-      "price": 55.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "EVE",
-      "score": 4.1,
-      "price": 10.75,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DVN",
-      "score": -0.9,
-      "price": 22.9,
-      "at_zone": false
-    },
-    {
-      "symbol": "DXG",
-      "score": 3.2,
-      "price": 22.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "FCN",
-      "score": 5.0,
-      "price": 18.05,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GAS",
-      "score": 0.9,
-      "price": 64.9,
-      "at_zone": false
-    },
-    {
-      "symbol": "DXP",
-      "score": 7.38,
-      "price": 10.9,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "FCM",
-      "score": -1.2,
-      "price": 4.14,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.1
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": -0.1
+        },
+        {
+          "2025-05-25": 0.6
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.0
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "EIB",
-      "score": -0.08,
-      "price": 29.25,
-      "at_zone": false
-    },
-    {
-      "symbol": "EVF",
-      "score": 4.52,
-      "price": 14.05,
+      "score": 0.33,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GPC",
-      "score": -1.5,
-      "price": 2.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "EVG",
-      "score": 6.0,
-      "price": 10.55,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "DXS",
-      "score": 4.8,
-      "price": 12.75,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "EVS",
-      "score": 10.45,
-      "price": 8.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "G36",
-      "score": 7.0,
-      "price": 11.2,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "FCS",
-      "score": 3.4,
-      "price": 9.2,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "FMC",
-      "score": 1.7,
-      "price": 37.15,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GIL",
-      "score": 1.88,
-      "price": 20.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.1
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.1
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.1
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": -0.6
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.1
+        },
+        {
+          "2025-08-31": 0.0
+        }
+      ]
     },
     {
       "symbol": "FTS",
-      "score": -9.14,
-      "price": 39.3,
+      "score": 0.43,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Sell Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.1
+        },
+        {
+          "2025-04-27": 0.1
+        },
+        {
+          "2025-05-04": -0.1
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.1
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.1
+        },
+        {
+          "2025-07-13": 0.1
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.1
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
-      "symbol": "GEG",
-      "score": 3.7,
-      "price": 15.8,
+      "symbol": "GDA",
+      "score": 2.11,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GMD",
-      "score": 4.7,
-      "price": 68.9,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "FPT",
-      "score": 1.1,
-      "price": 104.5,
-      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": -0.1
+        },
+        {
+          "2025-05-25": -0.1
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": -0.1
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": 0.3
+        },
+        {
+          "2025-06-29": 0.6
+        },
+        {
+          "2025-07-06": -0.5
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 1.2
+        },
+        {
+          "2025-08-17": 0.3
+        },
+        {
+          "2025-08-24": 0.3
+        },
+        {
+          "2025-08-31": 0.0
+        }
+      ],
       "pattern": "Sideways Consolidation",
       "rec": "No Clear Signal"
     },
     {
-      "symbol": "HAX",
-      "score": 3.1,
-      "price": 13.7,
+      "symbol": "HT1",
+      "score": 2.47,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HAG",
-      "score": 3.2,
-      "price": 16.35,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HGM",
-      "score": 1.9,
-      "price": 294.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "GVR",
-      "score": 1.0,
-      "price": 29.2,
-      "at_zone": false
-    },
-    {
-      "symbol": "HAR",
-      "score": 3.1,
-      "price": 5.24,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HBC",
-      "score": 1.8,
-      "price": 8.2,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HCM",
-      "score": -7.93,
-      "price": 28.2,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Sell Signal"
-    },
-    {
-      "symbol": "HDB",
-      "score": 2.6,
-      "price": 32.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HCD",
-      "score": 5.08,
-      "price": 8.46,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "HAH",
-      "score": 2.4,
-      "price": 57.3,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HHS",
-      "score": 3.2,
-      "price": 16.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HDC",
-      "score": 1.5,
-      "price": 35.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HDG",
-      "score": 3.7,
-      "price": 32.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HNG",
-      "score": 1.6,
-      "price": 6.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HPX",
-      "score": 9.65,
-      "price": 5.48,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "HSL",
-      "score": 9.2,
-      "price": 13.8,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "HLD",
-      "score": 0.9,
-      "price": 18.3,
-      "at_zone": false
-    },
-    {
-      "symbol": "HID",
-      "score": 1.8,
-      "price": 2.92,
-      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": -0.1
+        },
+        {
+          "2025-05-25": -0.1
+        },
+        {
+          "2025-06-01": -0.1
+        },
+        {
+          "2025-06-08": -0.1
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.6
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.1
+        },
+        {
+          "2025-07-13": 0.3
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": 1.2
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 1.2
+        },
+        {
+          "2025-08-17": 0.3
+        },
+        {
+          "2025-08-24": -0.6
+        },
+        {
+          "2025-08-31": 0.0
+        }
+      ],
       "pattern": "Mixed Signals",
       "rec": "No Clear Signal"
     },
     {
       "symbol": "HPG",
-      "score": 7.42,
-      "price": 27.1,
+      "score": 2.02,
       "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": 0.1
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.6
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 1.2
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": -0.6
+        },
+        {
+          "2025-08-10": 1.5
+        },
+        {
+          "2025-08-17": 0.3
+        },
+        {
+          "2025-08-24": -0.6
+        },
+        {
+          "2025-08-31": 0.0
+        }
+      ],
       "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "HSG",
-      "score": 1.0,
-      "price": 18.35,
-      "at_zone": false
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "HVN",
-      "score": -3.4,
-      "price": 31.3,
+      "score": -1.2,
       "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": 0.3
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": 0.1
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.1
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": -0.1
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": -0.1
+        },
+        {
+          "2025-08-03": -0.1
+        },
+        {
+          "2025-08-10": -0.8
+        },
+        {
+          "2025-08-17": -0.1
+        },
+        {
+          "2025-08-24": -0.1
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ],
       "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HUB",
-      "score": 3.9,
-      "price": 16.65,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ITC",
-      "score": 4.0,
-      "price": 15.95,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HT1",
-      "score": 6.43,
-      "price": 17.4,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "IPA",
-      "score": 4.4,
-      "price": 23.6,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HUT",
-      "score": 1.7,
-      "price": 17.7,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "ITQ",
-      "score": 1.3,
-      "price": 3.1,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HHV",
-      "score": 2.2,
-      "price": 14.85,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "IVS",
-      "score": 3.2,
-      "price": 11.1,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "IDC",
-      "score": 2.8,
-      "price": 43.6,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HII",
-      "score": 10.48,
-      "price": 4.62,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "HVA",
-      "score": -11.21,
-      "price": 23.7,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Sell Signal"
-    },
-    {
-      "symbol": "HVH",
-      "score": -0.7,
-      "price": 13.4,
-      "at_zone": false
-    },
-    {
-      "symbol": "HQC",
-      "score": 1.3,
-      "price": 3.8,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HTI",
-      "score": 3.8,
-      "price": 22.55,
-      "at_zone": false,
-      "pattern": "Strengthening Bearish",
       "rec": "No Clear Signal"
     },
     {
       "symbol": "JVC",
-      "score": -3.74,
-      "price": 5.18,
+      "score": 0.34,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "IDJ",
-      "score": 4.5,
-      "price": 7.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "HVT",
-      "score": 0.8,
-      "price": 31.6,
-      "at_zone": false
-    },
-    {
-      "symbol": "IDI",
-      "score": 3.9,
-      "price": 8.25,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "KBC",
-      "score": 13.83,
-      "price": 40.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "KHP",
-      "score": -2.1,
-      "price": 12.6,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "KHG",
-      "score": 2.6,
-      "price": 6.88,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "L40",
-      "score": 5.2,
-      "price": 32.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "KLB",
-      "score": 1.9,
-      "price": 22.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "KDH",
-      "score": 3.5,
-      "price": 35.9,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "KSV",
-      "score": 1.1,
-      "price": 156.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "LGL",
-      "score": 3.5,
-      "price": 4.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "LDG",
-      "score": 6.8,
-      "price": 4.88,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "LCG",
-      "score": 3.3,
-      "price": 12.6,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "LAS",
-      "score": 1.4,
-      "price": 18.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "KVC",
-      "score": 1.3,
-      "price": 1.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "LHG",
-      "score": 2.0,
-      "price": 31.55,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MCH",
-      "score": 2.2,
-      "price": 128.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MHC",
-      "score": 1.6,
-      "price": 14.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MPC",
-      "score": 7.34,
-      "price": 15.3,
-      "at_zone": true,
-      "pattern": "Mixed Signals",
-      "rec": "Monitor for Confirmation"
-    },
-    {
-      "symbol": "MSH",
-      "score": 1.2,
-      "price": 37.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MBG",
-      "score": 0.8,
-      "price": 4.1,
-      "at_zone": false
-    },
-    {
-      "symbol": "MSB",
-      "score": 3.8,
-      "price": 17.55,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "LIG",
-      "score": 5.3,
-      "price": 5.1,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "NHA",
-      "score": 3.3,
-      "price": 23.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "LPB",
-      "score": 1.3,
-      "price": 44.85,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NBC",
-      "score": -0.8,
-      "price": 9.4,
-      "at_zone": false
-    },
-    {
-      "symbol": "MIG",
-      "score": 0.9,
-      "price": 17.25,
-      "at_zone": false
-    },
-    {
-      "symbol": "NKG",
-      "score": 1.1,
-      "price": 15.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": -0.1
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.6
+        },
+        {
+          "2025-05-25": 0.1
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": -0.1
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.6
+        },
+        {
+          "2025-07-06": -0.1
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.0
+        },
+        {
+          "2025-08-03": 0.1
+        },
+        {
+          "2025-08-10": -0.1
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": -0.1
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "NHH",
-      "score": 7.35,
-      "price": 12.15,
+      "score": 1.47,
       "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "MSR",
-      "score": 0.3,
-      "price": 19.5,
-      "at_zone": false
-    },
-    {
-      "symbol": "MBB",
-      "score": 2.2,
-      "price": 27.2,
-      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": -0.1
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.8
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 1.5
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.0
+        },
+        {
+          "2025-08-03": 1.2
+        },
+        {
+          "2025-08-10": 0.3
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ],
       "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NAF",
-      "score": 1.3,
-      "price": 32.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MST",
-      "score": 2.4,
-      "price": 5.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NAB",
-      "score": 1.6,
-      "price": 15.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MML",
-      "score": 2.5,
-      "price": 38.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NO1",
-      "score": 3.5,
-      "price": 7.4,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "MCG",
-      "score": 2.3,
-      "price": 2.9,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NDN",
-      "score": 2.0,
-      "price": 12.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NLG",
-      "score": 0.8,
-      "price": 44.2,
-      "at_zone": false
-    },
-    {
-      "symbol": "NSH",
-      "score": -1.3,
-      "price": 4.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NTL",
-      "score": 2.6,
-      "price": 19.35,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NT2",
-      "score": 10.95,
-      "price": 22.2,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "NRC",
-      "score": -1.4,
-      "price": 5.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NTC",
-      "score": 1.4,
-      "price": 161.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "NVL",
-      "score": 3.0,
-      "price": 16.7,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PAN",
-      "score": 1.6,
-      "price": 33.75,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "OCH",
-      "score": -1.3,
-      "price": 6.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "OGC",
-      "score": 3.4,
-      "price": 4.75,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
       "rec": "No Clear Signal"
     },
     {
       "symbol": "PAC",
-      "score": 6.31,
-      "price": 27.5,
+      "score": -0.1,
       "at_zone": true,
-      "pattern": "Strengthening Bullish",
-      "rec": "Monitor for Confirmation"
-    },
-    {
-      "symbol": "PAS",
-      "score": 1.7,
-      "price": 3.6,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "OIL",
-      "score": 1.4,
-      "price": 11.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PFL",
-      "score": 3.1,
-      "price": 3.1,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PDR",
-      "score": 1.4,
-      "price": 24.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PIV",
-      "score": 1.1,
-      "price": 2.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PET",
-      "score": 1.1,
-      "price": 32.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "PHR",
-      "score": 1.41,
-      "price": 56.0,
+      "score": -0.5,
       "at_zone": true,
-      "pattern": "Sideways Consolidation",
-      "rec": "Watch for Entry"
-    },
-    {
-      "symbol": "PLX",
-      "score": 2.3,
-      "price": 36.15,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PVC",
-      "score": 9.62,
-      "price": 11.6,
-      "at_zone": true,
-      "pattern": "Mixed Signals",
-      "rec": "Monitor for Confirmation"
-    },
-    {
-      "symbol": "PVP",
-      "score": 1.1,
-      "price": 14.95,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PLP",
-      "score": 4.07,
-      "price": 5.14,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PNJ",
-      "score": -1.7,
-      "price": 85.6,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "QNS",
-      "score": -1.5,
-      "price": 47.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PTB",
-      "score": -2.2,
-      "price": 51.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-08-31": -0.5
+        }
+      ]
     },
     {
       "symbol": "PVT",
-      "score": 0.5,
-      "price": 17.95,
-      "at_zone": false
-    },
-    {
-      "symbol": "PSD",
-      "score": -0.9,
-      "price": 13.7,
-      "at_zone": false
-    },
-    {
-      "symbol": "PPC",
-      "score": 1.4,
-      "price": 10.95,
+      "score": 0.59,
       "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.1
+        },
+        {
+          "2025-06-15": 0.1
+        },
+        {
+          "2025-06-22": 0.3
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": -0.5
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 0.3
+        },
+        {
+          "2025-08-17": 0.3
+        },
+        {
+          "2025-08-24": 0.1
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
+    },
+    {
+      "symbol": "PTB",
+      "score": -1.49,
+      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": 0.3
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": -0.1
+        },
+        {
+          "2025-05-25": -0.1
+        },
+        {
+          "2025-06-01": -0.1
+        },
+        {
+          "2025-06-08": 0.3
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.5
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": -0.1
+        },
+        {
+          "2025-07-13": -0.1
+        },
+        {
+          "2025-07-20": -0.1
+        },
+        {
+          "2025-07-27": -0.8
+        },
+        {
+          "2025-08-03": -0.1
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ],
       "pattern": "Sideways Consolidation",
       "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PSI",
-      "score": 7.98,
-      "price": 9.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "PLC",
-      "score": 1.1,
-      "price": 27.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PSB",
-      "score": 5.3,
-      "price": 4.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "PVD",
-      "score": 1.3,
-      "price": 21.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PVB",
-      "score": 1.0,
-      "price": 28.8,
-      "at_zone": false
-    },
-    {
-      "symbol": "POW",
-      "score": 1.1,
-      "price": 16.45,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "PVS",
-      "score": 10.53,
-      "price": 34.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "S99",
-      "score": 2.7,
-      "price": 8.9,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SBT",
-      "score": -2.6,
-      "price": 24.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SBS",
-      "score": 5.29,
-      "price": 7.1,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "SAM",
-      "score": 1.7,
-      "price": 8.72,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SAV",
-      "score": 1.9,
-      "price": 15.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SCR",
-      "score": 4.4,
-      "price": 8.91,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SAS",
-      "score": 1.2,
-      "price": 37.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SGR",
-      "score": 2.0,
-      "price": 31.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SBG",
-      "score": -2.7,
-      "price": 12.9,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SHB",
-      "score": 3.2,
-      "price": 18.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SCI",
-      "score": 1.2,
-      "price": 8.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SHS",
-      "score": 4.3,
-      "price": 27.3,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SGP",
-      "score": -1.0,
-      "price": 28.7,
-      "at_zone": false
-    },
-    {
-      "symbol": "SCS",
-      "score": -0.9,
-      "price": 65.4,
-      "at_zone": false
-    },
-    {
-      "symbol": "SKG",
-      "score": 0.64,
-      "price": 11.2,
-      "at_zone": false
-    },
-    {
-      "symbol": "SVD",
-      "score": -7.22,
-      "price": 4.08,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Sell Signal"
-    },
-    {
-      "symbol": "SSB",
-      "score": -6.09,
-      "price": 21.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Sell Signal"
     },
     {
       "symbol": "SMC",
-      "score": 3.47,
-      "price": 12.5,
+      "score": -1.02,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SSI",
-      "score": 1.2,
-      "price": 42.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "STK",
-      "score": 8.6,
-      "price": 25.8,
-      "at_zone": false,
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": -0.1
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": -0.1
+        },
+        {
+          "2025-06-08": -0.1
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": -0.1
+        },
+        {
+          "2025-07-06": -0.5
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": -0.1
+        },
+        {
+          "2025-08-03": 0.0
+        },
+        {
+          "2025-08-10": -0.1
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": -0.1
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ],
       "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "STB",
-      "score": 1.1,
-      "price": 54.8,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TCD",
-      "score": 2.0,
-      "price": 2.68,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TCM",
-      "score": 0.3,
-      "price": 30.05,
-      "at_zone": false
-    },
-    {
-      "symbol": "TCO",
-      "score": 5.1,
-      "price": 11.7,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "TEG",
-      "score": 1.0,
-      "price": 6.28,
-      "at_zone": false
-    },
-    {
-      "symbol": "ST8",
-      "score": -1.1,
-      "price": 6.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "SVN",
-      "score": 1.6,
-      "price": 4.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TLD",
-      "score": 2.4,
-      "price": 7.73,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TIP",
-      "score": -3.7,
-      "price": 19.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TDH",
-      "score": 4.0,
-      "price": 4.66,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TCI",
-      "score": 2.6,
-      "price": 11.95,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
       "rec": "No Clear Signal"
     },
     {
       "symbol": "TIG",
-      "score": 1.5,
-      "price": 10.1,
+      "score": 0.99,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.0
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": -0.1
+        },
+        {
+          "2025-06-29": 0.6
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.1
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": 0.3
+        },
+        {
+          "2025-08-31": 0.0
+        }
+      ]
     },
     {
-      "symbol": "THG",
-      "score": -8.56,
-      "price": 53.6,
+      "symbol": "TCM",
+      "score": -0.13,
       "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Sell Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": 0.0
+        },
+        {
+          "2025-05-04": 0.6
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": 0.0
+        },
+        {
+          "2025-06-15": 0.0
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.1
+        },
+        {
+          "2025-07-13": 0.0
+        },
+        {
+          "2025-07-20": 0.0
+        },
+        {
+          "2025-07-27": 0.0
+        },
+        {
+          "2025-08-03": 0.0
+        },
+        {
+          "2025-08-10": 0.0
+        },
+        {
+          "2025-08-17": 0.0
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.5
+        }
+      ]
     },
     {
-      "symbol": "TNG",
-      "score": 0.9,
-      "price": 20.3,
-      "at_zone": false
-    },
-    {
-      "symbol": "TPB",
-      "score": 3.0,
-      "price": 20.8,
+      "symbol": "SVD",
+      "score": 0.48,
       "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TNH",
-      "score": 1.1,
-      "price": 16.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TNT",
-      "score": 2.6,
-      "price": 8.86,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TNI",
-      "score": 4.0,
-      "price": 3.58,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TRC",
-      "score": -1.3,
-      "price": 70.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TTA",
-      "score": 1.5,
-      "price": 12.6,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TTF",
-      "score": 3.3,
-      "price": 3.13,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TSC",
-      "score": 2.0,
-      "price": 3.17,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VBB",
-      "score": 3.3,
-      "price": 12.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TVS",
-      "score": 4.7,
-      "price": 22.8,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TV2",
-      "score": 1.0,
-      "price": 35.8,
-      "at_zone": false
-    },
-    {
-      "symbol": "TVB",
-      "score": 2.6,
-      "price": 9.79,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TVN",
-      "score": 3.6,
-      "price": 8.2,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "UDC",
-      "score": 1.3,
-      "price": 4.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": -0.1
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": -0.5
+        },
+        {
+          "2025-05-11": -0.1
+        },
+        {
+          "2025-05-18": 0.1
+        },
+        {
+          "2025-05-25": 0.3
+        },
+        {
+          "2025-06-01": -0.1
+        },
+        {
+          "2025-06-08": 0.1
+        },
+        {
+          "2025-06-15": -0.1
+        },
+        {
+          "2025-06-22": 0.0
+        },
+        {
+          "2025-06-29": 1.2
+        },
+        {
+          "2025-07-06": -0.6
+        },
+        {
+          "2025-07-13": -0.1
+        },
+        {
+          "2025-07-20": 0.3
+        },
+        {
+          "2025-07-27": 0.1
+        },
+        {
+          "2025-08-03": 0.1
+        },
+        {
+          "2025-08-10": -0.1
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.1
+        },
+        {
+          "2025-08-31": -0.1
+        }
+      ]
     },
     {
       "symbol": "TVC",
-      "score": 8.64,
-      "price": 11.2,
-      "at_zone": true,
-      "pattern": "Strengthening Bullish",
-      "rec": "Monitor for Confirmation"
-    },
-    {
-      "symbol": "VFS",
-      "score": 2.7,
-      "price": 20.0,
-      "at_zone": false,
-      "pattern": "Strengthening Bearish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VC2",
-      "score": 1.1,
-      "price": 9.2,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VGI",
-      "score": 1.1,
-      "price": 74.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VHG",
-      "score": 2.9,
-      "price": 2.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VDS",
-      "score": 5.8,
-      "price": 24.65,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "VE9",
-      "score": 2.5,
-      "price": 4.5,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VCB",
-      "score": 2.6,
-      "price": 69.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VEA",
-      "score": -1.1,
-      "price": 39.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VGC",
-      "score": 1.8,
-      "price": 62.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VHC",
-      "score": 1.4,
-      "price": 57.5,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VPB",
-      "score": 4.8,
-      "price": 34.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VCI",
-      "score": 0.9,
-      "price": 46.25,
-      "at_zone": false
-    },
-    {
-      "symbol": "VCG",
-      "score": 1.0,
-      "price": 25.55,
-      "at_zone": false
-    },
-    {
-      "symbol": "VOS",
-      "score": -0.8,
-      "price": 15.25,
-      "at_zone": false
-    },
-    {
-      "symbol": "VGT",
-      "score": 1.0,
-      "price": 12.3,
-      "at_zone": false
-    },
-    {
-      "symbol": "VJC",
-      "score": 3.7,
-      "price": 145.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VIP",
-      "score": -2.4,
-      "price": 13.15,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VLC",
-      "score": 2.64,
-      "price": 15.3,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VIB",
-      "score": 3.8,
-      "price": 22.15,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VIX",
-      "score": 5.31,
-      "price": 38.4,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "VHM",
-      "score": -1.2,
-      "price": 104.6,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VLB",
-      "score": -2.0,
-      "price": 46.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VGS",
-      "score": 2.0,
-      "price": 30.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VHE",
-      "score": -1.2,
-      "price": 4.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VNE",
-      "score": 3.5,
-      "price": 6.18,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VND",
-      "score": 1.6,
-      "price": 24.65,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "AVG",
-      "score": 0.9,
-      "price": 15.2,
-      "at_zone": false
-    },
-    {
-      "symbol": "VRG",
       "score": 1.5,
-      "price": 19.4,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VRE",
-      "score": -1.5,
-      "price": 30.7,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VPH",
-      "score": 1.4,
-      "price": 5.67,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
+      "at_zone": true,
+      "scores": [
+        {
+          "2025-08-31": 1.5
+        }
+      ],
+      "pattern": "Insufficient data",
+      "rec": "Watch for Entry"
     },
     {
       "symbol": "VPG",
-      "score": 2.1,
-      "price": 8.81,
+      "score": 0.95,
       "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VSC",
-      "score": 5.05,
-      "price": 31.15,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "Buy Signal"
-    },
-    {
-      "symbol": "VTO",
-      "score": 0.9,
-      "price": 11.85,
-      "at_zone": false
-    },
-    {
-      "symbol": "VSH",
-      "score": -0.8,
-      "price": 46.9,
-      "at_zone": false
-    },
-    {
-      "symbol": "VTR",
-      "score": 1.3,
-      "price": 17.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "TAL",
-      "score": 5.0,
-      "price": 40.0,
-      "at_zone": false,
-      "pattern": "Mixed Signals",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "AAH",
-      "score": 1.1,
-      "price": 4.1,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VTV",
-      "score": -2.2,
-      "price": 12.0,
-      "at_zone": false,
-      "pattern": "Sideways Consolidation",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "VTZ",
-      "score": 0.9,
-      "price": 18.8,
-      "at_zone": false
-    },
-    {
-      "symbol": "MZG",
-      "score": 4.6,
-      "price": 14.4,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
-    },
-    {
-      "symbol": "DSE",
-      "score": 4.2,
-      "price": 31.65,
-      "at_zone": false,
-      "pattern": "Strengthening Bullish",
-      "rec": "No Clear Signal"
+      "scores": [
+        {
+          "2025-04-20": 0.0
+        },
+        {
+          "2025-04-27": -0.1
+        },
+        {
+          "2025-05-04": -0.1
+        },
+        {
+          "2025-05-11": 0.0
+        },
+        {
+          "2025-05-18": 0.0
+        },
+        {
+          "2025-05-25": 0.0
+        },
+        {
+          "2025-06-01": 0.1
+        },
+        {
+          "2025-06-08": -0.9
+        },
+        {
+          "2025-06-15": 0.3
+        },
+        {
+          "2025-06-22": 0.1
+        },
+        {
+          "2025-06-29": 0.0
+        },
+        {
+          "2025-07-06": 0.0
+        },
+        {
+          "2025-07-13": 0.1
+        },
+        {
+          "2025-07-20": 0.1
+        },
+        {
+          "2025-07-27": 0.3
+        },
+        {
+          "2025-08-03": 0.3
+        },
+        {
+          "2025-08-10": 1.2
+        },
+        {
+          "2025-08-17": 0.1
+        },
+        {
+          "2025-08-24": 0.0
+        },
+        {
+          "2025-08-31": -0.5
+        }
+      ]
     }
   ]
 }
