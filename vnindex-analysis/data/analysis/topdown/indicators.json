@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-28T09:14:42.130890",
+  "timestamp": "2025-08-29T05:16:34.564179",
   "summary": {
     "inflation_regime": "inflation_on",
     "risk_regime": "neutral",
@@ -31,11 +31,11 @@
       },
       "ppi_core": {
         "status": 2,
-        "interpretation": "PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn"
+        "interpretation": "PPI Lõi 2.8% → - Lạm phát hơi cao nhưng kiểm soát được"
       },
       "ppi_headline": {
         "status": 1,
-        "interpretation": "PPI Toàn bộ 2.1% ↑↑ - Lạm phát tăng nhẹ - theo dõi"
+        "interpretation": "PPI Toàn bộ 2.1% ↑ - Lạm phát tăng nhẹ"
       },
       "ppi_services": {
         "status": 2,
@@ -43,7 +43,7 @@
       },
       "yield_curve": {
         "status": 0,
-        "interpretation": "Phẳng (18bp) - Tăng trưởng chậm, ổn định +8bp 1T"
+        "interpretation": "Phẳng (14bp) - Tăng trưởng chậm, ổn định "
       },
       "commodities": {
         "status": 1,
@@ -59,7 +59,7 @@
       },
       "breakeven": {
         "status": 2,
-        "interpretation": "Bình thường (2.50%) - Kỳ vọng ổn định"
+        "interpretation": "Bình thường (2.49%) - Kỳ vọng ổn định"
       }
     },
     "macro": {
@@ -68,20 +68,20 @@
         "interpretation": "Thị trường lao động ổn định ở mức 4.2% | Fed giữ nguyên lãi suất ở mức 4.33%"
       },
       "gdp": {
-        "status": 2,
-        "interpretation": "Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng"
+        "status": 1,
+        "interpretation": "Tăng trưởng GDP vừa phải 2.1% YoY đang chậm lại → Động lực tăng trưởng suy yếu"
       },
       "credit_delinquencies": {
         "status": 1,
         "interpretation": "Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao "
       },
       "intermarket": {
-        "status": 1,
-        "interpretation": "Tương quan liên thị trường trung lập (-0.07)"
+        "status": 0,
+        "interpretation": "Tương quan liên thị trường tích cực (0.27)"
       },
       "global_flows": {
         "status": 1,
-        "interpretation": "Dòng vốn toàn cầu ổn định (-0.10)"
+        "interpretation": "Dòng vốn toàn cầu ổn định (0.10)"
       },
       "sentiment": {
         "status": 0,
@@ -89,7 +89,7 @@
       },
       "sector_rotation": {
         "status": 1,
-        "interpretation": "Luân chuyển sector trung tính (0.9%) → Xu hướng chưa rõ"
+        "interpretation": "Luân chuyển sector trung tính (2.0%) → Xu hướng chưa rõ"
       },
       "labor_market": {
         "status": 0,
@@ -113,7 +113,7 @@
       },
       "macro_commodities": {
         "status": 1,
-        "interpretation": "Kinh tế trung tính"
+        "interpretation": "Tăng trưởng kinh tế ổn định"
       }
     },
     "risk": {
@@ -126,8 +126,8 @@
         "interpretation": "bond_stability"
       },
       "equity_leadership": {
-        "status": 1,
-        "interpretation": "Dẫn dắt hỗn hợp"
+        "status": 2,
+        "interpretation": "risk_on_leadership"
       },
       "bond_flows": {
         "status": 1,
@@ -139,7 +139,7 @@
       },
       "btc_risk": {
         "status": 0,
-        "interpretation": "BTC downtrend (vs MA21: -3.6%, vs MA50: -4.3%)"
+        "interpretation": "BTC downtrend (vs MA21: -2.7%, vs MA50: -3.5%)"
       },
       "correlations": {
         "status": 0,

@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "analysis_date": "2025-08-27T15:29:55.095535",
+    "analysis_date": "2025-08-28T20:24:05.874222",
     "analysis_type": "daily_market_breadth",
-    "total_trading_days": 1410,
+    "total_trading_days": 1411,
     "date_range": {
       "start": "2020-01-03T00:00:00",
-      "end": "2025-08-27T00:00:00"
+      "end": "2025-08-28T00:00:00"
     }
   },
   "daily_data": [
@@ -16900,8 +16900,8 @@
       "unchanged_count": 59,
       "total_count": 438,
       "ratio": 0.27440633245382584,
-      "smoothed_ratio": 0.43107752625673285,
-      "up_smoothed": 169.2,
+      "smoothed_ratio": 0.4307975322781087,
+      "up_smoothed": 169.0,
       "down_smoothed": 225.2,
       "signal": "Neutral"
     },
@@ -16912,32 +16912,44 @@
       "unchanged_count": 31,
       "total_count": 438,
       "ratio": 0.918918918918919,
-      "smoothed_ratio": 0.45965842614552344,
-      "up_smoothed": 181.25,
-      "down_smoothed": 216.25,
+      "smoothed_ratio": 0.4822715447814604,
+      "up_smoothed": 187.4,
+      "down_smoothed": 204.6,
       "signal": "Neutral"
     },
     {
       "date": "2025-08-27T00:00:00",
-      "up_count": 179,
+      "up_count": 178,
       "down_count": 186,
-      "unchanged_count": 74,
+      "unchanged_count": 75,
       "total_count": 439,
-      "ratio": 0.4904109589041096,
-      "smoothed_ratio": 0.5612454034256181,
-      "up_smoothed": 219.0,
-      "down_smoothed": 164.66666666666666,
+      "ratio": 0.489010989010989,
+      "smoothed_ratio": 0.5641150574005156,
+      "up_smoothed": 217.25,
+      "down_smoothed": 163.0,
+      "signal": "Neutral"
+    },
+    {
+      "date": "2025-08-28T00:00:00",
+      "up_count": 213,
+      "down_count": 158,
+      "unchanged_count": 68,
+      "total_count": 439,
+      "ratio": 0.5741239892183289,
+      "smoothed_ratio": 0.6606846323827456,
+      "up_smoothed": 255.0,
+      "down_smoothed": 125.66666666666667,
       "signal": "Neutral"
     }
   ],
   "summary": {
-    "total_trading_days": 1410,
+    "total_trading_days": 1411,
     "averages": {
-      "up_count": 188.58014184397163,
-      "down_count": 192.7191489361702,
-      "unchanged_count": 70.26099290780142,
-      "total_count": 451.56028368794324,
-      "ratio": 0.49750791994603305
+      "up_count": 188.5967399007796,
+      "down_count": 192.6945428773919,
+      "unchanged_count": 70.26009922041105,
+      "total_count": 451.55138199858254,
+      "ratio": 0.4975612268910219
     },
     "extremes": {
       "max_up_count": 437,

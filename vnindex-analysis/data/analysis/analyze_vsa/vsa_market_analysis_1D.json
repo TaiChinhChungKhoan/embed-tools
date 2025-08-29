@@ -1,5761 +1,2806 @@
 {
-  "timestamp": "2025-08-28T00:33:38.893698",
+  "timestamp": "2025-08-29T04:13:01.491857",
   "market_summary": {
     "overview": {
-      "analyzed": 307,
-      "bullish": 140,
-      "bearish": 55,
-      "signals": 300,
-      "at_zones": 163
+      "analyzed": 363,
+      "bullish": 129,
+      "bearish": 175,
+      "signals": 363,
+      "at_zones": 30
     },
     "top_bullish": [
       {
         "symbol": "GKM",
-        "score": 23.375,
-        "signals": 5,
+        "score": 14.9,
+        "pattern": "Sideways Consolidation",
+        "at_zone": "🎯"
+      },
+      {
+        "symbol": "TVS",
+        "score": 11.45,
+        "pattern": "Sideways Consolidation",
         "at_zone": ""
       },
       {
-        "symbol": "LDP",
-        "score": 21.5,
-        "signals": 4,
+        "symbol": "HBS",
+        "score": 10.05,
+        "pattern": "Sideways Consolidation",
         "at_zone": ""
       },
       {
-        "symbol": "TTH",
-        "score": 18.75,
-        "signals": 3,
-        "at_zone": "✓"
+        "symbol": "PVS",
+        "score": 10.05,
+        "pattern": "Sideways Consolidation",
+        "at_zone": "🎯"
       },
       {
-        "symbol": "FCS",
-        "score": 16.0,
-        "signals": 5,
-        "at_zone": "✓"
+        "symbol": "PAS",
+        "score": 9.85,
+        "pattern": "Sideways Consolidation",
+        "at_zone": "🎯"
       },
       {
-        "symbol": "DTI",
-        "score": 14.75,
-        "signals": 3,
-        "at_zone": "✓"
+        "symbol": "STK",
+        "score": 9.1,
+        "pattern": "Sideways Consolidation",
+        "at_zone": ""
       },
       {
-        "symbol": "BMI",
-        "score": 13.5,
-        "signals": 2,
-        "at_zone": "✓"
+        "symbol": "SBG",
+        "score": 8.9,
+        "pattern": "Sideways Consolidation",
+        "at_zone": "🎯"
       },
       {
-        "symbol": "HTN",
-        "score": 13.5,
-        "signals": 2,
-        "at_zone": "✓"
+        "symbol": "VGS",
+        "score": 8.82,
+        "pattern": "Sideways Consolidation",
+        "at_zone": "🎯"
       },
       {
-        "symbol": "LCG",
-        "score": 13.5,
-        "signals": 2,
-        "at_zone": "✓"
+        "symbol": "IDI",
+        "score": 8.5,
+        "pattern": "Mixed Signals",
+        "at_zone": ""
       },
       {
-        "symbol": "OGC",
-        "score": 13.5,
-        "signals": 2,
-        "at_zone": "✓"
-      },
-      {
-        "symbol": "TTA",
-        "score": 13.0,
-        "signals": 5,
-        "at_zone": "✓"
+        "symbol": "GMD",
+        "score": 8.3,
+        "pattern": "Sideways Consolidation",
+        "at_zone": ""
       }
     ],
     "top_bearish": [
       {
-        "symbol": "PPC",
-        "score": -10.5,
-        "signals": 2,
+        "symbol": "VTO",
+        "score": -11.8,
+        "pattern": "Sideways Consolidation",
         "at_zone": ""
       },
       {
-        "symbol": "BMP",
-        "score": -10.0,
-        "signals": 2,
-        "at_zone": "✓"
-      },
-      {
-        "symbol": "BVH",
-        "score": -4.5,
-        "signals": 1,
+        "symbol": "HAP",
+        "score": -9.95,
+        "pattern": "Sideways Consolidation",
         "at_zone": ""
       },
       {
-        "symbol": "LAI",
-        "score": -4.5,
-        "signals": 1,
-        "at_zone": "✓"
+        "symbol": "VGI",
+        "score": -9.85,
+        "pattern": "Mixed Signals",
+        "at_zone": "🎯"
       },
       {
-        "symbol": "NT2",
-        "score": -4.5,
-        "signals": 2,
-        "at_zone": "✓"
+        "symbol": "CSI",
+        "score": -9.7,
+        "pattern": "Sideways Consolidation",
+        "at_zone": "🎯"
       },
       {
-        "symbol": "QCG",
-        "score": -4.5,
-        "signals": 2,
-        "at_zone": "✓"
-      },
-      {
-        "symbol": "QNS",
-        "score": -4.5,
-        "signals": 1,
+        "symbol": "CTS",
+        "score": -9.65,
+        "pattern": "Sideways Consolidation",
         "at_zone": ""
       },
       {
-        "symbol": "VIP",
-        "score": -4.5,
-        "signals": 2,
-        "at_zone": "✓"
+        "symbol": "KHP",
+        "score": -9.6,
+        "pattern": "Sideways Consolidation",
+        "at_zone": ""
       },
       {
-        "symbol": "APG",
-        "score": -4.0,
-        "signals": 2,
-        "at_zone": "✓"
+        "symbol": "ASP",
+        "score": -8.75,
+        "pattern": "Sideways Consolidation",
+        "at_zone": ""
       },
       {
-        "symbol": "PTB",
-        "score": -4.0,
-        "signals": 2,
+        "symbol": "SVN",
+        "score": -8.65,
+        "pattern": "Sideways Consolidation",
+        "at_zone": ""
+      },
+      {
+        "symbol": "QTP",
+        "score": -8.6,
+        "pattern": "Mixed Signals",
+        "at_zone": "🎯"
+      },
+      {
+        "symbol": "DHA",
+        "score": -8.2,
+        "pattern": "Sideways Consolidation",
         "at_zone": ""
       }
     ]
   },
   "stocks": [
     {
-      "symbol": "AGR",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "BCC",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAV",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "AAS",
+      "score": 3.3,
+      "price": 23.0,
       "at_zone": false,
-      "zones": {
-        "supply": 7,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "AAA",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "ACL",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "APG",
-      "score": -4.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "APS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "ADS",
-      "score": -3.0,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "ABS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "BCG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "APP",
-      "score": -1.75,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 6
-      },
-      "signals": 3,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "API",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "ALV",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Upthrust",
-      "key_signals": []
-    },
-    {
-      "symbol": "BAF",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "APH",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "BCM",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAT",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "BCE",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "ACC",
-      "score": 5.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASP",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BFC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "BID",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "AGG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "ABW",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BIG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "AMS",
-      "score": 10.5,
-      "bias": "bullish",
+      "score": 2.7,
+      "price": 8.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "AAT",
+      "score": 7.15,
+      "price": 3.46,
       "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "ACB",
+      "score": 0.0,
+      "price": 27.55,
+      "at_zone": false
+    },
+    {
+      "symbol": "AGR",
+      "score": -0.4,
+      "price": 18.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "ADS",
+      "score": 7.05,
+      "price": 8.99,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "BFC",
+      "score": -3.5,
+      "price": 44.0,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "ABS",
+      "score": 0.1,
+      "price": 3.76,
+      "at_zone": false
+    },
+    {
+      "symbol": "BID",
+      "score": 1.55,
+      "price": 42.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "ANV",
+      "score": -1.1,
+      "price": 28.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "API",
+      "score": 1.0,
+      "price": 9.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "BCG",
+      "score": -0.1,
+      "price": 3.61,
+      "at_zone": false
+    },
+    {
+      "symbol": "BAF",
+      "score": -3.85,
+      "price": 34.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "APH",
+      "score": -6.05,
+      "price": 6.84,
+      "at_zone": true,
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "ABW",
+      "score": -7.8,
+      "price": 12.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "ACV",
+      "score": 2.25,
+      "price": 61.8,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "ALV",
+      "score": 3.55,
+      "price": 17.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "APG",
+      "score": -0.9,
+      "price": 12.55,
+      "at_zone": false
+    },
+    {
+      "symbol": "ASM",
+      "score": 3.85,
+      "price": 8.3,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "BCE",
+      "score": -2.1,
+      "price": 11.05,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "ASP",
+      "score": -8.75,
+      "price": 4.85,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "AAA",
+      "score": 3.8,
+      "price": 8.17,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "AGG",
+      "score": -0.4,
+      "price": 19.45,
+      "at_zone": false
+    },
+    {
+      "symbol": "APP",
+      "score": -2.0,
+      "price": 5.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "APS",
+      "score": -1.1,
+      "price": 11.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "BIG",
+      "score": 4.2,
+      "price": 5.2,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "BCC",
+      "score": -0.7,
+      "price": 8.4,
+      "at_zone": false
     },
     {
       "symbol": "BLF",
-      "score": -1.0,
-      "bias": "bearish",
+      "score": -1.4,
+      "price": 2.0,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BMC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "BSR",
-      "score": 6.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 3
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Upthrust",
-          "score": -3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "CCL",
-      "score": 10.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BVH",
-      "score": -4.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "Absorption",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BNA",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BKG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "BMP",
-      "score": -10.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Selling Climax",
-          "score": -4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BVB",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "BMI",
-      "score": 13.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "BMS",
-      "score": 1.0,
-      "bias": "bullish",
+      "score": 3.2,
+      "price": 21.5,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "CEO",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "BVS",
-      "score": 0.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "C4G",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "Absorption",
-      "key_signals": []
-    },
-    {
-      "symbol": "BSI",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "CDC",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "BWE",
-      "score": -0.5,
-      "bias": "bearish",
+      "score": -4.05,
+      "price": 47.3,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 3,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "CSM",
-      "score": 12.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "CTD",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "DFF",
-      "score": 1.5,
-      "bias": "bullish",
+      "symbol": "BSR",
+      "score": 7.15,
+      "price": 27.15,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Buy Signal"
     },
     {
-      "symbol": "CNG",
-      "score": 1.0,
-      "bias": "bullish",
+      "symbol": "BKG",
+      "score": -0.95,
+      "price": 2.99,
+      "at_zone": false
+    },
+    {
+      "symbol": "BMC",
+      "score": -1.0,
+      "price": 17.1,
+      "at_zone": false
+    },
+    {
+      "symbol": "BMP",
+      "score": -6.65,
+      "price": 143.2,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Sell Signal"
     },
     {
-      "symbol": "CSI",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 4
-      },
-      "signals": 5,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "CMX",
-      "score": -1.5,
-      "bias": "bearish",
+      "symbol": "BVH",
+      "score": 3.75,
+      "price": 60.5,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "CTF",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "C69",
+      "score": -1.3,
+      "price": 9.5,
       "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "DC4",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "BMS",
+      "score": -1.2,
+      "price": 15.3,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "DCM",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "symbol": "C4G",
+      "score": -0.2,
+      "price": 9.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "BVB",
+      "score": 0.2,
+      "price": 16.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "CDC",
+      "score": 5.7,
+      "price": 28.9,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
+    },
+    {
+      "symbol": "CCL",
+      "score": 0.8,
+      "price": 6.97,
+      "at_zone": false
+    },
+    {
+      "symbol": "BNA",
+      "score": -0.3,
+      "price": 7.2,
+      "at_zone": false
+    },
+    {
+      "symbol": "CTX",
+      "score": 2.2,
+      "price": 19.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "CST",
-      "score": 3.0,
-      "bias": "bullish",
+      "score": 0.9,
+      "price": 14.9,
+      "at_zone": false
+    },
+    {
+      "symbol": "CII",
+      "score": 0.1,
+      "price": 23.1,
+      "at_zone": false
+    },
+    {
+      "symbol": "CTF",
+      "score": 3.15,
+      "price": 20.85,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "CIG",
-      "score": 3.0,
-      "bias": "bullish",
+      "symbol": "DFF",
+      "score": 2.85,
+      "price": 1.3,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "DAH",
-      "score": 4.5,
-      "bias": "bullish",
+      "symbol": "CRC",
+      "score": -1.0,
+      "price": 11.6,
+      "at_zone": false
+    },
+    {
+      "symbol": "CMG",
+      "score": 1.05,
+      "price": 40.9,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "CMS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "CSV",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "CTG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "Upthrust",
-      "key_signals": []
+      "score": -0.3,
+      "price": 51.6,
+      "at_zone": false
     },
     {
-      "symbol": "CKG",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "CIG",
+      "score": -3.95,
+      "price": 10.0,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "CSI",
+      "score": -9.7,
+      "price": 30.0,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "CRE",
-      "score": 3.0,
-      "bias": "bullish",
+      "score": 6.8,
+      "price": 10.45,
       "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Buy Signal"
     },
     {
-      "symbol": "DBC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "symbol": "CSM",
+      "score": 1.6,
+      "price": 15.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "CTP",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "CKG",
+      "score": -1.2,
+      "price": 14.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "CMS",
+      "score": -0.5,
+      "price": 8.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "CMX",
+      "score": -1.7,
+      "price": 7.18,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DC4",
+      "score": -0.9,
+      "price": 12.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "CTI",
+      "score": -1.4,
+      "price": 24.45,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "DBD",
-      "score": 1.5,
-      "bias": "bullish",
+      "score": -0.7,
+      "price": 53.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "DCM",
+      "score": 1.2,
+      "price": 39.05,
       "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 4
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "DDG",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Absorption",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DGC",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DLG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "DL1",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "CNG",
+      "score": -1.1,
+      "price": 28.35,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "DHC",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "symbol": "CLX",
+      "score": -0.25,
+      "price": 16.4,
+      "at_zone": false
     },
     {
-      "symbol": "DGW",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "symbol": "DCL",
+      "score": -2.05,
+      "price": 21.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "CTD",
+      "score": -1.1,
+      "price": 76.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "CTR",
+      "score": 1.15,
+      "price": 88.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DAH",
+      "score": -5.8,
+      "price": 3.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "CTS",
+      "score": -9.65,
+      "price": 41.4,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "CSV",
+      "score": -2.7,
+      "price": 33.75,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DDV",
+      "score": -2.5,
+      "price": 31.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "D2D",
+      "score": -1.3,
+      "price": 37.6,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DBC",
+      "score": -2.7,
+      "price": 27.6,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DRH",
+      "score": -1.7,
+      "price": 3.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "DGT",
-      "score": 3.0,
-      "bias": "bullish",
+      "score": 7.5,
+      "price": 5.2,
       "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
-      "symbol": "DHA",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DSC",
-      "score": 9.0,
-      "bias": "bullish",
+      "symbol": "DHC",
+      "score": -2.0,
+      "price": 30.95,
       "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "DPR",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DTI",
-      "score": 14.75,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 3,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DTD",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "DGW",
+      "score": 2.6,
+      "price": 42.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "DPG",
-      "score": 1.5,
-      "bias": "bullish",
+      "score": -4.15,
+      "price": 43.35,
       "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "DST",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": -6.25,
+      "price": 9.2,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "DL1",
+      "score": -1.3,
+      "price": 6.4,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DHA",
+      "score": -8.2,
+      "price": 49.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "DLG",
+      "score": -0.7,
+      "price": 3.0,
+      "at_zone": false
     },
     {
       "symbol": "DRC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "score": -1.4,
+      "price": 17.15,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DPR",
+      "score": -2.8,
+      "price": 37.35,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DIG",
+      "score": -1.5,
+      "price": 23.15,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DPM",
+      "score": -2.1,
+      "price": 26.65,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DSC",
+      "score": 6.15,
+      "price": 21.4,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "DRI",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -2.6,
+      "price": 12.1,
       "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DTD",
+      "score": 4.4,
+      "price": 20.6,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "DTI",
+      "score": 6.95,
+      "price": 3.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "FCS",
-      "score": 16.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 4
-      },
-      "signals": 5,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "DXS",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": 4.5,
+      "price": 9.2,
       "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "EVE",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "EVS",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DVN",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "DVM",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "EIB",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "GDT",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "FCM",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "GAS",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "FIT",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "FTS",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 0
-      },
-      "signals": 3,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "GEG",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -7.5,
+      "price": 29.25,
       "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Mixed Signals",
+      "rec": "Sell Signal"
     },
     {
-      "symbol": "EIN",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "G36",
+      "score": -1.3,
+      "price": 11.2,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "GDA",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "DVM",
+      "score": 2.55,
+      "price": 7.5,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "DXS",
+      "score": -1.7,
+      "price": 12.75,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "ELC",
-      "score": -2.0,
-      "bias": "bearish",
+      "score": -6.7,
+      "price": 22.05,
       "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
     },
     {
-      "symbol": "GMD",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "EVG",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "FIT",
+      "score": -2.6,
+      "price": 4.82,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "FIR",
-      "score": 1.5,
-      "bias": "bullish",
+      "symbol": "FPT",
+      "score": 0.3,
+      "price": 104.5,
+      "at_zone": false
+    },
+    {
+      "symbol": "EIN",
+      "score": -1.3,
+      "price": 3.4,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "GEX",
+      "score": 0.2,
+      "price": 55.8,
+      "at_zone": false
+    },
+    {
+      "symbol": "DXP",
+      "score": 0.35,
+      "price": 10.9,
+      "at_zone": false
+    },
+    {
+      "symbol": "EVS",
+      "score": 0.4,
+      "price": 8.5,
+      "at_zone": false
     },
     {
       "symbol": "GKM",
-      "score": 23.375,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 7
-      },
-      "signals": 5,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "score": 14.9,
+      "price": 4.9,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "DXG",
+      "score": -1.0,
+      "price": 22.9,
+      "at_zone": false
     },
     {
       "symbol": "FOX",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "score": -0.6,
+      "price": 67.1,
+      "at_zone": false
+    },
+    {
+      "symbol": "GEE",
+      "score": -1.6,
+      "price": 117.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "GDT",
+      "score": -1.2,
+      "price": 21.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "FCN",
+      "score": 0.6,
+      "price": 18.05,
+      "at_zone": false
     },
     {
       "symbol": "FRT",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": 1.5,
+      "price": 132.1,
       "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "GMD",
+      "score": 8.3,
+      "price": 68.9,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
+    },
+    {
+      "symbol": "EVF",
+      "score": -2.25,
+      "price": 14.05,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "GIL",
+      "score": 2.5,
+      "price": 20.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "GEG",
+      "score": -4.9,
+      "price": 15.8,
+      "at_zone": true,
+      "pattern": "Strengthening Bearish",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "FTS",
+      "score": -2.3,
+      "price": 39.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "EVG",
+      "score": 0.2,
+      "price": 10.55,
+      "at_zone": false
+    },
+    {
+      "symbol": "GDA",
+      "score": 8.2,
+      "price": 17.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "FMC",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "score": -1.7,
+      "price": 37.15,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "GAS",
+      "score": 7.25,
+      "price": 64.9,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "GPC",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": 2.8,
+      "price": 2.8,
       "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HGM",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "GSP",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "HAG",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "HHG",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HAP",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "HBS",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "HAH",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "GVR",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": 6.35,
+      "price": 29.2,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
-      "symbol": "HAX",
-      "score": -2.75,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 5,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": false
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HCD",
-      "score": 7.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "HCM",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "GSP",
+      "score": -1.55,
+      "price": 11.7,
       "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HBC",
+      "score": -3.66,
+      "price": 8.2,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HAP",
+      "score": -9.95,
+      "price": 6.41,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "HDG",
+      "score": -1.1,
+      "price": 32.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HAG",
+      "score": 4.9,
+      "price": 16.35,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HGM",
+      "score": 2.1,
+      "price": 294.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HAR",
+      "score": 1.8,
+      "price": 5.24,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "HHP",
-      "score": -1.5,
-      "bias": "bearish",
+      "score": 3.2,
+      "price": 9.0,
       "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "HAX",
+      "score": -4.4,
+      "price": 13.7,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HAH",
+      "score": 0.2,
+      "price": 57.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "HBS",
+      "score": 10.05,
+      "price": 8.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "HDC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "score": -1.4,
+      "price": 35.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HHG",
+      "score": -1.6,
+      "price": 1.6,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HCD",
+      "score": 2.9,
+      "price": 8.46,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HDB",
+      "score": -0.2,
+      "price": 32.5,
+      "at_zone": false
+    },
+    {
+      "symbol": "HCM",
+      "score": -0.9,
+      "price": 28.2,
+      "at_zone": false
     },
     {
       "symbol": "HNG",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HHV",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "HT1",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "HVT",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "KBC",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "IDI",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "IVS",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 4,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "HTN",
-      "score": 13.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "score": -0.8,
+      "price": 6.4,
+      "at_zone": false
     },
     {
       "symbol": "HNM",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": 2.9,
+      "price": 8.6,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "HTI",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HPX",
-      "score": 9.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "IMP",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "HQC",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HSG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "HUT",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "HID",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "HVH",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "IJC",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "ITQ",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "IDJ",
-      "score": -3.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Selling Climax",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "JVC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "HVN",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "IDC",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "score": 0.2,
+      "price": 43.6,
+      "at_zone": false
+    },
+    {
+      "symbol": "HSG",
+      "score": 2.75,
+      "price": 18.35,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HHV",
+      "score": -0.7,
+      "price": 14.85,
+      "at_zone": false
+    },
+    {
+      "symbol": "HHS",
+      "score": -1.0,
+      "price": 16.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "HPX",
+      "score": 4.25,
+      "price": 5.48,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HVA",
+      "score": -1.3,
+      "price": 23.7,
+      "at_zone": false,
+      "pattern": "Strengthening Bullish",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HID",
+      "score": 0.7,
+      "price": 2.92,
+      "at_zone": false
+    },
+    {
+      "symbol": "HUT",
+      "score": -0.8,
+      "price": 17.7,
+      "at_zone": false
+    },
+    {
+      "symbol": "ITQ",
+      "score": -1.8,
+      "price": 3.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HT1",
+      "score": 1.9,
+      "price": 17.4,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "IVS",
+      "score": 3.75,
+      "price": 11.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HSL",
+      "score": 4.4,
+      "price": 13.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HVH",
+      "score": 0.2,
+      "price": 13.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "HTN",
+      "score": 3.1,
+      "price": 11.75,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HPG",
+      "score": 0.0,
+      "price": 27.1,
+      "at_zone": false
+    },
+    {
+      "symbol": "HVT",
+      "score": -4.5,
+      "price": 31.6,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "HII",
-      "score": -2.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Upthrust",
-          "score": -2.0,
-          "confirmed": true
-        }
-      ]
+      "score": -1.5,
+      "price": 4.62,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "IJC",
+      "score": -1.4,
+      "price": 14.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HTI",
+      "score": -1.4,
+      "price": 22.55,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "IDJ",
+      "score": -0.5,
+      "price": 7.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "HQC",
+      "score": -0.85,
+      "price": 3.8,
+      "at_zone": false
+    },
+    {
+      "symbol": "IMP",
+      "score": 3.3,
+      "price": 52.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "KBC",
+      "score": 1.3,
+      "price": 40.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "IDI",
+      "score": 8.5,
+      "price": 8.25,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "Buy Signal"
+    },
+    {
+      "symbol": "ITC",
+      "score": -0.65,
+      "price": 15.95,
+      "at_zone": false
+    },
+    {
+      "symbol": "HVN",
+      "score": -1.6,
+      "price": 31.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "HLD",
+      "score": -0.1,
+      "price": 18.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "JVC",
+      "score": -2.35,
+      "price": 5.18,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "L40",
-      "score": 1.0,
-      "bias": "bullish",
+      "score": 3.85,
+      "price": 32.0,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Stopping Volume",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "LDP",
-      "score": 21.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 4,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "KSQ",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "score": -1.3,
+      "price": 2.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "LAS",
-      "score": -1.5,
-      "bias": "bearish",
+      "symbol": "LDP",
+      "score": 2.6,
+      "price": 13.6,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "KOS",
+      "score": 5.6,
+      "price": 38.8,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "KHG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "LDG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "KDC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "KLB",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "LCG",
-      "score": 13.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "LAI",
-      "score": -4.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "KHP",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "score": -0.25,
+      "price": 6.88,
+      "at_zone": false
     },
     {
       "symbol": "KVC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "score": -0.9,
+      "price": 1.9,
+      "at_zone": false
     },
     {
-      "symbol": "KSV",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "L14",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "symbol": "KDH",
+      "score": 0.25,
+      "price": 35.9,
+      "at_zone": false
     },
     {
       "symbol": "KSB",
-      "score": 3.0,
-      "bias": "bullish",
+      "score": 2.0,
+      "price": 18.75,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "LHG",
-      "score": -3.0,
-      "bias": "bearish",
+      "symbol": "LAI",
+      "score": -1.6,
+      "price": 16.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "KSV",
+      "score": -1.1,
+      "price": 156.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "LCG",
+      "score": 2.6,
+      "price": 12.6,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "L14",
+      "score": -0.2,
+      "price": 40.9,
+      "at_zone": false
+    },
+    {
+      "symbol": "KLB",
+      "score": -1.3,
+      "price": 22.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "LGL",
+      "score": 0.1,
+      "price": 4.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "LDG",
+      "score": -2.2,
+      "price": 4.88,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "KHP",
+      "score": -9.6,
+      "price": 12.6,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "LAS",
+      "score": 7.45,
+      "price": 18.8,
       "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Upthrust",
-          "score": -3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "MFS",
-      "score": 0.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 6
-      },
-      "signals": 3,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "MPC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "MBG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "MBB",
-      "score": 9.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 7,
-        "demand": 1
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "MCG",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "LIG",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 3
-      },
-      "signals": 3,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "LPB",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "Upthrust",
-      "key_signals": []
-    },
-    {
-      "symbol": "MSN",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Upthrust",
-      "key_signals": []
-    },
-    {
-      "symbol": "MSB",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "MBS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "NKG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "LSS",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "NNC",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "LSG",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSH",
-      "score": 6.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 4
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "MHC",
-      "score": -3.0,
-      "bias": "bearish",
+      "score": -1.7,
+      "price": 14.0,
       "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Selling Climax",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "NHH",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "symbol": "LPB",
+      "score": 0.7,
+      "price": 44.85,
+      "at_zone": false
     },
     {
-      "symbol": "MST",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "symbol": "NNC",
+      "score": -2.1,
+      "price": 44.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "MCG",
+      "score": -2.3,
+      "price": 2.9,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "MFS",
+      "score": -1.3,
+      "price": 42.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "LSG",
+      "score": 0.9,
+      "price": 22.2,
+      "at_zone": false
+    },
+    {
+      "symbol": "MPC",
+      "score": -0.1,
+      "price": 15.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "MML",
+      "score": 1.05,
+      "price": 38.8,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "MBB",
+      "score": 1.2,
+      "price": 27.2,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "LIG",
+      "score": 2.6,
+      "price": 5.1,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "NAF",
+      "score": -0.3,
+      "price": 32.5,
+      "at_zone": false
+    },
+    {
+      "symbol": "MSH",
+      "score": 1.6,
+      "price": 37.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "NBC",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": 1.6,
+      "price": 9.4,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "MSB",
+      "score": 2.5,
+      "price": 17.55,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "NED",
+      "score": -5.45,
+      "price": 7.1,
+      "at_zone": true,
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "MCH",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "score": -0.5,
+      "price": 128.0,
+      "at_zone": false
     },
     {
-      "symbol": "MSR",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "symbol": "MSN",
+      "score": -0.6,
+      "price": 83.1,
+      "at_zone": false
+    },
+    {
+      "symbol": "MST",
+      "score": 1.1,
+      "price": 5.9,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "MWG",
+      "score": -4.75,
+      "price": 77.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "LHG",
+      "score": -0.4,
+      "price": 31.55,
+      "at_zone": false
     },
     {
       "symbol": "MIG",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
+      "score": -6.35,
+      "price": 17.25,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
     },
     {
       "symbol": "NAG",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "score": -2.55,
+      "price": 13.9,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "NRC",
-      "score": 5.0,
-      "bias": "bullish",
+      "symbol": "NHA",
+      "score": 4.85,
+      "price": 23.5,
       "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 4
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "MBS",
+      "score": -0.5,
+      "price": 40.8,
+      "at_zone": false
+    },
+    {
+      "symbol": "NHH",
+      "score": 3.6,
+      "price": 12.15,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "NLG",
+      "score": -0.6,
+      "price": 44.2,
+      "at_zone": false
+    },
+    {
+      "symbol": "NDN",
+      "score": 2.5,
+      "price": 12.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "NAB",
+      "score": 2.8,
+      "price": 15.9,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "NKG",
+      "score": 7.8,
+      "price": 15.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "NSH",
-      "score": 9.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 5
-      },
-      "signals": 3,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "NTL",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "PC1",
-      "score": -3.0,
-      "bias": "bearish",
+      "score": 1.2,
+      "price": 4.5,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Selling Climax",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "NTC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "NO1",
-      "score": 12.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 5
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "NT2",
-      "score": -4.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Selling Climax",
-          "score": -4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "NVL",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -1.6,
+      "price": 16.7,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "OGC",
-      "score": 13.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "OCH",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "OCB",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "ORS",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "PAS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "PAC",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -4.55,
+      "price": 15.45,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PC1",
+      "score": 0.35,
+      "price": 26.95,
+      "at_zone": false
     },
     {
       "symbol": "NTP",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PET",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "PHP",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -7.75,
+      "price": 61.5,
       "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
     },
     {
-      "symbol": "PLC",
-      "score": -3.0,
-      "bias": "bearish",
+      "symbol": "PAC",
+      "score": 0.5,
+      "price": 27.5,
+      "at_zone": false
+    },
+    {
+      "symbol": "NRC",
+      "score": -0.2,
+      "price": 5.7,
+      "at_zone": false
+    },
+    {
+      "symbol": "NVB",
+      "score": 1.3,
+      "price": 15.5,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "PNJ",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "NTL",
+      "score": -0.55,
+      "price": 19.35,
+      "at_zone": false
+    },
+    {
+      "symbol": "NT2",
+      "score": -0.8,
+      "price": 22.2,
+      "at_zone": false
+    },
+    {
+      "symbol": "OCB",
+      "score": -0.5,
+      "price": 13.6,
+      "at_zone": false
+    },
+    {
+      "symbol": "NTC",
+      "score": 1.8,
+      "price": 161.7,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "OGC",
+      "score": 1.8,
+      "price": 4.75,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "OIL",
+      "score": 0.4,
+      "price": 11.9,
+      "at_zone": false
+    },
+    {
+      "symbol": "PAN",
+      "score": -0.1,
+      "price": 33.75,
+      "at_zone": false
+    },
+    {
+      "symbol": "PAS",
+      "score": 9.85,
+      "price": 3.6,
       "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "Upthrust",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
     },
     {
-      "symbol": "PIV",
-      "score": 1.5,
-      "bias": "bullish",
+      "symbol": "OCH",
+      "score": 1.4,
+      "price": 6.2,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PPC",
-      "score": -10.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Selling Climax",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "Selling Climax",
-          "score": -4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "PVB",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PVC",
-      "score": 7.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PHR",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "PDR",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PVP",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "PXL",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLP",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "QCG",
-      "score": -4.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 5
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "QNS",
-      "score": -4.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "Selling Climax",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PLX",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PV2",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "PSI",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "POW",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "PGN",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "PVT",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 2
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Upthrust",
-          "score": -2.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PTL",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PSB",
-      "score": 8.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "PVD",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "PHC",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "PFL",
-      "score": 1.0,
-      "bias": "bullish",
+      "score": -6.75,
+      "price": 3.1,
       "at_zone": true,
-      "zones": {
-        "supply": 7,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "PHC",
+      "score": 5.5,
+      "price": 5.57,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "PCH",
+      "score": 0.2,
+      "price": 19.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "PLC",
+      "score": -3.2,
+      "price": 27.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PPC",
+      "score": -2.0,
+      "price": 10.95,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PET",
+      "score": -7.05,
+      "price": 32.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "PHP",
+      "score": -1.4,
+      "price": 36.4,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "PTB",
-      "score": -4.0,
-      "bias": "bearish",
+      "score": -0.05,
+      "price": 51.2,
+      "at_zone": false
+    },
+    {
+      "symbol": "PHR",
+      "score": 1.35,
+      "price": 56.0,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Watch for Entry"
+    },
+    {
+      "symbol": "PGN",
+      "score": 0.9,
+      "price": 5.9,
+      "at_zone": false
+    },
+    {
+      "symbol": "PSB",
+      "score": 5.8,
+      "price": 4.5,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Upthrust",
-          "score": -2.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
+    },
+    {
+      "symbol": "PSD",
+      "score": -1.0,
+      "price": 13.7,
+      "at_zone": false
+    },
+    {
+      "symbol": "PTL",
+      "score": -2.2,
+      "price": 3.38,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PNJ",
+      "score": -1.4,
+      "price": 85.6,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PLX",
+      "score": 1.7,
+      "price": 36.15,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PVC",
+      "score": 5.35,
+      "price": 11.6,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "POW",
+      "score": 0.6,
+      "price": 16.45,
+      "at_zone": false
+    },
+    {
+      "symbol": "PVG",
+      "score": 2.4,
+      "price": 6.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PVP",
+      "score": -0.1,
+      "price": 14.95,
+      "at_zone": false
+    },
+    {
+      "symbol": "PXL",
+      "score": -5.7,
+      "price": 17.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "QNS",
+      "score": -7.45,
+      "price": 47.3,
+      "at_zone": true,
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "QCG",
+      "score": -1.5,
+      "price": 13.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PVT",
+      "score": -0.1,
+      "price": 17.95,
+      "at_zone": false
+    },
+    {
+      "symbol": "PPT",
+      "score": -0.2,
+      "price": 14.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "PDR",
+      "score": 0.1,
+      "price": 24.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "PIV",
+      "score": 1.9,
+      "price": 2.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "PVD",
+      "score": 0.2,
+      "price": 21.5,
+      "at_zone": false
     },
     {
       "symbol": "PVS",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "QTP",
-      "score": -2.0,
-      "bias": "bearish",
+      "score": 10.05,
+      "price": 34.0,
       "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 5
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "SAB",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "SAM",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "SAS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "SCR",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "REE",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "SBS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "SGP",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "S99",
-      "score": 0.5,
-      "bias": "bullish",
+      "score": -2.6,
+      "price": 8.9,
       "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "QTP",
+      "score": -8.6,
+      "price": 13.3,
+      "at_zone": true,
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "REE",
+      "score": 0.6,
+      "price": 65.6,
+      "at_zone": false
+    },
+    {
+      "symbol": "SCS",
+      "score": -1.3,
+      "price": 65.4,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "SHB",
+      "score": -0.9,
+      "price": 18.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "SAM",
+      "score": 2.5,
+      "price": 8.72,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "SGR",
+      "score": -0.6,
+      "price": 31.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "SCR",
+      "score": -1.7,
+      "price": 8.91,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "SHI",
+      "score": 1.3,
+      "price": 14.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "SAV",
       "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "price": 15.7,
+      "at_zone": false
     },
     {
-      "symbol": "SGR",
-      "score": 1.0,
-      "bias": "bullish",
+      "symbol": "SAB",
+      "score": 1.75,
+      "price": 46.55,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Watch for Entry"
+    },
+    {
+      "symbol": "SCI",
+      "score": -2.0,
+      "price": 8.7,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "SHI",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 1
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "symbol": "SBS",
+      "score": -1.3,
+      "price": 7.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "SGT",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "score": 1.6,
+      "price": 18.2,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "SBT",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "symbol": "SAS",
+      "score": -0.8,
+      "price": 37.9,
+      "at_zone": false
     },
     {
-      "symbol": "SCS",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "SBG",
+      "score": 8.9,
+      "price": 12.9,
       "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 6
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "SVN",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
     },
     {
       "symbol": "TEG",
-      "score": 5.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "ST8",
-      "score": -0.75,
-      "bias": "bearish",
+      "score": -3.8,
+      "price": 6.28,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 3,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TDG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "TIG",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "SZC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "TCL",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "TCI",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "SMC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "TLG",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "TCM",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "TDH",
-      "score": 2.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 4
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "THG",
-      "score": -3.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 3,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "score": 0.15,
+      "price": 30.05,
+      "at_zone": false
     },
     {
       "symbol": "TCD",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "score": 1.55,
+      "price": 2.68,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Watch for Entry"
     },
     {
-      "symbol": "TLD",
+      "symbol": "SVN",
+      "score": -8.65,
+      "price": 4.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "SKG",
+      "score": 3.9,
+      "price": 11.2,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TCL",
+      "score": -0.7,
+      "price": 35.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "TCB",
+      "score": -0.3,
+      "price": 39.6,
+      "at_zone": false
+    },
+    {
+      "symbol": "SJD",
+      "score": 0.7,
+      "price": 15.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "SHS",
+      "score": 0.1,
+      "price": 27.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "SZC",
+      "score": -6.5,
+      "price": 35.45,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "TDC",
       "score": -1.0,
-      "bias": "bearish",
+      "price": 12.8,
+      "at_zone": false
+    },
+    {
+      "symbol": "TCI",
+      "score": 0.9,
+      "price": 11.95,
+      "at_zone": false
+    },
+    {
+      "symbol": "TDH",
+      "score": 2.1,
+      "price": 4.66,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "SVD",
-      "score": 1.0,
-      "bias": "bullish",
+      "symbol": "STK",
+      "score": 9.1,
+      "price": 25.8,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TIS",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TIP",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "SSB",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -3.3,
+      "price": 21.5,
       "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "TDP",
-      "score": 1.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "ST8",
+      "score": -2.7,
+      "price": 6.7,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TDG",
+      "score": -2.4,
+      "price": 3.39,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "SVD",
+      "score": -2.0,
+      "price": 4.08,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TCH",
+      "score": -0.95,
+      "price": 22.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "STB",
+      "score": -0.1,
+      "price": 54.8,
+      "at_zone": false
+    },
+    {
+      "symbol": "SJE",
+      "score": -1.0,
+      "price": 23.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "THG",
+      "score": -2.95,
+      "price": 53.6,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "SSI",
+      "score": -0.8,
+      "price": 42.0,
+      "at_zone": false
+    },
+    {
+      "symbol": "SIP",
+      "score": -1.95,
+      "price": 59.7,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "SMC",
+      "score": -0.2,
+      "price": 12.5,
+      "at_zone": false
+    },
+    {
+      "symbol": "TIP",
+      "score": 0.55,
+      "price": 19.4,
+      "at_zone": false
+    },
+    {
+      "symbol": "TLD",
+      "score": -1.75,
+      "price": 7.73,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "TLH",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": -1.2,
+      "price": 5.65,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "TSC",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TV2",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TNH",
-      "score": 3.0,
-      "bias": "bullish",
+      "symbol": "TNI",
+      "score": -2.0,
+      "price": 3.58,
       "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TNG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 2
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TVC",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "TRC",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "UDC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "Absorption",
-      "key_signals": []
-    },
-    {
-      "symbol": "TVS",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "TTA",
-      "score": 13.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 2
-      },
-      "signals": 5,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "TTF",
-      "score": 6.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Upthrust",
-          "score": -3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "TTH",
-      "score": 18.75,
-      "bias": "bullish",
+      "score": 4.2,
+      "price": 2.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TPB",
+      "score": 3.7,
+      "price": 20.8,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TTF",
+      "score": 7.35,
+      "price": 3.13,
       "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 6
-      },
-      "signals": 3,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "TTA",
+      "score": -2.55,
+      "price": 12.6,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TNH",
+      "score": 4.2,
+      "price": 16.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TTN",
+      "score": -2.4,
+      "price": 17.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TVC",
+      "score": 2.3,
+      "price": 11.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TVS",
+      "score": 11.45,
+      "price": 22.8,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Buy Signal"
+    },
+    {
+      "symbol": "TNG",
+      "score": 3.65,
+      "price": 20.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TSC",
+      "score": -3.6,
+      "price": 3.17,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "UDC",
+      "score": 1.0,
+      "price": 4.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "TNT",
+      "score": -1.4,
+      "price": 8.86,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "TV2",
+      "score": 0.6,
+      "price": 35.8,
+      "at_zone": false
+    },
+    {
+      "symbol": "TVN",
+      "score": -1.2,
+      "price": 8.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "TVB",
-      "score": -3.0,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VHE",
-      "score": 9.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 3
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        },
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VC7",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VE9",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "score": -0.8,
+      "price": 9.79,
+      "at_zone": false
     },
     {
       "symbol": "VBB",
-      "score": -3.0,
-      "bias": "bearish",
+      "score": 1.5,
+      "price": 12.0,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "Ease of Movement",
-      "key_signals": [
-        {
-          "signal": "Selling Climax",
-          "score": -3.0,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "VGC",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
-    },
-    {
-      "symbol": "VCI",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 3,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VHG",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "VND",
-      "score": 0.0,
-      "bias": "neutral",
+      "symbol": "VDS",
+      "score": 4.85,
+      "price": 24.65,
       "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 2
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "VNM",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 2,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "VIX",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
-    },
-    {
-      "symbol": "VCS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "VC2",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "score": -1.7,
+      "price": 9.2,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VCI",
+      "score": 0.4,
+      "price": 46.25,
+      "at_zone": false
     },
     {
       "symbol": "VOS",
-      "score": -1.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "score": -0.9,
+      "price": 15.25,
+      "at_zone": false
     },
     {
-      "symbol": "VIP",
-      "score": -4.5,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 2,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "VFS",
+      "score": -0.4,
+      "price": 20.0,
+      "at_zone": false
     },
     {
-      "symbol": "VGT",
-      "score": 2.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
+      "symbol": "VCG",
+      "score": -0.9,
+      "price": 25.55,
+      "at_zone": false
     },
     {
-      "symbol": "VIG",
-      "score": 5.0,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 3
-      },
-      "signals": 4,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "VLC",
+      "score": -1.4,
+      "price": 15.3,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "VGI",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 5,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "VIC",
+      "score": -1.95,
+      "price": 130.1,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "VGS",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 3
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "symbol": "VHM",
+      "score": -0.8,
+      "price": 104.6,
+      "at_zone": false
+    },
+    {
+      "symbol": "VIX",
+      "score": -1.0,
+      "price": 38.4,
+      "at_zone": false
     },
     {
       "symbol": "VLB",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 0
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
-    },
-    {
-      "symbol": "VNE",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -6.35,
+      "price": 46.0,
       "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 4
-      },
-      "signals": 0,
-      "latest_signal": "Ease of Movement",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
     },
     {
-      "symbol": "VEA",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "symbol": "VHG",
+      "score": -0.8,
+      "price": 2.4,
+      "at_zone": false
     },
     {
-      "symbol": "VHC",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 4,
-        "demand": 7
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": true
-        }
-      ]
+      "symbol": "VCS",
+      "score": 0.7,
+      "price": 48.9,
+      "at_zone": false
+    },
+    {
+      "symbol": "VND",
+      "score": -0.6,
+      "price": 24.65,
+      "at_zone": false
     },
     {
       "symbol": "VCB",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": -1.5,
+      "price": 69.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VGI",
+      "score": -9.85,
+      "price": 74.3,
       "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 2
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Mixed Signals",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "VEA",
+      "score": -2.1,
+      "price": 39.4,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VHE",
+      "score": 0.2,
+      "price": 4.7,
+      "at_zone": false
+    },
+    {
+      "symbol": "VE9",
+      "score": -0.4,
+      "price": 4.5,
+      "at_zone": false
+    },
+    {
+      "symbol": "VGC",
+      "score": -0.2,
+      "price": 62.7,
+      "at_zone": false
+    },
+    {
+      "symbol": "VNE",
+      "score": -3.65,
+      "price": 6.18,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VIG",
+      "score": -0.8,
+      "price": 7.7,
+      "at_zone": false
+    },
+    {
+      "symbol": "VGT",
+      "score": -0.3,
+      "price": 12.3,
+      "at_zone": false
+    },
+    {
+      "symbol": "VGS",
+      "score": 8.82,
+      "price": 30.0,
+      "at_zone": true,
+      "pattern": "Sideways Consolidation",
+      "rec": "Monitor for Confirmation"
+    },
+    {
+      "symbol": "VIP",
+      "score": -4.35,
+      "price": 13.15,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VNM",
+      "score": 4.85,
+      "price": 61.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VIB",
+      "score": 1.8,
+      "price": 22.15,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VJC",
+      "score": -0.9,
+      "price": 145.0,
+      "at_zone": false
     },
     {
       "symbol": "ECO",
-      "score": 3.0,
-      "bias": "bullish",
+      "score": -4.15,
+      "price": 34.2,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 3
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "VRE",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VSH",
-      "score": 1.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 4,
-        "demand": 0
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VPI",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 4
-      },
-      "signals": 3,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.5,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VTR",
-      "score": -3.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 7
-      },
-      "signals": 2,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VPG",
-      "score": 6.5,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 3,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.0,
-          "confirmed": true
-        }
-      ]
+      "symbol": "VPB",
+      "score": -0.6,
+      "price": 34.0,
+      "at_zone": false
     },
     {
       "symbol": "VPH",
-      "score": -1.0,
-      "bias": "bearish",
-      "at_zone": true,
-      "zones": {
-        "supply": 1,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Supply",
-      "key_signals": [
-        {
-          "signal": "No Demand",
-          "score": -1.0,
-          "confirmed": true
-        }
-      ]
-    },
-    {
-      "symbol": "VTD",
-      "score": 0.0,
-      "bias": "neutral",
-      "at_zone": true,
-      "zones": {
-        "supply": 6,
-        "demand": 1
-      },
-      "signals": 0,
-      "latest_signal": "No Demand",
-      "key_signals": []
+      "score": -1.3,
+      "price": 5.67,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
     },
     {
       "symbol": "VRG",
-      "score": 0.0,
-      "bias": "neutral",
+      "score": -2.1,
+      "price": 19.4,
       "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 7
-      },
-      "signals": 0,
-      "latest_signal": "No Supply",
-      "key_signals": []
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     },
     {
-      "symbol": "AAH",
-      "score": 4.5,
-      "bias": "bullish",
+      "symbol": "VRE",
+      "score": -1.15,
+      "price": 30.7,
       "at_zone": false,
-      "zones": {
-        "supply": 6,
-        "demand": 5
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VPG",
+      "score": 2.8,
+      "price": 8.81,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VTR",
+      "score": -2.3,
+      "price": 17.0,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VTD",
+      "score": -1.1,
+      "price": 9.5,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VTO",
+      "score": -11.8,
+      "price": 11.85,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "Sell Signal"
+    },
+    {
+      "symbol": "TAL",
+      "score": 1.1,
+      "price": 40.0,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "YEG",
+      "score": 0.1,
+      "price": 14.05,
+      "at_zone": false
+    },
+    {
+      "symbol": "VSC",
+      "score": -1.2,
+      "price": 31.15,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VTP",
+      "score": -2.6,
+      "price": 100.4,
+      "at_zone": false,
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
+    },
+    {
+      "symbol": "VTZ",
+      "score": 0.0,
+      "price": 18.8,
+      "at_zone": false
     },
     {
       "symbol": "RYG",
-      "score": 4.5,
-      "bias": "bullish",
-      "at_zone": true,
-      "zones": {
-        "supply": 0,
-        "demand": 6
-      },
-      "signals": 1,
-      "latest_signal": "No Demand",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 4.5,
-          "confirmed": false
-        }
-      ]
+      "score": 5.4,
+      "price": 13.3,
+      "at_zone": false,
+      "pattern": "Mixed Signals",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "MZG",
-      "score": 3.0,
-      "bias": "bullish",
+      "score": 6.1,
+      "price": 14.4,
       "at_zone": false,
-      "zones": {
-        "supply": 3,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
-    },
-    {
-      "symbol": "DSE",
-      "score": 3.0,
-      "bias": "bullish",
-      "at_zone": false,
-      "zones": {
-        "supply": 0,
-        "demand": 4
-      },
-      "signals": 1,
-      "latest_signal": "Buying Climax",
-      "key_signals": [
-        {
-          "signal": "Buying Climax",
-          "score": 3.0,
-          "confirmed": false
-        }
-      ]
+      "pattern": "Strengthening Bearish",
+      "rec": "Buy Signal"
     },
     {
       "symbol": "AVG",
-      "score": 4.5,
-      "bias": "bullish",
+      "score": 0.65,
+      "price": 15.2,
+      "at_zone": false
+    },
+    {
+      "symbol": "DSE",
+      "score": 2.15,
+      "price": 31.65,
       "at_zone": false,
-      "zones": {
-        "supply": 5,
-        "demand": 4
-      },
-      "signals": 2,
-      "latest_signal": "Upthrust",
-      "key_signals": [
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        },
-        {
-          "signal": "No Supply",
-          "score": 1.5,
-          "confirmed": true
-        }
-      ]
+      "pattern": "Sideways Consolidation",
+      "rec": "No Clear Signal"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-28T09:14:42.130890",
+  "timestamp": "2025-08-29T05:16:34.564179",
   "analysis_version": "1.0",
   "inflation_regime": "inflation_on",
   "risk_regime": "neutral",
@@ -86,17 +86,17 @@
         {
           "name": "PPI Lõi",
           "status": "negative",
-          "interpretation": "PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn",
+          "interpretation": "PPI Lõi 2.8% → - Lạm phát hơi cao nhưng kiểm soát được",
           "current_value": 2.8485638655130208,
           "unit": "%",
-          "change_3m": 0.3424076974297918,
+          "change_3m": 0.28568012615868277,
           "ma_3m": 2.8485638655130203,
-          "context_interpretation": "PPI là chỉ báo dẫn đầu (1-3 tháng) - đang tăng",
-          "trend_icon": "↑",
+          "context_interpretation": "PPI là chỉ báo dẫn đầu (1-3 tháng) - ổn định",
+          "trend_icon": "→",
           "normal_range": "1.0-3.0%",
           "detailed_breakdown": [
-            "→ PPI Lõi: 2.85% ↑",
-            "→ Thay đổi 3T: +0.34%",
+            "→ PPI Lõi: 2.85% →",
+            "→ Thay đổi 3T: +0.29%",
             "→ MA 3T: 2.85% (Bình thường: 1.0-3.0%)",
             "→ Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng"
           ]
@@ -104,17 +104,17 @@
         {
           "name": "PPI Toàn bộ",
           "status": "neutral",
-          "interpretation": "PPI Toàn bộ 2.1% ↑↑ - Lạm phát tăng nhẹ - theo dõi",
+          "interpretation": "PPI Toàn bộ 2.1% ↑ - Lạm phát tăng nhẹ",
           "current_value": 2.0522388059701635,
           "unit": "%",
-          "change_3m": 1.630477468715874,
+          "change_3m": 0.7560145942145935,
           "ma_3m": 2.0522388059701635,
-          "context_interpretation": "PPI là chỉ báo dẫn đầu (1-3 tháng) - tăng tốc",
-          "trend_icon": "↑↑",
+          "context_interpretation": "PPI là chỉ báo dẫn đầu (1-3 tháng) - đang tăng",
+          "trend_icon": "↑",
           "normal_range": "0.0-3.0%",
           "detailed_breakdown": [
-            "→ PPI Toàn bộ: 2.05% ↑↑",
-            "→ Thay đổi 3T: +1.63%",
+            "→ PPI Toàn bộ: 2.05% ↑",
+            "→ Thay đổi 3T: +0.76%",
             "→ MA 3T: 2.05% (Bình thường: 0.0-3.0%)",
             "→ Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng"
           ]
@@ -125,13 +125,13 @@
           "interpretation": "PPI Dịch vụ 3.3% ↑ - Lạm phát tăng nhẹ",
           "current_value": 3.3133153862083153,
           "unit": "%",
-          "change_3m": 0.8932335610921882,
+          "change_3m": 0.5613397865964931,
           "ma_3m": 3.313315386208315,
           "trend_icon": "↑",
           "normal_range": "1.5-3.5%",
           "detailed_breakdown": [
             "→ PPI Dịch vụ: 3.31% ↑",
-            "→ Thay đổi 3T: +0.89%",
+            "→ Thay đổi 3T: +0.56%",
             "→ MA 3T: 3.31% (Bình thường: 1.5-3.5%)",
             "→ Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng",
             "→ Chỉ báo sticky inflation - nguy cơ lạm phát gia tăng từ chu trình lương-giá"
@@ -140,11 +140,11 @@
         {
           "name": "Kỳ vọng lạm phát",
           "status": "negative",
-          "interpretation": "Bình thường (2.50%) - Kỳ vọng ổn định",
-          "current_value": 2.5,
+          "interpretation": "Bình thường (2.49%) - Kỳ vọng ổn định",
+          "current_value": 2.49,
           "unit": "%",
           "detailed_breakdown": [
-            "→ Kỳ vọng lạm phát 5Y: 2.50%",
+            "→ Kỳ vọng lạm phát 5Y: 2.49%",
             "→ Phản ánh kỳ vọng thị trường về lạm phát dài hạn"
           ]
         },
@@ -153,25 +153,25 @@
           "status": "negative",
           "interpretation": "Áp lực lạm phát từ hàng hóa",
           "detailed_breakdown": [
-            "→ Oil $63.8 - Trend: sideways (vs MA20: +0.5%)",
-            "→ Natural_Gas $2.85 - Trend: sideways (vs MA20: +0.7%)",
-            "→ Copper $4.42 - Trend: sideways (vs MA20: -0.8%)",
-            "→ Corn $405.75/bu - Trend: strong_uptrend (vs MA20: +5.3%)",
-            "→ Wheat $524.50/bu - Trend: uptrend (vs MA20: +3.1%)",
-            "→ Cotton $65.4/lb - Trend: sideways (vs MA20: -0.9%)",
-            "→ Soybeans $1047.00/bu - Trend: uptrend (vs MA20: +2.8%)"
+            "→ Oil $64.2 - Trend: sideways (vs MA20: +1.1%)",
+            "→ Natural_Gas $2.98 - Trend: uptrend (vs MA20: +5.0%)",
+            "→ Copper $4.55 - Trend: sideways (vs MA20: +1.9%)",
+            "→ Corn $411.50/bu - Trend: strong_uptrend (vs MA20: +6.7%)",
+            "→ Wheat $530.75/bu - Trend: uptrend (vs MA20: +4.3%)",
+            "→ Cotton $66.1/lb - Trend: sideways (vs MA20: -0.1%)",
+            "→ Soybeans $1049.75/bu - Trend: uptrend (vs MA20: +2.7%)"
           ]
         },
         {
           "name": "Stock-Bond Correlation",
           "status": "positive",
-          "interpretation": "Tương quan +0.50 confirms inflation regime",
-          "current_value": 0.5014938069996793,
+          "interpretation": "Tương quan +0.53 confirms inflation regime",
+          "current_value": 0.5251954431376976,
           "unit": "correlation",
           "context_interpretation": "Tương quan dương XÁC NHẬN chế độ lạm phát cao → Cả stocks & bonds đều bị ảnh hưởng",
           "trend_icon": "⚠️",
           "detailed_breakdown": [
-            "→ Tương quan hiện tại: 0.50",
+            "→ Tương quan hiện tại: 0.53",
             "→ Confirmation status: CONFIRMS",
             "→ Ý nghĩa: Xác nhận chế độ lạm phát qua mối quan hệ stocks-bonds",
             "→ ⚠️ Cẩn thận với tương quan dương stock-bond. Khi Fed thắt chặt, cả hai đều giảm cùng lúc."
@@ -182,7 +182,7 @@
         {
           "name": "Oil",
           "symbol": "oil",
-          "price": 63.77,
+          "price": 64.21,
           "currency": "USD",
           "short_term_trend": "đi ngang",
           "medium_term_trend": "xu hướng giảm"
@@ -190,15 +190,15 @@
         {
           "name": "Natural Gas",
           "symbol": "natural_gas",
-          "price": 2.85,
+          "price": 2.98,
           "currency": "USD",
-          "short_term_trend": "đi ngang",
+          "short_term_trend": "xu hướng tăng",
           "medium_term_trend": "xu hướng giảm mạnh"
         },
         {
           "name": "Copper",
           "symbol": "copper",
-          "price": 4.42,
+          "price": 4.55,
           "currency": "USD",
           "short_term_trend": "đi ngang",
           "medium_term_trend": "xu hướng giảm mạnh"
@@ -206,7 +206,7 @@
         {
           "name": "Corn",
           "symbol": "corn",
-          "price": 405.75,
+          "price": 411.5,
           "currency": "USD",
           "short_term_trend": "xu hướng tăng mạnh",
           "medium_term_trend": "xu hướng giảm"
@@ -214,7 +214,7 @@
         {
           "name": "Wheat",
           "symbol": "wheat",
-          "price": 524.5,
+          "price": 530.75,
           "currency": "USD",
           "short_term_trend": "xu hướng tăng",
           "medium_term_trend": "xu hướng giảm"
@@ -222,7 +222,7 @@
         {
           "name": "Cotton",
           "symbol": "cotton",
-          "price": 65.41,
+          "price": 66.06,
           "currency": "USD",
           "short_term_trend": "đi ngang",
           "medium_term_trend": "consolidation"
@@ -230,7 +230,7 @@
         {
           "name": "Soybeans",
           "symbol": "soybeans",
-          "price": 1047.0,
+          "price": 1049.75,
           "currency": "USD",
           "short_term_trend": "xu hướng tăng",
           "medium_term_trend": "xu hướng tăng"
@@ -246,24 +246,24 @@
       "regime": "neutral",
       "key_points": [
         "US Economy: Thị trường lao động ổn định ở mức 4.2% | Fed giữ nguyên lãi suất ở mức 4.33%",
-        "GDP: Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng",
+        "GDP: Tăng trưởng GDP vừa phải 2.1% YoY đang chậm lại → Động lực tăng trưởng suy yếu",
         "Credit delinquencies: Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao ",
-        "Sectors: Luân chuyển sector trung tính (0.9%) → Xu hướng chưa rõ",
-        "Labor: Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)"
+        "Sectors: Luân chuyển sector trung tính (2.0%) → Xu hướng chưa rõ",
+        "Labor: Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 228,500)"
       ],
       "indicators": [
         {
           "name": "Tăng trưởng GDP",
-          "status": "negative",
-          "interpretation": "Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng",
-          "current_value": 1.99,
+          "status": "positive",
+          "interpretation": "Tăng trưởng GDP vừa phải 2.1% YoY đang chậm lại → Động lực tăng trưởng suy yếu",
+          "current_value": 2.07,
           "unit": "%",
-          "context_interpretation": "GDP tăng trưởng chậm → Rủi ro suy thoái gia tăng",
+          "context_interpretation": "GDP tăng trưởng ổn định → Môi trường kinh tế lành mạnh",
           "normal_range": "2.5-3.5%",
           "detailed_breakdown": [
-            "→ Tăng trưởng hiện tại: 2.0% YoY",
+            "→ Tăng trưởng hiện tại: 2.1% YoY",
             "→ Mức bình thường: 2.5-3.5% YoY",
-            "→ Tín hiệu: Kinh tế đang suy yếu"
+            "→ Tín hiệu: Tăng trưởng bền vững"
           ]
         },
         {
@@ -284,13 +284,13 @@
         {
           "name": "Thị trường lao động",
           "status": "positive",
-          "interpretation": "Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)",
+          "interpretation": "Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 228,500)",
           "context_interpretation": "Thị trường lao động lành mạnh → Tăng trưởng ổn định → Hỗ trợ tiêu dùng",
           "trend_icon": "📈",
           "detailed_breakdown": [
             "→ Thất nghiệp: 4.2% →",
             "→ Việc làm: +1.0% YoY →",
-            "→ Đơn thất nghiệp: 226k →",
+            "→ Đơn thất nghiệp: 228k →",
             "→ Việc trống: +0.3% YoY ↑↑"
           ]
         },
@@ -327,15 +327,15 @@
         {
           "name": "Dầu thô (Chỉ báo kinh tế)",
           "status": "negative",
-          "interpretation": "Chỉ báo tăng trưởng toàn cầu: $63.8 (stable) - Trend: declining (vs MA20: +0.5%)",
-          "current_value": 63.77,
+          "interpretation": "Chỉ báo tăng trưởng toàn cầu: $64.2 (stable) - Trend: declining (vs MA20: +1.1%)",
+          "current_value": 64.21,
           "unit": "USD/barrel"
         },
         {
           "name": "Dr. Copper (Sức khỏe kinh tế)",
           "status": "positive",
-          "interpretation": "Dr. Copper - sức khỏe kinh tế: $4.42 (growth) - Trend: declining (vs MA20: -0.8%)",
-          "current_value": 4.42,
+          "interpretation": "Dr. Copper - sức khỏe kinh tế: $4.55 (expansion) - Trend: declining (vs MA20: +1.9%)",
+          "current_value": 4.55,
           "unit": "USD/lb"
         }
       ]
@@ -343,7 +343,7 @@
     {
       "type": "fed_policy",
       "title": "Phân Tích Chính Sách Fed",
-      "summary": "Thị trường kỳ vọng CẮT LÃI SUẤT (63%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng",
+      "summary": "Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng",
       "confidence": 0.5,
       "bias": "Fed hold",
       "regime": "market",
@@ -353,14 +353,14 @@
           "name": "CME Fed Watch",
           "status": "negative",
           "interpretation": "market",
-          "current_value": 63.0,
+          "current_value": 74.0,
           "unit": "%",
           "context_interpretation": "Market kỳ vọng mạnh cắt lãi suất → Fed pivot → Tích cực cho growth assets",
           "trend_icon": "📉",
           "detailed_breakdown": [
-            "→ Cắt 25bp: 63%",
-            "→ Giữ nguyên: 28%",
-            "→ Tăng 25bp: 8%",
+            "→ Cắt 25bp: 74%",
+            "→ Giữ nguyên: 23%",
+            "→ Tăng 25bp: 3%",
             "→ Nguồn: Fed Funds Futures (tính toán nội bộ theo phương pháp CME)"
           ]
         },
@@ -368,7 +368,7 @@
           "name": "TỔNG HỢP & KHUYẾN NGHỊ",
           "status": "neutral",
           "interpretation": "HỖN HỢP",
-          "current_value": 63.0,
+          "current_value": 74.0,
           "unit": "%",
           "context_interpretation": "Triển vọng chính sách Fed và kỳ vọng thị trường",
           "trend_icon": "⚖️",
@@ -376,7 +376,7 @@
             "→ Mức độ nhất quán: HỖN HỢP",
             "→ Tín hiệu chính: thị trường",
             "→ Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn",
-            "→ Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (63%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng"
+            "→ Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng"
           ]
         },
         {
@@ -408,13 +408,13 @@
           "name": "VIX",
           "status": "positive",
           "interpretation": "bình thường - VIX 13-18",
-          "current_value": 14.85,
+          "current_value": 14.43,
           "unit": "points",
           "trend": "stable",
           "context_interpretation": "VIX ổn định → Môi trường thuận lợi cho risk-on",
           "trend_icon": "✅",
           "detailed_breakdown": [
-            "→ VIX hiện tại: 14.8 points",
+            "→ VIX hiện tại: 14.4 points",
             "→ Mức: bình thường - VIX 13-18",
             "→ Momentum: stable",
             "→ Ngưỡng: <13 (tự mãn), 13-18 (tích cực), 18-25 (caution), >25 (risk-off)"
@@ -424,12 +424,12 @@
           "name": "MOVE Index",
           "status": "positive",
           "interpretation": "bond_stability",
-          "current_value": 77.66,
+          "current_value": 77.55,
           "unit": "points",
           "context_interpretation": "MOVE bình thường → Thị trường trái phiếu hoạt động bình thường",
           "trend_icon": "🟡",
           "detailed_breakdown": [
-            "→ MOVE hiện tại: 77.7 points",
+            "→ MOVE hiện tại: 77.5 points",
             "→ Mức: bond_stability",
             "→ Ngưỡng: <60 (low), 60-100 (normal), 100-150 (elevated), >150 (crisis)",
             "→ MOVE là VIX của thị trường trái phiếu - đo lường volatility expected"
@@ -438,29 +438,29 @@
         {
           "name": "Bitcoin (Khẩu vị rủi ro)",
           "status": "neutral",
-          "interpretation": "BTC downtrend (vs MA21: -3.6%, vs MA50: -4.3%)",
-          "current_value": 111679.32,
+          "interpretation": "BTC downtrend (vs MA21: -2.7%, vs MA50: -3.5%)",
+          "current_value": 112464.49,
           "unit": "USD",
           "trend": "weak",
           "context_interpretation": "BTC consolidation → Risk appetite trung tính → Chờ breakout",
           "trend_icon": "⏳",
           "detailed_breakdown": [
-            "→ BTC hiện tại: $111,679",
-            "→ vs MA21: -3.6%",
-            "→ vs MA50: -4.3%",
+            "→ BTC hiện tại: $112,464",
+            "→ vs MA21: -2.7%",
+            "→ vs MA50: -3.5%",
             "→ BTC là proxy cho risk appetite của institutional money"
           ]
         },
         {
           "name": "Khẩu vị rủi ro (AUD/JPY)",
           "status": "neutral",
-          "interpretation": "Trung lập - AUD/JPY +0.2%",
-          "current_value": 0.15655985805240133,
+          "interpretation": "Trung lập - AUD/JPY +0.1%",
+          "current_value": 0.12106790239423662,
           "unit": "% vs MA20",
           "context_interpretation": "AUD/JPY neutral → Risk appetite trung tính → Range-bound market",
           "trend_icon": "⚖️",
           "detailed_breakdown": [
-            "→ AUD/JPY vs MA20: +0.2%",
+            "→ AUD/JPY vs MA20: +0.1%",
             "→ AUD = Risk currency, JPY = Safe haven",
             "→ Tỷ lệ này phản ánh global risk appetite",
             "→ Ngưỡng: >2% (Risk-On), <-2% (Risk-Off)"
@@ -468,13 +468,13 @@
         },
         {
           "name": "Lãnh đạo thị trường",
-          "status": "neutral",
+          "status": "positive",
           "interpretation": "Dẫn dắt hỗn hợp",
-          "current_value": 0,
+          "current_value": 0.7,
           "context_interpretation": "Leadership hỗn hợp → Thị trường đang tìm hướng → Sector rotation",
           "trend_icon": "🔄",
           "detailed_breakdown": [
-            "→ Leadership signal: 0.0",
+            "→ Leadership signal: 0.7",
             "→ Dẫn đầu: N/A",
             "→ Chậm chân: N/A",
             "→ Sector rotation phản ánh risk appetite và economic cycle"
@@ -605,7 +605,7 @@
   "priority_signals": [
     "Chế độ lạm phát: inflation_on"
   ],
-  "data_quality_score": 76.28004179728319,
+  "data_quality_score": 75.57291666666667,
   "consistency_score": 100.0,
   "missing_indicators": []
 }

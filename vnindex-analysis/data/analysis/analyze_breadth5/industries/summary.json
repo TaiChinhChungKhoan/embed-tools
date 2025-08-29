@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-08-27T15:31:59.779344",
+  "generated_at": "2025-08-28T20:26:13.731426",
   "date_range": {
     "start_date": "2024-01-01",
-    "end_date": "2025-08-27"
+    "end_date": "2025-08-28"
   },
   "industries": {
     "nhua": {
@@ -19,19 +19,15 @@
     },
     "bds": {
       "name": "Bất động sản",
-      "symbol_count": 26
+      "symbol_count": 23
     },
     "ngan-hang": {
       "name": "Ngân hàng",
       "symbol_count": 24
     },
-    "hoa-chat": {
-      "name": "Hóa chất",
-      "symbol_count": 11
-    },
     "vlxd": {
       "name": "Vật liệu xây dựng",
-      "symbol_count": 18
+      "symbol_count": 16
     },
     "thuy-san": {
       "name": "Thủy sản",
@@ -49,9 +45,13 @@
       "name": "Xây dựng",
       "symbol_count": 40
     },
-    "cong-nghiep": {
-      "name": "Công nghiệp",
-      "symbol_count": 15
+    "dien": {
+      "name": "Điện",
+      "symbol_count": 11
+    },
+    "hoa-chat": {
+      "name": "Hóa chất",
+      "symbol_count": 9
     },
     "dau-khi": {
       "name": "Dầu khí",
@@ -59,11 +59,11 @@
     },
     "nong-nghiep": {
       "name": "Nông nghiệp",
-      "symbol_count": 9
+      "symbol_count": 10
     },
     "bds-kcn": {
       "name": "Bất động sản khu công nghiệp",
-      "symbol_count": 12
+      "symbol_count": 14
     },
     "hang-tieu-dung": {
       "name": "Hàng tiêu dùng",
@@ -83,11 +83,15 @@
     },
     "cong-nghe": {
       "name": "Công nghệ",
-      "symbol_count": 8
+      "symbol_count": 7
     },
     "cao-su": {
       "name": "Cao su",
       "symbol_count": 8
+    },
+    "cong-nghiep": {
+      "name": "Công nghiệp",
+      "symbol_count": 6
     },
     "xay-lap-dien": {
       "name": "Xây lắp điện",
@@ -95,11 +99,15 @@
     },
     "khac": {
       "name": "Khác",
-      "symbol_count": 7
+      "symbol_count": 4
+    },
+    "giai-tri": {
+      "name": "Giải trí",
+      "symbol_count": 6
     },
     "van-tai": {
       "name": "Vận tải",
-      "symbol_count": 21
+      "symbol_count": 18
     },
     "thep": {
       "name": "Thép",
@@ -107,15 +115,11 @@
     },
     "go": {
       "name": "Gỗ",
-      "symbol_count": 3
-    },
-    "dien": {
-      "name": "Điện",
-      "symbol_count": 12
+      "symbol_count": 4
     },
     "tai-chinh": {
       "name": "Tài chính",
-      "symbol_count": 4
+      "symbol_count": 3
     },
     "duong": {
       "name": "Mía đường",

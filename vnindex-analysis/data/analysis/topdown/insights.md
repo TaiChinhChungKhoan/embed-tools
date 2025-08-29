@@ -1,6 +1,6 @@
 # BÁO CÁO PHÂN TÍCH THỊ TRƯỜNG TOÀN DIỆN
 ============================================================
-Thời gian: 2025-08-28 09:14:42
+Thời gian: 2025-08-29 05:16:34
 
 ## TÓM TẮT ĐIỀU HÀNH
 • Chế độ lạm phát: Lạm phát cao
@@ -24,38 +24,38 @@ Goldilocks - 'Tin tốt là tin tốt'
      → MA 3T: 3.91% (Bình thường: 3-4%)
 • 🔴 **CPI Lõi** (3.05%): CPI Core: Cao (3.05%) - Trên mục tiêu, tăng nhẹ +0.28% 3T
 • 🟡 **CPI Toàn bộ** (2.73%): CPI Headline: Bình thường (2.73%) - Lạm phát kiểm soát, tăng nhẹ +0.40% 3T
-• 🔴 **PPI Lõi** (2.85%): PPI Lõi 2.8% ↑ - Lạm phát trên mức mong muốn
-     ⚡ PPI là chỉ báo dẫn đầu (1-3 tháng) - đang tăng
-     → PPI Lõi: 2.85% ↑
-     → Thay đổi 3T: +0.34%
+• 🔴 **PPI Lõi** (2.85%): PPI Lõi 2.8% → - Lạm phát hơi cao nhưng kiểm soát được
+     ⚡ PPI là chỉ báo dẫn đầu (1-3 tháng) - ổn định
+     → PPI Lõi: 2.85% →
+     → Thay đổi 3T: +0.29%
      → MA 3T: 2.85% (Bình thường: 1.0-3.0%)
      → Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng
-• 🟡 **PPI Toàn bộ** (2.05%): PPI Toàn bộ 2.1% ↑↑ - Lạm phát tăng nhẹ - theo dõi
-     ⚡ PPI là chỉ báo dẫn đầu (1-3 tháng) - tăng tốc
-     → PPI Toàn bộ: 2.05% ↑↑
-     → Thay đổi 3T: +1.63%
+• 🟡 **PPI Toàn bộ** (2.05%): PPI Toàn bộ 2.1% ↑ - Lạm phát tăng nhẹ
+     ⚡ PPI là chỉ báo dẫn đầu (1-3 tháng) - đang tăng
+     → PPI Toàn bộ: 2.05% ↑
+     → Thay đổi 3T: +0.76%
      → MA 3T: 2.05% (Bình thường: 0.0-3.0%)
      → Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng
 • 🔴 **PPI Dịch vụ** (3.31%): PPI Dịch vụ 3.3% ↑ - Lạm phát tăng nhẹ
      → PPI Dịch vụ: 3.31% ↑
-     → Thay đổi 3T: +0.89%
+     → Thay đổi 3T: +0.56%
      → MA 3T: 3.31% (Bình thường: 1.5-3.5%)
      → Chỉ báo dẫn đầu - báo hiệu lạm phát sớm 1-3 tháng
      → Chỉ báo sticky inflation - nguy cơ lạm phát gia tăng từ chu trình lương-giá
-• 🔴 **Kỳ vọng lạm phát** (2.50%): Bình thường (2.50%) - Kỳ vọng ổn định
-     → Kỳ vọng lạm phát 5Y: 2.50%
+• 🔴 **Kỳ vọng lạm phát** (2.49%): Bình thường (2.49%) - Kỳ vọng ổn định
+     → Kỳ vọng lạm phát 5Y: 2.49%
      → Phản ánh kỳ vọng thị trường về lạm phát dài hạn
 • 🔴 **Hàng hóa**: Áp lực lạm phát từ hàng hóa
-     → Oil $63.8 - Trend: sideways (vs MA20: +0.5%)
-     → Natural_Gas $2.85 - Trend: sideways (vs MA20: +0.7%)
-     → Copper $4.42 - Trend: sideways (vs MA20: -0.8%)
-     → Corn $405.75/bu - Trend: strong_uptrend (vs MA20: +5.3%)
-     → Wheat $524.50/bu - Trend: uptrend (vs MA20: +3.1%)
-     → Cotton $65.4/lb - Trend: sideways (vs MA20: -0.9%)
-     → Soybeans $1047.00/bu - Trend: uptrend (vs MA20: +2.8%)
-• 🟢 **Stock-Bond Correlation** (0.501correlation): Tương quan +0.50 confirms inflation regime
+     → Oil $64.2 - Trend: sideways (vs MA20: +1.1%)
+     → Natural_Gas $2.98 - Trend: uptrend (vs MA20: +5.0%)
+     → Copper $4.55 - Trend: sideways (vs MA20: +1.9%)
+     → Corn $411.50/bu - Trend: strong_uptrend (vs MA20: +6.7%)
+     → Wheat $530.75/bu - Trend: uptrend (vs MA20: +4.3%)
+     → Cotton $66.1/lb - Trend: sideways (vs MA20: -0.1%)
+     → Soybeans $1049.75/bu - Trend: uptrend (vs MA20: +2.7%)
+• 🟢 **Stock-Bond Correlation** (0.525correlation): Tương quan +0.53 confirms inflation regime
      ⚡ Tương quan dương XÁC NHẬN chế độ lạm phát cao → Cả stocks & bonds đều bị ảnh hưởng
-     → Tương quan hiện tại: 0.50
+     → Tương quan hiện tại: 0.53
      → Confirmation status: CONFIRMS
      → Ý nghĩa: Xác nhận chế độ lạm phát qua mối quan hệ stocks-bonds
      → ⚠️ Cẩn thận với tương quan dương stock-bond. Khi Fed thắt chặt, cả hai đều giảm cùng lúc.
@@ -64,21 +64,21 @@ Goldilocks - 'Tin tốt là tin tốt'
 Thiên hướng: neutral
 
 ### Chỉ số chính:
-• 🔴 **Tăng trưởng GDP** (1.99%): Tăng trưởng GDP chậm 2.0% YoY tiếp tục suy yếu → Rủi ro suy thoái gia tăng
-     ⚡ GDP tăng trưởng chậm → Rủi ro suy thoái gia tăng
-     → Tăng trưởng hiện tại: 2.0% YoY
+• 🟢 **Tăng trưởng GDP** (2.07%): Tăng trưởng GDP vừa phải 2.1% YoY đang chậm lại → Động lực tăng trưởng suy yếu
+     ⚡ GDP tăng trưởng ổn định → Môi trường kinh tế lành mạnh
+     → Tăng trưởng hiện tại: 2.1% YoY
      → Mức bình thường: 2.5-3.5% YoY
-     → Tín hiệu: Kinh tế đang suy yếu
+     → Tín hiệu: Tăng trưởng bền vững
 • 🟢 **Tỷ lệ nợ thẻ tín dụng quá hạn** (3.05%): Cao (3.05%) - Chất lượng tín dụng xấu đi, nâng cao 
      ⚡ Tỷ lệ nợ quá hạn tăng → Chất lượng tín dụng xấu đi
      → Tỷ lệ hiện tại: 3.0%
      → Mức bình thường: 1.5-3.0%
      → Tín hiệu: Cảnh báo sớm về suy thoái
-• 🟢 **Thị trường lao động**: Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 226,250)
+• 🟢 **Thị trường lao động**: Thị trường lao động lành mạnh - tăng trưởng ổn định (Thất nghiệp: 4.2% | Đơn thất nghiệp: 228,500)
      ⚡ Thị trường lao động lành mạnh → Tăng trưởng ổn định → Hỗ trợ tiêu dùng
      → Thất nghiệp: 4.2% →
      → Việc làm: +1.0% YoY →
-     → Đơn thất nghiệp: 226k →
+     → Đơn thất nghiệp: 228k →
      → Việc trống: +0.3% YoY ↑↑
 • 🔴 **ISM PMI Sản xuất** (48.0points): Sản xuất thu hẹp nhẹ (48.0) → Kinh tế đang yếu đi
      ⚡ Sản xuất thu hẹp nhẹ → Kinh tế đang yếu đi
@@ -90,25 +90,25 @@ Thiên hướng: neutral
      → PMI Dịch vụ: 50.1 points
      → Mức mở rộng: >50 points
      → Tác động: Dịch vụ chiếm 80% GDP
-• 🔴 **Dầu thô (Chỉ báo kinh tế)** (63.77USD/barrel): Chỉ báo tăng trưởng toàn cầu: $63.8 (stable) - Trend: declining (vs MA20: +0.5%)
-• 🟢 **Dr. Copper (Sức khỏe kinh tế)** (4.42USD/lb): Dr. Copper - sức khỏe kinh tế: $4.42 (growth) - Trend: declining (vs MA20: -0.8%)
+• 🔴 **Dầu thô (Chỉ báo kinh tế)** (64.21USD/barrel): Chỉ báo tăng trưởng toàn cầu: $64.2 (stable) - Trend: declining (vs MA20: +1.1%)
+• 🟢 **Dr. Copper (Sức khỏe kinh tế)** (4.55USD/lb): Dr. Copper - sức khỏe kinh tế: $4.55 (expansion) - Trend: declining (vs MA20: +1.9%)
 
 ## Phân Tích Chính Sách Fed
-Thị trường kỳ vọng CẮT LÃI SUẤT (63%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
+Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
 
 ### Chỉ số chính:
-• 🔴 **CME Fed Watch** (63.0%): market
+• 🔴 **CME Fed Watch** (74.0%): market
      ⚡ Market kỳ vọng mạnh cắt lãi suất → Fed pivot → Tích cực cho growth assets
-     → Cắt 25bp: 63%
-     → Giữ nguyên: 28%
-     → Tăng 25bp: 8%
+     → Cắt 25bp: 74%
+     → Giữ nguyên: 23%
+     → Tăng 25bp: 3%
      → Nguồn: Fed Funds Futures (tính toán nội bộ theo phương pháp CME)
-• 🟡 **TỔNG HỢP & KHUYẾN NGHỊ** (63.0%): HỖN HỢP
+• 🟡 **TỔNG HỢP & KHUYẾN NGHỊ** (74.0%): HỖN HỢP
      ⚡ Triển vọng chính sách Fed và kỳ vọng thị trường
      → Mức độ nhất quán: HỖN HỢP
      → Tín hiệu chính: thị trường
      → Khuyến nghị: Ưu tiên tín hiệu thị trường (CẮT LÃI SUẤT) do độ tin cậy cao hơn
-     → Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (63%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
+     → Đánh giá: Thị trường kỳ vọng CẮT LÃI SUẤT (74%) nhưng kinh tế vẫn ổn định - Fed có thể thận trọng
 • 🟡 **Ý NGHĨA GIAO DỊCH**: Ý nghĩa giao dịch
      ⚡ Các kịch bản giao dịch dựa trên kỳ vọng chính sách Fed
      → Kịch bản chính: Fed cắt lãi suất → Tích cực cho cổ phiếu, USD yếu
@@ -118,33 +118,33 @@ Thị trường kỳ vọng CẮT LÃI SUẤT (63%) nhưng kinh tế vẫn ổn 
 Neutral - Trung lập
 
 ### Chỉ số chính:
-• 🟢 **VIX** (14.8points): bình thường - VIX 13-18
+• 🟢 **VIX** (14.4points): bình thường - VIX 13-18
      ⚡ VIX ổn định → Môi trường thuận lợi cho risk-on
-     → VIX hiện tại: 14.8 points
+     → VIX hiện tại: 14.4 points
      → Mức: bình thường - VIX 13-18
      → Momentum: stable
      → Ngưỡng: <13 (tự mãn), 13-18 (tích cực), 18-25 (caution), >25 (risk-off)
-• 🟢 **MOVE Index** (77.7points): bond_stability
+• 🟢 **MOVE Index** (77.5points): bond_stability
      ⚡ MOVE bình thường → Thị trường trái phiếu hoạt động bình thường
-     → MOVE hiện tại: 77.7 points
+     → MOVE hiện tại: 77.5 points
      → Mức: bond_stability
      → Ngưỡng: <60 (low), 60-100 (normal), 100-150 (elevated), >150 (crisis)
      → MOVE là VIX của thị trường trái phiếu - đo lường volatility expected
-• 🟡 **Bitcoin (Khẩu vị rủi ro)** (111679.3USD): BTC downtrend (vs MA21: -3.6%, vs MA50: -4.3%)
+• 🟡 **Bitcoin (Khẩu vị rủi ro)** (112464.5USD): BTC downtrend (vs MA21: -2.7%, vs MA50: -3.5%)
      ⚡ BTC consolidation → Risk appetite trung tính → Chờ breakout
-     → BTC hiện tại: $111,679
-     → vs MA21: -3.6%
-     → vs MA50: -4.3%
+     → BTC hiện tại: $112,464
+     → vs MA21: -2.7%
+     → vs MA50: -3.5%
      → BTC là proxy cho risk appetite của institutional money
-• 🟡 **Khẩu vị rủi ro (AUD/JPY)** (0.157% vs MA20): Trung lập - AUD/JPY +0.2%
+• 🟡 **Khẩu vị rủi ro (AUD/JPY)** (0.121% vs MA20): Trung lập - AUD/JPY +0.1%
      ⚡ AUD/JPY neutral → Risk appetite trung tính → Range-bound market
-     → AUD/JPY vs MA20: +0.2%
+     → AUD/JPY vs MA20: +0.1%
      → AUD = Risk currency, JPY = Safe haven
      → Tỷ lệ này phản ánh global risk appetite
      → Ngưỡng: >2% (Risk-On), <-2% (Risk-Off)
-• 🟡 **Lãnh đạo thị trường**: Dẫn dắt hỗn hợp
+• 🟢 **Lãnh đạo thị trường**: Dẫn dắt hỗn hợp
      ⚡ Leadership hỗn hợp → Thị trường đang tìm hướng → Sector rotation
-     → Leadership signal: 0.0
+     → Leadership signal: 0.7
      → Dẫn đầu: N/A
      → Chậm chân: N/A
      → Sector rotation phản ánh risk appetite và economic cycle
