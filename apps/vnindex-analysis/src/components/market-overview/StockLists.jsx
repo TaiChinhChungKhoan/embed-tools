@@ -31,7 +31,7 @@ const StockLists = ({ topSectors, bottomSectors, industries }) => {
                   <div key={sector.custom_id || sector.id} className="flex justify-between py-1">
                     <span>{sector.name}</span>
                     <span className="font-medium text-green-600">
-                      {sector.metrics?.current_rs ? `${(sector.metrics.current_rs * 100).toFixed(1)}%` : 'N/A'}
+                      {sector.metrics?.current_rs ? `${sector.metrics.current_rs.toFixed(1)}%` : 'N/A'}
                     </span>
                   </div>
                 ))}
@@ -45,7 +45,7 @@ const StockLists = ({ topSectors, bottomSectors, industries }) => {
                   <div key={sector.custom_id || sector.id} className="flex justify-between py-1">
                     <span>{sector.name}</span>
                     <span className="font-medium text-red-600">
-                      {sector.metrics?.current_rs ? `${(sector.metrics.current_rs * 100).toFixed(1)}%` : 'N/A'}
+                      {sector.metrics?.current_rs ? `${sector.metrics.current_rs.toFixed(1)}%` : 'N/A'}
                     </span>
                   </div>
                 ))}
@@ -59,7 +59,7 @@ const StockLists = ({ topSectors, bottomSectors, industries }) => {
                   <div key={sector.custom_id || sector.id} className="flex justify-between py-1">
                     <span>{sector.name}</span>
                     <span className="font-medium text-blue-600">
-                      {sector.metrics?.current_rs ? `${(sector.metrics.current_rs * 100).toFixed(1)}%` : 'N/A'}
+                      {sector.metrics?.current_rs ? `${sector.metrics.current_rs.toFixed(1)}%` : 'N/A'}
                     </span>
                   </div>
                 ))}

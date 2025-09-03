@@ -176,7 +176,7 @@ export default function DatePickerComponent({ value, onChange, label, id, inputC
   return (
     <div className="flex flex-col gap-2">
       <label htmlFor={id} className="text-sm font-medium">
-        {label} <span className="text-gray-500 font-normal">{getDateFormatHelp()}</span>
+        {label} <span className="text-slate-500 font-normal text-xs sm:text-sm">{getDateFormatHelp()}</span>
       </label>
       <input
         type="text"
@@ -188,7 +188,7 @@ export default function DatePickerComponent({ value, onChange, label, id, inputC
         onKeyDown={handleKeyDown}
         onClick={handleClick}
         placeholder="Click to select or type date"
-        className={`${inputClassName || ''} w-full h-10 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer bg-white`}
+        className={`${inputClassName || ''} w-full h-10 sm:h-11 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-purple-500 cursor-pointer bg-white text-sm sm:text-base`}
       />
     </div>
   );

@@ -50,6 +50,19 @@ export default function RRGChart(props) {
   const [zoom, setZoom] = useState(1);
   const [error, setError] = useState(null);
 
+  // Reset component state when timeframe changes
+  useEffect(() => {
+    setSelectedIndustries([]);
+    setSelectedGroups([]);
+    setSelectedTickerIndustries([]);
+    setSpecialTickerFilter("all");
+    setZoom(1);
+    setHoveredPoint(null);
+    // Reset initialization flags when timeframe changes
+    hasInitialized.current = false;
+    hasInitializedTickers.current = false;
+  }, [timeframe]);
+
   // Show loading state if ticker info is still loading
   if (essentialDataLoading) {
     return (
@@ -97,6 +110,8 @@ export default function RRGChart(props) {
 
   // Use passed analyticsData instead of loading it again
   const { groups: availableGroups = [], symbols: availableSymbols = [], industries: analyticsIndustries = [] } = analyticsData || {};
+  
+  
 
   // Ensure arrays are properly initialized
   const safeAvailableIndustries = Array.isArray(availableIndustries) ? availableIndustries : [];
@@ -115,28 +130,37 @@ export default function RRGChart(props) {
     ? Object.entries(availableIndustries).map(([custom_id, industry]) => ({ custom_id, ...industry }))
     : finalAvailableIndustries;
 
-  // Ensure a default industry is always selected for stock RRG when special filter is 'all'
-  useEffect(() => {
-    if (
-      type === 'tickers' &&
-      specialTickerFilter === 'all' &&
-      (!selectedTickerIndustries.length) &&
-      industriesArray.length > 0
-    ) {
-      setSelectedTickerIndustries([industriesArray[0].custom_id]);
-    }
-  }, [type, specialTickerFilter, industriesArray, selectedTickerIndustries.length]);
-
-  // Auto-select all industries on initial load if none selected
+  // Auto-select all industries on initial load only
+  const hasInitialized = useRef(false);
+  
   useEffect(() => {
     if (
       type === 'industries' &&
+      !hasInitialized.current &&
       selectedIndustries.length === 0 &&
       industriesArray.length > 0
     ) {
       setSelectedIndustries(industriesArray.map(ind => ind.custom_id));
+      hasInitialized.current = true;
     }
   }, [type, industriesArray, selectedIndustries.length]);
+
+  // Auto-select first industry for tickers on initial load only (to prevent chart freezing)
+  const hasInitializedTickers = useRef(false);
+  
+  useEffect(() => {
+    if (
+      type === 'tickers' &&
+      specialTickerFilter === 'all' &&
+      !hasInitializedTickers.current &&
+      selectedTickerIndustries.length === 0 &&
+      industriesArray.length > 0
+    ) {
+      // Select only the first industry to prevent chart freezing with too many tickers
+      setSelectedTickerIndustries([industriesArray[0].custom_id]);
+      hasInitializedTickers.current = true;
+    }
+  }, [type, specialTickerFilter, industriesArray, selectedTickerIndustries.length]);
 
   useEffect(() => {
     if (
@@ -152,17 +176,21 @@ export default function RRGChart(props) {
     if (type === 'industries') {
       // If no industries are selected, show all industries
       if (selectedIndustries.length === 0) {
-        return finalAnalyticsIndustries || [];
+        const result = finalAnalyticsIndustries || [];
+        return result;
       }
       // If industries are selected, filter by selection
-      return (finalAnalyticsIndustries || []).filter(ind => selectedIndustries.includes(ind.custom_id));
+      const result = (finalAnalyticsIndustries || []).filter(ind => selectedIndustries.includes(ind.custom_id));
+      return result;
     } else if (type === 'groups') {
       // If no groups are selected, show all groups
       if (selectedGroups.length === 0) {
-        return finalAvailableGroups || [];
+        const result = finalAvailableGroups || [];
+        return result;
       }
       // If groups are selected, filter by selection
-      return (finalAvailableGroups || []).filter(group => selectedGroups.includes(group.custom_id));
+      const result = (finalAvailableGroups || []).filter(group => selectedGroups.includes(group.custom_id));
+      return result;
     } else {
       // Ticker filtering logic with special filter
       if (specialTickerFilter && specialTickerFilter !== 'all') {
@@ -195,14 +223,38 @@ export default function RRGChart(props) {
               // Only show by industry, never all
       const filtered = selectedTickerIndustries.length > 0
         ? (finalAvailableSymbols || []).filter(symbol => {
-            // For now, fall back to the original embedded industry data until we have proper mapping
-            return symbol.industries && symbol.industries.some(ind => selectedTickerIndustries.includes(ind.custom_id));
+            // Try multiple ways to match industry
+            let hasMatchingIndustry = false;
+            
+            // Method 1: Check if symbol has industries array
+            if (symbol.industries && symbol.industries.some(ind => selectedTickerIndustries.includes(ind.custom_id))) {
+              hasMatchingIndustry = true;
+            }
+            
+            // Method 2: Use companies data to find industry
+            if (!hasMatchingIndustry && companies && symbol.symbol) {
+              const company = companies[symbol.symbol];
+              if (company && company.industry_id && selectedTickerIndustries.includes(company.industry_id)) {
+                hasMatchingIndustry = true;
+              }
+            }
+            
+            // Method 3: Check if symbol has industry_id property
+            if (!hasMatchingIndustry && symbol.industry_id && selectedTickerIndustries.includes(symbol.industry_id)) {
+              hasMatchingIndustry = true;
+            }
+            
+            
+            return hasMatchingIndustry;
           })
         : (finalAvailableSymbols || []);
+        
+
+        
         return filtered;
       }
     }
-  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, finalAvailableSymbols, finalAvailableIndustries, finalAvailableGroups, finalAnalyticsIndustries]);
+  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, finalAvailableSymbols, finalAvailableIndustries, finalAvailableGroups, finalAnalyticsIndustries, timeframe, analyticsData]);
 
   // Determine which items to show detailed information for
   const selectedItemsForDetails = useMemo(() => {
@@ -268,7 +320,7 @@ export default function RRGChart(props) {
     } else {
       return [];
     }
-  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, finalAvailableIndustries, finalAvailableGroups, finalAnalyticsIndustries, filteredData]);
+  }, [type, selectedIndustries, selectedGroups, selectedTickerIndustries, specialTickerFilter, finalAvailableIndustries, finalAvailableGroups, finalAnalyticsIndustries, filteredData, timeframe, analyticsData]);
 
   // Limit the number of series to prevent chart freeze
   const limitedData = filteredData.slice(0, MAX_SERIES);
@@ -295,7 +347,7 @@ export default function RRGChart(props) {
       domainX: [100 - zoomedRange, 100 + zoomedRange],
       domainY: [100 - zoomedRange, 100 + zoomedRange]
     };
-  }, [limitedData, zoom]);
+  }, [limitedData, zoom, timeframe, analyticsData]);
 
   const latestPoints = useMemo(() => {
     if (!limitedData || limitedData.length === 0) return [];
@@ -332,7 +384,7 @@ export default function RRGChart(props) {
       
       return result;
     });
-  }, [limitedData, type, finalAvailableIndustries, finalAvailableGroups, getTickerInfo, getIndustryTickers, industriesArray]);
+  }, [limitedData, type, finalAvailableIndustries, finalAvailableGroups, getTickerInfo, getIndustryTickers, industriesArray, timeframe, analyticsData]);
 
   // Show error state if no data arrays
   if (!finalAvailableIndustries || !finalAvailableGroups || !finalAvailableSymbols) {

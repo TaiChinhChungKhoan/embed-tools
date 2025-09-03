@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { BarChart3, TrendingUp, Activity, Target } from 'lucide-react';
+import { BarChart3, TrendingUp, Activity } from 'lucide-react';
 import IndustryRSAnalysis from './IndustryRSAnalysis';
 import RRGAnalysis from './RRGAnalysis';
 import IndustryStrengthChart from './IndustryStrengthChart';
 
-const RelativeStrengthAnalysis = () => {
-    const [activeTab, setActiveTab] = useState('rrg');
+const RelativeStrengthAnalysis = ({ timeframe = '1D' }) => {
+    const [activeTab, setActiveTab] = useState('rankings'); // Default to rankings now that it includes heatmap
 
-    // Define tabs for industries only
+    // Define tabs for industries only - removed RS 21-Bar Heatmap tab since it's merged into rankings
     const tabs = [
         { id: 'rankings', name: 'Xếp hạng & Phân tích', icon: BarChart3 },
         { id: 'rrg', name: 'Phân tích RRG', icon: TrendingUp },
@@ -17,9 +17,9 @@ const RelativeStrengthAnalysis = () => {
     const renderTabContent = () => {
         switch (activeTab) {
             case 'rankings':
-                return <IndustryRSAnalysis />;
+                return <IndustryRSAnalysis timeframe={timeframe} />;
             case 'rrg':
-                return <RRGAnalysis type="industries" />;
+                return <RRGAnalysis type="industries" timeframe={timeframe} />;
             case 'trends':
                 return <IndustryStrengthChart />;
             default:

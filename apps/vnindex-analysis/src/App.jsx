@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
+import { HashRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import './App.css';
-import MarketOverview from './components/MarketOverview';
 import MarketWave from './components/MarketWave';
 import GreedFearGauge from './components/GreedFearGauge';
 import MarketOverviewDashboard from './components/MarketOverviewDashboard';
 import MarketFlowDashboard from './components/MarketFlowDashboard';
+import MomentumInsightsWrapper from './components/MomentumInsightsWrapper';
 import StockAbnormalSignals from './components/StockAbnormalSignals';
 import IndustryAbnormalSignals from './components/IndustryAbnormalSignals';
 import IndustryOverviewDashboard from './components/IndustryOverviewDashboard';
@@ -18,22 +19,79 @@ import MarketInterconnectionReport from './components/MarketInterconnectionRepor
 import VSAReport from './components/VSAReport';
 import VCPAnalysis from './components/VCPAnalysis';
 import GlobalReloadButton from './components/GlobalReloadButton';
+
 import { DataReloadProvider, useDataReload } from './contexts/DataReloadContext';
 import iframeUtils from '@embed-tools/iframe-utils';
 
-function AppContent() {
-    const [activeTab, setActiveTab] = useState('Market');
-    const [activeSubTab, setActiveSubTab] = useState('Overview');
+// Report options for each tab
+const reportOptions = {
+    'Industries': [
+        { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS, RRG và xu hướng sức mạnh của các ngành nghề' },
+        { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong ngành' }
+    ],
+    'Tickers': [
+        { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong mã chứng khoán' },
+        { id: 'vsa_report', name: 'Báo cáo VSA', description: 'Phân tích Volume Spread Analysis cho từng mã chứng khoán' },
+        { id: 'vcp_analysis', name: 'Phân tích VCP', description: 'Phân tích mẫu hình tích lũy VCP cho các mã chứng khoán' }
+    ],
+    'Market': [
+        { id: 'market_interconnection', name: 'Liên thị trường', description: 'Phân tích top-down từ macro đến micro, xác định chế độ thị trường' },
+        { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
+        { id: 'macroeconomics', name: 'Báo cáo Vĩ mô', description: 'Phân tích các chỉ số kinh tế vĩ mô và xu hướng thị trường' },
+        { id: 'valuation_report', name: 'Báo cáo Định giá', description: 'Phân tích tỷ lệ P/E và P/B của VN-Index' },
+    ]
+};
+
+// Vietnamese translations
+const tabTranslations = {
+    'Market': 'Thị trường',
+    'Industries': 'Ngành nghề',
+    'Tickers': 'Mã chứng khoán'
+};
+
+const subTabTranslations = {
+    'Overview': 'Tổng quan',
+    'Reports': 'Báo cáo'
+};
+
+function AppLayout() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [activeReport, setActiveReport] = useState('rs_analysis');
     const [isReportDropdownOpen, setIsReportDropdownOpen] = useState(false);
+    const [timeframe, setTimeframe] = useState('1D');
     const containerRef = useRef(null);
+    const navigate = useNavigate();
+    const location = useLocation();
     const isEmbedded = iframeUtils.isEmbedded();
 
     // Get essential data loading state from context
     const { essentialDataLoading, essentialDataError } = useDataReload();
 
-    // Notify parent when state changes (activeTab, activeSubTab, etc.)
+    // Parse current route - using HashRouter for both embedded and standalone
+    const getPathParts = () => {
+        // HashRouter uses location.pathname after the hash
+        return location.pathname.split('/').filter(Boolean);
+    };
+    
+    const pathParts = getPathParts();
+    const currentTab = pathParts[0] || 'market';
+    const currentSubTab = pathParts[1] || 'overview';
+    const currentReportId = pathParts[2] || null;
+
+    // Convert route to display values
+    const getDisplayTab = (tab) => {
+        const tabMap = { market: 'Market', industries: 'Industries', tickers: 'Tickers' };
+        return tabMap[tab] || 'Market';
+    };
+
+    const getDisplaySubTab = (subTab) => {
+        const subTabMap = { overview: 'Overview', reports: 'Reports' };
+        return subTabMap[subTab] || 'Overview';
+    };
+
+    const activeTab = getDisplayTab(currentTab);
+    const activeSubTab = getDisplaySubTab(currentSubTab);
+
+    // Notify parent when state changes
     useEffect(() => {
         if (!isEmbedded) return;
         const timer = setTimeout(() => {
@@ -43,7 +101,35 @@ function AppContent() {
             }
         }, 100);
         return () => clearTimeout(timer);
-    }, [activeTab, activeSubTab, activeReport, isMobileMenuOpen, isEmbedded]);
+    }, [activeTab, activeSubTab, currentReportId, isMobileMenuOpen, isEmbedded]);
+
+    // Listen for navigation messages from parent
+    useEffect(() => {
+        if (!isEmbedded) return;
+        
+        const handleMessage = (event) => {
+            if (event.data.type === 'NAVIGATE') {
+                const path = event.data.path;
+                // For HashRouter, we need to ensure the path starts with /
+                const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+                navigate(normalizedPath);
+            }
+        };
+
+        window.addEventListener('message', handleMessage);
+        return () => window.removeEventListener('message', handleMessage);
+    }, [isEmbedded, navigate]);
+
+    // Notify parent when route changes
+    useEffect(() => {
+        if (!isEmbedded) return;
+        
+        const currentHash = isEmbedded ? location.hash : '';
+        window.parent.postMessage({
+            type: 'ROUTE_CHANGE',
+            hash: currentHash
+        }, '*');
+    }, [location, isEmbedded]);
 
     // Show loading screen while essential data is loading
     if (essentialDataLoading) {
@@ -79,55 +165,22 @@ function AppContent() {
     const tabs = ['Market', 'Industries', 'Tickers'];
     const subTabs = ['Overview', 'Reports'];
 
-    // Report options for each tab
-    const reportOptions = {
-        'Industries': [
-            // { id: 'rs_analysis', name: 'Phân tích Sức mạnh Tương đối', description: 'Phân tích RS/CRS, RRG và xu hướng sức mạnh của các ngành nghề' },
-            { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong ngành' }
-        ],
-        'Tickers': [
-            { id: 'abnormal_signals', name: 'Tín hiệu Bất thường', description: 'Phát hiện các tín hiệu bất thường trong mã chứng khoán' },
-            { id: 'vsa_report', name: 'Báo cáo VSA', description: 'Phân tích Volume Spread Analysis cho từng mã chứng khoán' },
-            { id: 'vcp_analysis', name: 'Phân tích VCP', description: 'Phân tích mẫu hình tích lũy VCP cho các mã chứng khoán' }
-        ],
-        'Market': [
-            // { id: 'market_interconnection', name: 'Liên thị trường', description: 'Phân tích top-down từ macro đến micro, xác định chế độ thị trường' },
-            { id: 'market_overview', name: 'Tổng quan Thị trường', description: 'Báo cáo phân tích thị trường tổng hợp' },
-            { id: 'macroeconomics', name: 'Báo cáo Vĩ mô', description: 'Phân tích các chỉ số kinh tế vĩ mô và xu hướng thị trường' },
-            { id: 'valuation_report', name: 'Báo cáo Định giá', description: 'Phân tích tỷ lệ P/E và P/B của VN-Index' },
-            // { id: 'mfi_analysis', name: 'Phân tích MFI', description: 'Phân tích Money Flow Index cho các chỉ số thị trường' }
-        ]
-    };
-
     const handleTabClick = (tab) => {
-        setActiveTab(tab);
-        setActiveSubTab('Overview');
+        const tabRoute = tab.toLowerCase();
+        const path = `/${tabRoute}/overview`;
+        navigate(path);
         setMobileMenuOpen(false);
-        // Reset to first report option for the new tab
-        const firstReport = reportOptions[tab]?.[0]?.id || 'abnormal_signals';
-        setActiveReport(firstReport);
     };
 
     const handleReportSelect = (reportId) => {
-        setActiveReport(reportId);
+        const tabRoute = activeTab.toLowerCase();
+        const path = `/${tabRoute}/reports/${reportId}`;
+        navigate(path);
         setIsReportDropdownOpen(false);
     };
 
-    const isReportsActive = activeSubTab === 'Reports';
     const currentReportOptions = reportOptions[activeTab] || [];
-    const currentReport = currentReportOptions.find(r => r.id === activeReport) || currentReportOptions[0];
-
-    // Vietnamese translations
-    const tabTranslations = {
-        'Market': 'Thị trường',
-        'Industries': 'Ngành nghề',
-        'Tickers': 'Mã chứng khoán'
-    };
-
-    const subTabTranslations = {
-        'Overview': 'Tổng quan',
-        'Reports': 'Báo cáo'
-    };
+    const currentReport = currentReportOptions.find(r => r.id === currentReportId) || currentReportOptions[0];
 
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans" ref={containerRef}>
@@ -152,8 +205,11 @@ function AppContent() {
                                 <button
                                     key={tab}
                                     onClick={() => handleTabClick(tab)}
-                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${activeTab === tab ? 'bg-blue-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                                        }`}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
+                                        activeTab === tab 
+                                            ? 'bg-blue-500 text-white' 
+                                            : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                    }`}
                                 >
                                     {tabTranslations[tab]}
                                 </button>
@@ -177,8 +233,11 @@ function AppContent() {
                                 <button
                                     key={tab}
                                     onClick={() => handleTabClick(tab)}
-                                    className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium cursor-pointer ${activeTab === tab ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                                        }`}
+                                    className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium cursor-pointer ${
+                                        activeTab === tab 
+                                            ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300' 
+                                            : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                    }`}
                                 >
                                     {tabTranslations[tab]}
                                 </button>
@@ -204,8 +263,11 @@ function AppContent() {
                                                         onClick={() => {
                                                             setIsReportDropdownOpen((open) => !open);
                                                         }}
-                                                        className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer flex items-center space-x-2 ${activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-                                                            }`}
+                                                        className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer flex items-center space-x-2 ${
+                                                            activeSubTab === subTab 
+                                                                ? 'border-blue-500 text-blue-500' 
+                                                                : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+                                                        }`}
                                                         aria-haspopup="listbox"
                                                         aria-expanded={isReportDropdownOpen}
                                                     >
@@ -220,13 +282,13 @@ function AppContent() {
                                                                         key={report.id}
                                                                         onClick={() => {
                                                                             handleReportSelect(report.id);
-                                                                            setActiveSubTab('Reports');
                                                                             setIsReportDropdownOpen(false);
                                                                         }}
-                                                                        className={`w-full text-left px-4 py-3 transition-colors cursor-pointer ${activeReport === report.id
+                                                                        className={`w-full text-left px-4 py-3 transition-colors cursor-pointer ${
+                                                                            currentReport?.id === report.id
                                                                                 ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 font-semibold'
                                                                                 : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'
-                                                                            }`}
+                                                                        }`}
                                                                     >
                                                                         <div className="font-medium">{report.name}</div>
                                                                         <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{report.description}</div>
@@ -242,11 +304,17 @@ function AppContent() {
                                             <button
                                                 key={subTab}
                                                 onClick={() => {
-                                                    setActiveSubTab(subTab);
+                                                    const tabRoute = activeTab.toLowerCase();
+                                                    const subTabRoute = subTab.toLowerCase();
+                                                    const path = `/${tabRoute}/${subTabRoute}`;
+                                                    navigate(path);
                                                     setIsReportDropdownOpen(false);
                                                 }}
-                                                className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer ${activeSubTab === subTab ? 'border-blue-500 text-blue-500' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-                                                    }`}
+                                                className={`py-3 px-1 sm:px-4 text-sm sm:text-base font-semibold border-b-2 transition-colors cursor-pointer ${
+                                                    activeSubTab === subTab 
+                                                        ? 'border-blue-500 text-blue-500' 
+                                                        : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+                                                }`}
                                             >
                                                 {subTabTranslations[subTab]}
                                             </button>
@@ -259,57 +327,133 @@ function AppContent() {
 
                     {/* Content Area */}
                     <div className="p-4 sm:p-6 lg:p-8">
-                        {activeSubTab === 'Overview' && (
-                            <>
-                                {activeTab === 'Market' && (
-                                    <div className="space-y-8">
-                                        <GreedFearGauge />
-                                        <MarketOverviewDashboard />
-                                        <MarketFlowDashboard />
-                                        <MarketOverview />                                        
-                                        <MarketWave />
-                                        
-                                    </div>
-                                )}
-                                {activeTab === 'Industries' && (
-                                    <div className="space-y-8">
-                                        <IndustryOverviewDashboard />
-                                    </div>
-                                )}
-                                {activeTab === 'Tickers' && (
-                                    <div className="space-y-8">
-                                        <TickerOverviewDashboard />
-                                    </div>
-                                )}
-                            </>
-                        )}
+                        <Routes>
+                            {/* Market Routes */}
+                            <Route path="market" element={
+                                <div className="space-y-8">
+                                    <GreedFearGauge />
+                                    {/* <MarketOverviewDashboard /> */}
+                                    <MomentumInsightsWrapper />
+                                    <MarketFlowDashboard />
+                                    <MarketWave />
+                                </div>
+                            } />
+                            <Route path="market/overview" element={
+                                <div className="space-y-8">
+                                    <GreedFearGauge />
+                                    {/* <MarketOverviewDashboard /> */}
+                                    <MomentumInsightsWrapper />
+                                    <MarketFlowDashboard />
+                                    <MarketWave />
+                                </div>
+                            } />
+                            <Route path="market/reports" element={<MarketInterconnectionReport />} />
+                            <Route path="market/reports/market_interconnection" element={<MarketInterconnectionReport />} />
+                            <Route path="market/reports/market_overview" element={<MarketOverviewReport />} />
+                            <Route path="market/reports/macroeconomics" element={<MacroeconomicsReport />} />
+                            <Route path="market/reports/valuation_report" element={<ValuationReport />} />
 
-                        {activeSubTab === 'Reports' && (
-                            <>
-                                {activeTab === 'Industries' && (
-                                    <div className="space-y-8">
-                                        {activeReport === 'rs_analysis' && <RelativeStrengthAnalysis type="industries" />}
-                                        {activeReport === 'abnormal_signals' && <IndustryAbnormalSignals />}
+                            {/* Industries Routes */}
+                            <Route path="industries" element={
+                                <div className="space-y-8">
+                                    <IndustryOverviewDashboard />
+                                </div>
+                            } />
+                            <Route path="industries/overview" element={
+                                <div className="space-y-8">
+                                    <IndustryOverviewDashboard />
+                                </div>
+                            } />
+                            <Route path="industries/reports" element={
+                                <>
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Thời gian:</span>
+                                        <div className="flex gap-2">
+                                            <button
+                                                className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1D' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+                                                onClick={() => setTimeframe('1D')}
+                                            >
+                                                Hàng ngày (1D)
+                                            </button>
+                                            <button
+                                                className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1W' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+                                                onClick={() => setTimeframe('1W')}
+                                            >
+                                                Hàng tuần (1W)
+                                            </button>
+                                        </div>
                                     </div>
-                                )}
-                                {activeTab === 'Tickers' && (
                                     <div className="space-y-8">
-                                        {activeReport === 'abnormal_signals' && <StockAbnormalSignals />}
-                                        {activeReport === 'vsa_report' && <VSAReport />}
-                                        {activeReport === 'vcp_analysis' && <VCPAnalysis />}
+                                        <RelativeStrengthAnalysis timeframe={timeframe} />
                                     </div>
-                                )}
-                                {activeTab === 'Market' && (
+                                </>
+                            } />
+                            <Route path="industries/reports/rs_analysis" element={
+                                <>
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Thời gian:</span>
+                                        <div className="flex gap-2">
+                                            <button
+                                                className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1D' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+                                                onClick={() => setTimeframe('1D')}
+                                            >
+                                                Hàng ngày (1D)
+                                            </button>
+                                            <button
+                                                className={`cursor-pointer px-4 py-1 rounded font-medium text-sm border ${timeframe === '1W' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 border-blue-600'}`}
+                                                onClick={() => setTimeframe('1W')}
+                                            >
+                                                Hàng tuần (1W)
+                                            </button>
+                                        </div>
+                                    </div>
                                     <div className="space-y-8">
-                                        {activeReport === 'market_interconnection' && <MarketInterconnectionReport />}
-                                        {activeReport === 'market_overview' && <MarketOverviewReport />}
-                                        {activeReport === 'macroeconomics' && <MacroeconomicsReport />}
-                                        {activeReport === 'valuation_report' && <ValuationReport />}
-                                        {activeReport === 'mfi_analysis' && <MFIAnalysis />}
+                                        <RelativeStrengthAnalysis timeframe={timeframe} />
                                     </div>
-                                )}
-                            </>
-                        )}
+                                </>
+                            } />
+                            <Route path="industries/reports/abnormal_signals" element={
+                                <div className="space-y-8">
+                                    <IndustryAbnormalSignals />
+                                </div>
+                            } />
+
+                            {/* Tickers Routes */}
+                            <Route path="tickers" element={
+                                <div className="space-y-8">
+                                    <TickerOverviewDashboard />
+                                </div>
+                            } />
+                            <Route path="tickers/overview" element={
+                                <div className="space-y-8">
+                                    <TickerOverviewDashboard />
+                                </div>
+                            } />
+                            <Route path="tickers/reports" element={
+                                <div className="space-y-8">
+                                    <StockAbnormalSignals />
+                                </div>
+                            } />
+                            <Route path="tickers/reports/abnormal_signals" element={
+                                <div className="space-y-8">
+                                    <StockAbnormalSignals />
+                                </div>
+                            } />
+                            <Route path="tickers/reports/vsa_report" element={
+                                <div className="space-y-8">
+                                    <VSAReport />
+                                </div>
+                            } />
+                            <Route path="tickers/reports/vcp_analysis" element={
+                                <div className="space-y-8">
+                                    <VCPAnalysis />
+                                </div>
+                            } />
+
+                            {/* Default redirect */}
+                            <Route path="/" element={<Navigate to="/market/overview" replace />} />
+                            <Route path="*" element={<Navigate to="/market/overview" replace />} />
+                        </Routes>
                     </div>
                 </main>
             </div>
@@ -345,7 +489,9 @@ function AppContent() {
 export default function App() {
     return (
         <DataReloadProvider>
-            <AppContent />
+            <HashRouter>
+                <AppLayout />
+            </HashRouter>
         </DataReloadProvider>
     );
 }

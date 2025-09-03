@@ -52,10 +52,8 @@ const IndustryInfoPanelMinified = ({ industry }) => {
   const {
     name,
     metrics = {},
-    speed_analysis = {},
-    direction_analysis = {},
-    risk_assessment = {},
     trend_consistency = {},
+    performance_summary = {},
   } = industry;
 
   // Helper functions
@@ -76,14 +74,14 @@ const IndustryInfoPanelMinified = ({ industry }) => {
             <CompactMetricItem
               icon={TrendingUp}
               label="RS"
-              value={formatPercent(metrics?.current_rs)}
+              value={metrics?.current_rs ? `${metrics.current_rs.toFixed(1)}%` : 'K/C'}
               valueClassName="text-blue-600"
             />
             <CompactMetricItem
-              icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-              label="5d"
-              value={formatPercent(metrics?.rs_5d_change)}
-              valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
+              icon={metrics?.rs_slope_fast > 0 ? ArrowUpRight : ArrowDownRight}
+              label="Fast"
+              value={formatPercent(metrics?.rs_slope_fast)}
+              valueClassName={getRsChangeColor(metrics?.rs_slope_fast)}
             />
           </CompactInfoCard>
 
@@ -94,15 +92,15 @@ const IndustryInfoPanelMinified = ({ industry }) => {
             <CompactMetricItem
               icon={Zap}
               label="Tốc độ"
-              value={formatPercent(speed_analysis?.raw_speed_5d)}
+              value={formatPercent(metrics?.mps_acceleration)}
             />
             {(() => {
-              const { icon: DirectionIcon, color: directionColor } = getDirectionIconAndColor(direction_analysis?.direction);
+              const { icon: DirectionIcon, color: directionColor } = getDirectionIconAndColor(performance_summary?.rs_trend);
               return (
                 <CompactMetricItem
                   icon={DirectionIcon}
                   label="Hướng"
-                  value={direction_analysis?.direction?.split(' ')[0] || 'K/C'}
+                  value={performance_summary?.rs_trend?.split(' ')[0] || 'K/C'}
                   valueClassName={directionColor}
                 />
               );
@@ -110,25 +108,8 @@ const IndustryInfoPanelMinified = ({ industry }) => {
           </CompactInfoCard>
         </div>
 
-        {/* Risk & Trend Consistency Row */}
+        {/* Consistency & Additional Details Row */}
         <div className="grid grid-cols-2 gap-2">
-          <CompactInfoCard
-            title="Rủi ro"
-            tooltip="Mức độ rủi ro và quy mô vị thế gợi ý"
-          >
-            <CompactMetricItem
-              icon={Shield}
-              label="Mức độ"
-              value={risk_assessment?.risk_level}
-              valueClassName={getRiskColor(risk_assessment?.risk_level)}
-            />
-            <CompactMetricItem
-              icon={BarChart}
-              label="Vị thế"
-              value={risk_assessment?.suggested_position_size || 'K/C'}
-            />
-          </CompactInfoCard>
-
           <CompactInfoCard
             title="Nhất quán"
             tooltip="Tính nhất quán xu hướng ngành"
@@ -144,33 +125,32 @@ const IndustryInfoPanelMinified = ({ industry }) => {
               value={trend_consistency?.symbol_count || 'K/C'}
             />
           </CompactInfoCard>
-        </div>
 
-        {/* Additional metrics in a single row */}
-        <CompactInfoCard title="Chi tiết bổ sung">
-          <div className="grid grid-cols-3 gap-1 text-center">
-            <div>
-              <div className="text-xs text-gray-500">21d</div>
-              <div className={`font-mono font-semibold text-xs ${
-                metrics?.rs_21d_change > 0 ? 'text-green-600' : 'text-red-600'
-              }`}>
-                {formatPercent(metrics?.rs_21d_change)}
+          <CompactInfoCard title="Chi tiết bổ sung">
+            <div className="grid grid-cols-3 gap-1 text-center">
+              <div>
+                <div className="text-xs text-gray-500">Slow</div>
+                <div className={`font-mono font-semibold text-xs ${
+                  getRsChangeColor(metrics?.rs_slope_slow)
+                }`}>
+                  {formatPercent(metrics?.rs_slope_slow)}
+                </div>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500">Sức mạnh</div>
+                <div className="font-mono font-semibold text-xs text-purple-600">
+                  {performance_summary?.strength_score ? performance_summary.strength_score.toFixed(1) : 'K/C'}
+                </div>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500">Tin cậy</div>
+                <div className="font-mono font-semibold text-xs">
+                  {formatPercent(trend_consistency?.trend_confidence)}
+                </div>
               </div>
             </div>
-            <div>
-              <div className="text-xs text-gray-500">Sức mạnh</div>
-              <div className="font-mono font-semibold text-xs text-purple-600">
-                {direction_analysis?.trend_strength || 'K/C'}
-              </div>
-            </div>
-            <div>
-              <div className="text-xs text-gray-500">Tin cậy</div>
-              <div className="font-mono font-semibold text-xs">
-                {formatPercent(trend_consistency?.trend_confidence)}
-              </div>
-            </div>
-          </div>
-        </CompactInfoCard>
+          </CompactInfoCard>
+        </div>
       </div>
     </div>
   );

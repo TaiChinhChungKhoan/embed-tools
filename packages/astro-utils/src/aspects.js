@@ -45,7 +45,7 @@ export function findBestAspect(lon1, lon2, orbMultiplier = 1, planet1) {
   let smallestDeviation = Infinity;
   const customOrbs = PLANETS[planet1]?.orb || {};
 
-  for (const { name, angle: aspAngle, orb: baseOrb, polarity } of ASPECTS) {
+  for (const { name, angle: aspAngle, orb: baseOrb, polarity, interpretation } of ASPECTS) {
     const maxOrb = (customOrbs[name] ?? baseOrb) * orbMultiplier;
     const deviation = Math.abs(separation - aspAngle);
 
@@ -57,6 +57,7 @@ export function findBestAspect(lon1, lon2, orbMultiplier = 1, planet1) {
         deviation,
         maxOrb,
         polarity,
+        interpretation,
         exact: deviation === 0
       };
       if (deviation === 0) break;  // exact match—no need to search further

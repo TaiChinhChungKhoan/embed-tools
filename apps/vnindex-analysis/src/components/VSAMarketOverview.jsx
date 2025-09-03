@@ -2,23 +2,29 @@ import React, { useMemo } from 'react';
 import { Activity } from 'lucide-react';
 import Card from './Card';
 import MarketSentimentCharts from './MarketSentimentCharts';
-import VolumeAnalysisChart from './VolumeAnalysisChart';
 import SignalFrequencyChart from './SignalFrequencyChart';
 
-function getSignalFrequencyFromIndividualResults(individual_results) {
+function getSignalFrequencyFromStocks(stocks) {
+  // Since the new structure doesn't have detailed signal analysis,
+  // we'll create approximate signal frequency based on daily scores
   const dateMap = {};
-  individual_results.forEach(stock => {
-    (stock.recent_analyses || []).forEach(analysis => {
-      const date = analysis.timestamp.split('T')[0];
-      (analysis.signals || []).forEach(signal => {
-        if (signal.strength === 'strong') {
-          if (!dateMap[date]) dateMap[date] = { bullish: 0, bearish: 0 };
-          if (signal.bias === 'bullish') dateMap[date].bullish += 1;
-          if (signal.bias === 'bearish') dateMap[date].bearish += 1;
-        }
-      });
+  
+  stocks.forEach(stock => {
+    (stock.scores || []).forEach(scoreObj => {
+      const dateKey = Object.keys(scoreObj)[0];
+      const score = scoreObj[dateKey];
+      const date = dateKey.split('T')[0];
+      
+      if (!dateMap[date]) dateMap[date] = { bullish: 0, bearish: 0 };
+      
+      // Consider strong scores as signals
+      if (Math.abs(score) > 1) {
+        if (score > 1) dateMap[date].bullish += 1;
+        if (score < -1) dateMap[date].bearish += 1;
+      }
     });
   });
+  
   return Object.entries(dateMap)
     .map(([date, counts]) => ({
       date,
@@ -29,7 +35,7 @@ function getSignalFrequencyFromIndividualResults(individual_results) {
     .slice(-20);
 }
 
-const VSAMarketOverview = ({ market_overview, individual_results }) => {
+const VSAMarketOverview = ({ market_summary, stocks }) => {
     // Helper function to get sentiment background color
     const getSentimentBgColor = (sentiment) => {
         switch (sentiment?.toLowerCase()) {
@@ -45,32 +51,24 @@ const VSAMarketOverview = ({ market_overview, individual_results }) => {
     };
 
     const signalFrequencyData = useMemo(() => {
-        if (!individual_results) return [];
-        return getSignalFrequencyFromIndividualResults(individual_results);
-    }, [individual_results]);
+        if (!stocks) return [];
+        return getSignalFrequencyFromStocks(stocks);
+    }, [stocks]);
     
     return (
         <div className="space-y-6">
-            {/* Market Sentiment Charts - Side by Side */}
-            {(market_overview?.market_breadth || market_overview?.volume_analysis) && (
+            {/* Market Sentiment Charts */}
+            {market_summary?.overview && (
                 <Card className="p-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {market_overview?.market_breadth && (
-                            <div className="flex flex-col items-center">
-                                <MarketSentimentCharts 
-                                    marketBreadth={market_overview.market_breadth}
-                                    title="Tâm lý thị trường"
-                                />
-                            </div>
-                        )}
-                        {market_overview?.volume_analysis && (
-                            <div className="flex flex-col items-center">
-                                <VolumeAnalysisChart 
-                                    volumeAnalysis={market_overview.volume_analysis}
-                                    title="Phân tích khối lượng"
-                                />
-                            </div>
-                        )}
+                    <div className="flex flex-col items-center">
+                        <MarketSentimentCharts 
+                            marketBreadth={{
+                                bullish_percentage: (market_summary.overview.bullish / market_summary.overview.analyzed * 100),
+                                bearish_percentage: (market_summary.overview.bearish / market_summary.overview.analyzed * 100),
+                                neutral_percentage: ((market_summary.overview.analyzed - market_summary.overview.bullish - market_summary.overview.bearish) / market_summary.overview.analyzed * 100)
+                            }}
+                            title="Tâm lý thị trường"
+                        />
                     </div>
                 </Card>
             )}
@@ -97,65 +95,65 @@ const VSAMarketOverview = ({ market_overview, individual_results }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <div className="flex items-center gap-2 mb-3">
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getSentimentBgColor(market_overview?.market_sentiment)}`}>
-                                {market_overview?.market_sentiment?.toUpperCase() || 'NEUTRAL'}
+                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                                market_summary?.overview?.bullish > market_summary?.overview?.bearish 
+                                    ? getSentimentBgColor('bullish')
+                                    : market_summary?.overview?.bearish > market_summary?.overview?.bullish
+                                        ? getSentimentBgColor('bearish')
+                                        : getSentimentBgColor('neutral')
+                            }`}>
+                                {market_summary?.overview?.bullish > market_summary?.overview?.bearish 
+                                    ? 'BULLISH' 
+                                    : market_summary?.overview?.bearish > market_summary?.overview?.bullish
+                                        ? 'BEARISH'
+                                        : 'NEUTRAL'}
                             </span>
                         </div>
                         <div className="space-y-2">
                             <div className="flex justify-between">
                                 <span className="text-gray-600 dark:text-gray-400">Tỷ lệ tăng giá:</span>
                                 <span className="font-medium text-green-600 dark:text-green-400">
-                                    {market_overview?.market_breadth?.bullish_percentage?.toFixed(1)}%
+                                    {market_summary?.overview ? (market_summary.overview.bullish / market_summary.overview.analyzed * 100).toFixed(1) : 0}%
                                 </span>
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-gray-600 dark:text-gray-400">Tỷ lệ giảm giá:</span>
                                 <span className="font-medium text-red-600 dark:text-red-400">
-                                    {market_overview?.market_breadth?.bearish_percentage?.toFixed(1)}%
+                                    {market_summary?.overview ? (market_summary.overview.bearish / market_summary.overview.analyzed * 100).toFixed(1) : 0}%
                                 </span>
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-gray-600 dark:text-gray-400">Tỷ lệ trung tính:</span>
                                 <span className="font-medium text-gray-600 dark:text-gray-400">
-                                    {market_overview?.market_breadth?.neutral_percentage?.toFixed(1)}%
+                                    {market_summary?.overview ? ((market_summary.overview.analyzed - market_summary.overview.bullish - market_summary.overview.bearish) / market_summary.overview.analyzed * 100).toFixed(1) : 0}%
                                 </span>
                             </div>
-                            {market_overview?.market_breadth?.strong_signals_count && (
+                            {market_summary?.overview?.at_zones && (
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600 dark:text-gray-400">Tín hiệu mạnh:</span>
+                                    <span className="text-gray-600 dark:text-gray-400">At Key Zones:</span>
                                     <span className="font-medium text-blue-600 dark:text-blue-400">
-                                        {market_overview.market_breadth.strong_signals_count}
+                                        {market_summary.overview.at_zones}
                                     </span>
                                 </div>
                             )}
                         </div>
                     </div>
                     <div>
-                        <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-3">Phân tích khối lượng</h4>
+                        <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-3">Thống kê bổ sung</h4>
                         <div className="space-y-2">
-                            <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Khối lượng tăng:</span>
-                                <span className="font-medium text-green-600 dark:text-green-400">
-                                    {market_overview?.volume_analysis?.increasing || 0}
-                                </span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Khối lượng giảm:</span>
-                                <span className="font-medium text-red-600 dark:text-red-400">
-                                    {market_overview?.volume_analysis?.decreasing || 0}
-                                </span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Khối lượng ổn định:</span>
-                                <span className="font-medium text-gray-600 dark:text-gray-400">
-                                    {market_overview?.volume_analysis?.stable || 0}
-                                </span>
-                            </div>
-                            {market_overview?.market_breadth?.average_score && (
+                            {market_summary?.overview && (
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600 dark:text-gray-400">Điểm trung bình:</span>
+                                    <span className="text-gray-600 dark:text-gray-400">Total Analyzed:</span>
                                     <span className="font-medium text-blue-600 dark:text-blue-400">
-                                        {(market_overview.market_breadth.average_score * 100).toFixed(1)}%
+                                        {market_summary.overview.analyzed}
+                                    </span>
+                                </div>
+                            )}
+                            {market_summary?.overview && (
+                                <div className="flex justify-between">
+                                    <span className="text-gray-600 dark:text-gray-400">Total Signals:</span>
+                                    <span className="font-medium text-blue-600 dark:text-blue-400">
+                                        {market_summary.overview.signals}
                                     </span>
                                 </div>
                             )}
@@ -164,26 +162,64 @@ const VSAMarketOverview = ({ market_overview, individual_results }) => {
                 </div>
             </Card>
 
-            {/* Top Opportunities */}
-            {market_overview?.top_opportunities && market_overview.top_opportunities.length > 0 && (
+            {/* Top Bullish Stocks */}
+            {market_summary?.top_bullish && market_summary.top_bullish.length > 0 && (
                 <Card className="p-6">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                        Cơ hội đầu tư hàng đầu
+                        Top Bullish Stocks
                     </h3>
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                        {market_overview.top_opportunities.slice(0, 6).map((opportunity, index) => (
+                        {market_summary.top_bullish.slice(0, 6).map((stock, index) => (
                             <div key={index} className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg p-4">
                                 <div className="flex items-center justify-between mb-2">
                                     <span className="font-semibold text-gray-900 dark:text-gray-100">
-                                        {opportunity.symbol}
+                                        {stock.symbol}
                                     </span>
-                                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getSentimentBgColor(opportunity.sentiment)}`}>
-                                        {opportunity.sentiment}
+                                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200">
+                                        {stock.score.toFixed(1)}
                                     </span>
                                 </div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400">
-                                    {opportunity.reason}
-                                </p>
+                                <div className="flex items-center justify-between text-sm">
+                                    <span className="text-gray-600 dark:text-gray-400">Pattern:</span>
+                                    <span className="text-gray-900 dark:text-gray-100">{stock.pattern}</span>
+                                </div>
+                                {stock.at_zone && (
+                                    <div className="mt-2 text-xs text-yellow-600 dark:text-yellow-400">
+                                        ● At Key Zone
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </Card>
+            )}
+
+            {/* Top Bearish Stocks */}
+            {market_summary?.top_bearish && market_summary.top_bearish.length > 0 && (
+                <Card className="p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                        Top Bearish Stocks
+                    </h3>
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        {market_summary.top_bearish.slice(0, 6).map((stock, index) => (
+                            <div key={index} className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-lg p-4">
+                                <div className="flex items-center justify-between mb-2">
+                                    <span className="font-semibold text-gray-900 dark:text-gray-100">
+                                        {stock.symbol}
+                                    </span>
+                                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-200">
+                                        {stock.score.toFixed(1)}
+                                    </span>
+                                </div>
+                                <div className="flex items-center justify-between text-sm">
+                                    <span className="text-gray-600 dark:text-gray-400">Pattern:</span>
+                                    <span className="text-gray-900 dark:text-gray-100">{stock.pattern}</span>
+                                </div>
+                                {stock.at_zone && (
+                                    <div className="mt-2 text-xs text-yellow-600 dark:text-yellow-400">
+                                        ● At Key Zone
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

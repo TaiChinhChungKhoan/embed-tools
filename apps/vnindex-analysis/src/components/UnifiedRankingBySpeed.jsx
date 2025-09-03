@@ -20,8 +20,7 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
     stealth_distribution: analysisData.stealth_distribution,
     institutional_activity: analysisData.institutional_activity,
     high_volatility: analysisData.high_volatility,
-    deteriorating_fundamentals: analysisData.deteriorating_fundamentals,
-    falling_knife: analysisData.falling_knife
+    deteriorating_fundamentals: analysisData.deteriorating_fundamentals
     // top_performers and bottom_performers are excluded
   };
 
@@ -76,7 +75,6 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
     analysisData.distribution_candidates,
     analysisData.consolidation_candidates,
     analysisData.stealth_distribution,
-    analysisData.falling_knife,
     analysisData.high_volatility,
     analysisData.deteriorating_fundamentals,
     analysisData.bottom_performers
@@ -249,18 +247,6 @@ const UnifiedRankingBySpeed = ({ analysisData, type, renderInsightItems, rrgData
               <h4 className="font-medium text-pink-700 mb-2">{typeName.charAt(0).toUpperCase() + typeName.slice(1)} phân phối âm thầm</h4>
               <div className="space-y-2">
                 {analysisData.stealth_distribution.slice(0, 5).map((item, index) => (
-                  <div key={index}>
-                    {renderMinifiedPanel(item)}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-          {Array.isArray(analysisData.falling_knife) && analysisData.falling_knife.some(Boolean) && (
-            <div>
-              <h4 className="font-medium text-red-800 mb-2">Dao rơi (tránh hoàn toàn)</h4>
-              <div className="space-y-2">
-                {analysisData.falling_knife.slice(0, 5).map((item, index) => (
                   <div key={index}>
                     {renderMinifiedPanel(item)}
                   </div>

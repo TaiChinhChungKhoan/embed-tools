@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VN-Index Analysis - Iframe Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .iframe-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            display: block;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .control-group {
+            margin-bottom: 15px;
+        }
+        .control-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .control-group button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+        .control-group button:hover {
+            background: #2563eb;
+        }
+        .url-display {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VN-Index Analysis - Iframe Routing Test</h1>
+            <p>This page demonstrates how routing works when the VN-Index Analysis app is embedded in an iframe.</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Navigation Controls:</label>
+                <button onclick="navigateTo('/market/overview')">Market Overview</button>
+                <button onclick="navigateTo('/market/reports/market_interconnection')">Market Interconnection</button>
+                <button onclick="navigateTo('/industries/overview')">Industries Overview</button>
+                <button onclick="navigateTo('/industries/reports/rs_analysis')">RS Analysis</button>
+                <button onclick="navigateTo('/tickers/overview')">Tickers Overview</button>
+                <button onclick="navigateTo('/tickers/reports/vsa_report')">VSA Report</button>
+            </div>
+            
+            <div class="control-group">
+                <label>Current URL:</label>
+                <div class="url-display" id="currentUrl">Loading...</div>
+            </div>
+        </div>
+
+        <div class="iframe-container">
+            <iframe 
+                id="vnindex-iframe"
+                src="http://localhost:5173/embed-tools/vnindex-analysis/"
+                title="VN-Index Analysis"
+                onload="updateUrl()">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        const iframe = document.getElementById('vnindex-iframe');
+        const urlDisplay = document.getElementById('currentUrl');
+
+        function navigateTo(path) {
+            // Send navigation message to iframe instead of changing src
+            iframe.contentWindow.postMessage({
+                type: 'NAVIGATE',
+                path: path
+            }, '*');
+        }
+
+        function updateUrl() {
+            urlDisplay.textContent = iframe.src;
+        }
+
+        // Listen for messages from iframe (for resize events and route updates)
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'RESIZE') {
+                iframe.style.height = event.data.height + 'px';
+            } else if (event.data.type === 'ROUTE_CHANGE') {
+                // Update URL display when iframe route changes
+                const currentUrl = iframe.src + (event.data.hash || '');
+                urlDisplay.textContent = currentUrl;
+            }
+        });
+
+        // Update URL display when iframe loads
+        iframe.addEventListener('load', updateUrl);
+    </script>
+</body>
+</html>

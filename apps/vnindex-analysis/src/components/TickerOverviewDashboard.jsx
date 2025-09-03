@@ -1,25 +1,19 @@
 import React, { useState, useMemo } from 'react';
 import { useDataLoader } from '../utils/dataLoader';
-import { AlertTriangle } from 'lucide-react';
-import MarketOverview from './MarketOverview';
-import UnifiedRankingByScore from './UnifiedRankingByScore';
-import UnifiedRankingBySpeed from './UnifiedRankingBySpeed';
-import DetailedAnalysis from './DetailedAnalysis';
-import TickerRSTable from './TickerRSTable';
+import TickerEnhancedRSAnalysis from './TickerEnhancedRSAnalysis';
 import RRGChart from './rrg/RRGChart';
 import TickerHeatmap from './TickerHeatmap';
 
 import TabNav from './detailed-analysis/layout/TabNav';
 
 const TABS = [
-  { key: 'overview', label: 'Thị trường chung' },
   { key: 'ranking', label: '📊 Xếp hạng & Phân tích' },
   { key: 'rrg', label: 'RRG Cổ phiếu' },
   { key: 'heatmap', label: 'Heatmap' },
 ];
 
 const TickerOverviewDashboard = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('ranking');
   const [timeframe, setTimeframe] = useState('1D');
   
   // Use centralized data loader
@@ -29,10 +23,6 @@ const TickerOverviewDashboard = () => {
   
   // Get insights data
   const insights = analyticsData?.insights || {};
-  const marketOverview = insights?.market_overview || {};
-  const tickerAnalysis = insights?.insights?.tickers || {};
-  const detailedAnalysis = insights?.detailed_analysis || {};
-  const investmentStrategies = insights?.investment_strategies || {};
 
   const { tickers } = useMemo(() => {
     if (!allTickers) return { tickers: [] };
@@ -53,55 +43,7 @@ const TickerOverviewDashboard = () => {
     };
   }, [allTickers]);
 
-  // Helper functions for the components
-  const getQuadrantColor = (quadrant) => {
-    if (quadrant?.includes('Leading') || quadrant?.includes('Dẫn dắt')) return 'text-green-600';
-    if (quadrant?.includes('Improving') || quadrant?.includes('Cải thiện')) return 'text-blue-600';
-    if (quadrant?.includes('Weakening') || quadrant?.includes('Suy yếu')) return 'text-yellow-600';
-    if (quadrant?.includes('Lagging') || quadrant?.includes('Tụt hậu')) return 'text-red-600';
-    return 'text-gray-600';
-  };
 
-  const getSentimentColor = (sentiment) => {
-    switch (sentiment?.toLowerCase()) {
-      case 'bullish':
-        return 'text-green-600';
-      case 'bearish':
-        return 'text-red-600';
-      case 'neutral':
-        return 'text-gray-600';
-      default:
-        return 'text-gray-600';
-    }
-  };
-
-  const renderInsightItems = (items, type) => {
-    if (!items || items.length === 0) return null;
-    
-    return (
-      <div className="space-y-2">
-        {items.map((item, index) => (
-          <div key={index} className="bg-white p-3 rounded border">
-            <div className="flex justify-between items-start">
-              <div>
-                <div className="font-medium text-gray-900">
-                  {item?.name || item?.custom_id || item?.symbol || 'Unknown'}
-                </div>
-                <div className="text-sm text-gray-600 mt-1">{item?.description || 'N/A'}</div>
-                <div className={`text-xs mt-1 ${getQuadrantColor(item?.rrg_position)}`}>
-                  {item?.rrg_position || 'N/A'}
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="text-sm font-medium text-blue-600">{(item?.speed_score || 0).toFixed(2)}</div>
-                <div className="text-xs text-gray-500 mt-1">{item?.speed_category || 'N/A'}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  };
 
   // Loading state
   if (loading) {
@@ -160,50 +102,13 @@ const TickerOverviewDashboard = () => {
       <TabNav tabs={TABS} activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Tab Content */}
-      {activeTab === 'overview' && (
-        <div className="space-y-6">
-          {/* Full Market Overview Panel (RRG/insights-driven) */}
-          <MarketOverview
-            marketOverview={marketOverview}
-            getSentimentColor={getSentimentColor}
-            breadth_detail={detailedAnalysis.breadth_detail}
-            tickers={allTickers}
-            analyticsData={analyticsData}
-          />          
-
-          {/* Unified Ranking by Score */}
-          {(() => {
-            return (
-              <UnifiedRankingByScore
-                analysisData={analyticsData?.insights?.insights?.tickers || {}}
-                type="ticker"
-                getQuadrantColor={getQuadrantColor}
-                analyzeData={analyticsData}
-              />
-            );
-          })()}
-
-          {/* Unified Ranking by Speed */}
-          <UnifiedRankingBySpeed
-            analysisData={analyticsData?.insights?.insights?.tickers || {}}
-            type="ticker"
-            renderInsightItems={renderInsightItems}
-            rrgData={analyticsData}
-            analyzeData={analyticsData}
-          />
-
-          {/* Detailed Analysis */}
-          <DetailedAnalysis
-            detailedAnalysis={detailedAnalysis}
-            getSentimentColor={getSentimentColor}
-          />
-
-        
-        </div>
-      )}
       {activeTab === 'ranking' && (
         <div className="space-y-6">
-          <TickerRSTable />
+          <TickerEnhancedRSAnalysis 
+            key={`ticker-enhanced-rs-${timeframe}`}
+            timeframe={timeframe}
+            analyticsData={analyticsData}
+          />
         </div>
       )}
       {activeTab === 'rrg' && (

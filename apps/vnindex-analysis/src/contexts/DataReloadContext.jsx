@@ -73,8 +73,6 @@ export function DataReloadProvider({ children }) {
       // Dispatch global event for backward compatibility
       const event = new CustomEvent('dataReloaded', { detail: { dataType: null } });
       window.dispatchEvent(event);
-      
-      console.log('Global reload completed successfully');
     } catch (error) {
       console.error('Error during global reload:', error);
     } finally {
@@ -98,8 +96,6 @@ export function DataReloadProvider({ children }) {
       // Dispatch global event with data type
       const event = new CustomEvent('dataReloaded', { detail: { dataType } });
       window.dispatchEvent(event);
-      
-      console.log(`Data type ${dataType} reloaded successfully`);
     } catch (error) {
       console.error(`Error reloading ${dataType}:`, error);
     } finally {

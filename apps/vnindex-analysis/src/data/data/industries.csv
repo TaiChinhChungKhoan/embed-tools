@@ -1,0 +1,49 @@
+custom_id,name,is_primary,parent_custom_id
+bao-hiem,Bảo hiểm,True,tai-chinh
+ngan-hang,Ngân hàng,True,tai-chinh
+ngan-hang-tu-nhan,Ngân hàng tư nhân,False,ngan-hang
+ngan-hang-nha-nuoc,Ngân hàng nhà nước,False,ngan-hang
+bds-nha-o,Bất động sản nhà ở,False,bds
+bds-nha-o-xh,Bất động sản nhà ở xã hội,False,bds
+bds-nghi-duong,Bất động sản nghỉ dưỡng,False,bds
+bds-thuong-mai,Bất động sản thương mại,False,bds
+xay-lap-dien,Xây lắp điện,False,dien
+dau-tu-cong,Đầu tư công,True,xay-dung
+dien-tai-tao,Điện tái tạo,False,dien
+thuy-dien,Thủy điện,False,dien
+nhiet-dien,Nhiệt điện,False,dien
+chan-nuoi,Chăn nuôi,False,nong-nghiep
+thuy-san,Thủy sản,True,nong-nghiep
+cao-su,Cao su,True,nong-nghiep
+duong,Mía đường,True,nong-nghiep
+cong-nghiep,Công nghiệp,False,
+bds-kcn,Bất động sản khu công nghiệp,True,bds
+tai-chinh,Tài chính,False,
+van-tai,Vận tải,True,
+cong-nghe,Công nghệ,True,
+ban-le,Bán lẻ,True,
+hang-tieu-dung,Hàng tiêu dùng,True,
+nuoc,Nuớc,False,
+go,Gỗ,False,
+truyen-thong,Truyền thông,False,
+giai-tri,Giải trí,False,
+khac,Khác,False,
+bds,Bất động sản,True,
+tradable,Tradable,False,
+y-te,Y tế,True,
+xay-dung,Xây dựng,True,
+nong-san-khac,Nông sản khác,False,nong-nghiep
+dien,Điện,True,
+thep,Thép,True,cong-nghiep
+hoa-chat,Hóa chất,True,cong-nghiep
+dau-khi,Dầu khí,True,
+nhua,Nhựa,False,cong-nghiep
+vlxd,Vật liệu xây dựng,True,cong-nghiep
+det-may,Dệt may,True,cong-nghiep
+nong-nghiep,Nông nghiệp,False,
+hang-khong,Hàng không,True,van-tai
+thuc-pham,Thực phẩm,False,
+cang-bien,Cảng biển,True,van-tai
+chung-khoan,Chứng khoán,True,tai-chinh
+cntt,Phần mềm / Công nghệ thông tin,False,cong-nghe
+vien-thong,Viễn thông,False,cong-nghe

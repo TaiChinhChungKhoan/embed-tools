@@ -157,7 +157,7 @@ export const MultiSelect = React.forwardRef(
                         )}
                         {option?.label}
                         <XCircle
-                          className="ml-2 h-4 w-4 cursor-pointer"
+                          className="ml-2 h-4 w-4 cursor-pointer !pointer-events-auto"
                           onClick={(event) => {
                             event.stopPropagation();
                             toggleOption(value);
@@ -176,19 +176,19 @@ export const MultiSelect = React.forwardRef(
                       style={{ animationDuration: `${animation}s` }}
                     >
                       {`+ ${selectedValues.length - maxCount} more`}
-                      <XCircle
-                        className="ml-2 h-4 w-4 cursor-pointer"
-                        onClick={(event) => {
-                          event.stopPropagation();
-                          clearExtraOptions();
-                        }}
-                      />
+                                             <XCircle
+                         className="ml-2 h-4 w-4 cursor-pointer !pointer-events-auto"
+                         onClick={(event) => {
+                           event.stopPropagation();
+                           clearExtraOptions();
+                         }}
+                       />
                     </Badge>
                   )}
                 </div>
                 <div className="flex items-center justify-between">
                   <XIcon
-                    className="h-4 mx-2 cursor-pointer text-muted-foreground"
+                    className="h-4 mx-2 cursor-pointer text-muted-foreground !pointer-events-auto"
                     onClick={(event) => {
                       event.stopPropagation();
                       handleClear();

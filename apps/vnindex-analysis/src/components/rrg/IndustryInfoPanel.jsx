@@ -53,19 +53,18 @@ const IndustryInfoPanel = ({ industry }) => {
   // Destructure all relevant fields from the industry object
   const {
     metrics = {},
-    speed_analysis = {},
-    direction_analysis = {},
-    risk_assessment = {},
+    performance_summary = {},
     trend_consistency = {},
   } = industry;
 
   const formatPercent = (val) => (typeof val === 'number' ? `${(val * 100).toFixed(1)}%` : 'K/C');
-
+  const formatNumber = (val) => (typeof val === 'number' ? val.toFixed(2) : 'K/C');
+  
   return (
     <div key={industry.id} className="bg-white border rounded-lg p-4 shadow-sm">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Performance Summary */}
         <InfoCard
           title="Hiệu suất"
@@ -74,21 +73,21 @@ const IndustryInfoPanel = ({ industry }) => {
           <MetricItem
             icon={TrendingUp}
             label="RS Hiện tại"
-            value={formatPercent(metrics?.current_rs)}
+            value={metrics?.current_rs ? `${metrics.current_rs.toFixed(1)}%` : 'K/C'}
             valueClassName="text-blue-600"
           />
-          <MetricItem
-            icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-            label="Thay đổi 5 phiên"
-            value={formatPercent(metrics?.rs_5d_change)}
-            valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
-          />
-          <MetricItem
-            icon={metrics?.rs_21d_change > 0 ? ArrowUpRight : ArrowDownRight}
-            label="Thay đổi 21 phiên"
-            value={formatPercent(metrics?.rs_21d_change)}
-            valueClassName={getRsChangeColor(metrics?.rs_21d_change)}
-          />
+                              <MetricItem
+                        icon={metrics?.rs_slope_fast > 0 ? ArrowUpRight : ArrowDownRight}
+                        label="Xu hướng nhanh"
+                        value={formatPercent(metrics?.rs_slope_fast)}
+                        valueClassName={getRsChangeColor(metrics?.rs_slope_fast)}
+                    />
+                    <MetricItem
+                        icon={metrics?.rs_slope_slow > 0 ? ArrowUpRight : ArrowDownRight}
+                        label="Xu hướng chậm"
+                        value={formatPercent(metrics?.rs_slope_slow)}
+                        valueClassName={getRsChangeColor(metrics?.rs_slope_slow)}
+                    />
         </InfoCard>
 
         {/* Speed & Direction Analysis */}
@@ -98,16 +97,16 @@ const IndustryInfoPanel = ({ industry }) => {
         >
           <MetricItem
             icon={Zap}
-            label="Tốc độ 5 phiên"
-            value={formatPercent(speed_analysis?.raw_speed_5d)}
+            label="MPS Gia tăng"
+            value={formatPercent(metrics?.mps_acceleration)}
           />
           {(() => {
-            const { icon: DirectionIcon, color: directionColor } = getDirectionIconAndColor(direction_analysis?.direction);
+            const { icon: DirectionIcon, color: directionColor } = getDirectionIconAndColor(performance_summary?.rs_trend);
             return (
               <MetricItem
                 icon={DirectionIcon}
                 label="Hướng"
-                value={direction_analysis?.direction || 'K/C'}
+                value={performance_summary?.rs_trend || 'K/C'}
                 valueClassName={directionColor}
               />
             );
@@ -115,33 +114,11 @@ const IndustryInfoPanel = ({ industry }) => {
           <MetricItem
             icon={Activity}
             label="Sức mạnh xu hướng"
-            value={direction_analysis?.trend_strength || 'K/C'}
+            value={performance_summary?.strength_score ? performance_summary.strength_score.toFixed(1) : 'K/C'}
             valueClassName="text-purple-600"
           />
         </InfoCard>
 
-        {/* Risk Assessment */}
-        <InfoCard
-          title="Đánh giá Rủi ro"
-          tooltip="Mức độ rủi ro và quy mô vị thế gợi ý"
-        >
-          <MetricItem
-            icon={Shield}
-            label="Mức rủi ro"
-            value={risk_assessment?.risk_level}
-            valueClassName={getRiskColor(risk_assessment?.risk_level)}
-          />
-          <MetricItem
-            icon={BarChart}
-            label="Kích thước vị thế"
-            value={risk_assessment?.suggested_position_size || 'K/C'}
-          />
-          <MetricItem
-            icon={Users}
-            label="Khung thời gian"
-            value={risk_assessment?.time_horizon || 'K/C'}
-          />
-        </InfoCard>
       </div>
 
       {/* Breadth Detail and Trend Consistency - Side by Side */}

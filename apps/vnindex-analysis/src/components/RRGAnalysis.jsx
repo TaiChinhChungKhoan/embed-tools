@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import RRGChart from './rrg/RRGChart';
 
 import MarketOverview from './MarketOverview';
@@ -14,6 +14,25 @@ export default function RRGAnalysis({ type = 'industries' }) {
   const [timeframe, setTimeframe] = useState('1D');
   
   const { data: analyzeRsData, loading, error } = useRRGAnalysis(timeframe);
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="text-center py-8">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+        <p className="mt-2 text-gray-600">Đang tải dữ liệu RRG...</p>
+      </div>
+    );
+  }
+  
+  // Show error state
+  if (error) {
+    return (
+      <div className="text-center py-8 text-red-500">
+        <p>Lỗi tải dữ liệu RRG: {error}</p>
+      </div>
+    );
+  }
   
   // Safely access insights data with fallbacks for new standardized structure
   const insights = analyzeRsData?.insights || {};
@@ -198,7 +217,9 @@ export default function RRGAnalysis({ type = 'industries' }) {
           <div className="bg-gray-50 p-3 rounded">
             <div className="font-medium text-gray-700">Ngày phân tích</div>
             <div className="text-gray-900">
-              {analyzeRsData?.analysis_date ? new Date(analyzeRsData.analysis_date).toLocaleDateString() : new Date(analyzeRsData.rrgDate).toLocaleDateString()}
+              {analyzeRsData?.analysis_date ? new Date(analyzeRsData.analysis_date).toLocaleDateString() : 
+               analyzeRsData?.rrg_date ? new Date(analyzeRsData.rrg_date).toLocaleDateString() : 
+               'N/A'}
             </div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
@@ -337,8 +358,8 @@ export default function RRGAnalysis({ type = 'industries' }) {
                 </>
               )}
               
-              {/* Detailed Analysis */}
-              <DetailedAnalysis key={`detailed-analysis-${timeframe}`} detailedAnalysis={detailedAnalysis} />
+              {/* Detailed Analysis - Hidden as momentum analysis is disabled */}
+              {/* <DetailedAnalysis key={`detailed-analysis-${timeframe}`} detailedAnalysis={detailedAnalysis} /> */}
             </div>
           )}
 

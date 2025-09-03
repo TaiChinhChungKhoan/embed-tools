@@ -7,7 +7,6 @@ import {
     Zap,
     Shield,
     BarChart,
-    Users,
     Activity,
     Clock,
     Target,
@@ -51,9 +50,11 @@ const SymbolInfoPanel = ({ symbol }) => {
     const {
         metrics = {},
         performance_summary = {},
-        speed_analysis = {},
-        direction_analysis = {},
-        risk_assessment = {}
+        trend_consistency = {},
+        risk_level,
+        position_size,
+        time_horizon,
+        stop_loss_distance,
     } = symbolData;
 
     // --- Helpers for translation and formatting ---
@@ -70,20 +71,20 @@ const SymbolInfoPanel = ({ symbol }) => {
                     <MetricItem
                         icon={TrendingUp}
                         label="RS Hiện tại"
-                        value={formatPercent(metrics?.current_rs)}
+                        value={metrics?.current_rs ? `${metrics.current_rs.toFixed(1)}%` : 'K/C'}
                         valueClassName="text-blue-600"
                     />
                     <MetricItem
-                        icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 5 phiên"
-                        value={formatPercent(metrics?.rs_5d_change)}
-                        valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
+                        icon={metrics?.rs_slope_fast > 0 ? ArrowUpRight : ArrowDownRight}
+                        label="Xu hướng nhanh"
+                        value={formatPercent(metrics?.rs_slope_fast)}
+                        valueClassName={getRsChangeColor(metrics?.rs_slope_fast)}
                     />
                     <MetricItem
-                        icon={metrics?.rs_21d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 21 phiên"
-                        value={formatPercent(metrics?.rs_21d_change)}
-                        valueClassName={getRsChangeColor(metrics?.rs_21d_change)}
+                        icon={metrics?.rs_slope_slow > 0 ? ArrowUpRight : ArrowDownRight}
+                        label="Xu hướng chậm"
+                        value={formatPercent(metrics?.rs_slope_slow)}
+                        valueClassName={getRsChangeColor(metrics?.rs_slope_slow)}
                     />
                     <MetricItem
                         icon={Target}
@@ -97,49 +98,25 @@ const SymbolInfoPanel = ({ symbol }) => {
                     <MetricItem
                         icon={Zap}
                         label="Tốc độ 5 phiên"
-                        value={formatPercent(speed_analysis?.raw_speed_5d)}
+                        value={formatPercent(metrics?.mps_acceleration)}
                     />
                     <MetricItem
-                        icon={direction_analysis?.direction === 'Tăng trưởng' ? TrendingUp : TrendingDown}
+                        icon={performance_summary?.rs_trend === 'Tăng trưởng' ? TrendingUp : TrendingDown}
                         label="Hướng"
-                        value={direction_analysis?.direction}
-                        valueClassName={getDirectionColor(direction_analysis?.direction)}
+                        value={performance_summary?.rs_trend}
+                        valueClassName={getDirectionColor(performance_summary?.rs_trend)}
                     />
                     <MetricItem
                         icon={Activity}
                         label="Sức mạnh xu hướng"
-                        value={direction_analysis?.trend_strength || 'K/C'}
+                        value={performance_summary?.strength_score ? performance_summary.strength_score.toFixed(1) : 'K/C'}
                         valueClassName="text-purple-600"
                     />
                     <MetricItem
                         icon={Clock}
                         label="Tốc độ"
-                        value={speed_analysis?.speed_category || 'K/C'}
+                        value={metrics?.mps > 70 ? 'Nhanh' : metrics?.mps > 30 ? 'Trung bình' : 'Chậm'}
                         valueClassName="text-orange-600"
-                    />
-                </InfoCard>
-                <InfoCard title="Đánh giá Rủi ro">
-                    <MetricItem
-                        icon={Shield}
-                        label="Mức rủi ro"
-                        value={risk_assessment?.risk_level}
-                        valueClassName={getRiskColor(risk_assessment?.risk_level)}
-                    />
-                    <MetricItem
-                        icon={BarChart}
-                        label="Kích thước vị thế"
-                        value={risk_assessment?.suggested_position_size || 'K/C'}
-                    />
-                    <MetricItem
-                        icon={Users}
-                        label="Hoạt động tổ chức"
-                        value={risk_assessment?.volume_analysis?.institutional_activity ? 'Có' : 'Không'}
-                        valueClassName={risk_assessment?.volume_analysis?.institutional_activity ? 'text-green-600' : 'text-gray-500'}
-                    />
-                    <MetricItem
-                        icon={Target}
-                        label="Khung thời gian"
-                        value={risk_assessment?.time_horizon || 'K/C'}
                     />
                 </InfoCard>
 
@@ -165,59 +142,24 @@ const SymbolInfoPanel = ({ symbol }) => {
                     <MetricItem
                         icon={Zap}
                         label="Độ nhất quán"
-                        value={formatPercent(speed_analysis?.consistency_score)}
+                        value={formatPercent(trend_consistency?.consistency_score)}
                     />
                 </InfoCard>
 
-                <InfoCard title="Phân tích Khối lượng">
-                    <MetricItem
-                        icon={BarChart}
-                        label="Xu hướng khối lượng"
-                        value={risk_assessment?.volume_analysis?.volume_trend || 'K/C'}
-                        valueClassName="text-blue-600"
-                    />
-                    <MetricItem
-                        icon={Activity}
-                        label="Chất lượng khối lượng"
-                        value={risk_assessment?.volume_analysis?.volume_quality || 'K/C'}
-                        valueClassName="text-purple-600"
-                    />
-                    <MetricItem
-                        icon={TrendingUp}
-                        label="Tỷ lệ khối lượng"
-                        value={formatNumber(risk_assessment?.volume_analysis?.recent_volume_ratio)}
-                        valueClassName={risk_assessment?.volume_analysis?.recent_volume_ratio > 1 ? 'text-green-600' : 'text-red-600'}
-                    />
+                <InfoCard title="Quản lý Rủi ro">
                     <MetricItem
                         icon={Shield}
                         label="Stop loss"
-                        value={formatPercent(risk_assessment?.stop_loss_distance)}
+                        value={formatPercent(stop_loss_distance)}
                         valueClassName="text-red-600"
                     />
                 </InfoCard>
 
                 <InfoCard title="Thống kê Hiệu suất">
                     <MetricItem
-                        icon={CheckCircle}
-                        label="Phiên vượt trội"
-                        value={`${metrics?.outperforming_days || 0}/${metrics?.total_days || 0}`}
-                        valueClassName="text-green-600"
-                    />
-                    <MetricItem
-                        icon={XCircle}
-                        label="Phiên tụt hậu"
-                        value={`${metrics?.underperforming_days || 0}/${metrics?.total_days || 0}`}
-                        valueClassName="text-red-600"
-                    />
-                    <MetricItem
                         icon={BarChart}
                         label="Biến động RS"
                         value={formatPercent(metrics?.rs_volatility)}
-                    />
-                    <MetricItem
-                        icon={Activity}
-                        label="Biến động CRS"
-                        value={formatPercent(metrics?.crs_volatility)}
                     />
                 </InfoCard>
 

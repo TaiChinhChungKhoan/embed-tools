@@ -54,9 +54,6 @@ const GroupInfoPanelMinified = ({ group, groupData, analyzeData }) => {
     const {
         metrics = {},
         performance_summary = {},
-        speed_analysis = {},
-        direction_analysis = {},
-        risk_assessment = {}
     } = groupData;
 
     // --- Helpers for translation and formatting ---
@@ -78,14 +75,14 @@ const GroupInfoPanelMinified = ({ group, groupData, analyzeData }) => {
                         <CompactMetricItem
                             icon={TrendingUp}
                             label="RS"
-                            value={formatPercent(metrics?.current_rs)}
+                            value={metrics?.current_rs ? `${metrics.current_rs.toFixed(1)}%` : 'K/C'}
                             valueClassName="text-blue-600"
                         />
                         <CompactMetricItem
-                            icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                            label="5d"
-                            value={formatPercent(metrics?.rs_5d_change)}
-                            valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
+                            icon={metrics?.rs_slope_fast > 0 ? ArrowUpRight : ArrowDownRight}
+                            label="Fast"
+                            value={formatPercent(metrics?.rs_slope_fast)}
+                            valueClassName={getRsChangeColor(metrics?.rs_slope_fast)}
                         />
                     </CompactInfoCard>
 
@@ -96,36 +93,19 @@ const GroupInfoPanelMinified = ({ group, groupData, analyzeData }) => {
                         <CompactMetricItem
                             icon={Zap}
                             label="Tốc độ"
-                            value={formatPercent(speed_analysis?.raw_speed_5d)}
+                            value={formatPercent(metrics?.mps_acceleration)}
                         />
                         <CompactMetricItem
-                            icon={direction_analysis?.direction === 'Tăng trưởng' ? TrendingUp : TrendingDown}
+                            icon={performance_summary?.rs_trend === 'Tăng trưởng' ? TrendingUp : TrendingDown}
                             label="Hướng"
-                            value={direction_analysis?.direction}
-                            valueClassName={getDirectionColor(direction_analysis?.direction)}
+                            value={performance_summary?.rs_trend}
+                            valueClassName={getDirectionColor(performance_summary?.rs_trend)}
                         />
                     </CompactInfoCard>
                 </div>
 
-                {/* Risk & CRS Row */}
+                {/* CRS Row */}
                 <div className="grid grid-cols-2 gap-2">
-                    <CompactInfoCard
-                        title="Rủi ro"
-                        tooltip="Mức độ rủi ro và quy mô vị thế gợi ý"
-                    >
-                        <CompactMetricItem
-                            icon={Shield}
-                            label="Mức độ"
-                            value={risk_assessment?.risk_level}
-                            valueClassName={getRiskColor(risk_assessment?.risk_level)}
-                        />
-                        <CompactMetricItem
-                            icon={BarChart}
-                            label="Vị thế"
-                            value={risk_assessment?.suggested_position_size || 'K/C'}
-                        />
-                    </CompactInfoCard>
-
                     <CompactInfoCard
                         title="CRS"
                         tooltip="Cumulative Relative Strength analysis"
@@ -143,53 +123,37 @@ const GroupInfoPanelMinified = ({ group, groupData, analyzeData }) => {
                             valueClassName={getCrsStatusColor(performance_summary?.crs_status)}
                         />
                     </CompactInfoCard>
+
+                    <CompactInfoCard title="Chi tiết bổ sung">
+                        <div className="grid grid-cols-3 gap-1 text-center">
+                            <div>
+                                <div className="text-xs text-gray-500">Fast</div>
+                                <div className={`font-mono font-semibold text-xs ${
+                                    getRsChangeColor(metrics?.rs_slope_fast)
+                                }`}>
+                                    {formatPercent(metrics?.rs_slope_fast)}
+                                </div>
+                            </div>
+                            <div>
+                                <div className="text-xs text-gray-500">Slow</div>
+                                <div className={`font-mono font-semibold text-xs ${
+                                    getRsChangeColor(metrics?.rs_slope_slow)
+                                }`}>
+                                    {formatPercent(metrics?.rs_slope_slow)}
+                                </div>
+                            </div>
+                            <div>
+                                <div className="text-xs text-gray-500">Điểm</div>
+                                <div className="font-mono font-semibold text-xs">
+                                    {formatNumber(performance_summary?.strength_score)}
+                                </div>
+                            </div>
+                        </div>
+                    </CompactInfoCard>
                 </div>
 
-                {/* Additional metrics in a single row */}
-                <CompactInfoCard title="Chi tiết bổ sung">
-                    <div className="grid grid-cols-3 gap-1 text-center">
-                        <div>
-                            <div className="text-xs text-gray-500">21d</div>
-                            <div className={`font-mono font-semibold text-xs ${
-                                getRsChangeColor(metrics?.rs_21d_change)
-                            }`}>
-                                {formatPercent(metrics?.rs_21d_change)}
-                            </div>
-                        </div>
-                        <div>
-                            <div className="text-xs text-gray-500">Sức mạnh</div>
-                            <div className="font-mono font-semibold text-xs text-purple-600">
-                                {direction_analysis?.trend_strength || 'K/C'}
-                            </div>
-                        </div>
-                        <div>
-                            <div className="text-xs text-gray-500">Điểm</div>
-                            <div className="font-mono font-semibold text-xs">
-                                {formatNumber(performance_summary?.strength_score)}
-                            </div>
-                        </div>
-                    </div>
-                </CompactInfoCard>
 
-                {/* Volume Analysis Row */}
-                <CompactInfoCard title="Khối lượng">
-                    <div className="grid grid-cols-2 gap-1 text-center">
-                        <div>
-                            <div className="text-xs text-gray-500">Xu hướng</div>
-                            <div className="font-mono font-semibold text-xs text-blue-600">
-                                {risk_assessment?.volume_analysis?.volume_trend || 'K/C'}
-                            </div>
-                        </div>
-                        <div>
-                            <div className="text-xs text-gray-500">Tỷ lệ</div>
-                            <div className={`font-mono font-semibold text-xs ${
-                                getRecentVolumeRatioColor(risk_assessment?.volume_analysis?.recent_volume_ratio)
-                            }`}>
-                                {formatNumber(risk_assessment?.volume_analysis?.recent_volume_ratio)}
-                            </div>
-                        </div>
-                    </div>
-                </CompactInfoCard>
+
             </div>
         </div>
     );

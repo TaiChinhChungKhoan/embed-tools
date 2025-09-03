@@ -23,13 +23,13 @@ export const TAB_CONFIG = {
   //   description: 'Phân tích dòng tiền và luân chuyển vốn trong thị trường',
   //   sections: ['sector_rotation', 'market_cap_flow', 'institutional_flow']
   // },
-  'momentum-analysis': {
-    key: 'momentum-analysis',
-    label: 'Phân tích động lượng',
-    icon: Activity,
-    description: 'Chu kỳ động lượng và phân bổ tốc độ',
-    sections: ['momentum_cycles', 'speed_distribution']
-  }
+  // 'momentum-analysis': {
+  //   key: 'momentum-analysis',
+  //   label: 'Phân tích động lượng',
+  //   icon: Activity,
+  //   description: 'Chu kỳ động lượng và phân bổ tốc độ',
+  //   sections: ['momentum_cycles', 'speed_distribution']
+  // }
 };
 
 // Helper function to check if a section has meaningful data

@@ -8,8 +8,6 @@ const IndividualStockAnalysis = ({ individualStockAnalysis, getQuadrantColor, re
     individualStockAnalysis.stock_momentum?.accumulation_candidates?.symbols,
     individualStockAnalysis.stock_momentum?.stealth_accumulation?.symbols,
     individualStockAnalysis.stock_momentum?.breakout_candidates?.symbols,
-    individualStockAnalysis.stock_risk?.momentum_exhaustion?.symbols,
-    individualStockAnalysis.stock_risk?.falling_knife?.symbols,
     individualStockAnalysis.stock_risk?.dead_cat_bounce?.symbols,
     individualStockAnalysis.stock_risk?.distribution_signals?.symbols,
     individualStockAnalysis.stock_performers?.top_symbols,
@@ -79,8 +77,6 @@ const IndividualStockAnalysis = ({ individualStockAnalysis, getQuadrantColor, re
       {/* Stock Risk */}
       {(() => {
         const hasRiskData = [
-          individualStockAnalysis.stock_risk?.momentum_exhaustion?.symbols,
-          individualStockAnalysis.stock_risk?.falling_knife?.symbols,
           individualStockAnalysis.stock_risk?.dead_cat_bounce?.symbols,
           individualStockAnalysis.stock_risk?.distribution_signals?.symbols
         ].some(data => data && data.length > 0);
@@ -92,21 +88,6 @@ const IndividualStockAnalysis = ({ individualStockAnalysis, getQuadrantColor, re
             <h4 className="font-medium text-red-800 mb-3">{individualStockAnalysis.stock_risk.title}</h4>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Momentum Exhaustion */}
-              {individualStockAnalysis.stock_risk.momentum_exhaustion?.symbols?.length > 0 && (
-                <div>
-                  <h5 className="font-medium text-red-700 mb-2">Cảnh báo kiệt sức động lượng</h5>
-                  {renderInsightItems(individualStockAnalysis.stock_risk.momentum_exhaustion.symbols, 'cảnh báo kiệt sức động lượng')}
-                </div>
-              )}
-
-              {/* Falling Knife */}
-              {individualStockAnalysis.stock_risk.falling_knife?.symbols?.length > 0 && (
-                <div>
-                  <h5 className="font-medium text-red-700 mb-2">Cảnh báo dao rơi</h5>
-                  {renderInsightItems(individualStockAnalysis.stock_risk.falling_knife.symbols, 'cảnh báo dao rơi')}
-                </div>
-              )}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
@@ -226,24 +207,6 @@ const IndividualStockAnalysis = ({ individualStockAnalysis, getQuadrantColor, re
         </div>
       )}
 
-      {/* Stocks Likely to Decline */}
-      {(individualStockAnalysis.stock_risk?.falling_knife?.symbols?.length > 0 || individualStockAnalysis.stock_risk?.momentum_exhaustion?.symbols?.length > 0) && (
-        <div className="mb-6">
-          <h4 className="font-medium text-orange-800 mb-2">Cổ phiếu có thể giảm</h4>
-          {individualStockAnalysis.stock_risk.falling_knife.symbols?.length > 0 && (
-            <div>
-              <div className="font-medium text-orange-700 mb-1">Dao rơi (tránh hoàn toàn)</div>
-              {renderInsightItems(individualStockAnalysis.stock_risk.falling_knife.symbols, 'dao rơi')}
-            </div>
-          )}
-          {individualStockAnalysis.stock_risk.momentum_exhaustion.symbols?.length > 0 && (
-            <div className="mt-2">
-              <div className="font-medium text-orange-700 mb-1">Động lượng kiệt quệ (cần thận trọng)</div>
-              {renderInsightItems(individualStockAnalysis.stock_risk.momentum_exhaustion.symbols, 'kiệt quệ động lượng')}
-            </div>
-          )}
-        </div>
-      )}
     </div>
   );
 };

@@ -28,9 +28,9 @@ const InstrumentSelector = ({ value, onChange }) => {
         </Select>
       </div>
       
-      <div className="text-sm text-gray-600">
+      <div className="text-xs sm:text-sm text-slate-600">
         <p>Select a preset instrument to automatically fill in birth details.</p>
-        <p>Or enter custom instrument details manually.</p>
+        <p className="mt-1">Or enter custom instrument details manually.</p>
       </div>
     </div>
   );

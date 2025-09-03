@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "generated_at": "2025-08-30 20:50:48",
+    "timeframe": "1W",
+    "total_symbols": 404,
+    "signals_found": 5,
+    "parameters": {
+      "max_days": 10,
+      "max_breakout": 0.05,
+      "min_confidence": 0.6,
+      "optimize": false,
+      "data_days": 1260
+    },
+    "performance": {
+      "total_time": 36.79103398323059,
+      "avg_time_per_symbol": 0.09106691580007573,
+      "data_reduction": "0.0%",
+      "optimizations_applied": [
+        "pre_filtering",
+        "smart_data_loading",
+        "memory_efficiency"
+      ]
+    }
+  },
+  "results": [
+    {
+      "symbol": "CTF",
+      "pattern_start_timestamp": "2025-08-31",
+      "last_close": 20.95,
+      "resistance_level": 22.737779375035064,
+      "support_level": 20.612220624964937,
+      "distance_from_resistance_pct": -7.862594431705835,
+      "distance_from_support_pct": 1.6387335512310264,
+      "confidence": 0.3921040609461153,
+      "pattern_duration": 7,
+      "still_contracting": true,
+      "bars_since_pattern_ended": 0,
+      "volume_ratio": 0.82,
+      "contraction_rating": 6.0
+    },
+    {
+      "symbol": "KDC",
+      "pattern_start_timestamp": "2025-08-31",
+      "last_close": 53.9,
+      "resistance_level": 58.27932202769516,
+      "support_level": 52.49067797230485,
+      "distance_from_resistance_pct": -7.514366803399058,
+      "distance_from_support_pct": 2.684899647207327,
+      "confidence": 0.4001015553194251,
+      "pattern_duration": 18,
+      "still_contracting": true,
+      "bars_since_pattern_ended": 0,
+      "volume_ratio": 0.71,
+      "contraction_rating": 6.0
+    },
+    {
+      "symbol": "KOS",
+      "pattern_start_timestamp": "2025-08-31",
+      "last_close": 38.75,
+      "resistance_level": 39.02257935508612,
+      "support_level": 38.39242064491387,
+      "distance_from_resistance_pct": -0.6985170114096909,
+      "distance_from_support_pct": 0.9313800721067631,
+      "confidence": 0.6831330270055787,
+      "pattern_duration": 33,
+      "still_contracting": true,
+      "bars_since_pattern_ended": 0,
+      "volume_ratio": 0.92,
+      "contraction_rating": 10.0
+    },
+    {
+      "symbol": "QTP",
+      "pattern_start_timestamp": "2025-08-31",
+      "last_close": 13.5,
+      "resistance_level": 13.537579862016173,
+      "support_level": 12.911420137983828,
+      "distance_from_resistance_pct": -0.2775966044094407,
+      "distance_from_support_pct": 4.558598943617683,
+      "confidence": 0.4145463642038756,
+      "pattern_duration": 7,
+      "still_contracting": true,
+      "bars_since_pattern_ended": 0,
+      "volume_ratio": 0.7,
+      "contraction_rating": 8.0
+    },
+    {
+      "symbol": "VEA",
+      "pattern_start_timestamp": "2025-08-31",
+      "last_close": 39.3,
+      "resistance_level": 39.9709054010863,
+      "support_level": 37.899094598913706,
+      "distance_from_resistance_pct": -1.6784843734564692,
+      "distance_from_support_pct": 3.696408623773416,
+      "confidence": 0.4082879972684391,
+      "pattern_duration": 8,
+      "still_contracting": true,
+      "bars_since_pattern_ended": 0,
+      "volume_ratio": 1.05,
+      "contraction_rating": 8.0
+    }
+  ]
+}

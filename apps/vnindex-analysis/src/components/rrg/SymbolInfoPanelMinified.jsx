@@ -62,12 +62,33 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
 
   // Detect data structure type
   const isRRGData = fullSymbolData.quadrant && fullSymbolData.velocity !== undefined;
-  const isRSData = fullSymbolData.metrics && fullSymbolData.performance_summary;
+  const isRSData = fullSymbolData.metrics || fullSymbolData.performance_summary || fullSymbolData.speed_analysis || fullSymbolData.direction_analysis;
   const isInsightsData = fullSymbolData.speed_score !== undefined && fullSymbolData.speed_category;
+
+  // Debug logging (remove in production)
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`SymbolInfoPanelMinified Debug for ${fullSymbolData.symbol || fullSymbolData.name}:`, {
+      isRRGData, isRSData, isInsightsData,
+      hasSpeedAnalysis: !!fullSymbolData.speed_analysis,
+      speedAnalysisKeys: fullSymbolData.speed_analysis ? Object.keys(fullSymbolData.speed_analysis) : []
+    });
+  }
 
   // --- Helpers for translation and formatting ---
   const formatPercent = (val) => (typeof val === 'number' ? `${(val * 100).toFixed(1)}%` : 'K/C');
   const formatNumber = (val) => (typeof val === 'number' ? val.toFixed(2) : 'K/C');
+  
+  // Function to get color for RS value
+  const getRsValueColor = (rs) => {
+    if (typeof rs === 'number') {
+      if (rs >= 70) return 'text-green-600';      // Strong positive
+      if (rs >= 50) return 'text-blue-600';       // Positive
+      if (rs >= 30) return 'text-yellow-600';     // Neutral
+      if (rs >= 0) return 'text-orange-600';      // Weak negative
+      return 'text-red-600';                       // Strong negative
+    }
+    return 'text-gray-600';
+  };
 
   // Extract data based on structure type
   const getData = () => {
@@ -77,34 +98,30 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
         name: fullSymbolData.symbol || fullSymbolData.name,
         symbol: fullSymbolData.symbol,
         rs: fullSymbolData.rs_ratio || fullSymbolData.current_rs || 1.0,
-        rs_5d: fullSymbolData.rs_5d_change || 0,
-        rs_21d: fullSymbolData.rs_21d_change || 0,
+        rs_fast: fullSymbolData.rs_slope_fast || 0,
+        rs_slow: fullSymbolData.rs_slope_slow || 0,
         speed: fullSymbolData.velocity || 0,
         direction: fullSymbolData.direction || fullSymbolData.trajectory_strength || 'K/C',
-        risk_level: fullSymbolData.risk_level || 'Trung bình',
-        position_size: fullSymbolData.suggested_position_size || 'K/C',
         crs: fullSymbolData.current_crs || 0,
         crs_status: fullSymbolData.crs_status || 'K/C',
-        trend_strength: fullSymbolData.trend_strength || 'K/C',
+        trend_strength: fullSymbolData.trend_strength?.overall_trend_strength || fullSymbolData.trend_strength || 'K/C',
         strength_score: fullSymbolData.strength_score || 0,
         quadrant: fullSymbolData.quadrant || 'K/C'
       };
     } else if (isRSData) {
       // Full RS analysis data structure
-      const { metrics = {}, performance_summary = {}, speed_analysis = {}, direction_analysis = {}, risk_assessment = {} } = fullSymbolData;
+      const { metrics = {}, performance_summary = {}, trend_consistency = {} } = fullSymbolData;
       return {
         name: fullSymbolData.name || fullSymbolData.symbol,
         symbol: fullSymbolData.symbol,
         rs: metrics?.current_rs || 1.0,
-        rs_5d: metrics?.rs_5d_change || 0,
-        rs_21d: metrics?.rs_21d_change || 0,
-        speed: speed_analysis?.raw_speed_5d || speed_analysis?.weighted_speed || 0,
-        direction: direction_analysis?.direction || 'K/C',
-        risk_level: risk_assessment?.risk_level || 'Trung bình',
-        position_size: risk_assessment?.suggested_position_size || 'K/C',
+        rs_fast: metrics?.rs_slope_fast || 0,
+        rs_slow: metrics?.rs_slope_slow || 0,
+        speed: metrics?.mps_acceleration || 0,
+        direction: performance_summary?.rs_trend || 'K/C',
         crs: metrics?.current_crs || 0,
         crs_status: performance_summary?.crs_status || 'K/C',
-        trend_strength: direction_analysis?.trend_strength || 'K/C',
+        trend_strength: performance_summary?.strength_score ? performance_summary.strength_score.toFixed(1) : 'K/C',
         strength_score: performance_summary?.strength_score || 0,
         quadrant: performance_summary?.quadrant || 'K/C'
       };
@@ -114,15 +131,13 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
         name: fullSymbolData.name || fullSymbolData.symbol || fullSymbolData.custom_id,
         symbol: fullSymbolData.symbol || fullSymbolData.custom_id,
         rs: fullSymbolData.rs_ratio || fullSymbolData.current_rs || 1.0,
-        rs_5d: fullSymbolData.rs_5d_change || 0,
-        rs_21d: fullSymbolData.rs_21d_change || 0,
+        rs_fast: fullSymbolData.rs_slope_fast || 0,
+        rs_slow: fullSymbolData.rs_slope_slow || 0,
         speed: fullSymbolData.speed_score || fullSymbolData.velocity || 0,
         direction: fullSymbolData.speed_category || fullSymbolData.direction || 'K/C',
-        risk_level: fullSymbolData.risk_level || 'Trung bình',
-        position_size: fullSymbolData.suggested_position_size || 'K/C',
         crs: fullSymbolData.current_crs || 0,
         crs_status: fullSymbolData.crs_status || 'K/C',
-        trend_strength: fullSymbolData.trend_strength || 'K/C',
+        trend_strength: fullSymbolData.trend_strength?.overall_trend_strength || fullSymbolData.trend_strength || 'K/C',
         strength_score: fullSymbolData.strength_score || 0,
         quadrant: fullSymbolData.rrg_position || fullSymbolData.quadrant || 'K/C'
       };
@@ -132,15 +147,13 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
         name: fullSymbolData.name || fullSymbolData.symbol || fullSymbolData.custom_id || 'Unknown',
         symbol: fullSymbolData.symbol || fullSymbolData.custom_id,
         rs: fullSymbolData.current_rs || fullSymbolData.rs_ratio || 1.0,
-        rs_5d: fullSymbolData.rs_5d_change || 0,
-        rs_21d: fullSymbolData.rs_21d_change || 0,
-        speed: fullSymbolData.speed_score || fullSymbolData.velocity || fullSymbolData.weighted_speed || 0,
+        rs_fast: fullSymbolData.rs_slope_fast || 0,
+        rs_slow: fullSymbolData.rs_slope_slow || 0,
+        speed: fullSymbolData.speed_score || fullSymbolData.velocity || fullSymbolData.weighted_speed || fullSymbolData.speed_analysis?.weighted_speed || fullSymbolData.speed_analysis?.speed_fast || fullSymbolData.speed_analysis?.momentum_acceleration || 0,
         direction: fullSymbolData.speed_category || fullSymbolData.direction || fullSymbolData.trajectory_strength || 'K/C',
-        risk_level: fullSymbolData.risk_level || 'Trung bình',
-        position_size: fullSymbolData.suggested_position_size || 'K/C',
         crs: fullSymbolData.current_crs || 0,
         crs_status: fullSymbolData.crs_status || 'K/C',
-        trend_strength: fullSymbolData.trend_strength || 'K/C',
+        trend_strength: fullSymbolData.trend_strength?.overall_trend_strength || fullSymbolData.trend_strength || 'K/C',
         strength_score: fullSymbolData.strength_score || 0,
         quadrant: fullSymbolData.rrg_position || fullSymbolData.quadrant || 'K/C'
       };
@@ -167,14 +180,14 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
             <CompactMetricItem
               icon={TrendingUp}
               label="RS"
-              value={formatPercent(data.rs)}
-              valueClassName="text-blue-600"
+              value={data.rs ? `${data.rs.toFixed(1)}%` : 'K/C'}
+              valueClassName={getRsValueColor(data.rs)}
             />
             <CompactMetricItem
-              icon={data.rs_5d > 0 ? ArrowUpRight : ArrowDownRight}
-              label="5d"
-              value={formatPercent(data.rs_5d)}
-              valueClassName={getRsChangeColor(data.rs_5d)}
+              icon={data.rs_fast > 0 ? ArrowUpRight : ArrowDownRight}
+              label="Fast"
+              value={formatPercent(data.rs_fast)}
+              valueClassName={getRsChangeColor(data.rs_fast)}
             />
           </CompactInfoCard>
 
@@ -196,25 +209,8 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
           </CompactInfoCard>
         </div>
 
-        {/* Risk & CRS Row */}
+        {/* CRS & Additional Details Row */}
         <div className="grid grid-cols-2 gap-2">
-          <CompactInfoCard
-            title="Rủi ro"
-            tooltip="Mức độ rủi ro và quy mô vị thế gợi ý"
-          >
-            <CompactMetricItem
-              icon={Shield}
-              label="Mức độ"
-              value={data.risk_level}
-              valueClassName={getRiskColor(data.risk_level)}
-            />
-            <CompactMetricItem
-              icon={BarChart}
-              label="Vị thế"
-              value={data.position_size}
-            />
-          </CompactInfoCard>
-
           <CompactInfoCard
             title="CRS"
             tooltip="Cumulative Relative Strength analysis"
@@ -232,33 +228,32 @@ const SymbolInfoPanelMinified = ({ symbol, analyzeData }) => {
               valueClassName={getCrsStatusColor(data.crs_status)}
             />
           </CompactInfoCard>
-        </div>
 
-        {/* Additional metrics in a single row */}
-        <CompactInfoCard title="Chi tiết bổ sung">
-          <div className="grid grid-cols-3 gap-1 text-center">
-            <div>
-              <div className="text-xs text-gray-500">21d</div>
-              <div className={`font-mono font-semibold text-xs ${
-                getRsChangeColor(data.rs_21d)
-              }`}>
-                {formatPercent(data.rs_21d)}
+          <CompactInfoCard title="Chi tiết bổ sung">
+            <div className="grid grid-cols-3 gap-1 text-center">
+              <div>
+                <div className="text-xs text-gray-500">Slow</div>
+                <div className={`font-mono font-semibold text-xs ${
+                  getRsChangeColor(data.rs_slow)
+                }`}>
+                  {formatPercent(data.rs_slow)}
+                </div>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500">Sức mạnh</div>
+                <div className="font-mono font-semibold text-xs text-purple-600">
+                  {data.trend_strength}
+                </div>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500">Điểm</div>
+                <div className="font-mono font-semibold text-xs">
+                  {formatNumber(data.strength_score)}
+                </div>
               </div>
             </div>
-            <div>
-              <div className="text-xs text-gray-500">Sức mạnh</div>
-              <div className="font-mono font-semibold text-xs text-purple-600">
-                {data.trend_strength}
-              </div>
-            </div>
-            <div>
-              <div className="text-xs text-gray-500">Điểm</div>
-              <div className="font-mono font-semibold text-xs">
-                {formatNumber(data.strength_score)}
-              </div>
-            </div>
-          </div>
-        </CompactInfoCard>
+          </CompactInfoCard>
+        </div>
       </div>
     </div>
   );

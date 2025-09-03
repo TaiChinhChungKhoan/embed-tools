@@ -3,15 +3,12 @@ import { TrendingUp, TrendingDown, Activity } from 'lucide-react';
 import Card from './Card';
 
 const VSAStockCard = ({ stock, variant = 'normal' }) => {
-    const analysis = stock.latest_analysis;
-    const bullishScore = analysis?.bullish_score || 0;
-    const allSignals = stock.recent_analyses?.flatMap(analysis => 
-        analysis.signals?.map(signal => ({
-            ...signal,
-            date: analysis.timestamp,
-            days_ago: analysis.days_ago
-        })) || []
-    ) || [];
+    // Use the new data structure directly
+    const score = stock.score || 0;
+    const price = stock.price || 0;
+    const pattern = stock.pattern || '';
+    const recommendation = stock.rec || '';
+    const atZone = stock.at_zone || false;
 
     // Helper function to get sentiment color
     const getSentimentColor = (sentiment) => {
@@ -55,28 +52,20 @@ const VSAStockCard = ({ stock, variant = 'normal' }) => {
         }
     };
 
-    // Helper function to get signal icon
-    const getSignalIcon = (bias) => {
-        switch (bias?.toLowerCase()) {
-            case 'bullish':
-                return <TrendingUp className="h-4 w-4" />;
-            case 'bearish':
-                return <TrendingDown className="h-4 w-4" />;
-            default:
-                return <Activity className="h-4 w-4" />;
-        }
+    // Helper function to get score icon based on sentiment
+    const getScoreIcon = (score) => {
+        if (score > 2) return <TrendingUp className="h-4 w-4" />;
+        if (score < -2) return <TrendingDown className="h-4 w-4" />;
+        return <Activity className="h-4 w-4" />;
     };
 
-    // Filter signals based on variant
-    const displaySignals = variant === 'strong' 
-        ? allSignals.filter(signal => signal.strength === 'strong')
-        : allSignals;
-
-    // Helper function to format date
-    const formatDate = (timestamp) => {
-        if (!timestamp) return 'Unknown';
-        const date = new Date(timestamp);
-        return date.toLocaleDateString('vi-VN');
+    // Helper function to get score color
+    const getScoreColor = (score) => {
+        if (score > 5) return 'text-green-600 dark:text-green-400';
+        if (score > 2) return 'text-green-500 dark:text-green-300';
+        if (score < -5) return 'text-red-600 dark:text-red-400';
+        if (score < -2) return 'text-red-500 dark:text-red-300';
+        return 'text-gray-600 dark:text-gray-400';
     };
 
     return (
@@ -87,18 +76,12 @@ const VSAStockCard = ({ stock, variant = 'normal' }) => {
                         {stock.symbol}
                     </h4>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                        {analysis?.market_state || 'Unknown'}
+                        {pattern || 'No Pattern'}
                     </p>
                 </div>
                 <div className="text-right">
-                    <div className={`text-lg font-bold ${
-                        bullishScore > 20 
-                            ? 'text-green-600 dark:text-green-400' 
-                            : bullishScore < -20 
-                                ? 'text-red-600 dark:text-red-400' 
-                                : 'text-gray-600 dark:text-gray-400'
-                    }`}>
-                        {bullishScore.toFixed(1)}
+                    <div className={`text-lg font-bold ${getScoreColor(score)}`}>
+                        {score.toFixed(1)}
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">VSA Score</div>
                 </div>
@@ -106,60 +89,49 @@ const VSAStockCard = ({ stock, variant = 'normal' }) => {
             
             <div className="space-y-2 mb-3">
                 <div className="flex justify-between text-sm">
-                    <span className="text-gray-600 dark:text-gray-400">Khối lượng:</span>
-                    <span className="font-medium">{analysis?.volume_significance?.toFixed(1)}%</span>
+                    <span className="text-gray-600 dark:text-gray-400">Price:</span>
+                    <span className="font-medium text-blue-600 dark:text-blue-400">{price.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                    <span className="text-gray-600 dark:text-gray-400">Độ tin cậy:</span>
-                    <span className="font-medium">{analysis?.pattern_reliability?.toFixed(1)}%</span>
+                    <span className="text-gray-600 dark:text-gray-400">Pattern:</span>
+                    <span className="font-medium">{pattern || 'N/A'}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                    <span className="text-gray-600 dark:text-gray-400">Tín hiệu:</span>
-                    <span className="font-medium">{allSignals.length}</span>
+                    <span className="text-gray-600 dark:text-gray-400">At Zone:</span>
+                    <span className={`font-medium ${atZone ? 'text-yellow-600 dark:text-yellow-400' : 'text-gray-500'}`}>
+                        {atZone ? '●' : '○'}
+                    </span>
                 </div>
             </div>
 
-            {/* Signals */}
-            {displaySignals.length > 0 ? (
-                <div className="space-y-2">
-                    {displaySignals.slice(0, variant === 'strong' ? displaySignals.length : 5).map((signal, signalIndex) => (
-                        <div key={signalIndex} className="bg-gray-50 dark:bg-gray-800 rounded p-2">
-                            <div className="flex items-center justify-between mb-1">
-                                <div className="flex items-center gap-2">
-                                    <span className={getSentimentColor(signal.bias)}>
-                                        {getSignalIcon(signal.bias)}
-                                    </span>
-                                    <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        {signal.signal_name}
-                                    </span>
-                                </div>
-                                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getSentimentBgColor(signal.bias)}`}>
-                                    {signal.bias}
-                                </span>
-                            </div>
-                            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-                                <span>{formatDate(signal.date)}</span>
-                                <span className={getSignalStrengthColor(signal.strength)}>
-                                    {signal.strength}
-                                </span>
-                            </div>
-                            {signal.action_suggestion && (
-                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                                    {signal.action_suggestion}
-                                </p>
-                            )}
-                        </div>
-                    ))}
-                    {variant === 'normal' && allSignals.length > 5 && (
-                        <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                            +{allSignals.length - 5} tín hiệu khác
-                        </div>
-                    )}
+            {/* Recommendation */}
+            {recommendation && (
+                <div className="bg-gray-50 dark:bg-gray-800 rounded p-3">
+                    <div className="flex items-center gap-2 mb-2">
+                        <span className={getScoreColor(score)}>
+                            {getScoreIcon(score)}
+                        </span>
+                        <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Recommendation
+                        </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                        <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                            recommendation === 'Buy Signal' 
+                                ? getSentimentBgColor('bullish')
+                                : recommendation === 'Sell Signal'
+                                    ? getSentimentBgColor('bearish')
+                                    : getSentimentBgColor('neutral')
+                        }`}>
+                            {recommendation}
+                        </span>
+                        {atZone && (
+                            <span className="text-xs text-yellow-600 dark:text-yellow-400">
+                                Key Zone Alert
+                            </span>
+                        )}
+                    </div>
                 </div>
-            ) : (
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Không có tín hiệu VSA
-                </p>
             )}
         </Card>
     );

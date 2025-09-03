@@ -193,18 +193,22 @@ const IndustryOverviewDashboard = () => {
             analyzeData={analyticsData}
           />
           
-          {/* Detailed Analysis */}
-          <DetailedAnalysis
+          {/* Detailed Analysis - Hidden as momentum analysis is disabled */}
+          {/* <DetailedAnalysis
             detailedAnalysis={detailedAnalysis}
             getSentimentColor={getSentimentColor}
-          />
+          /> */}
 
         
         </div>
       )}
       {activeTab === 'ranking' && (
         <div className="space-y-6">
-          <IndustryRSAnalysis />
+          <IndustryRSAnalysis 
+            key={`industry-rs-analysis-${timeframe}`}
+            timeframe={timeframe}
+            analyticsData={analyticsData}
+          />
         </div>
       )}
       {activeTab === 'rrg' && (
@@ -253,7 +257,7 @@ const IndustryOverviewDashboard = () => {
       )}
       {activeTab === 'heatmap' && (
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
-          <IndustryStrengthHeatmap industries={industries} />
+          <IndustryStrengthHeatmap industries={industries} timeframe={timeframe} />
         </div>
       )}
     </div>

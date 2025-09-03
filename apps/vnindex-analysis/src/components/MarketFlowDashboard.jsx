@@ -4,7 +4,6 @@ import Card from './Card';
 import { getSentimentColor } from './detailed-analysis/utils/colorUtils';
 import SectorRotation from './detailed-analysis/sections/SectorRotation';
 import MarketCapFlow from './detailed-analysis/sections/MarketCapFlow';
-import InstitutionalFlow from './detailed-analysis/sections/InstitutionalFlow';
 
 
 
@@ -23,18 +22,48 @@ const MarketFlowDashboard = () => {
   }
 
   if (error || !analyticsData) {
-    return null;
+    return (
+      <Card>
+        <div className="text-center text-gray-500 space-y-2">
+          {error ? (
+            <div>
+              <div className="text-red-600 font-medium">Lỗi tải dữ liệu dòng tiền:</div>
+              <div className="text-sm">{error}</div>
+            </div>
+          ) : (
+            <div>
+              <div className="font-medium">Trạng thái dữ liệu dòng tiền:</div>
+              <div className="text-sm space-y-1">
+                <div>• Có dữ liệu Analytics: {analyticsData ? '✅' : '❌'}</div>
+                {analyticsData && <div>• Khóa dữ liệu: {Object.keys(analyticsData).join(', ')}</div>}
+                {analyticsData?.insights && <div>• Insights có: {Object.keys(analyticsData.insights).join(', ')}</div>}
+              </div>
+            </div>
+          )}
+        </div>
+      </Card>
+    );
   }
 
   // Extract detailed analysis data
   const detailedAnalysis = analyticsData?.insights?.detailed_analysis || {};
   const sectorRotation = detailedAnalysis.sector_rotation;
   const marketCapFlow = detailedAnalysis.market_cap_flow;
-  const institutionalFlow = detailedAnalysis.institutional_flow;
 
   // Check if we have any market flow data
-  if (!sectorRotation && !marketCapFlow && !institutionalFlow) {
-    return null;
+  if (!sectorRotation && !marketCapFlow) {
+    return (
+      <Card>
+        <div className="text-center text-gray-500 space-y-2">
+          <div className="font-medium">Không có dữ liệu dòng tiền thị trường</div>
+          <div className="text-sm space-y-1">
+            <div>• Sector Rotation: {sectorRotation ? '✅' : '❌'}</div>
+            <div>• Market Cap Flow: {marketCapFlow ? '✅' : '❌'}</div>
+            <div>• Detailed Analysis Keys: {Object.keys(detailedAnalysis).join(', ')}</div>
+          </div>
+        </div>
+      </Card>
+    );
   }
 
   return (
@@ -44,9 +73,6 @@ const MarketFlowDashboard = () => {
 
       {/* Market Cap Flow Analysis */}
       {marketCapFlow && <MarketCapFlow marketCapFlow={marketCapFlow} />}
-
-      {/* Institutional Flow Analysis */}
-      {institutionalFlow && <InstitutionalFlow institutionalFlow={institutionalFlow} />}
     </div>
   );
 };

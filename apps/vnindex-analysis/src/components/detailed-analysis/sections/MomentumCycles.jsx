@@ -15,11 +15,11 @@ const CompactCandidateItem = ({ candidate }) => {
       <div className="flex items-center justify-end gap-4 text-xs">
         <div className="text-right">
           <div className="text-slate-500">Tốc độ</div>
-          <div className="font-semibold">{(candidate.speed * 100).toFixed(1)}%</div>
+          <div className="font-semibold">{candidate.speed.toFixed(2)}</div>
         </div>
         <div className="text-right">
           <div className="text-slate-500">Gia tốc</div>
-          <div className="font-semibold">{(candidate.acceleration * 100).toFixed(1)}%</div>
+          <div className="font-semibold">{candidate.acceleration.toFixed(2)}</div>
         </div>
         <div className="text-right">
           <div className="text-slate-500">Tỷ lệ</div>
@@ -72,6 +72,33 @@ const MomentumCycles = ({ momentumCycles }) => {
     exhaustion_phase,
     reversal_phase
   } = momentumCycles;
+
+  // Check if all phases are empty (count = 0)
+  const allPhasesEmpty = [
+    accumulation_phase,
+    acceleration_phase,
+    momentum_phase,
+    exhaustion_phase,
+    reversal_phase
+  ].every(phase => !phase || phase.count === 0);
+
+  // If all phases are empty, show a simplified view
+  if (allPhasesEmpty) {
+    return (
+      <div className="p-4 bg-white rounded-lg border">
+        <div>
+          <h3 className="font-bold text-base text-slate-800">Chu kỳ động lượng</h3>
+          {cycle_interpretation && (
+            <p className="text-sm text-slate-600 mt-1">{cycle_interpretation}</p>
+          )}
+        </div>
+        <div className="mt-4 text-center text-gray-500">
+          <div className="text-sm font-medium">Thị trường trong giai đoạn chuyển tiếp</div>
+          <div className="text-xs mt-1">Không có mã nào ở các pha động lượng rõ ràng - thị trường đang consolidate hoặc tích lũy</div>
+        </div>
+      </div>
+    );
+  }
 
   const theme = {
     accumulation: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', Icon: null },

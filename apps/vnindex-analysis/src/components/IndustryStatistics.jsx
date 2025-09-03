@@ -98,21 +98,21 @@ const IndustryStatistics = ({ industries, analysisDate, lookbackPeriod, keyMetri
       </h4>
       <div className="space-y-2">
         <div className="flex justify-between text-sm">
-          <span className="text-gray-600 dark:text-gray-400">Thấp (&lt;3%):</span>
+          <span className="text-gray-600 dark:text-gray-400">Thấp:</span>
           <span className="font-medium text-green-600 dark:text-green-400">
-            {industries.filter(i => i.metrics?.rs_volatility < 0.03).length}
+            {industries.filter(i => i.risk_level === 'Thấp').length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
-          <span className="text-gray-600 dark:text-gray-400">Trung bình (3-6%):</span>
+          <span className="text-gray-600 dark:text-gray-400">Trung bình:</span>
           <span className="font-medium text-yellow-600 dark:text-yellow-400">
-            {industries.filter(i => i.metrics?.rs_volatility >= 0.03 && i.metrics?.rs_volatility < 0.06).length}
+            {industries.filter(i => i.risk_level === 'Trung bình').length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
-          <span className="text-gray-600 dark:text-gray-400">Cao (&gt;6%):</span>
+          <span className="text-gray-600 dark:text-gray-400">Cao:</span>
           <span className="font-medium text-red-600 dark:text-red-400">
-            {industries.filter(i => i.metrics?.rs_volatility >= 0.06).length}
+            {industries.filter(i => i.risk_level === 'Cao').length}
           </span>
         </div>
       </div>
@@ -126,19 +126,19 @@ const IndustryStatistics = ({ industries, analysisDate, lookbackPeriod, keyMetri
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Tốt (&gt;60%):</span>
           <span className="font-medium text-green-600 dark:text-green-400">
-            {industries.filter(i => (i.metrics?.outperforming_days / i.metrics?.total_days) > 0.6).length}
+            {industries.filter(i => i.metrics?.up_ratio > 0.6).length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Trung bình (40-60%):</span>
           <span className="font-medium text-yellow-600 dark:text-yellow-400">
-            {industries.filter(i => (i.metrics?.outperforming_days / i.metrics?.total_days) >= 0.4 && (i.metrics?.outperforming_days / i.metrics?.total_days) <= 0.6).length}
+            {industries.filter(i => i.metrics?.up_ratio >= 0.4 && i.metrics?.up_ratio <= 0.6).length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Kém (&lt;40%):</span>
           <span className="font-medium text-red-600 dark:text-red-400">
-            {industries.filter(i => (i.metrics?.outperforming_days / i.metrics?.total_days) < 0.4).length}
+            {industries.filter(i => i.metrics?.up_ratio < 0.4).length}
           </span>
         </div>
       </div>
@@ -152,21 +152,21 @@ const IndustryStatistics = ({ industries, analysisDate, lookbackPeriod, keyMetri
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Tăng tốc:</span>
           <span className="font-medium text-green-600 dark:text-green-400">
-            {industries.filter(i => i.speed_analysis?.short_term_momentum > 0 && i.speed_analysis?.long_term_momentum > 0).length}
+            {industries.filter(i => i.metrics?.mps_acceleration > 0 && i.metrics?.rs_slope_fast > 0).length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Giảm tốc:</span>
           <span className="font-medium text-red-600 dark:text-red-400">
-            {industries.filter(i => i.speed_analysis?.short_term_momentum < 0 && i.speed_analysis?.long_term_momentum < 0).length}
+            {industries.filter(i => i.metrics?.mps_acceleration < 0 && i.metrics?.rs_slope_fast < 0).length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Hỗn hợp:</span>
           <span className="font-medium text-yellow-600 dark:text-yellow-400">
             {industries.filter(i => 
-              (i.speed_analysis?.short_term_momentum > 0 && i.speed_analysis?.long_term_momentum < 0) ||
-              (i.speed_analysis?.short_term_momentum < 0 && i.speed_analysis?.long_term_momentum > 0)
+              (i.metrics?.mps_acceleration > 0 && i.metrics?.rs_slope_slow < 0) ||
+              (i.metrics?.mps_acceleration < 0 && i.metrics?.rs_slope_slow > 0)
             ).length}
           </span>
         </div>
@@ -181,19 +181,19 @@ const IndustryStatistics = ({ industries, analysisDate, lookbackPeriod, keyMetri
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Thấp:</span>
           <span className="font-medium text-green-600 dark:text-green-400">
-            {industries.filter(i => i.risk_assessment?.risk_level === 'Thấp').length}
+            {industries.filter(i => i.risk_level === 'Thấp').length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Trung bình:</span>
           <span className="font-medium text-yellow-600 dark:text-yellow-400">
-            {industries.filter(i => i.risk_assessment?.risk_level === 'Trung bình').length}
+            {industries.filter(i => i.risk_level === 'Trung bình').length}
           </span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Cao:</span>
           <span className="font-medium text-red-600 dark:text-red-400">
-            {industries.filter(i => i.risk_assessment?.risk_level === 'Cao').length}
+            {industries.filter(i => i.risk_level === 'Cao').length}
           </span>
         </div>
       </div>

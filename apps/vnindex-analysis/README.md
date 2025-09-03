@@ -1320,125 +1320,74 @@ Signal Details:
 This script analyzes the breadth of stocks above/below various Exponential Moving Averages (EMAs)
 for the VN-Index market. The analysis helps identify market trends and momentum.
 
-market_breadth_5.json Output JSON Structure:
+src/data/analyze_breadth5/market.json and src/data/analyze_breadth5/industries/industry_name.json and  Output JSON Structure:
 {
   "metadata": {
     "analysis_info": {
-      "title": "VN-Index EMA Breadth Analysis",
-      "description": "Market breadth analysis using Exponential Moving Averages",
-      "version": "2.0",
-      "generated_at": "2024-01-01T10:00:00",
+      "title": "...",
+      "description": "...", 
+      "version": "3.0",
+      "generated_at": "2025-01-19T...",
       "generated_by": "EMA Breadth Analyzer"
     },
+    "source_info": {
+      "source_type": "market" | "industry",
+      "source_id": "VN-INDEX" | "{industry_id}",
+      "source_name": "Toàn thị trường VN-Index" | "{industry_name}",
+      "analysis_scope": "market_wide" | "industry_specific"
+    },
     "date_range": {
-      "start_date": "2024-01-01",
-      "end_date": "2024-12-31",
-      "total_trading_days": 252,
-      "analysis_period": "1 year"
+      "start_date": "YYYY-MM-DD",
+      "end_date": "YYYY-MM-DD", 
+      "total_trading_days": 123,
+      "analysis_period": "123 ngày giao dịch"
     },
     "parameters": {
       "ema_periods": [5, 10, 20, 50, 200],
       "min_volume_threshold": 1000000,
       "volume_lookback_days": 20,
-      "data_source": "VN-Index Market Data"
+      "data_source": "Dữ liệu thị trường VN-Index"
     },
     "data_quality": {
-      "total_symbols_available": 500,
-      "symbols_with_sufficient_data": 450,
-      "data_coverage_percentage": 90.0,
-      "analysis_quality": "High"
+      "total_symbols_available": 123,
+      "symbols_with_sufficient_data": 120,
+      "data_coverage_percentage": 97.6,
+      "analysis_quality": "Cao"
+    },
+    "industry_details": {
+      // Only present for industry-specific analysis
+      "industry_id": "...",
+      "industry_name": "...",
+      "symbol_count": 15,
+      "symbols": ["ABC", "DEF", ...] // Optional
     }
   },
   "breadth_data": {
-    "2024-01-01": {
-      "date": "2024-01-01",
-      "summary": {
-        "total_stocks": 500,
-        "stocks_with_data": 450,
-        "data_coverage": 90.0
+    "YYYY-MM-DD": {
+      "basic_stats": {
+        "total_stocks": 123,
+        "stocks_with_data": 120
       },
-      "ema_5": {
-        "above_count": 280,
-        "below_count": 170,
-        "above_percentage": 62.2,
-        "below_percentage": 37.8,
-        "strength": "Strong",
-        "sentiment": "Bullish"
-      },
-      "ema_10": {
-        "above_count": 265,
-        "below_count": 185,
-        "above_percentage": 58.9,
-        "below_percentage": 41.1,
-        "strength": "Moderate",
-        "sentiment": "Bullish"
-      },
-      "ema_20": {
-        "above_count": 250,
-        "below_count": 200,
-        "above_percentage": 55.6,
-        "below_percentage": 44.4,
-        "strength": "Moderate",
-        "sentiment": "Neutral"
-      },
-      "ema_50": {
-        "above_count": 240,
-        "below_count": 210,
-        "above_percentage": 53.3,
-        "below_percentage": 46.7,
-        "strength": "Weak",
-        "sentiment": "Neutral"
-      },
-      "ema_200": {
-        "above_count": 220,
-        "below_count": 230,
-        "above_percentage": 48.9,
-        "below_percentage": 51.1,
-        "strength": "Weak",
-        "sentiment": "Bearish"
-      },
-      "market_regime": {
-        "classification": "Transition",
-        "confidence": 0.75,
-        "description": "Market showing mixed signals across timeframes"
-      },
-      "breadth_momentum": {
-        "ema_20_change_5d": 2.5,
-        "ema_50_change_5d": -1.2,
-        "ema_200_change_5d": 0.8,
-        "overall_momentum": "Mixed"
-      }
+      "ema_5": { "above_count": 80, "above_percentage": 66.7, ... },
+      "ema_10": { ... },
+      "ema_20": { ... },
+      "ema_50": { ... },
+      "ema_200": { ... },
+      "market_regime": { ... },
+      "breadth_momentum": { ... }
     }
   },
-  "analysis_summary": {
-    "current_market_state": {
-      "regime": "Bull Market",
-      "strength": "Strong",
-      "confidence": 0.85,
-      "trend_direction": "Upward"
-    },
+  "summary": {
+    "latest_date": "YYYY-MM-DD",
     "key_metrics": {
       "breadth_strength": 65.2,
-      "participation_level": 90.0,
+      "participation_level": 97.6,
       "trend_consistency": "High"
     },
-    "risk_assessment": {
-      "overall_risk": "Low",
-      "risk_factors": ["Low volatility", "Strong breadth"],
-      "risk_level": "Green"
+    "current_regime": {
+      "classification": "Thị trường tăng",
+      "confidence": 0.85
     }
-  },
-  "vietnamese_insights": {
-    "report_metadata": { ... },
-    "executive_summary": { ... },
-    "market_overview": { ... },
-    "technical_analysis": { ... },
-    "market_structure": { ... },
-    "money_flow_analysis": { ... },
-    "risk_analysis": { ... },
-    "trading_strategy": { ... },
-    "market_sentiment": { ... },
-    "forecast_outlook": { ... }
   }
 }
 

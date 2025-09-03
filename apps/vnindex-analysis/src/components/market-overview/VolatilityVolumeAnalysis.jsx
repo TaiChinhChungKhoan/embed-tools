@@ -98,7 +98,7 @@ const MoneyFlowAnalysis = ({ marketOverview, analyticsData, topSectors, bottomSe
                 <div key={sector.custom_id || sector.id} className="flex justify-between">
                   <span className="truncate">{sector.name}:</span>
                   <span className="font-medium text-green-600">
-                    {sector.metrics?.current_rs ? `${(sector.metrics.current_rs * 100).toFixed(1)}%` : 'N/A'}
+                    {sector.metrics?.current_rs ? `${sector.metrics.current_rs.toFixed(1)}%` : 'N/A'}
                   </span>
                 </div>
               ))}
@@ -115,7 +115,7 @@ const MoneyFlowAnalysis = ({ marketOverview, analyticsData, topSectors, bottomSe
                 <div key={sector.custom_id || sector.id} className="flex justify-between">
                   <span className="truncate">{sector.name}:</span>
                   <span className="font-medium text-red-600">
-                    {sector.metrics?.current_rs ? `${(sector.metrics.current_rs * 100).toFixed(1)}%` : 'N/A'}
+                    {sector.metrics?.current_rs ? `${sector.metrics.current_rs.toFixed(1)}%` : 'N/A'}
                   </span>
                 </div>
               ))}
@@ -132,7 +132,7 @@ const MoneyFlowAnalysis = ({ marketOverview, analyticsData, topSectors, bottomSe
                 <div key={sector.custom_id || sector.id} className="flex justify-between">
                   <span className="truncate">{sector.name}:</span>
                   <span className="font-medium text-blue-600">
-                    {sector.metrics?.current_rs ? `${(sector.metrics.current_rs * 100).toFixed(1)}%` : 'N/A'}
+                    {sector.metrics?.current_rs ? `${sector.metrics.current_rs.toFixed(1)}%` : 'N/A'}
                   </span>
                 </div>
               ))}

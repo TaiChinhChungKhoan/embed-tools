@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useContext } from 'react';
+import React, { useState, useMemo, useContext, useRef } from 'react';
 import { TrendingUp, TrendingDown, Minus, Info } from 'lucide-react';
 import { MultiSelect } from "@embed-tools/components/components/ui/multi-select";
 import { useTickerInfoWithData } from '../utils/dataLoader';
@@ -48,6 +48,7 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
   // Use the pre-loaded data for ticker info
   const { getTickerInfo, getIndustryTickers, loading: tickerInfoLoading } = useTickerInfoWithData(companies, industries);
   
+  
   // Use the pre-loaded industries data directly
   const availableIndustries = industries && typeof industries === 'object' && !Array.isArray(industries) 
     ? Object.entries(industries).map(([custom_id, industry]) => ({ custom_id, ...industry }))
@@ -59,17 +60,31 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [selectedTickerIndustries, setSelectedTickerIndustries] = useState([]);
   const [specialTickerFilter, setSpecialTickerFilter] = useState("all");
+  
+  // Reset component state when timeframe changes
+  React.useEffect(() => {
+    setSelectedTickerIndustries([]);
+    setSpecialTickerFilter("all");
+    // Reset initialization flag when timeframe changes
+    hasInitialized.current = false;
+  }, [timeframe]);
 
   const { symbols: allTickers = [] } = analyticsData || {};
 
-  // Ensure a default industry is always selected when special filter is 'all'
+  // Auto-select all industries on initial load only
+  const hasInitialized = useRef(false);
+  
   React.useEffect(() => {
     if (
       specialTickerFilter === 'all' &&
+      !hasInitialized.current &&
       selectedTickerIndustries.length === 0 &&
       availableIndustries.length > 0
     ) {
-      setSelectedTickerIndustries([availableIndustries[0].custom_id]);
+      // Select all industries by default on initial load
+      const allIndustryIds = availableIndustries.map(industry => industry.custom_id);
+      setSelectedTickerIndustries(allIndustryIds);
+      hasInitialized.current = true;
     }
   }, [specialTickerFilter, availableIndustries, selectedTickerIndustries.length]);
 
@@ -162,6 +177,7 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
     }
   };
 
+  // Sort tickers by selected metric (descending)
   const sortedTickers = useMemo(() => {
     return [...filteredTickers].sort((a, b) => {
       const aValue = a[selectedMetric] || -Infinity;
@@ -170,23 +186,34 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
     });
   }, [filteredTickers, selectedMetric]);
 
-  const getMetricLabel = (metric) => {
-    switch (metric) {
-      case 'rs_close': return 'RS Close';
-      case 'rs_ratio': return 'RS Ratio';
-      case 'rs_momentum': return 'RS Momentum';
-      case 'crs': return 'CRS';
-      default: return metric;
-    }
-  };
 
-  const getMetricDescription = (metric) => {
-    switch (metric) {
-      case 'rs_close': return 'Relative Strength Close - So sánh giá đóng cửa hiện tại';
-      case 'rs_ratio': return 'RS Ratio - Tỷ lệ sức mạnh tương đối (RRG X-axis)';
-      case 'rs_momentum': return 'RS Momentum - Động lượng sức mạnh tương đối (RRG Y-axis)';
-      case 'crs': return 'Cumulative Relative Strength - Sức mạnh tương đối tích lũy';
-      default: return '';
+
+
+
+  const metricInfo = {
+    rs_close: {
+      name: "RS Close",
+      description: "Traditional relative strength vs VN-Index",
+      neutral: "1.0",
+      interpretation: "> 1.0 = Outperforming, < 1.0 = Underperforming"
+    },
+    rs_ratio: {
+      name: "RS Ratio",
+      description: "RRG-style relative strength ratio",
+      neutral: "100.0",
+      interpretation: "> 100 = Outperforming, < 100 = Underperforming"
+    },
+    rs_momentum: {
+      name: "RS Momentum",
+      description: "RRG momentum indicator",
+      neutral: "100.0",
+      interpretation: "> 100 = Positive momentum, < 100 = Negative momentum"
+    },
+    crs: {
+      name: "CRS",
+      description: "21-day cumulative relative strength",
+      neutral: "0.0%",
+      interpretation: "> 0% = Outperforming, < 0% = Underperforming"
     }
   };
 
@@ -200,37 +227,43 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
     );
   }
 
-  return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-      {/* Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-            Heatmap Cổ phiếu
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400">
-            Hiển thị sức mạnh tương đối của các cổ phiếu theo {getMetricLabel(selectedMetric).toLowerCase()}
-          </p>
-        </div>
-        
-        {/* Controls */}
-        <div className="flex flex-wrap gap-4 items-center mt-4 lg:mt-0">
-          {/* Metric Selector */}
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Chỉ số:</label>
-            <select
-              value={selectedMetric}
-              onChange={e => setSelectedMetric(e.target.value)}
-              className="border rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-black dark:text-white cursor-pointer"
-            >
-              <option value="rs_ratio">RS Ratio</option>
-              <option value="rs_momentum">RS Momentum</option>
-              <option value="rs_close">RS Close</option>
-              <option value="crs">CRS</option>
-            </select>
-          </div>
 
-          {/* Filter Controls */}
+  return (
+    <div className="flex flex-col h-full bg-white dark:bg-gray-900 p-4">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+          Ticker Strength Heatmap
+        </h2>
+        <button
+          onClick={() => setShowDetails(!showDetails)}
+          className="cursor-pointer p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        >
+          <Info className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+        </button>
+      </div>
+
+      {/* Metric Selector and Filters */}
+      <div className="flex flex-col gap-4 mb-4">
+        {/* Metric Selector */}
+        <div className="flex flex-wrap gap-2">
+          {Object.entries(metricInfo).map(([key, info]) => (
+            <button
+              key={key}
+              onClick={() => setSelectedMetric(key)}
+              className={`cursor-pointer px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
+                selectedMetric === key
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+              }`}
+            >
+              {info.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Filter Controls */}
+        <div className="flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Lọc theo:</label>
             <select
@@ -246,93 +279,67 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
             </select>
           </div>
 
-          {/* Industry Filter (only show when "By Industry" is selected) */}
-          {specialTickerFilter === 'all' && (
-            <div className="flex items-center gap-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Ngành:</label>
-              <MultiSelect
-                options={availableIndustries.map(ind => ({ value: ind.custom_id, label: ind.name || ind.custom_id || 'Unknown' }))}
-                onValueChange={setSelectedTickerIndustries}
-                value={selectedTickerIndustries}
-                placeholder="Chọn ngành"
-                maxCount={3}
-                variant="default"
-              />
-            </div>
-          )}
-
-          {/* Info Button */}
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-            title="Thông tin chi tiết"
-          >
-            <Info className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-
-      {/* Filter Status */}
-      <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-        <div className="flex flex-wrap items-center gap-4 text-sm">
-          <span className="text-gray-600 dark:text-gray-300">
-            Hiển thị: <span className="font-medium text-blue-600">{filteredTickers.length}</span> cổ phiếu
-          </span>
-          {specialTickerFilter !== 'all' ? (
-            <span className="text-blue-600 font-medium">
-              {(() => {
-                switch (specialTickerFilter) {
-                  case 'top20rs': return 'Top 20 RS Score';
-                  case 'bottom20rs': return 'Bottom 20 RS Score';
-                  case 'top20momentum': return 'Top 20 RS Momentum';
-                  case 'bottom20momentum': return 'Bottom 20 RS Momentum';
-                  default: return '';
-                }
-              })()}
+          {/* Industry Filter */}
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Ngành:</label>
+            <MultiSelect
+              options={availableIndustries.map(ind => ({ value: ind.custom_id, label: ind.name || ind.custom_id || 'Unknown' }))}
+              onValueChange={setSelectedTickerIndustries}
+              value={selectedTickerIndustries}
+              placeholder="Chọn ngành"
+              maxCount={3}
+              variant="default"
+              disabled={specialTickerFilter !== 'all'}
+            />
+            {/* Debug info */}
+            <span className="text-xs text-gray-500 min-w-[120px]">
+              ({availableIndustries.length} ngành, {selectedTickerIndustries.length} đã chọn)
             </span>
-          ) : (
-                          <span className="text-gray-600 dark:text-gray-300">
-                Ngành: {selectedTickerIndustries.map(id => 
-                  availableIndustries.find(ind => ind.custom_id === id)?.name
-                ).join(', ')}
-              </span>
-          )}
+          </div>
         </div>
       </div>
 
-      {/* Details Panel */}
+
+
+      {/* Metric Information */}
       {showDetails && (
-        <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-          <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">
-            {getMetricLabel(selectedMetric)}
-          </h4>
-          <p className="text-sm text-blue-800 dark:text-blue-200">
-            {getMetricDescription(selectedMetric)}
+        <div className="mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+            {metricInfo[selectedMetric].name}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            {metricInfo[selectedMetric].description}
           </p>
-          <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-green-600 rounded"></div>
-              <span className="text-green-800 dark:text-green-200">Mạnh</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-gray-400 rounded"></div>
-              <span className="text-gray-800 dark:text-gray-200">Trung bình</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-red-500 rounded"></div>
-              <span className="text-red-800 dark:text-red-200">Yếu</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-red-600 rounded"></div>
-              <span className="text-red-800 dark:text-red-200">Rất yếu</span>
-            </div>
+          <div className="text-sm">
+            <span className="font-medium text-gray-700 dark:text-gray-300">Neutral: </span>
+            <span className="text-gray-600 dark:text-gray-400">{metricInfo[selectedMetric].neutral}</span>
+          </div>
+          <div className="text-sm">
+            <span className="font-medium text-gray-700 dark:text-gray-300">Interpretation: </span>
+            <span className="text-gray-600 dark:text-gray-400">{metricInfo[selectedMetric].interpretation}</span>
           </div>
         </div>
       )}
 
+      {/* Legend */}
+      <div className="flex items-center gap-4 mb-4 text-sm">
+        <div className="flex items-center gap-2">
+          <div className="w-4 h-4 bg-green-500 rounded"></div>
+          <span className="text-gray-600 dark:text-gray-400">Strong</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-4 h-4 bg-gray-400 rounded"></div>
+          <span className="text-gray-600 dark:text-gray-400">Neutral</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-4 h-4 bg-red-500 rounded"></div>
+          <span className="text-gray-600 dark:text-gray-400">Weak</span>
+        </div>
+      </div>
+
       {/* Heatmap Grid */}
       <div className="flex-grow overflow-hidden">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 h-full overflow-y-auto max-h-96">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 h-full overflow-y-auto">
           {sortedTickers.map((ticker, index) => (
             <div 
               key={ticker.symbol} 
@@ -365,34 +372,32 @@ const TickerHeatmap = ({ analyticsData, timeframe }) => {
       </div>
 
       {/* Summary Stats */}
-      {sortedTickers.length > 0 && (
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-green-600">
-              {sortedTickers.filter(t => getColorForMetric(t, selectedMetric).includes('green')).length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Mạnh</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-600">
-              {sortedTickers.filter(t => getColorForMetric(t, selectedMetric).includes('gray')).length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Trung bình</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-red-500">
-              {sortedTickers.filter(t => getColorForMetric(t, selectedMetric).includes('red')).length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Yếu</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-blue-600">
-              {sortedTickers.length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Tổng cộng</div>
+      <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+        <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+          <div className="text-gray-600 dark:text-gray-400">Strong</div>
+          <div className="text-lg font-bold text-green-600">
+            {sortedTickers.filter(t => getColorForMetric(t, selectedMetric).includes('green')).length}
           </div>
         </div>
-      )}
+        <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+          <div className="text-gray-600 dark:text-gray-400">Neutral</div>
+          <div className="text-lg font-bold text-gray-600">
+            {sortedTickers.filter(t => getColorForMetric(t, selectedMetric).includes('gray')).length}
+          </div>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+          <div className="text-gray-600 dark:text-gray-400">Weak</div>
+          <div className="text-lg font-bold text-red-600">
+            {sortedTickers.filter(t => getColorForMetric(t, selectedMetric).includes('red')).length}
+          </div>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+          <div className="text-gray-600 dark:text-gray-400">Total</div>
+          <div className="text-lg font-bold text-gray-800 dark:text-gray-200">
+            {sortedTickers.length}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

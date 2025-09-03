@@ -103,3 +103,90 @@ export const getDirectionIconAndColor = (direction) => {
     return { icon: TrendingDown, color: 'text-red-600' };
   return { icon: TrendingDown, color: 'text-gray-600' };
 };
+
+// Additional helper functions for RS analysis
+export const getTrendIcon = (trend) => {
+  if (!trend) return null;
+  switch (trend) {
+    case 'Tăng trưởng':
+      return { icon: TrendingUp, className: "w-3 h-3" };
+    case 'Suy giảm':
+      return { icon: TrendingDown, className: "w-3 h-3" };
+    default:
+      return null;
+  }
+};
+
+export const getMomentumColor = (trend, momentum) => {
+  if (!momentum) return 'text-gray-600 dark:text-gray-400';
+  
+  // Contextual momentum color based on trend
+  if (trend === 'Tăng trưởng') {
+    if (momentum > 0) return 'text-green-600 dark:text-green-400'; // accelerating up
+    if (momentum < 0) return 'text-red-600 dark:text-red-400'; // losing steam
+  } else if (trend === 'Suy giảm') {
+    if (momentum > 0) return 'text-red-600 dark:text-red-400'; // accelerating down
+    if (momentum < 0) return 'text-green-600 dark:text-green-400'; // decline slowing
+  }
+  
+  // Simple momentum color (fallback)
+  if (momentum > 0) return 'text-green-600 dark:text-green-400';
+  if (momentum < 0) return 'text-red-600 dark:text-red-400';
+  return 'text-gray-600 dark:text-gray-400';
+};
+
+export const getConsistencyColor = (percentage) => {
+  if (percentage >= 60) return 'text-green-600 dark:text-green-400';
+  if (percentage >= 40) return 'text-yellow-600 dark:text-yellow-400';
+  return 'text-red-600 dark:text-red-400';
+};
+
+export const getStatusColor = (status) => {
+  switch (status?.toLowerCase()) {
+    case 'tăng trưởng':
+      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+    case 'suy giảm':
+      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
+    case 'ổn định':
+      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
+    default:
+      return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
+  }
+};
+
+export const getConsensusStrengthColor = (consensusStrength) => {
+  if (typeof consensusStrength === 'number') {
+    if (consensusStrength > 0) return 'text-green-600 dark:text-green-400';
+    if (consensusStrength < 0) return 'text-red-600 dark:text-red-400';
+  }
+  return 'text-gray-600 dark:text-gray-400';
+};
+
+export const getColorForUpRatio = (upRatio) => {
+  if (typeof upRatio === 'number') {
+    if (upRatio >= 0.6) return 'text-green-600';
+    if (upRatio >= 0.4) return 'text-yellow-600';
+    return 'text-red-600';
+  }
+  return 'text-gray-600';
+};
+
+export const getColorForNetDecayed = (netDecayed) => {
+  if (typeof netDecayed === 'number') {
+    if (netDecayed > 0.3) return 'text-green-600'; // Strong upward momentum
+    if (netDecayed > 0) return 'text-green-400'; // Weak upward bias
+    if (netDecayed > -0.3) return 'text-red-400'; // Weak downward bias
+    return 'text-red-600'; // Strong downward momentum
+  }
+  return 'text-gray-600';
+};
+
+export const getSlopeAgeColor = (slopeAge) => {
+  if (typeof slopeAge === 'number') {
+    if (slopeAge > 25) return 'text-purple-600'; // Very mature trend
+    if (slopeAge > 10) return 'text-green-600'; // Established trend
+    if (slopeAge >= 3) return 'text-yellow-600'; // Developing trend
+    if (slopeAge > 0) return 'text-orange-600'; // New trend
+  }
+  return 'text-gray-600'; // No trend or negative slope
+};

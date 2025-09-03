@@ -9,8 +9,6 @@ const IndustryAnalysis = ({ industryAnalysis, marketOverview, getQuadrantColor, 
     industryAnalysis.sector_momentum?.accumulation_candidates?.industries,
     industryAnalysis.sector_momentum?.stealth_accumulation?.industries,
     industryAnalysis.sector_momentum?.breakout_candidates?.industries,
-    industryAnalysis.sector_risk?.momentum_exhaustion?.industries,
-    industryAnalysis.sector_risk?.falling_knife?.industries,
     industryAnalysis.sector_risk?.dead_cat_bounce?.industries,
     industryAnalysis.sector_risk?.distribution_signals?.industries,
     industryAnalysis.sector_performers?.top_industries,
@@ -119,8 +117,6 @@ const IndustryAnalysis = ({ industryAnalysis, marketOverview, getQuadrantColor, 
       {/* Sector Risk */}
       {(() => {
         const hasRiskData = [
-          industryAnalysis.sector_risk?.momentum_exhaustion?.industries,
-          industryAnalysis.sector_risk?.falling_knife?.industries,
           industryAnalysis.sector_risk?.dead_cat_bounce?.industries,
           industryAnalysis.sector_risk?.distribution_signals?.industries
         ].some(data => data && data.length > 0);
@@ -132,21 +128,6 @@ const IndustryAnalysis = ({ industryAnalysis, marketOverview, getQuadrantColor, 
             <h4 className="font-medium text-red-800 mb-3">{industryAnalysis.sector_risk.title}</h4>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Momentum Exhaustion */}
-              {industryAnalysis.sector_risk.momentum_exhaustion?.industries?.length > 0 && (
-                <div>
-                  <h5 className="font-medium text-red-700 mb-2">Cảnh báo kiệt sức động lượng</h5>
-                  {renderInsightItems(industryAnalysis.sector_risk.momentum_exhaustion.industries, 'cảnh báo kiệt sức động lượng')}
-                </div>
-              )}
-
-              {/* Falling Knife */}
-              {industryAnalysis.sector_risk.falling_knife?.industries?.length > 0 && (
-                <div>
-                  <h5 className="font-medium text-red-700 mb-2">Cảnh báo dao rơi</h5>
-                  {renderInsightItems(industryAnalysis.sector_risk.falling_knife.industries, 'cảnh báo dao rơi')}
-                </div>
-              )}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">

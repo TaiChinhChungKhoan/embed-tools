@@ -7,14 +7,14 @@ import {
     Zap,
     Shield,
     BarChart,
-    Users,
     Activity,
     Clock,
     Target,
     CheckCircle,
-    XCircle
+    XCircle,
+    Calendar
 } from 'lucide-react';
-import { getRiskColor, getCrsColor, getCrsStatusColor, getDirectionColor, getRecentVolumeRatioColor, getRsTrendColor, getRsChangeColor, getStrengthScoreColor } from '../detailed-analysis/utils/colorUtils';
+import { getRiskColor, getCrsColor, getCrsStatusColor, getDirectionColor, getRecentVolumeRatioColor, getRsTrendColor, getRsChangeColor, getStrengthScoreColor, getColorForUpRatio, getColorForNetDecayed, getSlopeAgeColor } from '../detailed-analysis/utils/colorUtils';
 
 // Thành phần con có thể tái sử dụng cho mỗi chỉ số
 const MetricItem = ({ icon: Icon, label, value, valueClassName = '' }) => (
@@ -49,9 +49,6 @@ const GroupInfoPanel = ({ group }) => {
     custom_id,
     name,
     metrics = {},
-    speed_analysis = {},
-    direction_analysis = {},
-    risk_assessment = {},
     trend_consistency = {},
     performance_summary = {},
     latest_date,
@@ -72,87 +69,16 @@ const GroupInfoPanel = ({ group }) => {
       <div className="text-xs text-gray-500 mb-2">Ngày cập nhật: {latest_date}</div>
       {/* ...more group details... */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {/* Main metrics in a 2-column layout for better space usage */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                <InfoCard title="Hiệu suất">
+                <InfoCard title="Sức mạnh Tương đối (RS)">
                     <MetricItem
                         icon={TrendingUp}
                         label="RS Hiện tại"
-                        value={formatPercent(metrics?.current_rs)}
+                        value={metrics?.current_rs ? `${metrics.current_rs.toFixed(1)}%` : 'K/C'}
                         valueClassName="text-blue-600"
                     />
-                    <MetricItem
-                        icon={metrics?.rs_5d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 5 phiên"
-                        value={formatPercent(metrics?.rs_5d_change)}
-                        valueClassName={getRsChangeColor(metrics?.rs_5d_change)}
-                    />
-                    <MetricItem
-                        icon={metrics?.rs_21d_change > 0 ? ArrowUpRight : ArrowDownRight}
-                        label="Thay đổi 21 phiên"
-                        value={formatPercent(metrics?.rs_21d_change)}
-                        valueClassName={getRsChangeColor(metrics?.rs_21d_change)}
-                    />
-                    <MetricItem
-                        icon={Target}
-                        label="Xu hướng RS"
-                        value={performance_summary?.rs_trend}
-                        valueClassName={getRsTrendColor(performance_summary?.rs_trend)}
-                    />
-                </InfoCard>
-
-                <InfoCard title="Tốc độ & Hướng">
-                    <MetricItem
-                        icon={Zap}
-                        label="Tốc độ 5 phiên"
-                        value={formatPercent(speed_analysis?.raw_speed_5d)}
-                    />
-                    <MetricItem
-                        icon={direction_analysis?.direction === 'Tăng trưởng' ? TrendingUp : TrendingDown}
-                        label="Hướng"
-                        value={direction_analysis?.direction}
-                        valueClassName={getDirectionColor(direction_analysis?.direction)}
-                    />
-                    <MetricItem
-                        icon={Activity}
-                        label="Sức mạnh xu hướng"
-                        value={direction_analysis?.trend_strength || 'K/C'}
-                        valueClassName="text-purple-600"
-                    />
-                    <MetricItem
-                        icon={Clock}
-                        label="Tốc độ"
-                        value={speed_analysis?.speed_category || 'K/C'}
-                        valueClassName="text-orange-600"
-                    />
-                </InfoCard>
-
-                <InfoCard title="Đánh giá Rủi ro">
-                    <MetricItem
-                        icon={Shield}
-                        label="Mức rủi ro"
-                        value={risk_assessment?.risk_level}
-                        valueClassName={getRiskColor(risk_assessment?.risk_level)}
-                    />
-                    <MetricItem
-                        icon={BarChart}
-                        label="Kích thước vị thế"
-                        value={risk_assessment?.suggested_position_size || 'K/C'}
-                    />
-                    <MetricItem
-                        icon={Users}
-                        label="Hoạt động tổ chức"
-                        value={risk_assessment?.volume_analysis?.institutional_activity ? 'Có' : 'Không'}
-                        valueClassName={risk_assessment?.volume_analysis?.institutional_activity ? 'text-green-600' : 'text-gray-500'}
-                    />
-                    <MetricItem
-                        icon={Target}
-                        label="Khung thời gian"
-                        value={risk_assessment?.time_horizon || 'K/C'}
-                    />
-                </InfoCard>
-
-                <InfoCard title="Phân tích Chi tiết">
                     <MetricItem
                         icon={BarChart}
                         label="CRS Hiện tại"
@@ -167,66 +93,109 @@ const GroupInfoPanel = ({ group }) => {
                     />
                     <MetricItem
                         icon={Target}
+                        label="Xu hướng RS"
+                        value={performance_summary?.rs_trend}
+                        valueClassName={getRsTrendColor(performance_summary?.rs_trend)}
+                    />
+                    <MetricItem
+                        icon={Target}
                         label="Điểm sức mạnh"
                         value={formatNumber(performance_summary?.strength_score)}
                         valueClassName={getStrengthScoreColor(performance_summary?.strength_score)}
                     />
+                </InfoCard>
+
+                <InfoCard title="Động lượng & Tốc độ (MPS)">
+                    <MetricItem
+                        icon={TrendingUp}
+                        label="MPS Hiện tại"
+                        value={metrics?.mps ? metrics.mps.toFixed(1) : 'K/C'}
+                        valueClassName={metrics?.mps >= 70 ? 'text-green-600' : metrics?.mps >= 40 ? 'text-yellow-600' : 'text-red-600'}
+                    />
+                    <MetricItem
+                        icon={Zap}
+                        label="MPS Gia tăng"
+                        value={metrics?.mps_acceleration ? (metrics.mps_acceleration > 0 ? '+' : '') + metrics.mps_acceleration.toFixed(3) : 'K/C'}
+                        valueClassName={metrics?.mps_acceleration > 0.1 ? 'text-green-600' : metrics?.mps_acceleration < -0.1 ? 'text-red-600' : 'text-gray-600'}
+                    />
+                    <MetricItem
+                        icon={Clock}
+                        label="Phân loại Tốc độ"
+                        value={metrics?.mps > 70 ? 'Nhanh' : metrics?.mps > 30 ? 'Trung bình' : 'Chậm'}
+                        valueClassName={metrics?.mps > 70 ? 'text-green-600' : metrics?.mps > 30 ? 'text-yellow-600' : 'text-red-600'}
+                    />
+                    <MetricItem
+                        icon={performance_summary?.rs_trend === 'Tăng trưởng' ? TrendingUp : TrendingDown}
+                        label="Hướng"
+                        value={performance_summary?.rs_trend}
+                        valueClassName={getDirectionColor(performance_summary?.rs_trend)}
+                    />
                     <MetricItem
                         icon={Zap}
                         label="Độ nhất quán"
-                        value={formatPercent(speed_analysis?.consistency_score)}
+                        value={formatPercent(trend_consistency?.consistency_score)}
                     />
                 </InfoCard>
 
-                <InfoCard title="Phân tích Khối lượng">
-                    <MetricItem
-                        icon={BarChart}
-                        label="Xu hướng khối lượng"
-                        value={risk_assessment?.volume_analysis?.volume_trend || 'K/C'}
-                        valueClassName="text-blue-600"
-                    />
-                    <MetricItem
-                        icon={Activity}
-                        label="Chất lượng khối lượng"
-                        value={risk_assessment?.volume_analysis?.volume_quality || 'K/C'}
-                        valueClassName="text-purple-600"
-                    />
-                    <MetricItem
-                        icon={TrendingUp}
-                        label="Tỷ lệ khối lượng"
-                        value={formatNumber(risk_assessment?.volume_analysis?.recent_volume_ratio)}
-                        valueClassName={getRecentVolumeRatioColor(risk_assessment?.volume_analysis?.recent_volume_ratio)}
-                    />
-                    <MetricItem
-                        icon={Shield}
-                        label="Stop loss"
-                        value={formatPercent(risk_assessment?.stop_loss_distance)}
-                        valueClassName="text-red-600"
-                    />
-                </InfoCard>
 
-                <InfoCard title="Thống kê Hiệu suất">
+            </div>
+            
+            {/* Secondary metrics in a 3-column layout for detailed analysis */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                
+                <InfoCard title="Xu hướng & Biến động">
                     <MetricItem
-                        icon={CheckCircle}
-                        label="phiên vượt trội"
-                        value={`${metrics?.outperforming_days || 0}/${metrics?.total_days || 0}`}
-                        valueClassName="text-green-600"
+                        icon={metrics?.rs_slope_fast > 0 ? ArrowUpRight : ArrowDownRight}
+                        label="Slope Nhanh"
+                        value={formatPercent(metrics?.rs_slope_fast)}
+                        valueClassName={getRsChangeColor(metrics?.rs_slope_fast)}
                     />
                     <MetricItem
-                        icon={XCircle}
-                        label="phiên tụt hậu"
-                        value={`${metrics?.underperforming_days || 0}/${metrics?.total_days || 0}`}
-                        valueClassName="text-red-600"
+                        icon={metrics?.rs_slope_slow > 0 ? ArrowUpRight : ArrowDownRight}
+                        label="Slope Chậm"
+                        value={formatPercent(metrics?.rs_slope_slow)}
+                        valueClassName={getRsChangeColor(metrics?.rs_slope_slow)}
                     />
                     <MetricItem
                         icon={BarChart}
                         label="Biến động RS"
-                        value={formatPercent(metrics?.rs_volatility)}
+                        value={formatPercent(metrics?.slope_delta ? Math.abs(metrics.slope_delta / 10) : undefined)}
+                    />
+                </InfoCard>
+                
+                <InfoCard title="Thống kê Nhất quán">
+                    <MetricItem
+                        icon={BarChart}
+                        label="Tỷ lệ Tăng"
+                        value={formatPercent(metrics?.up_ratio)}
+                        valueClassName={getColorForUpRatio(metrics?.up_ratio)}
                     />
                     <MetricItem
                         icon={Activity}
-                        label="Biến động CRS"
-                        value={formatPercent(metrics?.crs_volatility)}
+                        label="Chất lượng xu hướng"
+                        value={metrics?.net_decayed ? metrics.net_decayed.toFixed(3) : 'K/C'}
+                        valueClassName={getColorForNetDecayed(metrics?.net_decayed)}
+                    />
+                    <MetricItem
+                        icon={Clock}
+                        label="Độ bền xu hướng"
+                        value={metrics?.slope_age !== undefined ? `${metrics.slope_age} phiên` : 'K/C'}
+                        valueClassName={getSlopeAgeColor(metrics?.slope_age)}
+                    />
+                </InfoCard>
+                
+                <InfoCard title="Thông tin Bổ sung">
+                    <MetricItem
+                        icon={Calendar}
+                        label="Ngày cập nhật"
+                        value={latest_date ? new Date(latest_date).toLocaleDateString('vi-VN') : 'K/C'}
+                        valueClassName="text-gray-600"
+                    />
+                    <MetricItem
+                        icon={BarChart}
+                        label="Số điểm dữ liệu"
+                        value={data_points ? data_points.toString() : 'K/C'}
+                        valueClassName="text-gray-600"
                     />
                 </InfoCard>
 

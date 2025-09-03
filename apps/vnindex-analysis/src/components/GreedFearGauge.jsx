@@ -70,7 +70,10 @@ export default function GreedFearGauge() {
             ...rawData,
             last_20_days: rawData.last_20_days.map(d => ({
                 ...d,
-                formattedDate: new Date(d.date).toLocaleDateString('vi-VN', { month: 'short', day: 'numeric' })
+                formattedDate: new Date(d.date).toLocaleDateString('vi-VN', { month: 'short', day: 'numeric' }),
+                // Use smoothed values for the chart
+                greed_fear_index: d.greed_fear_index_smoothed,
+                change: d.change_smoothed
             }))
         };
     }, [rawData]);
@@ -99,9 +102,12 @@ export default function GreedFearGauge() {
         return null;
     }
     
+    // Use smoothed values for display
+    const latestValue = data.latest_value_smoothed;
+    const latestSentiment = data.latest_sentiment_smoothed;
     const latestDataPoint = data.last_20_days[data.last_20_days.length - 1];
     const previousDataPoint = data.last_20_days[data.last_20_days.length - 2];
-    const dailyChange = latestDataPoint.greed_fear_index - (previousDataPoint?.greed_fear_index || latestDataPoint.greed_fear_index);
+    const dailyChange = latestDataPoint.change || 0;
 
     return (
         <Card>
@@ -120,14 +126,14 @@ export default function GreedFearGauge() {
                     <div className="lg:col-span-1 flex flex-col">
                         <div className="flex-shrink-0">
                             <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">Tâm lý hiện tại</h3>
-                            <GreedFearGaugeChart value={data.latest_value} sentiment={data.latest_sentiment} />
+                            <GreedFearGaugeChart value={latestValue} sentiment={latestSentiment} />
                             <hr className="my-6 border-gray-200 dark:border-gray-700" />
                             <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Chỉ số chính</h3>
                         </div>
                         <div className="space-y-3 flex-shrink-0">
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-gray-600 dark:text-gray-400">Giá trị hiện tại</span>
-                                <span className={`font-bold ${getSentimentColor(data.latest_value)}`}>{data.latest_value.toFixed(2)}</span>
+                                <span className={`font-bold ${getSentimentColor(latestValue)}`}>{latestValue.toFixed(2)}</span>
                             </div>
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-gray-600 dark:text-gray-400">Thay đổi hàng ngày</span>
@@ -147,6 +153,14 @@ export default function GreedFearGauge() {
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-gray-600 dark:text-gray-400">Tỷ lệ khối lượng</span>
                                 <span className="font-bold text-gray-700 dark:text-gray-300">{data.components.volume_ratio ? data.components.volume_ratio.toFixed(2) : 'N/A'}</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600 dark:text-gray-400">Momentum thị trường</span>
+                                <span className="font-bold text-gray-700 dark:text-gray-300">{data.components.market_momentum ? data.components.market_momentum.toFixed(2) : 'N/A'}</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600 dark:text-gray-400">Sức mạnh giá</span>
+                                <span className="font-bold text-gray-700 dark:text-gray-300">{data.components.price_strength ? data.components.price_strength.toFixed(2) : 'N/A'}</span>
                             </div>
                         </div>
                     </div>
@@ -179,7 +193,7 @@ export default function GreedFearGauge() {
                                         labelStyle={{ color: '#1f2937', fontWeight: 'bold' }}
                                         itemStyle={{ color: '#374151' }}
                                     />
-                                    <Line type="monotone" dataKey="greed_fear_index" name="Chỉ số" stroke={getSentimentBgColor(data.latest_value)} strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 6 }} />
+                                    <Line type="monotone" dataKey="greed_fear_index" name="Chỉ số" stroke={getSentimentBgColor(latestValue)} strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 6 }} />
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>

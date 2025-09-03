@@ -40,12 +40,6 @@
               "current_crs": {
                 "type": "float"
               },
-              "current_ma13": {
-                "type": "float"
-              },
-              "current_ma49": {
-                "type": "float"
-              },
               "rs_5d_change": {
                 "type": "float"
               },
@@ -55,32 +49,20 @@
               "rs_49d_change": {
                 "type": "float"
               },
-              "crs_21d_avg": {
-                "type": "float"
-              },
               "rs_volatility": {
                 "type": "float"
               },
-              "crs_volatility": {
+              "rs_slope_fast": {
                 "type": "float"
               },
-              "outperforming_days": {
-                "type": "int"
+              "rs_slope_slow": {
+                "type": "float"
               },
-              "underperforming_days": {
-                "type": "int"
+              "slope_delta": {
+                "type": "float"
               },
-              "total_days": {
-                "type": "int"
-              },
-              "outperforming_periods": {
-                "type": "int"
-              },
-              "underperforming_periods": {
-                "type": "int"
-              },
-              "total_periods": {
-                "type": "int"
+              "up_ratio": {
+                "type": "float"
               }
             }
           },
@@ -151,7 +133,18 @@
                 }
               },
               "trend_strength": {
-                "type": "str"
+                "type": "dict",
+                "keys": {
+                  "overall_trend_strength": {
+                    "type": "float"
+                  },
+                  "trend_consistency": {
+                    "type": "float"
+                  },
+                  "momentum_alignment": {
+                    "type": "float"
+                  }
+                }
               },
               "momentum_confirmed": {
                 "type": "bool"
@@ -176,12 +169,6 @@
                   "low_risk": {
                     "type": "bool"
                   },
-                  "falling_knife": {
-                    "type": "bool"
-                  },
-                  "momentum_exhaustion": {
-                    "type": "bool"
-                  },
                   "stealth_accumulation": {
                     "type": "bool"
                   }
@@ -198,23 +185,6 @@
               },
               "risk_level": {
                 "type": "str"
-              },
-              "volume_analysis": {
-                "type": "dict",
-                "keys": {
-                  "volume_trend": {
-                    "type": "str"
-                  },
-                  "institutional_activity": {
-                    "type": "bool"
-                  },
-                  "volume_quality": {
-                    "type": "str"
-                  },
-                  "recent_volume_ratio": {
-                    "type": "float"
-                  }
-                }
               }
             }
           },
@@ -283,12 +253,6 @@
               "current_crs": {
                 "type": "float"
               },
-              "current_ma13": {
-                "type": "float"
-              },
-              "current_ma49": {
-                "type": "float"
-              },
               "rs_5d_change": {
                 "type": "float"
               },
@@ -298,32 +262,20 @@
               "rs_49d_change": {
                 "type": "float"
               },
-              "crs_21d_avg": {
-                "type": "float"
-              },
               "rs_volatility": {
                 "type": "float"
               },
-              "crs_volatility": {
+              "rs_slope_fast": {
                 "type": "float"
               },
-              "outperforming_days": {
-                "type": "int"
+              "rs_slope_slow": {
+                "type": "float"
               },
-              "underperforming_days": {
-                "type": "int"
+              "slope_delta": {
+                "type": "float"
               },
-              "total_days": {
-                "type": "int"
-              },
-              "outperforming_periods": {
-                "type": "int"
-              },
-              "underperforming_periods": {
-                "type": "int"
-              },
-              "total_periods": {
-                "type": "int"
+              "up_ratio": {
+                "type": "float"
               }
             }
           },
@@ -394,7 +346,18 @@
                 }
               },
               "trend_strength": {
-                "type": "str"
+                "type": "dict",
+                "keys": {
+                  "overall_trend_strength": {
+                    "type": "float"
+                  },
+                  "trend_consistency": {
+                    "type": "float"
+                  },
+                  "momentum_alignment": {
+                    "type": "float"
+                  }
+                }
               },
               "momentum_confirmed": {
                 "type": "bool"
@@ -419,12 +382,6 @@
                   "low_risk": {
                     "type": "bool"
                   },
-                  "falling_knife": {
-                    "type": "bool"
-                  },
-                  "momentum_exhaustion": {
-                    "type": "bool"
-                  },
                   "stealth_accumulation": {
                     "type": "bool"
                   }
@@ -441,23 +398,6 @@
               },
               "risk_level": {
                 "type": "str"
-              },
-              "volume_analysis": {
-                "type": "dict",
-                "keys": {
-                  "volume_trend": {
-                    "type": "str"
-                  },
-                  "institutional_activity": {
-                    "type": "bool"
-                  },
-                  "volume_quality": {
-                    "type": "str"
-                  },
-                  "recent_volume_ratio": {
-                    "type": "float"
-                  }
-                }
               }
             }
           }
@@ -519,12 +459,6 @@
               "current_crs": {
                 "type": "float"
               },
-              "current_ma13": {
-                "type": "float"
-              },
-              "current_ma49": {
-                "type": "float"
-              },
               "rs_5d_change": {
                 "type": "float"
               },
@@ -534,32 +468,20 @@
               "rs_49d_change": {
                 "type": "float"
               },
-              "crs_21d_avg": {
-                "type": "float"
-              },
               "rs_volatility": {
                 "type": "float"
               },
-              "crs_volatility": {
+              "rs_slope_fast": {
                 "type": "float"
               },
-              "outperforming_days": {
-                "type": "int"
+              "rs_slope_slow": {
+                "type": "float"
               },
-              "underperforming_days": {
-                "type": "int"
+              "slope_delta": {
+                "type": "float"
               },
-              "total_days": {
-                "type": "int"
-              },
-              "outperforming_periods": {
-                "type": "int"
-              },
-              "underperforming_periods": {
-                "type": "int"
-              },
-              "total_periods": {
-                "type": "int"
+              "up_ratio": {
+                "type": "float"
               }
             }
           },
@@ -630,7 +552,18 @@
                 }
               },
               "trend_strength": {
-                "type": "str"
+                "type": "dict",
+                "keys": {
+                  "overall_trend_strength": {
+                    "type": "float"
+                  },
+                  "trend_consistency": {
+                    "type": "float"
+                  },
+                  "momentum_alignment": {
+                    "type": "float"
+                  }
+                }
               },
               "momentum_confirmed": {
                 "type": "bool"
@@ -653,12 +586,6 @@
                     "type": "bool"
                   },
                   "low_risk": {
-                    "type": "bool"
-                  },
-                  "falling_knife": {
-                    "type": "bool"
-                  },
-                  "momentum_exhaustion": {
                     "type": "bool"
                   },
                   "stealth_accumulation": {
@@ -1070,9 +997,6 @@
                     },
                     "deteriorating_fundamentals_count": {
                       "type": "int"
-                    },
-                    "falling_knife_count": {
-                      "type": "int"
                     }
                   }
                 },
@@ -1173,9 +1097,6 @@
                   "type": "empty_list"
                 },
                 "deteriorating_fundamentals": {
-                  "type": "empty_list"
-                },
-                "falling_knife": {
                   "type": "empty_list"
                 },
                 "rrg_performers": {
@@ -1312,9 +1233,6 @@
                           "type": "empty_list"
                         },
                         "deteriorating_fundamentals": {
-                          "type": "empty_list"
-                        },
-                        "falling_knife": {
                           "type": "empty_list"
                         }
                       }
@@ -1381,9 +1299,6 @@
                     },
                     "deteriorating_fundamentals_count": {
                       "type": "int"
-                    },
-                    "falling_knife_count": {
-                      "type": "int"
                     }
                   }
                 },
@@ -1484,9 +1399,6 @@
                   "type": "empty_list"
                 },
                 "deteriorating_fundamentals": {
-                  "type": "empty_list"
-                },
-                "falling_knife": {
                   "type": "empty_list"
                 },
                 "rrg_performers": {
@@ -1624,9 +1536,6 @@
                         },
                         "deteriorating_fundamentals": {
                           "type": "empty_list"
-                        },
-                        "falling_knife": {
-                          "type": "empty_list"
                         }
                       }
                     },
@@ -1691,9 +1600,6 @@
                       "type": "int"
                     },
                     "deteriorating_fundamentals_count": {
-                      "type": "int"
-                    },
-                    "falling_knife_count": {
                       "type": "int"
                     }
                   }
@@ -1907,9 +1813,6 @@
                       }
                     }
                   }
-                },
-                "falling_knife": {
-                  "type": "empty_list"
                 },
                 "rrg_performers": {
                   "type": "dict",
@@ -2196,9 +2099,6 @@
                               }
                             }
                           }
-                        },
-                        "falling_knife": {
-                          "type": "empty_list"
                         }
                       }
                     },
